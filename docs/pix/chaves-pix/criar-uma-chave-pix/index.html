@@ -21,15 +21,15 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>`/POST`Criar uma Chave PIX | Stone OpenBank</title><meta property="og:title" content="`/POST`Criar uma Chave PIX" />
+<title>Criar | Stone OpenBank</title><meta property="og:title" content="Criar" />
 <meta property="og:description" content="Escreva o Banco do futuro. Uma linha de código por vez." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://stone-co.github.io/docs/pix/chaves-pix/criar-uma-chave-pix/" />
 <meta property="og:updated_time" content="2020-09-17T18:00:00-03:00" /><meta property="og:site_name" content="Stone OpenBank" />
-<meta itemprop="name" content="`/POST`Criar uma Chave PIX">
+<meta itemprop="name" content="Criar">
 <meta itemprop="description" content="Escreva o Banco do futuro. Uma linha de código por vez.">
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="`/POST`Criar uma Chave PIX"/>
+<meta name="twitter:title" content="Criar"/>
 <meta name="twitter:description" content="Escreva o Banco do futuro. Uma linha de código por vez."/>
 
 
@@ -182,7 +182,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/pix/chaves-pix/criar-uma-chave-pix/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">`/POST`Criar uma Chave PIX</a>
+    <a  href="/docs/pix/chaves-pix/criar-uma-chave-pix/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Criar</a>
   </li>
   <ul>
     <li class="collapse show" id="docspixchaves-pixcriar-uma-chave-pix">
@@ -299,7 +299,7 @@
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="https://stone-co.github.io/docs/pix/chaves-pix/criar-uma-chave-pix/">`/POST`Criar uma Chave PIX</a>
+	<a href="https://stone-co.github.io/docs/pix/chaves-pix/criar-uma-chave-pix/">Criar</a>
 </li>
 
 	</ol>
@@ -307,10 +307,10 @@
 
             
 <div class="td-content">
-	<h1>`/POST`Criar uma Chave PIX</h1>
+	<h1>Criar</h1>
         
 	
-	<h4 id="request">Request</h4>
+	<h5 id="request"><strong>Request</strong></h5>
 <pre><code class="language-json5" data-lang="json5">POST /api/v1/pix_entries
 content-type: application/json
 {
@@ -331,7 +331,32 @@ content-type: application/json
      &quot;document&quot;: “13152256685”
   }
 }
-</code></pre>
+</code></pre><p><br> <br></p>
+<h5 id="response"><strong>Response</strong></h5>
+<pre><code class="language-json5" data-lang="json5">202 CONTINUE
+content-type: application/json
+
+{
+  &quot;id&quot;: “cee2f003-95a0-433f-a785-b933a5832531”
+}
+</code></pre><p><br> <br></p>
+<h5 id="webhook"><strong>Webhook</strong></h5>
+<p>Serão disparados webhooks quando o status da solicitação alterar para <code>accepted</code>ou <code>rejected</code>.
+As seguintes informações virão no campo <code>target_data</code>.</p>
+<pre><code class="language-json5" data-lang="json5">{
+  &quot;id&quot;: &quot;cee2f003-95a0-433f-a785-b933a5832531&quot;,
+  &quot;request_id&quot;: uuid(),
+  &quot;key&quot;: &quot;+5510998765432&quot;,
+  &quot;key_type&quot;: &quot;phone&quot;,
+  &quot;key_status&quot;: &quot;active”,
+  &quot;beneficiary_type&quot;: &quot;external_account&quot;,
+  &quot;beneficiary_id&quot;: &quot;bad7ab7e-f95d-11ea-adc1-0242ac120002&quot;,
+  &quot;created_at&quot;: &quot;20200-09-18T03:00:00Z&quot;,
+  &quot;error_description&quot;: &quot;&quot;,
+  &quot;status&quot;: &quot;accepted&quot;
+}
+</code></pre><p><br> <br></p>
+
         <div class="section-index">
     
     

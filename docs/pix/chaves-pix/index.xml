@@ -231,7 +231,7 @@
     </item>
     
     <item>
-      <title>Docs: `/POST`Criar uma Chave PIX</title>
+      <title>Docs: Criar</title>
       <link>https://stone-co.github.io/docs/pix/chaves-pix/criar-uma-chave-pix/</link>
       <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
       
@@ -239,7 +239,7 @@
       <description>
         
         
-        &lt;h4 id=&#34;request&#34;&gt;Request&lt;/h4&gt;
+        &lt;h5 id=&#34;request&#34;&gt;&lt;strong&gt;Request&lt;/strong&gt;&lt;/h5&gt;
 &lt;pre&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;POST /api/v1/pix_entries
 content-type: application/json
 {
@@ -260,7 +260,32 @@ content-type: application/json
      &amp;quot;document&amp;quot;: “13152256685”
   }
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;pre&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;202 CONTINUE
+content-type: application/json
+
+{
+  &amp;quot;id&amp;quot;: “cee2f003-95a0-433f-a785-b933a5832531”
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+&lt;h5 id=&#34;webhook&#34;&gt;&lt;strong&gt;Webhook&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;Serão disparados webhooks quando o status da solicitação alterar para &lt;code&gt;accepted&lt;/code&gt;ou &lt;code&gt;rejected&lt;/code&gt;.
+As seguintes informações virão no campo &lt;code&gt;target_data&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;{
+  &amp;quot;id&amp;quot;: &amp;quot;cee2f003-95a0-433f-a785-b933a5832531&amp;quot;,
+  &amp;quot;request_id&amp;quot;: uuid(),
+  &amp;quot;key&amp;quot;: &amp;quot;+5510998765432&amp;quot;,
+  &amp;quot;key_type&amp;quot;: &amp;quot;phone&amp;quot;,
+  &amp;quot;key_status&amp;quot;: &amp;quot;active”,
+  &amp;quot;beneficiary_type&amp;quot;: &amp;quot;external_account&amp;quot;,
+  &amp;quot;beneficiary_id&amp;quot;: &amp;quot;bad7ab7e-f95d-11ea-adc1-0242ac120002&amp;quot;,
+  &amp;quot;created_at&amp;quot;: &amp;quot;20200-09-18T03:00:00Z&amp;quot;,
+  &amp;quot;error_description&amp;quot;: &amp;quot;&amp;quot;,
+  &amp;quot;status&amp;quot;: &amp;quot;accepted&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+
       </description>
     </item>
     
