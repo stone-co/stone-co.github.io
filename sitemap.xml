@@ -8,11 +8,6 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/pix/o-que-e-o-pix/</loc>
-    <lastmod>2020-09-17T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/docs/pix/chaves-pix/campos/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
   </url>
@@ -28,6 +23,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/pix/recendo-um-pix/</loc>
+    <lastmod>2020-09-17T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/pix/chaves-pix/status/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
   </url>
@@ -38,8 +38,18 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/pix/chaves-pix/listar-chaves-pix/</loc>
+    <lastmod>2020-09-17T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/pix/chaves-pix/excluir-uma-chave-pix/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/pix/chaves-pix/detalhar-uma-chave-pix/</loc>
+    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
   </url>
   
   <url>
@@ -53,8 +63,13 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/</loc>
+    <loc>https://stone-co.github.io/docs/pix/chaves-pix/detalhar-uma-reivindica%C3%A7%C3%A3o/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/</loc>
+    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
   </url>
   
   <url>

@@ -309,8 +309,8 @@
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
 &lt;h5 id=&#34;webhook&#34;&gt;&lt;strong&gt;Webhook&lt;/strong&gt;&lt;/h5&gt;
-&lt;p&gt;Serão disparados webhooks quando o status da solicitação alterar para &lt;code&gt;accepted&lt;/code&gt;ou &lt;code&gt;rejected&lt;/code&gt;.
-As seguintes informações virão no campo &lt;code&gt;target_data&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Serão disparados webhooks quando o status da solicitação sofrer alterações. Veja &lt;a href=&#34;https://stone-co.github.io/docs/pix/chaves-pix/status/#status-das-solicita%C3%A7%C3%B5es-cria%C3%A7%C3%A3o-e-exclus%C3%A3o&#34;&gt;aqui&lt;/a&gt; os possíveis status para uma reivindicação.&lt;/p&gt;
+&lt;p&gt;As seguintes informações virão no campo &lt;code&gt;target_data&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;{
   &amp;#34;id&amp;#34;: &amp;#34;cee2f003-95a0-433f-a785-b933a5832531&amp;#34;,
   &amp;#34;request_id&amp;#34;: uuid(),
@@ -322,6 +322,80 @@ As seguintes informações virão no campo &lt;code&gt;target_data&lt;/code&gt;.
   &amp;#34;created_at&amp;#34;: &amp;#34;20200-09-18T03:00:00Z&amp;#34;,
   &amp;#34;error_description&amp;#34;: &amp;#34;&amp;#34;,
   &amp;#34;status&amp;#34;: &amp;#34;accepted&amp;#34;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Listar</title>
+      <link>https://stone-co.github.io/docs/pix/chaves-pix/listar-chaves-pix/</link>
+      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/pix/chaves-pix/listar-chaves-pix/</guid>
+      <description>
+        
+        
+        &lt;h5 id=&#34;request&#34;&gt;&lt;strong&gt;Request&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET /api/v1/pix_entries
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Parâmetros para query.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;- &amp;#34;participant_ispb&amp;#34; *(obrigatório para participantes indiretos)
+- &amp;#34;account_id&amp;#34;
+- &amp;#34;beneficiary_entity_name&amp;#34;
+- &amp;#34;beneficiary_entity_document_type&amp;#34;
+- &amp;#34;beneficiary_entity_document&amp;#34;
+- &amp;#34;beneficiary_account_branch_code&amp;#34;
+- &amp;#34;beneficiary_account_account_code&amp;#34;
+- &amp;#34;beneficiary_account_account_type&amp;#34;
+- &amp;#34;beneficiary_account_created_at&amp;#34;
+- &amp;#34;status&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;200 OK
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;{
+  &amp;#34;cursor: {},
+  &amp;#34;data&amp;#34;: [
+    {
+      &amp;#34;id&amp;#34;: d990cc41-e514-4343-a84c-80c677102b17,
+      &amp;#34;key&amp;#34;: “+5510998765432”, 
+      &amp;#34;key_type&amp;#34;: &amp;#34;phone&amp;#34;, 
+      &amp;#34;account_id&amp;#34;: &amp;#34;968cc34d-d827-448b-ac1b-e6e29836a160&amp;#34;,
+      &amp;#34;participant_ispb&amp;#34;: “1234567890”,
+      &amp;#34;beneficiary_type&amp;#34;: “external_account”,
+      &amp;#34;beneficiary_account&amp;#34;: {
+        &amp;#34;branch_code&amp;#34;: “0001”,
+        &amp;#34;account_code&amp;#34;: &amp;#34;00016583&amp;#34;,
+        &amp;#34;account_type&amp;#34;: &amp;#34;CC&amp;#34;,
+        &amp;#34;created_at&amp;#34;: &amp;#34;2019-11-18T03:00:00Z&amp;#34;
+      },
+      &amp;#34;beneficiary_entity&amp;#34;: {
+        &amp;#34;name&amp;#34;:&amp;#34;Maria Clara Gomes&amp;#34;,
+        &amp;#34;document_type&amp;#34;: &amp;#34;cpf&amp;#34;,
+        &amp;#34;document&amp;#34;: “13152256685”
+      }
+    },
+    {
+      &amp;#34;id&amp;#34;: 8544718e-3c76-49ab-bc69-b367d2654a08,
+      &amp;#34;key&amp;#34;: “lucas@stone.com.br”, 
+      &amp;#34;key_type&amp;#34;: &amp;#34;email&amp;#34;, 
+      &amp;#34;account_id&amp;#34;: &amp;#34;968cc34d-d827-448b-ac1b-e6e29836a160&amp;#34;,
+      &amp;#34;participant_ispb&amp;#34;: “1234567890”,
+      &amp;#34;beneficiary_type&amp;#34;: “external_account”,
+      &amp;#34;beneficiary_account&amp;#34;: {
+        &amp;#34;branch_code&amp;#34;: “0001”,
+        &amp;#34;account_code&amp;#34;: &amp;#34;00016576&amp;#34;,
+        &amp;#34;account_type&amp;#34;: &amp;#34;CC&amp;#34;,
+        &amp;#34;created_at&amp;#34;: &amp;#34;2019-12-03T03:00:00Z&amp;#34;
+      },
+      &amp;#34;beneficiary_entity&amp;#34;: {
+        &amp;#34;name&amp;#34;:&amp;#34;Lucas Costa&amp;#34;,
+        &amp;#34;document_type&amp;#34;: &amp;#34;cpf&amp;#34;,
+        &amp;#34;document&amp;#34;: “31152256696”
+      }
+    }
+  ]
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
 
@@ -369,8 +443,8 @@ As seguintes informações virão no campo &lt;code&gt;target_data&lt;/code&gt;.
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
 &lt;h5 id=&#34;webhook&#34;&gt;&lt;strong&gt;Webhook&lt;/strong&gt;&lt;/h5&gt;
-&lt;p&gt;Serão disparados webhooks quando o status da solicitação alterar para &lt;code&gt;accepted&lt;/code&gt;ou &lt;code&gt;rejected&lt;/code&gt;.
-As seguintes informações virão no campo &lt;code&gt;target_data&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Serão disparados webhooks quando o status da solicitação sofrer alterações. Veja &lt;a href=&#34;https://stone-co.github.io/docs/pix/chaves-pix/status/#status-das-solicita%C3%A7%C3%B5es-cria%C3%A7%C3%A3o-e-exclus%C3%A3o&#34;&gt;aqui&lt;/a&gt; os possíveis status para uma reivindicação.&lt;/p&gt;
+&lt;p&gt;As seguintes informações virão no campo &lt;code&gt;target_data&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;{
   &amp;#34;id&amp;#34;: “4b612bce-f964-11ea-adc1-0242ac120002”
   “key”: “+5510998765432”,
@@ -381,6 +455,61 @@ As seguintes informações virão no campo &lt;code&gt;target_data&lt;/code&gt;.
    &amp;#34;created_at&amp;#34;: “20200- 09-18T03:00:00Z”,
    &amp;#34;error_description&amp;#34;: “”,
    &amp;#34;status&amp;#34;: “accepted&amp;#34;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Detalhar</title>
+      <link>https://stone-co.github.io/docs/pix/chaves-pix/detalhar-uma-chave-pix/</link>
+      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/pix/chaves-pix/detalhar-uma-chave-pix/</guid>
+      <description>
+        
+        
+        &lt;h5 id=&#34;request&#34;&gt;&lt;strong&gt;Request&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;Deve ser informado o &lt;code&gt;id&lt;/code&gt; da chave.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET /api/v1/pix_entries/:id?participant_ispb=xxxx
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;200 OK
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;{
+  &amp;#34;id&amp;#34;: d990cc41-e514-4343-a84c-80c677102b17,
+  &amp;#34;key&amp;#34;: “+5510998765432”, 
+  &amp;#34;key_type&amp;#34;: &amp;#34;phone&amp;#34;, 
+  &amp;#34;account_id&amp;#34;: &amp;#34;968cc34d-d827-448b-ac1b-e6e29836a160&amp;#34;,
+  &amp;#34;participant_ispb&amp;#34;: “1234567890”,
+  &amp;#34;beneficiary_type&amp;#34;: “external_account”,
+  &amp;#34;beneficiary_account&amp;#34;: {
+     &amp;#34;branch_code&amp;#34;: “0001”,
+     &amp;#34;account_code&amp;#34;: &amp;#34;00016583&amp;#34;,
+     &amp;#34;account_type&amp;#34;: &amp;#34;CC&amp;#34;,
+     &amp;#34;created_at&amp;#34;: &amp;#34;2019-11-18T03:00:00Z&amp;#34;
+  },
+  &amp;#34;beneficiary_entity&amp;#34;: {
+     &amp;#34;name&amp;#34;:&amp;#34;Maria Clara Gomes&amp;#34;,
+     &amp;#34;document_type&amp;#34;: &amp;#34;cpf&amp;#34;,
+     &amp;#34;document&amp;#34;: “13152256685”
+  }, 
+  &amp;#34;events&amp;#34;: [
+    {
+      &amp;#34;id&amp;#34;: 38963369-533c-42aa-a49e-b5369ff4bd52,
+      &amp;#34;created_at&amp;#34;: &amp;#34;20200-09-18T03:00:00Z&amp;#34;,
+      &amp;#34;type&amp;#34;: &amp;#34;created&amp;#34;,
+      &amp;#34;from_status&amp;#34;: null,
+      &amp;#34;to_status&amp;#34;: &amp;#34;active&amp;#34;
+    },
+    {
+      &amp;#34;id&amp;#34;: 7eb6ee15-1485-468a-ad38-411320878815,
+      &amp;#34;created_at&amp;#34;: “20200-09-22T03:00:00Z”,
+      &amp;#34;type&amp;#34;: &amp;#34;deleted&amp;#34;,
+      &amp;#34;from_status&amp;#34;: &amp;#34;active&amp;#34;,
+      &amp;#34;to_status&amp;#34;: &amp;#34;deleted&amp;#34;
+    }
+  ]
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
 
@@ -436,8 +565,8 @@ Disponível para os tipos: &lt;code&gt;phone&lt;/code&gt;e &lt;code&gt;email&lt;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
 &lt;h5 id=&#34;webhook&#34;&gt;&lt;strong&gt;Webhook&lt;/strong&gt;&lt;/h5&gt;
-&lt;p&gt;Serão disparados webhooks quando o status da solicitação alterar.
-As seguintes informações virão no campo &lt;code&gt;target_data&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Serão disparados webhooks quando o status da reivindicação sofrer alterações. Veja &lt;a href=&#34;https://stone-co.github.io/docs/pix/chaves-pix/status/#status-da-reivindica%C3%A7%C3%A3o&#34;&gt;aqui&lt;/a&gt; os possíveis status para uma reivindicação.&lt;/p&gt;
+&lt;p&gt;As seguintes informações virão no campo &lt;code&gt;target_data&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;{
   &amp;#34;claim_id&amp;#34;: &amp;#34;6c8e9fb9-1416-434d-9933-a36fb3ad7a8c&amp;#34;,
   &amp;#34;status&amp;#34;: &amp;#34;open&amp;#34;
@@ -483,12 +612,73 @@ As seguintes informações virão no campo &lt;code&gt;target_data&lt;/code&gt;.
 &lt;h5 id=&#34;request&#34;&gt;&lt;strong&gt;Request&lt;/strong&gt;&lt;/h5&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST /api/v1/pix_entry_claims/:claim_id/actions/:action {approve|reject}
 &lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;content-type: application/json
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;202 CONTINUE
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;{
   &amp;#34;claim_id&amp;#34;: “6c8e9fb9-1416-434d-9933-a36fb3ad7a8c”,
   &amp;#34;claim_type&amp;#34;: “portability”
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+&lt;h5 id=&#34;webhook-1&#34;&gt;&lt;strong&gt;Webhook&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;Serão disparados webhooks quando o status da reivindicação sofrer alterações. Veja &lt;a href=&#34;https://stone-co.github.io/docs/pix/chaves-pix/status/#status-da-reivindica%C3%A7%C3%A3o&#34;&gt;aqui&lt;/a&gt; os possíveis status para uma reivindicação.&lt;/p&gt;
+&lt;p&gt;As seguintes informações virão no campo target_data.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;{
+  &amp;#34;claim_id&amp;#34;: &amp;#34;6c8e9fb9-1416-434d-9933-a36fb3ad7a8c&amp;#34;,
+  &amp;#34;status&amp;#34;: &amp;#34;open&amp;#34;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Detalhar reivindicação</title>
+      <link>https://stone-co.github.io/docs/pix/chaves-pix/detalhar-uma-reivindica%C3%A7%C3%A3o/</link>
+      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/pix/chaves-pix/detalhar-uma-reivindica%C3%A7%C3%A3o/</guid>
+      <description>
+        
+        
+        &lt;h5 id=&#34;request&#34;&gt;&lt;strong&gt;Request&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET /api/v1/pix_entry_claims/:claim_id
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;200 OK
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;{
+  &amp;#34;id&amp;#34;: &amp;#34;40346adc-74f3-4c4e-8275-73ba78993491&amp;#34;,
+  “claim_type”: “portability”,
+  &amp;#34;status&amp;#34;: &amp;#34;waiting_resolution&amp;#34;,
+  &amp;#34;origin&amp;#34;: internal,
+  &amp;#34;origin_ispb&amp;#34;: &amp;#34;1234567890&amp;#34;,
+  “created_at”: &amp;#34;“2020- 09-27T03:00:00Z”,
+  “updated_at”: &amp;#34;2020-09-27T06:00:00Z&amp;#34;, 
+  “expiration_at”: &amp;#34;2020-09-30T03:00:00Z&amp;#34;,
+  &amp;#34;beneficiary_account&amp;#34;: {
+     &amp;#34;branch_code&amp;#34;: “0001”,
+     &amp;#34;account_code&amp;#34;: &amp;#34;00016583&amp;#34;,
+     &amp;#34;account_type&amp;#34;: &amp;#34;CC&amp;#34;,
+     &amp;#34;opened_at&amp;#34;: &amp;#34;2019-11-18T03:00:00Z&amp;#34;
+  },
+  &amp;#34;beneficiary_entity&amp;#34;: {
+     &amp;#34;name&amp;#34;: “0001”,
+     &amp;#34;document_type&amp;#34;: &amp;#34;cpf&amp;#34;,
+     &amp;#34;document&amp;#34;: &amp;#34;13152256685&amp;#34;
+  },
+  &amp;#34;key_type&amp;#34;: &amp;#34;phone&amp;#34;,
+  &amp;#34;key&amp;#34;: &amp;#34;+5510998765432&amp;#34;,
+  &amp;#34;events&amp;#34;: [
+   {
+      &amp;#34;id&amp;#34;: 38963369-533c-42aa-a49e-b5369ff4bd52,
+      &amp;#34;created_at&amp;#34;: &amp;#34;20200-09-18T03:00:00Z&amp;#34;,
+      &amp;#34;type&amp;#34;: &amp;#34;created&amp;#34;,
+      &amp;#34;from_status&amp;#34;: null,
+      &amp;#34;to_status&amp;#34;: &amp;#34;active&amp;#34;
+    }
+  ]
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
 
