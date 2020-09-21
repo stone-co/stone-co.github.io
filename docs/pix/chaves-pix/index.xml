@@ -447,5 +447,53 @@ As seguintes informações virão no campo &lt;code&gt;target_data&lt;/code&gt;.
       </description>
     </item>
     
+    <item>
+      <title>Docs: Aprovar/Rejeitar reivindicação</title>
+      <link>https://stone-co.github.io/docs/pix/chaves-pix/aprovar-ou-rejeitar-reivindica%C3%A7%C3%A3o/</link>
+      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/pix/chaves-pix/aprovar-ou-rejeitar-reivindica%C3%A7%C3%A3o/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Quando a usuária faz, em uma outra instituição, a solicitação de portabilidade ou posse da chave que possui junto ao PSP, o mesmo receberá um pedido que deve ser aprovado ou rejeitado pela usuária.
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h5 id=&#34;webhook&#34;&gt;&lt;strong&gt;Webhook&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;Ai receber uma reivindicação será disparado o seguinte webhook:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;{
+  &amp;#34;claim_id&amp;#34;: 6c8e9fb9-1416-434d-9933-a36fb3ad7a8c,
+  &amp;#34;key_type&amp;#34;: &amp;#34;phone&amp;#34;,
+  &amp;#34;key&amp;#34;: &amp;#34;+5510998765432&amp;#34;,
+  “claim_type”: “portability”,
+  &amp;#34;claim_origin_ispb&amp;#34;: &amp;#34;9876543210&amp;#34;,
+  &amp;#34;beneficiary_type&amp;#34;: “external_account”,
+  &amp;#34;beneficiary_account&amp;#34;: {
+     &amp;#34;branch_code&amp;#34;: “0001”,
+     &amp;#34;account_code&amp;#34;: &amp;#34;00016583&amp;#34;,
+     &amp;#34;account_type&amp;#34;: &amp;#34;CC&amp;#34;,
+     &amp;#34;opened_at&amp;#34;: &amp;#34;2019-11-18T03:00:00Z&amp;#34;
+  },
+  &amp;#34;beneficiary_entity&amp;#34;: {
+     &amp;#34;name&amp;#34;: “0001”,
+     &amp;#34;document_type&amp;#34;: &amp;#34;cpf&amp;#34;,
+     &amp;#34;document&amp;#34;: &amp;#34;13152256685&amp;#34;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+&lt;h5 id=&#34;request&#34;&gt;&lt;strong&gt;Request&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST /api/v1/pix_entry_claims/:claim_id/actions/:action {approve|reject}
+&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;content-type: application/json
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;202 CONTINUE
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;{
+  &amp;#34;claim_id&amp;#34;: “6c8e9fb9-1416-434d-9933-a36fb3ad7a8c”,
+  &amp;#34;claim_type&amp;#34;: “portability”
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
   </channel>
 </rss>

@@ -7,7 +7,7 @@
 
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
-<link rel="alternate" type="application/rss&#43;xml" href="https://stone-co.github.io/docs/pix/chaves-pix/excluir-uma-chave-pix/index.xml">
+<link rel="alternate" type="application/rss&#43;xml" href="https://stone-co.github.io/docs/pix/chaves-pix/aprovar-ou-rejeitar-reivindica%C3%A7%C3%A3o/index.xml">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -21,15 +21,15 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Excluir | Stone OpenBank</title><meta property="og:title" content="Excluir" />
+<title>Aprovar/Rejeitar reivindicação | Stone OpenBank</title><meta property="og:title" content="Aprovar/Rejeitar reivindicação" />
 <meta property="og:description" content="Escreva o Banco do futuro. Uma linha de código por vez." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://stone-co.github.io/docs/pix/chaves-pix/excluir-uma-chave-pix/" />
+<meta property="og:url" content="https://stone-co.github.io/docs/pix/chaves-pix/aprovar-ou-rejeitar-reivindica%C3%A7%C3%A3o/" />
 <meta property="og:updated_time" content="2020-09-17T18:00:00-03:00" /><meta property="og:site_name" content="Stone OpenBank" />
-<meta itemprop="name" content="Excluir">
+<meta itemprop="name" content="Aprovar/Rejeitar reivindicação">
 <meta itemprop="description" content="Escreva o Banco do futuro. Uma linha de código por vez.">
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Excluir"/>
+<meta name="twitter:title" content="Aprovar/Rejeitar reivindicação"/>
 <meta name="twitter:description" content="Escreva o Banco do futuro. Uma linha de código por vez."/>
 
 
@@ -228,10 +228,10 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/pix/chaves-pix/excluir-uma-chave-pix/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Excluir</a>
+    <a  href="/docs/pix/chaves-pix/excluir-uma-chave-pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Excluir</a>
   </li>
   <ul>
-    <li class="collapse show" id="docspixchaves-pixexcluir-uma-chave-pix">
+    <li class="collapse " id="docspixchaves-pixexcluir-uma-chave-pix">
       
       
       
@@ -274,10 +274,10 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/pix/chaves-pix/aprovar-ou-rejeitar-reivindica%C3%A7%C3%A3o/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Aprovar/Rejeitar reivindicação</a>
+    <a  href="/docs/pix/chaves-pix/aprovar-ou-rejeitar-reivindica%C3%A7%C3%A3o/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Aprovar/Rejeitar reivindicação</a>
   </li>
   <ul>
-    <li class="collapse " id="docspixchaves-pixaprovar-ou-rejeitar-reivindicac3a7c3a3o">
+    <li class="collapse show" id="docspixchaves-pixaprovar-ou-rejeitar-reivindicac3a7c3a3o">
       
       
       
@@ -391,7 +391,7 @@
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="https://stone-co.github.io/docs/pix/chaves-pix/excluir-uma-chave-pix/">Excluir</a>
+	<a href="https://stone-co.github.io/docs/pix/chaves-pix/aprovar-ou-rejeitar-reivindica%C3%A7%C3%A3o/">Aprovar/Rejeitar reivindicação</a>
 </li>
 
 	</ol>
@@ -399,22 +399,19 @@
 
             
 <div class="td-content">
-	<h1>Excluir</h1>
+	<h1>Aprovar/Rejeitar reivindicação</h1>
         
 	
-	<p>No caso de PSPs diretos e indiretos existem situações em que é necessária a exclusão de uma Chave PIX como, as principais são:</p>
-<ul>
-<li>conta foi encerrada no PSP;</li>
-<li>portabilidade cedida a outra instituição;</li>
-<li>posse cedida a outra instituição/usuário.</li>
-</ul>
-<h5 id="request"><strong>Request</strong></h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">DELETE /api/v1/pix_entries/key/:id
-</span></code></pre></div><p>Body</p>
+	<p>Quando a usuária faz, em uma outra instituição, a solicitação de portabilidade ou posse da chave que possui junto ao PSP, o mesmo receberá um pedido que deve ser aprovado ou rejeitado pela usuária.
+<br><br></p>
+<h5 id="webhook"><strong>Webhook</strong></h5>
+<p>Ai receber uma reivindicação será disparado o seguinte webhook:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">{
-  &#34;key_type&#34;: “phone”,
-  “account_id”: “968cc34d-d827-448b-ac1b-e6e29836a160”,
-  &#34;participant_ispb&#34;: “1234567890”,
+  &#34;claim_id&#34;: 6c8e9fb9-1416-434d-9933-a36fb3ad7a8c,
+  &#34;key_type&#34;: &#34;phone&#34;,
+  &#34;key&#34;: &#34;+5510998765432&#34;,
+  “claim_type”: “portability”,
+  &#34;claim_origin_ispb&#34;: &#34;9876543210&#34;,
   &#34;beneficiary_type&#34;: “external_account”,
   &#34;beneficiary_account&#34;: {
      &#34;branch_code&#34;: “0001”,
@@ -422,30 +419,22 @@
      &#34;account_type&#34;: &#34;CC&#34;,
      &#34;opened_at&#34;: &#34;2019-11-18T03:00:00Z&#34;
   },
-  &#34;reason&#34;: &#34;user_requested”
+  &#34;beneficiary_entity&#34;: {
+     &#34;name&#34;: “0001”,
+     &#34;document_type&#34;: &#34;cpf&#34;,
+     &#34;document&#34;: &#34;13152256685&#34;
+  }
 }
 </code></pre></div><p><br> <br></p>
-<h5 id="response"><strong>Response</strong></h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">202 CONTINUE
+<h5 id="request"><strong>Request</strong></h5>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">POST /api/v1/pix_entry_claims/:claim_id/actions/:action {approve|reject}
 </span><span style="color:#a40000">content-type: application/json
+</span></code></pre></div><h5 id="response"><strong>Response</strong></h5>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">202 CONTINUE
 </span></code></pre></div><p>Body</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">{
-  &#34;id&#34;: “4b612bce-f964-11ea-adc1-0242ac120002”
-}
-</code></pre></div><p><br> <br></p>
-<h5 id="webhook"><strong>Webhook</strong></h5>
-<p>Serão disparados webhooks quando o status da solicitação alterar para <code>accepted</code>ou <code>rejected</code>.
-As seguintes informações virão no campo <code>target_data</code>.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">{
-  &#34;id&#34;: “4b612bce-f964-11ea-adc1-0242ac120002”
-  “key”: “+5510998765432”,
-  “key_type”: &#34;phone&#34;
-  “key_status”: “deleted”,
-  “beneficiary_type”: &#34;external_account&#34;,
-  “beneficiary_id”: “bad7ab7e-f95d-11ea-adc1-0242ac120002”,
-   &#34;created_at&#34;: “20200- 09-18T03:00:00Z”,
-   &#34;error_description&#34;: “”,
-   &#34;status&#34;: “accepted&#34;
+  &#34;claim_id&#34;: “6c8e9fb9-1416-434d-9933-a36fb3ad7a8c”,
+  &#34;claim_type&#34;: “portability”
 }
 </code></pre></div><p><br> <br></p>
 
