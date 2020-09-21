@@ -289,5 +289,57 @@ As seguintes informações virão no campo &lt;code&gt;target_data&lt;/code&gt;.
       </description>
     </item>
     
+    <item>
+      <title>Docs: Excluir</title>
+      <link>https://stone-co.github.io/docs/pix/chaves-pix/excluir-uma-chave-pix/</link>
+      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/pix/chaves-pix/excluir-uma-chave-pix/</guid>
+      <description>
+        
+        
+        &lt;p&gt;No caso de PSP diretos e indiretos existem situações em que é necessária a exclusão de uma Chave PIX como, por exemplo, no encerramento de uma conta.&lt;/p&gt;
+&lt;h5 id=&#34;request&#34;&gt;&lt;strong&gt;Request&lt;/strong&gt;&lt;/h5&gt;
+&lt;pre&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;DELETE /api/v1/pix_entries/key/:id
+{
+  &amp;quot;key_type&amp;quot;: “phone”,
+  “account_id”: “968cc34d-d827-448b-ac1b-e6e29836a160”,
+  &amp;quot;participant_ispb&amp;quot;: “1234567890”,
+  &amp;quot;beneficiary_type&amp;quot;: “external_account”,
+  &amp;quot;beneficiary_account&amp;quot;: {
+     &amp;quot;branch_code&amp;quot;: “0001”,
+     &amp;quot;account_code&amp;quot;: &amp;quot;00016583&amp;quot;,
+     &amp;quot;account_type&amp;quot;: &amp;quot;CC&amp;quot;,
+     &amp;quot;opened_at&amp;quot;: &amp;quot;2019-11-18T03:00:00Z&amp;quot;
+  },
+  &amp;quot;reason&amp;quot;: &amp;quot;user_requested”
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;pre&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;202 CONTINUE
+content-type: application/json
+{
+  &amp;quot;id&amp;quot;: “4b612bce-f964-11ea-adc1-0242ac120002”
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+&lt;h5 id=&#34;webhook&#34;&gt;&lt;strong&gt;Webhook&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;Serão disparados webhooks quando o status da solicitação alterar para &lt;code&gt;accepted&lt;/code&gt;ou &lt;code&gt;rejected&lt;/code&gt;.
+As seguintes informações virão no campo &lt;code&gt;target_data&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;{
+  &amp;quot;id&amp;quot;: “4b612bce-f964-11ea-adc1-0242ac120002”
+  “key”: “+5510998765432”,
+  “key_type”: &amp;quot;phone&amp;quot;
+  “key_status”: “deleted”,
+  “beneficiary_type”: &amp;quot;external_account&amp;quot;,
+  “beneficiary_id”: “bad7ab7e-f95d-11ea-adc1-0242ac120002”,
+   &amp;quot;created_at&amp;quot;: “20200- 09-18T03:00:00Z”,
+   &amp;quot;error_description&amp;quot;: “”,
+   &amp;quot;status&amp;quot;: “accepted&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
   </channel>
 </rss>
