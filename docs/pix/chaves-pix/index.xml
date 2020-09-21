@@ -239,14 +239,14 @@
       <description>
         
         
-        &lt;h4 id=&#34;status-das-solicitações-criação-e-exclusão&#34;&gt;Status das solicitações (criação e exclusão)&lt;/h4&gt;
+        &lt;h2 id=&#34;status-das-solicitações-criação-e-exclusão&#34;&gt;Status das solicitações (criação e exclusão)&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;pending&lt;/code&gt;: criação solicitada.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;accepted&lt;/code&gt;: solicitação finalizada com sucesso.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;rejected&lt;/code&gt;: solicitação rejeitada. Veja o campo &lt;code&gt;error_description&lt;/code&gt;para entender o motivo.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
-&lt;h4 id=&#34;status-da-chave&#34;&gt;Status da chave&lt;/h4&gt;
+&lt;h2 id=&#34;status-da-chave&#34;&gt;Status da chave&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;portability_pending&lt;/code&gt;: o processo de reivindicação de portabilidade está em andamento.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;claim_requested&lt;/code&gt;: o processo de reivindicação de posse está em andamento.&lt;/li&gt;
@@ -254,7 +254,7 @@
 &lt;li&gt;&lt;code&gt;deleted&lt;/code&gt;: chave excluída no DICT e inválida para uso.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
-&lt;h4 id=&#34;status-reivindicação&#34;&gt;Status reivindicação&lt;/h4&gt;
+&lt;h2 id=&#34;status-da-reivindicação&#34;&gt;Status da reivindicação&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;open&lt;/code&gt;: aberta pelo reivindicador, mas ainda não recebida pelo doador.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;waiting_resolution&lt;/code&gt;: reivindicação já foi recebida pelo doador e está aguardando a resolução. Os critérios confirmação ou cancelamento da reivindicação seguem normas específicas a depender do tipo (posse ou portabilidade).&lt;/li&gt;
