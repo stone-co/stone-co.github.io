@@ -443,7 +443,7 @@
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
 &lt;h5 id=&#34;webhook&#34;&gt;&lt;strong&gt;Webhook&lt;/strong&gt;&lt;/h5&gt;
-&lt;p&gt;Serão disparados webhooks quando o status da solicitação sofrer alterações. Veja &lt;a href=&#34;https://stone-co.github.io/docs/pix/chaves-pix/status/#status-das-solicita%C3%A7%C3%B5es-cria%C3%A7%C3%A3o-e-exclus%C3%A3o&#34;&gt;aqui&lt;/a&gt; os possíveis status para uma reivindicação.&lt;/p&gt;
+&lt;p&gt;Serão disparados webhooks quando o status da solicitação sofrer alterações. Veja &lt;a href=&#34;https://stone-co.github.io/docs/pix/chaves-pix/status/#status-das-solicita%C3%A7%C3%B5es-cria%C3%A7%C3%A3o-e-exclus%C3%A3o&#34;&gt;aqui&lt;/a&gt; os possíveis status para uma solicitação.&lt;/p&gt;
 &lt;p&gt;As seguintes informações virão no campo &lt;code&gt;target_data&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;{
   &amp;#34;id&amp;#34;: “4b612bce-f964-11ea-adc1-0242ac120002”
