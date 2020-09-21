@@ -7,7 +7,7 @@
 
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
-<link rel="alternate" type="application/rss&#43;xml" href="https://stone-co.github.io/docs/pix/index.xml">
+<link rel="alternate" type="application/rss&#43;xml" href="https://stone-co.github.io/docs/pix/chaves-pix/campos/index.xml">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -21,15 +21,15 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>PIX (Alpha) | Stone OpenBank</title><meta property="og:title" content="PIX (Alpha)" />
+<title>Objetos e Campos | Stone OpenBank</title><meta property="og:title" content="Objetos e Campos" />
 <meta property="og:description" content="Escreva o Banco do futuro. Uma linha de código por vez." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://stone-co.github.io/docs/pix/" />
+<meta property="og:url" content="https://stone-co.github.io/docs/pix/chaves-pix/campos/" />
 <meta property="og:updated_time" content="2020-09-17T18:00:00-03:00" /><meta property="og:site_name" content="Stone OpenBank" />
-<meta itemprop="name" content="PIX (Alpha)">
+<meta itemprop="name" content="Objetos e Campos">
 <meta itemprop="description" content="Escreva o Banco do futuro. Uma linha de código por vez.">
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="PIX (Alpha)"/>
+<meta name="twitter:title" content="Objetos e Campos"/>
 <meta name="twitter:description" content="Escreva o Banco do futuro. Uma linha de código por vez."/>
 
 
@@ -125,7 +125,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/pix/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">PIX (Alpha)</a>
+    <a  href="/docs/pix/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">PIX (Alpha)</a>
   </li>
   <ul>
     <li class="collapse show" id="docspix">
@@ -159,7 +159,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/pix/chaves-pix/campos/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Objetos e Campos</a>
+    <a  href="/docs/pix/chaves-pix/campos/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Objetos e Campos</a>
   </li>
   <ul>
     <li class="collapse show" id="docspixchaves-pixcampos">
@@ -188,10 +188,10 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/pix/o-que-e-o-pix/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">O que é o PIX?</a>
+    <a  href="/docs/pix/o-que-e-o-pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O que é o PIX?</a>
   </li>
   <ul>
-    <li class="collapse show" id="docspixo-que-e-o-pix">
+    <li class="collapse " id="docspixo-que-e-o-pix">
       
       
       
@@ -231,6 +231,18 @@
 
 
 
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#chave-pix">Chave Pix</a></li>
+        <li><a href="#conta-do-usuário">Conta do usuário</a></li>
+        <li><a href="#dados-do-usuário">Dados do usuário</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
 
 
           </div>
@@ -248,6 +260,12 @@
 
 
 
+
+
+
+
+
+
 <li class="breadcrumb-item" >
 	<a href="https://stone-co.github.io/docs/">Referência da API</a>
 </li>
@@ -255,8 +273,22 @@
 
 
 
-<li class="breadcrumb-item active" aria-current="page">
+<li class="breadcrumb-item" >
 	<a href="https://stone-co.github.io/docs/pix/">PIX (Alpha)</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="https://stone-co.github.io/docs/pix/chaves-pix/">Chaves PIX?</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="https://stone-co.github.io/docs/pix/chaves-pix/campos/">Objetos e Campos</a>
 </li>
 
 	</ol>
@@ -264,29 +296,212 @@
 
             
 <div class="td-content">
-	<h1>PIX (Alpha)</h1>
+	<h1>Objetos e Campos</h1>
         
 	
-	
-
-<div class="alert alert-primary" role="alert">
-<h4 class="alert-heading">APLPHA</h4>
-A integração com o PIX ainda está em Alpha, o que significa que temos um grupo pequeno de parceiros testando a funcionalidade para que possamos fazer ajustes e então liberar para todos os parceiros.
-</div>
-
-<h2 id="o-que-é-o-pix">O que é o PIX?</h2>
-<p>O Pix é a nova modalidade de pagamentos instantâneos do Banco Central, que entrará em vigor para o Brasil inteiro no dia 16 de novembro de 2020. Através do PIX, é possível realizar transações bancárias 24 horas por dia, todos os dias do ano, incluindo finais de semana e feriados.
-<br><br>
-Além de sua ampla grade de funcionamento e pequeno tempo de processamento o PIX busca simplificar a experiência do usuário que consegue passar o dinheiro para outro participante informando apenas seu telefone, documento (CPF/CNPJ), seu email ou lendo um QR Code.
-<br> <br></p>
-<h2 id="participantes-do-pix">Participantes do PIX</h2>
-<p>O PIX tem quatro tipos de participantes principais:<br><br></p>
-<ul>
-<li><strong>Participante Direto (PSP direto)</strong>: Instituição homologada junto ao Banco Central (BC) que fará o processamento do PIX junto aos sistemas do BC tanto do ponto de vista informacional, quanto do ponto de vista financeiro. Ou seja, além de ser responsável por toda a troca de informação com os sistemas do PIX, quando agindo como instituição do pagador será a instituição que enviará o dinheiro para o BC e quando agindo como instituição do recebedor receberá o dinheiro do BC. Fazendo um comparativo com o arranjo de cartões seria mais ou menos o equivalente a adquirência e o emissor dependendo se estamos agindo ao lado do recebedor ou do pagador respectivamente. <br></li>
-<li><strong>Participante Indireto (PSP indireto)</strong>: Instituição homologada junto ao Banco Central que fará parte do arranjo do PIX tanto do ponto de vista informacional, quanto do ponto de vista financeiro, mas que usará um participante direto para fazer a intermediação da integração com os sistemas do PIX.Fazendo um comparativo com o arranjo de cartões seria mais ou menos o equivalente a uma subadquirente. <br></li>
-<li><strong>Usuário Recebedor</strong>: é quem vai receber o dinheiro da transação que está sendo efetuada. Fazendo um comparativo com o arranjo de cartões seria mais ou menos o equivalente ao lojista. <br></li>
-<li><strong>Usuário Pagador</strong>: é quem vai pagar a transação que está sendo efetuada. Fazendo um comparativo com o arranjo de cartões seria mais ou menos o equivalente ao comprador / dono do cartão.<br></li>
-</ul>
+	<h3 id="chave-pix">Chave Pix</h3>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Tipo</th>
+<th>Descrição</th>
+<th>Regra de negócio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key_Type</td>
+<td>String</td>
+<td>Indica o tipo de chave que será criada.<br>Valores possíveis: <code>CNPJ</code>, <code>CPF</code>, <code>phone</code>, <code>email</code> e <code>random_key</code>.</td>
+<td>Obrigatório</td>
+</tr>
+<tr>
+<td>key</td>
+<td>String</td>
+<td>É onde deve ser informado o dado do usuário a ser usado como chave no caso de chaves do tipo celular, documento ou e-mail. <br> No caso de telefone deverá ser informado no  formato internacional. Ex.: “+5521912345678”.</td>
+<td>Obrigatório nos tipos <code>CNPJ</code>, <code>CPF</code>, <code>phone</code> e <code>email</code>.</td>
+</tr>
+<tr>
+<td>account_id</td>
+<td>String</td>
+<td>Identificador da Conta Stone de quem está chamando a API.</td>
+<td>Obrigatório</td>
+</tr>
+<tr>
+<td>participant_ispb</td>
+<td>String</td>
+<td>Código ISPB do participante.</td>
+<td>Obrigatório nos casos de em que campo <code>beneficiary_type</code> for <code>external_account</code>.</td>
+</tr>
+<tr>
+<td>beneficiary_type</td>
+<td>String</td>
+<td>Indica se o usuário é cliente da Conta Stone ou de um PSP indireto. Os valores possíveis são respectivamente: <code>stone_account</code> ou  <code>external_account</code>.</td>
+<td>Obrigatório</td>
+</tr>
+<tr>
+<td>beneficiary_account</td>
+<td>Object</td>
+<td>Dados da conta do usuário que serão atrelados a chave que está sendo criada.</td>
+<td>Obrigatório</td>
+</tr>
+<tr>
+<td>beneficiary_entity</td>
+<td>Object</td>
+<td>Dados do usuário.</td>
+<td>Obrigatório</td>
+</tr>
+<tr>
+<td>beneficiary_id</td>
+<td>String</td>
+<td>Id do beneficiário.</td>
+<td>-</td>
+</tr>
+<tr>
+<td>id</td>
+<td>String</td>
+<td>Identificador da requisição que pode ser para uma criação de chave ou uma remoção de chave.</td>
+<td>-</td>
+</tr>
+<tr>
+<td>status</td>
+<td>String</td>
+<td>Status da requisição.</td>
+<td>-</td>
+</tr>
+<tr>
+<td>erro_description</td>
+<td>String</td>
+<td>Descreve especificamente qual foi o erro na criação da Chave PIX.</td>
+<td>Só é retornado quando o staus é <code>rejected</code>.</td>
+</tr>
+<tr>
+<td>reason</td>
+<td>String</td>
+<td>Razão da solicitação de remoção de uma Chave PIX. Valores possíveis são:<code>user_requested”, </code>account_closured<code>, </code>entry_inactivity<code>, </code>reconciliation<code>ou </code>fraud<code>. </code>entry_inactivity`deve ser usado quando por algum motivo a chave usada não está mais ativa, como um email ativo que foi desabilitado ou um CPF que foi inativado.  | - |</td>
+<td></td>
+</tr>
+<tr>
+<td>key_status</td>
+<td>String</td>
+<td>Status da Chave PIX. Os possíveis valores são: <code>active</code>, <code>deleted</code>.</td>
+<td>-</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>Datetime</td>
+<td>Datetime de criação da Chave PIX.<br> Formato: &ldquo;2019-11-18T03:00:00Z&rdquo;.</td>
+<td>-</td>
+</tr>
+<tr>
+<td>claim_id</td>
+<td>String</td>
+<td>Identificador da reivindicação.</td>
+<td>-</td>
+</tr>
+<tr>
+<td>claim_type</td>
+<td>String</td>
+<td>Especifica o tipo de solicitação.</td>
+<td>-</td>
+</tr>
+<tr>
+<td>approval_response</td>
+<td>Boolean</td>
+<td>Indica se deseja aprovar a solicitação (<code>true</code>) ou rejeitar a solicitação (<code>false</code>).</td>
+<td>-</td>
+</tr>
+<tr>
+<td>aproval_reason</td>
+<td>String</td>
+<td>????</td>
+<td>-</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>Datetime</td>
+<td>Datetime da atualização da reivindicação. <br> Formato: &ldquo;2019-11-18T03:00:00Z&rdquo;.</td>
+<td>-</td>
+</tr>
+<tr>
+<td>expiration_at</td>
+<td>Datetime</td>
+<td>Datetime da expiração de uma reivindicação.<br> Formato: &ldquo;2019-11-18T03:00:00Z&rdquo;.</td>
+<td>caso a mesma não seja respondida dentro da data o Banco Central assumirá que a mesma aprovada.</td>
+</tr>
+</tbody>
+</table>
+<p><br><br></p>
+<h3 id="conta-do-usuário">Conta do usuário</h3>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Descrição</th>
+<th>Tipo</th>
+<th>Regra de negócio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>branch_code</td>
+<td>String</td>
+<td>Número da agência da conta.</td>
+<td>Caso não seja informado será assumido o valor 0001.</td>
+</tr>
+<tr>
+<td>account_code</td>
+<td>String</td>
+<td>Número da conta bancária, sempre com dígito.</td>
+<td>Obrigatório</td>
+</tr>
+<tr>
+<td>account_type</td>
+<td>String</td>
+<td>Código que identifica o tipo de conta. Os valores possíveis são:<code>CC</code> - Conta Corrente, <code>CD</code> - Conta de Depósito, <code>CG</code> - Conta garantida, <code>CI</code> - Conta de Investimento, <code>PG</code> - Conta de Pagamento, <code>PP</code> - Poupança.</td>
+<td>Obrigatório</td>
+</tr>
+<tr>
+<td>opened_at</td>
+<td>String</td>
+<td>Datetime a abertura da conta que será atrelada a chave. <br> Formato: &ldquo;2019-11-18T03:00:00Z&rdquo;.</td>
+<td>Obrigatório nos casos de em que campo <code>beneficiary_type</code> for <code>external_account</code>.</td>
+</tr>
+</tbody>
+</table>
+<p><br><br></p>
+<h3 id="dados-do-usuário">Dados do usuário</h3>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Descrição</th>
+<th>Tipo</th>
+<th>Regra de negócio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>Nome completo do usuário ou Razão Social no caso de clientes PJ.</td>
+<td>Obrigatório</td>
+</tr>
+<tr>
+<td>type</td>
+<td>String</td>
+<td>Identifica se o usuário é uma pessoa física ou uma pessoa jurídica. Os valores são respectivamente: <code>NATURAL_PERSON</code> ou <code>LEGAL_PERSON</code>.</td>
+<td>Obrigatório</td>
+</tr>
+<tr>
+<td>document</td>
+<td>String</td>
+<td>Número do CPF ou do CNPJ do usuário.</td>
+<td>Obrigatório</td>
+</tr>
+</tbody>
+</table>
 
         <div class="section-index">
     
@@ -296,21 +511,7 @@ Além de sua ampla grade de funcionamento e pequeno tempo de processamento o PIX
     <hr class="panel-line">
         
             
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/pix/chaves-pix/">Chaves PIX?</a>
-                    </h5>
-                    <p>Entenda como funcionam as chaves PIX!</p>
-                </div>
-            
         
-            
-                <div class="entry">
-                    <h5>
-                        <a href="/docs/pix/o-que-e-o-pix/">O que é o PIX?</a>
-                    </h5>
-                    <p>O PIX ainda está em alpha!</p>
-                </div>
             
         
             
