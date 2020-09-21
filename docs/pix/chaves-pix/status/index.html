@@ -7,7 +7,7 @@
 
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
-<link rel="alternate" type="application/rss&#43;xml" href="https://stone-co.github.io/docs/pix/chaves-pix/criar-uma-chave-pix/index.xml">
+<link rel="alternate" type="application/rss&#43;xml" href="https://stone-co.github.io/docs/pix/chaves-pix/status/index.xml">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -21,15 +21,15 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Criar | Stone OpenBank</title><meta property="og:title" content="Criar" />
+<title>Status | Stone OpenBank</title><meta property="og:title" content="Status" />
 <meta property="og:description" content="Escreva o Banco do futuro. Uma linha de código por vez." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://stone-co.github.io/docs/pix/chaves-pix/criar-uma-chave-pix/" />
+<meta property="og:url" content="https://stone-co.github.io/docs/pix/chaves-pix/status/" />
 <meta property="og:updated_time" content="2020-09-17T18:00:00-03:00" /><meta property="og:site_name" content="Stone OpenBank" />
-<meta itemprop="name" content="Criar">
+<meta itemprop="name" content="Status">
 <meta itemprop="description" content="Escreva o Banco do futuro. Uma linha de código por vez.">
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Criar"/>
+<meta name="twitter:title" content="Status"/>
 <meta name="twitter:description" content="Escreva o Banco do futuro. Uma linha de código por vez."/>
 
 
@@ -182,10 +182,10 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/pix/chaves-pix/status/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Status</a>
+    <a  href="/docs/pix/chaves-pix/status/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Status</a>
   </li>
   <ul>
-    <li class="collapse " id="docspixchaves-pixstatus">
+    <li class="collapse show" id="docspixchaves-pixstatus">
       
       
       
@@ -205,10 +205,10 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/pix/chaves-pix/criar-uma-chave-pix/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Criar</a>
+    <a  href="/docs/pix/chaves-pix/criar-uma-chave-pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar</a>
   </li>
   <ul>
-    <li class="collapse show" id="docspixchaves-pixcriar-uma-chave-pix">
+    <li class="collapse " id="docspixchaves-pixcriar-uma-chave-pix">
       
       
       
@@ -345,7 +345,7 @@
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="https://stone-co.github.io/docs/pix/chaves-pix/criar-uma-chave-pix/">Criar</a>
+	<a href="https://stone-co.github.io/docs/pix/chaves-pix/status/">Status</a>
 </li>
 
 	</ol>
@@ -353,56 +353,32 @@
 
             
 <div class="td-content">
-	<h1>Criar</h1>
+	<h1>Status</h1>
         
 	
-	<h5 id="request"><strong>Request</strong></h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">POST /api/v1/pix_entries
-</span><span style="color:#a40000">content-type: application/json
-</span></code></pre></div><p>Body</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">{
-  &#34;key&#34;: “+5510998765432”, 
-  &#34;key_type&#34;: “phone”, 
-  &#34;account_id&#34;: &#34;968cc34d-d827-448b-ac1b-e6e29836a160&#34;,
-  &#34;participant_ispb&#34;: “1234567890”,
-  &#34;beneficiary_type&#34;: “external_account”,
-  &#34;beneficiary_account&#34;: {
-     &#34;branch_code&#34;: “0001”,
-     &#34;account_code&#34;: &#34;00016583&#34;,
-     &#34;account_type&#34;: &#34;CC&#34;,
-     &#34;created_at&#34;: &#34;2019-11-18T03:00:00Z&#34;
-  },
-  &#34;beneficiary_entity&#34;: {
-     &#34;name&#34;:&#34;Maria Clara Gomes&#34;,
-     &#34;document_type&#34;: &#34;cpf&#34;,
-     &#34;document&#34;: “13152256685”
-  }
-}
-</code></pre></div><p><br> <br></p>
-<h5 id="response"><strong>Response</strong></h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">202 CONTINUE
-</span><span style="color:#a40000">content-type: application/json
-</span></code></pre></div><p>Body</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">{
-  &#34;id&#34;: “cee2f003-95a0-433f-a785-b933a5832531”
-}
-</code></pre></div><p><br> <br></p>
-<h5 id="webhook"><strong>Webhook</strong></h5>
-<p>Serão disparados webhooks quando o status da solicitação alterar para <code>accepted</code>ou <code>rejected</code>.
-As seguintes informações virão no campo <code>target_data</code>.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">{
-  &#34;id&#34;: &#34;cee2f003-95a0-433f-a785-b933a5832531&#34;,
-  &#34;request_id&#34;: uuid(),
-  &#34;key&#34;: &#34;+5510998765432&#34;,
-  &#34;key_type&#34;: &#34;phone&#34;,
-  &#34;key_status&#34;: &#34;active”,
-  &#34;beneficiary_type&#34;: &#34;external_account&#34;,
-  &#34;beneficiary_id&#34;: &#34;bad7ab7e-f95d-11ea-adc1-0242ac120002&#34;,
-  &#34;created_at&#34;: &#34;20200-09-18T03:00:00Z&#34;,
-  &#34;error_description&#34;: &#34;&#34;,
-  &#34;status&#34;: &#34;accepted&#34;
-}
-</code></pre></div><p><br> <br></p>
+	<h4 id="status-das-solicitações-criação-e-exclusão">Status das solicitações (criação e exclusão)</h4>
+<ul>
+<li><code>pending</code>: criação solicitada.</li>
+<li><code>accepted</code>: solicitação finalizada com sucesso.</li>
+<li><code>rejected</code>: solicitação rejeitada. Veja o campo <code>error_description</code>para entender o motivo.</li>
+</ul>
+<p><br> <br></p>
+<h4 id="status-da-chave">Status da chave</h4>
+<ul>
+<li><code>portability_pending</code>: o processo de reivindicação de portabilidade está em andamento.</li>
+<li><code>claim_requested</code>: o processo de reivindicação de posse está em andamento.</li>
+<li><code>active</code>: chave ativa no DICT e válida para uso.</li>
+<li><code>deleted</code>: chave excluída no DICT e inválida para uso.</li>
+</ul>
+<p><br> <br></p>
+<h4 id="status-reivindicação">Status reivindicação</h4>
+<ul>
+<li><code>open</code>: aberta pelo reivindicador, mas ainda não recebida pelo doador.</li>
+<li><code>waittin_resolution</code>: reivindicação já foi recebida pelo doador e está aguardando a resolução. Os critérios confirmação ou cancelamento da reivindicação seguem normas específicas a depender do tipo (posse ou portabilidade).</li>
+<li><code>confirmed</code>: doador confirmou a reivindicação. Isso implica a remoção da chave do DICT e da base interna do PSP doador. Está aguardando o reivindicador encerrar o processo.</li>
+<li><code>cancelled</code>: doador ou reivindicador cancelou a reivindicação, mantendo o vínculo inalterado (conforme estava antes da reivindicação) tanto no DICT quanto na base interna do PSP.</li>
+<li><code>completd</code>: tanto o DICT quanto o reivindicador atualizaram suas bases com o novo vínculo.</li>
+</ul>
 
         <div class="section-index">
     

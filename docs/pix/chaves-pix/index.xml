@@ -231,6 +231,42 @@
     </item>
     
     <item>
+      <title>Docs: Status</title>
+      <link>https://stone-co.github.io/docs/pix/chaves-pix/status/</link>
+      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/pix/chaves-pix/status/</guid>
+      <description>
+        
+        
+        &lt;h4 id=&#34;status-das-solicitações-criação-e-exclusão&#34;&gt;Status das solicitações (criação e exclusão)&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pending&lt;/code&gt;: criação solicitada.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;accepted&lt;/code&gt;: solicitação finalizada com sucesso.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rejected&lt;/code&gt;: solicitação rejeitada. Veja o campo &lt;code&gt;error_description&lt;/code&gt;para entender o motivo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+&lt;h4 id=&#34;status-da-chave&#34;&gt;Status da chave&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;portability_pending&lt;/code&gt;: o processo de reivindicação de portabilidade está em andamento.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;claim_requested&lt;/code&gt;: o processo de reivindicação de posse está em andamento.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;active&lt;/code&gt;: chave ativa no DICT e válida para uso.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;deleted&lt;/code&gt;: chave excluída no DICT e inválida para uso.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+&lt;h4 id=&#34;status-reivindicação&#34;&gt;Status reivindicação&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;open&lt;/code&gt;: aberta pelo reivindicador, mas ainda não recebida pelo doador.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;waittin_resolution&lt;/code&gt;: reivindicação já foi recebida pelo doador e está aguardando a resolução. Os critérios confirmação ou cancelamento da reivindicação seguem normas específicas a depender do tipo (posse ou portabilidade).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;confirmed&lt;/code&gt;: doador confirmou a reivindicação. Isso implica a remoção da chave do DICT e da base interna do PSP doador. Está aguardando o reivindicador encerrar o processo.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cancelled&lt;/code&gt;: doador ou reivindicador cancelou a reivindicação, mantendo o vínculo inalterado (conforme estava antes da reivindicação) tanto no DICT quanto na base interna do PSP.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;completd&lt;/code&gt;: tanto o DICT quanto o reivindicador atualizaram suas bases com o novo vínculo.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Criar</title>
       <link>https://stone-co.github.io/docs/pix/chaves-pix/criar-uma-chave-pix/</link>
       <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
