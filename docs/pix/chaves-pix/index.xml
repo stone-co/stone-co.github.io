@@ -240,51 +240,50 @@
         
         
         &lt;h5 id=&#34;request&#34;&gt;&lt;strong&gt;Request&lt;/strong&gt;&lt;/h5&gt;
-&lt;pre&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;POST /api/v1/pix_entries
-content-type: application/json
-{
-  &amp;quot;key&amp;quot;: “+5510998765432”, 
-  &amp;quot;key_type&amp;quot;: “phone”, 
-  &amp;quot;account_id&amp;quot;: &amp;quot;968cc34d-d827-448b-ac1b-e6e29836a160&amp;quot;,
-  &amp;quot;participant_ispb&amp;quot;: “1234567890”,
-  &amp;quot;beneficiary_type&amp;quot;: “external_account”,
-  &amp;quot;beneficiary_account&amp;quot;: {
-     &amp;quot;branch_code&amp;quot;: “0001”,
-     &amp;quot;account_code&amp;quot;: &amp;quot;00016583&amp;quot;,
-     &amp;quot;account_type&amp;quot;: &amp;quot;CC&amp;quot;,
-     &amp;quot;created_at&amp;quot;: &amp;quot;2019-11-18T03:00:00Z&amp;quot;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;/api/v&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;/pix_entries&lt;/span&gt;
+&lt;span style=&#34;color:#a40000&#34;&gt;content-type:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;application/json&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;{
+  &amp;#34;key&amp;#34;: “+5510998765432”, 
+  &amp;#34;key_type&amp;#34;: “phone”, 
+  &amp;#34;account_id&amp;#34;: &amp;#34;968cc34d-d827-448b-ac1b-e6e29836a160&amp;#34;,
+  &amp;#34;participant_ispb&amp;#34;: “1234567890”,
+  &amp;#34;beneficiary_type&amp;#34;: “external_account”,
+  &amp;#34;beneficiary_account&amp;#34;: {
+     &amp;#34;branch_code&amp;#34;: “0001”,
+     &amp;#34;account_code&amp;#34;: &amp;#34;00016583&amp;#34;,
+     &amp;#34;account_type&amp;#34;: &amp;#34;CC&amp;#34;,
+     &amp;#34;created_at&amp;#34;: &amp;#34;2019-11-18T03:00:00Z&amp;#34;
   },
-  &amp;quot;beneficiary_entity&amp;quot;: {
-     &amp;quot;name&amp;quot;:&amp;quot;Maria Clara Gomes&amp;quot;,
-     &amp;quot;document_type&amp;quot;: &amp;quot;cpf&amp;quot;,
-     &amp;quot;document&amp;quot;: “13152256685”
+  &amp;#34;beneficiary_entity&amp;#34;: {
+     &amp;#34;name&amp;#34;:&amp;#34;Maria Clara Gomes&amp;#34;,
+     &amp;#34;document_type&amp;#34;: &amp;#34;cpf&amp;#34;,
+     &amp;#34;document&amp;#34;: “13152256685”
   }
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
 &lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
-&lt;pre&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;202 CONTINUE
-content-type: application/json
-
-{
-  &amp;quot;id&amp;quot;: “cee2f003-95a0-433f-a785-b933a5832531”
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;202&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;CONTINUE&lt;/span&gt;
+&lt;span style=&#34;color:#a40000&#34;&gt;content-type:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;application/json&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;{
+  &amp;#34;id&amp;#34;: “cee2f003-95a0-433f-a785-b933a5832531”
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
 &lt;h5 id=&#34;webhook&#34;&gt;&lt;strong&gt;Webhook&lt;/strong&gt;&lt;/h5&gt;
 &lt;p&gt;Serão disparados webhooks quando o status da solicitação alterar para &lt;code&gt;accepted&lt;/code&gt;ou &lt;code&gt;rejected&lt;/code&gt;.
 As seguintes informações virão no campo &lt;code&gt;target_data&lt;/code&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;{
-  &amp;quot;id&amp;quot;: &amp;quot;cee2f003-95a0-433f-a785-b933a5832531&amp;quot;,
-  &amp;quot;request_id&amp;quot;: uuid(),
-  &amp;quot;key&amp;quot;: &amp;quot;+5510998765432&amp;quot;,
-  &amp;quot;key_type&amp;quot;: &amp;quot;phone&amp;quot;,
-  &amp;quot;key_status&amp;quot;: &amp;quot;active”,
-  &amp;quot;beneficiary_type&amp;quot;: &amp;quot;external_account&amp;quot;,
-  &amp;quot;beneficiary_id&amp;quot;: &amp;quot;bad7ab7e-f95d-11ea-adc1-0242ac120002&amp;quot;,
-  &amp;quot;created_at&amp;quot;: &amp;quot;20200-09-18T03:00:00Z&amp;quot;,
-  &amp;quot;error_description&amp;quot;: &amp;quot;&amp;quot;,
-  &amp;quot;status&amp;quot;: &amp;quot;accepted&amp;quot;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;{
+  &amp;#34;id&amp;#34;: &amp;#34;cee2f003-95a0-433f-a785-b933a5832531&amp;#34;,
+  &amp;#34;request_id&amp;#34;: uuid(),
+  &amp;#34;key&amp;#34;: &amp;#34;+5510998765432&amp;#34;,
+  &amp;#34;key_type&amp;#34;: &amp;#34;phone&amp;#34;,
+  &amp;#34;key_status&amp;#34;: &amp;#34;active”,
+  &amp;#34;beneficiary_type&amp;#34;: &amp;#34;external_account&amp;#34;,
+  &amp;#34;beneficiary_id&amp;#34;: &amp;#34;bad7ab7e-f95d-11ea-adc1-0242ac120002&amp;#34;,
+  &amp;#34;created_at&amp;#34;: &amp;#34;20200-09-18T03:00:00Z&amp;#34;,
+  &amp;#34;error_description&amp;#34;: &amp;#34;&amp;#34;,
+  &amp;#34;status&amp;#34;: &amp;#34;accepted&amp;#34;
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
 
       </description>
     </item>

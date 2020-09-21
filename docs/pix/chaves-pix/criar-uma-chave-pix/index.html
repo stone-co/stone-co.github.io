@@ -334,51 +334,50 @@
         
 	
 	<h5 id="request"><strong>Request</strong></h5>
-<pre><code class="language-json5" data-lang="json5">POST /api/v1/pix_entries
-content-type: application/json
-{
-  &quot;key&quot;: “+5510998765432”, 
-  &quot;key_type&quot;: “phone”, 
-  &quot;account_id&quot;: &quot;968cc34d-d827-448b-ac1b-e6e29836a160&quot;,
-  &quot;participant_ispb&quot;: “1234567890”,
-  &quot;beneficiary_type&quot;: “external_account”,
-  &quot;beneficiary_account&quot;: {
-     &quot;branch_code&quot;: “0001”,
-     &quot;account_code&quot;: &quot;00016583&quot;,
-     &quot;account_type&quot;: &quot;CC&quot;,
-     &quot;created_at&quot;: &quot;2019-11-18T03:00:00Z&quot;
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#a40000">POST</span> <span style="color:#a40000">/api/v</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#a40000">/pix_entries</span>
+<span style="color:#a40000">content-type:</span> <span style="color:#a40000">application/json</span>
+</code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">{
+  &#34;key&#34;: “+5510998765432”, 
+  &#34;key_type&#34;: “phone”, 
+  &#34;account_id&#34;: &#34;968cc34d-d827-448b-ac1b-e6e29836a160&#34;,
+  &#34;participant_ispb&#34;: “1234567890”,
+  &#34;beneficiary_type&#34;: “external_account”,
+  &#34;beneficiary_account&#34;: {
+     &#34;branch_code&#34;: “0001”,
+     &#34;account_code&#34;: &#34;00016583&#34;,
+     &#34;account_type&#34;: &#34;CC&#34;,
+     &#34;created_at&#34;: &#34;2019-11-18T03:00:00Z&#34;
   },
-  &quot;beneficiary_entity&quot;: {
-     &quot;name&quot;:&quot;Maria Clara Gomes&quot;,
-     &quot;document_type&quot;: &quot;cpf&quot;,
-     &quot;document&quot;: “13152256685”
+  &#34;beneficiary_entity&#34;: {
+     &#34;name&#34;:&#34;Maria Clara Gomes&#34;,
+     &#34;document_type&#34;: &#34;cpf&#34;,
+     &#34;document&#34;: “13152256685”
   }
 }
-</code></pre><p><br> <br></p>
+</code></pre></div><p><br> <br></p>
 <h5 id="response"><strong>Response</strong></h5>
-<pre><code class="language-json5" data-lang="json5">202 CONTINUE
-content-type: application/json
-
-{
-  &quot;id&quot;: “cee2f003-95a0-433f-a785-b933a5832531”
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#0000cf;font-weight:bold">202</span> <span style="color:#a40000">CONTINUE</span>
+<span style="color:#a40000">content-type:</span> <span style="color:#a40000">application/json</span>
+</code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">{
+  &#34;id&#34;: “cee2f003-95a0-433f-a785-b933a5832531”
 }
-</code></pre><p><br> <br></p>
+</code></pre></div><p><br> <br></p>
 <h5 id="webhook"><strong>Webhook</strong></h5>
 <p>Serão disparados webhooks quando o status da solicitação alterar para <code>accepted</code>ou <code>rejected</code>.
 As seguintes informações virão no campo <code>target_data</code>.</p>
-<pre><code class="language-json5" data-lang="json5">{
-  &quot;id&quot;: &quot;cee2f003-95a0-433f-a785-b933a5832531&quot;,
-  &quot;request_id&quot;: uuid(),
-  &quot;key&quot;: &quot;+5510998765432&quot;,
-  &quot;key_type&quot;: &quot;phone&quot;,
-  &quot;key_status&quot;: &quot;active”,
-  &quot;beneficiary_type&quot;: &quot;external_account&quot;,
-  &quot;beneficiary_id&quot;: &quot;bad7ab7e-f95d-11ea-adc1-0242ac120002&quot;,
-  &quot;created_at&quot;: &quot;20200-09-18T03:00:00Z&quot;,
-  &quot;error_description&quot;: &quot;&quot;,
-  &quot;status&quot;: &quot;accepted&quot;
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">{
+  &#34;id&#34;: &#34;cee2f003-95a0-433f-a785-b933a5832531&#34;,
+  &#34;request_id&#34;: uuid(),
+  &#34;key&#34;: &#34;+5510998765432&#34;,
+  &#34;key_type&#34;: &#34;phone&#34;,
+  &#34;key_status&#34;: &#34;active”,
+  &#34;beneficiary_type&#34;: &#34;external_account&#34;,
+  &#34;beneficiary_id&#34;: &#34;bad7ab7e-f95d-11ea-adc1-0242ac120002&#34;,
+  &#34;created_at&#34;: &#34;20200-09-18T03:00:00Z&#34;,
+  &#34;error_description&#34;: &#34;&#34;,
+  &#34;status&#34;: &#34;accepted&#34;
 }
-</code></pre><p><br> <br></p>
+</code></pre></div><p><br> <br></p>
 
         <div class="section-index">
     
