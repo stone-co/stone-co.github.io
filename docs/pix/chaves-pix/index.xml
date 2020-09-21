@@ -327,6 +327,66 @@ As seguintes informações virão no campo &lt;code&gt;target_data&lt;/code&gt;.
     </item>
     
     <item>
+      <title>Docs: Reivindicar</title>
+      <link>https://stone-co.github.io/docs/pix/chaves-pix/reivindicar/</link>
+      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/pix/chaves-pix/reivindicar/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Existem cenários em que o dado a ser usado como identificador da Chave PIX já foi cadastrado junto ao DICT e pertence a uma chave ativa, nesses caso não deve ser feita uma criação do zero e sim uma reivindicação da Chave PIX.
+&lt;br&gt;&lt;br&gt;
+As reivindicações se dividem dem dois tipos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;portability&lt;/code&gt;: o dado já esta cadastrado em uma Chave PIX de mesma titularidade em outra instituição. Assim o solicitante deseja apenas que seu dado passe a ser atrelado a Chape PIX da instituição que está pedidno a portabilidade.
+Disponível para os tipos: &lt;code&gt;phone&lt;/code&gt;, &lt;code&gt;email&lt;/code&gt;, &lt;code&gt;cpf&lt;/code&gt; e &lt;code&gt;cnpj&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ownership&lt;/code&gt;: o dados já está cadastrado em uma chave PIX de outra titularidade. Esse cenário pode aocntecer quando um número de celular, por exemplo, passa a ter um novo dono.
+Disponível para os tipos: &lt;code&gt;phone&lt;/code&gt;e &lt;code&gt;email&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;request&#34;&gt;&lt;strong&gt;Request&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST /api/v1/pix_entry_claims
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;{
+  &amp;#34;key_type&amp;#34;: “phone”, 
+  “account_id”: “968cc34d-d827-448b-ac1b-e6e29836a160”,
+  “claim_type”: “portability”,
+  &amp;#34;participant_ispb&amp;#34;: “1234567890”,
+  &amp;#34;beneficiary_type&amp;#34;: “external_account”,
+  &amp;#34;beneficiary_account&amp;#34;: {
+     &amp;#34;branch_code&amp;#34;: “0001”,
+     &amp;#34;account_code&amp;#34;: &amp;#34;00016583&amp;#34;,
+     &amp;#34;account_type&amp;#34;: &amp;#34;CC&amp;#34;,
+     &amp;#34;opened_at&amp;#34;: &amp;#34;2019-11-18T03:00:00Z&amp;#34;
+  },
+  &amp;#34;beneficiary_entity&amp;#34;: {
+     &amp;#34;name&amp;#34;: “0001”,
+     &amp;#34;document_type&amp;#34;: &amp;#34;cpf&amp;#34;,
+     &amp;#34;document&amp;#34;: &amp;#34;13152256685&amp;#34;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;202 CONTINUE
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;{
+  &amp;#34;claim_id&amp;#34;: “6c8e9fb9-1416-434d-9933-a36fb3ad7a8c”,
+  &amp;#34;claim_type&amp;#34;: “portability”
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+&lt;h5 id=&#34;webhook&#34;&gt;&lt;strong&gt;Webhook&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;Serão disparados webhooks quando o status da solicitação alterar.
+As seguintes informações virão no campo &lt;code&gt;target_data&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;{
+  &amp;#34;claim_id&amp;#34;: &amp;#34;6c8e9fb9-1416-434d-9933-a36fb3ad7a8c&amp;#34;,
+  &amp;#34;status&amp;#34;: &amp;#34;open&amp;#34;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Excluir</title>
       <link>https://stone-co.github.io/docs/pix/chaves-pix/excluir-uma-chave-pix/</link>
       <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
