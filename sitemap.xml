@@ -18,6 +18,16 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/stone-openbank/</loc>
+    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/stone-openbank/overview/</loc>
+    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/pix/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
   </url>
@@ -33,6 +43,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/stone-openbank/autenticacao/</loc>
+    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/pix/chaves-pix/criar-uma-chave-pix/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
   </url>
@@ -43,8 +58,18 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/stone-openbank/data-e-hora/</loc>
+    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/pix/chaves-pix/excluir-uma-chave-pix/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/stone-openbank/paginacao/</loc>
+    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
   </url>
   
   <url>
@@ -53,8 +78,23 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/stone-openbank/valores-financeiros/</loc>
+    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/stone-openbank/codigos-de-resposta/</loc>
+    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/pix/chaves-pix/reivindicar-uma-chave-pix/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/stone-openbank/mensagens-de-erro/</loc>
+    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
   </url>
   
   <url>
