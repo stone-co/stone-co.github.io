@@ -257,10 +257,10 @@
 &lt;h4 id=&#34;status-reivindicação&#34;&gt;Status reivindicação&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;open&lt;/code&gt;: aberta pelo reivindicador, mas ainda não recebida pelo doador.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;waittin_resolution&lt;/code&gt;: reivindicação já foi recebida pelo doador e está aguardando a resolução. Os critérios confirmação ou cancelamento da reivindicação seguem normas específicas a depender do tipo (posse ou portabilidade).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;waiting_resolution&lt;/code&gt;: reivindicação já foi recebida pelo doador e está aguardando a resolução. Os critérios confirmação ou cancelamento da reivindicação seguem normas específicas a depender do tipo (posse ou portabilidade).&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;confirmed&lt;/code&gt;: doador confirmou a reivindicação. Isso implica a remoção da chave do DICT e da base interna do PSP doador. Está aguardando o reivindicador encerrar o processo.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;cancelled&lt;/code&gt;: doador ou reivindicador cancelou a reivindicação, mantendo o vínculo inalterado (conforme estava antes da reivindicação) tanto no DICT quanto na base interna do PSP.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;completd&lt;/code&gt;: tanto o DICT quanto o reivindicador atualizaram suas bases com o novo vínculo.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;completed&lt;/code&gt;: tanto o DICT quanto o reivindicador atualizaram suas bases com o novo vínculo.&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>
