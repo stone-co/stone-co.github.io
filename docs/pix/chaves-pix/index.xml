@@ -230,5 +230,39 @@
       </description>
     </item>
     
+    <item>
+      <title>Docs: `/POST`Criar uma Chave PIX</title>
+      <link>https://stone-co.github.io/docs/pix/chaves-pix/criar-uma-chave-pix/</link>
+      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/pix/chaves-pix/criar-uma-chave-pix/</guid>
+      <description>
+        
+        
+        &lt;h4 id=&#34;request&#34;&gt;Request&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;POST /api/v1/pix_entries
+content-type: application/json
+{
+  &amp;quot;key&amp;quot;: “+5510998765432”, 
+  &amp;quot;key_type&amp;quot;: “phone”, 
+  &amp;quot;account_id&amp;quot;: &amp;quot;968cc34d-d827-448b-ac1b-e6e29836a160&amp;quot;,
+  &amp;quot;participant_ispb&amp;quot;: “1234567890”,
+  &amp;quot;beneficiary_type&amp;quot;: “external_account”,
+  &amp;quot;beneficiary_account&amp;quot;: {
+     &amp;quot;branch_code&amp;quot;: “0001”,
+     &amp;quot;account_code&amp;quot;: &amp;quot;00016583&amp;quot;,
+     &amp;quot;account_type&amp;quot;: &amp;quot;CC&amp;quot;,
+     &amp;quot;created_at&amp;quot;: &amp;quot;2019-11-18T03:00:00Z&amp;quot;
+  },
+  &amp;quot;beneficiary_entity&amp;quot;: {
+     &amp;quot;name&amp;quot;:&amp;quot;Maria Clara Gomes&amp;quot;,
+     &amp;quot;document_type&amp;quot;: &amp;quot;cpf&amp;quot;,
+     &amp;quot;document&amp;quot;: “13152256685”
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
   </channel>
 </rss>
