@@ -15,7 +15,7 @@
     
     
     <item>
-      <title>Docs: Objetos e Campos</title>
+      <title>Docs: Objetos</title>
       <link>https://stone-co.github.io/docs/pix/chaves-pix/campos/</link>
       <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
       
@@ -103,7 +103,7 @@
 &lt;tr&gt;
 &lt;td&gt;reason&lt;/td&gt;
 &lt;td&gt;String&lt;/td&gt;
-&lt;td&gt;Razão da solicitação de remoção de uma Chave PIX. Valores possíveis são:&lt;code&gt;user_requested”, &lt;/code&gt;account_closured&lt;code&gt;, &lt;/code&gt;entry_inactivity&lt;code&gt;, &lt;/code&gt;reconciliation&lt;code&gt;ou &lt;/code&gt;fraud&lt;code&gt;. &lt;/code&gt;entry_inactivity`deve ser usado quando por algum motivo a chave usada não está mais ativa, como um email ativo que foi desabilitado ou um CPF que foi inativado.  | - |&lt;/td&gt;
+&lt;td&gt;Razão da solicitação de remoção de uma Chave PIX. Valores possíveis são:&lt;code&gt;user_requested”, &lt;/code&gt;account_closured&lt;code&gt;, &lt;/code&gt;entry_inactivity&lt;code&gt;, &lt;/code&gt;reconciliation&lt;code&gt;ou &lt;/code&gt;fraud&lt;code&gt;. &lt;/code&gt;entry_inactivity`deve ser usado quando por algum motivo a chave usada não está mais ativa, como um email ativo que foi desabilitado ou um CPF que foi inativado. | - |&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -162,8 +162,8 @@
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;Chave&lt;/th&gt;
-&lt;th&gt;Descrição&lt;/th&gt;
 &lt;th&gt;Tipo&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
 &lt;th&gt;Regra de negócio&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
@@ -200,8 +200,8 @@
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;Chave&lt;/th&gt;
-&lt;th&gt;Descrição&lt;/th&gt;
 &lt;th&gt;Tipo&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
 &lt;th&gt;Regra de negócio&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
