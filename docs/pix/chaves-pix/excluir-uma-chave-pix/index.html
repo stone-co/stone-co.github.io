@@ -639,11 +639,10 @@
 <li>posse cedida a outra instituição/usuário.</li>
 </ul>
 <h5 id="request"><strong>Request</strong></h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">DELETE /api/v1/pix_entries/key/:id
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">DELETE /api/v1/pix/:account_id/entries/:id
 </span></code></pre></div><p>Body</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">{
   &#34;key_type&#34;: “phone”,
-  “account_id”: “968cc34d-d827-448b-ac1b-e6e29836a160”,
   &#34;participant_ispb&#34;: “1234567890”,
   &#34;beneficiary_type&#34;: “external_account”,
   &#34;beneficiary_account&#34;: {
