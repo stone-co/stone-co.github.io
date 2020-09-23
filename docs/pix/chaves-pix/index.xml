@@ -318,7 +318,6 @@ Disponível para os tipos: &lt;code&gt;phone&lt;/code&gt;e &lt;code&gt;email&lt;
   &amp;#34;key_type&amp;#34;: “phone”, 
   “claim_type”: “portability”,
   &amp;#34;participant_ispb&amp;#34;: “1234567890”,
-  &amp;#34;beneficiary_type&amp;#34;: “external_account”,
   &amp;#34;beneficiary_account&amp;#34;: {
      &amp;#34;branch_code&amp;#34;: “0001”,
      &amp;#34;account_code&amp;#34;: &amp;#34;00016583&amp;#34;,
