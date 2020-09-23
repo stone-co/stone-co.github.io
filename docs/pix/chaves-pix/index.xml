@@ -455,15 +455,15 @@ Disponível para os tipos: &lt;code&gt;phone&lt;/code&gt;e &lt;code&gt;email&lt;
   &amp;#34;key&amp;#34;: &amp;#34;+5510998765432&amp;#34;,
   &amp;#34;events&amp;#34;: [
    {
-      &amp;#34;id&amp;#34;: 38963369-533c-42aa-a49e-b5369ff4bd52,
+      &amp;#34;id&amp;#34;: &amp;#34;38963369-533c-42aa-a49e-b5369ff4bd52&amp;#34;,
       &amp;#34;created_at&amp;#34;: &amp;#34;20200-09-18T03:00:00Z&amp;#34;,
       &amp;#34;type&amp;#34;: &amp;#34;created&amp;#34;,
       &amp;#34;from_status&amp;#34;: null,
       &amp;#34;to_status&amp;#34;: &amp;#34;active&amp;#34;
     },
     {
-      &amp;#34;id&amp;#34;: 38963369-533c-42aa-a49e-b5369ff4bd52,
-      &amp;#34;created_at&amp;#34;: &amp;#34;20200-09-18T03:00:00Z&amp;#34;,
+      &amp;#34;id&amp;#34;: &amp;#34;9bac50e2-c6ad-4193-8263-7170046a85a3&amp;#34;,
+      &amp;#34;created_at&amp;#34;: &amp;#34;20200-09-22T03:00:00Z&amp;#34;,
       &amp;#34;type&amp;#34;: &amp;#34;portability_requested&amp;#34;,
       &amp;#34;from_status&amp;#34;: &amp;#34;active&amp;#34;,
       &amp;#34;to_status&amp;#34;: &amp;#34;portability_pending&amp;#34;
