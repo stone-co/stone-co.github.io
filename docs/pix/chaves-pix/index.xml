@@ -532,11 +532,10 @@ Disponível para os tipos: &lt;code&gt;phone&lt;/code&gt;, &lt;code&gt;email&lt;
 Disponível para os tipos: &lt;code&gt;phone&lt;/code&gt;e &lt;code&gt;email&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h5 id=&#34;request&#34;&gt;&lt;strong&gt;Request&lt;/strong&gt;&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST /api/v1/pix_entry_claims
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST /api/v1/pix/:account_id/entry_claims
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;{
   &amp;#34;key_type&amp;#34;: “phone”, 
-  “account_id”: “968cc34d-d827-448b-ac1b-e6e29836a160”,
   “claim_type”: “portability”,
   &amp;#34;participant_ispb&amp;#34;: “1234567890”,
   &amp;#34;beneficiary_type&amp;#34;: “external_account”,
