@@ -293,7 +293,7 @@ O cabeçalho da resposta sempre inclui um campo identificador da requisição, c
       <description>
         
         
-        &lt;p&gt;Nossos endpoints seguem um padrão de mensagens. Toda mensagem de erro, por exemplo, seguirá o modelo &amp;ldquo;srn:error:xxx&amp;quot; e um &lt;a href=&#34;https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html&#34;&gt;código HTTP&lt;/a&gt; apropriado para a falha.&lt;/p&gt;
+        &lt;p&gt;Nossos endpoints seguem um padrão de mensagens. Toda mensagem de erro, por exemplo, seguirá o modelo &amp;ldquo;srn:error:xxx&amp;quot; e um &lt;a href=&#34;https://stone-co.github.io/docs/stone-openbank/codigos-de-resposta/&#34;&gt;código HTTP&lt;/a&gt; apropriado para a falha.&lt;/p&gt;
 &lt;p&gt;Por exemplo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;{
     &amp;#34;type&amp;#34;: &amp;#34;srn:error:target_account_not_found&amp;#34;
