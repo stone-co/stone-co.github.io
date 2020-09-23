@@ -645,7 +645,7 @@
 	<h1>Autenticação</h1>
         
 	
-	<p>A nossa API só aceita chamadas autenticadas, ou seja, chamadas cujo sujeito da ação conseguimos identificar. Para isso, exigimos que nas <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods">requisições HTTP</a> exista no cabeçalho um campo chamado <code>authorization</code>, cujo valor será &quot;Bearer&quot; seguido do token de acesso.</p>
+	<p>A nossa API só aceita chamadas autenticadas, ou seja, chamadas cujo sujeito da ação conseguimos identificar. Para isso, exigimos que nas <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods">requisições HTTP</a> exista no cabeçalho um campo chamado <code>authorization</code>, cujo valor será &quot;Bearer&quot; seguido do <code>access_token</code>.</p>
 <p>Exemplo de cabeçalho de uma chamada autenticada:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#000">GET</span> <span style="color:#000">/api/v1/accounts</span> <span style="color:#204a87;font-weight:bold">HTTP</span><span style="color:#ce5c00;font-weight:bold">/</span><span style="color:#0000cf;font-weight:bold">1.1</span>
 <span style="color:#000">Host</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">sandbox-api.openbank.stone.com.br</span>
