@@ -412,29 +412,6 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/pix/chaves-pix/listar-chaves-pix/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Listar</a>
-  </li>
-  <ul>
-    <li class="collapse show" id="docspixchaves-pixlistar-chaves-pix">
-      
-      
-      
-    </li>
-  </ul>
-</ul>
-
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
     <a  href="/docs/pix/chaves-pix/excluir-uma-chave-pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Excluir</a>
   </li>
   <ul>
@@ -462,6 +439,29 @@
   </li>
   <ul>
     <li class="collapse " id="docspixchaves-pixdetalhar-uma-chave-pix">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/pix/chaves-pix/listar-chaves-pix/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Listar</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="docspixchaves-pixlistar-chaves-pix">
       
       
       
@@ -633,10 +633,9 @@
         
 	
 	<h5 id="request"><strong>Request</strong></h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">GET /api/v1/pix_entries
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">GET /api/v1/pix/:account_id/entries
 </span></code></pre></div><p>Parâmetros para query.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">- &#34;participant_ispb&#34; *(obrigatório para participantes indiretos)
-- &#34;account_id&#34;
 - &#34;beneficiary_entity_name&#34;
 - &#34;beneficiary_entity_document_type&#34;
 - &#34;beneficiary_entity_document&#34;
