@@ -426,7 +426,7 @@ Disponível para os tipos: &lt;code&gt;phone&lt;/code&gt;e &lt;code&gt;email&lt;
   &amp;#34;id&amp;#34;: &amp;#34;40346adc-74f3-4c4e-8275-73ba78993491&amp;#34;,
   “claim_type”: “portability”,
   &amp;#34;status&amp;#34;: &amp;#34;waiting_resolution&amp;#34;,
-  &amp;#34;origin&amp;#34;: internal,
+  &amp;#34;origin&amp;#34;: &amp;#34;external&amp;#34;,
   &amp;#34;origin_ispb&amp;#34;: &amp;#34;1234567890&amp;#34;,
   “created_at”: &amp;#34;“2020- 09-27T03:00:00Z”,
   “updated_at”: &amp;#34;2020-09-27T06:00:00Z&amp;#34;, 
