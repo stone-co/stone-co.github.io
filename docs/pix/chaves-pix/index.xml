@@ -436,7 +436,7 @@ Disponível para os tipos: &lt;code&gt;phone&lt;/code&gt;e &lt;code&gt;email&lt;
   &amp;#34;origin_ispb&amp;#34;: &amp;#34;1234567890&amp;#34;,
   “created_at”: &amp;#34;“2020- 09-27T03:00:00Z”,
   “updated_at”: &amp;#34;2020-09-27T06:00:00Z&amp;#34;, 
-  “expiration_at”: &amp;#34;2020-09-30T03:00:00Z&amp;#34;,
+  “expires_at”: &amp;#34;2020-09-30T03:00:00Z&amp;#34;,
   &amp;#34;beneficiary_account&amp;#34;: {
      &amp;#34;branch_code&amp;#34;: “0001”,
      &amp;#34;account_code&amp;#34;: &amp;#34;00016583&amp;#34;,
