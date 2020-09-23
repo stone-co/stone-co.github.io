@@ -68,6 +68,7 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;{
   &amp;#34;key&amp;#34;: “+5510998765432”, 
   &amp;#34;key_type&amp;#34;: “phone”, 
+  &amp;#34;status&amp;#34;: &amp;#34;active&amp;#34;,
   &amp;#34;participant_ispb&amp;#34;: “1234567890”,
   &amp;#34;beneficiary_type&amp;#34;: “external_account”,
   &amp;#34;beneficiary_account&amp;#34;: {
