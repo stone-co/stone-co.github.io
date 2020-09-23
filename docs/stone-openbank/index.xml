@@ -124,18 +124,7 @@ Após a integração temos uma etapa de homologação das funcionalidades integr
       <description>
         
         
-        &lt;p&gt;A nossa API é RESTful, e todas suas respostas são em JSON, nos endpoint base, por ambiente:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Sandbox&lt;/em&gt;: &lt;a href=&#34;https://sandbox-api.openbank.stone.com.br&#34;&gt;https://sandbox-api.openbank.stone.com.br&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Produção&lt;/em&gt;: &lt;a href=&#34;https://api.openbank.stone.com.br&#34;&gt;https://api.openbank.stone.com.br&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Seguimos alguns padrões para alguns tipos de dados em toda a nossa API.
-A seguir, juntamos alguns desses padrões para simplificar a vida da desenvolvedora.&lt;/p&gt;
-&lt;h4 id=&#34;realizando-chamadas-autenticadas&#34;&gt;Realizando Chamadas Autenticadas&lt;/h4&gt;
-&lt;p&gt;A nossa API só aceita chamadas autenticadas, ou seja, chamadas cujo sujeito da ação conseguimos identificar.&lt;/p&gt;
-&lt;p&gt;Caso ainda não tenha realizado o procedimento para obter seu token de acesso, por favor siga o passo a passo descrito na página &lt;strong&gt;&lt;a href=&#34;https://docs.openbank.stone.com.br/docs/autenticacao-guides&#34;&gt;Autenticação&lt;/a&gt;&lt;/strong&gt; de nossos Guias.&lt;/p&gt;
-&lt;p&gt;Caso tenha em mãos seu token de acesso, já é possível realizar chamadas autenticadas.&lt;/p&gt;
-&lt;p&gt;Para isso, exigimos que nas &lt;a href=&#34;https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods&#34;&gt;requisições HTTP&lt;/a&gt; exista no cabeçalho um campo chamado &lt;code&gt;authorization&lt;/code&gt;, cujo valor será &amp;quot;Bearer&amp;quot; seguido do token de acesso.&lt;/p&gt;
+        &lt;p&gt;A nossa API só aceita chamadas autenticadas, ou seja, chamadas cujo sujeito da ação conseguimos identificar. Para isso, exigimos que nas &lt;a href=&#34;https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods&#34;&gt;requisições HTTP&lt;/a&gt; exista no cabeçalho um campo chamado &lt;code&gt;authorization&lt;/code&gt;, cujo valor será &amp;quot;Bearer&amp;quot; seguido do token de acesso.&lt;/p&gt;
 &lt;p&gt;Exemplo de cabeçalho de uma chamada autenticada:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#000&#34;&gt;GET&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;/api/v1/accounts&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;HTTP&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1.1&lt;/span&gt;
 &lt;span style=&#34;color:#000&#34;&gt;Host&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;sandbox-api.openbank.stone.com.br&lt;/span&gt;
@@ -143,13 +132,6 @@ A seguir, juntamos alguns desses padrões para simplificar a vida da desenvolved
 &lt;span style=&#34;color:#000&#34;&gt;Accept&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;*/*&lt;/span&gt;
 &lt;span style=&#34;color:#000&#34;&gt;authorization&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV*adQssw5c&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
-&lt;h4 class=&#34;alert-heading&#34;&gt;Autenticação nos Exemplos&lt;/h4&gt;
-Cada exemplo de endpoint desta documentação tem um campo especial para o ACCESS_TOKEN, acessível clicando no botão &lt;code&gt;Try It&lt;/code&gt;.
-&lt;/div&gt;
-
-
       </description>
     </item>
     
