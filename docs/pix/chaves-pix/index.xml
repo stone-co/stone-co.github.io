@@ -370,8 +370,6 @@ Disponível para os tipos: &lt;code&gt;phone&lt;/code&gt;e &lt;code&gt;email&lt;
   &amp;#34;key&amp;#34;: &amp;#34;+5510998765432&amp;#34;,
   “claim_type”: “portability”,
   &amp;#34;claim_origin_ispb&amp;#34;: &amp;#34;9876543210&amp;#34;,
-  &amp;#34;resolution_period_end&amp;#34;: &amp;#34;2019-12-18T03:00:00Z&amp;#34;,
-  &amp;#34;completion_period_end&amp;#34;: &amp;#34;2019-12-19T03:00:00Z&amp;#34;,  
   &amp;#34;beneficiary_account&amp;#34;: {
      &amp;#34;branch_code&amp;#34;: “0001”,
      &amp;#34;account_code&amp;#34;: &amp;#34;00016583&amp;#34;,
