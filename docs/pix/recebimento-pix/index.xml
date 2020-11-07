@@ -1,0 +1,263 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stone OpenBank – Recebimento</title>
+    <link>https://stone-co.github.io/docs/pix/recebimento-pix/</link>
+    <description>Recent content in Recebimento on Stone OpenBank</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 17 Sep 2020 18:00:00 -0300</lastBuildDate>
+    
+	  <atom:link href="https://stone-co.github.io/docs/pix/recebimento-pix/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Gerar Cobrança</title>
+      <link>https://stone-co.github.io/docs/pix/recebimento-pix/gerar-cobranca/</link>
+      <pubDate>Fri, 06 Nov 2020 13:55:15 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/pix/recebimento-pix/gerar-cobranca/</guid>
+      <description>
+        
+        
+        &lt;h5 id=&#34;request&#34;&gt;&lt;strong&gt;Request&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST - /api/v1/pix_payment_invoices
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;headers&#34;&gt;&lt;strong&gt;Headers&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&amp;#34;authorization&amp;#34;: subject application:participante
+&amp;#34;content-type&amp;#34;: application/json
+&amp;#34;x-stone-idempotency-key&amp;#34;: string
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;body&#34;&gt;&lt;strong&gt;Body&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;{
+  &amp;#34;account_id&amp;#34;: uuid() # ID da conta da participante,
+  &amp;#34;key&amp;#34;: &amp;lt;string&amp;gt;, # chave do dict
+  &amp;#34;transaction_id&amp;#34;: &amp;lt;string&amp;gt;, # pattern: [A-Z0-9-]{1,35}
+  &amp;#34;amount&amp;#34;: integer(), # min 1, max 999_999_999_999
+  &amp;#34;request_for_payer&amp;#34;: string() | null, # 140 caracteres no max
+  &amp;#34;expiration&amp;#34;: integer() | null, # valor em segundos, default 86400
+  &amp;#34;customer&amp;#34;: {
+    &amp;#34;name&amp;#34;: string(), # min 1 caracter, max 200 caracteres. Nome do pagador cadastrado na geração da cobrança (não necessariamente é o pagador final)
+    &amp;#34;document&amp;#34;: string() # min 1 caracter, max 200 caracteres. Documento do pagador cadastrado na cobrança
+  } | null,
+  additional_data: [ # máximo de 50 itens na lista, mínimo de 1 ou nulo
+    {
+      &amp;#34;name&amp;#34;: string(), # min 1 caractere, max 50 caracteres
+      &amp;#34;value&amp;#34;: string() # min 1 caractere, max 200 caracteres
+    }
+  ] | null
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;201 CREATED
+
+{
+   &amp;#34;id&amp;#34;: &amp;#34;54071fc2-8068-4b26-bed7-be112228ed98&amp;#34;,
+   &amp;#34;account_id&amp;#34;: &amp;#34;fa7da52c-784d-4bd1-a3cb-db98bda9222d&amp;#34;,
+   &amp;#34;request_id&amp;#34;: &amp;#34;f209b07f-f5c4-4a31-b1b8-0d4697ccc92d&amp;#34;,
+   &amp;#34;key&amp;#34;: &amp;#34;571650fa-ae2c-421e-9dfd-c64e0c0c2926&amp;#34;,
+   &amp;#34;transaction_id&amp;#34;: &amp;#34;127a19f8-88d7-4af8-a0b9-1a72f108a40e&amp;#34;,
+   &amp;#34;amount&amp;#34;: 1000,
+   &amp;#34;request_for_payer&amp;#34;: &amp;#34;Preencha o tamanho da camisa&amp;#34;,
+   &amp;#34;expiration&amp;#34;: 86400,
+   &amp;#34;created_at&amp;#34;: &amp;#34;2020-08-19T13:49:43Z&amp;#34;,
+   &amp;#34;created_by&amp;#34;: &amp;#34;user:54071fc2-8068-4b26-bed7-be112228ed98&amp;#34;
+   &amp;#34;revision&amp;#34;: 0,
+   &amp;#34;location&amp;#34;: &amp;#34;pix.stone.com.br/pix/1dd7f893-a58e-4172-8702-8dc33e21a403&amp;#34;,
+   &amp;#34;status&amp;#34;: &amp;#34;ACTIVE&amp;#34;,
+   &amp;#34;customer&amp;#34;: {
+     &amp;#34;name&amp;#34;: &amp;#34;Fulano da Silva&amp;#34;
+     &amp;#34;document&amp;#34;: &amp;#34;18894559890&amp;#34;
+   },
+   &amp;#34;additional_data&amp;#34;: [
+    {
+      &amp;#34;name&amp;#34;: &amp;#34;Modelo&amp;#34;,
+      &amp;#34;value&amp;#34;: &amp;#34;Camisa Kelvin Clain Luxo&amp;#34;
+    },
+    {
+      &amp;#34;name&amp;#34;: &amp;#34;Cor&amp;#34;,
+      &amp;#34;value&amp;#34;: &amp;#34;Dourada&amp;#34;
+    }
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Detalhe da Cobrança</title>
+      <link>https://stone-co.github.io/docs/pix/recebimento-pix/consultar-qrcode-gerado/</link>
+      <pubDate>Fri, 06 Nov 2020 15:26:32 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/pix/recebimento-pix/consultar-qrcode-gerado/</guid>
+      <description>
+        
+        
+        &lt;h5 id=&#34;request&#34;&gt;&lt;strong&gt;Request&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET /api/v1/pix_payment_invoices/:id
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;200 OK
+
+{
+   &amp;#34;id&amp;#34;: &amp;#34;54071fc2-8068-4b26-bed7-be112228ed98&amp;#34;,
+   &amp;#34;account_id&amp;#34;: &amp;#34;fa7da52c-784d-4bd1-a3cb-db98bda9222d&amp;#34;,
+   &amp;#34;request_id&amp;#34;: &amp;#34;f209b07f-f5c4-4a31-b1b8-0d4697ccc92d&amp;#34;,
+   &amp;#34;key&amp;#34;: &amp;#34;571650fa-ae2c-421e-9dfd-c64e0c0c2926&amp;#34;,
+   &amp;#34;key_type&amp;#34;: &amp;#34;random_key&amp;#34;,
+   &amp;#34;transaction_id&amp;#34;: &amp;#34;127a19f8-88d7-4af8-a0b9-1a72f108a40e&amp;#34;,
+   &amp;#34;amount&amp;#34;: 1000,
+   &amp;#34;request_for_payer&amp;#34;: &amp;#34;Preencha o tamanho da camisa&amp;#34;,
+   &amp;#34;expiration&amp;#34;: 86400,
+   &amp;#34;created_at&amp;#34;: &amp;#34;2020-08-19T13:49:43Z&amp;#34;,
+   &amp;#34;created_by&amp;#34;: &amp;#34;user:54071fc2-8068-4b26-bed7-be112228ed98&amp;#34;,
+   &amp;#34;paid_at&amp;#34;: &amp;#34;2020-08-19T13:49:43Z&amp;#34;,
+   &amp;#34;cancelled_at&amp;#34;: null,
+   &amp;#34;updated_at&amp;#34;: &amp;#34;2020-08-19T13:49:43Z&amp;#34;,
+   &amp;#34;revision&amp;#34;: 0,
+   &amp;#34;location&amp;#34;: &amp;#34;pix.stone.com.br/pix/1dd7f893-a58e-4172-8702-8dc33e21a403&amp;#34;,
+   &amp;#34;status&amp;#34;: &amp;#34;ACTIVE&amp;#34;,
+   &amp;#34;customer&amp;#34;: {
+     &amp;#34;name&amp;#34;: &amp;#34;Fulano da Silva&amp;#34;
+     &amp;#34;document&amp;#34;: &amp;#34;18894559890&amp;#34;
+   },
+   &amp;#34;additional_data&amp;#34;: [
+    {
+      &amp;#34;name&amp;#34;: &amp;#34;Modelo&amp;#34;,
+      &amp;#34;value&amp;#34;: &amp;#34;Camisa Kelvin Clain Luxo&amp;#34;
+    },
+    {
+      &amp;#34;name&amp;#34;: &amp;#34;Cor&amp;#34;,
+      &amp;#34;value&amp;#34;: &amp;#34;Dourada&amp;#34;
+    }
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Listar Cobranças</title>
+      <link>https://stone-co.github.io/docs/pix/recebimento-pix/listar-cobrancas/</link>
+      <pubDate>Fri, 06 Nov 2020 13:52:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/pix/recebimento-pix/listar-cobrancas/</guid>
+      <description>
+        
+        
+        &lt;h5 id=&#34;request&#34;&gt;&lt;strong&gt;Request&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET /api/v1/pix_payment_invoices
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;filtros-possíveis&#34;&gt;&lt;strong&gt;Filtros possíveis&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;- &amp;#34;account_id&amp;#34; - string (obrigatório)
+- &amp;#34;key&amp;#34;: string
+- &amp;#34;transaction_id&amp;#34;: string
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;200 OK
+
+{
+  cursor: {
+    before: null,
+    after: &amp;#34;c2hvcnQ&amp;#34;,
+    limit: 100
+  },
+  data: [
+    {
+      &amp;#34;id&amp;#34;: &amp;#34;54071fc2-8068-4b26-bed7-be112228ed98&amp;#34;,
+      &amp;#34;account_id&amp;#34;: &amp;#34;fa7da52c-784d-4bd1-a3cb-db98bda9222d&amp;#34;,
+      &amp;#34;request_id&amp;#34;: &amp;#34;f209b07f-f5c4-4a31-b1b8-0d4697ccc92d&amp;#34;,
+      &amp;#34;key&amp;#34;: &amp;#34;571650fa-ae2c-421e-9dfd-c64e0c0c2926&amp;#34;,
+      &amp;#34;key_type&amp;#34;: &amp;#34;random_key&amp;#34;,
+      &amp;#34;transaction_id&amp;#34;: &amp;#34;127a19f8-88d7-4af8-a0b9-1a72f108a40e&amp;#34;,
+      &amp;#34;amount&amp;#34;: 1000,
+      &amp;#34;request_for_payer&amp;#34;: &amp;#34;Preencha o tamanho da camisa&amp;#34;,
+      &amp;#34;expiration&amp;#34;: 86400,
+      &amp;#34;created_at&amp;#34;: &amp;#34;2020-08-19T13:49:43Z&amp;#34;,
+      &amp;#34;created_by&amp;#34;: &amp;#34;user:54071fc2-8068-4b26-bed7-be112228ed98&amp;#34;,
+      &amp;#34;paid_at&amp;#34;: &amp;#34;2020-08-19T13:49:43Z&amp;#34;,
+      &amp;#34;cancelled_at&amp;#34;: null,
+      &amp;#34;updated_at&amp;#34;: &amp;#34;2020-08-19T13:49:43Z&amp;#34;,
+      &amp;#34;revision&amp;#34;: 0,
+      &amp;#34;location&amp;#34;: &amp;#34;pix.stone.com.br/pix/1dd7f893-a58e-4172-8702-8dc33e21a403&amp;#34;,
+      &amp;#34;status&amp;#34;: &amp;#34;ACTIVE&amp;#34;,
+      &amp;#34;customer&amp;#34;: {
+        &amp;#34;name&amp;#34;: &amp;#34;Fulano da Silva&amp;#34;
+        &amp;#34;document&amp;#34;: &amp;#34;18894559890&amp;#34;
+      },
+      &amp;#34;additional_data&amp;#34;: [
+        {
+          &amp;#34;name&amp;#34;: &amp;#34;Modelo&amp;#34;,
+          &amp;#34;value&amp;#34;: &amp;#34;Camisa Kelvin Clain Luxo&amp;#34;
+        },
+        {
+          &amp;#34;name&amp;#34;: &amp;#34;Cor&amp;#34;,
+          &amp;#34;value&amp;#34;: &amp;#34;Dourada&amp;#34;
+        }
+      ]
+    }
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Especificação do QR Code</title>
+      <link>https://stone-co.github.io/docs/pix/recebimento-pix/especificacao-do-qrcode/</link>
+      <pubDate>Fri, 06 Nov 2020 15:07:33 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/pix/recebimento-pix/especificacao-do-qrcode/</guid>
+      <description>
+        
+        
+        &lt;h5 id=&#34;formatos-retornados-e-content-type&#34;&gt;&lt;strong&gt;Formatos retornados e content type&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/11000135/98400401-b6b24980-2042-11eb-8a59-1c6e56410530.png&#34; alt=&#34;Imagem 1&#34;&gt;
+&lt;img src=&#34;https://user-images.githubusercontent.com/11000135/98400393-b31ec280-2042-11eb-9c51-0deb65dcc0a1.png&#34; alt=&#34;Imagem 2&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;sequência-de-caracteres-correspondente-ao-payload-do-qr-code-dinâmico&#34;&gt;&lt;strong&gt;Sequência de caracteres correspondente ao payload do QR Code dinâmico&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;000201
+010212
+2674
+  0014br.gov.bcb.pix
+  2552example.com/pix/8b3da2f3-9a41-40d1-a91a-bd93113bd441
+52040000
+5303986
+5406123.45
+5802BR
+5913Fulano de Tal
+6008BRASILIA
+6219
+  0515RP12345678-2019
+6304FF24 
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;qr-code-dinâmico-gerado&#34;&gt;&lt;strong&gt;QR Code dinâmico gerado&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/11000135/98400400-b5811c80-2042-11eb-9de3-a69107edf803.png&#34; alt=&#34;Respectivo QR Code dinâmico&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;referência&#34;&gt;&lt;strong&gt;Referência&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.bcb.gov.br/content/estabilidadefinanceira/pix/Regulamento_Pix/II.ManualdePadroesparaIniciacaodoPix-versao2.0.pdf&#34;&gt;https://www.bcb.gov.br/content/estabilidadefinanceira/pix/Regulamento_Pix/II.ManualdePadroesparaIniciacaodoPix-versao2.0.pdf&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Cancelar Cobrança</title>
+      <link>https://stone-co.github.io/docs/pix/recebimento-pix/cancelar-cobranca/</link>
+      <pubDate>Fri, 06 Nov 2020 15:16:43 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/pix/recebimento-pix/cancelar-cobranca/</guid>
+      <description>
+        
+        
+        &lt;h5 id=&#34;request&#34;&gt;&lt;strong&gt;Request&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;DELETE /api/v1/pix_payment_invoices/:id
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;Cobrança cancelada com sucesso&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;204 NO CONTENT
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;PIX Já foi pago e não pode ser mais cancelado&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;422
+
+{
+  &amp;#34;type&amp;#34;: &amp;#34;srn:error:already_paid&amp;#34;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

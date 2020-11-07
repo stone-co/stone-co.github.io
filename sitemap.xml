@@ -18,12 +18,22 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/pix/recebimento-pix/gerar-cobranca/</loc>
+    <lastmod>2020-11-06T13:55:15-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/stone-openbank/ambientes-da-api/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
   </url>
   
   <url>
     <loc>https://stone-co.github.io/docs/pix/</loc>
+    <lastmod>2020-09-17T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/pix/recebimento-pix/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
   </url>
   
@@ -38,6 +48,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/pix/recebimento-pix/consultar-qrcode-gerado/</loc>
+    <lastmod>2020-11-06T15:26:32-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/pix/chaves-pix/criar-uma-chave-pix/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
   </url>
@@ -45,6 +60,11 @@
   <url>
     <loc>https://stone-co.github.io/docs/stone-openbank/data-e-hora/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/pix/recebimento-pix/listar-cobrancas/</loc>
+    <lastmod>2020-11-06T13:52:00-03:00</lastmod>
   </url>
   
   <url>
@@ -58,6 +78,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/pix/recebimento-pix/especificacao-do-qrcode/</loc>
+    <lastmod>2020-11-06T15:07:33-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/pix/chaves-pix/detalhar-uma-chave-pix/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
   </url>
@@ -65,6 +90,11 @@
   <url>
     <loc>https://stone-co.github.io/docs/stone-openbank/valores-financeiros/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/pix/recebimento-pix/cancelar-cobranca/</loc>
+    <lastmod>2020-11-06T15:16:43-03:00</lastmod>
   </url>
   
   <url>
@@ -104,7 +134,7 @@
   
   <url>
     <loc>https://stone-co.github.io/</loc>
-    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
+    <lastmod>2020-11-06T15:26:32-03:00</lastmod>
   </url>
   
   <url>
