@@ -52,11 +52,6 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/stone-openbank/autenticacao/</loc>
-    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/docs/dados-da-conta/overview-dados-da-conta/</loc>
   </url>
   
@@ -188,6 +183,10 @@
   <url>
     <loc>https://stone-co.github.io/</loc>
     <lastmod>2020-11-06T15:26:32-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/stone-openbank/autenticacao/</loc>
   </url>
   
   <url>
