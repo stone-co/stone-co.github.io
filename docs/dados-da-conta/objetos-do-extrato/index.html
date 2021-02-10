@@ -1,0 +1,2043 @@
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.75.1" />
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<link rel="alternate" type="application/rss&#43;xml" href="https://stone-co.github.io/docs/dados-da-conta/objetos-do-extrato/index.xml">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Objetos do Extrato | Stone OpenBank</title><meta property="og:title" content="Objetos do Extrato" />
+<meta property="og:description" content="Escreva o Banco do futuro. Uma linha de código por vez." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://stone-co.github.io/docs/dados-da-conta/objetos-do-extrato/" />
+<meta property="og:site_name" content="Stone OpenBank" />
+<meta itemprop="name" content="Objetos do Extrato">
+<meta itemprop="description" content="Escreva o Banco do futuro. Uma linha de código por vez.">
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Objetos do Extrato"/>
+<meta name="twitter:description" content="Escreva o Banco do futuro. Uma linha de código por vez."/>
+
+
+
+
+
+<link rel="preload" href="/scss/main.min.cec66c77c706a4bfc707dd5b9502793d1a41acd612f57ececd1a20e643539b7c.css" as="style">
+<link href="/scss/main.min.cec66c77c706a4bfc707dd5b9502793d1a41acd612f57ececd1a20e643539b7c.css" rel="stylesheet" integrity="">
+
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+
+
+
+
+  </head>
+  <body class="td-section">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"><svg width="107" height="40" viewBox="0 0 107 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M98.3724.00166561C97.979-.025802 97.6409.290076 97.6409.68149V4.36216C97.6409 4.69863 97.8824 4.99391 98.2136 5.03511 100.27 5.30979 101.857 7.06085 101.857 9.17586 101.857 11.2909 100.27 13.0419 98.2136 13.3166 97.8824 13.3647 97.6409 13.66 97.6409 13.9896V17.6702C97.6409 18.0685 97.979 18.3844 98.3724 18.3501 103.155 17.9792 106.923 14.0102 106.923 9.17586 106.916 4.34155 103.155.372479 98.3724.00166561z" fill="#fff"/><path d="M94.8253 18.1578 86.91 10.2814C86.3027 9.67715 86.3027 8.69518 86.91 8.09089L94.8253.21454C95.2601-.218076 95.9985.0909355 95.9985.695224V17.6702C95.9985 18.2814 95.2601 18.5835 94.8253 18.1578z" fill="#fff"/><path d="M1.91845 33.7457C.821207 33.7457.0 34.604.0 35.6547.0 36.4306.393351 37.0143.904018 37.289 3.29173 38.9233 6.1487 39.7336 8.77795 39.7405 13.091 39.7405 16.4587 37.6049 16.4587 33.2856V33.2101C16.4587 29.5157 13.0496 28.156 10.0339 27.2221 9.90512 27.181 9.77687 27.1403 9.64947 27.0998 7.37398 26.3774 5.3689 25.7408 5.3689 24.3037V24.2281C5.3689 23.0608 6.42474 22.2024 8.26728 22.2024 9.71647 22.2024 11.4417 22.7449 13.1255 23.6032 13.4361 23.7612 13.6707 23.8367 14.064 23.8367 15.1613 23.8367 16.0239 23.0196 16.0239 21.9277 16.0239 21.1106 15.5477 20.4857 14.8852 20.1355 12.8909 19.0848 10.5791 18.4599 8.3846 18.4599 4.27166 18.4599 1.02133 20.8359 1.02133 24.7226V24.805C1.02133 28.7328 4.43038 29.9757 7.48748 30.8341 7.64123 30.8806 7.79404 30.9264 7.94541 30.9717 10.1853 31.6425 12.1111 32.2192 12.1111 33.7113V33.7869C12.1111 35.1465 10.931 36.0049 8.89526 36.0049 7.01132 36.0049 4.94105 35.3457 2.93978 34.0204 2.66375 33.8624 2.3118 33.7457 1.91845 33.7457z" fill="#fff"/><path fill-rule="evenodd" clip-rule="evenodd" d="M40.4738 18.3775C34.125 18.3775 29.4254 23.2462 29.4254 29.1174V29.1929C29.4254 35.0298 34.0836 39.816 40.391 39.8092 46.7812 39.8092 51.4807 34.9474 51.4807 29.1105V29.035C51.4807 23.1638 46.8226 18.3775 40.4738 18.3775zM40.391 22.5045C44.1175 22.5045 46.7398 25.4985 46.7398 29.1174V29.1929C46.7398 32.7362 44.3107 35.689 40.4669 35.689 36.7818 35.689 34.1595 32.695 34.1595 29.1174V29.0418C34.1595 25.4642 36.5886 22.5045 40.391 22.5045z" fill="#fff"/><path d="M58.0987 27.2908V37.186C58.0987 38.4907 57.036 39.5414 55.7248 39.5482 54.4205 39.5482 53.3578 38.4907 53.3578 37.1929V27.641C53.3578 22.5457 57.5121 18.4187 62.6395 18.4187 67.7669 18.4187 71.9212 22.5526 71.9212 27.641V37.1929C71.9212 38.4976 70.8654 39.5482 69.5542 39.5482 68.2499 39.5482 67.1872 38.4907 67.1872 37.1929V27.174C67.1872 24.5097 64.8685 22.3878 62.1288 22.69 59.8101 22.944 58.0987 24.9766 58.0987 27.2908z" fill="#fff"/><path d="M27.3483 23.0882C28.5352 23.0882 29.5014 22.1337 29.5014 20.9458 29.5014 19.7646 28.5352 18.8033 27.3483 18.8033H23.7046V15.3218C23.7046 14.0239 22.6419 12.9664 21.3376 12.9664 20.0264 12.9664 18.9706 14.017 18.9706 15.3218V32.6538H18.9844C19.1017 36.4375 22.0346 39.5208 26.0578 39.7886 26.1613 39.8023 26.2717 39.816 26.3822 39.816H27.3069C28.5214 39.816 29.5083 38.8341 29.5083 37.6255 29.5083 36.4169 28.5214 35.4349 27.3069 35.4349H26.6651C24.9744 35.4349 23.7667 34.089 23.7115 32.4616V23.0882H27.3483z" fill="#fff"/><path d="M83.7562 30.7586C82.6314 30.7586 81.7205 29.8521 81.7205 28.7328 81.7205 27.6204 82.6314 26.714 83.7424 26.714H88.8836C88.2073 24.2625 86.4752 22.5045 84.0047 22.5045 80.2713 22.5045 78.2286 25.4642 78.2286 29.0418V29.1174C78.2286 32.695 80.8096 35.689 84.4325 35.689 86.0681 35.689 87.4344 35.1397 88.4696 34.2264 89.2908 33.5053 90.5122 33.4847 91.3334 34.2058 92.3341 35.0847 92.2858 36.6504 91.2368 37.4813 89.3943 38.9371 87.0273 39.816 84.3566 39.816 78.1527 39.816 73.5705 35.0298 73.5705 29.1929V29.1174C73.5705 23.2393 77.8491 18.3775 84.0875 18.3775 89.5806 18.3775 93.5279 22.8616 93.5279 28.7328 93.5279 29.8521 92.617 30.7586 91.4922 30.7586H83.7562z" fill="#fff"/></svg></span><span class="text-uppercase font-weight-bold">Stone OpenBank</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link active" href="/docs/" ><span class="active">Referência da API</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block">
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+
+
+
+
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  
+  <nav class="collapse td-sidebar-nav" id="td-section-nav">
+    
+    
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Referência da API</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="docs">
+      
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/stone-openbank/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Stone OpenBank</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsstone-openbank">
+      
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/stone-openbank/ambientes-da-api/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Ambientes</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsstone-openbankambientes-da-api">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/stone-openbank/autenticacao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Autenticação</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsstone-openbankautenticacao">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/stone-openbank/data-e-hora/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Data e Hora</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsstone-openbankdata-e-hora">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/stone-openbank/paginacao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Paginação</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsstone-openbankpaginacao">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/stone-openbank/valores-financeiros/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Valores Financeiros</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsstone-openbankvalores-financeiros">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/stone-openbank/codigos-de-resposta/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Códigos De Resposta</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsstone-openbankcodigos-de-resposta">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/stone-openbank/mensagens-de-erro/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Mensagens De Erro</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsstone-openbankmensagens-de-erro">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/dados-da-conta/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Dados da conta</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="docsdados-da-conta">
+      
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/dados-da-conta/criar-nova-identidade/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar nova identidade</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsdados-da-contacriar-nova-identidade">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/dados-da-conta/overview-dados-da-conta/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O Que é Uma Conta</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsdados-da-contaoverview-dados-da-conta">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/dados-da-conta/consultar-dados-da-conta/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Dados da Conta</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsdados-da-contaconsultar-dados-da-conta">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/dados-da-conta/consultar-todas-as-contas-as-quais-o-usuario-tem-acesso/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Todas Contas às Quais Se Tem Acesso</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsdados-da-contaconsultar-todas-as-contas-as-quais-o-usuario-tem-acesso">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/dados-da-conta/o-objeto-saldo/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O Objeto Saldo</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsdados-da-contao-objeto-saldo">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/dados-da-conta/consultar-o-saldo/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar o Saldo</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsdados-da-contaconsultar-o-saldo">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/dados-da-conta/objetos-do-extrato/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Objetos do Extrato</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="docsdados-da-contaobjetos-do-extrato">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/dados-da-conta/consultar-extrato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Extrato</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsdados-da-contaconsultar-extrato">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/dados-da-conta/consultar-dados-da-conta-1/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Uma Entrada no Extrato</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsdados-da-contaconsultar-dados-da-conta-1">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/dados-da-conta/o-objeto-taxa/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O Objeto Taxas</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsdados-da-contao-objeto-taxa">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/dados-da-conta/consultar-taxas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Taxas</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsdados-da-contaconsultar-taxas">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/dados-da-conta/consultar-todas-as-taxas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Todas as Taxas</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsdados-da-contaconsultar-todas-as-taxas">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">PIX (Alpha)</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docspix">
+      
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/pix/chaves-pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Chaves PIX</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docspixchaves-pix">
+      
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/pix/chaves-pix/status/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Status</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docspixchaves-pixstatus">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/pix/chaves-pix/criar-uma-chave-pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docspixchaves-pixcriar-uma-chave-pix">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/pix/chaves-pix/excluir-uma-chave-pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Excluir</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docspixchaves-pixexcluir-uma-chave-pix">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/pix/chaves-pix/detalhar-uma-chave-pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Detalhar</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docspixchaves-pixdetalhar-uma-chave-pix">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/pix/chaves-pix/listar-chaves-pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docspixchaves-pixlistar-chaves-pix">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/pix/chaves-pix/reivindicar-uma-chave-pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Reivindicar</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docspixchaves-pixreivindicar-uma-chave-pix">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/pix/chaves-pix/aprovar-ou-rejeitar-reivindica%C3%A7%C3%A3o/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Aprovar/Rejeitar reivindicação</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docspixchaves-pixaprovar-ou-rejeitar-reivindicac3a7c3a3o">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/pix/chaves-pix/detalhar-uma-reivindica%C3%A7%C3%A3o/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Detalhar reivindicação</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docspixchaves-pixdetalhar-uma-reivindicac3a7c3a3o">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/pix/chaves-pix/listar-reivindicacoes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar reivindicações</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docspixchaves-pixlistar-reivindicacoes">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/pix/recebimento-pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Recebimento</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docspixrecebimento-pix">
+      
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/pix/recebimento-pix/gerar-cobranca/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Gerar Cobrança</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docspixrecebimento-pixgerar-cobranca">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/pix/recebimento-pix/consultar-qrcode-gerado/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Detalhe da Cobrança</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docspixrecebimento-pixconsultar-qrcode-gerado">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/pix/recebimento-pix/listar-cobrancas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Cobranças</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docspixrecebimento-pixlistar-cobrancas">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/pix/recebimento-pix/especificacao-do-qrcode/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Especificação do QR Code</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docspixrecebimento-pixespecificacao-do-qrcode">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/pix/recebimento-pix/cancelar-cobranca/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cancelar Cobrança</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docspixrecebimento-pixcancelar-cobranca">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+    </li>
+  </ul>
+</ul>
+
+  </nav>
+</div>
+
+
+
+
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+            
+
+
+
+
+
+
+
+
+
+
+
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#tipos-de-transação">Tipos de Transação</a></li>
+        <li><a href="#campos-das-transações">Campos das Transações</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+	<ol class="breadcrumb spb-1">
+		
+
+
+
+
+
+
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="https://stone-co.github.io/docs/">Referência da API</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="https://stone-co.github.io/docs/dados-da-conta/">Dados da conta</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="https://stone-co.github.io/docs/dados-da-conta/objetos-do-extrato/">Objetos do Extrato</a>
+</li>
+
+	</ol>
+</nav	>
+
+            
+<div class="td-content">
+	<h1>Objetos do Extrato</h1>
+        
+	
+	<hr>
+<p>O extrato mostra todos os tipos de transações que ocorreram em determinada conta de pagamento.</p>
+<p>Cada transação é uma nova entrada no extrato e elas estão listadas abaixo com seus campos.</p>
+<p>Para ver a estrutura de cada transação, basta dar uma olhadinha aqui.</p>
+<h3 id="tipos-de-transação">Tipos de Transação</h3>
+<p>Veja os possíveis valores para o campo <code>type</code>, sua descrição e as possíveis combinações com o campo <code>operation</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Valores <br> <code>type</code></th>
+<th>Descrição <br></th>
+<th>Valores possíveis<br><code>operation</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>balance_blocked</td>
+<td>Bloqueio de Saldo.</td>
+<td><code>credit</code> ou <code>debit</code></td>
+</tr>
+<tr>
+<td>balance_unblocked</td>
+<td>Desbloqueio de Saldo.</td>
+<td><code>credit</code></td>
+</tr>
+<tr>
+<td>card_payment</td>
+<td>Liquidação de recebíveis de cartão recebido.</td>
+<td><code>credit</code></td>
+</tr>
+<tr>
+<td>external</td>
+<td>Transferência externa. (TED)</td>
+<td><code>credit</code> ou <code>debit</code></td>
+</tr>
+<tr>
+<td>external refund</td>
+<td>Devolução de Transferência externa.</td>
+<td><code>credit</code></td>
+</tr>
+<tr>
+<td>instant_payment</td>
+<td>Transação de Instant Payment / Qr Code.</td>
+<td><code>credit</code> ou <code>debit</code></td>
+</tr>
+<tr>
+<td>internal</td>
+<td>Transferência interna.</td>
+<td><code>credit</code> ou <code>debit</code></td>
+</tr>
+<tr>
+<td>loan_payments</td>
+<td>Valor referente a um empréstimo/crédito</td>
+<td><code>credit</code> ou <code>debit</code></td>
+</tr>
+<tr>
+<td>outbound_stone_prepaid_card_payment</td>
+<td>Compra feita com Cartão Stone.</td>
+<td><code>debit</code></td>
+</tr>
+<tr>
+<td>outbound_stone_prepaid_card_payment_refund</td>
+<td>Devolução de compra com Cartão Stone.</td>
+<td><code>credit</code></td>
+</tr>
+<tr>
+<td>outbound_stone_prepaid_card_payment_chargeback</td>
+<td>Devolução do dinheiro ao usuário devido ao pedido de chagerback de uma compra feita com cartão Stone.</td>
+<td><code>credit</code></td>
+</tr>
+<tr>
+<td>outbound_stone_prepaid_card_withdrawal</td>
+<td>Saque com Cartão Stone feito no Banco24Horas.</td>
+<td><code>debit</code></td>
+</tr>
+<tr>
+<td>outbound_stone_prepaid_card_withdrawal_refund</td>
+<td>Devolução de Saque feito no Banco24Horas.</td>
+<td><code>credit</code></td>
+</tr>
+<tr>
+<td>payment</td>
+<td>Pagamento de documento com código de barras.</td>
+<td><code>credit</code> ou <code>debit</code></td>
+</tr>
+<tr>
+<td>payment_refund</td>
+<td>Devolução do pagamento de documento com código de barras.</td>
+<td><code>credit</code></td>
+</tr>
+<tr>
+<td>payroll</td>
+<td>Folha de pagamento.</td>
+<td><code>debit</code></td>
+</tr>
+<tr>
+<td>salary</td>
+<td>Recebimento de salário.</td>
+<td><code>credit</code></td>
+</tr>
+<tr>
+<td>salary_portability</td>
+<td>Envio do salário para a outra instituição onde foi solicitada a portabilidade.</td>
+<td><code>debit</code></td>
+</tr>
+<tr>
+<td>salary_portability_refund</td>
+<td>Devolução de salário pela instituição cadastrada na portabilidade.</td>
+<td><code>credit</code></td>
+</tr>
+<tr>
+<td>salary_portability_employer_refund</td>
+<td>Devolução de salário do empregado para a instituição cadastrada na portabilidade. <br>(No caso de processamento do cancelamento da portabilidade, o empregado poderá receber nas duas instituições)</td>
+<td><code>debit</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="campos-das-transações">Campos das Transações</h3>
+<p>Todas as entradas do extrato tem alguns campos padrões, são eles:</p>
+<br>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Descrição</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>Identifica o tipo de movimentação do extrato. Veja os possíveis valores desse campo na tabela acima.</td>
+<td><code>String</code></td>
+</tr>
+<tr>
+<td>operation</td>
+<td>Identifica se a movimentação foi de entrada de dinheiro, <code>credit</code>, ou de saída de dinheiro, <code>debit</code>. <br> Veja as combinações possíveis de tipos e operações na tabela acima.</td>
+<td><code>String</code></td>
+</tr>
+<tr>
+<td>balance_before</td>
+<td>Saldo antes da operação ocorrer.</td>
+<td><code>Integer</code></td>
+</tr>
+<tr>
+<td>balance_after</td>
+<td>Saldo disponível após o valor da operação, incluindo taxas.</td>
+<td><code>Integer</code></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>Valor da operação sem taxas.</td>
+<td><code>Integer</code></td>
+</tr>
+<tr>
+<td>account_id</td>
+<td>ID da conta pagamento a qual essa entrada pertence.</td>
+<td><code>String</code></td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>Data de processamento da transação / de entrada da transação no extrato. Formato: datetime.</td>
+<td><code>String</code></td>
+</tr>
+<tr>
+<td>status</td>
+<td>Status atual da transação. Varia de acordo com o tipo de transação.</td>
+<td><code>String</code></td>
+</tr>
+<tr>
+<td>id</td>
+<td>Identificador da transação que originou essa movimentação no extrato</td>
+<td><code>String</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<br>
+<p>Abaixo temos os campos que são utilizados em cada tipo de transação no extrato:</p>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Descrição</th>
+<th>Tipo</th>
+<th>Transação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>operation_amount</td>
+<td>Valor bloqueado ou desbloqueado na operação.</td>
+<td><em>String</em></td>
+<td><code>balance_blocked</code>, <code>balance_unblocked</code></td>
+</tr>
+<tr>
+<td>reason</td>
+<td>Motivo do bloqueio ou desbloqueio.</td>
+<td><em>String</em></td>
+<td><code>balance_blocked</code>, <code>balance_unblocked</code></td>
+</tr>
+<tr>
+<td>acquirer</td>
+<td>Instituição responsável pela liquidação de recebíveis.</td>
+<td><em>String</em></td>
+<td><code>card_payment</code></td>
+</tr>
+<tr>
+<td>card_network_code</td>
+<td>Código da rede do cartão.</td>
+<td><em>String</em></td>
+<td><code>card_payment</code></td>
+</tr>
+<tr>
+<td>card_network_name</td>
+<td>Nome da rede do cartão.</td>
+<td><em>String</em></td>
+<td><code>card_payment</code></td>
+</tr>
+<tr>
+<td>card_type</td>
+<td>Tipo do cartão.</td>
+<td><em>String</em></td>
+<td><code>card_payment</code></td>
+</tr>
+<tr>
+<td>is_prepayment</td>
+<td>Informa se o cartão é do tipo pré-pago ou não.</td>
+<td><em>Boolean</em></td>
+<td><code>card_payment</code></td>
+</tr>
+<tr>
+<td>counter_party</td>
+<td>Dados do beneficiário da transação.</td>
+<td><em>Object</em></td>
+<td><code>external</code>, <code>external_refund</code>, <code>instant_payment</code>, <code>internal</code>, <code>salary</code>, <code>salary_portability</code>, <code>salary_portability_refund</code>, <code>salary_portability_employer_refund</code></td>
+</tr>
+<tr>
+<td>delayed_to_next_business_day</td>
+<td>Informa se a transação foi adiada para o próximo dia útil ou não.</td>
+<td><em>Boolean</em></td>
+<td><code>external</code></td>
+</tr>
+<tr>
+<td>fee_amount</td>
+<td>Valor da taxa da transação.</td>
+<td><em>Integer</em></td>
+<td><code>external</code>, <code>external_refund</code>, <code>instant_payment</code>, <code>internal</code>, <code>outbound_stone_prepaid_card_payment</code>, <code>outbound_stone_prepaid_card_payment_refund</code>, <code>outbound_stone_prepaid_card_payment_chargeback</code>, <code>outbound_stone_prepaid_card_withdrawal</code>, <code>outbound_stone_prepaid_card_withdrawal_refund</code>, <code>payment</code>, <code>payment_refund</code></td>
+</tr>
+<tr>
+<td>operation_amount</td>
+<td>Valor da operação, sem o valor da taxa.</td>
+<td><em>Integer</em></td>
+<td><code>external</code>, <code>external_refund</code>, <code>instant_payment</code>, <code>internal</code>, <code>outbound_stone_prepaid_card_payment</code>, <code>outbound_stone_prepaid_card_payment_refund</code>, <code>outbound_stone_prepaid_card_payment_chargeback</code>, <code>outbound_stone_prepaid_card_withdrawal</code>, <code>outbound_stone_prepaid_card_withdrawal_refund</code>, <code>payment</code>, <code>payment_refund</code></td>
+</tr>
+<tr>
+<td>operation_id</td>
+<td>Código identificador da operação.</td>
+<td><em>String</em></td>
+<td><code>external</code>, <code>instant_payment</code>, <code>internal</code>, <code>outbound_stone_prepaid_card_payment</code>, <code>outbound_stone_prepaid_card_payment_refund</code>, <code>outbound_stone_prepaid_card_payment_chargeback</code>, <code>outbound_stone_prepaid_card_withdrawal</code>, <code>outbound_stone_prepaid_card_withdrawal_refund</code>, <code>payment</code>, <code>payroll</code></td>
+</tr>
+<tr>
+<td>refund_reason_code</td>
+<td>Código da razão da devolução da transação.</td>
+<td><em>String</em></td>
+<td><code>external</code>, <code>external_refund</code>, <code>salary_portability_refund</code></td>
+</tr>
+<tr>
+<td>refund_reason_description</td>
+<td>Descrição da razão de devolução da transação.</td>
+<td><em>String</em></td>
+<td><code>external</code>, <code>external_refund</code>, <code>salary_portability_refund</code></td>
+</tr>
+<tr>
+<td>scheduled_at</td>
+<td>Data em que foi realizado o agendamento da transação.</td>
+<td><em>String</em></td>
+<td><code> external</code>, <code>internal</code>, <code>payment</code></td>
+</tr>
+<tr>
+<td>scheduled_to_effective</td>
+<td>Data que o sistema agendou para realizar a transação.</td>
+<td><em>String</em></td>
+<td><code>external</code></td>
+</tr>
+<tr>
+<td>scheduled_to_requested</td>
+<td>Data solicitada para agendamento da transação.</td>
+<td><em>String</em></td>
+<td><code>external</code></td>
+</tr>
+<tr>
+<td>original_operation_id</td>
+<td>Código identificador da operação original.</td>
+<td><em>String</em></td>
+<td><code>external_refund</code>, <code>payment_refund</code></td>
+</tr>
+<tr>
+<td>refunded_at</td>
+<td>Data em que a transação foi devolvida.</td>
+<td><em>String</em></td>
+<td><code>external_refund</code>, <code>payment_refund</code></td>
+</tr>
+<tr>
+<td>schedule_to</td>
+<td>Data para qual foi realizado o agendamento da transação.</td>
+<td><em>String</em></td>
+<td><code>internal</code></td>
+</tr>
+<tr>
+<td>account_settlement_policy_retention</td>
+<td>Dados da conta em que será realizada a retenção de liquidação de conta</td>
+<td><em>Object</em></td>
+<td><code>loan_payments</code></td>
+</tr>
+<tr>
+<td>original_operation_entry</td>
+<td>Dados da operação original.</td>
+<td><em>Object</em></td>
+<td><code>loan_payments</code></td>
+</tr>
+<tr>
+<td>original_operation_entry_type</td>
+<td>Tipo da operação original.</td>
+<td><em>String</em></td>
+<td><code>loan_payments</code></td>
+</tr>
+<tr>
+<td>acquirer_code</td>
+<td>Código do adquirente.</td>
+<td><em>String</em></td>
+<td><code>outbound_stone_prepaid_card_payment</code>, <code>outbound_stone_prepaid_card_payment_refund</code>, <code>outbound_stone_prepaid_card_payment_chargeback</code>, <code>outbound_stone_prepaid_card_withdrawal</code>, <code>outbound_stone_prepaid_card_withdrawal_refund</code></td>
+</tr>
+<tr>
+<td>acquirer_name</td>
+<td>Nome do adquirente</td>
+<td><em>String</em></td>
+<td><code>outbound_stone_prepaid_card_payment</code>, <code>outbound_stone_prepaid_card_payment_refund</code>, <code>outbound_stone_prepaid_card_payment_chargeback</code>, <code>outbound_stone_prepaid_card_withdrawal</code>, <code>outbound_stone_prepaid_card_withdrawal_refund</code></td>
+</tr>
+<tr>
+<td>card_acceptor</td>
+<td>Dados sobre o cartão em que foi realizada a compra.</td>
+<td><em>Object</em></td>
+<td><code>outbound_stone_prepaid_card_payment</code>, <code>outbound_stone_prepaid_card_payment_refund</code>, <code>outbound_stone_prepaid_card_payment_chargeback</code>, <code>outbound_stone_prepaid_card_withdrawal</code>, <code>outbound_stone_prepaid_card_withdrawal_refund</code></td>
+</tr>
+<tr>
+<td>card_last_four_digits</td>
+<td>Últimos dígitos do cartão em que foi realizada a compra.</td>
+<td><em>String</em></td>
+<td><code>outbound_stone_prepaid_card_payment</code>, <code>outbound_stone_prepaid_card_payment_refund</code>, <code>outbound_stone_prepaid_card_payment_chargeback</code>, <code>outbound_stone_prepaid_card_withdrawal</code>, <code>outbound_stone_prepaid_card_withdrawal_refund</code></td>
+</tr>
+<tr>
+<td>transaction_authorization</td>
+<td>Dados sobre a autorização da transação de uma compra feita com cartão.</td>
+<td><em>Object</em></td>
+<td><code>outbound_stone_prepaid_card_payment</code>, <code>outbound_stone_prepaid_card_payment_refund</code>, <code>outbound_stone_prepaid_card_payment_chargeback</code>, <code>outbound_stone_prepaid_card_withdrawal</code>, <code>outbound_stone_prepaid_card_withdrawal_refund</code></td>
+</tr>
+<tr>
+<td>transaction_chargeback</td>
+<td>Dados sobre o estorno da transação de uma compra feita com cartão.</td>
+<td><em>Object</em></td>
+<td><code>outbound_stone_prepaid_card_payment_chargeback</code></td>
+</tr>
+<tr>
+<td>barcode</td>
+<td>Código de barras de um boleto.</td>
+<td><em>String</em></td>
+<td><code>payment</code></td>
+</tr>
+<tr>
+<td>details</td>
+<td>Dados sobre o pagamento de um boleto. Veja mais sobre esse campo aqui</td>
+<td><em>Object</em></td>
+<td><code>payment</code>, <code>payment_refund</code></td>
+</tr>
+<tr>
+<td>scheduled_to</td>
+<td>Data para qual foi agendado o pagamento de um boleto.</td>
+<td><em>String</em></td>
+<td><code>payment</code></td>
+</tr>
+<tr>
+<td>writable_line</td>
+<td>Linha digitável de um boleto.</td>
+<td><em>String</em></td>
+<td><code>payment</code>, <code>payment_refund</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<br>
+<p>Campos do Objeto <code>counter_party</code> :</p>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Descrição</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>account</td>
+<td>Dados da conta destino.</td>
+<td><em>Object</em></td>
+</tr>
+<tr>
+<td>entity</td>
+<td>Dados Pessoais.</td>
+<td><em>Object</em></td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>Campos do Objeto <code>account</code> :</p>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Descrição</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>account_code</td>
+<td>Código da Conta.</td>
+<td><em>Integer</em></td>
+</tr>
+<tr>
+<td>account_type</td>
+<td>Tipo da conta.</td>
+<td><em>String</em></td>
+</tr>
+<tr>
+<td>branch_code</td>
+<td>Agência da conta.</td>
+<td><em>Integer</em></td>
+</tr>
+<tr>
+<td>institution</td>
+<td>Código da instituição da conta.</td>
+<td><em>Integer</em></td>
+</tr>
+<tr>
+<td>institution_name</td>
+<td>Nome da instituição da conta.</td>
+<td><em>String</em></td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>Campos do Objeto <code>entity</code> :</p>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Descrição</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>document</td>
+<td>Número de documento do responsável da conta.</td>
+<td><em>Integer</em></td>
+</tr>
+<tr>
+<td>document_type</td>
+<td>Tipo de documento do responsável da conta.</td>
+<td><em>String</em></td>
+</tr>
+<tr>
+<td>name</td>
+<td>Nome do responsável da conta.</td>
+<td><em>String</em></td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>Campos do Objeto <code>account_settlement_policy_retention</code> :</p>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Descrição</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>account_settlement_policy_id</td>
+<td>Identificador único dos juros do empréstimo/crédito.</td>
+<td><em>String</em></td>
+</tr>
+<tr>
+<td>applied_retention_rules</td>
+<td>Dados de onde será aplicada as regras de juros.</td>
+<td><em>Object</em></td>
+</tr>
+<tr>
+<td>retained_amount</td>
+<td>Valor dos juros.</td>
+<td><em>Integer</em></td>
+</tr>
+<tr>
+<td>total_amount</td>
+<td>Valor total do empréstimo/crédito.</td>
+<td><em>Integer</em></td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>Campos do Objeto <code>applied_retention_rules</code> :</p>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Descrição</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>acquirer</td>
+<td>Instituição responsável pela liquidação de recebíveis.</td>
+<td><em>String</em></td>
+</tr>
+<tr>
+<td>card_network_code</td>
+<td>Código da rede do cartão.</td>
+<td><em>String</em></td>
+</tr>
+<tr>
+<td>card_type</td>
+<td>Tipo de cartão.</td>
+<td><em>String</em></td>
+</tr>
+<tr>
+<td>desired_rule_amount</td>
+<td>Valor desejado dos juros.</td>
+<td><em>Integer</em></td>
+</tr>
+<tr>
+<td>effective_rule_amount</td>
+<td>Valor efetivo dos juros.</td>
+<td><em>Integer</em></td>
+</tr>
+<tr>
+<td>is_prepayment</td>
+<td>Informa se o cartão é do tipo pré-pago ou não.</td>
+<td><em>Boolean</em></td>
+</tr>
+<tr>
+<td>retained_portion</td>
+<td>Dados sobre a porcentagem dos juros.</td>
+<td><em>Object</em></td>
+</tr>
+<tr>
+<td>same_ownership</td>
+<td>Informa se o pagador pode ser da mesma instituição que o beneficiário.</td>
+<td><em>String</em></td>
+</tr>
+<tr>
+<td>target_account_id</td>
+<td>Identificador da conta que irá receber o empréstimo/crédito.</td>
+<td><em>String</em></td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>Campos do Objeto <code>retained_portion</code> :</p>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Descrição</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>coefficient</td>
+<td>Valor do coeficiente para cálculo dos juros do empréstimo/crédito.</td>
+<td><em>Integer</em></td>
+</tr>
+<tr>
+<td>exponent</td>
+<td>Valor do expoente para cálculo dos juros do empréstimo/crédito.</td>
+<td><em>Integer</em></td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>Campos do Objeto <code>original_operation_entry</code> :</p>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Descrição</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>amount</td>
+<td>Valor original retido para pagamento do empréstimo/crédito.</td>
+<td><em>Integer</em></td>
+</tr>
+<tr>
+<td>barcode</td>
+<td>Código de barras referente ao empréstimo/crédito.</td>
+<td><em>String</em></td>
+</tr>
+<tr>
+<td>barcode_payment_invoice_id</td>
+<td>Identificador do pagamento do código de barras do empréstimo/crédito.</td>
+<td><em>String</em></td>
+</tr>
+<tr>
+<td>beneficiary</td>
+<td>Dados do beneficário do empréstimo/crédito.</td>
+<td><em>Object</em></td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>Data da criação do pedido do empréstimo/crédito.</td>
+<td><em>String</em></td>
+</tr>
+<tr>
+<td>invoice_type</td>
+<td>Tipo de fatura do empréstimo/crédito.</td>
+<td><em>String</em></td>
+</tr>
+<tr>
+<td>operation</td>
+<td>Tipo de operação do empréstimo/crédito.</td>
+<td><em>String</em></td>
+</tr>
+<tr>
+<td>writable_line</td>
+<td>Linha digitável do empréstimo/crédito.</td>
+<td><em>String</em></td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>Campos do Objeto <code>beneficiary</code> :</p>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Descrição</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>document</td>
+<td>Documento do beneficiário.</td>
+<td><em>String</em></td>
+</tr>
+<tr>
+<td>document_type</td>
+<td>Tipo do documento do beneficiário.</td>
+<td><em>String</em></td>
+</tr>
+<tr>
+<td>legal_name</td>
+<td>Nome completo ou razão social do beneficiário.</td>
+<td><em>String</em></td>
+</tr>
+<tr>
+<td>trade_name</td>
+<td>Nome fantasia do beneficiário. Campo não obrigatório.</td>
+<td><em>String</em></td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>Campos do Objeto <code>card_acceptor</code> :</p>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Descrição</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>city</td>
+<td>Cidade onde foi realizada a compra.</td>
+<td><em>String</em></td>
+</tr>
+<tr>
+<td>country</td>
+<td>País onde foi realizada a compra.</td>
+<td><em>String</em></td>
+</tr>
+<tr>
+<td>mcc</td>
+<td>Tipo de taxa que será aplicada à compra. <br>(Ex.: taxa de intercâmbio, taxa da rede do cartão, entre outras)</td>
+<td><em>String</em></td>
+</tr>
+<tr>
+<td>name</td>
+<td>Nome do dono do cartão.</td>
+<td><em>String</em></td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>Campos do Objeto <code>transaction_authorization</code> :</p>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Descrição</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>authorization_medium</td>
+<td>Tipo de autorização recebida na compra.</td>
+<td><em>String</em></td>
+</tr>
+<tr>
+<td>captured_value</td>
+<td>Dados do valor na moeda em que ocorreu a compra, sem taxas.</td>
+<td><em>Object</em></td>
+</tr>
+<tr>
+<td>conversion_rate</td>
+<td>Taxa de conversão.</td>
+<td><em>String</em></td>
+</tr>
+<tr>
+<td>country</td>
+<td>Código do país onde ocorreu a compra.</td>
+<td><em>String</em></td>
+</tr>
+<tr>
+<td>iof_fee</td>
+<td>Taxa de IOF. Campo não obrigatório.</td>
+<td><em>Integer</em></td>
+</tr>
+<tr>
+<td>pos_authorization_time</td>
+<td>Data da autorização.</td>
+<td><em>String</em></td>
+</tr>
+<tr>
+<td>value</td>
+<td>Dados do valor convertido pra BRL, com taxas.</td>
+<td><em>Object</em></td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>Campos do Objeto <code>captured_value</code> :</p>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Descrição</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>amount</td>
+<td>Valor capturado no momento da compra via cartão, sem taxas.</td>
+<td><em>Integer</em></td>
+</tr>
+<tr>
+<td>currency</td>
+<td>Moeda utilizada no momento da compra via cartão.</td>
+<td><em>String</em></td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>Campos do Objeto <code>value</code> :</p>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Descrição</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>amount</td>
+<td>Valor total da compra convertido para BRL, com taxas incluídas.</td>
+<td><em>Integer</em></td>
+</tr>
+<tr>
+<td>currency</td>
+<td>Moeda convertida para BRL.</td>
+<td><em>String</em></td>
+</tr>
+</tbody>
+</table>
+<br>
+<p>Campos do Objeto <code>transaction_chargeback</code> :</p>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Descrição</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>charged_back_at</td>
+<td>Data em que ocorreu a devolução do valor da compra.</td>
+<td><em>String</em></td>
+</tr>
+<tr>
+<td>id</td>
+<td>Identificador da devolução da transação.</td>
+<td><em>String</em></td>
+</tr>
+<tr>
+<td>value</td>
+<td>Dados do valor estornado.</td>
+<td><em>Object</em></td>
+</tr>
+</tbody>
+</table>
+
+        <div class="section-index">
+    
+    
+    
+    
+    <hr class="panel-line">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+</div>
+
+	
+	
+	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 01.01.0001
+</div>
+</div>
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2021 Stone Todos os direitos reservados</small>
+        
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+<script src="/js/main.min.c77c3a9c2704930d2d6412968c38f0ca0cc3fb51f05b0c7509839e4b4517084b.js" integrity="sha256-x3w6nCcEkw0tZBKWjDjwygzD&#43;1HwWwx1CYOeS0UXCEs=" crossorigin="anonymous"></script>
+
+
+
+
+  </body>
+</html>

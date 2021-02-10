@@ -1,0 +1,1324 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stone OpenBank – Dados da conta</title>
+    <link>https://stone-co.github.io/docs/dados-da-conta/</link>
+    <description>Recent content in Dados da conta on Stone OpenBank</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 17 Sep 2020 18:00:00 -0300</lastBuildDate>
+    
+	  <atom:link href="https://stone-co.github.io/docs/dados-da-conta/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Criar nova identidade</title>
+      <link>https://stone-co.github.io/docs/dados-da-conta/criar-nova-identidade/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/dados-da-conta/criar-nova-identidade/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Cria um novo usuário e sua organização, caso exista.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/users/signup
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;jwe&lt;/strong&gt;*  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Conteúdo Criptografado&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;O body deste endpoint (abaixo) deve ser criptografado antes de ser enviado (JWE).&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;O conteúdo a ser criptografado é um JSON com a seguinte estrutura:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;user&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+		&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;00000000000&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+		&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+		&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;full_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+		&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;email&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;
+	&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+
+	&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;organization&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+		&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;00000000000000&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+		&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cnpj&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+		&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;full_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+		&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;email&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;
+
+	&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para gerar um token JWT criptografado (usando JWE) temos 3 passos:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Criar um conteúdo a ser criptografado (payload), no caso, o conteúdo JSON acima;&lt;/li&gt;
+&lt;li&gt;Buscar a chave pública da Stone no endpoint /api/v1/discovery/keys, cujo campo &amp;ldquo;use&amp;rdquo; seja igual a &amp;ldquo;enc&amp;rdquo;;&lt;/li&gt;
+&lt;li&gt;Usar uma biblioteca passando o payload, a chave pública e o algoritmo utilizado, no caso, RSA-OAEP-256.&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: O Que é Uma Conta</title>
+      <link>https://stone-co.github.io/docs/dados-da-conta/overview-dados-da-conta/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/dados-da-conta/overview-dados-da-conta/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Descrição do modelo de contas.&lt;/p&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;Em nossa modelagem da conta de pagamentos, temos o conceito de  &lt;em&gt;user_id&lt;/em&gt; e  &lt;em&gt;account_id&lt;/em&gt;.
+Esses conceitos podem ser definidos da seguinte maneira:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;user_id&lt;/code&gt;: se refere ao identificador do perfil do usuário, contendo informações de dados cadastrais, como por exemplo, nome, apelido e CPF.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;account_id&lt;/code&gt;: se refere ao identificador da conta do usuário, contendo dados da conta de pagamento.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Essa modelagem foi feita considerando que, antes de um &lt;code&gt;user_id&lt;/code&gt; se tornar um &lt;code&gt;account_id&lt;/code&gt;, ele passa por um processo de &lt;em&gt;due diligence&lt;/em&gt;, que analisa informações de risco desse usuário antes dele ter uma conta de pagamentos Stone.&lt;/p&gt;
+&lt;br&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Atenção&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Todo o processo de Due Diligence do usuário fica sob responsabilidade da
+Stone e, se aprovada, será gerado um &lt;code&gt;account_id&lt;/code&gt; para o usuário.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Consultar Dados da Conta</title>
+      <link>https://stone-co.github.io/docs/dados-da-conta/consultar-dados-da-conta/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/dados-da-conta/consultar-dados-da-conta/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;*  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Identificador da conta no formato UUID.&lt;/p&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Atenção&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A primeira coisa que faremos antes de lhe dar acesso a dados de uma conta é verificar se você tem acesso a essa conta. Caso você erre o id da conta, sempre receberá o erro de não autorizado.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Consultar Todas Contas às Quais Se Tem Acesso</title>
+      <link>https://stone-co.github.io/docs/dados-da-conta/consultar-todas-as-contas-as-quais-o-usuario-tem-acesso/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/dados-da-conta/consultar-todas-as-contas-as-quais-o-usuario-tem-acesso/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/accounts
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;QUERY PARAMS&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;paginate&lt;/strong&gt;*  &lt;code&gt;boolean&lt;/code&gt;&lt;/p&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Atenção&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Caso &amp;lsquo;true&amp;rsquo;, irá limitar a mostrar somente 50 contas, se for setado para &amp;lsquo;false&amp;rsquo; mostrará todas as contas as quais o usuário tem acesso.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: O Objeto Saldo</title>
+      <link>https://stone-co.github.io/docs/dados-da-conta/o-objeto-saldo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/dados-da-conta/o-objeto-saldo/</guid>
+      <description>
+        
+        
+        &lt;br&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;balance&lt;/td&gt;
+&lt;td&gt;Saldo da conta livre para movimentação. Deve ser somado ao &lt;code&gt;blocked_balance&lt;/code&gt; para calcular o saldo total.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;blocked_balance&lt;/td&gt;
+&lt;td&gt;Saldo da conta bloqueado. Deve ser somado ao &lt;code&gt;balance&lt;/code&gt; para calcular o saldo total.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;scheduled_balance&lt;/td&gt;
+&lt;td&gt;Soma do valor de transações agendadas. Nâo tem relação direta com o saldo da conta, podendo inclusive ter um valor maior que o mesmo.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Consultar o Saldo</title>
+      <link>https://stone-co.github.io/docs/dados-da-conta/consultar-o-saldo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/dados-da-conta/consultar-o-saldo/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/balance
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;*  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Identificador da Conta.&lt;/p&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Atenção&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Note que a variável  &lt;em&gt;balance&lt;/em&gt; retorna um valor sem vírgulas, exemplo &lt;strong&gt;9998&lt;/strong&gt;, isso corresponde a &lt;strong&gt;R$ 99,98&lt;/strong&gt; reais da conta do usuário.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Objetos do Extrato</title>
+      <link>https://stone-co.github.io/docs/dados-da-conta/objetos-do-extrato/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/dados-da-conta/objetos-do-extrato/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;p&gt;O extrato mostra todos os tipos de transações que ocorreram em determinada conta de pagamento.&lt;/p&gt;
+&lt;p&gt;Cada transação é uma nova entrada no extrato e elas estão listadas abaixo com seus campos.&lt;/p&gt;
+&lt;p&gt;Para ver a estrutura de cada transação, basta dar uma olhadinha aqui.&lt;/p&gt;
+&lt;h3 id=&#34;tipos-de-transação&#34;&gt;Tipos de Transação&lt;/h3&gt;
+&lt;p&gt;Veja os possíveis valores para o campo &lt;code&gt;type&lt;/code&gt;, sua descrição e as possíveis combinações com o campo &lt;code&gt;operation&lt;/code&gt;.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Valores &lt;br&gt; &lt;code&gt;type&lt;/code&gt;&lt;/th&gt;
+&lt;th&gt;Descrição &lt;br&gt;&lt;/th&gt;
+&lt;th&gt;Valores possíveis&lt;br&gt;&lt;code&gt;operation&lt;/code&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;balance_blocked&lt;/td&gt;
+&lt;td&gt;Bloqueio de Saldo.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;credit&lt;/code&gt; ou &lt;code&gt;debit&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;balance_unblocked&lt;/td&gt;
+&lt;td&gt;Desbloqueio de Saldo.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;credit&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;card_payment&lt;/td&gt;
+&lt;td&gt;Liquidação de recebíveis de cartão recebido.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;credit&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;external&lt;/td&gt;
+&lt;td&gt;Transferência externa. (TED)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;credit&lt;/code&gt; ou &lt;code&gt;debit&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;external refund&lt;/td&gt;
+&lt;td&gt;Devolução de Transferência externa.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;credit&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;instant_payment&lt;/td&gt;
+&lt;td&gt;Transação de Instant Payment / Qr Code.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;credit&lt;/code&gt; ou &lt;code&gt;debit&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;internal&lt;/td&gt;
+&lt;td&gt;Transferência interna.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;credit&lt;/code&gt; ou &lt;code&gt;debit&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;loan_payments&lt;/td&gt;
+&lt;td&gt;Valor referente a um empréstimo/crédito&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;credit&lt;/code&gt; ou &lt;code&gt;debit&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;outbound_stone_prepaid_card_payment&lt;/td&gt;
+&lt;td&gt;Compra feita com Cartão Stone.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;debit&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;outbound_stone_prepaid_card_payment_refund&lt;/td&gt;
+&lt;td&gt;Devolução de compra com Cartão Stone.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;credit&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;outbound_stone_prepaid_card_payment_chargeback&lt;/td&gt;
+&lt;td&gt;Devolução do dinheiro ao usuário devido ao pedido de chagerback de uma compra feita com cartão Stone.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;credit&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;outbound_stone_prepaid_card_withdrawal&lt;/td&gt;
+&lt;td&gt;Saque com Cartão Stone feito no Banco24Horas.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;debit&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;outbound_stone_prepaid_card_withdrawal_refund&lt;/td&gt;
+&lt;td&gt;Devolução de Saque feito no Banco24Horas.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;credit&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;payment&lt;/td&gt;
+&lt;td&gt;Pagamento de documento com código de barras.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;credit&lt;/code&gt; ou &lt;code&gt;debit&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;payment_refund&lt;/td&gt;
+&lt;td&gt;Devolução do pagamento de documento com código de barras.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;credit&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;payroll&lt;/td&gt;
+&lt;td&gt;Folha de pagamento.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;debit&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;salary&lt;/td&gt;
+&lt;td&gt;Recebimento de salário.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;credit&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;salary_portability&lt;/td&gt;
+&lt;td&gt;Envio do salário para a outra instituição onde foi solicitada a portabilidade.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;debit&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;salary_portability_refund&lt;/td&gt;
+&lt;td&gt;Devolução de salário pela instituição cadastrada na portabilidade.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;credit&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;salary_portability_employer_refund&lt;/td&gt;
+&lt;td&gt;Devolução de salário do empregado para a instituição cadastrada na portabilidade. &lt;br&gt;(No caso de processamento do cancelamento da portabilidade, o empregado poderá receber nas duas instituições)&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;debit&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;campos-das-transações&#34;&gt;Campos das Transações&lt;/h3&gt;
+&lt;p&gt;Todas as entradas do extrato tem alguns campos padrões, são eles:&lt;/p&gt;
+&lt;br&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;type&lt;/td&gt;
+&lt;td&gt;Identifica o tipo de movimentação do extrato. Veja os possíveis valores desse campo na tabela acima.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;String&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;operation&lt;/td&gt;
+&lt;td&gt;Identifica se a movimentação foi de entrada de dinheiro, &lt;code&gt;credit&lt;/code&gt;, ou de saída de dinheiro, &lt;code&gt;debit&lt;/code&gt;. &lt;br&gt; Veja as combinações possíveis de tipos e operações na tabela acima.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;String&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;balance_before&lt;/td&gt;
+&lt;td&gt;Saldo antes da operação ocorrer.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;Integer&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;balance_after&lt;/td&gt;
+&lt;td&gt;Saldo disponível após o valor da operação, incluindo taxas.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;Integer&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;amount&lt;/td&gt;
+&lt;td&gt;Valor da operação sem taxas.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;Integer&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;account_id&lt;/td&gt;
+&lt;td&gt;ID da conta pagamento a qual essa entrada pertence.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;String&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;created_at&lt;/td&gt;
+&lt;td&gt;Data de processamento da transação / de entrada da transação no extrato. Formato: datetime.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;String&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;status&lt;/td&gt;
+&lt;td&gt;Status atual da transação. Varia de acordo com o tipo de transação.&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;String&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;id&lt;/td&gt;
+&lt;td&gt;Identificador da transação que originou essa movimentação no extrato&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;String&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;Abaixo temos os campos que são utilizados em cada tipo de transação no extrato:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;th&gt;Transação&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;operation_amount&lt;/td&gt;
+&lt;td&gt;Valor bloqueado ou desbloqueado na operação.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;balance_blocked&lt;/code&gt;, &lt;code&gt;balance_unblocked&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;reason&lt;/td&gt;
+&lt;td&gt;Motivo do bloqueio ou desbloqueio.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;balance_blocked&lt;/code&gt;, &lt;code&gt;balance_unblocked&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;acquirer&lt;/td&gt;
+&lt;td&gt;Instituição responsável pela liquidação de recebíveis.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;card_payment&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;card_network_code&lt;/td&gt;
+&lt;td&gt;Código da rede do cartão.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;card_payment&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;card_network_name&lt;/td&gt;
+&lt;td&gt;Nome da rede do cartão.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;card_payment&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;card_type&lt;/td&gt;
+&lt;td&gt;Tipo do cartão.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;card_payment&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;is_prepayment&lt;/td&gt;
+&lt;td&gt;Informa se o cartão é do tipo pré-pago ou não.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Boolean&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;card_payment&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;counter_party&lt;/td&gt;
+&lt;td&gt;Dados do beneficiário da transação.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;external&lt;/code&gt;, &lt;code&gt;external_refund&lt;/code&gt;, &lt;code&gt;instant_payment&lt;/code&gt;, &lt;code&gt;internal&lt;/code&gt;, &lt;code&gt;salary&lt;/code&gt;, &lt;code&gt;salary_portability&lt;/code&gt;, &lt;code&gt;salary_portability_refund&lt;/code&gt;, &lt;code&gt;salary_portability_employer_refund&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;delayed_to_next_business_day&lt;/td&gt;
+&lt;td&gt;Informa se a transação foi adiada para o próximo dia útil ou não.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Boolean&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;external&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;fee_amount&lt;/td&gt;
+&lt;td&gt;Valor da taxa da transação.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;external&lt;/code&gt;, &lt;code&gt;external_refund&lt;/code&gt;, &lt;code&gt;instant_payment&lt;/code&gt;, &lt;code&gt;internal&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_payment&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_payment_refund&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_payment_chargeback&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_withdrawal&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_withdrawal_refund&lt;/code&gt;, &lt;code&gt;payment&lt;/code&gt;, &lt;code&gt;payment_refund&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;operation_amount&lt;/td&gt;
+&lt;td&gt;Valor da operação, sem o valor da taxa.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;external&lt;/code&gt;, &lt;code&gt;external_refund&lt;/code&gt;, &lt;code&gt;instant_payment&lt;/code&gt;, &lt;code&gt;internal&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_payment&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_payment_refund&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_payment_chargeback&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_withdrawal&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_withdrawal_refund&lt;/code&gt;, &lt;code&gt;payment&lt;/code&gt;, &lt;code&gt;payment_refund&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;operation_id&lt;/td&gt;
+&lt;td&gt;Código identificador da operação.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;external&lt;/code&gt;, &lt;code&gt;instant_payment&lt;/code&gt;, &lt;code&gt;internal&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_payment&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_payment_refund&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_payment_chargeback&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_withdrawal&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_withdrawal_refund&lt;/code&gt;, &lt;code&gt;payment&lt;/code&gt;, &lt;code&gt;payroll&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;refund_reason_code&lt;/td&gt;
+&lt;td&gt;Código da razão da devolução da transação.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;external&lt;/code&gt;, &lt;code&gt;external_refund&lt;/code&gt;, &lt;code&gt;salary_portability_refund&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;refund_reason_description&lt;/td&gt;
+&lt;td&gt;Descrição da razão de devolução da transação.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;external&lt;/code&gt;, &lt;code&gt;external_refund&lt;/code&gt;, &lt;code&gt;salary_portability_refund&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;scheduled_at&lt;/td&gt;
+&lt;td&gt;Data em que foi realizado o agendamento da transação.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt; external&lt;/code&gt;, &lt;code&gt;internal&lt;/code&gt;, &lt;code&gt;payment&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;scheduled_to_effective&lt;/td&gt;
+&lt;td&gt;Data que o sistema agendou para realizar a transação.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;external&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;scheduled_to_requested&lt;/td&gt;
+&lt;td&gt;Data solicitada para agendamento da transação.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;external&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;original_operation_id&lt;/td&gt;
+&lt;td&gt;Código identificador da operação original.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;external_refund&lt;/code&gt;, &lt;code&gt;payment_refund&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;refunded_at&lt;/td&gt;
+&lt;td&gt;Data em que a transação foi devolvida.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;external_refund&lt;/code&gt;, &lt;code&gt;payment_refund&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;schedule_to&lt;/td&gt;
+&lt;td&gt;Data para qual foi realizado o agendamento da transação.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;internal&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;account_settlement_policy_retention&lt;/td&gt;
+&lt;td&gt;Dados da conta em que será realizada a retenção de liquidação de conta&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;loan_payments&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;original_operation_entry&lt;/td&gt;
+&lt;td&gt;Dados da operação original.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;loan_payments&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;original_operation_entry_type&lt;/td&gt;
+&lt;td&gt;Tipo da operação original.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;loan_payments&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;acquirer_code&lt;/td&gt;
+&lt;td&gt;Código do adquirente.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;outbound_stone_prepaid_card_payment&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_payment_refund&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_payment_chargeback&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_withdrawal&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_withdrawal_refund&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;acquirer_name&lt;/td&gt;
+&lt;td&gt;Nome do adquirente&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;outbound_stone_prepaid_card_payment&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_payment_refund&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_payment_chargeback&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_withdrawal&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_withdrawal_refund&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;card_acceptor&lt;/td&gt;
+&lt;td&gt;Dados sobre o cartão em que foi realizada a compra.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;outbound_stone_prepaid_card_payment&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_payment_refund&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_payment_chargeback&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_withdrawal&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_withdrawal_refund&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;card_last_four_digits&lt;/td&gt;
+&lt;td&gt;Últimos dígitos do cartão em que foi realizada a compra.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;outbound_stone_prepaid_card_payment&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_payment_refund&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_payment_chargeback&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_withdrawal&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_withdrawal_refund&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;transaction_authorization&lt;/td&gt;
+&lt;td&gt;Dados sobre a autorização da transação de uma compra feita com cartão.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;outbound_stone_prepaid_card_payment&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_payment_refund&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_payment_chargeback&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_withdrawal&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_withdrawal_refund&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;transaction_chargeback&lt;/td&gt;
+&lt;td&gt;Dados sobre o estorno da transação de uma compra feita com cartão.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;outbound_stone_prepaid_card_payment_chargeback&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;barcode&lt;/td&gt;
+&lt;td&gt;Código de barras de um boleto.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;payment&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;details&lt;/td&gt;
+&lt;td&gt;Dados sobre o pagamento de um boleto. Veja mais sobre esse campo aqui&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;payment&lt;/code&gt;, &lt;code&gt;payment_refund&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;scheduled_to&lt;/td&gt;
+&lt;td&gt;Data para qual foi agendado o pagamento de um boleto.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;payment&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;writable_line&lt;/td&gt;
+&lt;td&gt;Linha digitável de um boleto.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;payment&lt;/code&gt;, &lt;code&gt;payment_refund&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;Campos do Objeto &lt;code&gt;counter_party&lt;/code&gt; :&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;account&lt;/td&gt;
+&lt;td&gt;Dados da conta destino.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;entity&lt;/td&gt;
+&lt;td&gt;Dados Pessoais.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;p&gt;Campos do Objeto &lt;code&gt;account&lt;/code&gt; :&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;account_code&lt;/td&gt;
+&lt;td&gt;Código da Conta.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;account_type&lt;/td&gt;
+&lt;td&gt;Tipo da conta.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;branch_code&lt;/td&gt;
+&lt;td&gt;Agência da conta.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;institution&lt;/td&gt;
+&lt;td&gt;Código da instituição da conta.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;institution_name&lt;/td&gt;
+&lt;td&gt;Nome da instituição da conta.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;p&gt;Campos do Objeto &lt;code&gt;entity&lt;/code&gt; :&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;document&lt;/td&gt;
+&lt;td&gt;Número de documento do responsável da conta.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;document_type&lt;/td&gt;
+&lt;td&gt;Tipo de documento do responsável da conta.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;name&lt;/td&gt;
+&lt;td&gt;Nome do responsável da conta.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;p&gt;Campos do Objeto &lt;code&gt;account_settlement_policy_retention&lt;/code&gt; :&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;account_settlement_policy_id&lt;/td&gt;
+&lt;td&gt;Identificador único dos juros do empréstimo/crédito.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;applied_retention_rules&lt;/td&gt;
+&lt;td&gt;Dados de onde será aplicada as regras de juros.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;retained_amount&lt;/td&gt;
+&lt;td&gt;Valor dos juros.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;total_amount&lt;/td&gt;
+&lt;td&gt;Valor total do empréstimo/crédito.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;p&gt;Campos do Objeto &lt;code&gt;applied_retention_rules&lt;/code&gt; :&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;acquirer&lt;/td&gt;
+&lt;td&gt;Instituição responsável pela liquidação de recebíveis.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;card_network_code&lt;/td&gt;
+&lt;td&gt;Código da rede do cartão.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;card_type&lt;/td&gt;
+&lt;td&gt;Tipo de cartão.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;desired_rule_amount&lt;/td&gt;
+&lt;td&gt;Valor desejado dos juros.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;effective_rule_amount&lt;/td&gt;
+&lt;td&gt;Valor efetivo dos juros.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;is_prepayment&lt;/td&gt;
+&lt;td&gt;Informa se o cartão é do tipo pré-pago ou não.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Boolean&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;retained_portion&lt;/td&gt;
+&lt;td&gt;Dados sobre a porcentagem dos juros.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;same_ownership&lt;/td&gt;
+&lt;td&gt;Informa se o pagador pode ser da mesma instituição que o beneficiário.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;target_account_id&lt;/td&gt;
+&lt;td&gt;Identificador da conta que irá receber o empréstimo/crédito.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;p&gt;Campos do Objeto &lt;code&gt;retained_portion&lt;/code&gt; :&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;coefficient&lt;/td&gt;
+&lt;td&gt;Valor do coeficiente para cálculo dos juros do empréstimo/crédito.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;exponent&lt;/td&gt;
+&lt;td&gt;Valor do expoente para cálculo dos juros do empréstimo/crédito.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;p&gt;Campos do Objeto &lt;code&gt;original_operation_entry&lt;/code&gt; :&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;amount&lt;/td&gt;
+&lt;td&gt;Valor original retido para pagamento do empréstimo/crédito.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;barcode&lt;/td&gt;
+&lt;td&gt;Código de barras referente ao empréstimo/crédito.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;barcode_payment_invoice_id&lt;/td&gt;
+&lt;td&gt;Identificador do pagamento do código de barras do empréstimo/crédito.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;beneficiary&lt;/td&gt;
+&lt;td&gt;Dados do beneficário do empréstimo/crédito.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;created_at&lt;/td&gt;
+&lt;td&gt;Data da criação do pedido do empréstimo/crédito.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;invoice_type&lt;/td&gt;
+&lt;td&gt;Tipo de fatura do empréstimo/crédito.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;operation&lt;/td&gt;
+&lt;td&gt;Tipo de operação do empréstimo/crédito.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;writable_line&lt;/td&gt;
+&lt;td&gt;Linha digitável do empréstimo/crédito.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;p&gt;Campos do Objeto &lt;code&gt;beneficiary&lt;/code&gt; :&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;document&lt;/td&gt;
+&lt;td&gt;Documento do beneficiário.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;document_type&lt;/td&gt;
+&lt;td&gt;Tipo do documento do beneficiário.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;legal_name&lt;/td&gt;
+&lt;td&gt;Nome completo ou razão social do beneficiário.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;trade_name&lt;/td&gt;
+&lt;td&gt;Nome fantasia do beneficiário. Campo não obrigatório.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;p&gt;Campos do Objeto &lt;code&gt;card_acceptor&lt;/code&gt; :&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;city&lt;/td&gt;
+&lt;td&gt;Cidade onde foi realizada a compra.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;country&lt;/td&gt;
+&lt;td&gt;País onde foi realizada a compra.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;mcc&lt;/td&gt;
+&lt;td&gt;Tipo de taxa que será aplicada à compra. &lt;br&gt;(Ex.: taxa de intercâmbio, taxa da rede do cartão, entre outras)&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;name&lt;/td&gt;
+&lt;td&gt;Nome do dono do cartão.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;p&gt;Campos do Objeto &lt;code&gt;transaction_authorization&lt;/code&gt; :&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;authorization_medium&lt;/td&gt;
+&lt;td&gt;Tipo de autorização recebida na compra.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;captured_value&lt;/td&gt;
+&lt;td&gt;Dados do valor na moeda em que ocorreu a compra, sem taxas.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;conversion_rate&lt;/td&gt;
+&lt;td&gt;Taxa de conversão.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;country&lt;/td&gt;
+&lt;td&gt;Código do país onde ocorreu a compra.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;iof_fee&lt;/td&gt;
+&lt;td&gt;Taxa de IOF. Campo não obrigatório.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;pos_authorization_time&lt;/td&gt;
+&lt;td&gt;Data da autorização.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;value&lt;/td&gt;
+&lt;td&gt;Dados do valor convertido pra BRL, com taxas.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;p&gt;Campos do Objeto &lt;code&gt;captured_value&lt;/code&gt; :&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;amount&lt;/td&gt;
+&lt;td&gt;Valor capturado no momento da compra via cartão, sem taxas.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;currency&lt;/td&gt;
+&lt;td&gt;Moeda utilizada no momento da compra via cartão.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;p&gt;Campos do Objeto &lt;code&gt;value&lt;/code&gt; :&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;amount&lt;/td&gt;
+&lt;td&gt;Valor total da compra convertido para BRL, com taxas incluídas.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;currency&lt;/td&gt;
+&lt;td&gt;Moeda convertida para BRL.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;p&gt;Campos do Objeto &lt;code&gt;transaction_chargeback&lt;/code&gt; :&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;charged_back_at&lt;/td&gt;
+&lt;td&gt;Data em que ocorreu a devolução do valor da compra.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;id&lt;/td&gt;
+&lt;td&gt;Identificador da devolução da transação.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;value&lt;/td&gt;
+&lt;td&gt;Dados do valor estornado.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Consultar Extrato</title>
+      <link>https://stone-co.github.io/docs/dados-da-conta/consultar-extrato/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/dados-da-conta/consultar-extrato/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/statement
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;*  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Identificador da Conta.&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;QUERY PARAMS&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;limit&lt;/strong&gt;  &lt;code&gt;int32&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;before&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Traz a página anterior ao cursor.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;after&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Traz a página posterior ao cursor.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;start_datetime&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Format: ISO8601 - &amp;ldquo;YYYY-MM-DDThh:mm:ssZ&amp;rdquo;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;end_datetime&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Format: ISO8601 - &amp;ldquo;YYYY-MM-DDThh:mm:ssZ&amp;rdquo;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;type&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Filtra o extrato por um ou mais tipos de registro.&lt;/p&gt;
+&lt;p&gt;Valores possíveis: &lt;code&gt;internal&lt;/code&gt;, &lt;code&gt;external&lt;/code&gt;, &lt;code&gt;external_refund&lt;/code&gt;, &lt;code&gt;payment&lt;/code&gt;, &lt;code&gt;payment_refund&lt;/code&gt;, &lt;code&gt;balance_block&lt;/code&gt;, &lt;code&gt;card_payment&lt;/code&gt;, &lt;code&gt;salary_portability&lt;/code&gt;, &lt;code&gt;salary_portability_refund&lt;/code&gt;, &lt;code&gt;salary_portability_employer_refund&lt;/code&gt; e &lt;code&gt;instant_payment&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Para escolher mais de um type, basta incluir no final da requisição os types, exemplo:  &lt;code&gt;/statement?type[]=external&amp;amp;type[]=internal&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Valor da Operação&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Também repare que, quando se faz uma transferência de R$100,00, por exemplo, o campo &lt;em&gt;operation_amount&lt;/em&gt; terá valor de 10000 centavos. Já o campo &lt;em&gt;amount&lt;/em&gt; será a soma do valor da operação com a taxa cobrada (&lt;em&gt;fee_amount&lt;/em&gt;).&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;hr&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Tipos diferentes de extratos&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;O extrato é dividido por tipos de movimentação. É possível consultar qual foi a movimentação pelo &lt;code&gt;type&lt;/code&gt; da resposta. No exemplo acima, podemos notar que tivemos duas movimentações: uma transferência interna (&lt;code&gt;type:internal&lt;/code&gt;) e uma transferência externa (&lt;code&gt;type:external&lt;/code&gt;), ambas com campos de resposta diferentes. Veja neste &lt;a href=&#34;https://docs.openbank.stone.com.br/reference#objetos-do-extrato&#34;&gt;link&lt;/a&gt; para mais informações sobre o JSON Schema de cada tipo de operação.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Note que, na resposta acima, foram feitas duas transferências, uma interna e uma externa, ambas com as suas particularidades de retorno.&lt;/p&gt;
+&lt;p&gt;Em cada extrato há duas informações: {balance before} e {balance after}. O &lt;em&gt;balance_before&lt;/em&gt; registra o saldo do usuário antes da operação, e o &lt;em&gt;balance_after&lt;/em&gt; registra o saldo após a operação dado o &lt;em&gt;balance_before&lt;/em&gt; menos o valor da operação.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Consultar Uma Entrada no Extrato</title>
+      <link>https://stone-co.github.io/docs/dados-da-conta/consultar-dados-da-conta-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/dados-da-conta/consultar-dados-da-conta-1/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/statement/entries/entry_id
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;entry_id&lt;/strong&gt;*  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Identificador da entrada.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: O Objeto Taxas</title>
+      <link>https://stone-co.github.io/docs/dados-da-conta/o-objeto-taxa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/dados-da-conta/o-objeto-taxa/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;h3 id=&#34;taxas&#34;&gt;Taxas&lt;/h3&gt;
+&lt;br&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;amount&lt;/td&gt;
+&lt;td&gt;Taxa vigente. No caso de external_tranfer pode ser diferente da taxa contratada (&lt;code&gt;original_fee&lt;/code&gt;) caso &lt;code&gt;billing_exemption_participant&lt;/code&gt; igual a &lt;em&gt;true&lt;/em&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;fee_type&lt;/td&gt;
+&lt;td&gt;Tipo de taxa. Veja abaixo os valores possíveis.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;billing_exemption_participant&lt;/td&gt;
+&lt;td&gt;Só se aplica a &lt;code&gt;external_transfer&lt;/code&gt; e &lt;code&gt;barcode_payment_invoice&lt;/code&gt; . Indica se o usuário possui alguma condição especial vigente.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Boolean&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;original_fee&lt;/td&gt;
+&lt;td&gt;Só se aplica a &lt;code&gt;external_transfer&lt;/code&gt; e &lt;code&gt;barcode_payment_invoice&lt;/code&gt;. Indica a taxa original do item para a essa conta.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;max_free_transfers&lt;/td&gt;
+&lt;td&gt;Só se aplica a &lt;code&gt;external_transfer&lt;/code&gt;. Indica o número total de TEDs grátis que o usuário tem no período.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;max_free&lt;/td&gt;
+&lt;td&gt;Só se aplica a &lt;code&gt;barcode_payment_invoice&lt;/code&gt;. Indica o número total de boletos gerados que podem ser pagos sem que haja custos no período.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;remaining_free_transfers&lt;/td&gt;
+&lt;td&gt;Só se aplica a &lt;code&gt;external_transfer&lt;/code&gt;. Indica a número de TEDs grátis restantes no período.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;remaining_free&lt;/td&gt;
+&lt;td&gt;Só se aplica a &lt;code&gt;barcode_payment_invoice&lt;/code&gt;. Indica o número restante de boletos gerados que podem ser pagos sem que haja custos no periódo.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Emissão de boleto&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A cobrança da taxa (&lt;code&gt;barcode_payment_invoice&lt;/code&gt;) só é aplicada quando um boleto gerado é pago.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;br&gt;
+&lt;h3 id=&#34;tipos-de-taxas&#34;&gt;Tipos de taxas&lt;/h3&gt;
+&lt;br&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Valor&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;internal_transfer&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Transferência para outra Conta Stone.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;external_transfer &lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Transferência para conta de outra instituição.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;barcode_payment &lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Pagamento de um documento de codigo de barra. (boletos, tributos, concessionárias, etc)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;outbound_stone_prepaid_card_payment&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Compra feita com cartão pré-pago.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;outbound_stone_prepaid_card_withdrawal&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Saque feito com cartão.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;barcode_payment_invoice     &lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Boleto emitido pela Conta Stone que foi pago.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Consultar Taxas</title>
+      <link>https://stone-co.github.io/docs/dados-da-conta/consultar-taxas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/dados-da-conta/consultar-taxas/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/fees/fee_type
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;*  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Identificador da conta.&lt;/p&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;fee_type&lt;/strong&gt;*  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Tipo de taxa. Valores possíveis: &lt;code&gt;internal_transfer&lt;/code&gt;, &lt;code&gt;external_transfer&lt;/code&gt;, &lt;code&gt;barcode_payment&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_payment&lt;/code&gt;, &lt;code&gt;outbound_stone_prepaid_card_withdrawal&lt;/code&gt; e &lt;code&gt;barcode_payment_invoice&lt;/code&gt;.&lt;/p&gt;
+&lt;br&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Outros Campos&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;No caso de &lt;code&gt;external_transfer&lt;/code&gt; serão também retornados os campos &lt;code&gt;billing_exempition_participant&lt;/code&gt;, &lt;code&gt;original_fee&lt;/code&gt;, &lt;code&gt;max_free_transfers&lt;/code&gt; e &lt;code&gt;remaining_free_transfers&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;No caso de &lt;code&gt;barcode_payment_invoice&lt;/code&gt; também serão retornardos os campos &lt;code&gt;billing_exempition_participant&lt;/code&gt;, &lt;code&gt;original_fee&lt;/code&gt;, &lt;code&gt;max_free&lt;/code&gt; e &lt;code&gt;remaining_free&lt;/code&gt; .&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Consultar Todas as Taxas</title>
+      <link>https://stone-co.github.io/docs/dados-da-conta/consultar-todas-as-taxas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/dados-da-conta/consultar-todas-as-taxas/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/fees
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;*  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Identificador da conta.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

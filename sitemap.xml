@@ -18,12 +18,21 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/dados-da-conta/criar-nova-identidade/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/pix/recebimento-pix/gerar-cobranca/</loc>
     <lastmod>2020-11-06T13:55:15-03:00</lastmod>
   </url>
   
   <url>
     <loc>https://stone-co.github.io/docs/stone-openbank/ambientes-da-api/</loc>
+    <lastmod>2020-09-17T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/dados-da-conta/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
   </url>
   
@@ -48,6 +57,10 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/dados-da-conta/overview-dados-da-conta/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/pix/recebimento-pix/consultar-qrcode-gerado/</loc>
     <lastmod>2020-11-06T15:26:32-03:00</lastmod>
   </url>
@@ -60,6 +73,10 @@
   <url>
     <loc>https://stone-co.github.io/docs/stone-openbank/data-e-hora/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/dados-da-conta/consultar-dados-da-conta/</loc>
   </url>
   
   <url>
@@ -78,6 +95,10 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/dados-da-conta/consultar-todas-as-contas-as-quais-o-usuario-tem-acesso/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/pix/recebimento-pix/especificacao-do-qrcode/</loc>
     <lastmod>2020-11-06T15:07:33-03:00</lastmod>
   </url>
@@ -90,6 +111,10 @@
   <url>
     <loc>https://stone-co.github.io/docs/stone-openbank/valores-financeiros/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/dados-da-conta/o-objeto-saldo/</loc>
   </url>
   
   <url>
@@ -108,6 +133,10 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/dados-da-conta/consultar-o-saldo/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/pix/chaves-pix/reivindicar-uma-chave-pix/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
   </url>
@@ -118,8 +147,16 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/dados-da-conta/objetos-do-extrato/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/pix/chaves-pix/aprovar-ou-rejeitar-reivindica%C3%A7%C3%A3o/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/dados-da-conta/consultar-extrato/</loc>
   </url>
   
   <url>
@@ -128,8 +165,24 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/dados-da-conta/consultar-dados-da-conta-1/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/pix/chaves-pix/listar-reivindicacoes/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/dados-da-conta/o-objeto-taxa/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/dados-da-conta/consultar-taxas/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/dados-da-conta/consultar-todas-as-taxas/</loc>
   </url>
   
   <url>
