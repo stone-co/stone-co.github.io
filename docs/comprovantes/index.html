@@ -7,7 +7,7 @@
 
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
-<link rel="alternate" type="application/rss&#43;xml" href="https://stone-co.github.io/docs/contatos/atualizar-contato/index.xml">
+<link rel="alternate" type="application/rss&#43;xml" href="https://stone-co.github.io/docs/comprovantes/index.xml">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico" >
@@ -21,15 +21,15 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Atualizar Contato | Stone OpenBank</title><meta property="og:title" content="Atualizar Contato" />
+<title>Como Emitir Um Comprovante | Stone OpenBank</title><meta property="og:title" content="Como Emitir Um Comprovante" />
 <meta property="og:description" content="Escreva o Banco do futuro. Uma linha de código por vez." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://stone-co.github.io/docs/contatos/atualizar-contato/" />
-<meta property="og:site_name" content="Stone OpenBank" />
-<meta itemprop="name" content="Atualizar Contato">
+<meta property="og:url" content="https://stone-co.github.io/docs/comprovantes/" />
+<meta property="og:updated_time" content="2020-09-17T18:00:00-03:00" /><meta property="og:site_name" content="Stone OpenBank" />
+<meta itemprop="name" content="Como Emitir Um Comprovante">
 <meta itemprop="description" content="Escreva o Banco do futuro. Uma linha de código por vez.">
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Atualizar Contato"/>
+<meta name="twitter:title" content="Como Emitir Um Comprovante"/>
 <meta name="twitter:description" content="Escreva o Banco do futuro. Uma linha de código por vez."/>
 
 
@@ -309,10 +309,10 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/contatos/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Contatos</a>
+    <a  href="/docs/contatos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Contatos</a>
   </li>
   <ul>
-    <li class="collapse show" id="docscontatos">
+    <li class="collapse " id="docscontatos">
       
       
       
@@ -418,10 +418,10 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/contatos/atualizar-contato/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Atualizar Contato</a>
+    <a  href="/docs/contatos/atualizar-contato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Atualizar Contato</a>
   </li>
   <ul>
-    <li class="collapse show" id="docscontatosatualizar-contato">
+    <li class="collapse " id="docscontatosatualizar-contato">
       
       
       
@@ -1534,10 +1534,10 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/comprovantes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Como Emitir Um Comprovante</a>
+    <a  href="/docs/comprovantes/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Como Emitir Um Comprovante</a>
   </li>
   <ul>
-    <li class="collapse " id="docscomprovantes">
+    <li class="collapse show" id="docscomprovantes">
       
       
       
@@ -1588,9 +1588,6 @@
 
 
 
-
-
-
 <li class="breadcrumb-item" >
 	<a href="https://stone-co.github.io/docs/">Referência da API</a>
 </li>
@@ -1598,15 +1595,8 @@
 
 
 
-<li class="breadcrumb-item" >
-	<a href="https://stone-co.github.io/docs/contatos/">Contatos</a>
-</li>
-
-
-
-
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="https://stone-co.github.io/docs/contatos/atualizar-contato/">Atualizar Contato</a>
+	<a href="https://stone-co.github.io/docs/comprovantes/">Como Emitir Um Comprovante</a>
 </li>
 
 	</ol>
@@ -1614,52 +1604,67 @@
 
             
 <div class="td-content">
-	<h1>Atualizar Contato</h1>
+	<h1>Como Emitir Um Comprovante</h1>
         
 	
-	<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">POST https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts/contact_id
+	<h3 id="como-emitir-um-comprovante">Como Emitir Um Comprovante</h3>
+<p>Comprovantes informam sobre uma transação em detalhes, como fonte, destinatário e estado.</p>
+<p>As operações que podem ter seu comprovante gerado são apenas as operações: Pagamento com código de barras, envio de TEDs, envio de transferências internas e extrato.</p>
+<p>Comprovantes podem ser gerados apenas para transferências em estados de sucesso, como aprovada e agendada.</p>
+<p>Comprovantes para extrato aceitam os parâmetros adicionais <code>start_datetime</code> e <code>end_datetime</code> para especificar o intervalo de tempo cujas entradas serão levadas em consideração ao gerar o comprovante.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">POST https://sandbox-api.openbank.stone.com.br/api/v1/receipts
+</span><span style="color:#a40000">Content-Type: application/json
+</span><span style="color:#a40000">x-stone-idempotency-key: &#34;jwt_token&#34;
+</span><span style="color:#a40000">{
+</span><span style="color:#a40000">    &#34;resource_type&#34;: &#34;external_transfer&#34;,
+</span><span style="color:#a40000">    &#34;resource_id&#34;: &#34;2e3d6ed0-d442-41eb-8a3c-2a6d5da92dc9&#34;,
+</span><span style="color:#a40000">    &#34;start_datetime&#34;: &#34;2020-12-31T00:00:00Z&#34;,
+</span><span style="color:#a40000">    &#34;end_datetime&#34;: &#34;2021-01-01T00:00:00Z&#34;
+</span><span style="color:#a40000">}
+</span><span style="color:#a40000">
+</span><span style="color:#a40000">200 OK
 </span></code></pre></div><hr>
-<p><strong>PATH PARAMS</strong></p>
+<h4 id="request-body-params">REQUEST BODY PARAMS</h4>
 <hr>
-<p><strong>account_id</strong>*  <code>string</code></p>
-<p>Identificador da conta.</p>
+<h5 id="resource_type">resource_type</h5>
+<ul>
+<li>Type: <code>string</code></li>
+<li>Allowed values: <code>external_transfer</code>, <code>internal_transfer</code>, <code>payment</code> e <code>statement</code></li>
+</ul>
+<h5 id="resource_id">resource_id</h5>
+<ul>
+<li>Type: <code>UUID</code></li>
+</ul>
+<h5 id="start_datetime">start_datetime</h5>
+<ul>
+<li>Type: <code>Datetime</code></li>
+<li>Format: <code>ISO8601 - &quot;YYYY-MM-DDThh:mm:ssZ&quot;</code></li>
+<li>Example: <code>&quot;2021-01-01T00:00:00Z&quot;</code></li>
+</ul>
+<h5 id="end_datetime">end_datetime</h5>
+<ul>
+<li>Type: <code>Datetime</code></li>
+<li>Format: <code>ISO8601 - &quot;YYYY-MM-DDThh:mm:ssZ&quot;</code></li>
+<li>Example: <code>&quot;2021-01-01T00:00:00Z&quot;</code></li>
+</ul>
 <hr>
-<p><strong>contact_id</strong>*  <code>string</code></p>
-<p>Identificador do contato.</p>
-<br>
+<h4 id="headers">HEADERS</h4>
 <hr>
-<p><strong>BODY PARAMS</strong></p>
+<ul>
+<li>x-stone-idempotency-key: <code>string</code></li>
+</ul>
 <hr>
-<p><strong>name</strong>  <code>string</code></p>
-<p>Nome do contato.</p>
+<h4 id="response">RESPONSE</h4>
 <hr>
-<p><strong>tax_id</strong>*  <code>string</code></p>
-<p>Documento do contato.</p>
-<hr>
-<p><strong>email</strong>  <code>string</code></p>
-<p>E-mail do contato.</p>
-<hr>
-<p><strong>mobile</strong>  <code>string</code></p>
-<p>Telefone do contato.</p>
-<br>
-<hr>
-<p><strong>HEADERS</strong></p>
-<hr>
-<p><strong>x-stone-idempotency-key</strong>  <code>string</code></p>
-<p>Chave de idempotência.</p>
-<br>
-<hr>
-<h5 id="response"><strong>Response</strong></h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#0000cf;font-weight:bold">200</span> <span style="color:#a40000">ok</span> 
-</code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#204a87;font-weight:bold">&#34;bank_accounts&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[],</span>
-  <span style="color:#204a87;font-weight:bold">&#34;email&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;93305585-0576-4ca0-aeac-3a75f9cc3c18&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;mobile&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Mauro Barcelos&#34;</span><span style="color:#000;font-weight:bold">,</span>
-  <span style="color:#204a87;font-weight:bold">&#34;tax_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;58515428881&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div>
+<ul>
+<li>Sucesso:
+<ul>
+<li>200 OK</li>
+<li>Retorna o PDF do comprovante</li>
+</ul>
+</li>
+</ul>
+
         <div class="section-index">
     
     
@@ -1808,7 +1813,7 @@
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 01.01.0001
+	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 17.09.2020
 </div>
 </div>
 
