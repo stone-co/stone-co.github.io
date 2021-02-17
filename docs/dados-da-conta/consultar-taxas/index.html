@@ -471,6 +471,29 @@
       
       
       
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/dados-da-conta/objetos-do-extrato/estrutura-de-transacoes-no-extrato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Estrutura de Transações no Extrato</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsdados-da-contaobjetos-do-extratoestrutura-de-transacoes-no-extrato">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
     </li>
   </ul>
 </ul>
@@ -510,10 +533,10 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/dados-da-conta/consultar-dados-da-conta-1/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Uma Entrada no Extrato</a>
+    <a  href="/docs/dados-da-conta/consultar-uma-entrada-no-extrato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Uma Entrada no Extrato</a>
   </li>
   <ul>
-    <li class="collapse " id="docsdados-da-contaconsultar-dados-da-conta-1">
+    <li class="collapse " id="docsdados-da-contaconsultar-uma-entrada-no-extrato">
       
       
       
@@ -1062,7 +1085,7 @@
 	<hr>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/fees/fee_type
 </span></code></pre></div><hr>
-<p><strong>PATH PARAMS</strong></p>
+<h5 id="path-params"><strong>PATH PARAMS</strong></h5>
 <hr>
 <p><strong>account_id</strong>*  <code>string</code></p>
 <p>Identificador da conta.</p>
@@ -1080,13 +1103,25 @@
 
 </div>
 
-
+<hr>
+<h5 id="response"><strong>Response</strong></h5>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#0000cf;font-weight:bold">201</span> <span style="color:#a40000">OK</span>
+<span style="color:#a40000">content-type:</span> <span style="color:#a40000">application/json</span>
+</code></pre></div><p>Body</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">
+<span style="color:#000;font-weight:bold">{</span>
+  <span style="color:#204a87;font-weight:bold">&#34;amount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">130</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">&#34;fee_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;internal_transfer&#34;</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div>
         <div class="section-index">
     
     
     
     
     <hr class="panel-line">
+        
+            
         
             
         

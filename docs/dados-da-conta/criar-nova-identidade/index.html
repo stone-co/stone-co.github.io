@@ -471,6 +471,29 @@
       
       
       
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/dados-da-conta/objetos-do-extrato/estrutura-de-transacoes-no-extrato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Estrutura de Transações no Extrato</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsdados-da-contaobjetos-do-extratoestrutura-de-transacoes-no-extrato">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
     </li>
   </ul>
 </ul>
@@ -510,10 +533,10 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/dados-da-conta/consultar-dados-da-conta-1/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Uma Entrada no Extrato</a>
+    <a  href="/docs/dados-da-conta/consultar-uma-entrada-no-extrato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Uma Entrada no Extrato</a>
   </li>
   <ul>
-    <li class="collapse " id="docsdados-da-contaconsultar-dados-da-conta-1">
+    <li class="collapse " id="docsdados-da-contaconsultar-uma-entrada-no-extrato">
       
       
       
@@ -1063,9 +1086,10 @@
 <hr>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">POST https://sandbox-api.openbank.stone.com.br/api/v1/users/signup
 </span></code></pre></div><hr>
-<p><strong>BODY PARAMS</strong></p>
+<h5 id="body-params"><strong>BODY PARAMS</strong></h5>
 <hr>
 <p><strong>jwe</strong>*  <code>string</code></p>
+<hr>
 
 
 <div class="pageinfo pageinfo-primary">
@@ -1074,6 +1098,7 @@
 
 </div>
 
+<br>
 <p>O conteúdo a ser criptografado é um JSON com a seguinte estrutura:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
 	<span style="color:#204a87;font-weight:bold">&#34;user&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
@@ -1097,13 +1122,23 @@
 <li>Buscar a chave pública da Stone no endpoint /api/v1/discovery/keys, cujo campo &ldquo;use&rdquo; seja igual a &ldquo;enc&rdquo;;</li>
 <li>Usar uma biblioteca passando o payload, a chave pública e o algoritmo utilizado, no caso, RSA-OAEP-256.</li>
 </ol>
-
+<hr>
+<h4 id="response"><strong>Response</strong></h4>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#0000cf;font-weight:bold">201</span> <span style="color:#a40000">Created</span>
+<span style="color:#a40000">content-type:</span> <span style="color:#a40000">application/json</span>
+</code></pre></div><p>Body</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
+  <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#a40000">“user</span><span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">9359</span><span style="color:#a40000">ea</span><span style="color:#0000cf;font-weight:bold">04-473</span><span style="color:#a40000">b</span><span style="color:#0000cf;font-weight:bold">-4592</span><span style="color:#a40000">-bbcc</span><span style="color:#0000cf;font-weight:bold">-7</span><span style="color:#a40000">ec</span><span style="color:#0000cf;font-weight:bold">8461039</span><span style="color:#a40000">ee”</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><pre><code></code></pre>
         <div class="section-index">
     
     
     
     
     <hr class="panel-line">
+        
+            
         
             
         
