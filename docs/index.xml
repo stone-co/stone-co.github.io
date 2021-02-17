@@ -14,5 +14,32 @@
       
     
     
+    <item>
+      <title>Docs: Considerações Importantes</title>
+      <link>https://stone-co.github.io/docs/pagamentos/consideracoes_importantes/considera%C3%A7%C3%B5es-importantes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/pagamentos/consideracoes_importantes/considera%C3%A7%C3%B5es-importantes/</guid>
+      <description>
+        
+        
+        &lt;br&gt;
+&lt;p&gt;Existem regras de serviço em &lt;em&gt;sandbox&lt;/em&gt; diferentes às de &lt;em&gt;produção&lt;/em&gt;. São elas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Nenhum boleto será pago em nosso ambiente de &lt;em&gt;sandbox&lt;/em&gt;;&lt;/li&gt;
+&lt;li&gt;O nome e CPF/CNPJ do emissor do boleto será gerado aleatoriamente, logo não será igual ao do boleto que você está pagando;&lt;/li&gt;
+&lt;li&gt;Poderá ser pago novamente o mesmo boleto ou tributo após 2 horas.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;p&gt;Segue agora algumas regras do serviço que refletem o mesmo comportamento que há em &lt;em&gt;produção&lt;/em&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Será possível simular pagamentos de Contas de Consumo e Tributos vencidos;&lt;/li&gt;
+&lt;li&gt;Não será possível simular o pagamento de boletos de cobrança vencidos;&lt;/li&gt;
+&lt;li&gt;Não será possível realizar o pagamento de um boleto que não tenha valor pré-definido.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
   </channel>
 </rss>

@@ -26,6 +26,14 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/pagamentos/o-que-e-um-pagamento/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/dry-run/simular-uma-transferencia-interna/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/pix/recebimento-pix/gerar-cobranca/</loc>
     <lastmod>2020-11-06T13:55:15-03:00</lastmod>
   </url>
@@ -56,7 +64,15 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/pagamentos/o-objeto-pagamento/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/dados-da-conta/overview-dados-da-conta/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/dry-run/simular-uma-transferencia-externa/</loc>
   </url>
   
   <url>
@@ -79,6 +95,14 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/pagamentos/criar-um-pagamento/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/dry-run/objetos-simulacao-de-pagamento/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/pix/recebimento-pix/listar-cobrancas/</loc>
     <lastmod>2020-11-06T13:52:00-03:00</lastmod>
   </url>
@@ -98,6 +122,18 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/pagamentos/listar-pagamentos/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/dry-run/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/dry-run/simular-o-pagamento-de-um-documento/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/pix/recebimento-pix/especificacao-do-qrcode/</loc>
     <lastmod>2020-11-06T15:07:33-03:00</lastmod>
   </url>
@@ -108,12 +144,21 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/pagamentos/</loc>
+    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/stone-openbank/valores-financeiros/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
   </url>
   
   <url>
     <loc>https://stone-co.github.io/docs/dados-da-conta/o-objeto-saldo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/pagamentos/retornar-um-pagamento/</loc>
   </url>
   
   <url>
@@ -132,6 +177,10 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/pagamentos/cancelamento-de-um-pagamento/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/dados-da-conta/consultar-o-saldo/</loc>
   </url>
   
@@ -143,6 +192,10 @@
   <url>
     <loc>https://stone-co.github.io/docs/stone-openbank/mensagens-de-erro/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/pagamentos/consideracoes_importantes/considera%C3%A7%C3%B5es-importantes/</loc>
   </url>
   
   <url>
