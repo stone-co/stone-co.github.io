@@ -31,6 +31,10 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/contatos/o-objeto-contato/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/pagamentos/o-que-e-um-pagamento/</loc>
   </url>
   
@@ -45,6 +49,11 @@
   
   <url>
     <loc>https://stone-co.github.io/docs/stone-openbank/ambientes-da-api/</loc>
+    <lastmod>2020-09-17T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/contatos/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
   </url>
   
@@ -71,6 +80,10 @@
   <url>
     <loc>https://stone-co.github.io/docs/pix/chaves-pix/status/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/contatos/criar-um-contato/</loc>
   </url>
   
   <url>
@@ -114,6 +127,10 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/contatos/listar-contatos/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/dry-run/objetos-simulacao-de-pagamento/</loc>
   </url>
   
@@ -145,6 +162,10 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/contatos/retornar-um-contato/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/dry-run/simular-o-pagamento-de-um-documento/</loc>
   </url>
   
@@ -166,6 +187,10 @@
   <url>
     <loc>https://stone-co.github.io/docs/stone-openbank/valores-financeiros/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/contatos/atualizar-contato/</loc>
   </url>
   
   <url>
@@ -200,6 +225,10 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/contatos/excluir-um-contato/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/pix/chaves-pix/reivindicar-uma-chave-pix/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
   </url>
@@ -207,6 +236,10 @@
   <url>
     <loc>https://stone-co.github.io/docs/stone-openbank/mensagens-de-erro/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/contatos/adicionar-conta-bancaria-a-um-contato/</loc>
   </url>
   
   <url>
@@ -223,6 +256,10 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/contatos/atualizar-conta-bancaria-de-um-contato/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/dados-da-conta/consultar-extrato/</loc>
   </url>
   
@@ -233,6 +270,10 @@
   
   <url>
     <loc>https://stone-co.github.io/docs/dados-da-conta/consultar-uma-entrada-no-extrato/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/contatos/excluir-conta-bancaria-de-um-contato/</loc>
   </url>
   
   <url>
