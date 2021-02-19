@@ -35,6 +35,10 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/folha-de-pagamento/listar-pagamentos-de-folha/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/contatos/o-objeto-contato/</loc>
   </url>
   
@@ -92,6 +96,10 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/folha-de-pagamento/criar-pagamento-de-folha/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/contatos/criar-um-contato/</loc>
   </url>
   
@@ -133,6 +141,10 @@
   
   <url>
     <loc>https://stone-co.github.io/docs/dados-da-conta/consultar-dados-da-conta/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/folha-de-pagamento/consultar-pagamento-de-folha/</loc>
   </url>
   
   <url>
@@ -299,6 +311,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/folha-de-pagamento/</loc>
+    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/dados-da-conta/consultar-taxas/</loc>
   </url>
   
@@ -323,6 +340,10 @@
   
   <url>
     <loc>https://stone-co.github.io/docs/stone-openbank/autenticacao/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/folha-de-pagamento/listar-salarios-de-uma-folha/</loc>
   </url>
   
   <url>
