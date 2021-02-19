@@ -23,6 +23,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/transferencias/</loc>
+    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/dados-da-conta/criar-nova-identidade/</loc>
   </url>
   
@@ -48,6 +53,10 @@
   
   <url>
     <loc>https://stone-co.github.io/docs/aprovacoes/o-que-e-uma-aprovacao/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/transferencias/1-o-que-e-uma-transferencia/</loc>
   </url>
   
   <url>
@@ -120,6 +129,10 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/transferencias/2-o-objeto-transferencia/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/dados-da-conta/overview-dados-da-conta/</loc>
   </url>
   
@@ -172,6 +185,14 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/transferencias/3-transferencias-internas/3-transferir-para-contas-stone/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/transferencias/3-transferencias-internas/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/pix/recebimento-pix/listar-cobrancas/</loc>
     <lastmod>2020-11-06T13:52:00-03:00</lastmod>
   </url>
@@ -199,6 +220,10 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/transferencias/3-transferencias-internas/4-listar-transferencias-internas/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/dry-run/</loc>
   </url>
   
@@ -208,6 +233,10 @@
   
   <url>
     <loc>https://stone-co.github.io/docs/dry-run/simular-o-pagamento-de-um-documento/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/transferencias/4-transferencias-externas/</loc>
   </url>
   
   <url>
@@ -243,6 +272,10 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/transferencias/3-transferencias-internas/5-retornando-uma-transferencia-interna/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/pagamentos/retornar-um-pagamento/</loc>
   </url>
   
@@ -267,6 +300,10 @@
   
   <url>
     <loc>https://stone-co.github.io/docs/pagamentos/cancelamento-de-um-pagamento/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/transferencias/3-transferencias-internas/6-cancelamento-de-uma-transferencia-interna-agendada/</loc>
   </url>
   
   <url>
@@ -304,6 +341,10 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/transferencias/4-transferencias-externas/7-transferir-para-outros-bancos/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/pix/chaves-pix/aprovar-ou-rejeitar-reivindica%C3%A7%C3%A3o/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
   </url>
@@ -322,6 +363,10 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/transferencias/4-transferencias-externas/8-listar-transferencias-externas/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/pix/chaves-pix/detalhar-uma-reivindica%C3%A7%C3%A3o/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
   </url>
@@ -335,8 +380,16 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/transferencias/4-transferencias-externas/9-retornar-uma-transferencia-externa/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/pix/chaves-pix/listar-reivindicacoes/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/transferencias/4-transferencias-externas/10-cancelamento-de-uma-transferencia-externa-agendada/</loc>
   </url>
   
   <url>
