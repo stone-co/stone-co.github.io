@@ -47,6 +47,10 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/aprovacoes/o-que-e-uma-aprovacao/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/dry-run/simular-uma-transferencia-interna/</loc>
   </url>
   
@@ -93,6 +97,10 @@
   <url>
     <loc>https://stone-co.github.io/docs/pix/chaves-pix/status/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/aprovacoes/aprovar-um-pagamento/</loc>
   </url>
   
   <url>
@@ -160,6 +168,10 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/aprovacoes/rejeitar-um-pagamento/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/pix/recebimento-pix/listar-cobrancas/</loc>
     <lastmod>2020-11-06T13:52:00-03:00</lastmod>
   </url>
@@ -172,6 +184,10 @@
   <url>
     <loc>https://stone-co.github.io/docs/stone-openbank/paginacao/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/aprovacoes/aprovar-uma-transferencia-interna/</loc>
   </url>
   
   <url>
@@ -223,6 +239,10 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/aprovacoes/rejeitar-uma-transferencia-interna/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/pagamentos/retornar-um-pagamento/</loc>
   </url>
   
@@ -239,6 +259,10 @@
   <url>
     <loc>https://stone-co.github.io/docs/stone-openbank/codigos-de-resposta/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/aprovacoes/aprovar-uma-transferencia-externa/</loc>
   </url>
   
   <url>
@@ -276,7 +300,16 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/aprovacoes/rejeitar-uma-transferencia-externa/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/pix/chaves-pix/aprovar-ou-rejeitar-reivindica%C3%A7%C3%A3o/</loc>
+    <lastmod>2020-09-17T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/aprovacoes/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
   </url>
   
