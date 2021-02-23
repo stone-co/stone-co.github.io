@@ -1,0 +1,137 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stone OpenBank – CONTA STONE SDK</title>
+    <link>https://stone-co.github.io/docs/guias/conta-stone-sdk/</link>
+    <description>Recent content in CONTA STONE SDK on Stone OpenBank</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 17 Sep 2020 18:00:00 -0300</lastBuildDate>
+    
+	  <atom:link href="https://stone-co.github.io/docs/guias/conta-stone-sdk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Conta Stone SDK</title>
+      <link>https://stone-co.github.io/docs/guias/conta-stone-sdk/conta-stone-sdk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/guias/conta-stone-sdk/conta-stone-sdk/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;Sejam bem-vindos à documentação da Conta Stone SDK. Através da Conta Stone SDK é possível fazer o processo de abertura de conta e login no Stone OpenBank.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;introdução&#34;&gt;&lt;strong&gt;Introdução&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;A Conta Stone SDK é o ponto de entrada para acesso às nossas SDKs de autenticação (Auth SDK), aprovação (Approver SDK) e verificação de &lt;a href=&#34;https://en.wikipedia.org/wiki/Know_your_customer&#34;&gt;KYC&lt;/a&gt; (&lt;em&gt;Know your costumer&lt;/em&gt;) (Pegasus SDK). Segue abaixo um diagrama de como funciona a comunicação entre esses três atores.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;amp;id=10taLBHeYD273QLj2JMAZZvAooqRc8pQp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Auth SDK - responsável por executar todo o processo de autenticação seguindo as diretrizes do &lt;a href=&#34;https://oauth.net/2/&#34;&gt;oAuth2&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Approver SDK - realiza todo o processo de aprovação e rejeição de transações.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pegasus SDK - SDK de KYC, responsável por capturar as informações do usuário que está realizando cadastro na conta.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h4 id=&#34;como-integrar-com-a-sdk&#34;&gt;&lt;strong&gt;Como integrar com a SDK&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Antes de começar a integração é necessário obter uma chave de acesso ao nosso repositório. Para obter esta chave, entre em contato com a gente.&lt;/p&gt;
+&lt;p&gt;No arquivo &lt;code&gt;build.gradle&lt;/code&gt; do projeto, adicione a URL do repositório.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;maven { url &amp;quot;https://packagecloud.io/priv/${access-key}/Stone/stoneid/maven2&amp;quot;}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Importe a dependência da Conta Stone SDK&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;implementation &#39;co.stone:conta:${latest_version}&#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Sincronize o projeto e pronto! Já é possível utilizar a conta-stone-sdk.&lt;/p&gt;
+&lt;br&gt;
+&lt;h4 id=&#34;inicializando-a-sdk&#34;&gt;&lt;strong&gt;Inicializando a SDK&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Uma vez que a dependência foi importada o passo seguinte da integração é inicializar a SDK no seu app, para isso é necessário especificar os parâmetros abaixo.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ContaStone.initialize(
+            application = applicationContext,
+            environment = Environment.Production,
+            appInfo = AppInfo(
+                name = &amp;quot;Conta Stone Android&amp;quot;,
+                version = BuildConfig.VERSION_NAME,
+                buildId = BuildConfig.BUILD_ID
+            ),
+            clientId = &amp;quot;client_id&amp;quot;,
+            redirectUri = URI(&amp;quot;br.com.stone.openbank.example:/oauth2redirect&amp;quot;),
+            authFlowUIConfig = AuthFlowUIConfig(R.style.AppTheme),
+            httpClientConfig = HttpClientConfig(interceptors = emptyList()),
+            tokenKeyMasterUri =  URI(&amp;quot;android-keystore://my-app&amp;quot;),
+            userBlockedActions = UserBlockedIntentConfig(
+                uriLogout = &amp;quot;myapp://mobile.example.logout&amp;quot;,
+                uriChat = &amp;quot;myapp://mobile.example.chat&amp;quot;
+            )
+        )
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;application&lt;/code&gt;: Trata-se da instância do Application do seu app.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;environment&lt;/code&gt;: Existem 3 ambientes para os quais a sdk pode apontar: &lt;code&gt;Homolog&lt;/code&gt;, &lt;code&gt;Sandbox&lt;/code&gt; e &lt;code&gt;Production&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;appInfo&lt;/code&gt;: Informações referentes ao app como nome, versão e build.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;client_id&lt;/code&gt;: Identificador fornecido pelo time de suporte OpenBank.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;redirect_uri&lt;/code&gt;: URL de redirecionamento para o app.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;authFlowUIConfig&lt;/code&gt;: Com esta configuração é possível passar o tema da sua aplicação para a SDK. Assim, as cores principais do estilo do seu app serão aplicadas nas telas internas da SDK.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;httpClientConfig&lt;/code&gt;: Trata-se de configurações HTTP customizadas, como &lt;code&gt;interceptors&lt;/code&gt;, &lt;code&gt;connectionTimeoutMs&lt;/code&gt;, &lt;code&gt;readTimeoutMs&lt;/code&gt;, &lt;code&gt;writeTimeoutMs&lt;/code&gt;, &lt;code&gt;networkInterceptors&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;tokenKeyMasterUri&lt;/code&gt;: Uma URI para a chave-mestra no formato &lt;code&gt;android-keystore://&lt;/code&gt;. Essa chave será utilizada para acessar o Keystore do android e salvar o token da usuária de forma segura.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;userBlockedActions&lt;/code&gt;: Se um determinado usuário errar a senha de 6 dígitos mais de x vezes, ele será temporariamente bloqueado. Neste momento será exibida uma tela com duas opções: acesso ao canal de relacionamento ou fazer logout. Ao escolher entre elas, o usuário é redirecionado de volta para o app, através dessas duas URIs.&lt;/p&gt;
+&lt;p&gt;Para mais detalhes sobre como configurar deep link no seu app, clique  &lt;a href=&#34;https://developer.android.com/training/app-links/deep-linking&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+&lt;br&gt;
+&lt;h4 id=&#34;autenticação-e-verificação-de-kyc&#34;&gt;&lt;strong&gt;Autenticação e verificação de KYC&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Para iniciar o fluxo é necessário seguir o método abaixo:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;fun startAuthAndVerificationFlowForResult(
+        activity: Activity,
+        requestCode: Int,
+        request: AuthFlowRequest,
+        params: VerificationParams
+    )
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;O atributo &lt;code&gt;request&lt;/code&gt; refere-se a informações customizadas para o login, como os &lt;code&gt;scopes&lt;/code&gt;. Tais recursos estarão disponíveis para o usuário ao chamar algum dos endpoints do serviço. Já o &lt;code&gt;loginHint&lt;/code&gt; salva o email do usuário e é usado para preencher o username na tela de login.&lt;/p&gt;
+&lt;p&gt;O atributo &lt;code&gt;params&lt;/code&gt; recebe comandos de dois tipos: o modo de inicialização, ou seja, a maneira como o fluxo deve ser iniciado; e o &lt;code&gt;NotificationRegister&lt;/code&gt;, que contém o token do Firebase Cloud Message do usuário logado para que seja registrado no serviço de notificações. Os modos de inicialização que podem ser escolhidos são:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;StartingApp&lt;/code&gt; - Inicia todo o fluxo de autenticação e checkagem de KYC.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;AccountSelectionRequest&lt;/code&gt; - Exibe a tela de troca de conta e lida com a escolha do usuário.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;PushNotificationReceived&lt;/code&gt; - Deve ser iniciado ao receber uma notificação de abertura de conta referente ao processo de abertura de conta.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;NewAccountCreated&lt;/code&gt; - Chamado de verificação de pendência a cada conta aberta pelo app/sistema.&lt;/p&gt;
+&lt;p&gt;Este método executa os fluxos internos de autenticação e verificação de KYC. Quando o processo é finalizado, a &lt;code&gt;conta-stone-sdk&lt;/code&gt; retorna um resultado que será tratado pelo app.&lt;/p&gt;
+&lt;br&gt;
+&lt;h4 id=&#34;lidando-com-o-resultado-da-sdk&#34;&gt;&lt;strong&gt;Lidando com o resultado da sdk&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Ao finalizar o fluxo de autenticação e verificação a SDK emite um resultado para o app informando o desfecho do fluxo. Segue abaixo um exemplo de como tratar o resultado emitido pela &lt;code&gt;conta-stone-sdk&lt;/code&gt; e o que cada um significa:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        when (requestCode) {
+            AUTH_AND_VERIFICATION_RC -&amp;gt; {
+                val result = contaStone.parseAuthAndVerificationResult(data)
+
+                when (result) {
+                    is AuthAndVerificationResult.Ok -&amp;gt; toast(&amp;quot;Success&amp;quot;)
+                    is AuthAndVerificationResult.MissingData -&amp;gt; toast(&amp;quot;Some error occur while reading data&amp;quot;)
+                    is AuthAndVerificationResult.UserCancelled -&amp;gt; toast(&amp;quot;User cancelled flow&amp;quot;)
+                    is AuthAndVerificationResult.ReturnToPreviousScreen -&amp;gt; toast(&amp;quot;Returned to the previous screen and was logged out&amp;quot;)
+                    is AuthAndVerificationResult.UserLoggedOut -&amp;gt; toast(&amp;quot;User logged out&amp;quot;)
+                    is AuthAndVerificationResult.BlockedUser -&amp;gt; toast(&amp;quot;This user is blocked&amp;quot;)
+                    is AuthAndVerificationResult.Error -&amp;gt; toast(&amp;quot;Some error occur during auth and check flow)
+                }
+            }
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;
+&lt;h4 id=&#34;como-fazer-logout-do-usuário&#34;&gt;&lt;strong&gt;Como fazer logout do usuário&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Como mencionado anteriormente, a &lt;code&gt;conta-stone-sdk&lt;/code&gt; se comunica com a sdk de autenticação, que pode ser acessada pelo método &lt;code&gt;contaStone.auth()&lt;/code&gt; e permite acesso aos métodos da interface da authSdk, como o método de logout. Confira abaixo um exemplo de como isso funciona:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;contaStone.auth().logout { exception: AuthFlowException? -&amp;gt;
+                        exception?.let { toast(&amp;quot; Success &amp;quot;)} ?: toast(&amp;quot;Erro during logout&amp;quot;)
+                    }
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Quando a resposta é nula, o logout ocorreu com sucesso. Quando não, algum erro ocorreu durante o fluxo.&lt;/p&gt;
+&lt;br&gt;
+&lt;h4 id=&#34;cliente-autenticado&#34;&gt;&lt;strong&gt;Cliente autenticado&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;A authSDK é responsável por todo o processo de autenticação, incluindo a adição do token no header das chamadas até a api do Stone Openbank. Para realizar tudo isso, a SDK cria um client e adiciona um interceptor, o qual recupera o token do storage e o adiciona no header da chamada.&lt;/p&gt;
+&lt;p&gt;Esse client possui certificate pinning com os certificados da api do Stone OpenBank e é possível acessá-lo chamando o método &lt;code&gt;contaStone.auth().client()&lt;/code&gt;, o qual retorna um &lt;code&gt;OkHttpClient&lt;/code&gt; e pode ser utilizado nas chamadas HTTP do seu app.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
