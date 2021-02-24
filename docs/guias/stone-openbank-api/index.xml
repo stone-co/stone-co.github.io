@@ -24,31 +24,26 @@
         
         
         &lt;hr&gt;
-&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;Sejam bem-vindos à seção de Guias da Stone OpenBank API.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Agora é possível ter funcionalidades de internet banking e de apps de banco no seu negócio!&lt;/p&gt;
-&lt;br&gt;
-&lt;hr&gt;
 &lt;h3 id=&#34;o-que-é-a-stone-openbank-api&#34;&gt;O que é a Stone OpenBank API&lt;/h3&gt;
 &lt;br&gt;
-&lt;p&gt;Aqui na Stone a gente acredita não apenas que o cliente tem razão, mas que ele &lt;em&gt;é&lt;/em&gt; a nossa razão. Somos fiéis defensores da competição e acreditamos que isso melhora o mercado como um todo, o que, por sua vez, melhora a vida da nossa razão.&lt;/p&gt;
+&lt;p&gt;Aqui na Stone a gente acredita não apenas que o &lt;strong&gt;cliente&lt;/strong&gt; tem razão, mas que ele &lt;strong&gt;é a nossa razão&lt;/strong&gt;. Somos fiéis defensores da competição e acreditamos que isso melhora o mercado como um todo, o que, por sua vez, melhora a vida da nossa razão.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Foi com base nesse sentimento pró-competição que montamos a Stone OpenBank API: a primeira API de Open Banking plugada diretamente no STR.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;A &lt;a href=&#34;https://docs.openbank.stone.com.br/docs/padroes-e-definicoes-guides#section-a-conta-stone&#34;&gt;Conta Stone&lt;/a&gt; é a nossa oferta para clientes PJ e PF, tanto para aqueles que já pertencem a base da Stone Adquirente, como para aqueles que utilizam outras adquirentes e buscam uma nova forma de se relacionar com sua conta.&lt;/p&gt;
 &lt;p&gt;O Aplicativo da Conta Stone é mais um parceiro da Stone OpenBank API, usando exatamente os mesmos acessos e APIs descritos nesse documento. &amp;ldquo;Eat your own dogfood&amp;rdquo; aplicado na prática.&lt;/p&gt;
 &lt;p&gt;Assim como nós pudemos criar o nosso aplicativo de conta em cima dessa API, você pode fazer o mesmo ou integrar as funcionalidades de automação bancária no seu negócio.&lt;/p&gt;
-&lt;br&gt;
 &lt;h3 id=&#34;o-que-oferecemos&#34;&gt;O que oferecemos?&lt;/h3&gt;
 &lt;br&gt;
 &lt;p&gt;Com a &lt;a href=&#34;https://docs.openbank.stone.com.br/v1.0/reference&#34;&gt;API&lt;/a&gt; da Conta Stone você pode disponibilizar para os seus clientes:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Consulta de saldos e extratos&lt;/li&gt;
-&lt;li&gt;Envio e recebimento de transferências tanto de outras Contas Stone como de outros bancos via TED&lt;/li&gt;
-&lt;li&gt;Pagamento de boletos&lt;/li&gt;
-&lt;li&gt;Pagamento de concessionárias e tributos&lt;/li&gt;
-&lt;li&gt;Emissão de boletos&lt;/li&gt;
-&lt;li&gt;Armazenar contatos favorecidos para envio de transferências para outros bancos&lt;/li&gt;
+&lt;li&gt;Consulta de saldos e extratos;&lt;/li&gt;
+&lt;li&gt;Envio e recebimento de transferências tanto de outras Contas Stone como de outros bancos via TED;&lt;/li&gt;
+&lt;li&gt;Pagamento de boletos;&lt;/li&gt;
+&lt;li&gt;Pagamento de concessionárias e tributos;&lt;/li&gt;
+&lt;li&gt;Emissão de boletos;&lt;/li&gt;
+&lt;li&gt;Armazenar contatos favorecidos para envio de transferências para outros bancos.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;br&gt;
 &lt;h3 id=&#34;como-funciona-a-integração&#34;&gt;Como funciona a integração?&lt;/h3&gt;
 &lt;br&gt;
 &lt;p&gt;Por enquanto, ainda não estamos realizando on-board de parceiros em auto-serviço. Por isso, todos os interessados em firmar parcerias devem entrar em contato com o nosso time de parcerias seguindo os seguintes passos:&lt;/p&gt;
@@ -124,7 +119,6 @@ content-type x-www-form-urlencoded
 
 &lt;/div&gt;
 
-&lt;br&gt;
 &lt;h3 id=&#34;2---escolha-a-sua-linguagem&#34;&gt;2 - Escolha a sua linguagem&lt;/h3&gt;
 &lt;br&gt;
 &lt;p&gt;A &lt;strong&gt;Stone Open Bank&lt;/strong&gt; disponibiliza sua infraestrutura por meio de uma &lt;a href=&#34;https://en.wikipedia.org/wiki/Representational_state_transfer&#34;&gt;API RESTful&lt;/a&gt; e respostas em &lt;a href=&#34;http://www.json.org/&#34;&gt;JSON&lt;/a&gt;.&lt;/p&gt;
@@ -136,7 +130,6 @@ content-type x-www-form-urlencoded
 
 &lt;/div&gt;
 
-&lt;br&gt;
 &lt;h3 id=&#34;3---crie-uma-ted&#34;&gt;3 - Crie uma TED&lt;/h3&gt;
 &lt;br&gt;
 &lt;p&gt;Depois de se cadastrar, pegar o seu token de teste e escolher a sua linguagem já é possível começar a movimentar a sua conta de teste!&lt;/p&gt;
@@ -241,11 +234,10 @@ content-type x-www-form-urlencoded
 &lt;/div&gt;
 
 &lt;p&gt;Caso queira saber mais sobre as chamadas disponíveis na nossa API, consulte nossos endpoints em &lt;a href=&#34;https://docs.openbank.stone.com.br/v1.0/reference&#34;&gt;API Reference&lt;/a&gt;.&lt;/p&gt;
-&lt;br&gt;
 &lt;h3 id=&#34;4---construindo-o-seu-app&#34;&gt;4 - Construindo o seu App&lt;/h3&gt;
 &lt;br&gt;
 &lt;p&gt;Com a resposta gerada pela requisição da TED acima, você poderá elaborar uma tela exibindo as informações da transferência realizada. Por exemplo, para construir a tela abaixo:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Inserir Imagem&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/home/bruno/Documentos/stone-api-docs/content/pt/docs/guias/stone-openbank-api/quickstart/Tela-Transferencia.png&#34; alt=&#34;imagem_tela_de_transferencia&#34;&gt;&lt;/p&gt;
 &lt;p&gt;É utilizada a requisição citada 3º passo, tendo como resposta o seguinte JSON:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;10050&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
@@ -295,10 +287,9 @@ content-type x-www-form-urlencoded
         
         &lt;hr&gt;
 &lt;br&gt;
-&lt;p&gt;A API pode ser utilizada através de dois ambientes completamente separados: usuárias criadas em ambiente de Sandbox não existem em Produção, e vice-versa.&lt;/p&gt;
+&lt;p&gt;A API pode ser utilizada através de dois ambientes completamente separados: usuários criados em ambiente de Sandbox não existem em Produção, e vice-versa.&lt;/p&gt;
 &lt;h2 id=&#34;ambiente-de-sandbox&#34;&gt;Ambiente de Sandbox&lt;/h2&gt;
-&lt;p&gt;É destinado à testes e pode ser acessado pelo endpoint
-&lt;a href=&#34;https://sandbox-api.openbank.stone.com.br&#34;&gt;https://sandbox-api.openbank.stone.com.br&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;É destinado à testes e pode ser acessado pelo endpoint &lt;a href=&#34;https://sandbox-api.openbank.stone.com.br&#34;&gt;https://sandbox-api.openbank.stone.com.br&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;ambiente-de-produção&#34;&gt;Ambiente de Produção&lt;/h2&gt;
 &lt;p&gt;É onde ocorrem transações em contas reais e pode ser acessado pelo endpoint &lt;a href=&#34;https://api.openbank.stone.com.br&#34;&gt;https://api.openbank.stone.com.br&lt;/a&gt;.&lt;/p&gt;
 

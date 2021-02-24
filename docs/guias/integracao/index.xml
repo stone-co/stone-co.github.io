@@ -26,25 +26,17 @@
         &lt;hr&gt;
 &lt;h4 id=&#34;tokens-jwt&#34;&gt;&lt;strong&gt;Tokens JWT&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;Tokens JWT são dados sensíveis, assim como senhas ou dados de cartões de crédito. Por isso, é de extrema importância manusear e armazenar esses dados corretamente.&lt;/p&gt;
-&lt;br&gt;
-&lt;hr&gt;
 &lt;h4 id=&#34;não-armazene-tokens-no-local-storage&#34;&gt;&lt;strong&gt;Não armazene tokens no &lt;em&gt;local storage&lt;/em&gt;&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;O armazenamento local de um Browser não é um lugar seguro para se armazenar dados sensíveis. Dados armazenados no local storage podem:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Ser acessados via Javascript;&lt;/li&gt;
 &lt;li&gt;Ser vulneráveis a Cross-Site Scripting.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;br&gt;
-&lt;hr&gt;
 &lt;h4 id=&#34;caso-um-backend-esteja-disponível&#34;&gt;&lt;strong&gt;Caso um backend esteja disponível&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;Se sua Aplicação tem um backend disponível, os tokens devem ser manuseados server-side.&lt;/p&gt;
-&lt;br&gt;
-&lt;hr&gt;
 &lt;h4 id=&#34;caso-um-backend-não-esteja-disponível&#34;&gt;&lt;strong&gt;Caso um backend não esteja disponível&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;Se sua Aplicação é uma Single Page Application, a Aplicação deve requisitar os tokens e armazená-los em memória sem nenhuma persistência. Faça as chamadas de API usando os tokens armazenados em memória.&lt;/p&gt;
 &lt;p&gt;Para outros casos, informações sobre boas práticas com Tokens JWT estão disponíveis &lt;a href=&#34;https://auth0.com/docs/security/store-tokens&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
-&lt;br&gt;
-&lt;hr&gt;
 &lt;h4 id=&#34;idempotência&#34;&gt;&lt;strong&gt;Idempotência&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;Nossos endpoints que envolvem operações financeiras suportam &lt;a href=&#34;https://pt.wikipedia.org/wiki/Idempot%C3%AAncia&#34;&gt;Idempotência&lt;/a&gt;. Existe a possibilidade de ocorrer operações duplicadas, como, por exemplo, com a queda de conexão 3G durante a realização de uma operação. Para evitar que a mesma operação ocorra mais de uma vez no nosso sistema, sempre envie o cabeçalho de Idempotência (x-stone-idempotency-key).&lt;/p&gt;
 
@@ -63,8 +55,6 @@ Se isso ocorrer em um período curto demais pode ocasionar uma resposta &lt;code
 &lt;li&gt;Uma chamada com a &lt;strong&gt;mesma chave de idempotência&lt;/strong&gt; e com o &lt;strong&gt;corpo da requisição diferente do original&lt;/strong&gt; retornará um erro de idempotência &lt;code&gt;HTTP 409&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Uma chamada com a &lt;strong&gt;chave de idempotênca maior que 72 caracteres&lt;/strong&gt; retornará um erro &lt;code&gt;HTTP 431&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;br&gt;
-&lt;hr&gt;
 &lt;h4 id=&#34;simulações-dry-run&#34;&gt;&lt;strong&gt;Simulações (dry-run)&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;Nossos endpoints que envolvem operações financeiras suportam &lt;a href=&#34;https://docs.openbank.stone.com.br/reference#simular-uma-transfer%C3%AAncia-interna&#34;&gt;Simulações (dry-run)&lt;/a&gt;, permitindo que a usuária visualize com antecedência o que vai acontecer nessa operação.&lt;/p&gt;
 &lt;p&gt;Em alguns casos, as Simulações permitem enriquecer os dados de uma operação, como, por exemplo o &lt;a href=&#34;https://docs.openbank.stone.com.br/reference#simular-o-pagamento-de-um-documento&#34;&gt;Pagamento de Boletos&lt;/a&gt;.&lt;/p&gt;
@@ -73,7 +63,7 @@ Se isso ocorrer em um período curto demais pode ocasionar uma resposta &lt;code
     </item>
     
     <item>
-      <title>Docs: Cadastro da aplicação</title>
+      <title>Docs: Cadastro da Aplicação</title>
       <link>https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -129,16 +119,13 @@ Se isso ocorrer em um período curto demais pode ocasionar uma resposta &lt;code
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;Segurança sempre foi um assunto complexo, principalmente por ter uma terminologia específica. Para facilitar ao máximo a integração com a nossa API, procuramos adotar padrões estabelecidos de mercado.&lt;/p&gt;
-&lt;br&gt;
 &lt;h4 id=&#34;autenticação-de-aplicativos-parceiros&#34;&gt;&lt;strong&gt;Autenticação de Aplicativos Parceiros&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;Cada Aplicativo recebe um identificador exclusivo chamado &lt;em&gt;clientID&lt;/em&gt; quando é criado. Esse ID não pode ser modificado e será usado no token de acesso do seu aplicativo quando chamar a API.&lt;/p&gt;
 &lt;p&gt;Outra informação importante é o &lt;em&gt;par de chaves&lt;/em&gt; do seu aplicativo, que deve ser mantida confidencial em todos os momentos. Se alguém obtiver acesso a sua chave privada, essa pessoa poderá acessar recursos protegidos em nome do seu aplicativo. Isso não pode acontecer sob hipótese alguma.&lt;/p&gt;
 &lt;p&gt;A desenvolvedora deve usar essa chave privada para assinar os tokens enviados para a Stone e nos enviar a chave pública para verificarmos a assinatura.&lt;/p&gt;
-&lt;br&gt;
 &lt;h4 id=&#34;autenticação-com-o-auth-e-open-id-connect&#34;&gt;&lt;strong&gt;Autenticação com o Auth e Open ID Connect&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&#34;https://oauth.net/2/&#34;&gt;OAuth 2.0&lt;/a&gt; é um padrão de autorização que permite à usuária conceder acesso limitado a seus recursos na Conta Stone para Aplicativos de Parceiros, sem precisar expor suas credenciais. Ou seja, a cliente não precisa compartilhar seu login e senha com ninguém.&lt;/p&gt;
 &lt;p&gt;Já o &lt;a href=&#34;https://openid.net/connect/&#34;&gt;OpenID Connect&lt;/a&gt; é uma camada de identidade construída em cima do &lt;a href=&#34;https://oauth.net/2/&#34;&gt;OAuth 2.0&lt;/a&gt; e que permite a fácil verificação da identidade da usuária, bem como a capacidade de obter informações básicas de perfil do provedor de identidade (no caso, a Conta Stone).&lt;/p&gt;
-&lt;br&gt;
 &lt;h4 id=&#34;autenticando-a-aplicação-parceira&#34;&gt;&lt;strong&gt;Autenticando a Aplicação Parceira&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;A nossa API só aceita chamadas autenticadas, ou seja, chamadas cujo sujeito da ação conseguimos identificar.&lt;/p&gt;
 &lt;p&gt;Para isso exigimos que nas &lt;a href=&#34;https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods&#34;&gt;requisições HTTP&lt;/a&gt; exista no cabeçalho um campo chamado &lt;code&gt;authorization&lt;/code&gt;, cujo valor será &amp;ldquo;Bearer&amp;rdquo; seguido do token de acesso. Os próximos tópicos explicam como obter esse token de acesso.&lt;/p&gt;
@@ -391,7 +378,6 @@ Qualquer problema encontrado durante esta fase deve ser resolvido antes de pross
 &lt;br&gt;
 &lt;p&gt;Consentimento é o processo em que o usuário, dono da conta, acessa um link gerado pela Aplicação Parceira e através dele permite o acesso a suas informações e a sua conta de pagamento.&lt;/p&gt;
 &lt;p&gt;Toda vez que uma Aplicação faz um pedido de consentimento a um usuário, o mesmo englobará todos os escopos que aquela aplicação tem.  No fluxo serão listados todos os escopos que estão sendo solicitados.&lt;/p&gt;
-&lt;br&gt;
 &lt;h4 id=&#34;fluxo-de-consentimento&#34;&gt;&lt;strong&gt;Fluxo de consentimento&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;Para realizar esse processo, o usuário precisa receber do sistema do parceiro um link que o direcione para uma página da Stone. Nessa página o usuário poderá escolher a quais contas de pagamento ele deseja conceder o acesso. Será necessário que o sistema do parceiro gere esse link, como descrito abaixo. O tempo de expiração do link deve ser de no máximo duas horas.&lt;/p&gt;
 &lt;p&gt;Caso o usuário &lt;strong&gt;não acesse o link&lt;/strong&gt; disponibilizado dentro de seu intervalo de tempo de vida, ele irá expirar. Nesse caso não haverá a concessão do acesso e não será mais possível obtê-la através desse mesmo link, precisando gerar um novo.&lt;/p&gt;
@@ -399,12 +385,10 @@ Qualquer problema encontrado durante esta fase deve ser resolvido antes de pross
 &lt;p&gt;Havendo a &lt;strong&gt;concessão de acesso&lt;/strong&gt;, o usuário será redirecionada para uma página da Aplicação e o parceiro obterá as autorizações necessárias para operar na conta.&lt;/p&gt;
 &lt;p&gt;O sistema do parceiro será informado do ocorrido para cada um desses três casos.&lt;/p&gt;
 &lt;p&gt;Observe que no fluxo atual é preciso que o parceiro direcione seu cliente a abrir uma Conta Stone. Quando o usuário estiver com sua Conta Stone aberta, o parceiro poderá realizar o processo de consentimento para operar em sua conta.&lt;/p&gt;
-&lt;br&gt;
 &lt;h4 id=&#34;gerando-um-link-de-consentimento&#34;&gt;&lt;strong&gt;Gerando um link de consentimento&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;Uma vez cadastrada e autenticada a Aplicação, a primeira funcionalidade a ser desenvolvida é o consentimento.&lt;/p&gt;
 &lt;p&gt;Para dar início ao processo de consentimento, basta que o desenvolvedor gere um link com os parâmetros necessários conforme especificados abaixo. Toda a interação com o usuário será gerida pela nossa plataforma.&lt;/p&gt;
 &lt;p&gt;Após o link ser gerado, ele deverá ser enviado pela Aplicação Parceira para o usuário. Isso deve ser feito dentro da própria Aplicação como, por exemplo, através de um botão. O link de consentimento não deve ser enviado por e-mail para o usuário sob hipótese alguma.&lt;/p&gt;
-&lt;br&gt;
 &lt;h4 id=&#34;o-link-de-consentimento-deve-conter-três-parâmetros&#34;&gt;&lt;strong&gt;O link de consentimento deve conter três parâmetros:&lt;/strong&gt;&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;client_id&lt;/code&gt;: o ClientID recebido pela desenvolvedora pós-cadastro;&lt;/li&gt;
@@ -417,7 +401,6 @@ Qualquer problema encontrado durante esta fase deve ser resolvido antes de pross
 &lt;li&gt;&lt;em&gt;Produção&lt;/em&gt;: &lt;a href=&#34;https://conta.stone.com.br/consentimento?client_id=CLIENT_ID&amp;amp;jwt=JWT&#34;&gt;https://conta.stone.com.br/consentimento?client_id=CLIENT_ID&amp;amp;jwt=JWT&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Substituindo CLIENT_ID e JWT por seus respectivos valores.&lt;/p&gt;
-&lt;br&gt;
 &lt;h4 id=&#34;gerando-o-token&#34;&gt;&lt;strong&gt;Gerando o token&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;Gerar um token JWT de consentimento é parecido com o processo de gerar um token de autenticação. O token deve conter os &lt;strong&gt;claims&lt;/strong&gt;:&lt;/p&gt;
 &lt;br&gt;
@@ -430,6 +413,11 @@ Qualquer problema encontrado durante esta fase deve ser resolvido antes de pross
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Obrigatórios&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;type&lt;/td&gt;
 &lt;td&gt;Será sempre &amp;ldquo;consent&amp;rdquo; neste caso.&lt;/td&gt;
@@ -520,7 +508,7 @@ Qualquer problema encontrado durante esta fase deve ser resolvido antes de pross
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;Chave&lt;/th&gt;
-&lt;th&gt;valor&lt;/th&gt;
+&lt;th&gt;Valor&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -547,17 +535,16 @@ Quando o &lt;code&gt;consent_result&lt;/code&gt; é &lt;code&gt;approved&lt;/cod
 &lt;/div&gt;
 
 &lt;p&gt;Assim, fica fácil para a desenvolvedora prover uma experiência para ambos os casos: basta validar estes campos!&lt;/p&gt;
-&lt;br&gt;
 &lt;h4 id=&#34;fluxo-para-o-usuário&#34;&gt;&lt;strong&gt;Fluxo para o usuário&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;Para uma integração &lt;a href=&#34;https://docs.openbank.stone.com.br/docs/modelos-de-parceria-guides#section-open-banking&#34;&gt;Open Banking&lt;/a&gt; de sucesso é essencial considerar a experiência do usuário, principalmente em fluxos de redirecionamento como para o consentimento. No início desta sessão detalhamos o passo a passo desse procedimento; neste tópico vamos exemplificar algumas das principais telas utilizadas.&lt;/p&gt;
 &lt;p&gt;Ao seguir o link gerado pelo desenvolvedor, o usuário será redirecionado para uma página da Stone. Solicitaremos ao dono o acesso à sua conta, explicitando quais permissões ele está concedendo à aplicação parceira. Podemos observar abaixo um exemplo de tela em que isso ocorre.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Inserir Imagem&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/home/bruno/Documentos/stone-api-docs/content/pt/docs/guias/integracao/consentimento/consentimento.png&#34; alt=&#34;imagem_consentimento&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Caso o usuário opte por conceder o acesso no botão &lt;code&gt;Permitir&lt;/code&gt; e ocorra tudo bem, será exibida uma tela de sucesso, confirmando que a permissão foi concedida. Podemos observar um exemplo dessa tela abaixo.&lt;/p&gt;
 &lt;p&gt;Ao clicar no botão &lt;code&gt;Ok, entendi&lt;/code&gt; ele será redirecionado para uma página da aplicação parceira, cujo endereço foi definido no &lt;a href=&#34;https://docs.openbank.stone.com.br/docs/cadastro-da-aplicacao-guides&#34;&gt;cadastro da aplicação&lt;/a&gt;, em Redirect URI.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Inserir Imagem&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/home/bruno/Documentos/stone-api-docs/content/pt/docs/guias/integracao/consentimento/consentimento-aprovado.png&#34; alt=&#34;imagem_consentimento_aprovado&#34;&gt;&lt;/p&gt;
 &lt;p&gt;É possível que ocorra também um caso em que o usuário já concedeu o acesso à aplicação parceira. Neste caso, o usuário irá visualizar uma tela como o seguinte exemplo.&lt;/p&gt;
 &lt;p&gt;Assim como no caso anterior, ele também será redirecionado para uma página da aplicação parceira ao clicar no botão &lt;code&gt;Ok, entendi&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Inserir Imagem&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/home/bruno/Documentos/stone-api-docs/content/pt/docs/guias/integracao/consentimento/com-consentimento.png&#34; alt=&#34;imagem_com_consentimento&#34;&gt;&lt;/p&gt;
 
       </description>
     </item>
@@ -604,7 +591,6 @@ Quando o &lt;code&gt;consent_result&lt;/code&gt; é &lt;code&gt;approved&lt;/cod
 
 &lt;/div&gt;
 
-&lt;br&gt;
 &lt;h4 id=&#34;os-eventos-que-geram-notificações-são&#34;&gt;&lt;strong&gt;Os eventos que geram notificações são:&lt;/strong&gt;&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -777,7 +763,6 @@ Quando o &lt;code&gt;consent_result&lt;/code&gt; é &lt;code&gt;approved&lt;/cod
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;x-stone-webhook-event-id:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;930bbd6d-0c7a-4fe4-8b50-4b82a20cb847&amp;#34;&lt;/span&gt;
 &lt;span style=&#34;color:#a40000&#34;&gt;x-stone-webhook-event-type:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cash_out_internal_transfer&amp;#34;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A idempotência de webhooks deverá ser validada no campo &amp;lsquo;x-stone-webhook-event-id&amp;rsquo; disponível no header.&lt;/p&gt;
-&lt;br&gt;
 &lt;h4 id=&#34;o-payload-das-notificações-segue-a-seguinte-estrutura&#34;&gt;&lt;strong&gt;O payload das notificações segue a seguinte estrutura:&lt;/strong&gt;&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -883,7 +868,6 @@ Quando o &lt;code&gt;consent_result&lt;/code&gt; é &lt;code&gt;approved&lt;/cod
 &lt;li&gt;Assinatura do conteúdo usando uma das nossas &lt;a href=&#34;https://api.openbank.stone.com.br/api/v1/discovery/keys&#34;&gt;chaves públicas&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Ciframento do resultado usando a chave pública do destinatário.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;br&gt;
 &lt;h5 id=&#34;como-eu-posso-abrir-de-forma-segura-o-conteúdo-de-um-webhook&#34;&gt;&lt;strong&gt;Como eu posso abrir de forma segura o conteúdo de um webhook?&lt;/strong&gt;&lt;/h5&gt;
 &lt;p&gt;Para poder visualizar o conteúdo de um webhook é necessário fazer o caminho inverso:&lt;/p&gt;
 &lt;ol&gt;
@@ -915,13 +899,11 @@ Quando o &lt;code&gt;consent_result&lt;/code&gt; é &lt;code&gt;approved&lt;/cod
 &lt;p&gt;Para não ter que buscar a nossa chave pública a cada validação de assinatura, você pode salvar nossa chave do seu lado (por exemplo, através de um cache), de forma que caso aconteça algum erro na validação você volte a consultar o nosso serviço para buscar a chave pública mais atual. Assim você desonera  sua aplicação sem perder a resiliência a mudanças de chave do nosso lado.&lt;/p&gt;
 &lt;p&gt;Veja &lt;a href=&#34;https://hexdocs.pm/joken_jwks/JokenJwks.DefaultStrategyTemplate.html#content&#34;&gt;aqui&lt;/a&gt; as melhores práticas para fazer essa implementação.&lt;/p&gt;
 &lt;p&gt;O algoritmo que usamos será &lt;em&gt;sempre RS256&lt;/em&gt;. Há uma lista de bibliotecas que tratam de assinatura de token em &lt;a href=&#34;https://jwt.io/&#34;&gt;jwt.io&lt;/a&gt;.&lt;/p&gt;
-&lt;br&gt;
 &lt;h5 id=&#34;segurança&#34;&gt;&lt;strong&gt;Segurança&lt;/strong&gt;&lt;/h5&gt;
 &lt;p&gt;É importante seguir os dois passos aqui: tanto decifrar quanto verificar a assinatura. Isso irá garantir que não apenas geramos algo que não pode ser lido por alguém que &lt;em&gt;não possui&lt;/em&gt; a chave pública quanto que nosso conteúdo foi assinado pela Stone.&lt;/p&gt;
 &lt;p&gt;Também aconselhamos cuidado na configuração do cliente que irá consultar as nossas chaves. Certifique-se que ele não está vulnerável a servidores intermediários propositalmente mal configurados. Um exemplo comum é um servidor configurado para protocolos conhecidamente falhos.&lt;/p&gt;
 &lt;p&gt;Sempre que em dúvida, consulte nossa API com os IDs dos dados no conteúdo do webhook.&lt;/p&gt;
 &lt;p&gt;Mais informações sobre JavaScript Object Signing and Encryption, como JWTs, JWEs, JWSs, &lt;a href=&#34;https://www.ca.com/pt/blog-latam/os-beneficios-de-jwtjwsjwe-no-designs-de-apis.html&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
-&lt;br&gt;
 &lt;h5 id=&#34;webhooks-idempotentes&#34;&gt;&lt;strong&gt;Webhooks idempotentes&lt;/strong&gt;&lt;/h5&gt;
 &lt;p&gt;No geral um evento, quando recepcionado com sucesso, é enviado apenas uma vez pela Stone, mas é possível que em algum cenário extraordinário um webhook acabe sendo enviado mais de uma vez e por isso desenvolvemos uma lógica de idempotência de eventos.&lt;/p&gt;
 &lt;p&gt;Todo webhook gerado pela Stone leva consigo uma chave de idempotência enviada no campo &lt;code&gt;x-stone-webhook-event-id&lt;/code&gt; do header.&lt;/p&gt;
@@ -947,20 +929,15 @@ O reembolso de uma transferência somente é realizado quando ela ocorre para co
 &lt;h4 id=&#34;quando-pode-ocorrer-um-reembolso&#34;&gt;&lt;strong&gt;Quando pode ocorrer um reembolso&lt;/strong&gt;&lt;/h4&gt;
 &lt;h5 id=&#34;saldo-insuficiente&#34;&gt;&lt;strong&gt;Saldo insuficiente&lt;/strong&gt;&lt;/h5&gt;
 &lt;p&gt;Através da nossa API é possível agendar uma transferência. Ocorre refund nesses casos quando, na data agendada para a transferência, a conta origem não possuir saldo suficiente em conta.&lt;/p&gt;
-&lt;br&gt;
 &lt;h5 id=&#34;dados-da-transferência-incorretos&#34;&gt;&lt;strong&gt;Dados da transferência incorretos&lt;/strong&gt;&lt;/h5&gt;
 &lt;p&gt;Ao realizar uma transferência a usuária precisará enviar os dados da conta destino. Caso os dados de agência, conta ou documento do destino estejam incorretos ou inexistentes, a transferência retorna indicando esse erro.&lt;/p&gt;
-&lt;br&gt;
 &lt;h5 id=&#34;tipo-de-transação-ou-finalidade-inválida&#34;&gt;&lt;strong&gt;Tipo de transação ou finalidade inválida&lt;/strong&gt;&lt;/h5&gt;
 &lt;p&gt;Caso a conta destinatária não seja do tipo especificado na transferência ou algum dado do destino é inválido. Exemplo: conta destinatária é corrente e o tipo informado era conta poupança ou envio no nome fantasia do destino enquanto era esperado o nome da razão social.&lt;/p&gt;
-&lt;br&gt;
 &lt;h5 id=&#34;dados-ausentes-ou-inválidos&#34;&gt;&lt;strong&gt;Dados ausentes ou inválidos&lt;/strong&gt;&lt;/h5&gt;
 &lt;p&gt;Quando uma transferência é realizada sem um dado obrigatório para a finalização da mesma, como código verificador, agência não informada ou quando o formato de um dado é inválido.
 Alguns bancos utilizam códigos verificadores com letras no número da conta ao invés de números, nesses casos, a Conta Stone solicita que a conta origem digite ‘0’ no lugar dessa letra, para que a transferência ocorra com sucesso.&lt;/p&gt;
-&lt;br&gt;
 &lt;h5 id=&#34;cpfcnpj-inapto-junto-à-receita-federal&#34;&gt;&lt;strong&gt;CPF/CNPJ inapto junto à Receita Federal&lt;/strong&gt;&lt;/h5&gt;
 &lt;p&gt;Nesse caso, a transferência é retornada para a conta de origem, porém, caso a mesma pessoa tenha acesso a outra conta com outro documento, ela poderá receber a transferência. Exemplo: A pessoa possui o CPF inapto junto à Receita Federal então não poderá receber a transferência em sua conta de pessoa física, porém, se essa mesma pessoa for sócia de uma empresa, nada impede que a transferência seja realizada para conta de pessoa jurídica, a não ser que o CNPJ também esteja inapto.&lt;/p&gt;
-&lt;br&gt;
 &lt;h4 id=&#34;códigos-de-reembolsos&#34;&gt;&lt;strong&gt;Códigos de Reembolsos&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;Ocorre somente em casos de transferências externas.&lt;/p&gt;
 &lt;table&gt;

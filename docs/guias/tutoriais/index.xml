@@ -24,6 +24,7 @@
         
         
         &lt;hr&gt;
+&lt;p&gt;a&lt;/p&gt;
 &lt;br&gt;
 &lt;p&gt;Neste tutorial vamos ver como:&lt;/p&gt;
 &lt;ul&gt;
@@ -40,11 +41,9 @@
 
 &lt;/div&gt;
 
-&lt;br&gt;
 &lt;h4 id=&#34;1-conhecendo-os-dados&#34;&gt;&lt;strong&gt;1. Conhecendo os dados&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;Como resultado do &lt;a href=&#34;https://docs.openbank.stone.com.br/docs/cadastro-da-aplicacao-guides&#34;&gt;cadastro da sua aplicação&lt;/a&gt;, você recebeu um ClientID. Além disso, nos forneceu uma chave pública e manteve em segredo uma chave privada. Agora vamos ver como utilizá-los na prática.&lt;/p&gt;
 &lt;p&gt;Para montar os tokens, tenha em mãos o seu &lt;code&gt;redirect_uri&lt;/code&gt; cadastrado, o seu ClientID e sua chave privada.&lt;/p&gt;
-&lt;br&gt;
 &lt;h4 id=&#34;2-se-preparando-para-gerar-tokens&#34;&gt;&lt;strong&gt;2. Se preparando para gerar tokens&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;Aqui vamos importar as bibliotecas que vamos utilizar e definir algumas constantes.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;jwt&lt;/span&gt;
