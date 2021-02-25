@@ -2846,15 +2846,15 @@
 <br>
 <p><strong>ClientID</strong></p>
 <p>Obtenha o seu <em>Access Token</em>, enviando um e-mail para nosso time de Parcerias através de <a href="mailto:parcerias@openbank.stone.com.br">parcerias@openbank.stone.com.br</a>.
-Somente com o <em>Access Token</em> em mãos você consegue realizar as <a href="https://docs.openbank.stone.com.br/docs/autenticacao-guides">autenticações</a> necessárias para realizar as <a href="https://docs.openbank.stone.com.br/v1.0/reference">chamadas</a> na <strong>Stone Open Bank API</strong>.</p>
-<p>O time de Parcerias do Stone Open Bank irá te enviar um formulário para preenchimento com os dados sobre seu projeto e posteriormente irá gerar um <em>ClientID</em>. Uma vez cadastrado e com o seu <em>ClientID</em> em mãos, você poderá realizar o processo de <a href="https://docs.openbank.stone.com.br/docs/autenticacao-guides">autenticação da aplicação</a>, que permitirá que obtenha-se o <em>Access Token</em>. Este processo de <a href="https://docs.openbank.stone.com.br/docs/autenticacao-guides">autenticação </a> consiste nas seguintes etapas:</p>
+Somente com o <em>Access Token</em> em mãos você consegue realizar as <a href="/docs/guias/integracao/autenticacao">autenticações</a> necessárias para realizar as <a href="https://docs.openbank.stone.com.br/v1.0/reference">chamadas</a> na <strong>Stone Open Bank API</strong>.</p>
+<p>O time de Parcerias do Stone Open Bank irá te enviar um formulário para preenchimento com os dados sobre seu projeto e posteriormente irá gerar um <em>ClientID</em>. Uma vez cadastrado e com o seu <em>ClientID</em> em mãos, você poderá realizar o processo de <a href="/docs/guias/integracao/autenticacao">autenticação da aplicação</a>, que permitirá que obtenha-se o <em>Access Token</em>. Este processo de <a href="/docs/guias/integracao/autenticacao">autenticação </a> consiste nas seguintes etapas:</p>
 <br>
 <p><strong>Geração de um token que contenha:</strong></p>
 <ul>
 <li>client_id: identificador enviado pelo time de suporte OpenBank;</li>
 <li>sub: igual ao client_id;</li>
 <li>realm: &ldquo;stone_bank&rdquo;;</li>
-<li>aud: <a href="https://sandbox-accounts.openbank.stone.com.br/auth/realms/stone_bank;">https://sandbox-accounts.openbank.stone.com.br/auth/realms/stone_bank;</a></li>
+<li>aud: <a href="https://sandbox-accounts.openbank.stone.com.br/auth/realms/stone_bank">https://sandbox-accounts.openbank.stone.com.br/auth/realms/stone_bank</a> ;</li>
 <li>exp: horário da expiração do token em segundos;</li>
 <li>nbf: horário da geração do token em segundos.</li>
 </ul>
@@ -2876,7 +2876,7 @@ content-type x-www-form-urlencoded
 
 <div class="pageinfo pageinfo-primary">
 <p><strong>O fluxo acima é um exemplo de como iniciar a sua integração com a Stone Open Bank API.</strong></p>
-<p>Para detalhes sobre o processo de integração, consultar a página <a href="https://docs.openbank.stone.com.br/docs/autenticacao-guides">Como Integrar com a API</a>.</p>
+<p>Para detalhes sobre o processo de integração, consultar a página <a href="/docs/guias/integracao/autenticacao">Como Integrar com a API</a>.</p>
 
 </div>
 
@@ -2998,7 +2998,7 @@ content-type x-www-form-urlencoded
 <h3 id="4---construindo-o-seu-app">4 - Construindo o seu App</h3>
 <br>
 <p>Com a resposta gerada pela requisição da TED acima, você poderá elaborar uma tela exibindo as informações da transferência realizada. Por exemplo, para construir a tela abaixo:</p>
-<p><img src="/home/bruno/Documentos/stone-api-docs/content/pt/docs/guias/stone-openbank-api/quickstart/Tela-Transferencia.png" alt="imagem_tela_de_transferencia"></p>
+<p><img src="/docs/guias/stone-openbank-api/quickstart/Tela-Transferencia.png" alt="imagem_tela_de_transferencia"></p>
 <p>É utilizada a requisição citada 3º passo, tendo como resposta o seguinte JSON:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
   <span style="color:#204a87;font-weight:bold">&#34;amount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10050</span><span style="color:#000;font-weight:bold">,</span>
@@ -3029,7 +3029,7 @@ content-type x-www-form-urlencoded
 
 <div class="pageinfo pageinfo-primary">
 <p><strong>Entenda mais sobre a Transfers API e a sua requisição de TED</strong></p>
-<p>Detalhes sobre a Transfers API se encontram na página <a href="https://docs.openbank.stone.com.br/reference#transferir-para-outros-bancos">Transferir para Outros Bancos</a>.</p>
+<p>Detalhes sobre a Transfers API se encontram na página <a href="/docs/transferencias/4-transferencias-externas/7-transferir-para-outros-bancos">Transferir para Outros Bancos</a>.</p>
 
 </div>
 

@@ -29,7 +29,7 @@
 &lt;hr&gt;
 &lt;h4 id=&#34;introdução&#34;&gt;&lt;strong&gt;Introdução&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;A Conta Stone SDK é o ponto de entrada para acesso às nossas SDKs de autenticação (Auth SDK), aprovação (Approver SDK) e verificação de &lt;a href=&#34;https://en.wikipedia.org/wiki/Know_your_customer&#34;&gt;KYC&lt;/a&gt; (&lt;em&gt;Know your costumer&lt;/em&gt;) (Pegasus SDK). Segue abaixo um diagrama de como funciona a comunicação entre esses três atores.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://drive.google.com/uc?export=view&amp;amp;id=10taLBHeYD273QLj2JMAZZvAooqRc8pQp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/docs/guias/conta-stone-sdk/conta-stone-sdk/conta-stone-sdk-diagram.png&#34; alt=&#34;imagem_conta_stone_sdk_diagram&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Auth SDK - responsável por executar todo o processo de autenticação seguindo as diretrizes do &lt;a href=&#34;https://oauth.net/2/&#34;&gt;oAuth2&lt;/a&gt;.&lt;/p&gt;

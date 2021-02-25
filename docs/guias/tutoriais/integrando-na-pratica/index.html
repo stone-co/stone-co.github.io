@@ -2828,8 +2828,8 @@
 <br>
 <p>Neste tutorial vamos ver como:</p>
 <ul>
-<li>Gerar o token de <a href="https://docs.openbank.stone.com.br/docs/autenticacao-guides">autenticação</a>;</li>
-<li>Gerar o token e link de <a href="https://docs.openbank.stone.com.br/docs/consentimento-guides">consentimento</a>;</li>
+<li>Gerar o token de <a href="/docs/guias/integracao/autenticacao">autenticação</a>;</li>
+<li>Gerar o token e link de <a href="/docs/guias/integracao/consentimento">consentimento</a>;</li>
 <li>Operar em contas que já concederam acesso à aplicação parceira.</li>
 </ul>
 <p>Utilizaremos a linguagem Python na versão 3.7 para montar o token e a <a href="https://pyjwt.readthedocs.io/en/latest/">biblioteca PyJWT</a> para assiná-lo.</p>
@@ -2842,7 +2842,7 @@
 </div>
 
 <h4 id="1-conhecendo-os-dados"><strong>1. Conhecendo os dados</strong></h4>
-<p>Como resultado do <a href="https://docs.openbank.stone.com.br/docs/cadastro-da-aplicacao-guides">cadastro da sua aplicação</a>, você recebeu um ClientID. Além disso, nos forneceu uma chave pública e manteve em segredo uma chave privada. Agora vamos ver como utilizá-los na prática.</p>
+<p>Como resultado do <a href="/docs/guias/integracao/cadastro-da-aplicacao">cadastro da sua aplicação</a>, você recebeu um ClientID. Além disso, nos forneceu uma chave pública e manteve em segredo uma chave privada. Agora vamos ver como utilizá-los na prática.</p>
 <p>Para montar os tokens, tenha em mãos o seu <code>redirect_uri</code> cadastrado, o seu ClientID e sua chave privada.</p>
 <h4 id="2-se-preparando-para-gerar-tokens"><strong>2. Se preparando para gerar tokens</strong></h4>
 <p>Aqui vamos importar as bibliotecas que vamos utilizar e definir algumas constantes.</p>
@@ -2871,10 +2871,10 @@
 </code></pre></div><p>Se chegou a este mesmo resultado, você tem uma função que pode ser utilizada para assinar qualquer um dos seus tokens.</p>
 <p>A biblioteca escolhida incluiu automaticamente no header as informações de tipo e algorítimo utilizados para gerar o token. Para se certificar da validade do token é possível utilizar o site <a href="https://jwt.io">jwt.io</a>.</p>
 <p>Observe que trabalhamos com vários tokens JWT diferentes e utilizamos claims diferentes de acordo com a finalidade do token.</p>
-<p>Para o token de autenticação, é preciso utilizar os claims descritos em <a href="doc:autenticacao-guides">Autenticação</a>; para o token de consentimento, serão utilizados os claims descritos em <a href="doc:consentimento-guides">Consentimento</a>.</p>
+<p>Para o token de autenticação, é preciso utilizar os claims descritos em <a href="/docs/guias/integracao/autenticacao">Autenticação</a>; para o token de consentimento, serão utilizados os claims descritos em <a href="/docs/guias/integracao/consentimento">Consentimento</a>.</p>
 <br>
 <h4 id="3-montando-o-token-de-autenticação"><strong>3. Montando o token de autenticação</strong></h4>
-<p>Inicialmente, é preciso consultar quais os claims específicos do token de autenticação na <a href="https://docs.openbank.stone.com.br/docs/autenticacao-guides#section-claims">documentação</a>.</p>
+<p>Inicialmente, é preciso consultar quais os claims específicos do token de autenticação na <a href="/docs/guias/integracao/autenticacao">documentação</a>.</p>
 <p>Através da função que construimos é possível gerar e assinar esse token de forma simples.</p>
 <p>Esse token será enviado para a Stone através de uma chamada para nosso servidor de autenticação, e enviaremos como resposta um <code>access_token</code>.</p>
 <p>O <code>access_token</code> também é do tipo JWT, e funciona como uma chave de acesso para todas requisições na API.</p>
@@ -2912,8 +2912,8 @@
 <p>Para utilizar o token de acesso, é preciso apenas adicionar esse token em um cabeçalho <code>authorization</code> com o valor <code>Bearer TOKEN</code>. Com isso, já é possível operar na API como é demonstrado mais a frente.</p>
 <br>
 <h4 id="4-montando-o-link-de-consentimento"><strong>4. Montando o link de consentimento</strong></h4>
-<p>Assim como para o token de autenticação, inicialmente consultamos quais os claims específicos do token de consentimento na <a href="https://docs.openbank.stone.com.br/docs/consentimento-guides#section-gerando-o-token">documentação</a> e, em seguida, utilizamos a função que construimos para gerar e assinar o token.</p>
-<p>Neste caso, vamos um pouco além da geração do token, utilizando uma função para montar o link de consentimento com os três parâmetros especificados na <a href="https://docs.openbank.stone.com.br/docs/consentimento-guides#section-o-link-de-consentimento-deve-conter-tr-s-par-metros-">documentação</a>.</p>
+<p>Assim como para o token de autenticação, inicialmente consultamos quais os claims específicos do token de consentimento na <a href="/docs/guias/integracao/consentimento">documentação</a> e, em seguida, utilizamos a função que construimos para gerar e assinar o token.</p>
+<p>Neste caso, vamos um pouco além da geração do token, utilizando uma função para montar o link de consentimento com os três parâmetros especificados na <a href="/docs/guias/integracao/consentimento">documentação</a>.</p>
 <p>Resumindo o passo a passo para obter o link do consentimento, é preciso:</p>
 <ol>
 <li>Montar os claims para o token;</li>
@@ -2950,7 +2950,7 @@
 <p>Utilizando seu <code>access_token</code> já é possível acessar as funcionalidades da API, de acordo com o que a sua aplicação tem permissão de fazer. Para ter permissão de criar transações em contas de usuários, ou até de visualizar seus dados, é preciso obter consentimento do dono da conta. Isso é possível enviando o link construído no passo anterior para a usuária, para que ela possa dar acesso à conta.</p>
 <h5 id="consultando-as-contas-às-quais-a-aplicação-parceira-tem-acesso"><strong>Consultando as contas às quais a aplicação parceira tem acesso</strong></h5>
 <p>Através da API é possível, por exemplo, consultar a quais contas você tem acesso, tanto no caso de você ser uma aplicação parceira com consentimento para acessar contas, quanto no caso de você ser proprietário de alguma conta.</p>
-<p>Para isso, é preciso apenas consultar o endpoint <a href="https://docs.openbank.stone.com.br/reference#consultar-todas-contas-%C3%A0s-quais-a-usu%C3%A1ria-tem-acesso">Consultar Todas Contas às Quais Se Tem Acesso</a>, utilizando seu <code>access_token</code> no campo do botão <code>Try It</code>.</p>
+<p>Para isso, é preciso apenas consultar o endpoint <a href="/docs/dados-da-conta/consultar-todas-as-contas-as-quais-o-usuario-tem-acesso">Consultar Todas Contas às Quais Se Tem Acesso</a>, utilizando seu <code>access_token</code> no campo do botão <code>Try It</code>.</p>
 <p>Outra forma de acessar esse endpoint é realizando uma chamada para nossa API, enviando seu <code>access_token</code> em um header. Abaixo podemos observar isso em um exemplo de função que poderia ser utilizada para realizar essa consulta.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#a40000">def</span> <span style="color:#a40000">operational_accounts(access_token,</span> <span style="color:#a40000">pagination_params=</span><span style="color:#000;font-weight:bold">{}</span><span style="color:#a40000">):</span>
     <span style="color:#a40000">url</span> <span style="color:#a40000">=</span> <span style="color:#a40000">f</span><span style="color:#4e9a06">&#34;{API_URL}/accounts&#34;</span>
@@ -2969,7 +2969,7 @@
 <p><code>access_token</code> : É o resultado de uma autenticação bem sucedida. Sempre que uma aplicação parceira se autenticar receberá um token de acesso, cuja validade é informada em seus claims;</p>
 </li>
 <li>
-<p><code>pagination_params</code>: A maior parte dos nossos endpoints utilizam uma <a href="https://docs.openbank.stone.com.br/reference#pagina%C3%A7%C3%A3o">paginação padrão</a>. Isso permite realizar requisições HTTP de forma mais prática, além de poupar consumo de rede.</p>
+<p><code>pagination_params</code>: A maior parte dos nossos endpoints utilizam uma <a href="/docs/stone-openbank/paginacao">paginação padrão</a>. Isso permite realizar requisições HTTP de forma mais prática, além de poupar consumo de rede.</p>
 </li>
 </ul>
 <p>E, por fim, obtem-se como resposta uma lista das contas às quais a aplicação tem acesso.</p>
@@ -2977,7 +2977,7 @@
 
 <div class="pageinfo pageinfo-primary">
 <p><strong>Padrões da Nossa API</strong></p>
-<p>Seguimos alguns padrões para alguns tipos de dados em toda a nossa API. <a href="https://docs.openbank.stone.com.br/reference#data-e-hora">Aqui</a> se encontram alguns destes padrões.</p>
+<p>Seguimos alguns padrões para alguns tipos de dados em toda a nossa API. <a href="/docs/stone-openbank/data-e-hora">Aqui</a> se encontram alguns destes padrões.</p>
 
 </div>
 

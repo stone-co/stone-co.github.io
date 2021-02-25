@@ -2841,9 +2841,9 @@
 <p>Após o link ser gerado, ele deverá ser enviado pela Aplicação Parceira para o usuário. Isso deve ser feito dentro da própria Aplicação como, por exemplo, através de um botão. O link de consentimento não deve ser enviado por e-mail para o usuário sob hipótese alguma.</p>
 <h4 id="o-link-de-consentimento-deve-conter-três-parâmetros"><strong>O link de consentimento deve conter três parâmetros:</strong></h4>
 <ol>
-<li><code>client_id</code>: o ClientID recebido pela desenvolvedora pós-cadastro;</li>
+<li><code>client_id</code>: o ClientID recebido pelo desenvolvedor pós-cadastro;</li>
 <li><code>type</code>: no caso, será sempre o valor &ldquo;consent&rdquo;;</li>
-<li><code>jwt</code>: será um token gerado localmente pela desenvolvedora com a mesma chave privada e algoritmo que ela usa para se autenticar. Mais detalhes abaixo.</li>
+<li><code>jwt</code>: será um token gerado localmente pelo desenvolvedor com a mesma chave privada e algoritmo que ele usa para se autenticar. Mais detalhes abaixo.</li>
 </ol>
 <p>Com estes parâmetros, basta gerar um link no seguinte formato (por ambiente):</p>
 <ul>
@@ -2880,12 +2880,12 @@
 </tr>
 <tr>
 <td>redirect_uri</td>
-<td>A URI para redirecionamento após a ação da usuária. Esta URI foi informada previamente no cadastro da Aplicação Parceira. Caso seja enviada uma URI diferente, retornará erro.</td>
+<td>A URI para redirecionamento após a ação do usuário. Esta URI foi informada previamente no cadastro da Aplicação Parceira. Caso seja enviada uma URI diferente, retornará erro.</td>
 <td><em>String</em></td>
 </tr>
 <tr>
 <td>session_metadata</td>
-<td>Um objeto que contenha qualquer chave relevante para o parceiro identificar a sessão da usuária. Este valor estará presente na URI de redirecionamento e não pode ser nulo ou um mapa vazio.</td>
+<td>Um objeto que contenha qualquer chave relevante para o parceiro identificar a sessão do usuário. Este valor estará presente na URI de redirecionamento e não pode ser nulo ou um mapa vazio.</td>
 <td><em>Objeto</em></td>
 </tr>
 <tr>
@@ -2921,7 +2921,7 @@
 </tbody>
 </table>
 <br>
-<p>Observe que é preciso <strong>assinar o token JWT com a chave privada da aplicação e o algoritmo RS256</strong>, assim como é feito para o token de <a href="https://docs.openbank.stone.com.br/docs/autenticacao-guides">autenticação</a>. Dessa forma, neste token também é preciso incluir um header com as informações sobre o algoritmo de criptografia utilizado, entre outros metadados, como um id da chave utilizada. Por exemplo:</p>
+<p>Observe que é preciso <strong>assinar o token JWT com a chave privada da aplicação e o algoritmo RS256</strong>, assim como é feito para o token de <a href="/docs/guias/integracao/autenticacao">autenticação</a>. Dessa forma, neste token também é preciso incluir um header com as informações sobre o algoritmo de criptografia utilizado, entre outros metadados, como um id da chave utilizada. Por exemplo:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
   <span style="color:#204a87;font-weight:bold">&#34;alg&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;RS256&#34;</span><span style="color:#000;font-weight:bold">,</span>
   <span style="color:#204a87;font-weight:bold">&#34;typ&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;JWT&#34;</span>
@@ -2930,7 +2930,7 @@
 
 <div class="pageinfo pageinfo-primary">
 <p><strong>Atenção</strong></p>
-<p>Apesar do ClientID ser o disponibilizado pela Stone ao parceiro no <a href="https://docs.openbank.stone.com.br/docs/cadastro-da-aplicacao-guides">Cadastro da Aplicação</a> e o mesmo utilizado para montar o token de <a href="https://docs.openbank.stone.com.br/docs/autenticacao-guides#section-1-gerando-o-token-jwt">autenticação</a>, observe que o <strong>nome do campo</strong> para esse token é <code>client_id</code>, diferente de <code>clientId</code> utilizado no token de autenticação.</p>
+<p>Apesar do ClientID ser o disponibilizado pela Stone ao parceiro no <a href="/docs/guias/integracao/cadastro-da-aplicacao">Cadastro da Aplicação</a> e o mesmo utilizado para montar o token de <a href="/docs/guias/integracao/autenticacao">autenticação</a>, observe que o <strong>nome do campo</strong> para esse token é <code>client_id</code>, diferente de <code>clientId</code> utilizado no token de autenticação.</p>
 
 </div>
 
@@ -2951,7 +2951,7 @@
 <span style="color:#000;font-weight:bold">}</span>
 </code></pre></div><br>
 <h4 id="redirect-callback"><strong>Redirect callback</strong></h4>
-<p>o usuário irá visualizar as permissões às quais a Aplicação Parceira está pedindo acesso e poderá optar por ignorar ou consentir o acesso.</p>
+<p>O usuário irá visualizar as permissões às quais a Aplicação Parceira está pedindo acesso e poderá optar por ignorar ou consentir o acesso.</p>
 <p>Em ambos os casos, faremos um redirecionamento para a URI cadastrada no token. Acrescentaremos na URI os seguintes campos:</p>
 <br>
 <table>
@@ -2984,17 +2984,18 @@
 Quando o <code>consent_result</code> é <code>approved</code> é enviado também o webhook <code>consent_requested</code> com os dados do consentimento dado.
 </div>
 
-<p>Assim, fica fácil para a desenvolvedora prover uma experiência para ambos os casos: basta validar estes campos!</p>
+<p>Assim, fica fácil para o desenvolvedor prover uma experiência para ambos os casos: basta validar estes campos!</p>
 <h4 id="fluxo-para-o-usuário"><strong>Fluxo para o usuário</strong></h4>
-<p>Para uma integração <a href="https://docs.openbank.stone.com.br/docs/modelos-de-parceria-guides#section-open-banking">Open Banking</a> de sucesso é essencial considerar a experiência do usuário, principalmente em fluxos de redirecionamento como para o consentimento. No início desta sessão detalhamos o passo a passo desse procedimento; neste tópico vamos exemplificar algumas das principais telas utilizadas.</p>
+<p>Para uma integração <a href="/docs/guias/a-conta-stone/modelos-de-parceria">Open Banking</a> de sucesso é essencial considerar a experiência do usuário, principalmente em fluxos de redirecionamento como para o consentimento.
+No início desta sessão detalhamos o passo a passo desse procedimento, neste tópico vamos exemplificar algumas das principais telas utilizadas.</p>
 <p>Ao seguir o link gerado pelo desenvolvedor, o usuário será redirecionado para uma página da Stone. Solicitaremos ao dono o acesso à sua conta, explicitando quais permissões ele está concedendo à aplicação parceira. Podemos observar abaixo um exemplo de tela em que isso ocorre.</p>
-<p><img src="/home/bruno/Documentos/stone-api-docs/content/pt/docs/guias/integracao/consentimento/consentimento.png" alt="imagem_consentimento"></p>
+<p><img src="/docs/guias/integracao/consentimento/consentimento.png" alt="imagem_consentimento"></p>
 <p>Caso o usuário opte por conceder o acesso no botão <code>Permitir</code> e ocorra tudo bem, será exibida uma tela de sucesso, confirmando que a permissão foi concedida. Podemos observar um exemplo dessa tela abaixo.</p>
-<p>Ao clicar no botão <code>Ok, entendi</code> ele será redirecionado para uma página da aplicação parceira, cujo endereço foi definido no <a href="https://docs.openbank.stone.com.br/docs/cadastro-da-aplicacao-guides">cadastro da aplicação</a>, em Redirect URI.</p>
-<p><img src="/home/bruno/Documentos/stone-api-docs/content/pt/docs/guias/integracao/consentimento/consentimento-aprovado.png" alt="imagem_consentimento_aprovado"></p>
+<p>Ao clicar no botão <code>Ok, entendi</code> ele será redirecionado para uma página da aplicação parceira, cujo endereço foi definido no <a href="/docs/guias/integracao/cadastro-da-aplicacao">cadastro da aplicação</a>, em Redirect URI.</p>
+<p><img src="/docs/guias/integracao/consentimento/consentimento-aprovado.png" alt="imagem_consentimento_aprovado"></p>
 <p>É possível que ocorra também um caso em que o usuário já concedeu o acesso à aplicação parceira. Neste caso, o usuário irá visualizar uma tela como o seguinte exemplo.</p>
 <p>Assim como no caso anterior, ele também será redirecionado para uma página da aplicação parceira ao clicar no botão <code>Ok, entendi</code>.</p>
-<p><img src="/home/bruno/Documentos/stone-api-docs/content/pt/docs/guias/integracao/consentimento/com-consentimento.png" alt="imagem_com_consentimento"></p>
+<p><img src="/docs/guias/integracao/consentimento/com-consentimento.png" alt="imagem_com_consentimento"></p>
 
         <div class="section-index">
     

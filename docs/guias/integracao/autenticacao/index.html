@@ -2830,10 +2830,10 @@
 <h4 id="autenticação-de-aplicativos-parceiros"><strong>Autenticação de Aplicativos Parceiros</strong></h4>
 <p>Cada Aplicativo recebe um identificador exclusivo chamado <em>clientID</em> quando é criado. Esse ID não pode ser modificado e será usado no token de acesso do seu aplicativo quando chamar a API.</p>
 <p>Outra informação importante é o <em>par de chaves</em> do seu aplicativo, que deve ser mantida confidencial em todos os momentos. Se alguém obtiver acesso a sua chave privada, essa pessoa poderá acessar recursos protegidos em nome do seu aplicativo. Isso não pode acontecer sob hipótese alguma.</p>
-<p>A desenvolvedora deve usar essa chave privada para assinar os tokens enviados para a Stone e nos enviar a chave pública para verificarmos a assinatura.</p>
+<p>O desenvolvedor deve usar essa chave privada para assinar os tokens enviados para a Stone e nos enviar a chave pública para verificarmos a assinatura.</p>
 <h4 id="autenticação-com-o-auth-e-open-id-connect"><strong>Autenticação com o Auth e Open ID Connect</strong></h4>
-<p><a href="https://oauth.net/2/">OAuth 2.0</a> é um padrão de autorização que permite à usuária conceder acesso limitado a seus recursos na Conta Stone para Aplicativos de Parceiros, sem precisar expor suas credenciais. Ou seja, a cliente não precisa compartilhar seu login e senha com ninguém.</p>
-<p>Já o <a href="https://openid.net/connect/">OpenID Connect</a> é uma camada de identidade construída em cima do <a href="https://oauth.net/2/">OAuth 2.0</a> e que permite a fácil verificação da identidade da usuária, bem como a capacidade de obter informações básicas de perfil do provedor de identidade (no caso, a Conta Stone).</p>
+<p><a href="https://oauth.net/2/">OAuth 2.0</a> é um padrão de autorização que permite ao usuário conceder acesso limitado a seus recursos na Conta Stone para Aplicativos de Parceiros, sem precisar expor suas credenciais. Ou seja, o cliente não precisa compartilhar seu login e senha com ninguém.</p>
+<p>Já o <a href="https://openid.net/connect/">OpenID Connect</a> é uma camada de identidade construída em cima do <a href="https://oauth.net/2/">OAuth 2.0</a> e que permite a fácil verificação da identidade do usuário, bem como a capacidade de obter informações básicas de perfil do provedor de identidade (no caso, a Conta Stone).</p>
 <h4 id="autenticando-a-aplicação-parceira"><strong>Autenticando a Aplicação Parceira</strong></h4>
 <p>A nossa API só aceita chamadas autenticadas, ou seja, chamadas cujo sujeito da ação conseguimos identificar.</p>
 <p>Para isso exigimos que nas <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods">requisições HTTP</a> exista no cabeçalho um campo chamado <code>authorization</code>, cujo valor será &ldquo;Bearer&rdquo; seguido do token de acesso. Os próximos tópicos explicam como obter esse token de acesso.</p>
@@ -2844,8 +2844,8 @@ User-Agent: curl/7.61.1
 Accept: */*
 authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 </code></pre><br>
-<p>Dessa forma, após o cadastro da Aplicação da desenvolvedora, é necessário implementar a autenticação.</p>
-<p>Como foi detalhado acima, nosso fluxo se baseia na especificação <a href="https://oauth.net/2/">OAuth 2.0</a> e <a href="https://openid.net/connect/">OpenID Connect</a>. O fluxo de integração <a href="https://oauth.net/2/">OAuth 2.0</a> que usamos é o de <em>client credentials</em>. Neste fluxo, a desenvolvedora irá precisar:</p>
+<p>Dessa forma, após o cadastro da Aplicação do desenvolvedor, é necessário implementar a autenticação.</p>
+<p>Como foi detalhado acima, nosso fluxo se baseia na especificação <a href="https://oauth.net/2/">OAuth 2.0</a> e <a href="https://openid.net/connect/">OpenID Connect</a>. O fluxo de integração <a href="https://oauth.net/2/">OAuth 2.0</a> que usamos é o de <em>client credentials</em>. Neste fluxo, o desenvolvedor irá precisar:</p>
 <p><strong>1. Gerar um token <a href="https://en.wikipedia.org/wiki/JSON_Web_Token">JWT</a> com as configurações da sua Aplicação, assinando com sua chave privada.</strong></p>
 <p><strong>2. Fazer uma requisição <code>POST</code> para nosso servidor de autenticação, enviando o JWT. Se for um token válido, enviaremos como resposta um token de acesso.</strong></p>
 <p><strong>3. Usar esse <code>access_token</code> para fazer as chamadas autenticadas.</strong></p>
@@ -2866,7 +2866,7 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3O
 <li><strong>signature</strong>: a assinatura do header e payload usando o algoritmo descrito no header e a chave privada.</li>
 </ul>
 <h4 id="claims"><strong>Claims</strong></h4>
-<p>Para conseguir se autenticar com sucesso, a desenvolvedora precisará colocar nos <em>claims</em> os seguintes valores:</p>
+<p>Para conseguir se autenticar com sucesso, o desenvolvedor precisará colocar nos <em>claims</em> os seguintes valores:</p>
 <br>
 <table>
 <thead>
@@ -2890,15 +2890,15 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3O
 </tr>
 <tr>
 <td>realm</td>
-<td>Qual é o &ldquo;reino&rdquo; das nossas usuárias. Será sempre &ldquo;stone_bank&rdquo;.</td>
+<td>Qual é o &ldquo;reino&rdquo; das nossos usuários. Será sempre &ldquo;stone_bank&rdquo;.</td>
 </tr>
 <tr>
 <td>sub</td>
-<td>O sujeito referente ao token. Deve ser o ClientID enviado à desenvolvedora pós-cadastro da Aplicação.</td>
+<td>O sujeito referente ao token. Deve ser o ClientID enviado ao desenvolvedor pós-cadastro da Aplicação.</td>
 </tr>
 <tr>
 <td>clientId</td>
-<td>Mesmo valor de sub, ou seja, o ClientID enviado à desenvolvedora pós-cadastro da Aplicação.</td>
+<td>Mesmo valor de sub, ou seja, o ClientID enviado ao desenvolvedor pós-cadastro da Aplicação.</td>
 </tr>
 <tr>
 <td>jti</td>
@@ -2910,7 +2910,7 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3O
 </tr>
 </tbody>
 </table>
-<p>Usando a <strong>chave privada</strong> e o algoritmo &ldquo;RS256&rdquo;, a desenvolvedora consegue gerar e assinar o Token <a href="https://en.wikipedia.org/wiki/JSON_Web_Token">JWT</a> com qualquer uma das libs listadas <a href="https://jwt.io/">neste site</a>.</p>
+<p>Usando a <strong>chave privada</strong> e o algoritmo &ldquo;RS256&rdquo;, o desenvolvedor consegue gerar e assinar o Token <a href="https://en.wikipedia.org/wiki/JSON_Web_Token">JWT</a> com qualquer uma das libs listadas <a href="https://jwt.io/">neste site</a>.</p>
 <p>Nós temos guardada de forma segura a <strong>chave pública</strong> que usaremos para validar este token.</p>
 <p>Esse é um processo de <strong>criptografia assimétrica</strong>, no qual usaremos o par de chaves pública e privada gerado pela desenvolvedora no momento do cadastro da Aplicação.</p>
 <h4 id="rs256"><strong>RS256</strong></h4>
@@ -2939,7 +2939,7 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3O
 <tbody>
 <tr>
 <td>client_id</td>
-<td>É o valor enviado para a desenvolvedora pós-cadastro da Aplicação.</td>
+<td>É o valor enviado para o desenvolvedor pós-cadastro da Aplicação.</td>
 </tr>
 <tr>
 <td>grant_type</td>
@@ -2947,7 +2947,7 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3O
 </tr>
 <tr>
 <td>client_assertion</td>
-<td>Aqui deve ser o token que a desenvolvedora gerou.</td>
+<td>Aqui deve ser o token que o desenvolvedor gerou.</td>
 </tr>
 <tr>
 <td>client_assertion_type</td>
@@ -2975,12 +2975,12 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3O
 </code></pre></div><br>
 <h4 id="3-usando-o-access_token-da-resposta"><strong>3. Usando o access_token da resposta</strong></h4>
 <p>Se tudo deu certo no passo anterior, a resposta do servidor será um JSON com uma chave <code>access_token</code>, onde terá o valor de um token de sessão.</p>
-<p>Como falamos no início dos tópicos anteriores, para usar este token basta colocá-lo no header <code>Authorization</code> com o valor <code>Bearer ACCESS_TOKEN</code>. Aqui, a desenvolvedora deve substituir &ldquo;ACCESS_TOKEN&rdquo; pelo valor recebido.</p>
+<p>Como falamos no início dos tópicos anteriores, para usar este token basta colocá-lo no header <code>Authorization</code> com o valor <code>Bearer ACCESS_TOKEN</code>. Aqui, o desenvolvedor deve substituir &ldquo;ACCESS_TOKEN&rdquo; pelo valor recebido.</p>
 
 
 <div class="pageinfo pageinfo-primary">
 <p><strong>Autenticação nos exemplos</strong></p>
-<p>Cada exemplo de endpoint <a href="https://docs.openbank.stone.com.br/v1.0/reference">desta documentação</a> tem um campo especial para o ACCESS_TOKEN.</p>
+<p>Cada exemplo de endpoint desta documentação tem um campo especial para o ACCESS_TOKEN.</p>
 
 </div>
 
