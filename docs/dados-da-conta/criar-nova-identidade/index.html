@@ -21,15 +21,15 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Criar nova identidade | Stone OpenBank</title><meta property="og:title" content="Criar nova identidade" />
+<title>Criar Nova Identidade | Stone OpenBank</title><meta property="og:title" content="Criar Nova Identidade" />
 <meta property="og:description" content="Escreva o Banco do futuro. Uma linha de código por vez." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://stone-co.github.io/docs/dados-da-conta/criar-nova-identidade/" />
-<meta property="og:site_name" content="Stone OpenBank" />
-<meta itemprop="name" content="Criar nova identidade">
+<meta property="og:updated_time" content="2020-09-21T18:00:00-03:00" /><meta property="og:site_name" content="Stone OpenBank" />
+<meta itemprop="name" content="Criar Nova Identidade">
 <meta itemprop="description" content="Escreva o Banco do futuro. Uma linha de código por vez.">
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Criar nova identidade"/>
+<meta name="twitter:title" content="Criar Nova Identidade"/>
 <meta name="twitter:description" content="Escreva o Banco do futuro. Uma linha de código por vez."/>
 
 
@@ -343,29 +343,6 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/integracao/boas-praticas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Boas Práticas</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsguiasintegracaoboas-praticas">
-      
-      
-      
-    </li>
-  </ul>
-</ul>
-
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
     <a  href="/docs/guias/integracao/cadastro-da-aplicacao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cadastro da Aplicação</a>
   </li>
   <ul>
@@ -394,6 +371,29 @@
   </ul>
 </ul>
 
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/guias/integracao/boas-praticas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Boas Práticas</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsguiasintegracaoboas-praticas">
+      
       
       
     </li>
@@ -855,7 +855,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/dados-da-conta/criar-nova-identidade/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Criar nova identidade</a>
+    <a  href="/docs/dados-da-conta/criar-nova-identidade/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Criar Nova Identidade</a>
   </li>
   <ul>
     <li class="collapse show" id="docsdados-da-contacriar-nova-identidade">
@@ -2802,7 +2802,7 @@
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="https://stone-co.github.io/docs/dados-da-conta/criar-nova-identidade/">Criar nova identidade</a>
+	<a href="https://stone-co.github.io/docs/dados-da-conta/criar-nova-identidade/">Criar Nova Identidade</a>
 </li>
 
 	</ol>
@@ -2810,14 +2810,14 @@
 
             
 <div class="td-content">
-	<h1>Criar nova identidade</h1>
+	<h1>Criar Nova Identidade</h1>
         
 	
-	<p>Cria um novo usuário e sua organização, caso exista.</p>
+	<p>Cria um novo usuário e sua organização, caso não exista.</p>
 <hr>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">POST https://sandbox-api.openbank.stone.com.br/api/v1/users/signup
 </span></code></pre></div><hr>
-<h5 id="body-params"><strong>BODY PARAMS</strong></h5>
+<p><strong>BODY PARAMS</strong></p>
 <hr>
 <p><strong>jwe</strong>  <code>string</code></p>
 <hr>
@@ -2829,23 +2829,22 @@
 
 </div>
 
-<br>
 <p>O conteúdo a ser criptografado é um JSON com a seguinte estrutura:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
-	<span style="color:#204a87;font-weight:bold">&#34;user&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-		<span style="color:#204a87;font-weight:bold">&#34;document&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;00000000000&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;document_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;cpf&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;full_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;string&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;email&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;string&#34;</span>
-	<span style="color:#000;font-weight:bold">},</span>
+    <span style="color:#204a87;font-weight:bold">&#34;user&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#204a87;font-weight:bold">&#34;document&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;00000000000&#34;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#204a87;font-weight:bold">&#34;document_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;cpf&#34;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#204a87;font-weight:bold">&#34;full_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;string&#34;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#204a87;font-weight:bold">&#34;email&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;string&#34;</span>
+    <span style="color:#000;font-weight:bold">},</span>
 
-	<span style="color:#204a87;font-weight:bold">&#34;organization&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-		<span style="color:#204a87;font-weight:bold">&#34;document&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;00000000000000&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;document_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;cnpj&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;full_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;string&#34;</span><span style="color:#000;font-weight:bold">,</span>
-		<span style="color:#204a87;font-weight:bold">&#34;email&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;string&#34;</span>
+    <span style="color:#204a87;font-weight:bold">&#34;organization&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+        <span style="color:#204a87;font-weight:bold">&#34;document&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;00000000000000&#34;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#204a87;font-weight:bold">&#34;document_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;cnpj&#34;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#204a87;font-weight:bold">&#34;full_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;string&#34;</span><span style="color:#000;font-weight:bold">,</span>
+        <span style="color:#204a87;font-weight:bold">&#34;email&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;string&#34;</span>
 
-	<span style="color:#000;font-weight:bold">}</span>
+    <span style="color:#000;font-weight:bold">}</span>
 <span style="color:#000;font-weight:bold">}</span>
 </code></pre></div><p>Para gerar um token JWT criptografado (usando JWE) temos 3 passos:</p>
 <ol>
@@ -2854,14 +2853,13 @@
 <li>Usar uma biblioteca passando o payload, a chave pública e o algoritmo utilizado, no caso, RSA-OAEP-256.</li>
 </ol>
 <hr>
-<h4 id="response"><strong>Response</strong></h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#0000cf;font-weight:bold">201</span> <span style="color:#a40000">Created</span>
-<span style="color:#a40000">content-type:</span> <span style="color:#a40000">application/json</span>
-</code></pre></div><p>Body</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#a40000">“user</span><span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">9359</span><span style="color:#a40000">ea</span><span style="color:#0000cf;font-weight:bold">04-473</span><span style="color:#a40000">b</span><span style="color:#0000cf;font-weight:bold">-4592</span><span style="color:#a40000">-bbcc</span><span style="color:#0000cf;font-weight:bold">-7</span><span style="color:#a40000">ec</span><span style="color:#0000cf;font-weight:bold">8461039</span><span style="color:#a40000">ee”</span>
+<h4 id="response">Response</h4>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">201 Created
+</span><span style="color:#a40000">content-type: application/json
+</span></code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;user:9359ea04-473b-4592-bbcc-7ec8461039ee&#34;</span>
 <span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><pre><code></code></pre>
+</code></pre></div>
         <div class="section-index">
     
     
@@ -3106,7 +3104,7 @@
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 01.01.0001
+	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 21.09.2020
 </div>
 </div>
 

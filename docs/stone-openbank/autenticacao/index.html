@@ -25,7 +25,7 @@
 <meta property="og:description" content="Escreva o Banco do futuro. Uma linha de código por vez." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://stone-co.github.io/docs/stone-openbank/autenticacao/" />
-<meta property="og:site_name" content="Stone OpenBank" />
+<meta property="og:updated_time" content="2020-09-21T18:00:00-03:00" /><meta property="og:site_name" content="Stone OpenBank" />
 <meta itemprop="name" content="Autenticação">
 <meta itemprop="description" content="Escreva o Banco do futuro. Uma linha de código por vez.">
 <meta name="twitter:card" content="summary"/>
@@ -343,29 +343,6 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/integracao/boas-praticas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Boas Práticas</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsguiasintegracaoboas-praticas">
-      
-      
-      
-    </li>
-  </ul>
-</ul>
-
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
     <a  href="/docs/guias/integracao/cadastro-da-aplicacao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cadastro da Aplicação</a>
   </li>
   <ul>
@@ -394,6 +371,29 @@
   </ul>
 </ul>
 
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/guias/integracao/boas-praticas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Boas Práticas</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsguiasintegracaoboas-praticas">
+      
       
       
     </li>
@@ -855,7 +855,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/dados-da-conta/criar-nova-identidade/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar nova identidade</a>
+    <a  href="/docs/dados-da-conta/criar-nova-identidade/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar Nova Identidade</a>
   </li>
   <ul>
     <li class="collapse " id="docsdados-da-contacriar-nova-identidade">
@@ -2826,12 +2826,12 @@ A seguir, juntamos alguns desses padrões para simplificar a vida da desenvolved
 <p>Caso tenha em mãos seu token de acesso, já é possível realizar chamadas autenticadas.</p>
 <p>Para isso, exigimos que nas <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods">requisições HTTP</a> exista no cabeçalho um campo chamado <code>authorization</code>, cujo valor será &ldquo;Bearer&rdquo; seguido do token de acesso.</p>
 <p>Exemplo de cabeçalho de uma chamada autenticada:</p>
-<h5 id="header"><strong>Header</strong></h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">GET /api/v1/accounts HTTP/1.1
-Host: sandbox-api.openbank.stone.com.br
-User-Agent: Nome da aplicação
-Accept: */*
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+<h4 id="header">Header</h4>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#000">GET</span> <span style="color:#000">/api/v1/accounts</span> <span style="color:#204a87;font-weight:bold">HTTP</span><span style="color:#ce5c00;font-weight:bold">/</span><span style="color:#0000cf;font-weight:bold">1.1</span>
+<span style="color:#000">Host</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">sandbox-api.openbank.stone.com.br</span>
+<span style="color:#000">User-Agent</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">Nome da aplicação</span>
+<span style="color:#000">Accept</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">*/*</span>
+<span style="color:#000">authorization</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#000">Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c</span>
 </code></pre></div>
         <div class="section-index">
     
@@ -3077,7 +3077,7 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3O
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 01.01.0001
+	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 21.09.2020
 </div>
 </div>
 

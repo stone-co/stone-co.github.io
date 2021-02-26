@@ -25,7 +25,7 @@
 <meta property="og:description" content="Escreva o Banco do futuro. Uma linha de código por vez." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://stone-co.github.io/docs/dados-da-conta/consultar-todas-as-contas-as-quais-o-usuario-tem-acesso/" />
-<meta property="og:site_name" content="Stone OpenBank" />
+<meta property="og:updated_time" content="2020-04-30T00:51:36+00:00" /><meta property="og:site_name" content="Stone OpenBank" />
 <meta itemprop="name" content="Consultar Todas Contas às Quais Se Tem Acesso">
 <meta itemprop="description" content="Escreva o Banco do futuro. Uma linha de código por vez.">
 <meta name="twitter:card" content="summary"/>
@@ -343,29 +343,6 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/integracao/boas-praticas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Boas Práticas</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsguiasintegracaoboas-praticas">
-      
-      
-      
-    </li>
-  </ul>
-</ul>
-
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
     <a  href="/docs/guias/integracao/cadastro-da-aplicacao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cadastro da Aplicação</a>
   </li>
   <ul>
@@ -394,6 +371,29 @@
   </ul>
 </ul>
 
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/guias/integracao/boas-praticas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Boas Práticas</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsguiasintegracaoboas-praticas">
+      
       
       
     </li>
@@ -855,7 +855,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/dados-da-conta/criar-nova-identidade/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar nova identidade</a>
+    <a  href="/docs/dados-da-conta/criar-nova-identidade/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar Nova Identidade</a>
   </li>
   <ul>
     <li class="collapse " id="docsdados-da-contacriar-nova-identidade">
@@ -2816,9 +2816,9 @@
 	<hr>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">GET https://sandbox-api.openbank.stone.com.br/api/accounts
 </span></code></pre></div><hr>
-<h5 id="query-params"><strong>QUERY PARAMS</strong></h5>
+<p><strong>QUERY PARAMS</strong></p>
 <hr>
-<p><strong>paginate</strong>*  <code>boolean</code></p>
+<p><strong>paginate</strong>  <code>boolean</code></p>
 
 
 <div class="pageinfo pageinfo-primary">
@@ -2828,11 +2828,10 @@
 </div>
 
 <hr>
-<h5 id="response"><strong>Response</strong></h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#0000cf;font-weight:bold">200</span> <span style="color:#a40000">OK</span>
-<span style="color:#a40000">content-type:</span> <span style="color:#a40000">application/json</span>
-</code></pre></div><p>Body</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
+<h5 id="response">Response</h5>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">200 OK
+</span><span style="color:#a40000">content-type: application/json
+</span></code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
     <span style="color:#204a87;font-weight:bold">&#34;cursor&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
         <span style="color:#204a87;font-weight:bold">&#34;after&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
         <span style="color:#204a87;font-weight:bold">&#34;before&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
@@ -2846,7 +2845,7 @@
             <span style="color:#204a87;font-weight:bold">&#34;owner_document&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;96156305270&#34;</span><span style="color:#000;font-weight:bold">,</span>
             <span style="color:#204a87;font-weight:bold">&#34;owner_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;user:23f7eb28-5ab3-4606-8b59-55e9d89f02bd&#34;</span><span style="color:#000;font-weight:bold">,</span>
             <span style="color:#204a87;font-weight:bold">&#34;owner_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Nome da Usuária&#34;</span><span style="color:#000;font-weight:bold">,</span>
-          	<span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2019-07-31T19:13:56Z&#34;</span>
+            <span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2019-07-31T19:13:56Z&#34;</span>
         <span style="color:#000;font-weight:bold">}</span>
     <span style="color:#000;font-weight:bold">]</span>
 <span style="color:#000;font-weight:bold">}</span>
@@ -3095,7 +3094,7 @@
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 01.01.0001
+	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 30.04.2020
 </div>
 </div>
 

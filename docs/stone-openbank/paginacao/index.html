@@ -343,29 +343,6 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/integracao/boas-praticas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Boas Práticas</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsguiasintegracaoboas-praticas">
-      
-      
-      
-    </li>
-  </ul>
-</ul>
-
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
     <a  href="/docs/guias/integracao/cadastro-da-aplicacao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cadastro da Aplicação</a>
   </li>
   <ul>
@@ -394,6 +371,29 @@
   </ul>
 </ul>
 
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/guias/integracao/boas-praticas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Boas Práticas</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsguiasintegracaoboas-praticas">
+      
       
       
     </li>
@@ -855,7 +855,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/dados-da-conta/criar-nova-identidade/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar nova identidade</a>
+    <a  href="/docs/dados-da-conta/criar-nova-identidade/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar Nova Identidade</a>
   </li>
   <ul>
     <li class="collapse " id="docsdados-da-contacriar-nova-identidade">
@@ -2816,22 +2816,22 @@
 	<p>Nossas APIs usam um padrão de paginação por cursor. O retorno possui o seguinte formato:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
  <span style="color:#a40000">cursor:</span> <span style="color:#a40000">{</span>
-	<span style="color:#a40000">after:</span> <span style="color:#204a87;font-weight:bold">&#34;string | null&#34;</span><span style="color:#000;font-weight:bold">,</span>
-	<span style="color:#a40000">before:</span> <span style="color:#204a87;font-weight:bold">&#34;string | null&#34;</span><span style="color:#000;font-weight:bold">,</span>
-	<span style="color:#a40000">limit:</span> <span style="color:#204a87;font-weight:bold">&#34;number&#34;</span>
+    <span style="color:#a40000">after:</span> <span style="color:#204a87;font-weight:bold">&#34;string | null&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#a40000">before:</span> <span style="color:#204a87;font-weight:bold">&#34;string | null&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#a40000">limit:</span> <span style="color:#204a87;font-weight:bold">&#34;number&#34;</span>
  <span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">,</span>
- <span style="color:#a40000">data:</span> <span style="color:#4e9a06">&#34;Array&amp;lt;Data&amp;gt&#34;</span><span style="color:#a40000">,</span>
+ <span style="color:#a40000">data:</span> <span style="color:#a40000">array</span><span style="color:#000;font-weight:bold">[</span><span style="color:#a40000">object</span><span style="color:#000;font-weight:bold">]</span><span style="color:#a40000">,</span>
 <span style="color:#a40000">}</span>
-</code></pre></div><p>Como funciona: deve-se informar o limite de items para a paginação, passando o parâmetro ?limit=10. Na resposta dessa query, será retornado as hashs referente ao cursor no momento da resposta, ex.:</p>
+</code></pre></div><p>Como funciona: deve-se informar o limite de items para a paginação, passando o parâmetro <strong>?limit=10</strong>. Na resposta dessa query, será retornado as hashs referente ao cursor no momento da resposta, ex.:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
  <span style="color:#a40000">cursor:</span> <span style="color:#a40000">{</span>
  <span style="color:#a40000">after:</span> <span style="color:#204a87;font-weight:bold">&#34;ASsa987fqw&#34;</span><span style="color:#000;font-weight:bold">,</span>
  <span style="color:#a40000">before:</span> <span style="color:#204a87;font-weight:bold">&#34;null&#34;</span><span style="color:#000;font-weight:bold">,</span>
  <span style="color:#a40000">limit:</span> <span style="color:#204a87;font-weight:bold">&#34;10&#34;</span>
  <span style="color:#000;font-weight:bold">}</span><span style="color:#a40000">,</span>
- <span style="color:#a40000">data:</span> <span style="color:#4e9a06">&#34;Array&amp;lt;Data&amp;gt&#34;</span><span style="color:#a40000">;</span>
+ <span style="color:#a40000">data:</span> <span style="color:#000;font-weight:bold">[]</span><span style="color:#a40000">;</span>
 <span style="color:#a40000">}</span>
-</code></pre></div><p>Assim, caso queira consultar o próximo cursor, acrescentar o parâmetro after na chamada: ?limit=10&amp;after=ASsa987fqw, será retornado a próxima paginação.</p>
+</code></pre></div><p>Assim, caso queira consultar o próximo cursor, acrescentar o parâmetro after na chamada: <strong>?limit=10&amp;after=ASsa987fqw</strong>, será retornado a próxima paginação.</p>
 
         <div class="section-index">
     

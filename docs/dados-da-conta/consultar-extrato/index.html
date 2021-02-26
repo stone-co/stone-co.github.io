@@ -25,7 +25,7 @@
 <meta property="og:description" content="Escreva o Banco do futuro. Uma linha de código por vez." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://stone-co.github.io/docs/dados-da-conta/consultar-extrato/" />
-<meta property="og:site_name" content="Stone OpenBank" />
+<meta property="og:updated_time" content="2020-04-20T20:28:41+00:00" /><meta property="og:site_name" content="Stone OpenBank" />
 <meta itemprop="name" content="Consultar Extrato">
 <meta itemprop="description" content="Escreva o Banco do futuro. Uma linha de código por vez.">
 <meta name="twitter:card" content="summary"/>
@@ -343,29 +343,6 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/integracao/boas-praticas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Boas Práticas</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsguiasintegracaoboas-praticas">
-      
-      
-      
-    </li>
-  </ul>
-</ul>
-
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
     <a  href="/docs/guias/integracao/cadastro-da-aplicacao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cadastro da Aplicação</a>
   </li>
   <ul>
@@ -394,6 +371,29 @@
   </ul>
 </ul>
 
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/guias/integracao/boas-praticas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Boas Práticas</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsguiasintegracaoboas-praticas">
+      
       
       
     </li>
@@ -855,7 +855,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/dados-da-conta/criar-nova-identidade/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar nova identidade</a>
+    <a  href="/docs/dados-da-conta/criar-nova-identidade/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar Nova Identidade</a>
   </li>
   <ul>
     <li class="collapse " id="docsdados-da-contacriar-nova-identidade">
@@ -2816,11 +2816,11 @@
 	<hr>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/statement
 </span></code></pre></div><hr>
-<h5 id="path-params"><strong>PATH PARAMS</strong></h5>
+<p><strong>PATH PARAMS</strong></p>
 <hr>
-<p><strong>account_id</strong>*  <code>string</code></p>
+<p><strong>account_id</strong>  <code>string</code></p>
 <p>Identificador da Conta.</p>
-<h5 id="query-params"><strong>QUERY PARAMS</strong></h5>
+<p><strong>QUERY PARAMS</strong></p>
 <hr>
 <p><strong>limit</strong>  <code>int32</code></p>
 <hr>
@@ -2845,7 +2845,7 @@
 
 <div class="pageinfo pageinfo-primary">
 <p><strong>Valor da Operação</strong></p>
-<p>Também repare que, quando se faz uma transferência de R$100,00, por exemplo, o campo <em>operation_amount</em> terá valor de 10000 centavos. Já o campo <em>amount</em> será a soma do valor da operação com a taxa cobrada (<em>fee_amount</em>).</p>
+<p>Também repare que, quando se faz uma transferência de R$100,00, por exemplo, o campo <code>_operation_amount_</code> terá valor de 10000 centavos. Já o campo <em>amount</em> será a soma do valor da operação com a taxa cobrada (<em>fee_amount</em>).</p>
 
 </div>
 
@@ -2854,17 +2854,15 @@
 
 <div class="pageinfo pageinfo-primary">
 <p><strong>Tipos diferentes de extratos</strong></p>
-<p>O extrato é dividido por tipos de movimentação. É possível consultar qual foi a movimentação pelo <code>type</code> da resposta. No exemplo acima, podemos notar que tivemos duas movimentações: uma transferência interna (<code>type:internal</code>) e uma transferência externa (<code>type:external</code>), ambas com campos de resposta diferentes. Veja neste <a href="https://docs.openbank.stone.com.br/reference#objetos-do-extrato">link</a> para mais informações sobre o JSON Schema de cada tipo de operação.</p>
+<p>O extrato é dividido por tipos de movimentação. É possível consultar qual foi a movimentação pelo <code>type</code> da resposta. No exemplo acima, podemos notar que tivemos duas movimentações: uma transferência interna (<code>type:internal</code>) e uma transferência externa (<code>type:external</code>), ambas com campos de resposta diferentes. Veja neste <a href="/docs/dados-da-conta/objetos-do-extrato/">link</a> para mais informações sobre o JSON Schema de cada tipo de operação.</p>
 
 </div>
 
 <hr>
-<h5 id="response"><strong>Response</strong></h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#0000cf;font-weight:bold">201</span> <span style="color:#a40000">Created</span>
-<span style="color:#a40000">content-type:</span> <span style="color:#a40000">application/json</span>
-</code></pre></div><p>Body</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">
-<span style="color:#000;font-weight:bold">{</span>
+<h5 id="response">Response</h5>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">201 Created
+</span><span style="color:#a40000">content-type: application/json
+</span></code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
     <span style="color:#204a87;font-weight:bold">&#34;cursor&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
         <span style="color:#204a87;font-weight:bold">&#34;after&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
         <span style="color:#204a87;font-weight:bold">&#34;before&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
@@ -2924,9 +2922,8 @@
         <span style="color:#000;font-weight:bold">}</span>
     <span style="color:#000;font-weight:bold">]</span>
 <span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><br>
-<p>Note que, na resposta acima, foram feitas duas transferências, uma interna e uma externa, ambas com as suas particularidades de retorno.</p>
-<p>Em cada extrato há duas informações: {balance before} e {balance after}. O <em>balance_before</em> registra o saldo do usuário antes da operação, e o <em>balance_after</em> registra o saldo após a operação dado o <em>balance_before</em> menos o valor da operação.</p>
+</code></pre></div><p>Note que, na resposta acima, foram feitas duas transferências, uma interna e uma externa, ambas com as suas particularidades de retorno.</p>
+<p>Em cada extrato há duas informações: {balance before} e {balance after}. O <code>_balance_before_</code> registra o saldo do usuário antes da operação, e o <code>_balance_after_</code> registra o saldo após a operação dado o <code>_balance_before_</code> menos o valor da operação.</p>
 
         <div class="section-index">
     
@@ -3172,7 +3169,7 @@
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 01.01.0001
+	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 20.04.2020
 </div>
 </div>
 

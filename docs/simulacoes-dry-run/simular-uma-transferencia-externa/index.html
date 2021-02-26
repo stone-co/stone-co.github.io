@@ -25,7 +25,7 @@
 <meta property="og:description" content="Escreva o Banco do futuro. Uma linha de código por vez." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://stone-co.github.io/docs/simulacoes-dry-run/simular-uma-transferencia-externa/" />
-<meta property="og:site_name" content="Stone OpenBank" />
+<meta property="og:updated_time" content="2019-12-02T22:56:58+00:00" /><meta property="og:site_name" content="Stone OpenBank" />
 <meta itemprop="name" content="Simular uma Transferência Externa">
 <meta itemprop="description" content="Escreva o Banco do futuro. Uma linha de código por vez.">
 <meta name="twitter:card" content="summary"/>
@@ -343,29 +343,6 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/integracao/boas-praticas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Boas Práticas</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsguiasintegracaoboas-praticas">
-      
-      
-      
-    </li>
-  </ul>
-</ul>
-
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
     <a  href="/docs/guias/integracao/cadastro-da-aplicacao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cadastro da Aplicação</a>
   </li>
   <ul>
@@ -394,6 +371,29 @@
   </ul>
 </ul>
 
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/guias/integracao/boas-praticas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Boas Práticas</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsguiasintegracaoboas-praticas">
+      
       
       
     </li>
@@ -855,7 +855,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/dados-da-conta/criar-nova-identidade/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar nova identidade</a>
+    <a  href="/docs/dados-da-conta/criar-nova-identidade/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar Nova Identidade</a>
   </li>
   <ul>
     <li class="collapse " id="docsdados-da-contacriar-nova-identidade">
@@ -2817,69 +2817,62 @@
 </span></code></pre></div><hr>
 <p><strong>BODY PARAMS</strong></p>
 <hr>
-<p><strong>amount</strong>*  <code>int32</code></p>
+<p><strong>amount</strong>  <code>int32</code></p>
 <p>Valor da transferência em centavos de Real, ou seja, um real é igual a 100.</p>
-<br>
 <hr>
-<p><strong>account_id</strong>*  <code>string</code></p>
+<p><strong>account_id</strong>  <code>string</code></p>
 <p>Identificador da conta.</p>
-<br>
 <hr>
-<p><strong>target</strong>*  <code>object</code></p>
+<p><strong>target</strong>  <code>object</code></p>
 <ul>
 <li>
-<p><strong>account</strong>*  <code>object</code></p>
+<p><strong>account</strong>  <code>object</code></p>
 <ul>
 <li>
-<p><strong>account_code</strong>* <code>string</code></p>
-<p>Número da conta. Padrão: <code>^\d+$</code></p>
+<p><strong>account_code</strong> <code>string</code>
+Número da conta. Padrão: <code>^\d+$</code></p>
 </li>
 <li>
-<p><strong>branch_code</strong>* <code>string</code></p>
-<p>Número da agência. Padrão: <code>^\d{1,4}$</code></p>
+<p><strong>branch_code</strong> <code>string</code>
+Número da agência. Padrão: <code>^\d{1,4}$</code></p>
 </li>
 <li>
-<p><strong>institution_code</strong> <code>string</code></p>
-<p>Código ISPB da instituição ou número do banco. Padrão: <code>^(\d{8}|\d{3})$</code></p>
+<p><strong>institution_code</strong> <code>string</code>
+Código ISPB da instituição ou número do banco. Padrão: <code>^(\d{8}|\d{3})$</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>entity</strong>  <code>object</code></p>
+<ul>
+<li>
+<p><strong>name</strong> <code>string</code>
+Nome da dona da conta alvo.</p>
+</li>
+<li>
+<p><strong>document</strong> <code>string</code>
+Número do documento sem pontos da dona da conta alvo.</p>
+</li>
+<li>
+<p><strong>document_type</strong> <code>string</code>
+Tipo do documento da dona da conta alvo. Pode ser <code>cpf</code> ou <code>cnpj</code>.</p>
 </li>
 </ul>
 </li>
 </ul>
-<br>
-<ul>
-<li>
-<p><strong>entity</strong>*  <code>object</code></p>
-<ul>
-<li>
-<p><strong>name</strong>* <code>string</code></p>
-<p>Nome da dona da conta alvo.</p>
-</li>
-<li>
-<p><strong>document</strong>* <code>string</code></p>
-<p>Número do documento sem pontos da dona da conta alvo.</p>
-</li>
-<li>
-<p><strong>document_type</strong> <code>string</code></p>
-<p>Tipo do documento da dona da conta alvo. Pode ser <code>cpf</code> ou <code>cnpj</code>.</p>
-</li>
-</ul>
-</li>
-</ul>
-<br>
 <hr>
-<p><strong>scheduled_to</strong>*  <code>string</code></p>
+<p><strong>scheduled_to</strong>  <code>string</code></p>
 <p>Formato: <code>yyyy-mm-dd</code></p>
-<br>
 <hr>
 <p><strong>HEADERS</strong></p>
 <hr>
-<p><strong>x-stone-idempotency-key</strong>*  <code>string</code></p>
+<p><strong>x-stone-idempotency-key</strong>  <code>string</code></p>
 <p>Chave de idempotência.</p>
-<br>
----
-<h5 id="response"><strong>Response</strong></h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#0000cf;font-weight:bold">202</span> <span style="color:#a40000">Accepted</span> 
-</code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>  
+<hr>
+<h5 id="response">Response</h5>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">202 Accepted
+</span><span style="color:#a40000">content-type: application/json
+</span></code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>  
    <span style="color:#204a87;font-weight:bold">&#34;amount&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#0000cf;font-weight:bold">16600</span><span style="color:#000;font-weight:bold">,</span>
    <span style="color:#204a87;font-weight:bold">&#34;approval_expired_at&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
    <span style="color:#204a87;font-weight:bold">&#34;approved_at&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;2019-06-07T18:57:57Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
@@ -3160,7 +3153,7 @@
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 01.01.0001
+	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 02.12.2019
 </div>
 </div>
 

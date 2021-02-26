@@ -4,6 +4,7 @@
     <link>https://stone-co.github.io/docs/transferencias/transferencias-internas/</link>
     <description>Recent content in Transferências Internas on Stone OpenBank</description>
     <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 01 Apr 2019 19:23:33 +0000</lastBuildDate>
     
 	  <atom:link href="https://stone-co.github.io/docs/transferencias/transferencias-internas/index.xml" rel="self" type="application/rss+xml" />
     
@@ -16,7 +17,7 @@
     <item>
       <title>Docs: Transferir para Contas Stone</title>
       <link>https://stone-co.github.io/docs/transferencias/transferencias-internas/transferir-para-contas-stone/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Apr 2019 19:18:21 +0000</pubDate>
       
       <guid>https://stone-co.github.io/docs/transferencias/transferencias-internas/transferir-para-contas-stone/</guid>
       <description>
@@ -103,14 +104,15 @@ Também é importante lembrar que a transferência precisa de uma aprovação.&l
     &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
     &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;target_account_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;58859&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
     &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;target_account_owner_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Fernando Antonio&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     
     <item>
       <title>Docs: Listar Transferências Internas</title>
       <link>https://stone-co.github.io/docs/transferencias/transferencias-internas/llistar-transferencias-internas/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Apr 2019 19:21:13 +0000</pubDate>
       
       <guid>https://stone-co.github.io/docs/transferencias/transferencias-internas/llistar-transferencias-internas/</guid>
       <description>
@@ -210,14 +212,15 @@ Também é importante lembrar que a transferência precisa de uma aprovação.&l
             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;target_account_owner_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Marcus Oliveira&amp;#34;&lt;/span&gt;
         &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
     &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     
     <item>
       <title>Docs: Retornando uma Transferência Interna</title>
       <link>https://stone-co.github.io/docs/transferencias/transferencias-internas/retornando-uma-transferencia-interna/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Apr 2019 19:23:33 +0000</pubDate>
       
       <guid>https://stone-co.github.io/docs/transferencias/transferencias-internas/retornando-uma-transferencia-interna/</guid>
       <description>
@@ -265,14 +268,15 @@ Também é importante lembrar que a transferência precisa de uma aprovação.&l
     &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
     &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;target_account_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;58859&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
     &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;target_account_owner_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Antonio Nunes&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     
     <item>
       <title>Docs: Cancelamento de Uma Transferência Interna Agendada</title>
       <link>https://stone-co.github.io/docs/transferencias/transferencias-internas/cancelamento-de-uma-transferencia-interna-agendada/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 29 Apr 2019 18:16:45 +0000</pubDate>
       
       <guid>https://stone-co.github.io/docs/transferencias/transferencias-internas/cancelamento-de-uma-transferencia-interna-agendada/</guid>
       <description>

@@ -27,8 +27,8 @@
 &lt;p&gt;Através da nossa API é possível ter funcionalidades de internet banking e de apps de banco no seu negócio!&lt;/p&gt;
 &lt;h4 id=&#34;o-que-é-a-stone-openbank-api&#34;&gt;O que é a Stone OpenBank API&lt;/h4&gt;
 &lt;p&gt;Aqui na Stone a gente acredita não apenas que o cliente tem razão, mas que ele &lt;strong&gt;&lt;em&gt;é&lt;/em&gt;&lt;/strong&gt; a nossa razão. Somos fiéis defensores da competição e acreditamos que isso melhora o mercado como um todo, o que, por sua vez, melhora a vida da nossa razão.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Foi com base nesse sentimento pró-competição que montamos a Stone OpenBank API: a primeira API de Open Banking plugada diretamente no STR.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;A &lt;a href=&#34;docs/guias/a-conta-stone/&#34;&gt;Conta Stone&lt;/a&gt; é a nossa oferta para clientes PJ e PF, tanto para aqueles que já pertencem a base da Stone Adquirente, como para aqueles que utilizam outras adquirentes e buscam uma nova forma de se relacionar com sua conta.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Foi com base nesse sentimento pró-competição que montamos a Stone OpenBank API: a primeira API de Open Banking plugada diretamente no STR.&lt;/strong&gt;
+A &lt;a href=&#34;https://stone-co.github.io/docs/guias/a-conta-stone/&#34;&gt;Conta Stone&lt;/a&gt; é a nossa oferta para clientes PJ e PF, tanto para aqueles que já pertencem a base da Stone Adquirente, como para aqueles que utilizam outras adquirentes e buscam uma nova forma de se relacionar com sua conta.&lt;/p&gt;
 &lt;p&gt;O Aplicativo da Conta Stone é mais um parceiro da Stone OpenBank API, usando exatamente os mesmos acessos e APIs descritos nesse documento. &amp;quot;Eat your own dogfood&amp;quot; aplicado na prática.&lt;/p&gt;
 &lt;p&gt;Assim como nós pudemos criar o nosso aplicativo de conta em cima dessa API, você pode fazer o mesmo ou integrar as funcionalidades de automação bancária no seu negócio.&lt;/p&gt;
 &lt;h4 id=&#34;o-que-oferecemos&#34;&gt;O que oferecemos?&lt;/h4&gt;
@@ -63,7 +63,7 @@
 &lt;h4 id=&#34;ambientes-da-apidocsguiasstone-openbank-apiambientes-da-api&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/stone-openbank-api/ambientes-da-api/&#34;&gt;Ambientes da API&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Como funcionam nossos ambientes de Sandbox e Produção.&lt;/p&gt;
 &lt;h4 id=&#34;a-conta-stonedocsguiasa-conta-stone&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/a-conta-stone/&#34;&gt;A Conta Stone&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;Como funciona esse novo produto da Stone, criado para devolver à cliente o controle de sua conta de pagamentos.&lt;/p&gt;
+&lt;p&gt;Como funciona este novo produto da Stone, criado para devolver à cliente o controle de sua conta de pagamentos.&lt;/p&gt;
 &lt;h4 id=&#34;modelos-de-parceriadocsguiasa-conta-stonemodelos-de-parceria&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/a-conta-stone/modelos-de-parceria/&#34;&gt;Modelos de Parceria&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Como funcionam os principais modelos de parceria que oferecemos para aplicações que desejam integrar com a nossa API.&lt;/p&gt;
 &lt;h4 id=&#34;aplicativosdocsguiasa-conta-stoneaplicativos&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/a-conta-stone/aplicativos/&#34;&gt;Aplicativos&lt;/a&gt;&lt;/h4&gt;
@@ -89,7 +89,7 @@
     <item>
       <title>Docs: Autenticação</title>
       <link>https://stone-co.github.io/docs/stone-openbank/autenticacao/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 07 May 2020 18:06:16 -0300</pubDate>
       
       <guid>https://stone-co.github.io/docs/stone-openbank/autenticacao/</guid>
       <description>
@@ -108,12 +108,12 @@ A seguir, juntamos alguns desses padrões para simplificar a vida da desenvolved
 &lt;p&gt;Caso tenha em mãos seu token de acesso, já é possível realizar chamadas autenticadas.&lt;/p&gt;
 &lt;p&gt;Para isso, exigimos que nas &lt;a href=&#34;https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods&#34;&gt;requisições HTTP&lt;/a&gt; exista no cabeçalho um campo chamado &lt;code&gt;authorization&lt;/code&gt;, cujo valor será &amp;ldquo;Bearer&amp;rdquo; seguido do token de acesso.&lt;/p&gt;
 &lt;p&gt;Exemplo de cabeçalho de uma chamada autenticada:&lt;/p&gt;
-&lt;h5 id=&#34;header&#34;&gt;&lt;strong&gt;Header&lt;/strong&gt;&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;GET /api/v1/accounts HTTP/1.1
-Host: sandbox-api.openbank.stone.com.br
-User-Agent: Nome da aplicação
-Accept: */*
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+&lt;h4 id=&#34;header&#34;&gt;Header&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#000&#34;&gt;GET&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;/api/v1/accounts&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;HTTP&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1.1&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;Host&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;sandbox-api.openbank.stone.com.br&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;User-Agent&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Nome da aplicação&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;Accept&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;*/*&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;authorization&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
@@ -156,22 +156,22 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3O
         &lt;p&gt;Nossas APIs usam um padrão de paginação por cursor. O retorno possui o seguinte formato:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
  &lt;span style=&#34;color:#a40000&#34;&gt;cursor:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;{&lt;/span&gt;
-	&lt;span style=&#34;color:#a40000&#34;&gt;after:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;string | null&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-	&lt;span style=&#34;color:#a40000&#34;&gt;before:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;string | null&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-	&lt;span style=&#34;color:#a40000&#34;&gt;limit:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;number&amp;#34;&lt;/span&gt;
+    &lt;span style=&#34;color:#a40000&#34;&gt;after:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;string | null&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#a40000&#34;&gt;before:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;string | null&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#a40000&#34;&gt;limit:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;number&amp;#34;&lt;/span&gt;
  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;,&lt;/span&gt;
- &lt;span style=&#34;color:#a40000&#34;&gt;data:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Array&amp;amp;lt;Data&amp;amp;gt&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;,&lt;/span&gt;
+ &lt;span style=&#34;color:#a40000&#34;&gt;data:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;array&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;object&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;,&lt;/span&gt;
 &lt;span style=&#34;color:#a40000&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Como funciona: deve-se informar o limite de items para a paginação, passando o parâmetro ?limit=10. Na resposta dessa query, será retornado as hashs referente ao cursor no momento da resposta, ex.:&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Como funciona: deve-se informar o limite de items para a paginação, passando o parâmetro &lt;strong&gt;?limit=10&lt;/strong&gt;. Na resposta dessa query, será retornado as hashs referente ao cursor no momento da resposta, ex.:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
  &lt;span style=&#34;color:#a40000&#34;&gt;cursor:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;{&lt;/span&gt;
  &lt;span style=&#34;color:#a40000&#34;&gt;after:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;ASsa987fqw&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
  &lt;span style=&#34;color:#a40000&#34;&gt;before:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;null&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
  &lt;span style=&#34;color:#a40000&#34;&gt;limit:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;10&amp;#34;&lt;/span&gt;
  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;,&lt;/span&gt;
- &lt;span style=&#34;color:#a40000&#34;&gt;data:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Array&amp;amp;lt;Data&amp;amp;gt&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;;&lt;/span&gt;
+ &lt;span style=&#34;color:#a40000&#34;&gt;data:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[]&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;;&lt;/span&gt;
 &lt;span style=&#34;color:#a40000&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Assim, caso queira consultar o próximo cursor, acrescentar o parâmetro after na chamada: ?limit=10&amp;amp;after=ASsa987fqw, será retornado a próxima paginação.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Assim, caso queira consultar o próximo cursor, acrescentar o parâmetro after na chamada: &lt;strong&gt;?limit=10&amp;amp;after=ASsa987fqw&lt;/strong&gt;, será retornado a próxima paginação.&lt;/p&gt;
 
       </description>
     </item>

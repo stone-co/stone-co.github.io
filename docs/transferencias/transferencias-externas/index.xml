@@ -4,6 +4,7 @@
     <link>https://stone-co.github.io/docs/transferencias/transferencias-externas/</link>
     <description>Recent content in Transferências Externas on Stone OpenBank</description>
     <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 01 Apr 2019 19:23:33 +0000</lastBuildDate>
     
 	  <atom:link href="https://stone-co.github.io/docs/transferencias/transferencias-externas/index.xml" rel="self" type="application/rss+xml" />
     
@@ -178,7 +179,7 @@ Essa transformação é aplicada pela API antes dos dados serem armazenados.&lt;
     <item>
       <title>Docs: Listar Transferências Externas</title>
       <link>https://stone-co.github.io/docs/transferencias/transferencias-externas/listar-transferencias-externas/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Apr 2019 19:31:32 +0000</pubDate>
       
       <guid>https://stone-co.github.io/docs/transferencias/transferencias-externas/listar-transferencias-externas/</guid>
       <description>
@@ -294,14 +295,15 @@ Essa transformação é aplicada pela API antes dos dados serem armazenados.&lt;
       &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
     &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
   &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     
     <item>
       <title>Docs: Retornar Uma Transferência Externa</title>
       <link>https://stone-co.github.io/docs/transferencias/transferencias-externas/retornar-uma-transferencia-externa/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Apr 2019 19:33:33 +0000</pubDate>
       
       <guid>https://stone-co.github.io/docs/transferencias/transferencias-externas/retornar-uma-transferencia-externa/</guid>
       <description>
@@ -358,14 +360,15 @@ Essa transformação é aplicada pela API antes dos dados serem armazenados.&lt;
             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Octacilio Impoluto&amp;#34;&lt;/span&gt;
         &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
     &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     
     <item>
       <title>Docs: Cancelamento de Uma Transferência Externa Agendada</title>
       <link>https://stone-co.github.io/docs/transferencias/transferencias-externas/cancelamento-de-uma-transferencia-externa-agendada/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 29 Apr 2019 20:19:22 +0000</pubDate>
       
       <guid>https://stone-co.github.io/docs/transferencias/transferencias-externas/cancelamento-de-uma-transferencia-externa-agendada/</guid>
       <description>

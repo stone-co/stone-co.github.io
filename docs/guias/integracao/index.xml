@@ -15,9 +15,54 @@
     
     
     <item>
+      <title>Docs: Cadastro da Aplicação</title>
+      <link>https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/</link>
+      <pubDate>Mon, 27 Jan 2020 00:38:05 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;br&gt;
+&lt;ol&gt;
+&lt;li&gt;Será enviado pelo nosso time de parcerias o formulário para criação das &lt;a href=&#34;https://docs.openbank.stone.com.br/docs/cadastro-na-aplica%C3%A7%C3%A3o#credenciais-da-minha-aplica%C3%A7%C3%A3o&#34;&gt;credenciais da sua aplicação&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Atenção&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Será necessário &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves&#34;&gt;gerar um par de chaves RSA 4096&lt;/a&gt; e compartilhar a &lt;strong&gt;chave pública&lt;/strong&gt; conosco no formato .pem.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;br&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Você será inserido na nossa ferramenta de comunicação com o time de suporte e terá durante todo o processo de integração uma equipe te ajudando com as possíveis dúvidas. Lá serão disponibilizadas suas credencias de sandbox.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Chave Pública&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A chave que deverá ser enviada para a Stone através do formulário é a &lt;strong&gt;chave pública&lt;/strong&gt; e &lt;strong&gt;não&lt;/strong&gt; a &lt;strong&gt;chave privada&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;br&gt;
+&lt;h4 id=&#34;credenciais-da-minha-aplicação&#34;&gt;&lt;strong&gt;Credenciais da minha aplicação&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;O identificador que representa uma aplicação parceira na API Stone OpenBank é chamado de &lt;code&gt;cliend_id&lt;/code&gt;. Ela é gerada pela Stone e é única. Ela será utilizada no processo de &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;autenticação&lt;/a&gt; junto a API identificando assim todos os requests provenientes dessa aplicação.&lt;/p&gt;
+&lt;p&gt;Alguns processos da nossa API, como o próprio processo de &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;autenticação&lt;/a&gt;, envolvem uma etapa de criptografia assimétrica, assim na hora da criação da &lt;code&gt;client_id&lt;/code&gt; da sua aplicação atrelaremos a ela a chave pública fornecida por você.&lt;/p&gt;
+&lt;p&gt;Montamos um guia para te ajudar a gerar seu &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves&#34;&gt;par de chaves assimétricas&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Cada &lt;code&gt;client_id&lt;/code&gt; tem também as as URIs de webhook e URI de redirect que serão configuradas de acordo com as informações fornecidas pelo parceiro.&lt;/p&gt;
+&lt;br&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Boas Práticas</title>
       <link>https://stone-co.github.io/docs/guias/integracao/boas-praticas/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 21 May 2019 20:10:39 +0000</pubDate>
       
       <guid>https://stone-co.github.io/docs/guias/integracao/boas-praticas/</guid>
       <description>
@@ -63,53 +108,9 @@ Se isso ocorrer em um período curto demais pode ocasionar uma resposta &lt;code
     </item>
     
     <item>
-      <title>Docs: Cadastro da Aplicação</title>
-      <link>https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/</guid>
-      <description>
-        
-        
-        &lt;hr&gt;
-&lt;br&gt;
-&lt;ol&gt;
-&lt;li&gt;Será enviado pelo nosso time de parcerias o formulário para criação das &lt;a href=&#34;https://docs.openbank.stone.com.br/docs/cadastro-na-aplica%C3%A7%C3%A3o#credenciais-da-minha-aplica%C3%A7%C3%A3o&#34;&gt;credenciais da sua aplicação&lt;/a&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-
-
-&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Atenção&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Será necessário &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves&#34;&gt;gerar um par de chaves RSA 4096&lt;/a&gt; e compartilhar a &lt;strong&gt;chave pública&lt;/strong&gt; conosco no formato .pem.&lt;/p&gt;
-
-&lt;/div&gt;
-
-&lt;br&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;Você será inserido na nossa ferramenta de comunicação com o time de suporte e terá durante todo o processo de integração uma equipe te ajudando com as possíveis dúvidas. Lá serão disponibilizadas suas credencias de sandbox.&lt;/li&gt;
-&lt;/ol&gt;
-
-
-&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Chave Pública&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;A chave que deverá ser enviada para a Stone através do formulário é a &lt;strong&gt;chave pública&lt;/strong&gt; e &lt;strong&gt;não&lt;/strong&gt; a &lt;strong&gt;chave privada&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;/div&gt;
-
-&lt;br&gt;
-&lt;h4 id=&#34;credenciais-da-minha-aplicação&#34;&gt;&lt;strong&gt;Credenciais da minha aplicação&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;O identificador que representa uma aplicação parceira na API Stone OpenBank é chamado de &lt;code&gt;cliend_id&lt;/code&gt;. Ela é gerada pela Stone e é única. Ela será utilizada no processo de &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;autenticação&lt;/a&gt; junto a API identificando assim todos os requests provenientes dessa aplicação.&lt;/p&gt;
-&lt;p&gt;Alguns processos da nossa API, como o próprio processo de &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;autenticação&lt;/a&gt;, envolvem uma etapa de criptografia assimétrica, assim na hora da criação da &lt;code&gt;client_id&lt;/code&gt; da sua aplicação atrelaremos a ela a chave pública fornecida por você.&lt;/p&gt;
-&lt;p&gt;Montamos um guia para te ajudar a gerar seu &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves&#34;&gt;par de chaves assimétricas&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Cada &lt;code&gt;client_id&lt;/code&gt; tem também as as URIs de webhook e URI de redirect que serão configuradas de acordo com as informações fornecidas pelo parceiro.&lt;/p&gt;
-&lt;br&gt;
-      </description>
-    </item>
-    
-    <item>
       <title>Docs: Autenticação</title>
       <link>https://stone-co.github.io/docs/guias/integracao/autenticacao/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 28 May 2019 18:04:38 +0000</pubDate>
       
       <guid>https://stone-co.github.io/docs/guias/integracao/autenticacao/</guid>
       <description>
@@ -291,7 +292,7 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3O
     <item>
       <title>Docs: Testando a API</title>
       <link>https://stone-co.github.io/docs/guias/integracao/testando-a-api/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 28 May 2019 18:05:07 +0000</pubDate>
       
       <guid>https://stone-co.github.io/docs/guias/integracao/testando-a-api/</guid>
       <description>
@@ -367,7 +368,7 @@ Qualquer problema encontrado durante esta fase deve ser resolvido antes de pross
     <item>
       <title>Docs: Consentimento</title>
       <link>https://stone-co.github.io/docs/guias/integracao/consentimento/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 28 May 2019 18:05:24 +0000</pubDate>
       
       <guid>https://stone-co.github.io/docs/guias/integracao/consentimento/</guid>
       <description>
@@ -553,7 +554,7 @@ No início desta sessão detalhamos o passo a passo desse procedimento, neste t�
     <item>
       <title>Docs: Aprovação</title>
       <link>https://stone-co.github.io/docs/guias/integracao/aprovacao/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 05 Jun 2019 19:57:11 +0000</pubDate>
       
       <guid>https://stone-co.github.io/docs/guias/integracao/aprovacao/</guid>
       <description>
@@ -572,7 +573,7 @@ No início desta sessão detalhamos o passo a passo desse procedimento, neste t�
     <item>
       <title>Docs: Webhooks</title>
       <link>https://stone-co.github.io/docs/guias/integracao/webhooks/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 29 Jul 2019 21:31:30 +0000</pubDate>
       
       <guid>https://stone-co.github.io/docs/guias/integracao/webhooks/</guid>
       <description>
@@ -916,7 +917,7 @@ No início desta sessão detalhamos o passo a passo desse procedimento, neste t�
     <item>
       <title>Docs: Reembolso de transferências</title>
       <link>https://stone-co.github.io/docs/guias/integracao/reembolso-de-transferencias/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 07 Oct 2020 19:43:06 +0000</pubDate>
       
       <guid>https://stone-co.github.io/docs/guias/integracao/reembolso-de-transferencias/</guid>
       <description>

@@ -17,7 +17,7 @@
     <item>
       <title>Docs: Overview Emissão de Boletos</title>
       <link>https://stone-co.github.io/docs/emissao-de-boletos/overview-emissao-de-boletos/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 30 Mar 2020 07:01:34 +0000</pubDate>
       
       <guid>https://stone-co.github.io/docs/emissao-de-boletos/overview-emissao-de-boletos/</guid>
       <description>
@@ -57,7 +57,7 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
     <item>
       <title>Docs: Status</title>
       <link>https://stone-co.github.io/docs/emissao-de-boletos/status/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 27 Apr 2020 12:00:07 +0000</pubDate>
       
       <guid>https://stone-co.github.io/docs/emissao-de-boletos/status/</guid>
       <description>
@@ -72,7 +72,7 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
     <item>
       <title>Docs: Regras de negócio</title>
       <link>https://stone-co.github.io/docs/emissao-de-boletos/regras-de-negocio/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 26 Apr 2020 22:22:46 +0000</pubDate>
       
       <guid>https://stone-co.github.io/docs/emissao-de-boletos/regras-de-negocio/</guid>
       <description>
@@ -195,7 +195,7 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
     <item>
       <title>Docs: Campos</title>
       <link>https://stone-co.github.io/docs/emissao-de-boletos/campos/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 26 Apr 2020 21:06:22 +0000</pubDate>
       
       <guid>https://stone-co.github.io/docs/emissao-de-boletos/campos/</guid>
       <description>
@@ -541,7 +541,7 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
     <item>
       <title>Docs: Emitir Boleto</title>
       <link>https://stone-co.github.io/docs/emissao-de-boletos/emitir-boleto/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 16 Jan 2020 19:14:55 +0000</pubDate>
       
       <guid>https://stone-co.github.io/docs/emissao-de-boletos/emitir-boleto/</guid>
       <description>
@@ -683,14 +683,15 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;settled_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
     &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;CREATED&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
     &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;writable_line&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;19790000056313907246482159290061784560000002100&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     
     <item>
       <title>Docs: Listar Boletos</title>
       <link>https://stone-co.github.io/docs/emissao-de-boletos/listar-boletos/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 09 Mar 2020 17:11:01 +0000</pubDate>
       
       <guid>https://stone-co.github.io/docs/emissao-de-boletos/listar-boletos/</guid>
       <description>
@@ -832,14 +833,15 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
           &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;writable_line&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;19790000052020031015703344761550581910000002000&amp;#34;&lt;/span&gt;
        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
     &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     
     <item>
       <title>Docs: Retornar Um Boleto</title>
       <link>https://stone-co.github.io/docs/emissao-de-boletos/retornar-um-boleto/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 06 Mar 2020 17:19:19 +0000</pubDate>
       
       <guid>https://stone-co.github.io/docs/emissao-de-boletos/retornar-um-boleto/</guid>
       <description>
@@ -910,14 +912,15 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
           &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;settled_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;NULL&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
           &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;REGISTERED&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
           &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;writable_line&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;19790000052020031015703344761550581910000002000&amp;#34;&lt;/span&gt;
- &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     
     <item>
       <title>Docs: Gerar PDF Boleto</title>
       <link>https://stone-co.github.io/docs/emissao-de-boletos/gerar-boleto-pdf/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 22 Sep 2020 15:54:16 +0000</pubDate>
       
       <guid>https://stone-co.github.io/docs/emissao-de-boletos/gerar-boleto-pdf/</guid>
       <description>
@@ -936,7 +939,8 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
 &lt;span style=&#34;color:#a40000&#34;&gt;content-type:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;application/json&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     
