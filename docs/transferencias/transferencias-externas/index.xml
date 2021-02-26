@@ -15,18 +15,18 @@
     
     <item>
       <title>Docs: Transferir para Outros Bancos</title>
-      <link>https://stone-co.github.io/docs/transferencias/transferencias-externas/7-transferir-para-outros-bancos/</link>
+      <link>https://stone-co.github.io/docs/transferencias/transferencias-externas/transferir-para-outros-bancos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/docs/transferencias/transferencias-externas/7-transferir-para-outros-bancos/</guid>
+      <guid>https://stone-co.github.io/docs/transferencias/transferencias-externas/transferir-para-outros-bancos/</guid>
       <description>
         
         
         &lt;p&gt;Faz transferências monetárias para outra instituição (TED). Não é permitido realizar uma TED de uma conta Stone para outra conta Stone.&lt;/p&gt;
 &lt;p&gt;Caso a transferência seja criada em um dia não útil ou fora do horário de funcionamento de TEDs, a transferência será agendada automaticamente para o dia seguinte. Nesse caso seu status será &lt;code&gt;DELAYED_TO_NEXT_BUSINESS_DAY&lt;/code&gt;, como também a flag &lt;code&gt;delayed_to_next_business_day = true&lt;/code&gt;. O campo &lt;code&gt;scheduled_to_effective&lt;/code&gt; conterá a data para a qual a TED foi agendada.&lt;/p&gt;
-&lt;p&gt;A transferência também pode ser agendada através do campo &lt;code&gt;scheduled_to&lt;/code&gt;. A data usada no campo &lt;code&gt;scheduled_to&lt;/code&gt; deve estar entre a data &lt;code&gt;next_available_execution_date&lt;/code&gt; e a data limite retornada no campo &lt;code&gt;execution_limit_date&lt;/code&gt; da &lt;a href=&#34;https://docs.openbank.stone.com.br/reference#calend%C3%A1rio-de-agendamento&#34;&gt;API de calendário de agendamento&lt;/a&gt; chamada com o parâmetro &lt;code&gt;operation_type=external_transfer&lt;/code&gt;. Caso a data escolhida seja menor do que &lt;code&gt;next_available_execution_date&lt;/code&gt;, a transferência será executada imediatamente. Caso a data seja maior que &lt;code&gt;execution_limit_date&lt;/code&gt; será retornado um erro 422.&lt;/p&gt;
+&lt;p&gt;A transferência também pode ser agendada através do campo &lt;code&gt;scheduled_to&lt;/code&gt;. A data usada no campo &lt;code&gt;scheduled_to&lt;/code&gt; deve estar entre a data &lt;code&gt;next_available_execution_date&lt;/code&gt; e a data limite retornada no campo &lt;code&gt;execution_limit_date&lt;/code&gt; da &lt;a href=&#34;https://stone-co.github.io/docs/agendamento/calendario-de-agendamento/&#34;&gt;API de calendário de agendamento&lt;/a&gt; chamada com o parâmetro &lt;code&gt;operation_type=external_transfer&lt;/code&gt;. Caso a data escolhida seja menor do que &lt;code&gt;next_available_execution_date&lt;/code&gt;, a transferência será executada imediatamente. Caso a data seja maior que &lt;code&gt;execution_limit_date&lt;/code&gt; será retornado um erro 422.&lt;/p&gt;
 &lt;p&gt;Caso a data escolhida não seja um dia útil, a transferência será automaticamente agendada para o próximo dia útil depois do escolhido. O dia útil requisitado (que veio na request) e o efetivo (em que de fato o agendamento vai ocorrer) são representados pelos campos &lt;code&gt;scheduled_to_requested&lt;/code&gt; e &lt;code&gt;scheduled_to_effective&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;A data usada no campo &lt;code&gt;scheduled_to&lt;/code&gt; deve obedecer a data limite retornada na &lt;a href=&#34;https://docs.openbank.stone.com.br/reference#calend%C3%A1rio-de-agendamento&#34;&gt;API de calendario de agendamento&lt;/a&gt;. Caso contrário, será retornado um erro 422 na criação.&lt;/p&gt;
+&lt;p&gt;A data usada no campo &lt;code&gt;scheduled_to&lt;/code&gt; deve obedecer a data limite retornada na &lt;a href=&#34;https://stone-co.github.io/docs/agendamento/calendario-de-agendamento/&#34;&gt;API de calendario de agendamento&lt;/a&gt;. Caso contrário, será retornado um erro 422 na criação.&lt;/p&gt;
 &lt;hr&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
@@ -177,10 +177,10 @@ Essa transformação é aplicada pela API antes dos dados serem armazenados.&lt;
     
     <item>
       <title>Docs: Listar Transferências Externas</title>
-      <link>https://stone-co.github.io/docs/transferencias/transferencias-externas/8-listar-transferencias-externas/</link>
+      <link>https://stone-co.github.io/docs/transferencias/transferencias-externas/listar-transferencias-externas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/docs/transferencias/transferencias-externas/8-listar-transferencias-externas/</guid>
+      <guid>https://stone-co.github.io/docs/transferencias/transferencias-externas/listar-transferencias-externas/</guid>
       <description>
         
         
@@ -300,10 +300,10 @@ Essa transformação é aplicada pela API antes dos dados serem armazenados.&lt;
     
     <item>
       <title>Docs: Retornar Uma Transferência Externa</title>
-      <link>https://stone-co.github.io/docs/transferencias/transferencias-externas/9-retornar-uma-transferencia-externa/</link>
+      <link>https://stone-co.github.io/docs/transferencias/transferencias-externas/retornar-uma-transferencia-externa/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/docs/transferencias/transferencias-externas/9-retornar-uma-transferencia-externa/</guid>
+      <guid>https://stone-co.github.io/docs/transferencias/transferencias-externas/retornar-uma-transferencia-externa/</guid>
       <description>
         
         
@@ -364,10 +364,10 @@ Essa transformação é aplicada pela API antes dos dados serem armazenados.&lt;
     
     <item>
       <title>Docs: Cancelamento de Uma Transferência Externa Agendada</title>
-      <link>https://stone-co.github.io/docs/transferencias/transferencias-externas/10-cancelamento-de-uma-transferencia-externa-agendada/</link>
+      <link>https://stone-co.github.io/docs/transferencias/transferencias-externas/cancelamento-de-uma-transferencia-externa-agendada/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/docs/transferencias/transferencias-externas/10-cancelamento-de-uma-transferencia-externa-agendada/</guid>
+      <guid>https://stone-co.github.io/docs/transferencias/transferencias-externas/cancelamento-de-uma-transferencia-externa-agendada/</guid>
       <description>
         
         
