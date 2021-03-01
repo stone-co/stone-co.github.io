@@ -282,7 +282,7 @@ Abaixo listamos algumas das razões possíveis para ocorrer reembolsos, como tam
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;target&lt;/td&gt;
-&lt;td&gt;Objeto com os dados de conta destino. Veja abaixo seus campos.&lt;/td&gt;
+&lt;td&gt;Objeto com os dados de conta destino. Veja abaixo seus campos. Veja seus campos &lt;a href=&#34;https://stone-co.github.io/docs/transferencias/o-objeto-transferencia/#campos-do-objeto-target&#34;&gt;aqui&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;

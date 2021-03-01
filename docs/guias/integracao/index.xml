@@ -26,13 +26,13 @@
         &lt;hr&gt;
 &lt;br&gt;
 &lt;ol&gt;
-&lt;li&gt;Será enviado pelo nosso time de parcerias o formulário para criação das &lt;a href=&#34;https://docs.openbank.stone.com.br/docs/cadastro-na-aplica%C3%A7%C3%A3o#credenciais-da-minha-aplica%C3%A7%C3%A3o&#34;&gt;credenciais da sua aplicação&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Será enviado pelo nosso time de parcerias o formulário para criação das &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/#credenciais-da-minha-aplica%C3%A7%C3%A3o&#34;&gt;credenciais da sua aplicação&lt;/a&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Atenção&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Será necessário &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves&#34;&gt;gerar um par de chaves RSA 4096&lt;/a&gt; e compartilhar a &lt;strong&gt;chave pública&lt;/strong&gt; conosco no formato .pem.&lt;/p&gt;
+&lt;p&gt;Será necessário &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves&#34;&gt;gerar um par de chaves RSA 4096&lt;/a&gt; e compartilhar a &lt;strong&gt;chave pública&lt;/strong&gt; conosco no formato PEM e extensão .pub&lt;/p&gt;
 
 &lt;/div&gt;
 
@@ -44,16 +44,16 @@
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Chave Pública&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;A chave que deverá ser enviada para a Stone através do formulário é a &lt;strong&gt;chave pública&lt;/strong&gt; e &lt;strong&gt;não&lt;/strong&gt; a &lt;strong&gt;chave privada&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;A chave que deverá ser enviada para a Stone através do formulário é a &lt;strong&gt;chave pública&lt;/strong&gt; e &lt;strong&gt;não&lt;/strong&gt; a &lt;strong&gt;chave privada&lt;/strong&gt;. Não queremos o arquivo .pem, mas sim o .pub&lt;/p&gt;
 
 &lt;/div&gt;
 
 &lt;br&gt;
 &lt;h4 id=&#34;credenciais-da-minha-aplicação&#34;&gt;&lt;strong&gt;Credenciais da minha aplicação&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;O identificador que representa uma aplicação parceira na API Stone OpenBank é chamado de &lt;code&gt;cliend_id&lt;/code&gt;. Ela é gerada pela Stone e é única. Ela será utilizada no processo de &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;autenticação&lt;/a&gt; junto a API identificando assim todos os requests provenientes dessa aplicação.&lt;/p&gt;
-&lt;p&gt;Alguns processos da nossa API, como o próprio processo de &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;autenticação&lt;/a&gt;, envolvem uma etapa de criptografia assimétrica, assim na hora da criação da &lt;code&gt;client_id&lt;/code&gt; da sua aplicação atrelaremos a ela a chave pública fornecida por você.&lt;/p&gt;
+&lt;p&gt;O identificador que representa uma aplicação parceira na API Stone OpenBank é chamado de &lt;code&gt;cliend_id&lt;/code&gt;. Ele é gerada pela Stone e é único. Ele será utilizada no processo de &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;autenticação&lt;/a&gt; junto a API identificando assim todos os requests provenientes dessa aplicação.&lt;/p&gt;
+&lt;p&gt;Alguns processos da nossa API, como o próprio processo de &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;autenticação&lt;/a&gt;, envolvem uma etapa de criptografia assimétrica, assim na hora da criação do &lt;code&gt;client_id&lt;/code&gt; da sua aplicação atrelaremos a ele a chave pública fornecida por você.&lt;/p&gt;
 &lt;p&gt;Montamos um guia para te ajudar a gerar seu &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves&#34;&gt;par de chaves assimétricas&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Cada &lt;code&gt;client_id&lt;/code&gt; tem também as as URIs de webhook e URI de redirect que serão configuradas de acordo com as informações fornecidas pelo parceiro.&lt;/p&gt;
+&lt;p&gt;Cada &lt;code&gt;client_id&lt;/code&gt; tem também as URIs de webhook e URI de redirect que serão configuradas de acordo com as informações fornecidas pelo parceiro.&lt;/p&gt;
 &lt;br&gt;
 
       </description>
@@ -101,8 +101,8 @@ Se isso ocorrer em um período curto demais pode ocasionar uma resposta &lt;code
 &lt;li&gt;Uma chamada com a &lt;strong&gt;chave de idempotênca maior que 72 caracteres&lt;/strong&gt; retornará um erro &lt;code&gt;HTTP 431&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;simulações-dry-run&#34;&gt;&lt;strong&gt;Simulações (dry-run)&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;Nossos endpoints que envolvem operações financeiras suportam &lt;a href=&#34;https://stone-co.github.io/docs/transferencias/3-transferencias-internas&#34;&gt;Simulações (dry-run)&lt;/a&gt;, permitindo que o usuário visualize com antecedência o que vai acontecer nessa operação.&lt;/p&gt;
-&lt;p&gt;Em alguns casos, as Simulações permitem enriquecer os dados de uma operação, como, por exemplo o &lt;a href=&#34;https://docs.openbank.stone.com.br/reference#simular-o-pagamento-de-um-documento&#34;&gt;Pagamento de Boletos&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Nossos endpoints que envolvem operações financeiras suportam &lt;a href=&#34;https://stone-co.github.io/docs/simulacoes-dry-run/&#34;&gt;Simulações (dry-run)&lt;/a&gt;, permitindo que o usuário visualize com antecedência o que vai acontecer nessa operação.&lt;/p&gt;
+&lt;p&gt;Em alguns casos, as Simulações permitem enriquecer os dados de uma operação, como, por exemplo o &lt;a href=&#34;https://stone-co.github.io/docs/simulacoes-dry-run/simular-o-pagamento-de-um-documento/&#34;&gt;Pagamento de Boletos&lt;/a&gt;.&lt;/p&gt;
 
       </description>
     </item>
@@ -519,7 +519,7 @@ Qualquer problema encontrado durante esta fase deve ser resolvido antes de pross
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;consent_result&lt;/td&gt;
-&lt;td&gt;Indica o resultado do pedido de consentimento e pode ter os seguintes valores: - &amp;ldquo;ignored&amp;rdquo; caso o usuário não dê consentimento, - &amp;ldquo;approved&amp;rdquo; caso ele dê o consentimento, - &amp;ldquo;already_granted&amp;rdquo; caso o consentimento desse recurso para essa aplicação já tenha sido dado anteriormente.&lt;/td&gt;
+&lt;td&gt;Indica o resultado do pedido de consentimento e pode ter os seguintes valores: &lt;br&gt;- &amp;ldquo;ignored&amp;rdquo; caso o usuário não dê consentimento, &lt;br&gt;- &amp;ldquo;approved&amp;rdquo; caso ele dê o consentimento, &lt;br&gt;- &amp;ldquo;already_granted&amp;rdquo; caso o consentimento desse recurso para essa aplicação já tenha sido dado anteriormente.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;resource_id&lt;/td&gt;
@@ -566,6 +566,7 @@ No início desta sessão detalhamos o passo a passo desse procedimento, neste t�
 &lt;p&gt;A &lt;strong&gt;Aprovação de uma Transação&lt;/strong&gt; tem como objetivo garantir que toda movimentação financeira de saída de uma conta seja feita somente por um usuário devidamente autorizado. É um procedimento em que o usuário &lt;em&gt;que já concedeu o &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/consentimento&#34;&gt;consentimento&lt;/a&gt;&lt;/em&gt; é notificado da criação de uma transação e direcionado para uma página onde é possível visualizar todas as transações criadas pelo parceiro. Nessa página é possível aprovar ou rejeitar uma transação, possibilitando ou impedindo sua realização. É importante lembrar que apenas Aplicativos com consentimento podem criar transações.&lt;/p&gt;
 &lt;p&gt;No &lt;strong&gt;Open Banking&lt;/strong&gt;, o parceiro pode criar uma transação na conta do usuário, mas esta só será efetuada se houver a aprovação do usuário dono da conta. Esse procedimento assegura ao dono da conta de que não haverá movimentação de seu dinheiro sem sua permissão, além de proteger a aplicação de eventuais erros, ataques ou bugs que iniciem transações não desejadas pelo usuário.&lt;/p&gt;
 &lt;p&gt;O &lt;strong&gt;Aprovador&lt;/strong&gt; é um aplicativo utilizado pelo usuário para realizar a autorização de transações criadas pelo parceiro. Além disso, através do aplicativo é possível manter um histórico de movimentação de saída de uma conta. Nesse histórico é possível visualizar os valores movimentados, o destino das movimentações e o usuário que autorizou as transações. É possível também utilizá-lo para realizar aprovações em lote, ou seja, aprovar um grande número de transações pendentes ao mesmo tempo.&lt;/p&gt;
+&lt;p&gt;Além de aprovar transações pelo aplicativo &lt;strong&gt;Aprovador Stone&lt;/strong&gt;, também é possível aprovar pelo aplicativo &lt;strong&gt;Conta Stone&lt;/strong&gt;, no menu &amp;ldquo;Aprovar transações&amp;rdquo;.&lt;/p&gt;
 
       </description>
     </item>

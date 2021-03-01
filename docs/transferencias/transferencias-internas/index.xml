@@ -31,7 +31,7 @@ Caso a data seja maior que &lt;code&gt;execution_limit_date&lt;/code&gt;, será 
 &lt;hr&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h4 id=&#34;body-params&#34;&gt;BODY PARAMS&lt;/h4&gt;
+&lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;amount&lt;/strong&gt;* &lt;code&gt;int32&lt;/code&gt;
 &lt;br&gt;Valor da transferência em centavos de Real, ou seja, um real fica 100.&lt;/p&gt;
@@ -53,7 +53,7 @@ Caso a data seja maior que &lt;code&gt;execution_limit_date&lt;/code&gt;, será 
 &lt;p&gt;&lt;strong&gt;scheduled_to&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
 &lt;br&gt;Formato: &lt;code&gt;yyyy-mm-dd&lt;/code&gt;&lt;/p&gt;
 &lt;br&gt;
-&lt;h4 id=&#34;headers&#34;&gt;HEADERS&lt;/h4&gt;
+&lt;h4 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
 &lt;br&gt;Chave de idempotência&lt;/p&gt;
@@ -111,17 +111,17 @@ Também é importante lembrar que a transferência precisa de uma aprovação.&l
     
     <item>
       <title>Docs: Listar Transferências Internas</title>
-      <link>https://stone-co.github.io/docs/transferencias/transferencias-internas/llistar-transferencias-internas/</link>
+      <link>https://stone-co.github.io/docs/transferencias/transferencias-internas/listar-transferencias-internas/</link>
       <pubDate>Mon, 01 Apr 2019 19:21:13 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/docs/transferencias/transferencias-internas/llistar-transferencias-internas/</guid>
+      <guid>https://stone-co.github.io/docs/transferencias/transferencias-internas/listar-transferencias-internas/</guid>
       <description>
         
         
         &lt;hr&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h4 id=&#34;query-params&#34;&gt;QUERY PARAMS&lt;/h4&gt;
+&lt;h4 id=&#34;query-params&#34;&gt;&lt;strong&gt;QUERY PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
 &lt;br&gt;Identificador da conta.&lt;/p&gt;
@@ -229,7 +229,7 @@ Também é importante lembrar que a transferência precisa de uma aprovação.&l
         &lt;hr&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers/transfer_id
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h4 id=&#34;path-params&#34;&gt;PATH PARAMS&lt;/h4&gt;
+&lt;h4 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;transfer_id&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
 &lt;br&gt;Identificador da transferência.&lt;/p&gt;
@@ -284,7 +284,7 @@ Também é importante lembrar que a transferência precisa de uma aprovação.&l
         
         &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers/id/cancel
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h4 id=&#34;path-params&#34;&gt;PATH PARAMS&lt;/h4&gt;
+&lt;h4 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;id&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
 &lt;br&gt;Identificador da transferência.&lt;/p&gt;

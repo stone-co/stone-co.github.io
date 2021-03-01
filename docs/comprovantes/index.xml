@@ -29,7 +29,7 @@
 &lt;p&gt;Comprovantes para extrato aceitam os parâmetros adicionais &lt;code&gt;start_datetime&lt;/code&gt; e &lt;code&gt;end_datetime&lt;/code&gt; para especificar o intervalo de tempo cujas entradas serão levadas em consideração ao gerar o comprovante.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/receipts
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h5 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h5&gt;
+&lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;resource_type&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
 &lt;br&gt;Allowed values: &lt;code&gt;external_transfer&lt;/code&gt;, &lt;code&gt;internal_transfer&lt;/code&gt;, &lt;code&gt;payment&lt;/code&gt; e &lt;code&gt;statement&lt;/code&gt;&lt;/p&gt;
@@ -41,10 +41,12 @@
 &lt;p&gt;&lt;strong&gt;end_datetime&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
 &lt;br&gt;Format: &lt;code&gt;ISO8601 - &amp;quot;YYYY-MM-DDThh:mm:ssZ&amp;quot;&lt;/code&gt;
 &lt;br&gt;Example: &lt;code&gt;&amp;quot;2021-01-01T00:00:00Z&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h4 id=&#34;headers&#34;&gt;HEADERS&lt;/h4&gt;
+&lt;h4 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;200&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;OK&lt;/span&gt;

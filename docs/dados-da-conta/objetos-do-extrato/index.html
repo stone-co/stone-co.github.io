@@ -152,7 +152,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/stone-openbank-api/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Stone OpenBank-API</a>
+    <a  href="/docs/guias/stone-openbank-api/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Stone OpenBank API</a>
   </li>
   <ul>
     <li class="collapse " id="docsguiasstone-openbank-api">
@@ -612,34 +612,11 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/conta-stone-sdk/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">conta-stone-sdk</a>
+    <a  href="/docs/guias/conta-stone-sdk/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Conta Stone SDK</a>
   </li>
   <ul>
     <li class="collapse " id="docsguiasconta-stone-sdk">
       
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/conta-stone-sdk/conta-stone-sdk/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Conta Stone SDK</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsguiasconta-stone-sdkconta-stone-sdk">
-      
-      
-      
-    </li>
-  </ul>
-</ul>
-
       
       
     </li>
@@ -1388,10 +1365,10 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/transferencias/transferencias-internas/llistar-transferencias-internas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Transferências Internas</a>
+    <a  href="/docs/transferencias/transferencias-internas/listar-transferencias-internas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Transferências Internas</a>
   </li>
   <ul>
-    <li class="collapse " id="docstransferenciastransferencias-internasllistar-transferencias-internas">
+    <li class="collapse " id="docstransferenciastransferencias-internaslistar-transferencias-internas">
       
       
       
@@ -3066,7 +3043,7 @@
 </tr>
 <tr>
 <td>counter_party</td>
-<td>Dados do beneficiário da transação.</td>
+<td>Dados do beneficiário da transação. Veja seus campos <a href="/docs/dados-da-conta/objetos-do-extrato/#campos-do-objeto-counter_party">abaixo</a></td>
 <td><em>Object</em></td>
 <td><code>external</code>, <code>external_refund</code>, <code>instant_payment</code>, <code>internal</code>, <code>salary</code>, <code>salary_portability</code>, <code>salary_portability_refund</code>, <code>salary_portability_employer_refund</code></td>
 </tr>
@@ -3144,13 +3121,13 @@
 </tr>
 <tr>
 <td>account_settlement_policy_retention</td>
-<td>Dados da conta em que será realizada a retenção de liquidação de conta</td>
+<td>Dados da conta em que será realizada a retenção de liquidação de conta. Veja seus campos <a href="/docs/dados-da-conta/objetos-do-extrato/#campos-do-objeto-account_settlement_policy_retention">abaixo</a></td>
 <td><em>Object</em></td>
 <td><code>loan_payments</code></td>
 </tr>
 <tr>
 <td>original_operation_entry</td>
-<td>Dados da operação original.</td>
+<td>Dados da operação original.Veja seus campos <a href="/docs/dados-da-conta/objetos-do-extrato/#campos-do-objeto-original_operation_entry">abaixo</a>.</td>
 <td><em>Object</em></td>
 <td><code>loan_payments</code></td>
 </tr>
@@ -3174,7 +3151,7 @@
 </tr>
 <tr>
 <td>card_acceptor</td>
-<td>Dados sobre o cartão em que foi realizada a compra.</td>
+<td>Dados sobre o cartão em que foi realizada a compra. Veja seus campos <a href="/docs/dados-da-conta/objetos-do-extrato/#campos-do-objeto-card_acceptor">abaixo</a></td>
 <td><em>Object</em></td>
 <td><code>outbound_stone_prepaid_card_payment</code>, <code>outbound_stone_prepaid_card_payment_refund</code>, <code>outbound_stone_prepaid_card_payment_chargeback</code>, <code>outbound_stone_prepaid_card_withdrawal</code>, <code>outbound_stone_prepaid_card_withdrawal_refund</code></td>
 </tr>
@@ -3186,13 +3163,13 @@
 </tr>
 <tr>
 <td>transaction_authorization</td>
-<td>Dados sobre a autorização da transação de uma compra feita com cartão.</td>
+<td>Dados sobre a autorização da transação de uma compra feita com cartão. Veja seus campos <a href="/docs/dados-da-conta/objetos-do-extrato/#campos-do-objeto-transaction_authorization">abaixo</a></td>
 <td><em>Object</em></td>
 <td><code>outbound_stone_prepaid_card_payment</code>, <code>outbound_stone_prepaid_card_payment_refund</code>, <code>outbound_stone_prepaid_card_payment_chargeback</code>, <code>outbound_stone_prepaid_card_withdrawal</code>, <code>outbound_stone_prepaid_card_withdrawal_refund</code></td>
 </tr>
 <tr>
 <td>transaction_chargeback</td>
-<td>Dados sobre o estorno da transação de uma compra feita com cartão.</td>
+<td>Dados sobre o estorno da transação de uma compra feita com cartão. Veja seus campos <a href="/docs/dados-da-conta/objetos-do-extrato/#campos-do-objeto-transaction_chargeback">abaixo</a></td>
 <td><em>Object</em></td>
 <td><code>outbound_stone_prepaid_card_payment_chargeback</code></td>
 </tr>
@@ -3235,12 +3212,12 @@
 <tbody>
 <tr>
 <td>account</td>
-<td>Dados da conta destino.</td>
+<td>Dados da conta destino. Veja seus campos <a href="/docs/dados-da-conta/objetos-do-extrato/#campos-do-objeto-account">abaixo</a></td>
 <td><em>Object</em></td>
 </tr>
 <tr>
 <td>entity</td>
-<td>Dados Pessoais.</td>
+<td>Dados Pessoais. Veja seus campos <a href="/docs/dados-da-conta/objetos-do-extrato/#campos-do-objeto-entity-">abaixo</a></td>
 <td><em>Object</em></td>
 </tr>
 </tbody>
@@ -3326,7 +3303,7 @@
 </tr>
 <tr>
 <td>applied_retention_rules</td>
-<td>Dados de onde será aplicada as regras de juros.</td>
+<td>Dados de onde será aplicada as regras de juros.  Veja seus campos <a href="/docs/dados-da-conta/objetos-do-extrato/#campos-do-objeto-applied_retention_rules">abaixo</a></td>
 <td><em>Object</em></td>
 </tr>
 <tr>
@@ -3383,7 +3360,7 @@
 </tr>
 <tr>
 <td>retained_portion</td>
-<td>Dados sobre a porcentagem dos juros.</td>
+<td>Dados sobre a porcentagem dos juros.Veja seus campos <a href="/docs/dados-da-conta/objetos-do-extrato/#campos-do-objeto-retained_portion">abaixo</a></td>
 <td><em>Object</em></td>
 </tr>
 <tr>
@@ -3447,7 +3424,7 @@
 </tr>
 <tr>
 <td>beneficiary</td>
-<td>Dados do beneficário do empréstimo/crédito.</td>
+<td>Dados do beneficário do empréstimo/crédito.  Veja seus campos <a href="/docs/dados-da-conta/objetos-do-extrato/#campos-do-objeto-beneficiary">abaixo</a></td>
 <td><em>Object</em></td>
 </tr>
 <tr>
@@ -3578,7 +3555,7 @@
 </tr>
 <tr>
 <td>value</td>
-<td>Dados do valor convertido pra BRL, com taxas.</td>
+<td>Dados do valor convertido pra BRL, com taxas. Veja seus campos <a href="/docs/dados-da-conta/objetos-do-extrato/#campos-do-objeto-value">abaixo</a></td>
 <td><em>Object</em></td>
 </tr>
 </tbody>
@@ -3649,7 +3626,7 @@
 </tr>
 <tr>
 <td>value</td>
-<td>Dados do valor estornado.</td>
+<td>Dados do valor estornado.Veja seus campos <a href="/docs/dados-da-conta/objetos-do-extrato/#campos-do-objeto-value">aqui</a></td>
 <td><em>Object</em></td>
 </tr>
 </tbody>
@@ -3669,8 +3646,6 @@
                     </h5>
                     <p></p>
                 </div>
-            
-        
             
         
             

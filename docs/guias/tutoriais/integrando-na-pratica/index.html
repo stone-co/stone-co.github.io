@@ -152,7 +152,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/stone-openbank-api/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Stone OpenBank-API</a>
+    <a  href="/docs/guias/stone-openbank-api/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Stone OpenBank API</a>
   </li>
   <ul>
     <li class="collapse " id="docsguiasstone-openbank-api">
@@ -612,34 +612,11 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/conta-stone-sdk/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">conta-stone-sdk</a>
+    <a  href="/docs/guias/conta-stone-sdk/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Conta Stone SDK</a>
   </li>
   <ul>
     <li class="collapse " id="docsguiasconta-stone-sdk">
       
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/conta-stone-sdk/conta-stone-sdk/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Conta Stone SDK</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsguiasconta-stone-sdkconta-stone-sdk">
-      
-      
-      
-    </li>
-  </ul>
-</ul>
-
       
       
     </li>
@@ -1388,10 +1365,10 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/transferencias/transferencias-internas/llistar-transferencias-internas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Transferências Internas</a>
+    <a  href="/docs/transferencias/transferencias-internas/listar-transferencias-internas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Transferências Internas</a>
   </li>
   <ul>
-    <li class="collapse " id="docstransferenciastransferencias-internasllistar-transferencias-internas">
+    <li class="collapse " id="docstransferenciastransferencias-internaslistar-transferencias-internas">
       
       
       
@@ -2960,7 +2937,7 @@
 <p>Utilizando seu <code>access_token</code> já é possível acessar as funcionalidades da API, de acordo com o que a sua aplicação tem permissão de fazer. Para ter permissão de criar transações em contas de usuários, ou até de visualizar seus dados, é preciso obter consentimento do dono da conta. Isso é possível enviando o link construído no passo anterior para a usuária, para que ela possa dar acesso à conta.</p>
 <h5 id="consultando-as-contas-às-quais-a-aplicação-parceira-tem-acesso"><strong>Consultando as contas às quais a aplicação parceira tem acesso</strong></h5>
 <p>Através da API é possível, por exemplo, consultar a quais contas você tem acesso, tanto no caso de você ser uma aplicação parceira com consentimento para acessar contas, quanto no caso de você ser proprietário de alguma conta.</p>
-<p>Para isso, é preciso apenas consultar o endpoint <a href="/docs/dados-da-conta/consultar-todas-as-contas-as-quais-o-usuario-tem-acesso">Consultar Todas Contas às Quais Se Tem Acesso</a>, utilizando seu <code>access_token</code> no campo do botão <code>Try It</code>.</p>
+<p>Para isso, é preciso apenas consultar o endpoint <a href="/docs/dados-da-conta/consultar-todas-as-contas-as-quais-o-usuario-tem-acesso">Consultar Todas Contas às Quais Se Tem Acesso</a>, utilizando seu <code>access_token</code>.</p>
 <p>Outra forma de acessar esse endpoint é realizando uma chamada para nossa API, enviando seu <code>access_token</code> em um header. Abaixo podemos observar isso em um exemplo de função que poderia ser utilizada para realizar essa consulta.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#a40000">def</span> <span style="color:#a40000">operational_accounts(access_token,</span> <span style="color:#a40000">pagination_params=</span><span style="color:#000;font-weight:bold">{}</span><span style="color:#a40000">):</span>
     <span style="color:#a40000">url</span> <span style="color:#a40000">=</span> <span style="color:#a40000">f</span><span style="color:#4e9a06">&#34;{API_URL}/accounts&#34;</span>
@@ -3081,8 +3058,6 @@
     
     
     <hr class="panel-line">
-        
-            
         
             
         

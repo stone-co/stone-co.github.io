@@ -152,7 +152,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/stone-openbank-api/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Stone OpenBank-API</a>
+    <a  href="/docs/guias/stone-openbank-api/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Stone OpenBank API</a>
   </li>
   <ul>
     <li class="collapse show" id="docsguiasstone-openbank-api">
@@ -612,34 +612,11 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/conta-stone-sdk/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">conta-stone-sdk</a>
+    <a  href="/docs/guias/conta-stone-sdk/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Conta Stone SDK</a>
   </li>
   <ul>
     <li class="collapse " id="docsguiasconta-stone-sdk">
       
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/conta-stone-sdk/conta-stone-sdk/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Conta Stone SDK</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsguiasconta-stone-sdkconta-stone-sdk">
-      
-      
-      
-    </li>
-  </ul>
-</ul>
-
       
       
     </li>
@@ -1388,10 +1365,10 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/transferencias/transferencias-internas/llistar-transferencias-internas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Transferências Internas</a>
+    <a  href="/docs/transferencias/transferencias-internas/listar-transferencias-internas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Transferências Internas</a>
   </li>
   <ul>
-    <li class="collapse " id="docstransferenciastransferencias-internasllistar-transferencias-internas">
+    <li class="collapse " id="docstransferenciastransferencias-internaslistar-transferencias-internas">
       
       
       
@@ -2828,7 +2805,7 @@
 
 
 <li class="breadcrumb-item" >
-	<a href="https://stone-co.github.io/docs/guias/stone-openbank-api/">Stone OpenBank-API</a>
+	<a href="https://stone-co.github.io/docs/guias/stone-openbank-api/">Stone OpenBank API</a>
 </li>
 
 
@@ -2856,7 +2833,7 @@
 <br>
 <p><strong>ClientID</strong></p>
 <p>Obtenha o seu <em>Access Token</em>, enviando um e-mail para nosso time de Parcerias através de <a href="mailto:parcerias@openbank.stone.com.br">parcerias@openbank.stone.com.br</a>.
-Somente com o <em>Access Token</em> em mãos você consegue realizar as <a href="/docs/guias/integracao/autenticacao">autenticações</a> necessárias para realizar as <a href="https://docs.openbank.stone.com.br/v1.0/reference">chamadas</a> na <strong>Stone Open Bank API</strong>.</p>
+Somente com o <em>Access Token</em> em mãos você consegue realizar as <a href="/docs/guias/integracao/autenticacao">autenticações</a> necessárias para realizar as <a href="/docs/stone-openbank/">chamadas</a> na <strong>Stone Open Bank API</strong>.</p>
 <p>O time de Parcerias do Stone Open Bank irá te enviar um formulário para preenchimento com os dados sobre seu projeto e posteriormente irá gerar um <em>ClientID</em>. Uma vez cadastrado e com o seu <em>ClientID</em> em mãos, você poderá realizar o processo de <a href="/docs/guias/integracao/autenticacao">autenticação da aplicação</a>, que permitirá que obtenha-se o <em>Access Token</em>. Este processo de <a href="/docs/guias/integracao/autenticacao">autenticação </a> consiste nas seguintes etapas:</p>
 <br>
 <p><strong>Geração de um token que contenha:</strong></p>
@@ -2871,7 +2848,7 @@ Somente com o <em>Access Token</em> em mãos você consegue realizar as <a href=
 <br>
 <p><strong>Obtenção de access e refresh tokens</strong></p>
 <p>Uma vez obtido o token, deve-se configurar os seguintes parâmetros e realizar a seguinte chamada:</p>
-<pre><code>**POST** https://sandbox-accounts.openbank.stone.com.br/auth/realms/stone_bank/protocol/openid-connect/token
+<pre><code>POST https://sandbox-accounts.openbank.stone.com.br/auth/realms/stone_bank/protocol/openid-connect/token
 
 content-type x-www-form-urlencoded
 </code></pre><ul>
@@ -3004,7 +2981,7 @@ content-type x-www-form-urlencoded
 </code></pre></div>
 </div>
 
-<p>Caso queira saber mais sobre as chamadas disponíveis na nossa API, consulte nossos endpoints em <a href="https://docs.openbank.stone.com.br/v1.0/reference">API Reference</a>.</p>
+<p>Caso queira saber mais sobre as chamadas disponíveis na nossa API, consulte nossos endpoints em <a href="/docs/stone-openbank/">API Reference</a>.</p>
 <h3 id="4---construindo-o-seu-app">4 - Construindo o seu App</h3>
 <br>
 <p>Com a resposta gerada pela requisição da TED acima, você poderá elaborar uma tela exibindo as informações da transferência realizada. Por exemplo, para construir a tela abaixo:</p>
@@ -3039,7 +3016,7 @@ content-type x-www-form-urlencoded
 
 <div class="pageinfo pageinfo-primary">
 <p><strong>Entenda mais sobre a Transfers API e a sua requisição de TED</strong></p>
-<p>Detalhes sobre a Transfers API se encontram na página <a href="/docs/transferencias/4-transferencias-externas/7-transferir-para-outros-bancos">Transferir para Outros Bancos</a>.</p>
+<p>Detalhes sobre a Transfers API se encontram na página <a href="/docs/transferencias/transferencias-externas/transferir-para-outros-bancos">Transferir para Outros Bancos</a>.</p>
 
 </div>
 
@@ -3050,8 +3027,6 @@ content-type x-www-form-urlencoded
     
     
     <hr class="panel-line">
-        
-            
         
             
         

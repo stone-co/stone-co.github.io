@@ -152,7 +152,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/stone-openbank-api/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Stone OpenBank-API</a>
+    <a  href="/docs/guias/stone-openbank-api/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Stone OpenBank API</a>
   </li>
   <ul>
     <li class="collapse " id="docsguiasstone-openbank-api">
@@ -612,34 +612,11 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/conta-stone-sdk/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">conta-stone-sdk</a>
+    <a  href="/docs/guias/conta-stone-sdk/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Conta Stone SDK</a>
   </li>
   <ul>
     <li class="collapse " id="docsguiasconta-stone-sdk">
       
-      
-      
-      
-      
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/conta-stone-sdk/conta-stone-sdk/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Conta Stone SDK</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsguiasconta-stone-sdkconta-stone-sdk">
-      
-      
-      
-    </li>
-  </ul>
-</ul>
-
       
       
     </li>
@@ -1388,10 +1365,10 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/transferencias/transferencias-internas/llistar-transferencias-internas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Transferências Internas</a>
+    <a  href="/docs/transferencias/transferencias-internas/listar-transferencias-internas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Transferências Internas</a>
   </li>
   <ul>
-    <li class="collapse " id="docstransferenciastransferencias-internasllistar-transferencias-internas">
+    <li class="collapse " id="docstransferenciastransferencias-internaslistar-transferencias-internas">
       
       
       
@@ -2836,13 +2813,13 @@
 	<hr>
 <br>
 <ol>
-<li>Será enviado pelo nosso time de parcerias o formulário para criação das <a href="https://docs.openbank.stone.com.br/docs/cadastro-na-aplica%C3%A7%C3%A3o#credenciais-da-minha-aplica%C3%A7%C3%A3o">credenciais da sua aplicação</a>.</li>
+<li>Será enviado pelo nosso time de parcerias o formulário para criação das <a href="/docs/guias/integracao/cadastro-da-aplicacao/#credenciais-da-minha-aplica%C3%A7%C3%A3o">credenciais da sua aplicação</a>.</li>
 </ol>
 
 
 <div class="pageinfo pageinfo-primary">
 <p><strong>Atenção</strong></p>
-<p>Será necessário <a href="/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves">gerar um par de chaves RSA 4096</a> e compartilhar a <strong>chave pública</strong> conosco no formato .pem.</p>
+<p>Será necessário <a href="/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves">gerar um par de chaves RSA 4096</a> e compartilhar a <strong>chave pública</strong> conosco no formato PEM e extensão .pub</p>
 
 </div>
 
@@ -2854,16 +2831,16 @@
 
 <div class="pageinfo pageinfo-primary">
 <p><strong>Chave Pública</strong></p>
-<p>A chave que deverá ser enviada para a Stone através do formulário é a <strong>chave pública</strong> e <strong>não</strong> a <strong>chave privada</strong>.</p>
+<p>A chave que deverá ser enviada para a Stone através do formulário é a <strong>chave pública</strong> e <strong>não</strong> a <strong>chave privada</strong>. Não queremos o arquivo .pem, mas sim o .pub</p>
 
 </div>
 
 <br>
 <h4 id="credenciais-da-minha-aplicação"><strong>Credenciais da minha aplicação</strong></h4>
-<p>O identificador que representa uma aplicação parceira na API Stone OpenBank é chamado de <code>cliend_id</code>. Ela é gerada pela Stone e é única. Ela será utilizada no processo de <a href="/docs/guias/integracao/autenticacao">autenticação</a> junto a API identificando assim todos os requests provenientes dessa aplicação.</p>
-<p>Alguns processos da nossa API, como o próprio processo de <a href="/docs/guias/integracao/autenticacao">autenticação</a>, envolvem uma etapa de criptografia assimétrica, assim na hora da criação da <code>client_id</code> da sua aplicação atrelaremos a ela a chave pública fornecida por você.</p>
+<p>O identificador que representa uma aplicação parceira na API Stone OpenBank é chamado de <code>cliend_id</code>. Ele é gerada pela Stone e é único. Ele será utilizada no processo de <a href="/docs/guias/integracao/autenticacao">autenticação</a> junto a API identificando assim todos os requests provenientes dessa aplicação.</p>
+<p>Alguns processos da nossa API, como o próprio processo de <a href="/docs/guias/integracao/autenticacao">autenticação</a>, envolvem uma etapa de criptografia assimétrica, assim na hora da criação do <code>client_id</code> da sua aplicação atrelaremos a ele a chave pública fornecida por você.</p>
 <p>Montamos um guia para te ajudar a gerar seu <a href="/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves">par de chaves assimétricas</a>.</p>
-<p>Cada <code>client_id</code> tem também as as URIs de webhook e URI de redirect que serão configuradas de acordo com as informações fornecidas pelo parceiro.</p>
+<p>Cada <code>client_id</code> tem também as URIs de webhook e URI de redirect que serão configuradas de acordo com as informações fornecidas pelo parceiro.</p>
 <br>
 
         <div class="section-index">
@@ -2898,8 +2875,6 @@
                     </h5>
                     <p></p>
                 </div>
-            
-        
             
         
             
