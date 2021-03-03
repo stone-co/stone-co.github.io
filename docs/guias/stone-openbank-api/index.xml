@@ -138,20 +138,23 @@ content-type x-www-form-urlencoded
 
 &lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
 &lt;h4 class=&#34;alert-heading&#34;&gt;cURL&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;curl&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;--request&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;POST&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;\&lt;/span&gt; 
+
+    &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;curl&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;--request&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;POST&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;\&lt;/span&gt; 
   
   &lt;span style=&#34;color:#a40000&#34;&gt;--url&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;https://sandbox-api.openbank.stone.com.br/api/v&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;/external_transfers&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;\&lt;/span&gt;
   &lt;span style=&#34;color:#a40000&#34;&gt;--header&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;Content-Type:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;application/json&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;\&lt;/span&gt;
   &lt;span style=&#34;color:#a40000&#34;&gt;--header&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;authorization:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;Bearer&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;token&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;\&lt;/span&gt;
   &lt;span style=&#34;color:#a40000&#34;&gt;--data&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;3000&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;target&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:{&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:{&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;654321&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1234&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;260&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;entity&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:{&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;05971627007&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Nome do destinatário&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}},&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;f49a9d13-18dc-4811-b286-edd168a428b2&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 
 
 
 &lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
 &lt;h4 class=&#34;alert-heading&#34;&gt;Ruby&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;require&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;uri&amp;#39;&lt;/span&gt;
+
+    &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;require&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;uri&amp;#39;&lt;/span&gt;
 &lt;span style=&#34;color:#a40000&#34;&gt;require&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;net/http&amp;#39;&lt;/span&gt;
 
 &lt;span style=&#34;color:#a40000&#34;&gt;url&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;URI(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;)&lt;/span&gt;
@@ -166,13 +169,15 @@ content-type x-www-form-urlencoded
 &lt;span style=&#34;color:#a40000&#34;&gt;response&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;http.request(request)&lt;/span&gt;
 &lt;span style=&#34;color:#a40000&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;response.read_body&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 
 
 
 &lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
 &lt;h4 class=&#34;alert-heading&#34;&gt;JavaScript&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;data&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;JSON.stringify(&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+
+    &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;data&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;JSON.stringify(&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;10050&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;target&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
     &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
@@ -202,13 +207,15 @@ content-type x-www-form-urlencoded
 
 &lt;span style=&#34;color:#a40000&#34;&gt;xhr.send(data);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 
 
 
 &lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
 &lt;h4 class=&#34;alert-heading&#34;&gt;Python&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;requests&lt;/span&gt;
+
+    &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;requests&lt;/span&gt;
 
 &lt;span style=&#34;color:#a40000&#34;&gt;url&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers&amp;#34;&lt;/span&gt;
 
@@ -219,18 +226,21 @@ content-type x-www-form-urlencoded
 
 &lt;span style=&#34;color:#a40000&#34;&gt;print(response.text)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 
 
 
 &lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
 &lt;h4 class=&#34;alert-heading&#34;&gt;C#&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;client&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;RestClient(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;);&lt;/span&gt;
+
+    &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;client&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;RestClient(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;);&lt;/span&gt;
 &lt;span style=&#34;color:#a40000&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;request&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;RestRequest(Method.POST);&lt;/span&gt;
 &lt;span style=&#34;color:#a40000&#34;&gt;request.AddHeader(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;authorization&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Bearer {token}&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;);&lt;/span&gt;
 &lt;span style=&#34;color:#a40000&#34;&gt;request.AddParameter(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;undefined&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;{\&amp;#34;amount\&amp;#34;:10050,\&amp;#34;target\&amp;#34;:{\&amp;#34;account\&amp;#34;:{\&amp;#34;account_code\&amp;#34;:\&amp;#34;1456879\&amp;#34;,\&amp;#34;branch_code\&amp;#34;:\&amp;#34;0633\&amp;#34;,\&amp;#34;institution_code\&amp;#34;:\&amp;#34;379\&amp;#34;},\&amp;#34;entity\&amp;#34;:{\&amp;#34;cpf\&amp;#34;:\&amp;#34;67385417752\&amp;#34;,\&amp;#34;name\&amp;#34;:\&amp;#34;Vitoria Silva Correia\&amp;#34;}},\&amp;#34;account_id\&amp;#34;:\&amp;#34;200568\&amp;#34;}&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;ParameterType.RequestBody);&lt;/span&gt;
 &lt;span style=&#34;color:#a40000&#34;&gt;IRestResponse&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;response&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;client.Execute(request);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;/div&gt;
 
 &lt;p&gt;Caso queira saber mais sobre as chamadas disponíveis na nossa API, consulte nossos endpoints em &lt;a href=&#34;https://stone-co.github.io/docs/stone-openbank/&#34;&gt;API Reference&lt;/a&gt;.&lt;/p&gt;

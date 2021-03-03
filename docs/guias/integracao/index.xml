@@ -532,7 +532,9 @@ Qualquer problema encontrado durante esta fase deve ser resolvido antes de pross
 
 &lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
 &lt;h4 class=&#34;alert-heading&#34;&gt;Webhook&lt;/h4&gt;
-Quando o &lt;code&gt;consent_result&lt;/code&gt; é &lt;code&gt;approved&lt;/code&gt; é enviado também o webhook &lt;code&gt;consent_requested&lt;/code&gt; com os dados do consentimento dado.
+
+    Quando o &lt;code&gt;consent_result&lt;/code&gt; é &lt;code&gt;approved&lt;/code&gt; é enviado também o webhook &lt;code&gt;consent_requested&lt;/code&gt; com os dados do consentimento dado.
+
 &lt;/div&gt;
 
 &lt;p&gt;Assim, fica fácil para o desenvolvedor prover uma experiência para ambos os casos: basta validar estes campos!&lt;/p&gt;
