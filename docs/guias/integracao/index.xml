@@ -101,8 +101,8 @@ Se isso ocorrer em um período curto demais pode ocasionar uma resposta &lt;code
 &lt;li&gt;Uma chamada com a &lt;strong&gt;chave de idempotênca maior que 72 caracteres&lt;/strong&gt; retornará um erro &lt;code&gt;HTTP 431&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;simulações-dry-run&#34;&gt;&lt;strong&gt;Simulações (dry-run)&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;Nossos endpoints que envolvem operações financeiras suportam &lt;a href=&#34;https://stone-co.github.io/docs/simulacoes-dry-run/&#34;&gt;Simulações (dry-run)&lt;/a&gt;, permitindo que o usuário visualize com antecedência o que vai acontecer nessa operação.&lt;/p&gt;
-&lt;p&gt;Em alguns casos, as Simulações permitem enriquecer os dados de uma operação, como, por exemplo o &lt;a href=&#34;https://stone-co.github.io/docs/simulacoes-dry-run/simular-o-pagamento-de-um-documento/&#34;&gt;Pagamento de Boletos&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Nossos endpoints que envolvem operações financeiras suportam &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/&#34;&gt;Simulações (dry-run)&lt;/a&gt;, permitindo que o usuário visualize com antecedência o que vai acontecer nessa operação.&lt;/p&gt;
+&lt;p&gt;Em alguns casos, as Simulações permitem enriquecer os dados de uma operação, como, por exemplo o &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/simular-o-pagamento-de-um-documento/&#34;&gt;Pagamento de Boletos&lt;/a&gt;.&lt;/p&gt;
 
       </description>
     </item>

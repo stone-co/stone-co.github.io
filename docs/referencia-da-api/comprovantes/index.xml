@@ -1,0 +1,60 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stone OpenBank – Comprovantes</title>
+    <link>https://stone-co.github.io/docs/referencia-da-api/comprovantes/</link>
+    <description>Recent content in Comprovantes on Stone OpenBank</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 17 Sep 2020 18:00:00 -0300</lastBuildDate>
+    
+	  <atom:link href="https://stone-co.github.io/docs/referencia-da-api/comprovantes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Como Emitir Um Comprovante</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/comprovantes/como-emitir-um-comprovante/</link>
+      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/comprovantes/como-emitir-um-comprovante/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Comprovantes informam sobre uma transação em detalhes, como fonte, destinatário e estado.&lt;/p&gt;
+&lt;p&gt;As operações que podem ter seu comprovante gerado são apenas as operações: Pagamento com código de barras, envio de TEDs, envio de transferências internas e extrato.&lt;/p&gt;
+&lt;p&gt;Comprovantes podem ser gerados apenas para transferências em estados de sucesso, como aprovada e agendada.&lt;/p&gt;
+&lt;p&gt;Comprovantes para extrato aceitam os parâmetros adicionais &lt;code&gt;start_datetime&lt;/code&gt; e &lt;code&gt;end_datetime&lt;/code&gt; para especificar o intervalo de tempo cujas entradas serão levadas em consideração ao gerar o comprovante.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/receipts
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;resource_type&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Allowed values: &lt;code&gt;external_transfer&lt;/code&gt;, &lt;code&gt;internal_transfer&lt;/code&gt;, &lt;code&gt;payment&lt;/code&gt; e &lt;code&gt;statement&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;resource_id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Format: &lt;code&gt;UUID&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;start_datetime&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Format: &lt;code&gt;ISO8601 - &amp;quot;YYYY-MM-DDThh:mm:ssZ&amp;quot;&lt;/code&gt;
+&lt;br&gt;Example: &lt;code&gt;&amp;quot;2021-01-01T00:00:00Z&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;end_datetime&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Format: &lt;code&gt;ISO8601 - &amp;quot;YYYY-MM-DDThh:mm:ssZ&amp;quot;&lt;/code&gt;
+&lt;br&gt;Example: &lt;code&gt;&amp;quot;2021-01-01T00:00:00Z&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;200&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;OK&lt;/span&gt;
+&lt;span style=&#34;color:#a40000&#34;&gt;content-type:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;application/json&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Retorna o PDF do comprovante&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

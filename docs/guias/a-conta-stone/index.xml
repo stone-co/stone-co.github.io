@@ -49,7 +49,7 @@
 &lt;br&gt;
 &lt;p&gt;A Stone oferece dois modelos principais de parceria:&lt;/p&gt;
 &lt;h4 id=&#34;api-de-open-banking&#34;&gt;&lt;strong&gt;API de Open Banking&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;Permite que o parceiro integre na &lt;a href=&#34;https://stone-co.github.io/docs/stone-openbank/&#34;&gt;API&lt;/a&gt; para disponibilizar todas as funcionalidades da Conta Stone para o usuário por meio de sua Aplicação. Dessa forma, é possível oferecer ao usuário um serviço mais completo, agregando valor ao seu produto.&lt;/p&gt;
+&lt;p&gt;Permite que o parceiro integre na &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/stone-openbank&#34;&gt;API&lt;/a&gt; para disponibilizar todas as funcionalidades da Conta Stone para o usuário por meio de sua Aplicação. Dessa forma, é possível oferecer ao usuário um serviço mais completo, agregando valor ao seu produto.&lt;/p&gt;
 &lt;p&gt;O usuário interage com seu serviço através de uma interface de sua responsabilidade.&lt;/p&gt;
 &lt;p&gt;O usuário enxerga a Stone como provedor financeiro, agregando a imagem de confiança financeira da Stone ao seu serviço.&lt;/p&gt;
 &lt;p&gt;A aprovação de cash-out (qualquer saída de recurso da conta) sempre terá que ser aprovada pelo usuário por meio de autenticação no ambiente Stone, através do aplicativo &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/aprovacao&#34;&gt;Aprovador&lt;/a&gt;. Dessa forma, o parceiro fica protegido da responsabilidade na movimentação de recursos financeiros.&lt;/p&gt;

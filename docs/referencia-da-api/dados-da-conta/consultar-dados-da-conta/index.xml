@@ -1,0 +1,18 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stone OpenBank – Consultar Dados da Conta</title>
+    <link>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-dados-da-conta/</link>
+    <description>Recent content in Consultar Dados da Conta on Stone OpenBank</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 01 Apr 2019 18:52:27 +0000</lastBuildDate>
+    
+	  <atom:link href="https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-dados-da-conta/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

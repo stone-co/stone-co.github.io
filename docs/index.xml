@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Stone OpenBank – Referência da API</title>
+    <title>Stone OpenBank – Stone Openbank</title>
     <link>https://stone-co.github.io/docs/</link>
-    <description>Recent content in Referência da API on Stone OpenBank</description>
+    <description>Recent content in Stone Openbank on Stone OpenBank</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 17 Sep 2020 18:00:00 -0300</lastBuildDate>
     
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Considerações Importantes</title>
-      <link>https://stone-co.github.io/docs/pagamentos/consideracoes_importantes/considera%C3%A7%C3%B5es-importantes/</link>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pagamentos/consideracoes_importantes/considera%C3%A7%C3%B5es-importantes/</link>
       <pubDate>Mon, 10 Dec 2018 22:28:11 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/docs/pagamentos/consideracoes_importantes/considera%C3%A7%C3%B5es-importantes/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pagamentos/consideracoes_importantes/considera%C3%A7%C3%B5es-importantes/</guid>
       <description>
         
         

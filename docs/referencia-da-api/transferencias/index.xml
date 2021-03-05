@@ -1,0 +1,513 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stone OpenBank – Transferências</title>
+    <link>https://stone-co.github.io/docs/referencia-da-api/transferencias/</link>
+    <description>Recent content in Transferências on Stone OpenBank</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 13 May 2020 18:00:00 -0300</lastBuildDate>
+    
+	  <atom:link href="https://stone-co.github.io/docs/referencia-da-api/transferencias/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: O Que É Uma Transferência</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/transferencias/o-que-e-uma-transferencia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/transferencias/o-que-e-uma-transferencia/</guid>
+      <description>
+        
+        
+        &lt;h4 id=&#34;conceito&#34;&gt;Conceito&lt;/h4&gt;
+&lt;p&gt;Oferecemos uma API de Transferências, na qual permite-se efetuar a movimentação de fundos entre contas bancárias, podendo ser:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Transferência interna: Transferência entre duas Contas Stone. O valor transferido é creditado instantaneamente na conta destinatária, independente do horário e dia da efetuação da transação.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Transferência externa: TED (Transferência Eletrônica Disponível) para outros bancos. Nos dias úteis, entre 6:30 e 17:23, a transação é processada de forma assíncrona e o valor é creditado na conta destino em poucas horas. Caso a operação seja efetuada fora do horário citado e/ou em dias não úteis, a transação será agendada automaticamente para o dia útil seguinte.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;status&#34;&gt;Status&lt;/h4&gt;
+&lt;h5 id=&#34;segue-abaixo-os-status-possíveis-de-uma-transferência-externa&#34;&gt;Segue abaixo os status possíveis de uma &lt;strong&gt;transferência externa&lt;/strong&gt;:&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/docs/referencia-da-api/transferencias/o-que-e-uma-transferencia/1b90b91-Transfrncia_Externa.png&#34; alt=&#34;status_TED&#34;&gt;&lt;/p&gt;
+&lt;p&gt;A transferência externa criada pela parceira aguardará a &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/aprovacao&#34;&gt;aprovação&lt;/a&gt; do usuário da conta no estado &lt;code&gt;CREATED&lt;/code&gt;. Essa transferência pode ser rejeitada pela usuário, concluindo no estado &lt;code&gt;REJECTED&lt;/code&gt;, e não será efetuada. Caso ela seja uma transferência agendada, é possível que o prazo do agendamento expire antes dela obter aprovação, encerrando em &lt;code&gt;EXPIRED&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Caso ela seja agendada e aprovada dentro do prazo, seguirá para o estado &lt;code&gt;SCHEDULED&lt;/code&gt;, e será efetuada  na data do agendamento. É importante observar que caso a criação da transferência externa, tanto pelo parceiro quanto pelo usuário, seja feita fora do horário de 6:30 às 17:23, ela seguirá para um estado de &lt;code&gt;DELAYED_TO_NEXT_BUSINESS_DAY&lt;/code&gt;, em que ela será agendada para a próxima janela de execução. É possível que o usuário cancele a transferência antes dela ser efetuada, encerrando no estado &lt;code&gt;CANCELLED&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Quando é o próprio usuário que cria a transação, o fluxo já se inicia no estado &lt;code&gt;APPROVED&lt;/code&gt; ou &lt;code&gt;SCHEDULED&lt;/code&gt;, caso tenha sido criada com agendamento. A transferência poderá falhar apenas caso não haja fundos e terminará no estado &lt;code&gt;FAILED&lt;/code&gt;. Caso tenha sido aprovada e haja fundos, a Stone realizará a transferência para o banco externo, obtendo o estado &lt;code&gt;FINISHED&lt;/code&gt;. Caso haja algum problema como, por exemplo, dados incorretos, ele será reembolsado e irá  finalizar no estado &lt;code&gt;REFUNDED&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Para a transferência interna o fluxo é similar. Neste caso não haverá o estado &lt;code&gt;REFUNDED&lt;/code&gt;, já que antes de realizar a transferência já conferimos a existência da conta destino. Não haverá também o estado &lt;code&gt;DELAYED_TO_NEXT_BUSINESS_DAY&lt;/code&gt;, porque não há limites de horário para a realização de transferências para outras contas Stone.&lt;/p&gt;
+&lt;p&gt;É possível consultar o status de uma transação a qualquer momento para saber em qual estado ela está.&lt;/p&gt;
+&lt;h5 id=&#34;segue-abaixo-os-status-possíveis-de-uma-transferência-interna&#34;&gt;Segue abaixo os status possíveis de uma &lt;strong&gt;transferência interna&lt;/strong&gt;:&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/docs/referencia-da-api/transferencias/o-que-e-uma-transferencia/0d9c77f-Transferncia_Interna.png&#34; alt=&#34;status_TransfInterna&#34;&gt;&lt;/p&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;No ambiente de &lt;em&gt;sandbox&lt;/em&gt;, a API de transferência externa fica disponível de 6:30 às 17:23 todos os dias, inclusive nos fins de semana e feriados, para facilitar os testes.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h4 id=&#34;falhas-em-transferências&#34;&gt;Falhas em transferências&lt;/h4&gt;
+&lt;p&gt;Falha é qualquer erro que ocorra entre a criação e a movimentação do dinheiro na conta. Ou seja, qualquer condição que era válida no momento da criação da transferência, mas que mudou nas etapas seguintes.&lt;/p&gt;
+&lt;p&gt;A seguir listamos algumas das falhas possíveis para transações de transferência, tanto para interna quanto para externa.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Código&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;Ocorreu um erro durante a transferência. Por favor, tente novamente.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Saldo insuficiente.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;A operação falhou por uma restrição em uma das contas.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;reembolsos-em-transferências&#34;&gt;Reembolsos em transferências&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Reembolsos ocorrem apenas em transferências para outros bancos&lt;/strong&gt;, já que para transferências internas conferimos a existência da conta destino antes de realizar a transferência.&lt;br&gt;
+Abaixo listamos algumas das razões possíveis para ocorrer reembolsos, como também seus códigos correspondentes.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Código&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;Ocorreu um erro durante a transferência. Por favor, tente novamente.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;A conta destino não existe mais. Por favor, entre em contato com o titular.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;A agência ou conta do destino estão incorretas. Por favor, confira os dados e tente novamente.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;O CPF/CNPJ do destino está incorreto. Por favor, confira os dados e tente novamente.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;Mensagem Inválida para o Tipo de Transação ou Finalidade.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;Ocorreu um problema devido ao grande volume de transações. Tente novamente.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;A conta destino não está apta a receber o valor enviado. Por favor, entre em contato com o titular.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;Não conformidade no pagamento.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;Os dados informados estão incorretos. Por favor, confira e tente novamente.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;CPF/CNPJ inapto junto à Receita Federal do Brasil.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;Por solicitação de cliente da instituição participante recebedora.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: O Objeto Transferência</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/transferencias/o-objeto-transferencia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/transferencias/o-objeto-transferencia/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Abaixo vamos trazer os campos de cada tipo de transferência.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;transferência-interna&#34;&gt;Transferência Interna&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;id&lt;/td&gt;
+&lt;td&gt;Identificador único da transação, no formato UUID4.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;amount&lt;/td&gt;
+&lt;td&gt;Valor da transação, em centavos de Reais.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;fee&lt;/td&gt;
+&lt;td&gt;Taxa da transação, em centavos de Reais.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;target&lt;/td&gt;
+&lt;td&gt;Objeto com os dados de conta destino. Veja &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/transferencias/2-o-objeto-transferencia/#campos-do-objeto-target&#34;&gt;abaixo&lt;/a&gt; seus campos.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;created_at&lt;/td&gt;
+&lt;td&gt;Horário em que a transação foi criada, em formato ISO8601. Nesse caso nunca será &lt;code&gt;null&lt;/code&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;approved_at&lt;/td&gt;
+&lt;td&gt;Horário em que a transação foi aprovada, em formato ISO8601. Retorna &lt;code&gt;null&lt;/code&gt; caso a transação não tenha sido aprovada em nenhum momento.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;rejected_at&lt;/td&gt;
+&lt;td&gt;Horário em que a transação foi rejeitada, em formato ISO8601. Retorna &lt;code&gt;null&lt;/code&gt; caso a transação não tenha sido rejeitada em nenhum momento.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;failed_at&lt;/td&gt;
+&lt;td&gt;Horário em que a transação falhou, em formato ISO8601. Retorna &lt;code&gt;null&lt;/code&gt; caso a transação nunca tenha falhado.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;failure_reason_code&lt;/td&gt;
+&lt;td&gt;Código do motivo da falha.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;failure_reason_description&lt;/td&gt;
+&lt;td&gt;Descrição do motivo da falha.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;status&lt;/td&gt;
+&lt;td&gt;Status atual da transação, podendo ser um dentre os status à seguir: &lt;code&gt;CREATED&lt;/code&gt;, &lt;code&gt;REJECTED&lt;/code&gt;, &lt;code&gt;EXPIRED&lt;/code&gt;, &lt;code&gt;APPROVED&lt;/code&gt;, &lt;code&gt;SCHEDULED&lt;/code&gt;, &lt;code&gt;FAILED&lt;/code&gt;, &lt;code&gt;FINISHED&lt;/code&gt;, &lt;code&gt;CANCELLED&lt;/code&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;description&lt;/td&gt;
+&lt;td&gt;Descrição que foi adicionada durante a criação da transação. Retornará &amp;quot;&amp;quot; caso não tenha sido preenchido. Campo com tamanho máximo de 140 caracteres.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;approved_by&lt;/td&gt;
+&lt;td&gt;Identificador único do usuário que aprovou a transação, no formato &lt;code&gt;user:UUID4&lt;/code&gt;. Retorna &lt;code&gt;null&lt;/code&gt; caso não tenha sido aprovada em nenhum momento.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;created_by&lt;/td&gt;
+&lt;td&gt;Identificador único do usuário que criou a transação, no formato &lt;code&gt;user:UUID4&lt;/code&gt;. Neste caso nunca irá retornar &lt;code&gt;null&lt;/code&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;rejected_by&lt;/td&gt;
+&lt;td&gt;Identificador único do usuário que rejeitou a transação, no formato &lt;code&gt;user:UUID4&lt;/code&gt;. Retorna &lt;code&gt;null&lt;/code&gt; caso não tenha sido rejeitada em nenhum momento.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;approval_expired_at&lt;/td&gt;
+&lt;td&gt;Horário em que a transação expirou, em formato ISO8601. Retorna &lt;code&gt;null&lt;/code&gt; caso a transação esteja aguardando aprovação ou já tenha sido aprovada em algum momento.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cancelled_at&lt;/td&gt;
+&lt;td&gt;Horário em que um pagamento agendado foi cancelado, em formato ISO8601. Retorna &lt;code&gt;null&lt;/code&gt; caso não haja cancelamento.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;finished_at&lt;/td&gt;
+&lt;td&gt;Horário em que a transação foi finalizada, em formato ISO8601. Retorna &lt;code&gt;null&lt;/code&gt; caso a transação não tenha sido finalizada.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;scheduled_to&lt;/td&gt;
+&lt;td&gt;Data na qual a transferência será executada. Retornará &lt;code&gt;null&lt;/code&gt; caso não haja agendamento.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;   
+&lt;h4 id=&#34;transferência-externa&#34;&gt;Transferência Externa&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;id&lt;/td&gt;
+&lt;td&gt;Identificador único da transação, no formato UUID4.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;amount&lt;/td&gt;
+&lt;td&gt;Valor da transação, em centavos de Reais.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;fee&lt;/td&gt;
+&lt;td&gt;Taxa da transação, em centavos de Reais.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;target&lt;/td&gt;
+&lt;td&gt;Objeto com os dados de conta destino. Veja abaixo seus campos. Veja seus campos &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/transferencias/o-objeto-transferencia/#campos-do-objeto-target&#34;&gt;aqui&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;created_at&lt;/td&gt;
+&lt;td&gt;Horário em que a transação foi criada, em formato ISO8601. Nesse caso nunca será &lt;code&gt;null&lt;/code&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;approved_at&lt;/td&gt;
+&lt;td&gt;Horário em que a transação foi aprovada, em formato ISO8601. Retorna &lt;code&gt;null&lt;/code&gt; caso a transação não tenha sido aprovada em nenhum momento.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;rejected_at&lt;/td&gt;
+&lt;td&gt;Horário em que a transação foi rejeitada, em formato ISO8601. Retorna &lt;code&gt;null&lt;/code&gt; caso a transação não tenha sido rejeitada em nenhum momento.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;failed_at&lt;/td&gt;
+&lt;td&gt;Horário em que a transação falhou, em formato ISO8601. Retorna &lt;code&gt;null&lt;/code&gt; caso a transação nunca tenha falhado.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;failure_reason_code&lt;/td&gt;
+&lt;td&gt;Código do motivo da falha.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;failure_reason_description&lt;/td&gt;
+&lt;td&gt;Descrição do motivo da falha.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;status&lt;/td&gt;
+&lt;td&gt;Status atual da transação, podendo ser um dentre os status à seguir: &lt;code&gt;CREATED&lt;/code&gt;, &lt;code&gt;REJECTED&lt;/code&gt;, &lt;code&gt;EXPIRED&lt;/code&gt;, &lt;code&gt;APPROVED&lt;/code&gt;, &lt;code&gt;SCHEDULED&lt;/code&gt;, &lt;code&gt;FAILED&lt;/code&gt;, &lt;code&gt;FINISHED&lt;/code&gt;, &lt;code&gt;CANCELLED&lt;/code&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;approved_by&lt;/td&gt;
+&lt;td&gt;Identificador único do usuário que aprovou a transação, no formato &lt;code&gt;user:UUID4&lt;/code&gt;. Retorna &lt;code&gt;null&lt;/code&gt; caso não tenha sido aprovada em nenhum momento.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;created_by&lt;/td&gt;
+&lt;td&gt;Identificador único do usuário que criou a transação, no formato &lt;code&gt;user:UUID4&lt;/code&gt;. Neste caso nunca irá retornar &lt;code&gt;null&lt;/code&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;rejected_by&lt;/td&gt;
+&lt;td&gt;Identificador único do usuário que rejeitou a transação, no formato &lt;code&gt;user:UUID4&lt;/code&gt;. Retorna &lt;code&gt;null&lt;/code&gt; caso não tenha sido rejeitada em nenhum momento.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;approval_expired_at&lt;/td&gt;
+&lt;td&gt;Horário em que a transação expirou, em formato ISO8601. Retorna &lt;code&gt;null&lt;/code&gt; caso a transação esteja aguardando aprovação ou já tenha sido aprovada em algum momento.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cancelled_at&lt;/td&gt;
+&lt;td&gt;Horário em que um pagamento agendado foi cancelado, em formato ISO8601. Retorna &lt;code&gt;null&lt;/code&gt; caso não haja cancelamento.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;finished_at&lt;/td&gt;
+&lt;td&gt;Horário em que a transação foi finalizada, em formato ISO8601. Retorna &lt;code&gt;null&lt;/code&gt; caso a transação não tenha sido finalizada.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;delayed_to_next_business_day&lt;/td&gt;
+&lt;td&gt;Caso a transação seja feita fora do horário, será agendada para o póximo dia útil. Caso esse agendamento ocorra, retorna &lt;code&gt;true&lt;/code&gt;, caso contrário, retorna &lt;code&gt;false&lt;/code&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Boolean&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;refund_reason_code&lt;/td&gt;
+&lt;td&gt;Código do reembolso. Retorna &lt;code&gt;null&lt;/code&gt; caso não haja reembolso.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;refund_reason_description&lt;/td&gt;
+&lt;td&gt;Descrição do motivo do reembolso. Retorna &lt;code&gt;null&lt;/code&gt; caso não haja reembolso.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;scheduled_to_effective&lt;/td&gt;
+&lt;td&gt;Data na qual a TED será executada. Pode divergir da data solicitada quando esta for um dia não útil. Retornará &lt;code&gt;null&lt;/code&gt; caso não haja agendamento.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;scheduled_to_requested&lt;/td&gt;
+&lt;td&gt;Data para a qual o agendamento da TED foi solicitado. Retornará null caso não haja agendamento.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;campos-do-objeto-target&#34;&gt;Campos do objeto &lt;strong&gt;target&lt;/strong&gt;&lt;/h5&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;account&lt;/td&gt;
+&lt;td&gt;Objeto que representa a conta destino da transferência. Veja os campos desse objeto &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/transferencias/o-objeto-transferencia/#campos-do-objeto-account&#34;&gt;abaixo&lt;/a&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;entity&lt;/td&gt;
+&lt;td&gt;Objeto que contem os dados do indivíduo ou companhia responsável pela conta. Veja os campos desse objeto &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/transferencias/2-o-objeto-transferencia/#campos-do-objeto-entity&#34;&gt;abaixo&lt;/a&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;campos-do-objeto-account&#34;&gt;Campos do objeto &lt;strong&gt;account&lt;/strong&gt;&lt;/h5&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;account_code&lt;/td&gt;
+&lt;td&gt;Número da conta bancária.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;branch_code&lt;/td&gt;
+&lt;td&gt;NNúmero da agência da conta. &lt;strong&gt;Apenas para transferência externa&lt;/strong&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;institution_ispb&lt;/td&gt;
+&lt;td&gt;Código ISPB da instituição responsável pela conta. Existe uma lista completa relacionando as instituições e seus respectivos códigos neste &lt;a href=&#34;https://www.bcb.gov.br/pom/spb/estatistica/port/ASTR003.pdf&#34;&gt;link&lt;/a&gt;. &lt;strong&gt;Apenas para transferência externa&lt;/strong&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;institution_name&lt;/td&gt;
+&lt;td&gt;Nome da instituição responsável pela conta. &lt;strong&gt;Apenas para transferência externa&lt;/strong&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;institution_number_code&lt;/td&gt;
+&lt;td&gt;Código numérico da instituição responsável pela conta.&lt;strong&gt;Apenas para transferência externa&lt;/strong&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;account_type&lt;/td&gt;
+&lt;td&gt;Código que identifica o tipo de conta. Os valores possíveis são:&lt;br&gt; &lt;code&gt;CC&lt;/code&gt; - Conta Corrente, &lt;code&gt;CD&lt;/code&gt; - Conta de Depósito, &lt;code&gt;CG&lt;/code&gt; - Conta garantida, &lt;code&gt;CI&lt;/code&gt; - Conta de Investimento, &lt;code&gt;PG&lt;/code&gt; - Conta de Pagamento, &lt;code&gt;PP&lt;/code&gt; - Poupança. &lt;strong&gt;Apenas para transferência externa&lt;/strong&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;campos-do-objeto-entity&#34;&gt;Campos do objeto &lt;strong&gt;entity&lt;/strong&gt;&lt;/h5&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;name&lt;/td&gt;
+&lt;td&gt;Nome do proprietário da conta.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;document&lt;/td&gt;
+&lt;td&gt;Número do documento sem pontos da dona da conta alvo. &lt;strong&gt;Apenas para transferência externa&lt;/strong&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;document_type&lt;/td&gt;
+&lt;td&gt;Tipo do documento da dona da conta alvo. Pode ser &lt;code&gt;cpf&lt;/code&gt; ou &lt;code&gt;cnpj&lt;/code&gt;. Utilizamos esse valor para distinguir o tipo de entidade da proprietária da conta entre pessoa física e pessoa jurídica. &lt;strong&gt;Apenas para transferência externa&lt;/strong&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;A criação de transferências internas e externas estão sujeitas a um limite de &lt;code&gt;&amp;quot;amount&amp;quot;: 999999999999999999&lt;/code&gt;.
+&lt;br&gt;Observe que o usuário não é limitado de nenhuma forma prática por esse valor.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Transferências Internas</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-internas/</link>
+      <pubDate>Mon, 01 Apr 2019 19:23:33 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-internas/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Transferências Externas</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-externas/</link>
+      <pubDate>Mon, 01 Apr 2019 19:23:33 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-externas/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

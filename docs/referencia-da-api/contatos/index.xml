@@ -1,0 +1,463 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stone OpenBank – Contatos</title>
+    <link>https://stone-co.github.io/docs/referencia-da-api/contatos/</link>
+    <description>Recent content in Contatos on Stone OpenBank</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 17 Sep 2020 18:00:00 -0300</lastBuildDate>
+    
+	  <atom:link href="https://stone-co.github.io/docs/referencia-da-api/contatos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: O Objeto Contato</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/contatos/o-objeto-contato/</link>
+      <pubDate>Tue, 04 Jun 2019 20:19:47 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/contatos/o-objeto-contato/</guid>
+      <description>
+        
+        
+        &lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;bank_accounts&lt;/td&gt;
+&lt;td&gt;Lista de contas bancárias. Caso não seja preenchido, retornará [].&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;List de Accounts&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;email&lt;/td&gt;
+&lt;td&gt;E-mail do contato. Caso não seja preenchido, retornará null.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;id&lt;/td&gt;
+&lt;td&gt;Identificador único do contato, no formato UUID4.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;mobile&lt;/td&gt;
+&lt;td&gt;Número do celular do contato. Caso não seja preenchido, retornará null.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;name&lt;/td&gt;
+&lt;td&gt;Nome da proprietária da conta.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;tax_id&lt;/td&gt;
+&lt;td&gt;Documento do contato, pode ser cpf ou cnpj. Caso não seja preenchido, retornará null.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Criar Um Contato</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/contatos/criar-um-contato/</link>
+      <pubDate>Mon, 01 Apr 2019 20:01:02 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/contatos/criar-um-contato/</guid>
+      <description>
+        
+        
+        &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Identificador da conta.&lt;/p&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;name&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Nome do contato.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;tax_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Documento do contato (CPF/CNPJ).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;email&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;E-mail do contato.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;mobile&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Telefone do contato.&lt;/p&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Chave de idempotência.&lt;/p&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;200 ok
+&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;content-type: application/json
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;bank_accounts&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[],&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;email&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;guilherme.email@stone.com.br&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;222f3745-24ed-4968-929f-a88c168ce582&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;mobile&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;21 999999999&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Guilherme Posse&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;tax_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;16426334022&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Listar Contatos</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/contatos/listar-contatos/</link>
+      <pubDate>Mon, 01 Apr 2019 20:03:25 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/contatos/listar-contatos/</guid>
+      <description>
+        
+        
+        &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Identificador da conta.&lt;/p&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;query-params&#34;&gt;&lt;strong&gt;QUERY PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;tax_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Filtra contatos pelo documento fornecido.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;account_code&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Filtra contatos pelo código da conta fornecido.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;institution_code&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Filtra contatos pelo código da instituição fornecido.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;200 ok
+&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;content-type: application/json
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
+  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;bank_accounts&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
+      &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;35746698&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;00001&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1ede2f26-28cd-462b-a7ea-429960c8480b&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;197&amp;#34;&lt;/span&gt;
+      &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;],&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;email&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;contactemail@empresaxyz.com&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;f0c83515-c7ea-40b8-b9c4-c85d9489c40c&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;mobile&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;21 999999999&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Contact name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;tax_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;47647430351&amp;#34;&lt;/span&gt;
+  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;bank_accounts&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
+      &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;883841975&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;0001&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;5b332a1b-57ef-4398-bb9c-79011cc6c58e&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;197&amp;#34;&lt;/span&gt;
+      &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;],&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;email&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;tyson@huber.com&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;a0ee3a1a-a1d6-48ad-8ea3-7fdf5ea5c250&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;mobile&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Tyson Huber&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;tax_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;11111111111&amp;#34;&lt;/span&gt;
+  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;bank_accounts&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[],&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;email&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;johndoe@hotmail.com&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;a862d499-26cc-48df-9583-585ba604e9c8&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;mobile&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2124759861&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;John Doe&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;tax_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;42373740761&amp;#34;&lt;/span&gt;
+  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Retornar Um Contato</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/contatos/retornar-um-contato/</link>
+      <pubDate>Mon, 01 Apr 2019 20:05:26 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/contatos/retornar-um-contato/</guid>
+      <description>
+        
+        
+        &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts/contact_id
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Identificador da conta.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;contact_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Identificador do contato.&lt;/p&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;200 ok
+&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;content-type: application/json
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;bank_accounts&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;4567864&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1234&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;9145a75a-f86b-4cc5-bcfe-64b658c610b6&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;00000000&amp;#34;&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;106497993&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;f125f6ff-4f63-4735-92c4-f89754ed2826&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;16501555&amp;#34;&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;],&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;email&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;93305585-0576-4ca0-aeac-3a75f9cc3c18&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;mobile&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Mauro Frederico&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;tax_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;58515428881&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Atualizar Contato</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/contatos/atualizar-contato/</link>
+      <pubDate>Mon, 01 Apr 2019 20:07:27 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/contatos/atualizar-contato/</guid>
+      <description>
+        
+        
+        &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts/contact_id
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Identificador da conta.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;contact_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Identificador do contato.&lt;/p&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;name&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Nome do contato.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;tax_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Documento do contato.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;email&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;E-mail do contato.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;mobile&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Telefone do contato.&lt;/p&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Chave de idempotência.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;200 ok
+&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;content-type: application/json
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;bank_accounts&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[],&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;email&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;93305585-0576-4ca0-aeac-3a75f9cc3c18&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;mobile&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Mauro Barcelos&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;tax_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;58515428881&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Excluir Um Contato</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/contatos/excluir-um-contato/</link>
+      <pubDate>Mon, 01 Apr 2019 20:08:42 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/contatos/excluir-um-contato/</guid>
+      <description>
+        
+        
+        &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;DELETE https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts/contact_id
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Identificador da conta.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;contact_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Identificador do contato.&lt;/p&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;200 OK 
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Adicionar Conta Bancária a Um Contato</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/contatos/adicionar-conta-bancaria-a-um-contato/</link>
+      <pubDate>Mon, 01 Apr 2019 20:10:46 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/contatos/adicionar-conta-bancaria-a-um-contato/</guid>
+      <description>
+        
+        
+        &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts/contact_id/bank_accounts
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Identificador da conta.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;contact_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Identificador do contato.&lt;/p&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;account_code&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Número da conta.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;branch_code&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Número da agência bancária.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;institution_code&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Número da instituição.&lt;/p&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Chave de idempotência.&lt;/p&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;200 OK
+&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;content-type: application/json
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;4567864&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1234&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;9145a75a-f86b-4cc5-bcfe-64b658c610b6&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;00000000&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Atualizar Conta Bancária de Um Contato</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/contatos/atualizar-conta-bancaria-de-um-contato/</link>
+      <pubDate>Mon, 01 Apr 2019 20:12:36 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/contatos/atualizar-conta-bancaria-de-um-contato/</guid>
+      <description>
+        
+        
+        &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts/contact_id/bank_accounts/bank_account_id
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Identificador da conta.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;contact_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Identificador do contato.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;bank_account_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Identificador da conta bancária do contato.&lt;/p&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;account_code&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Número da conta bancária.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;branch_code&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Número da agência bancária.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;institution_code&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Número da instituição.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Chave de idempotência.&lt;/p&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;200 OK
+&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;content-type: application/json
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;e43e3003-c587-4cb8-ab37-b374fe0d157f&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1234&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;197&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;4567864&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Excluir Conta Bancária de Um Contato</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/contatos/excluir-conta-bancaria-de-um-contato/</link>
+      <pubDate>Mon, 01 Apr 2019 20:14:44 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/contatos/excluir-conta-bancaria-de-um-contato/</guid>
+      <description>
+        
+        
+        &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;DELETE https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts/contact_id/bank_accounts/bank_account_id
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Identificador da conta.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;contact_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Identificador do contato.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;bank_account_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Identificador da conta bancária do contato.&lt;/p&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;200 OK
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

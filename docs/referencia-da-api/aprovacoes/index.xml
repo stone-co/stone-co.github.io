@@ -1,0 +1,180 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stone OpenBank – Aprovações</title>
+    <link>https://stone-co.github.io/docs/referencia-da-api/aprovacoes/</link>
+    <description>Recent content in Aprovações on Stone OpenBank</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 17 Sep 2020 18:00:00 -0300</lastBuildDate>
+    
+	  <atom:link href="https://stone-co.github.io/docs/referencia-da-api/aprovacoes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: O Que é uma Aprovação</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/aprovacoes/o-que-e-uma-aprovacao/</link>
+      <pubDate>Wed, 20 Feb 2019 19:40:01 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/aprovacoes/o-que-e-uma-aprovacao/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Os parceiros podem criar pagamentos de contas, de transferências internas e externas. A partir do momento que essas transações são criadas, elas passam a esperar a aprovação do dono da conta de pagamento.&lt;/p&gt;
+&lt;p&gt;A API se comporta dessa forma, a não ser que o próprio dono da conta tenha criado a transação.
+Ou seja, toda movimentação criada depende da aprovação do dono da conta de pagamento para ser efetivamente executada.&lt;/p&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Como testar?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;Para fazer a aprovação é necessário que o dono da conta se autentique e aprove a transação. Saiba como no tópico &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/stone-openbank/overview#como-integrar-com-a-api&#34;&gt;&lt;em&gt;Como Integrar Com a API&lt;/em&gt;&lt;/a&gt; onde falamos sobre &lt;em&gt;Fazer a autenticação como usuário da conta em sandbox&lt;/em&gt;.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Aprovar um Pagamento</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/aprovacoes/aprovar-um-pagamento/</link>
+      <pubDate>Mon, 01 Apr 2019 19:44:06 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/aprovacoes/aprovar-um-pagamento/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/payments/payment_id/approve
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;payment_id&lt;/strong&gt;*  &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Identificador do pagamento.&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;204&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;No&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;Content&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Rejeitar um Pagamento</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/aprovacoes/rejeitar-um-pagamento/</link>
+      <pubDate>Mon, 01 Apr 2019 19:45:56 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/aprovacoes/rejeitar-um-pagamento/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/payments/payment_id/reject
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;payment_id&lt;/strong&gt;*  &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Identificador do pagamento.&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;204&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;No&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;Content&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Aprovar uma Transferência Interna</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/aprovacoes/aprovar-uma-transferencia-interna/</link>
+      <pubDate>Mon, 01 Apr 2019 19:47:47 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/aprovacoes/aprovar-uma-transferencia-interna/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers/internal_transfer_id/approve
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;internal_transfer_id&lt;/strong&gt;*  &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Identificador da transferência interna.&lt;/p&gt;
+&lt;br&gt;
+&lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;204&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;No&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;Content&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Rejeitar uma Transferência Interna</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/aprovacoes/rejeitar-uma-transferencia-interna/</link>
+      <pubDate>Mon, 01 Apr 2019 19:49:50 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/aprovacoes/rejeitar-uma-transferencia-interna/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers/internal_transfer_id/reject
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;internal_transfer_id&lt;/strong&gt;*  &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Identificador da transferência interna.&lt;/p&gt;
+&lt;br&gt;
+&lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;204&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;No&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;Content&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Aprovar uma Transferência Externa</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/aprovacoes/aprovar-uma-transferencia-externa/</link>
+      <pubDate>Mon, 01 Apr 2019 19:52:12 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/aprovacoes/aprovar-uma-transferencia-externa/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers/external_transfer_id/approve
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;external_transfer_id&lt;/strong&gt;*  &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Identificador da transferência externa.&lt;/p&gt;
+&lt;br&gt;
+&lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;204&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;No&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;Content&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Rejeitar uma Transferência Externa</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/aprovacoes/rejeitar-uma-transferencia-externa/</link>
+      <pubDate>Mon, 01 Apr 2019 19:53:34 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/aprovacoes/rejeitar-uma-transferencia-externa/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers/external_transfer_id/reject
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;external_transfer_id&lt;/strong&gt;*  &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Identificador da transferência externa.&lt;/p&gt;
+&lt;br&gt;
+&lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;204&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;No&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;Content&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

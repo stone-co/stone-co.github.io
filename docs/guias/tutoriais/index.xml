@@ -150,7 +150,7 @@
 &lt;p&gt;Utilizando seu &lt;code&gt;access_token&lt;/code&gt; já é possível acessar as funcionalidades da API, de acordo com o que a sua aplicação tem permissão de fazer. Para ter permissão de criar transações em contas de usuários, ou até de visualizar seus dados, é preciso obter consentimento do dono da conta. Isso é possível enviando o link construído no passo anterior para a usuária, para que ela possa dar acesso à conta.&lt;/p&gt;
 &lt;h5 id=&#34;consultando-as-contas-às-quais-a-aplicação-parceira-tem-acesso&#34;&gt;&lt;strong&gt;Consultando as contas às quais a aplicação parceira tem acesso&lt;/strong&gt;&lt;/h5&gt;
 &lt;p&gt;Através da API é possível, por exemplo, consultar a quais contas você tem acesso, tanto no caso de você ser uma aplicação parceira com consentimento para acessar contas, quanto no caso de você ser proprietário de alguma conta.&lt;/p&gt;
-&lt;p&gt;Para isso, é preciso apenas consultar o endpoint &lt;a href=&#34;https://stone-co.github.io/docs/dados-da-conta/consultar-todas-as-contas-as-quais-o-usuario-tem-acesso&#34;&gt;Consultar Todas Contas às Quais Se Tem Acesso&lt;/a&gt;, utilizando seu &lt;code&gt;access_token&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Para isso, é preciso apenas consultar o endpoint &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-todas-as-contas-as-quais-o-usuario-tem-acesso&#34;&gt;Consultar Todas Contas às Quais Se Tem Acesso&lt;/a&gt;, utilizando seu &lt;code&gt;access_token&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Outra forma de acessar esse endpoint é realizando uma chamada para nossa API, enviando seu &lt;code&gt;access_token&lt;/code&gt; em um header. Abaixo podemos observar isso em um exemplo de função que poderia ser utilizada para realizar essa consulta.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;operational_accounts(access_token,&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;pagination_params=&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{}&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;):&lt;/span&gt;
     &lt;span style=&#34;color:#a40000&#34;&gt;url&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;{API_URL}/accounts&amp;#34;&lt;/span&gt;
@@ -169,7 +169,7 @@
 &lt;p&gt;&lt;code&gt;access_token&lt;/code&gt; : É o resultado de uma autenticação bem sucedida. Sempre que uma aplicação parceira se autenticar receberá um token de acesso, cuja validade é informada em seus claims;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;pagination_params&lt;/code&gt;: A maior parte dos nossos endpoints utilizam uma &lt;a href=&#34;https://stone-co.github.io/docs/stone-openbank/paginacao&#34;&gt;paginação padrão&lt;/a&gt;. Isso permite realizar requisições HTTP de forma mais prática, além de poupar consumo de rede.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pagination_params&lt;/code&gt;: A maior parte dos nossos endpoints utilizam uma &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/stone-openbank/paginacao&#34;&gt;paginação padrão&lt;/a&gt;. Isso permite realizar requisições HTTP de forma mais prática, além de poupar consumo de rede.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;E, por fim, obtem-se como resposta uma lista das contas às quais a aplicação tem acesso.&lt;/p&gt;
@@ -177,7 +177,7 @@
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Padrões da Nossa API&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Seguimos alguns padrões para alguns tipos de dados em toda a nossa API. &lt;a href=&#34;https://stone-co.github.io/docs/stone-openbank/data-e-hora&#34;&gt;Aqui&lt;/a&gt; se encontram alguns destes padrões.&lt;/p&gt;
+&lt;p&gt;Seguimos alguns padrões para alguns tipos de dados em toda a nossa API. &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/stone-openbank/data-e-hora&#34;&gt;Aqui&lt;/a&gt; se encontram alguns destes padrões.&lt;/p&gt;
 
 &lt;/div&gt;
 

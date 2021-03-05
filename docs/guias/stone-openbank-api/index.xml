@@ -35,7 +35,7 @@
 &lt;p&gt;Assim como nós pudemos criar o nosso aplicativo de conta em cima dessa API, você pode fazer o mesmo ou integrar as funcionalidades de automação bancária no seu negócio.&lt;/p&gt;
 &lt;h3 id=&#34;o-que-oferecemos&#34;&gt;O que oferecemos?&lt;/h3&gt;
 &lt;br&gt;
-&lt;p&gt;Com a &lt;a href=&#34;https://stone-co.github.io/docs/stone-openbank/&#34;&gt;API&lt;/a&gt; da Conta Stone você pode disponibilizar para os seus clientes:&lt;/p&gt;
+&lt;p&gt;Com a &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/stone-openbank/&#34;&gt;API&lt;/a&gt; da Conta Stone você pode disponibilizar para os seus clientes:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Consulta de saldos e extratos;&lt;/li&gt;
 &lt;li&gt;Envio e recebimento de transferências tanto de outras Contas Stone como de outros bancos via TED;&lt;/li&gt;
@@ -85,7 +85,7 @@
 &lt;br&gt;
 &lt;p&gt;&lt;strong&gt;ClientID&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Obtenha o seu &lt;em&gt;Access Token&lt;/em&gt;, enviando um e-mail para nosso time de Parcerias através de &lt;a href=&#34;mailto:parcerias@openbank.stone.com.br&#34;&gt;parcerias@openbank.stone.com.br&lt;/a&gt;.
-Somente com o &lt;em&gt;Access Token&lt;/em&gt; em mãos você consegue realizar as &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;autenticações&lt;/a&gt; necessárias para realizar as &lt;a href=&#34;https://stone-co.github.io/docs/stone-openbank/&#34;&gt;chamadas&lt;/a&gt; na &lt;strong&gt;Stone Open Bank API&lt;/strong&gt;.&lt;/p&gt;
+Somente com o &lt;em&gt;Access Token&lt;/em&gt; em mãos você consegue realizar as &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;autenticações&lt;/a&gt; necessárias para realizar as &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/stone-openbank/&#34;&gt;chamadas&lt;/a&gt; na &lt;strong&gt;Stone Open Bank API&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;O time de Parcerias do Stone Open Bank irá te enviar um formulário para preenchimento com os dados sobre seu projeto e posteriormente irá gerar um &lt;em&gt;ClientID&lt;/em&gt;. Uma vez cadastrado e com o seu &lt;em&gt;ClientID&lt;/em&gt; em mãos, você poderá realizar o processo de &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;autenticação da aplicação&lt;/a&gt;, que permitirá que obtenha-se o &lt;em&gt;Access Token&lt;/em&gt;. Este processo de &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;autenticação &lt;/a&gt; consiste nas seguintes etapas:&lt;/p&gt;
 &lt;br&gt;
 &lt;p&gt;&lt;strong&gt;Geração de um token que contenha:&lt;/strong&gt;&lt;/p&gt;
@@ -243,7 +243,7 @@ content-type x-www-form-urlencoded
 
 &lt;/div&gt;
 
-&lt;p&gt;Caso queira saber mais sobre as chamadas disponíveis na nossa API, consulte nossos endpoints em &lt;a href=&#34;https://stone-co.github.io/docs/stone-openbank/&#34;&gt;API Reference&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Caso queira saber mais sobre as chamadas disponíveis na nossa API, consulte nossos endpoints em &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/stone-openbank/&#34;&gt;API Reference&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;4---construindo-o-seu-app&#34;&gt;4 - Construindo o seu App&lt;/h3&gt;
 &lt;br&gt;
 &lt;p&gt;Com a resposta gerada pela requisição da TED acima, você poderá elaborar uma tela exibindo as informações da transferência realizada. Por exemplo, para construir a tela abaixo:&lt;/p&gt;
@@ -278,7 +278,7 @@ content-type x-www-form-urlencoded
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Entenda mais sobre a Transfers API e a sua requisição de TED&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Detalhes sobre a Transfers API se encontram na página &lt;a href=&#34;https://stone-co.github.io/docs/transferencias/transferencias-externas/transferir-para-outros-bancos&#34;&gt;Transferir para Outros Bancos&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Detalhes sobre a Transfers API se encontram na página &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-externas/transferir-para-outros-bancos&#34;&gt;Transferir para Outros Bancos&lt;/a&gt;.&lt;/p&gt;
 
 &lt;/div&gt;
 

@@ -1,0 +1,985 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stone OpenBank – Boletos</title>
+    <link>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/</link>
+    <description>Recent content in Boletos on Stone OpenBank</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 13 May 2020 18:00:00 -0300</lastBuildDate>
+    
+	  <atom:link href="https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Overview Emissão de Boletos</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/overview-emissao-de-boletos/</link>
+      <pubDate>Mon, 30 Mar 2020 07:01:34 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/overview-emissao-de-boletos/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Nessa API, os boletos são separados em três grupos que apresentam regras de funcionamento diferentes: Depósito, Proposta e Cobrança. Veja abaixo os grupos e seus tipos.&lt;/p&gt;
+&lt;h4 id=&#34;depósito&#34;&gt;Depósito&lt;/h4&gt;
+&lt;p&gt;Tem como objetivo fazer um deposito na conta pelo próprio dono da conta.&lt;/p&gt;
+&lt;p&gt;Tipo (type):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;deposit&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;proposta&#34;&gt;Proposta&lt;/h4&gt;
+&lt;p&gt;Tem como objetivo apresentar uma proposta a um terceiro. Não tem caráter de cobrança.&lt;/p&gt;
+&lt;p&gt;Tipo (type):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;proposal&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;cobrança&#34;&gt;Cobrança&lt;/h4&gt;
+&lt;p&gt;Tem como objetivo cobrar um terceiro. Tem caráter oficial de cobrança. Existem tipos de cobrança específicos de acordo com atividade que está orginando a cobrança. Abaixo veremos a lista dos tipos disponíveis. &lt;br&gt;
+Importante ressaltar que pode haver restrição de habilitação de um determinado tipo para uma conta de acordo com as atividades listadas para esse CNPJ em seu registro ofical (CNAE).&lt;/p&gt;
+&lt;p&gt;Tipo (type):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;bill_of_exchange&lt;/code&gt;
+A duplicata mercantil é especifica para cobranças advindas de vendas de produtos.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;tuition_payment&lt;/code&gt;
+Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Status</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/status/</link>
+      <pubDate>Mon, 27 Apr 2020 12:00:07 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/status/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Segue abaixo os status possíveis de um &lt;strong&gt;boleto gerado&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/docs/emissao-de-boletos/status/048103f-Status_do_boleto.PNG&#34; alt=&#34;status_boleto&#34;&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Regras de negócio</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/regras-de-negocio/</link>
+      <pubDate>Sun, 26 Apr 2020 22:22:46 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/regras-de-negocio/</guid>
+      <description>
+        
+        
+        &lt;h4 id=&#34;válidas-para-todos-os-tipos-de-boleto&#34;&gt;Válidas para todos os tipos de boleto&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Regras&lt;/th&gt;
+&lt;th&gt;Todos os tipos&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Registro&lt;/td&gt;
+&lt;td&gt;O registro de boletos é automático e feito em até alguns poucos minutos após sua emissão.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Baixa final&lt;/td&gt;
+&lt;td&gt;Um boleto não pago sofrerá baixa automática sete dias após sua data limite.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Baixa por pagamento&lt;/td&gt;
+&lt;td&gt;Ao ser pago o boleto sofrerá baixa automática, impedindo novos pagamentos desse mesmo documento.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Baixa solicitada&lt;/td&gt;
+&lt;td&gt;Quando o amissor solicita a baixa de um boleto que ainda não foi pago e não chegou a data limite.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Data de vencimento&lt;/td&gt;
+&lt;td&gt;Precisa ser igual ou maior que o dia atual e igual ou menor do que a limit_date. Caso seja um dia não útil o pagamento poderá ser feito até o próximo dia útil.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Formato / Layout&lt;/td&gt;
+&lt;td&gt;Hoje os dados do boleto são devolvidos no formato PDF através de um link.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;h4 id=&#34;variáveis-por-tipo-de-boleto&#34;&gt;Variáveis por tipo de boleto&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Regras&lt;/th&gt;
+&lt;th&gt;Depósito&lt;/th&gt;
+&lt;th&gt;Proposta&lt;/th&gt;
+&lt;th&gt;Cobrança &lt;em&gt;(todos os tipos)&lt;/em&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Disponível para&lt;/td&gt;
+&lt;td&gt;Todas as contas de pagamento da base.&lt;/td&gt;
+&lt;td&gt;Todas as contas de pagamento da base.&lt;/td&gt;
+&lt;td&gt;É necessário sinalizar na integração para habilitação desse tipo para a conta pagamento.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Data limite&lt;br&gt;&lt;em&gt;(limit_date)&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Sempre deve ser igual a data de vencimento, podendo ser até 365 dias após a data de emissão. &lt;br&gt;Caso seja um dia não útil o pagamento poderá ser feito até o próximo dia útil.&lt;br&gt;Caso seja informada alguma data diferente da vencimento retornará erro. Caso não seja informada será configurada automaticamente a data de vencimento.&lt;/td&gt;
+&lt;td&gt;Deve ser igual ou maior a data de vencimento.&lt;br&gt;&lt;br&gt;Caso não seja informada será configurada automaticamente a data de vencimento.&lt;/td&gt;
+&lt;td&gt;Deve ser igual ou maior a data de vencimento.&lt;br&gt;&lt;br&gt;Caso não seja informada será configurada automaticamente a data de vencimento.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Pagamento&lt;/td&gt;
+&lt;td&gt;Não obrigatório&lt;/td&gt;
+&lt;td&gt;Não obrigatório&lt;/td&gt;
+&lt;td&gt;Obrigatório&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Pagador&lt;br&gt; &lt;em&gt;(customer)&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Sempre deve ser igual ao beneficiário.&lt;br&gt;Caso seja informado algum dado diferente do beneficiário será ignorado.&lt;br&gt; Caso não seja informado será configurado automaticamente com dados do beneficiário.&lt;/td&gt;
+&lt;td&gt;Pode ser diferente do beneficiário.&lt;br&gt;&lt;br&gt;Obrigatório o envio do objeto.&lt;/td&gt;
+&lt;td&gt;Pode ser diferente do beneficiário.&lt;br&gt;&lt;br&gt;Obrigatório o envio do objeto.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Valor&lt;br&gt; &lt;em&gt;(amount)&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Valor Min de R$ 20,00 e valor Max: R$ 10.000,00.&lt;/td&gt;
+&lt;td&gt;Valor Min de R$ 20,00 e valor Max: R$ 10.000,00.&lt;/td&gt;
+&lt;td&gt;Valor Min de R$ 20,00 e valor Max: R$ 10.000,00.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Juros&lt;br&gt; &lt;em&gt;(interest)&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Não suporta&lt;/td&gt;
+&lt;td&gt;Não suporta&lt;/td&gt;
+&lt;td&gt;Juros deve ser maior que 0% e até 1% ao mês.&lt;br&gt;O valor é aplicado por dia levando em conta o valor proporcional dado o juros mensal. Ex: 1% ao mês, seria 0,033% ao dia.&lt;br&gt;O juros passam a contar a partir da data informada. Essa data tem que ser maior que o vencimento e menor que data limite. Caso nenhuma data seja informada serão aplicados a patir do dia seguinte ao vencimento.&lt;br&gt;Nos casos em que a data de vencimento cai em um dia não últil ela é automaticamente estendida para o próximo dia útil e os juros só passam a ser aplicados depois dessa data.&lt;br&gt;Campo não obrigatório, só preencher se for aplicar juros.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Multa&lt;br&gt; &lt;em&gt;(fine)&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Não suporta&lt;/td&gt;
+&lt;td&gt;Não suporta&lt;/td&gt;
+&lt;td&gt;Multa deve ser maior que 0% e até 2% do valor do boleto.&lt;br&gt;A multa é cobrada uma única vez.&lt;br&gt;A multa passa a contar a partir da data informada. Essa data tem que ser maior que o vencimento e menor que data limite.&lt;br&gt;Caso nenhuma data seja informada será aplicada a patir do dia seguinte ao vencimento.&lt;br&gt;Nos casos em que a data de vencimento cai em um dia não últil ela é automaticamente estendida para o próximo dia útil e a multa só passará a ser aplicada depois dessa data.&lt;br&gt;Campo não obrigatório, só preencher se for aplicar multa.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Desconto&lt;br&gt; &lt;em&gt;(discount)&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Não suporta&lt;/td&gt;
+&lt;td&gt;Não suporta&lt;/td&gt;
+&lt;td&gt;Desconto deve ser maior que 0% e até 90%.&lt;br&gt;O desconto se aplica caso o pagameto seja feito até a dta informada. A data informada deve ser menor do que a data de vencimento do boleto e maior que sua data de emissão.&lt;br&gt;Campo não obrigatório, só preencher se for aplicar desconto.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Múltiplos descontos&lt;/td&gt;
+&lt;td&gt;Não suporta&lt;/td&gt;
+&lt;td&gt;Não suporta&lt;/td&gt;
+&lt;td&gt;É possível aplicar até 3 descontos a um boleto onde cada um terá sua data até a qual o desconto é válido.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Sacador avalista&lt;br&gt; &lt;em&gt;(receiver)&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Não suporta&lt;/td&gt;
+&lt;td&gt;Quando um boleto é emitido em uma conta, mas o comprador final reconhece a compra em nome de outra empresa é possível usar o campo sacador avalista para apresentar o nome dessa empresa no boleto.&lt;br&gt;O beneficiário final não muda, ou seja, o valor do boleto será liquidado para a conta que o emitiu.&lt;br&gt;Funcionalidade comumente usada por subadquirentes.&lt;/td&gt;
+&lt;td&gt;Quando um boleto é emitido em uma conta, mas o comprador final reconhece a compra em nome de outra empresa é possível usar o campo sacador avalista para apresentar o nome da empresa que o comprador reconhe no boleto.&lt;br&gt;O beneficiário final não muda, ou seja, o valor do boleto será liquidado para a conta que o emitiu.&lt;br&gt;Funcionalidade comumente usada por subadquirentes.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Campos</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/campos/</link>
+      <pubDate>Sun, 26 Apr 2020 21:06:22 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/campos/</guid>
+      <description>
+        
+        
+        &lt;h4 id=&#34;boleto&#34;&gt;Boleto&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;account_id&lt;/td&gt;
+&lt;td&gt;Identificador da conta do beneficiário.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;amount&lt;/td&gt;
+&lt;td&gt;Valor do boleto bancário gerado, em centavos de reais.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;barcode&lt;/td&gt;
+&lt;td&gt;Código de barras.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;beneficiary&lt;/td&gt;
+&lt;td&gt;Objeto com os dados do beneficiário. Veja os campos desse &lt;code&gt;object&lt;/code&gt; &lt;a href=&#34;https://stone-co.github.io/docs/emissao-de-boletos/campos/#campos-do-objeto-beneficiary&#34;&gt;abaixo&lt;/a&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;created_at&lt;/td&gt;
+&lt;td&gt;Data e hora em que o boleto bancário foi gerado. Nesse caso nunca será &lt;code&gt;null&lt;/code&gt;. Formato ISO8601 &lt;code&gt;&amp;quot;YYYY-MM-DDThh:mm:ssZ&amp;quot;&lt;/code&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;created_by&lt;/td&gt;
+&lt;td&gt;Identificador único do usuário ou aplicação que criou a transação, no formato user:UUID4 ou application:UUID4respectivamente. Nesse caso nunca será &lt;code&gt;null&lt;/code&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;customer&lt;/td&gt;
+&lt;td&gt;Objeto com os dados do cliente que será informa como pagador no ato de registro do boleto. Veja os campos desse &lt;code&gt;object&lt;/code&gt; &lt;a href=&#34;https://stone-co.github.io/docs/emissao-de-boletos/campos/#campos-do-objeto-customer&#34;&gt;abaixo&lt;/a&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;discount&lt;/td&gt;
+&lt;td&gt;Objeto com os dados referentes ao desconto. Veja os campos desse &lt;code&gt;object&lt;/code&gt; &lt;a href=&#34;https://stone-co.github.io/docs/emissao-de-boletos/campos/#campos-do-objeto-discount&#34;&gt;abaixo&lt;/a&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;expiration_date&lt;/td&gt;
+&lt;td&gt;Data de vencimento do boleto bancário. Mesmo depois dessa data expirar o pagamento ainda pode ser feito. &lt;br&gt;Formato &lt;code&gt;&amp;quot;YYYY-MM-DD&amp;quot;&lt;/code&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;fee&lt;/td&gt;
+&lt;td&gt;Projeção da taxa que seria cobrada do beneficiário no ato de recebimento do pagamento caso o recebimento fosse agora. É atualizada com a taxa cobrada quando receber o pagamento.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;fee_metadata&lt;/td&gt;
+&lt;td&gt;Objeto que identifica detalhes sobre a aplicação da taxa. Veja os campos desse &lt;code&gt;object&lt;/code&gt; &lt;a href=&#34;https://stone-co.github.io/docs/emissao-de-boletos/campos/#campos-do-objeto-fee_metadata&#34;&gt;abaixo&lt;/a&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;fine&lt;/td&gt;
+&lt;td&gt;Objeto com os dados referentes a multa. Veja os campos desse &lt;code&gt;object&lt;/code&gt; &lt;a href=&#34;https://stone-co.github.io/docs/emissao-de-boletos/campos/#campos-do-objeto-fine&#34;&gt;abaixo&lt;/a&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;id&lt;/td&gt;
+&lt;td&gt;Identificador único do boleto bancário, no formato UUID4.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;interest&lt;/td&gt;
+&lt;td&gt;Objeto com os dados referentes aos juros. Veja os campos desse &lt;code&gt;object&lt;/code&gt; &lt;a href=&#34;https://stone-co.github.io/docs/emissao-de-boletos/campos/#campos-do-objeto-interest&#34;&gt;abaixo&lt;/a&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;invoice_type&lt;/td&gt;
+&lt;td&gt;Tipo de boleto bancário. Valores suportados: &lt;code&gt;proposal&lt;/code&gt;, &lt;code&gt;deposit&lt;/code&gt; e &lt;code&gt;bill_of_exchange&lt;/code&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;issuance_date&lt;/td&gt;
+&lt;td&gt;Data da emissão de boleto bancário. Formato &lt;code&gt;&amp;quot;YYYY-MM-DD&amp;quot;&lt;/code&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;limit_date&lt;/td&gt;
+&lt;td&gt;Data limite para pagamento do boleto bancário. Sempre igual ou maior a data de vencimento. Formato &lt;code&gt;&amp;quot;YYYY-MM-DD&amp;quot;&lt;/code&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;our_number&lt;/td&gt;
+&lt;td&gt;Número que identifica unicamente um boleto para uma conta frente a outras instituições.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;receiver&lt;/td&gt;
+&lt;td&gt;Objeto com os dados do sacador avalista. Veja os campos desse &lt;code&gt;object&lt;/code&gt; &lt;a href=&#34;https://stone-co.github.io/docs/emissao-de-boletos/campos/#campos-do-objeto-receiver&#34;&gt;abaixo&lt;/a&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;registered_at&lt;/td&gt;
+&lt;td&gt;Data e hora de registro do boleto bancário. Formato ISO8601 &lt;code&gt;&amp;quot;YYYY-MM-DDThh:mm:ssZ&amp;quot;&lt;/code&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;settled_at&lt;/td&gt;
+&lt;td&gt;Data e hora em que o dinheiro do pagamento do boleto é depositado na conta do beneficiário. Formato ISO8601 &lt;br&gt;&lt;code&gt;&amp;quot;YYYY-MM-DDThh:mm:ssZ&amp;quot;&lt;/code&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;status&lt;/td&gt;
+&lt;td&gt;Status atual do boleto bancário, podendo ser um dentre os status à seguir: &lt;code&gt;CREATED&lt;/code&gt;, &lt;code&gt;REGISTERED&lt;/code&gt;, &lt;code&gt;SETTLED&lt;/code&gt;, &lt;code&gt;CANCELLED&lt;/code&gt; ou &lt;code&gt;EXPIRED&lt;/code&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;writable_line&lt;/td&gt;
+&lt;td&gt;Código de barras traduzido em números.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;campos-do-objeto-beneficiary&#34;&gt;Campos do objeto &lt;code&gt;beneficiary&lt;/code&gt;&lt;/h5&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;account_code&lt;/td&gt;
+&lt;td&gt;Número da conta bancária.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;branch_code&lt;/td&gt;
+&lt;td&gt;Número da agência da conta.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;document&lt;/td&gt;
+&lt;td&gt;Número do documento do beneficiário sem pontos.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;document_type&lt;/td&gt;
+&lt;td&gt;Tipo do documento do beneficiário. Pode ser &amp;lsquo;cpf&amp;rsquo; ou &amp;lsquo;cnpj&amp;rsquo;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;legal_name&lt;/td&gt;
+&lt;td&gt;É o nome que identifica o beneficiário para fins legais, administrativos e outros fins oficiais.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;trade_name&lt;/td&gt;
+&lt;td&gt;Nome fantasia do beneficiário.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;campos-do-objeto-discount&#34;&gt;Campos do objeto &lt;code&gt;discount&lt;/code&gt;&lt;/h5&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;date&lt;/td&gt;
+&lt;td&gt;Data até a qual o desconto deve ser aplicado.&lt;br&gt;Formato ISO8601 &lt;code&gt;&amp;quot;YYYY-MM-DD&amp;quot;&lt;/code&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;value&lt;/td&gt;
+&lt;td&gt;Valor percentual (%) do desconto que será aplicado ao boleto. O valor do deve ser maior que 0.0 e até 90.0. &lt;br&gt;Formato decimal. Ex: &amp;ldquo;20.0&amp;rdquo;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;campos-do-objeto-fee_metadata&#34;&gt;Campos do objeto &lt;code&gt;fee_metadata&lt;/code&gt;&lt;/h5&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;billing_exemption_participant&lt;/td&gt;
+&lt;td&gt;Indica se o usuário possui alguma condição especial vigente.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Boolean&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;fee&lt;/td&gt;
+&lt;td&gt;Projeção da taxa que seria cobrada no ato de recebimento do pagamento caso o recebimento fosse agora.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;max_free&lt;/td&gt;
+&lt;td&gt;Indica o número total de boletos emitidos que podem ser liquidados sem que haja custos por mês.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;original_fee&lt;/td&gt;
+&lt;td&gt;Indica a taxa original do item para a essa conta.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;remaining_free&lt;/td&gt;
+&lt;td&gt;Indica o número restante de boletos gerados que podem ser pagos sem que haja custos no periódo.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;campos-do-objeto-fine&#34;&gt;Campos do objeto &lt;code&gt;fine&lt;/code&gt;&lt;/h5&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;date&lt;/td&gt;
+&lt;td&gt;Data que define o dia a partir do qual a multa deve ser aplicada ao boleto.&lt;br&gt;Formato ISO8601 &lt;code&gt;&amp;quot;YYYY-MM-DD&amp;quot;&lt;/code&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;value&lt;/td&gt;
+&lt;td&gt;Valor percentual (%) da multa que será aplicada ao boleto. O valor do deve ser maior que 0.0 e até 2.0.&lt;br&gt;Formato decimal. Ex: &amp;ldquo;2.0&amp;rdquo;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;campos-do-objeto-interest&#34;&gt;Campos do objeto &lt;code&gt;interest&lt;/code&gt;&lt;/h5&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;date&lt;/td&gt;
+&lt;td&gt;Data que define o dia a partir do qual os juros passam a ser aplicados ao boleto.&lt;br&gt;Formato ISO8601 &lt;code&gt;&amp;quot;YYYY-MM-DD&amp;quot;&lt;/code&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;value&lt;/td&gt;
+&lt;td&gt;Valor percentual (%) dos juros que serão aplicados ao boleto. O valor do deve ser maior que 0.0 e até 2.0.&lt;br&gt;Formato decimal. Ex: &amp;ldquo;2.0&amp;rdquo;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;campos-do-objeto-customer&#34;&gt;Campos do objeto &lt;code&gt;customer&lt;/code&gt;&lt;/h5&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;document&lt;/td&gt;
+&lt;td&gt;Número do documento do pagador sem pontos.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;document_type&lt;/td&gt;
+&lt;td&gt;Tipo do documento do pagador. Pode ser &lt;code&gt;CPF&lt;/code&gt; ou &lt;code&gt;CNPJ&lt;/code&gt;.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;legal_name&lt;/td&gt;
+&lt;td&gt;É o nome que identifica o pagador para fins legais, administrativos e outros fins oficiais.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;trade_name&lt;/td&gt;
+&lt;td&gt;Nome fantasia do pagador.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;campos-do-objeto-receiver&#34;&gt;Campos do objeto &lt;code&gt;receiver&lt;/code&gt;&lt;/h5&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;document&lt;/td&gt;
+&lt;td&gt;Número do documento do sacador avalista.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;legal_name&lt;/td&gt;
+&lt;td&gt;É o nome que identifica o sacado avalista para fins legais, administrativos e outros fins oficiais.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Emitir Boleto</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/emitir-boleto/</link>
+      <pubDate>Thu, 16 Jan 2020 19:14:55 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/emitir-boleto/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Identificador da conta que irá gerar o documento.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;amount&lt;/strong&gt;* &lt;code&gt;int32&lt;/code&gt;
+&lt;br&gt; Valor do boleto em centavos de Real, ou seja, 20 reais fica 2000.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;expiration_date&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;bR&gt;Data de vencimento do boleto bancário. Mesmo depois dessa data expirar o pagamento ainda pode ser feito. Formato: &lt;code&gt;yyyy-mm-dd&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;limit_date&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Data limite para pagamento do boleto bancário. Deve ser igual ou maior que data de vencimento. Se não informada, será usada a &lt;code&gt;expiration_date&lt;/code&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;invoice_type&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Tipo de boleto bancário. Valores suportados: &lt;code&gt;proposal&lt;/code&gt;, &lt;code&gt;deposit&lt;/code&gt; e &lt;code&gt;bill_of_exchange&lt;/code&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;customer&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
+&lt;br&gt;     &lt;strong&gt;document&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
+&lt;br&gt;     Número do documento do pagador sem pontos. Não é obrigatório no tipo &lt;code&gt;deposit&lt;/code&gt;.
+&lt;br&gt;
+&lt;br&gt;     &lt;strong&gt;legal_name&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
+&lt;br&gt;     É o nome que identifica o pagador para fins legais, administrativos e outros fins oficiais. Não é obrigatório no tipo &lt;code&gt;deposit&lt;/code&gt;.
+&lt;br&gt;
+&lt;br&gt;     &lt;strong&gt;trade_name&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
+&lt;br&gt;     Nome fantasia do pagador. Obrigatório no caso de pagador PJ.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;discounts&lt;/strong&gt; &lt;code&gt;array_of_objects&lt;/code&gt;
+&lt;br&gt;     &lt;strong&gt;date&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;     Data até a qual o desconto deve ser aplicado. Formato ISO8601 &lt;code&gt;&amp;quot;YYYY-MM-DD&amp;quot;&lt;/code&gt;. Só é aceito no tipo de cobrança.
+&lt;br&gt;
+&lt;br&gt;     &lt;strong&gt;value&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;     Valor percentual (%) do desconto que será aplicado ao boleto. O valor do deve ser maior que 0.0 e até 90.0. Formato decimal. Ex: &amp;ldquo;20.0&amp;rdquo;. Só é aceito no tipo de cobrança.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;fine&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
+&lt;br&gt;     &lt;strong&gt;date&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
+&lt;br&gt;     Data que define o dia a partir do qual a multa deve ser aplicada ao boleto. Caso não seja infromada será consiederada a data de validdade. Só é aceito no tipo de cobrança.
+&lt;br&gt;
+&lt;br&gt;     &lt;strong&gt;value&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
+&lt;br&gt;     Valor percentual (%) da multa que será aplicada ao boleto. O valor do deve ser maior que 0.0 e até 2.0. Formato decimal. Ex: &amp;ldquo;2.0&amp;rdquo;. Só é aceito no tipo de cobrança.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;interest&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
+&lt;br&gt;     &lt;strong&gt;date&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
+&lt;br&gt;     Data que define o dia a partir do qual os juros passam a ser aplicados ao boleto. Só é aceito no tipo de cobrança.
+&lt;br&gt;
+&lt;br&gt;     &lt;strong&gt;value&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
+&lt;br&gt;     Valor parcentual (%) dos juros que será aplicado ao boleto por mês. O valor do deve ser maior que 0.0 e até 1.0. Formato decimal. Ex: &amp;ldquo;1.0&amp;rdquo;. Só é aceito no tipo de cobrança.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;receiver&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
+&lt;br&gt;     &lt;strong&gt;legal_name&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;     É o nome que identifica o sacado avalista para fins legais, administrativos e outros fins oficiais.
+&lt;br&gt;
+&lt;br&gt;     &lt;strong&gt;document&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;     Número do documento do sacador avalista.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Chave de idempotência&lt;/p&gt;
+&lt;br&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Data limite no tipo &lt;code&gt;proposal&lt;/code&gt;&lt;/strong&gt;
+&lt;br&gt;A &lt;code&gt;limit_date&lt;/code&gt; será sempre igual a &lt;code&gt;expiration_date&lt;/code&gt; para boletos do tipo &lt;code&gt;proposal&lt;/code&gt; uma vez que a proposta é válida somente até a data do vencimento.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;br&gt;
+&lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;200&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;OK&lt;/span&gt;
+&lt;span style=&#34;color:#a40000&#34;&gt;content-type:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;application/json&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;ec363b21-113f-44e9-8cc3-dfcdb3cc2dc3&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2100&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;barcode&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;19797845600000021000000063139072468215929006&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;beneficiary&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1085737&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;39809096038&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;legal_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Pereira da Silva&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;trade_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2020-07-27T18:25:38Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_by&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user:34a071d5-e1d4-4cb0-acf7-ca9b106fec65&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;customer&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;11121744590&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;legal_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Pereira da Silva&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;trade_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;discounts&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
+      &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2020-11-20&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;0.1&amp;#34;&lt;/span&gt;
+      &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;],&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;expiration_date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2020-12-01&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;fee&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;fee_metadata&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;billing_exemption_participant&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;fee&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;max_free&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;5&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;original_fee&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;200&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;remaining_free&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;5&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;fine&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-01-02&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;172caf21-13de-4baa-9823-a21ac17ba8fa&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;interest&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-01-02&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;invoice_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;bill_of_exchange&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;issuance_date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2020-07-27&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;limit_date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-02-01&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;our_number&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;63139072468215929006&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;customer&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;11121740790&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;legal_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Pereira da Silva&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;trade_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;receiver&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;registered_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;settled_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;CREATED&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;writable_line&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;19790000056313907246482159290061784560000002100&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Listar Boletos</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/listar-boletos/</link>
+      <pubDate>Mon, 09 Mar 2020 17:11:01 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/listar-boletos/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;query-params&#34;&gt;&lt;strong&gt;QUERY PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Identificador da conta.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;before&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Cursor opaco da paginação.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;after&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Cursor opaco da paginação.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;limit&lt;/strong&gt;* &lt;code&gt;int32&lt;/code&gt;
+&lt;br&gt; Limite de itens retornados.&lt;/p&gt;
+&lt;br&gt;
+&lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;200&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;OK&lt;/span&gt;
+&lt;span style=&#34;color:#a40000&#34;&gt;content-type:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;application/json&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;cursor&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;after&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;before&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;limit&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;25&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;data&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
+       &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;8cbeb3d2-750f-4b14-81a1-143ad715c273&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2000&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;barcode&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;19795819100000020000000020200310150334476155&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;beneficiary&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:{&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;498910&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;98146856000174&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cnpj&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;legal_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Sr. Mirella&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;trade_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;NULL&lt;/span&gt;
+          &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2020-03-10T15:03:34Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_by&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user:380f9969-8946-4f88-a781-be8b7efc1f90&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;customer&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;11121740755&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;legal_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Pereira da Silva&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;trade_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;
+          &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;discounts&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
+             &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2020-11-20&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;0.1&amp;#34;&lt;/span&gt;
+              &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+          &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;],&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;expiration_date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2020-03-11&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;fee&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;fine&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-01-02&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;
+          &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2788e49f-6f53-4296-bba4-3eb5101ff3e8&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;interest&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-01-02&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;
+          &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;invoice_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;proposal&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;issuance_date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2020-03-10&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;limit_date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2020-03-11&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;our_number&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;20200427112605941833&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;customer&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:{&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;98146856000174&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cnpj&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;legal_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Sr. Mirella&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;trade_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;NULL&lt;/span&gt;
+          &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;receiver&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;registered_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2020-03-10T15:03:34Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;settled_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;NULL&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;REGISTERED&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;writable_line&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;19790000052020031015703344761550581910000002000&amp;#34;&lt;/span&gt;
+       &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+       &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;8cbeb3d2-750f-4b14-81a1-143ad715c273&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2000&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;barcode&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;19795819100000020000000020200310150334476155&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;beneficiary&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:{&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;498910&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;98146856000174&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cnpj&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;legal_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Sr. Mirella&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;trade_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;NULL&lt;/span&gt;
+          &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2020-03-10T15:03:34Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_by&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user:380f9969-8946-4f88-a781-be8b7efc1f90&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;customer&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;11121740755&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;legal_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Pereira da Silva&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;trade_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;
+          &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;discounts&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
+             &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2020-11-20&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;0.1&amp;#34;&lt;/span&gt;
+              &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+          &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;],&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;expiration_date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2020-03-11&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;fee&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;fine&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-01-02&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;
+          &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2788e49f-6f53-4296-bba4-3eb5101ff3e8&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;interest&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-01-02&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;
+          &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;invoice_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;proposal&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;issuance_date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2020-03-10&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;limit_date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2020-03-11&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;our_number&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;20200427112605941833&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;customer&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:{&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;98146856000174&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cnpj&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;legal_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Sr. Mirella&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;trade_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;NULL&lt;/span&gt;
+          &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;receiver&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;registered_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2020-03-10T15:03:34Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;settled_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;NULL&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;REGISTERED&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;writable_line&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;19790000052020031015703344761550581910000002000&amp;#34;&lt;/span&gt;
+       &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Retornar Um Boleto</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/retornar-um-boleto/</link>
+      <pubDate>Fri, 06 Mar 2020 17:19:19 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/retornar-um-boleto/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices/id
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Identificador do boleto.&lt;/p&gt;
+&lt;br&gt;
+&lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;200&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;OK&lt;/span&gt;
+&lt;span style=&#34;color:#a40000&#34;&gt;content-type:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;application/json&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;8cbeb3d2-750f-4b14-81a1-143ad715c273&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2000&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;barcode&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;19795819100000020000000020200310150334476155&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;beneficiary&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:{&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;498910&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;98146856000174&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cnpj&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;legal_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Sr. Mirella&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;trade_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;NULL&lt;/span&gt;
+          &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2020-03-10T15:03:34Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_by&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user:380f9969-8946-4f88-a781-be8b7efc1f90&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;customer&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;11121740755&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;legal_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Pereira da Silva&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;trade_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;
+          &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;discounts&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
+             &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2020-11-20&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;0.1&amp;#34;&lt;/span&gt;
+              &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+          &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;],&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;expiration_date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2020-03-11&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;fee&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;fine&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-01-02&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;
+          &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2788e49f-6f53-4296-bba4-3eb5101ff3e8&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;interest&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-01-02&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;
+          &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;invoice_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;proposal&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;issuance_date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2020-03-10&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;limit_date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2020-03-11&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;our_number&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;20200427112605941833&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;customer&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:{&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;98146856000174&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cnpj&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;legal_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Sr. Mirella&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+             &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;trade_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;NULL&lt;/span&gt;
+          &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;receiver&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;registered_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2020-03-10T15:03:34Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;settled_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;NULL&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;REGISTERED&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+          &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;writable_line&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;19790000052020031015703344761550581910000002000&amp;#34;&lt;/span&gt;
+ &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Gerar PDF Boleto</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/gerar-boleto-pdf/</link>
+      <pubDate>Tue, 22 Sep 2020 15:54:16 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/gerar-boleto-pdf/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/exports/barcode_payment_invoices/id
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Identificador do boleto.&lt;/p&gt;
+&lt;br&gt;
+&lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;200&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;OK&lt;/span&gt;
+&lt;span style=&#34;color:#a40000&#34;&gt;content-type:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;application/json&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Cancelar um boleto</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/cancelar-boleto/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/cancelar-boleto/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoice/id/cancel
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;query-params&#34;&gt;&lt;strong&gt;QUERY PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Identificador do boleto que se quer cancelar.&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;O cancelamento do boleto ocorre de forma assíncrona. Após a solicitação de cancelamento ser efetuada com sucesso, o status será alterado para &lt;code&gt;cancelation_requested&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Assim que o processo de cancelamento terminar, o status será alterado para &lt;code&gt;CANCELLED&lt;/code&gt;.
+&lt;br&gt;Para acompanhar o processo de cancelamento, utilize a api /barcode_payment_invoices/{id}/ e observe o status do boleto.&lt;/p&gt;
+&lt;p&gt;Não será possível cancelar o boleto caso:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;exista algum pagamento em progresso&lt;/li&gt;
+&lt;li&gt;o boleto esteja com status &lt;code&gt;SETTLED&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt; 
+&lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;200&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;OK&lt;/span&gt;
+&lt;span style=&#34;color:#a40000&#34;&gt;content-type:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;application/json&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,187 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stone OpenBank – Referência da API</title>
+    <link>https://stone-co.github.io/docs/referencia-da-api/</link>
+    <description>Recent content in Referência da API on Stone OpenBank</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 17 Sep 2020 18:00:00 -0300</lastBuildDate>
+    
+	  <atom:link href="https://stone-co.github.io/docs/referencia-da-api/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Stone OpenBank</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/stone-openbank/</link>
+      <pubDate>Wed, 13 May 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/stone-openbank/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Dados da conta</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/</link>
+      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Simulações (DRY-RUN)</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/</link>
+      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Transferências</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/transferencias/</link>
+      <pubDate>Wed, 13 May 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/transferencias/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Pagamentos</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pagamentos/</link>
+      <pubDate>Wed, 13 May 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pagamentos/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Agendamento</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/agendamento/</link>
+      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/agendamento/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Comprovantes</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/comprovantes/</link>
+      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/comprovantes/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Aprovações</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/aprovacoes/</link>
+      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/aprovacoes/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Instituições</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/instituicoes/</link>
+      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/instituicoes/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Contatos</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/contatos/</link>
+      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/contatos/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Folha de Pagamento</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/folha-de-pagamento/</link>
+      <pubDate>Wed, 13 May 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/folha-de-pagamento/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Portabilidade De Salario</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/portabilidade-de-salario/</link>
+      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/portabilidade-de-salario/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Boletos</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/</link>
+      <pubDate>Wed, 13 May 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
