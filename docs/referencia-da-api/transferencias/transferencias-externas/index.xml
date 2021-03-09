@@ -99,7 +99,6 @@ Essa transformação é aplicada pela API antes dos dados serem armazenados.&lt;
 &lt;br&gt;“CC” - Conta Corrente
 &lt;br&gt;“CD” - Conta de Depósito
 &lt;br&gt;“CG” - Conta garantida
-&lt;br&gt;“CI” - Conta de Investimento
 &lt;br&gt;“PG” - Conta de Pagamento
 &lt;br&gt;“PP” - Poupança
 &lt;br&gt;&lt;br&gt;Este campo possui regras especiais para utilização:
