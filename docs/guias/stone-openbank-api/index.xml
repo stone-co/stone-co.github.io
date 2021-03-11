@@ -243,7 +243,7 @@ content-type x-www-form-urlencoded
 
 &lt;/div&gt;
 
-&lt;p&gt;Caso queira saber mais sobre as chamadas disponíveis na nossa API, consulte nossos endpoints em &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/stone-openbank/&#34;&gt;API Reference&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Caso queira saber mais sobre as chamadas disponíveis na nossa API, consulte nossos endpoints em &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/stone-openbank/overview&#34;&gt;API Reference&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;4---construindo-o-seu-app&#34;&gt;4 - Construindo o seu App&lt;/h3&gt;
 &lt;br&gt;
 &lt;p&gt;Com a resposta gerada pela requisição da TED acima, você poderá elaborar uma tela exibindo as informações da transferência realizada. Por exemplo, para construir a tela abaixo:&lt;/p&gt;
