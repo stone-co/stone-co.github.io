@@ -195,7 +195,7 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3O
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;jti&lt;/td&gt;
-&lt;td&gt;Identificador único do token gerado. Normalmente se utiliza um UUID, mas não é obrigatório usar esse formato desde que a unicidade seja garantida. Mais informações.&lt;/td&gt;
+&lt;td&gt;Identificador único do token gerado. Normalmente se utiliza um UUID, mas não é obrigatório usar esse formato desde que a unicidade seja garantida. &lt;a href=&#34;https://tools.ietf.org/html/rfc7519#section-4.1.7&#34;&gt;Mais informações&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;iat&lt;/td&gt;
