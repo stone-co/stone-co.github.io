@@ -3067,7 +3067,6 @@
         
 	
 	<hr>
-<p>a</p>
 <br>
 <p>Neste tutorial vamos ver como:</p>
 <ul>
@@ -3117,7 +3116,7 @@
 <p>Para o token de autenticação, é preciso utilizar os claims descritos em <a href="/docs/guias/integracao/autenticacao">Autenticação</a>; para o token de consentimento, serão utilizados os claims descritos em <a href="/docs/guias/integracao/consentimento">Consentimento</a>.</p>
 <br>
 <h4 id="3-montando-o-token-de-autenticação"><strong>3. Montando o token de autenticação</strong></h4>
-<p>Inicialmente, é preciso consultar quais os claims específicos do token de autenticação na <a href="/docs/guias/integracao/autenticacao">documentação</a>.</p>
+<p>Inicialmente, é preciso consultar quais os claims específicos do token de autenticação na <a href="/docs/guias/integracao/autenticacao#claims">documentação</a>.</p>
 <p>Através da função que construimos é possível gerar e assinar esse token de forma simples.</p>
 <p>Esse token será enviado para a Stone através de uma chamada para nosso servidor de autenticação, e enviaremos como resposta um <code>access_token</code>.</p>
 <p>O <code>access_token</code> também é do tipo JWT, e funciona como uma chave de acesso para todas requisições na API.</p>
@@ -3155,8 +3154,8 @@
 <p>Para utilizar o token de acesso, é preciso apenas adicionar esse token em um cabeçalho <code>authorization</code> com o valor <code>Bearer TOKEN</code>. Com isso, já é possível operar na API como é demonstrado mais a frente.</p>
 <br>
 <h4 id="4-montando-o-link-de-consentimento"><strong>4. Montando o link de consentimento</strong></h4>
-<p>Assim como para o token de autenticação, inicialmente consultamos quais os claims específicos do token de consentimento na <a href="/docs/guias/integracao/consentimento">documentação</a> e, em seguida, utilizamos a função que construimos para gerar e assinar o token.</p>
-<p>Neste caso, vamos um pouco além da geração do token, utilizando uma função para montar o link de consentimento com os três parâmetros especificados na <a href="/docs/guias/integracao/consentimento">documentação</a>.</p>
+<p>Assim como para o token de autenticação, inicialmente consultamos quais os claims específicos do token de consentimento na <a href="/docs/guias/integracao/consentimento#gerando-o-token">documentação</a> e, em seguida, utilizamos a função que construimos para gerar e assinar o token.</p>
+<p>Neste caso, vamos um pouco além da geração do token, utilizando uma função para montar o link de consentimento com os três parâmetros especificados na <a href="/docs/guias/integracao/consentimento#o-link-de-consentimento-deve-conter-tr%C3%AAs-par%C3%A2metros">documentação</a>.</p>
 <p>Resumindo o passo a passo para obter o link do consentimento, é preciso:</p>
 <ol>
 <li>Montar os claims para o token;</li>

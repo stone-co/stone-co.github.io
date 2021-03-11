@@ -24,7 +24,6 @@
         
         
         &lt;hr&gt;
-&lt;p&gt;a&lt;/p&gt;
 &lt;br&gt;
 &lt;p&gt;Neste tutorial vamos ver como:&lt;/p&gt;
 &lt;ul&gt;
@@ -74,7 +73,7 @@
 &lt;p&gt;Para o token de autenticação, é preciso utilizar os claims descritos em &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;Autenticação&lt;/a&gt;; para o token de consentimento, serão utilizados os claims descritos em &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/consentimento&#34;&gt;Consentimento&lt;/a&gt;.&lt;/p&gt;
 &lt;br&gt;
 &lt;h4 id=&#34;3-montando-o-token-de-autenticação&#34;&gt;&lt;strong&gt;3. Montando o token de autenticação&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;Inicialmente, é preciso consultar quais os claims específicos do token de autenticação na &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;documentação&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Inicialmente, é preciso consultar quais os claims específicos do token de autenticação na &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao#claims&#34;&gt;documentação&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Através da função que construimos é possível gerar e assinar esse token de forma simples.&lt;/p&gt;
 &lt;p&gt;Esse token será enviado para a Stone através de uma chamada para nosso servidor de autenticação, e enviaremos como resposta um &lt;code&gt;access_token&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;O &lt;code&gt;access_token&lt;/code&gt; também é do tipo JWT, e funciona como uma chave de acesso para todas requisições na API.&lt;/p&gt;
@@ -112,8 +111,8 @@
 &lt;p&gt;Para utilizar o token de acesso, é preciso apenas adicionar esse token em um cabeçalho &lt;code&gt;authorization&lt;/code&gt; com o valor &lt;code&gt;Bearer TOKEN&lt;/code&gt;. Com isso, já é possível operar na API como é demonstrado mais a frente.&lt;/p&gt;
 &lt;br&gt;
 &lt;h4 id=&#34;4-montando-o-link-de-consentimento&#34;&gt;&lt;strong&gt;4. Montando o link de consentimento&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;Assim como para o token de autenticação, inicialmente consultamos quais os claims específicos do token de consentimento na &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/consentimento&#34;&gt;documentação&lt;/a&gt; e, em seguida, utilizamos a função que construimos para gerar e assinar o token.&lt;/p&gt;
-&lt;p&gt;Neste caso, vamos um pouco além da geração do token, utilizando uma função para montar o link de consentimento com os três parâmetros especificados na &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/consentimento&#34;&gt;documentação&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Assim como para o token de autenticação, inicialmente consultamos quais os claims específicos do token de consentimento na &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/consentimento#gerando-o-token&#34;&gt;documentação&lt;/a&gt; e, em seguida, utilizamos a função que construimos para gerar e assinar o token.&lt;/p&gt;
+&lt;p&gt;Neste caso, vamos um pouco além da geração do token, utilizando uma função para montar o link de consentimento com os três parâmetros especificados na &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/consentimento#o-link-de-consentimento-deve-conter-tr%C3%AAs-par%C3%A2metros&#34;&gt;documentação&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Resumindo o passo a passo para obter o link do consentimento, é preciso:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Montar os claims para o token;&lt;/li&gt;

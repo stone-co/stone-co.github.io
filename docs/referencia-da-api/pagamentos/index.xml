@@ -32,7 +32,7 @@
 &lt;h3 id=&#34;estados&#34;&gt;Estados&lt;/h3&gt;
 &lt;br&gt;
 &lt;p&gt;Segue abaixo os estados possíveis de um &lt;strong&gt;pagamento&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;![Imagem 1](*inserir link)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/docs/referencia-da-api/pagamentos/o-que-e-um-pagamento/estados_pagamento.png&#34; alt=&#34;Imagem 1&#34;&gt;&lt;/p&gt;
 &lt;br&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;falhas-em-pagamentos&#34;&gt;Falhas em Pagamentos&lt;/h3&gt;
