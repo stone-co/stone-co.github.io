@@ -947,6 +947,31 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/dados-da-conta/verificar-status-de-uma-entidade/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Verificar Status de Uma Entidade</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apidados-da-contaverificar-status-de-uma-entidade">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/docs/referencia-da-api/dados-da-conta/overview-dados-da-conta/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O Que é Uma Conta</a>
   </li>
   <ul>
@@ -3066,52 +3091,145 @@
 	<h1>Criar Nova Identidade</h1>
         
 	
-	<p>Cria um novo usuário e sua organização, caso não exista.</p>
+	<hr>
+<p>Realiza o cadastro de conta de pagamento para pessoa física ou pessoa jurídica.</p>
 <hr>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">POST https://sandbox-api.openbank.stone.com.br/api/v1/users/signup
+<br>
+<p>O cadastro é feito de forma assíncrona de forma a permitir:</p>
+<ul>
+<li>uma maior velocidade de resposta.</li>
+<li>resiliência a falhas a partir de retentativas. Com isso conseguimos evitar que erros ocasionais como falhas de infraestrutura afete a nossa retenção de clientes no cadastro.</li>
+</ul>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">POST https://sandbox-api.openbank.stone.com.br/api/v1/applications/:client_id/signups
 </span></code></pre></div><hr>
-<p><strong>BODY PARAMS</strong></p>
-<hr>
-<p><strong>jwe</strong>  <code>string</code></p>
-<hr>
+<h4 id="authorization"><strong>Authorization</strong></h4>
 
 
 <div class="pageinfo pageinfo-primary">
-<p><strong>Conteúdo Criptografado</strong></p>
-<p>O body deste endpoint (abaixo) deve ser criptografado antes de ser enviado (JWE).</p>
+<p><strong>oauth2 - authorizationCode</strong></p>
+<p>A autenticação pública deve passar pelo nosso IAM Keycloak através do protocolo OpenID Connect e receber um token JWT.</p>
+<ul>
+<li>Flow: authorizationCode</li>
+<li>Authorization URL: <a href="https://sandbox-accounts.openbank.stone.com.br">https://sandbox-accounts.openbank.stone.com.br</a></li>
+<li>Token URL: <a href="https://sandbox-accounts.openbank.stone.com.br/auth/realms/stone_bank/protocol/openid-connect/token">https://sandbox-accounts.openbank.stone.com.br/auth/realms/stone_bank/protocol/openid-connect/token</a></li>
+<li>Required Scopes: <code>stone_subject_id</code></li>
+</ul>
 
 </div>
 
-<p>O conteúdo a ser criptografado é um JSON com a seguinte estrutura:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;user&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;document&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;00000000000&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;document_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;cpf&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;full_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;string&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;email&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;string&#34;</span>
-    <span style="color:#000;font-weight:bold">},</span>
-
-    <span style="color:#204a87;font-weight:bold">&#34;organization&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;document&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;00000000000000&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;document_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;cnpj&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;full_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;string&#34;</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;email&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;string&#34;</span>
-
-    <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><p>Para gerar um token JWT criptografado (usando JWE) temos 3 passos:</p>
-<ol>
-<li>Criar um conteúdo a ser criptografado (payload), no caso, o conteúdo JSON acima;</li>
-<li>Buscar a chave pública da Stone no endpoint /api/v1/discovery/keys, cujo campo &ldquo;use&rdquo; seja igual a &ldquo;enc&rdquo;;</li>
-<li>Usar uma biblioteca passando o payload, a chave pública e o algoritmo utilizado, no caso, RSA-OAEP-256.</li>
-</ol>
 <hr>
-<h4 id="response">Response</h4>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">201 Created
-</span><span style="color:#a40000">content-type: application/json
-</span></code></pre></div><p>Body</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;user:9359ea04-473b-4592-bbcc-7ec8461039ee&#34;</span>
+<h4 id="request-parameters"><strong>Request Parameters</strong></h4>
+<hr>
+<h5 id="path-parameter"><strong>PATH PARAMETER</strong></h5>
+<hr>
+<p><strong>client_id</strong>* <code>string</code></p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#000;font-weight:bold">{</span>
+  <span style="color:#204a87;font-weight:bold">&#34;client_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;7fc3a55f-b6a3-4b92-a07a-4166bg392341&#34;</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><h5 id="headers"><strong>HEADERS</strong></h5>
+<hr>
+<p><strong>x-stone-idempotency-key</strong> <code>string</code></p>
+<p><strong>x-stone-subject-token</strong> <code>string</code></p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#000;font-weight:bold">{</span>
+  <span style="color:#204a87;font-weight:bold">&#34;x-stone-idempotency-key&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;25478963571458&#34;</span><span style="color:#000;font-weight:bold">,</span> 
+  <span style="color:#204a87;font-weight:bold">&#34;x-stone-subject-token&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJhY2NvdW50cy1odWJpZEBvcGVuYmFuay5zdG9uZS5jb20uYnIiLCJuYmYiOjE2MTU0NzI9GjAsInNlc3Npb25fbWV0YWRhdGEiOnsiZW1wcmVzYVpXIjoxLCJjaGF2ZVpXIjoienciLCJwcm9kdWNhbyI6ZmFsc2V9LCJpc3MiOiJkODAzMDQ4ZC03MzA2LTQxNTYtYjNlMS1hNjlkMWNiZjQ3ODEiLCJyZWRpcmVjdF91cmkiOiJodHRwOi8vbG9jYWxob3N0Ojg1ODUvc3RvbmViYW5rL2NvbnNlbnRyZWRpcmVjdCIsInR5cGUiOiJjb25zZW50IiwiZXhwIjoxNjE1NDc5OTI5LCJpYWJ3OjE2MTU0NzI3MTksImp0aSI6Ijk0NTlmMjhhLTQ5NDEtNDA2Zi05YjExLWFmMjdhMWQ2MzEyMCJ9.SptDNxVKp5W_9B&#34;</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><br>
+<h4 id="request-body"><strong>Request Body</strong></h4>
+<hr>
+<p>Consiste nos dados do usuário e opcionalmente na organização que iremos cadastrar.</p>
+<p>Por consistir de dados do usuário que são potencialmente sensíveis, o corpo da requisição deve ser criptografado com o mesmo procedimento utilizado para criptografar o corpo do sign_up público.</p>
+<p>O corpo da requisição terá o formato:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">&#34;jwe&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;...&#34;</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><p>No exemplo do editor abaixo, forneço o corpo descriptografado da requisição. O campo metadata contém dados customizados que a aplicação desejar salvar no pedido de sign up.</p>
+
+
+<div class="pageinfo pageinfo-primary">
+<p><strong>Observação</strong></p>
+<p>Lembre-se de passar no header <em>x-stone-idempotency-key</em> um UUID, isso ajuda que a requisição fique idempotente. Isto é, permite que chame a mesma requisição múltiplas vezes criando apenas um cadastro.</p>
+
+</div>
+
+<h5 id="schema"><strong>Schema</strong></h5>
+<hr>
+<p><strong>object:</strong></p>
+<ul>
+<li>
+<p><strong>user</strong>* <code>object</code></p>
+<ul>
+<li>
+<p><strong>document</strong>* <code>string</code></p>
+</li>
+<li>
+<p><strong>document_type</strong>* <code>string</code></p>
+</li>
+<li>
+<p><strong>full_name</strong>* <code>string</code></p>
+</li>
+<li>
+<p><strong>email</strong>* <code>string</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>organization:</strong>* <code>string</code> or <code>Object</code></p>
+<ul>
+<li>
+<p><strong>document</strong>* <code>string</code></p>
+</li>
+<li>
+<p><strong>document_type</strong>* <code>string</code></p>
+</li>
+<li>
+<p><strong>full_name</strong> <code>string</code></p>
+</li>
+<li>
+<p><strong>email</strong> <code>string</code></p>
+</li>
+<li>
+<p><strong>metadata</strong> <code>object</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="example">Example</h5>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#000;font-weight:bold">{</span>
+  <span style="color:#204a87;font-weight:bold">&#34;user&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">&#34;document&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;52762077044&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;document_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;cpf&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;full_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Fulano da Silva&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;email&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;any_valid_non_burner_email1231@gmail.com&#34;</span>
+  <span style="color:#000;font-weight:bold">},</span>
+  <span style="color:#204a87;font-weight:bold">&#34;organization&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">&#34;document&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;67946893000133&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;document_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;cnpj&#34;</span>
+  <span style="color:#000;font-weight:bold">},</span>
+  <span style="color:#204a87;font-weight:bold">&#34;metadata&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">&#34;id_salesperson&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;12322&#34;</span>
+  <span style="color:#000;font-weight:bold">}</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><h5 id="responses"><strong>Responses</strong></h5>
+<hr>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#0000cf;font-weight:bold">202</span> <span style="color:#a40000">Accepted</span>
+</code></pre></div>
+
+<div class="pageinfo pageinfo-primary">
+<p><strong>Observação</strong></p>
+<p>Por ser uma chamada assíncrona temos como resposta o código de status 202 e o id do pedido de requisição. Esse pode ser utilizado pela API de consulta do pedido de requisição para verificar os metadados e o estado atual do cadastro do cliente.</p>
+
+</div>
+
+<h5 id="schema-1"><strong>Schema</strong></h5>
+<hr>
+<p><strong>Object:</strong></p>
+<ul>
+<li><strong>id</strong>* <code>string</code></li>
+</ul>
+<h5 id="example-1">Example</h5>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#000;font-weight:bold">{</span>
+  <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;9c6197d8-4b76-422c-ba81-11fb1ca97313&#34;</span>
 <span style="color:#000;font-weight:bold">}</span>
 </code></pre></div>
         <div class="section-index">
@@ -3121,6 +3239,8 @@
     
     
     <hr class="panel-line">
+        
+            
         
             
         
