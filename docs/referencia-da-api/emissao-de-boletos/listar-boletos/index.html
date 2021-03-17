@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.3aa02066540c72d81b7c44b31ac28d7e.json"
+  data-offline-search-index-json-src="/offline-search-index.42aea44e2a4fcfa057c0de208eba96e1.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.3aa02066540c72d81b7c44b31ac28d7e.json"
+  data-offline-search-index-json-src="/offline-search-index.42aea44e2a4fcfa057c0de208eba96e1.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3134,19 +3134,63 @@
 <p><strong>account_id</strong>* <code>string</code>
 <br> Identificador da conta.</p>
 <hr>
-<p><strong>before</strong>* <code>string</code>
+<p><strong>before</strong> <code>string</code>
 <br> Cursor opaco da paginação.</p>
 <hr>
-<p><strong>after</strong>* <code>string</code>
+<p><strong>after</strong> <code>string</code>
 <br> Cursor opaco da paginação.</p>
 <hr>
-<p><strong>limit</strong>* <code>int32</code>
+<p><strong>limit</strong> <code>integer</code>
 <br> Limite de itens retornados.</p>
+<hr>
+<p><strong>status</strong> <code>string</code>
+<br> Valores Permitidos: CREATED, SETTLED, REGISTERED, EXPIRED, PENDING.</p>
+<hr>
+<p><strong>amount</strong> <code>integer</code>
+<br></p>
+<hr>
+<p><strong>issuance_date</strong> <code>string</code>
+<br></p>
+<hr>
+<p><strong>expiration_date</strong> <code>string</code>
+<br></p>
+<hr>
+<p><strong>settled_date</strong> <code>string</code>
+<br></p>
+<hr>
+<p><strong>amount_lt</strong> <code>integer</code>
+<br></p>
+<hr>
+<p><strong>amount_gt</strong> <code>integer</code>
+<br></p>
+<hr>
+<p><strong>start_limit_date</strong> <code>string</code>
+<br></p>
+<hr>
+<p><strong>end_limit_date</strong> <code>string</code>
+<br></p>
+<hr>
+<p><strong>start_expiration_date</strong> <code>string</code>
+<br></p>
+<hr>
+<p><strong>end_expiration_date</strong> <code>string</code>
+<br></p>
+<hr>
+<p><strong>start_issuance_date</strong> <code>string</code>
+<br></p>
+<hr>
+<p><strong>end_issuance_date</strong> <code>string</code>
+<br></p>
+<hr>
+<p><strong>start_settled_date</strong> <code>string</code>
+<br></p>
+<hr>
+<p><strong>end_settled_date</strong> <code>string</code></p>
 <br>
 <h4 id="response"><strong>Response</strong></h4>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#0000cf;font-weight:bold">200</span> <span style="color:#a40000">OK</span>
 <span style="color:#a40000">content-type:</span> <span style="color:#a40000">application/json</span>
-</code></pre></div><p>Body</p>
+</code></pre></div><h5 id="body">Body</h5>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">
 <span style="color:#000;font-weight:bold">{</span>
     <span style="color:#204a87;font-weight:bold">&#34;cursor&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
@@ -3262,6 +3306,20 @@
           <span style="color:#204a87;font-weight:bold">&#34;writable_line&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;19790000052020031015703344761550581910000002000&#34;</span>
        <span style="color:#000;font-weight:bold">}</span>
     <span style="color:#000;font-weight:bold">]</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div><br>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#0000cf;font-weight:bold">403</span> <span style="color:#a40000">Forbidden</span>
+</code></pre></div><h5 id="body-1">Body</h5>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#000;font-weight:bold">{</span>
+  <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;object&#34;</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">&#34;properties&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+      <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;string&#34;</span><span style="color:#000;font-weight:bold">,</span>
+      <span style="color:#204a87;font-weight:bold">&#34;enum&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
+        <span style="color:#4e9a06">&#34;srn:error:unauthorized&#34;</span>
+      <span style="color:#000;font-weight:bold">]</span>
+    <span style="color:#000;font-weight:bold">}</span>
+  <span style="color:#000;font-weight:bold">}</span>
 <span style="color:#000;font-weight:bold">}</span>
 </code></pre></div>
         <div class="section-index">
