@@ -93,11 +93,6 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/aprovacoes/o-que-e-uma-aprovacao/</loc>
-    <lastmod>2019-05-20T15:30:54+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/simular-uma-transferencia-interna/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
   </url>
@@ -172,11 +167,6 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/aprovacoes/aprovar-um-pagamento/</loc>
-    <lastmod>2019-12-02T22:56:58+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/overview-dados-da-conta/</loc>
     <lastmod>2020-05-01T00:15:00+00:00</lastmod>
   </url>
@@ -246,11 +236,6 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/aprovacoes/rejeitar-um-pagamento/</loc>
-    <lastmod>2019-12-02T22:56:58+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-internas/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
   </url>
@@ -297,11 +282,6 @@
   
   <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/contatos/retornar-um-contato/</loc>
-    <lastmod>2019-12-02T22:56:58+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/aprovacoes/aprovar-uma-transferencia-interna/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
   </url>
   
@@ -356,11 +336,6 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/aprovacoes/rejeitar-uma-transferencia-interna/</loc>
-    <lastmod>2019-12-02T22:56:58+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/pagamentos/retornar-um-pagamento/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
   </url>
@@ -406,11 +381,6 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/aprovacoes/aprovar-uma-transferencia-externa/</loc>
-    <lastmod>2019-12-02T22:56:58+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-o-saldo/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
   </url>
@@ -442,11 +412,6 @@
   
   <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/contatos/adicionar-conta-bancaria-a-um-contato/</loc>
-    <lastmod>2019-12-02T22:56:58+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/aprovacoes/rejeitar-uma-transferencia-externa/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
   </url>
   
@@ -487,11 +452,6 @@
   <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-extrato/</loc>
     <lastmod>2020-04-20T20:28:41+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/aprovacoes/</loc>
-    <lastmod>2020-09-17T18:00:00-03:00</lastmod>
   </url>
   
   <url>
