@@ -1,0 +1,316 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> – Panda</title>
+    <link>https://stone-co.github.io/docs/guias/integracao/panda/</link>
+    <description>Recent content in Panda on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 18 Mar 2021 09:00:00 -0300</lastBuildDate>
+    
+	  <atom:link href="https://stone-co.github.io/docs/guias/integracao/panda/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Autorizar</title>
+      <link>https://stone-co.github.io/docs/guias/integracao/panda/authorization/</link>
+      <pubDate>Thu, 18 Mar 2021 14:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/guias/integracao/panda/authorization/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/resources/v1/authorization/actions/authorize
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esse endpoint tem como finalidade autorizar &lt;em&gt;actions&lt;/em&gt; de um &lt;em&gt;subject&lt;/em&gt; sobre um determinado &lt;em&gt;resource&lt;/em&gt;.&lt;/p&gt;
+&lt;br&gt;
+&lt;h4 id=&#34;quem-pode-usar-esse-endpoint&#34;&gt;&lt;strong&gt;Quem pode usar esse endpoint?&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;Apenas &lt;em&gt;client applications&lt;/em&gt; identificadas como &lt;code&gt;resource_server&lt;/code&gt; podem solicitar autorizações por esse endpoint. Caso não tenha uma aplicação criada em banking ainda, solicite a criação de uma. Caso já tenha uma aplicação, é necessário solicitar que a sua aplicação seja definida como um &lt;code&gt;resource_server&lt;/code&gt;.&lt;/p&gt;
+&lt;br&gt;
+&lt;h4 id=&#34;como-gero-o-token-para-acessar-esse-endpoint&#34;&gt;&lt;strong&gt;Como gero o token para acessar esse endpoint?&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;Você pode seguir o guia descrito &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;clicando aqui&lt;/a&gt;.&lt;/p&gt;
+&lt;br&gt;
+&lt;h4 id=&#34;fluxo-de-autorização-de-challenge&#34;&gt;&lt;strong&gt;Fluxo de autorização de challenge&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;Caso a action a ser autorizada demande &lt;em&gt;challenge&lt;/em&gt;, o fluxo seguinte deverá ser seguido:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;A primeira requisição (com o request body como descrito abaixo) retornará:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;code&gt;status: 403&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Json&#34; data-lang=&#34;Json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;challenge&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+		&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+		&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;required_types&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;pin&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;],&lt;/span&gt;
+		&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;srn:error:challenge_required&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+		&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;details&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;error&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;challenge_required&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+	&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Note que &lt;code&gt;required_types&lt;/code&gt; indicará quais tipos de &lt;em&gt;credencial&lt;/em&gt; o &lt;em&gt;subject&lt;/em&gt; deverá preencher pra conseguir uma autorização. Alguns valores possíveis são: &lt;code&gt;login_password&lt;/code&gt;, &lt;code&gt;pin&lt;/code&gt;, &lt;code&gt;totp&lt;/code&gt;, &lt;code&gt;face_match&lt;/code&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;O próximo &lt;em&gt;request&lt;/em&gt; deverá conter o &lt;code&gt;challenge_solution&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Pra montar o &lt;code&gt;challenge_solution&lt;/code&gt; você deverá gerar um JWE, onde o valor decryptado seja um json no seguinte formato:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Json&#34; data-lang=&#34;Json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;challenge_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;challenge_id&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;pin&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;pin&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;O &lt;code&gt;challenge id&lt;/code&gt; é o valor devolvido no request anterior e segunda chave do json deverá ser o tipo de &lt;em&gt;credencial&lt;/em&gt; e seu valor correspondente.&lt;/p&gt;
+&lt;p&gt;Para gerar o JWE você usará a chave com &lt;code&gt;&amp;quot;use&amp;quot;: &amp;quot;enc&amp;quot;&lt;/code&gt; exposta em &lt;code&gt;api/v1/discovery/keys&lt;/code&gt;. O &lt;code&gt;protected_header&lt;/code&gt; desse JWE deverá ser algo como &lt;code&gt;{&amp;quot;alg&amp;quot;:&amp;quot;RSA-OAEP&amp;quot;,&amp;quot;enc&amp;quot;:&amp;quot;A256GCM&amp;quot;}&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Após a solução do &lt;em&gt;challenge&lt;/em&gt;, você receberá a resposta indicando o status da autorização ou uma resposta com status 403 o problema na solução do &lt;em&gt;challenge&lt;/em&gt; ou na falta de permissão do &lt;em&gt;subject&lt;/em&gt;.&lt;/p&gt;
+&lt;br&gt;
+&lt;h4 id=&#34;como-gerar-um-jwe&#34;&gt;&lt;strong&gt;Como gerar um JWE&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;Para gerar um token JWE (JWT criptografado) seguimos 3 passos:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Escrever o conteúdo a ser criptografado (payload).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Buscar a chave pública da Stone, no endpoint /api/v1/discovery/keys, cujo campo “use” seja igual a “enc”;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Usar uma biblioteca de criptografia passando o payload, a chave pública e o algoritmo utilizado, no caso, RSA-OAEP-256&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;br&gt;
+&lt;h4 id=&#34;tipos-de-erro&#34;&gt;&lt;strong&gt;Tipos de erro&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;Caso haja algum “problema” durante o processo de autorização, é importante checar o campo &lt;code&gt;&amp;quot;type&amp;quot;&lt;/code&gt; retornado no response body.&lt;/p&gt;
+&lt;p&gt;Abaixo estão listados os types e o que cada um significa.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Campo a qual se refere&lt;/th&gt;
+&lt;th&gt;Status&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;srn:error:unauthenticated&lt;/td&gt;
+&lt;td&gt;request_body.subject.token&lt;/td&gt;
+&lt;td&gt;401&lt;/td&gt;
+&lt;td&gt;A sessão do subject não é válida.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;srn:error:bad_jwe_token&lt;/td&gt;
+&lt;td&gt;request_body.subject.context.challenge_solution&lt;/td&gt;
+&lt;td&gt;403&lt;/td&gt;
+&lt;td&gt;JWE (challenge_solution) é inválido.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;srn:error:unrecognized_key&lt;/td&gt;
+&lt;td&gt;request_body.subject.context.challenge_solution&lt;/td&gt;
+&lt;td&gt;403&lt;/td&gt;
+&lt;td&gt;JWE encryptado com chave incorreta.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;srn:error:wrong_challenge_solution&lt;/td&gt;
+&lt;td&gt;request_body.subject.context.challenge_solution&lt;/td&gt;
+&lt;td&gt;403&lt;/td&gt;
+&lt;td&gt;ID do challenge não foi passado na solution.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;srn:error:bad_challenge_solution&lt;/td&gt;
+&lt;td&gt;request_body.subject.context.challenge_solution&lt;/td&gt;
+&lt;td&gt;403&lt;/td&gt;
+&lt;td&gt;A resposta do challenge está incorreta.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;srn:error:challenge_not_found&lt;/td&gt;
+&lt;td&gt;request_body.subject.context.challenge_solution&lt;/td&gt;
+&lt;td&gt;403&lt;/td&gt;
+&lt;td&gt;O id do challenge não corresponde a nenhum existente.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;srn:error:unauthorized&lt;/td&gt;
+&lt;td&gt;–&lt;/td&gt;
+&lt;td&gt;403&lt;/td&gt;
+&lt;td&gt;Subject não tem as permissões necessárias pra executar a ação.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;h4 id=&#34;glossário&#34;&gt;&lt;strong&gt;Glossário&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Termo&lt;/th&gt;
+&lt;th&gt;Definição&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;subject&lt;/td&gt;
+&lt;td&gt;Quem deseja fazer a ação.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;action&lt;/td&gt;
+&lt;td&gt;Ação a ser autorizada.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;resource&lt;/td&gt;
+&lt;td&gt;Recurso que sofrerá a ação.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;h4 id=&#34;request-body&#34;&gt;&lt;strong&gt;Request Body&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;h5 id=&#34;action&#34;&gt;&lt;strong&gt;Action&lt;/strong&gt;&lt;/h5&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Campo&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;context&lt;/td&gt;
+&lt;td&gt;Objeto contendo o id e o tipo do recurso a ser autorizado.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;name&lt;/td&gt;
+&lt;td&gt;Nome da Ação.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h5 id=&#34;subject&#34;&gt;&lt;strong&gt;Subject&lt;/strong&gt;&lt;/h5&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Campo&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;token&lt;/td&gt;
+&lt;td&gt;Sessão do usário. Deve ser o token presente no momento da requisição a ser autorizada.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;context&lt;/td&gt;
+&lt;td&gt;Objeto contendo informações úteis sobre a sessão ativa.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h5 id=&#34;context&#34;&gt;&lt;strong&gt;Context&lt;/strong&gt;&lt;/h5&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Campo&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;request_hash&lt;/td&gt;
+&lt;td&gt;Deve ser um hash do corpo da requisição.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;user_agent&lt;/td&gt;
+&lt;td&gt;O header de user_agent do subject.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;challenge_solution&lt;/td&gt;
+&lt;td&gt;JWE com a solução do challenge (caso seja necessário).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;schema&#34;&gt;&lt;strong&gt;Schema&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;object:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;action&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;context&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;resource_id&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;resource_type&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;name&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;subject&lt;/strong&gt; &lt;code&gt;Object&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;token&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;context&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;request_hash&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;user_agent&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;challeng_solution&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;user_ip&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;location&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;optional_actions&lt;/strong&gt; &lt;code&gt;array[object]&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;context&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;resource_id&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;resource_type&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;name&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;responses&#34;&gt;&lt;strong&gt;Responses&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;200 OK&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Json&#34; data-lang=&#34;Json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;action&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+		&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;action_name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+		&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;authorized&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+		&lt;span style=&#34;color:#a40000&#34;&gt;optional_actions:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;[]&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>
