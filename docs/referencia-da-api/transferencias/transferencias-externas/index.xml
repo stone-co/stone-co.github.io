@@ -51,7 +51,7 @@
 &lt;br&gt;
         Número da agência. Padrão: &lt;code&gt;^\d{1,4}$&lt;/code&gt;
 &lt;br&gt;&lt;br&gt;
-        &lt;strong&gt;instituition_code&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
+        &lt;strong&gt;institution_code&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
 &lt;br&gt;
         Código ISPB da instituição ou número do banco. Padrão: &lt;code&gt;^(\d{8}|\d{3})$&lt;/code&gt;.
 &lt;br&gt;&lt;br&gt;
