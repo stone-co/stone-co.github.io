@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/o-que-e-um-link-de-pagamento/</loc>
+    <lastmod>2021-03-10T16:30:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/estrutura-de-transacoes-no-extrato/</loc>
     <lastmod>2021-02-19T13:14:16+00:00</lastmod>
   </url>
@@ -107,6 +112,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/configuracoes-da-conta-para-um-link-de-pagamento/</loc>
+    <lastmod>2021-03-11T14:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/guias/a-conta-stone/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
   </url>
@@ -186,6 +196,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/listar-links-de-pagamento-da-conta/</loc>
+    <lastmod>2021-03-11T15:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/guias/integracao/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
   </url>
@@ -256,6 +271,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/detalhes-de-um-link-de-pagamento/</loc>
+    <lastmod>2021-03-15T15:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
   </url>
@@ -311,6 +331,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/criar-link-de-pagamento/</loc>
+    <lastmod>2021-03-15T11:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/transferencias/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
   </url>
@@ -348,6 +373,11 @@
   <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-internas/retornando-uma-transferencia-interna/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/cancelar-link-de-pagamento/</loc>
+    <lastmod>2021-03-15T11:00:00-03:00</lastmod>
   </url>
   
   <url>
@@ -526,6 +556,11 @@
   <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/</loc>
+    <lastmod>2020-09-17T18:00:00-03:00</lastmod>
   </url>
   
   <url>
