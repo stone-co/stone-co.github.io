@@ -18,15 +18,15 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Conta Stone SDK | Stone OpenBank</title><meta property="og:title" content="Conta Stone SDK" />
+<title>Conta Stone SDK (Beta) | Stone OpenBank</title><meta property="og:title" content="Conta Stone SDK (Beta)" />
 <meta property="og:description" content="Escreva o Banco do futuro. Uma linha de código por vez." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://stone-co.github.io/docs/guias/conta-stone-sdk/" />
-<meta property="og:updated_time" content="2019-11-19T22:48:16+00:00" /><meta property="og:site_name" content="Stone OpenBank" />
-<meta itemprop="name" content="Conta Stone SDK">
+<meta property="og:updated_time" content="2020-09-17T18:00:00-03:00" /><meta property="og:site_name" content="Stone OpenBank" />
+<meta itemprop="name" content="Conta Stone SDK (Beta)">
 <meta itemprop="description" content="Escreva o Banco do futuro. Uma linha de código por vez.">
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Conta Stone SDK"/>
+<meta name="twitter:title" content="Conta Stone SDK (Beta)"/>
 <meta name="twitter:description" content="Escreva o Banco do futuro. Uma linha de código por vez."/>
 
 
@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.32a97b25195c900e72436ec9ea85c059.json"
+  data-offline-search-index-json-src="/offline-search-index.3b58cdb7674a4866a5a275b0c49c0f93.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.32a97b25195c900e72436ec9ea85c059.json"
+  data-offline-search-index-json-src="/offline-search-index.3b58cdb7674a4866a5a275b0c49c0f93.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -739,11 +739,86 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/conta-stone-sdk/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Conta Stone SDK</a>
+    <a  href="/docs/guias/conta-stone-sdk/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Conta Stone SDK (Beta)</a>
   </li>
   <ul>
     <li class="collapse show" id="docsguiasconta-stone-sdk">
       
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/guias/conta-stone-sdk/overview/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Overview</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="docsguiasconta-stone-sdkoverview">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/guias/conta-stone-sdk/sdk-sample-ios/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Sample iOS</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="docsguiasconta-stone-sdksdk-sample-ios">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/guias/conta-stone-sdk/sdk-sample-android/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Sample Android</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="docsguiasconta-stone-sdksdk-sample-android">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
       
       
     </li>
@@ -3130,7 +3205,7 @@
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="https://stone-co.github.io/docs/guias/conta-stone-sdk/">Conta Stone SDK</a>
+	<a href="https://stone-co.github.io/docs/guias/conta-stone-sdk/">Conta Stone SDK (Beta)</a>
 </li>
 
 	</ol>
@@ -3138,115 +3213,10 @@
 
             
 <div class="td-content">
-	<h1>Conta Stone SDK</h1>
+	<h1>Conta Stone SDK (Beta)</h1>
         
 	
-	<br>
-<p>Sejam bem-vindos à documentação da Conta Stone SDK. Através da Conta Stone SDK é possível fazer o processo de abertura de conta e login no Stone OpenBank.</p>
-<hr>
-<h4 id="introdução"><strong>Introdução</strong></h4>
-<p>A Conta Stone SDK é o ponto de entrada para acesso às nossas SDKs de autenticação (Auth SDK), aprovação (Approver SDK) e verificação de <a href="https://en.wikipedia.org/wiki/Know_your_customer">KYC</a> (<em>Know your costumer</em>) (Pegasus SDK). Segue abaixo um diagrama de como funciona a comunicação entre esses três atores.</p>
-<p><img src="/docs/guias/conta-stone-sdk/conta-stone-sdk-diagram.png" alt="imagem_conta_stone_sdk_diagram"></p>
-<ul>
-<li>
-<p>Auth SDK - responsável por executar todo o processo de autenticação seguindo as diretrizes do <a href="https://oauth.net/2/">oAuth2</a>.</p>
-</li>
-<li>
-<p>Approver SDK - realiza todo o processo de aprovação e rejeição de transações.</p>
-</li>
-<li>
-<p>Pegasus SDK - SDK de KYC, responsável por capturar as informações do usuário que está realizando cadastro na conta.</p>
-</li>
-</ul>
-<br>
-<h4 id="como-integrar-com-a-sdk"><strong>Como integrar com a SDK</strong></h4>
-<p>Antes de começar a integração é necessário obter uma chave de acesso ao nosso repositório. Para obter esta chave, entre em contato com a gente.</p>
-<p>No arquivo <code>build.gradle</code> do projeto, adicione a URL do repositório.</p>
-<pre><code>maven { url &quot;https://packagecloud.io/priv/${access-key}/Stone/stoneid/maven2&quot;}
-</code></pre><p>Importe a dependência da Conta Stone SDK</p>
-<pre><code>implementation 'co.stone:conta:${latest_version}'
-</code></pre><p>Sincronize o projeto e pronto! Já é possível utilizar a conta-stone-sdk.</p>
-<br>
-<h4 id="inicializando-a-sdk"><strong>Inicializando a SDK</strong></h4>
-<p>Uma vez que a dependência foi importada o passo seguinte da integração é inicializar a SDK no seu app, para isso é necessário especificar os parâmetros abaixo.</p>
-<pre><code>ContaStone.initialize(
-            application = applicationContext,
-            environment = Environment.Production,
-            appInfo = AppInfo(
-                name = &quot;Conta Stone Android&quot;,
-                version = BuildConfig.VERSION_NAME,
-                buildId = BuildConfig.BUILD_ID
-            ),
-            clientId = &quot;client_id&quot;,
-            redirectUri = URI(&quot;br.com.stone.openbank.example:/oauth2redirect&quot;),
-            authFlowUIConfig = AuthFlowUIConfig(R.style.AppTheme),
-            httpClientConfig = HttpClientConfig(interceptors = emptyList()),
-            tokenKeyMasterUri =  URI(&quot;android-keystore://my-app&quot;),
-            userBlockedActions = UserBlockedIntentConfig(
-                uriLogout = &quot;myapp://mobile.example.logout&quot;,
-                uriChat = &quot;myapp://mobile.example.chat&quot;
-            )
-        )
-</code></pre><p><code>application</code>: Trata-se da instância do Application do seu app.</p>
-<p><code>environment</code>: Existem 3 ambientes para os quais a sdk pode apontar: <code>Homolog</code>, <code>Sandbox</code> e <code>Production</code>.</p>
-<p><code>appInfo</code>: Informações referentes ao app como nome, versão e build.</p>
-<p><code>client_id</code>: Identificador fornecido pelo time de suporte OpenBank.</p>
-<p><code>redirect_uri</code>: URL de redirecionamento para o app.</p>
-<p><code>authFlowUIConfig</code>: Com esta configuração é possível passar o tema da sua aplicação para a SDK. Assim, as cores principais do estilo do seu app serão aplicadas nas telas internas da SDK.</p>
-<p><code>httpClientConfig</code>: Trata-se de configurações HTTP customizadas, como <code>interceptors</code>, <code>connectionTimeoutMs</code>, <code>readTimeoutMs</code>, <code>writeTimeoutMs</code>, <code>networkInterceptors</code>.</p>
-<p><code>tokenKeyMasterUri</code>: Uma URI para a chave-mestra no formato <code>android-keystore://</code>. Essa chave será utilizada para acessar o Keystore do android e salvar o token da usuária de forma segura.</p>
-<p><code>userBlockedActions</code>: Se um determinado usuário errar a senha de 6 dígitos mais de x vezes, ele será temporariamente bloqueado. Neste momento será exibida uma tela com duas opções: acesso ao canal de relacionamento ou fazer logout. Ao escolher entre elas, o usuário é redirecionado de volta para o app, através dessas duas URIs.</p>
-<p>Para mais detalhes sobre como configurar deep link no seu app, clique  <a href="https://developer.android.com/training/app-links/deep-linking">aqui</a>.</p>
-<br>
-<h4 id="autenticação-e-verificação-de-kyc"><strong>Autenticação e verificação de KYC</strong></h4>
-<p>Para iniciar o fluxo é necessário seguir o método abaixo:</p>
-<pre><code>fun startAuthAndVerificationFlowForResult(
-        activity: Activity,
-        requestCode: Int,
-        request: AuthFlowRequest,
-        params: VerificationParams
-    )
-</code></pre><p>O atributo <code>request</code> refere-se a informações customizadas para o login, como os <code>scopes</code>. Tais recursos estarão disponíveis para o usuário ao chamar algum dos endpoints do serviço. Já o <code>loginHint</code> salva o email do usuário e é usado para preencher o username na tela de login.</p>
-<p>O atributo <code>params</code> recebe comandos de dois tipos: o modo de inicialização, ou seja, a maneira como o fluxo deve ser iniciado; e o <code>NotificationRegister</code>, que contém o token do Firebase Cloud Message do usuário logado para que seja registrado no serviço de notificações. Os modos de inicialização que podem ser escolhidos são:</p>
-<p><code>StartingApp</code> - Inicia todo o fluxo de autenticação e checkagem de KYC.</p>
-<p><code>AccountSelectionRequest</code> - Exibe a tela de troca de conta e lida com a escolha do usuário.</p>
-<p><code>PushNotificationReceived</code> - Deve ser iniciado ao receber uma notificação de abertura de conta referente ao processo de abertura de conta.</p>
-<p><code>NewAccountCreated</code> - Chamado de verificação de pendência a cada conta aberta pelo app/sistema.</p>
-<p>Este método executa os fluxos internos de autenticação e verificação de KYC. Quando o processo é finalizado, a <code>conta-stone-sdk</code> retorna um resultado que será tratado pelo app.</p>
-<br>
-<h4 id="lidando-com-o-resultado-da-sdk"><strong>Lidando com o resultado da sdk</strong></h4>
-<p>Ao finalizar o fluxo de autenticação e verificação a SDK emite um resultado para o app informando o desfecho do fluxo. Segue abaixo um exemplo de como tratar o resultado emitido pela <code>conta-stone-sdk</code> e o que cada um significa:</p>
-<pre><code>  override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-        when (requestCode) {
-            AUTH_AND_VERIFICATION_RC -&gt; {
-                val result = contaStone.parseAuthAndVerificationResult(data)
-
-                when (result) {
-                    is AuthAndVerificationResult.Ok -&gt; toast(&quot;Success&quot;)
-                    is AuthAndVerificationResult.MissingData -&gt; toast(&quot;Some error occur while reading data&quot;)
-                    is AuthAndVerificationResult.UserCancelled -&gt; toast(&quot;User cancelled flow&quot;)
-                    is AuthAndVerificationResult.ReturnToPreviousScreen -&gt; toast(&quot;Returned to the previous screen and was logged out&quot;)
-                    is AuthAndVerificationResult.UserLoggedOut -&gt; toast(&quot;User logged out&quot;)
-                    is AuthAndVerificationResult.BlockedUser -&gt; toast(&quot;This user is blocked&quot;)
-                    is AuthAndVerificationResult.Error -&gt; toast(&quot;Some error occur during auth and check flow)
-                }
-            }
-        }
-    }
-</code></pre><br>
-<h4 id="como-fazer-logout-do-usuário"><strong>Como fazer logout do usuário</strong></h4>
-<p>Como mencionado anteriormente, a <code>conta-stone-sdk</code> se comunica com a sdk de autenticação, que pode ser acessada pelo método <code>contaStone.auth()</code> e permite acesso aos métodos da interface da authSdk, como o método de logout. Confira abaixo um exemplo de como isso funciona:</p>
-<pre><code>contaStone.auth().logout { exception: AuthFlowException? -&gt;
-                        exception?.let { toast(&quot; Success &quot;)} ?: toast(&quot;Erro during logout&quot;)
-                    }
-</code></pre><p>Quando a resposta é nula, o logout ocorreu com sucesso. Quando não, algum erro ocorreu durante o fluxo.</p>
-<br>
-<h4 id="cliente-autenticado"><strong>Cliente autenticado</strong></h4>
-<p>A authSDK é responsável por todo o processo de autenticação, incluindo a adição do token no header das chamadas até a api do Stone Openbank. Para realizar tudo isso, a SDK cria um client e adiciona um interceptor, o qual recupera o token do storage e o adiciona no header da chamada.</p>
-<p>Esse client possui certificate pinning com os certificados da api do Stone OpenBank e é possível acessá-lo chamando o método <code>contaStone.auth().client()</code>, o qual retorna um <code>OkHttpClient</code> e pode ser utilizado nas chamadas HTTP do seu app.</p>
-
+	
         <div class="section-index">
     
     
@@ -3282,7 +3252,39 @@
             
         
             
+                <div class="entry">
+                    <h5>
+                        <a href="/docs/guias/conta-stone-sdk/overview/">Overview</a>
+                    </h5>
+                    <p></p>
+                </div>
+            
         
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <div class="entry">
+                    <h5>
+                        <a href="/docs/guias/conta-stone-sdk/sdk-sample-ios/">Sample iOS</a>
+                    </h5>
+                    <p></p>
+                </div>
             
         
             
@@ -3320,17 +3322,12 @@
             
         
             
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
+                <div class="entry">
+                    <h5>
+                        <a href="/docs/guias/conta-stone-sdk/sdk-sample-android/">Sample Android</a>
+                    </h5>
+                    <p></p>
+                </div>
             
         
             
@@ -3496,7 +3493,7 @@
 
 	
 	
-	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 19.11.2019
+	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 17.09.2020
 </div>
 </div>
 
