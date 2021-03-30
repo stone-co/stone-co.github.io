@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.d07f97f8c8ad138c64a6eac5ad3cb142.json"
+  data-offline-search-index-json-src="/offline-search-index.4b58844a7eed7f7bf0b8f71f225c9db2.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.d07f97f8c8ad138c64a6eac5ad3cb142.json"
+  data-offline-search-index-json-src="/offline-search-index.4b58844a7eed7f7bf0b8f71f225c9db2.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3240,7 +3240,9 @@
 
 </div>
 
+<br>
 <h4 id="os-eventos-que-geram-notificações-são"><strong>Os eventos que geram notificações são:</strong></h4>
+<h5 id="emissão-de-boleto"><strong>Emissão de Boleto:</strong></h5>
 <table>
 <thead>
 <tr>
@@ -3269,97 +3271,20 @@
 <td>cash_in_barcode_payment</td>
 <td>Representa a entrada do valor do boleto na conta do beneficiário.</td>
 </tr>
+</tbody>
+</table>
+<h5 id="pagamento-de-boleto"><strong>Pagamento de Boleto:</strong></h5>
+<table>
+<thead>
+<tr>
+<th>Tipo de Evento</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td>cash_in_payment_refund</td>
 <td>Representa o reembolso de um pagamento mal sucedido.</td>
-</tr>
-<tr>
-<td>cash_in_internal_transfer</td>
-<td>Representa o recebimento de uma transferência interna.</td>
-</tr>
-<tr>
-<td>cash_in_external_transfer</td>
-<td>Representa o recebimento de uma transferência externa.</td>
-</tr>
-<tr>
-<td>cash_in_external_transfer_refund</td>
-<td>Representa o reembolso de uma transferência externa mal sucedida.</td>
-</tr>
-<tr>
-<td>cash_out_internal_transfer</td>
-<td>Representa a criação de uma transferência interna.</td>
-</tr>
-<tr>
-<td>cash_out_internal_transfer_failed</td>
-<td>Representa a falha na criação de uma transferência interna.</td>
-</tr>
-<tr>
-<td>cash_out_internal_transfer_scheduled</td>
-<td>Representa o agendamento de uma transferência interna.</td>
-</tr>
-<tr>
-<td>cash_out_internal_transfer_scheduled_failed</td>
-<td>Representa a falha no agendamento de uma transferência interna.</td>
-</tr>
-<tr>
-<td>cash_out_internal_transfer_approved</td>
-<td>Representa a aprovação de uma transferência interna</td>
-</tr>
-<tr>
-<td>cash_out_internal_transfer_cancelled</td>
-<td>Representa o cancelamento de uma transferência interna</td>
-</tr>
-<tr>
-<td>cash_out_internal_transfer_rejected</td>
-<td>Representa a rejeição de uma transferência interna</td>
-</tr>
-<tr>
-<td>cash_out_internal_transfer_finished</td>
-<td>Representa a finalização de uma transferência interna</td>
-</tr>
-<tr>
-<td>cash_out_internal_transfer_expired</td>
-<td>Representa a expiração de uma transferência interna</td>
-</tr>
-<tr>
-<td>cash_out_external_transfer</td>
-<td>Representa a criação de uma transferência externa.</td>
-</tr>
-<tr>
-<td>cash_out_external_transfer_failed</td>
-<td>Representa a falha na criação de uma transferência externa.</td>
-</tr>
-<tr>
-<td>cash_out_external_transfer_scheduled</td>
-<td>Representa o agendamento de uma transferência externa.</td>
-</tr>
-<tr>
-<td>cash_out_external_transfer_scheduled_failed</td>
-<td>Representa a falha no agendamento de uma transferência externa.</td>
-</tr>
-<tr>
-<td>cash_out_external_transfer_approved</td>
-<td>Representa a aprovação de uma transferência externa</td>
-</tr>
-<tr>
-<td>cash_out_external_transfer_execution_started</td>
-<td>Representa o início da execução de uma transferência externa</td>
-</tr>
-<tr>
-<td>cash_out_external_transfer_cancelled</td>
-<td>Representa o cancelamento de uma transferência externa</td>
-</tr>
-<tr>
-<td>cash_out_external_transfer_rejected</td>
-<td>Representa a rejeição de uma transferência externa</td>
-</tr>
-<tr>
-<td>cash_out_external_transfer_finished</td>
-<td>Representa a finalização de uma transferência externa</td>
-</tr>
-<tr>
-<td>cash_out_external_transfer_expired</td>
-<td>Representa a expiração de uma transferência externa</td>
 </tr>
 <tr>
 <td>cash_out_payment</td>
@@ -3383,7 +3308,7 @@
 </tr>
 <tr>
 <td>cash_out_payment_execution_started</td>
-<td>Representa o início da execução de um pagamento</td>
+<td>Representa o início da execução de um pagamento.</td>
 </tr>
 <tr>
 <td>cash_out_payment_cancelled</td>
@@ -3401,9 +3326,157 @@
 <td>cash_out_payment_expired</td>
 <td>Representa a expiração de um pagamento.</td>
 </tr>
+</tbody>
+</table>
+<h5 id="transferência-interna"><strong>Transferência interna:</strong></h5>
+<table>
+<thead>
+<tr>
+<th>Tipo de Evento</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cash_in_internal_transfer</td>
+<td>Representa o recebimento de uma transferência interna.</td>
+</tr>
+<tr>
+<td>cash_out_internal_transfer</td>
+<td>Representa a criação de uma transferência interna.</td>
+</tr>
+<tr>
+<td>cash_out_internal_transfer_failed</td>
+<td>Representa a falha na criação de uma transferência interna.</td>
+</tr>
+<tr>
+<td>cash_out_internal_transfer_scheduled</td>
+<td>Representa o agendamento de uma transferência interna.</td>
+</tr>
+<tr>
+<td>cash_out_internal_transfer_scheduled_failed</td>
+<td>Representa a falha no agendamento de uma transferência interna.</td>
+</tr>
+<tr>
+<td>cash_out_internal_transfer_approved</td>
+<td>Representa a aprovação de uma transferência interna.</td>
+</tr>
+<tr>
+<td>cash_out_internal_transfer_cancelled</td>
+<td>Representa o cancelamento de uma transferência interna.</td>
+</tr>
+<tr>
+<td>cash_out_internal_transfer_rejected</td>
+<td>Representa a rejeição de uma transferência interna.</td>
+</tr>
+<tr>
+<td>cash_out_internal_transfer_finished</td>
+<td>Representa a finalização de uma transferência interna.</td>
+</tr>
+<tr>
+<td>cash_out_internal_transfer_expired</td>
+<td>Representa a expiração de uma transferência interna.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="transferência-externa"><strong>Transferência externa:</strong></h5>
+<table>
+<thead>
+<tr>
+<th>Tipo de Evento</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cash_in_external_transfer</td>
+<td>Representa o recebimento de uma transferência externa.</td>
+</tr>
+<tr>
+<td>cash_in_external_transfer_refund</td>
+<td>Representa o reembolso de uma transferência externa mal sucedida.</td>
+</tr>
+<tr>
+<td>cash_out_external_transfer</td>
+<td>Representa a criação de uma transferência externa.</td>
+</tr>
+<tr>
+<td>cash_out_external_transfer_failed</td>
+<td>Representa a falha na criação de uma transferência externa.</td>
+</tr>
+<tr>
+<td>cash_out_external_transfer_scheduled</td>
+<td>Representa o agendamento de uma transferência externa.</td>
+</tr>
+<tr>
+<td>cash_out_external_transfer_scheduled_failed</td>
+<td>Representa a falha no agendamento de uma transferência externa.</td>
+</tr>
+<tr>
+<td>cash_out_external_transfer_approved</td>
+<td>Representa a aprovação de uma transferência externa.</td>
+</tr>
+<tr>
+<td>cash_out_external_transfer_execution_started</td>
+<td>Representa o início da execução de uma transferência externa.</td>
+</tr>
+<tr>
+<td>cash_out_external_transfer_cancelled</td>
+<td>Representa o cancelamento de uma transferência externa.</td>
+</tr>
+<tr>
+<td>cash_out_external_transfer_rejected</td>
+<td>Representa a rejeição de uma transferência externa.</td>
+</tr>
+<tr>
+<td>cash_out_external_transfer_finished</td>
+<td>Representa a finalização de uma transferência externa.</td>
+</tr>
+<tr>
+<td>cash_out_external_transfer_expired</td>
+<td>Representa a expiração de uma transferência externa.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="consentimento"><strong>Consentimento:</strong></h5>
+<table>
+<thead>
+<tr>
+<th>Tipo de Evento</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td>consent_requested</td>
-<td>Representa a confirmação do pedido de consentimento por parte do user</td>
+<td>Representa a confirmação do pedido de consentimento por parte do user.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="abertura-de-conta"><strong>Abertura de conta:</strong></h5>
+<table>
+<thead>
+<tr>
+<th>Tipo de Evento</th>
+<th>Descrição</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sign_up_created</td>
+<td>Enviado quando é feito o pedido de abertura de conta.</td>
+<td><a href="/docs/guias/integracao/webhooks/A1.json">A1</a></td>
+</tr>
+<tr>
+<td>sign_up_status_updated</td>
+<td>Enviado quando é feito uma atualização dos dados na abertura da conta.</td>
+<td><a href="/docs/guias/integracao/webhooks/A2.json">A2</a></td>
+</tr>
+<tr>
+<td>sign_up_resource_details_updated</td>
+<td>Serão enviados diversos webhooks com este tipo de evento de acordo com a evolução da abertura de conta. Ex: <code>account_created</code>, <code>user_email_verified</code>, &hellip;.</td>
+<td><a href="/docs/guias/integracao/webhooks/A3.json">A3</a></td>
 </tr>
 </tbody>
 </table>
@@ -3412,6 +3485,7 @@
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#a40000">x-stone-webhook-event-id:</span> <span style="color:#4e9a06">&#34;930bbd6d-0c7a-4fe4-8b50-4b82a20cb847&#34;</span>
 <span style="color:#a40000">x-stone-webhook-event-type:</span> <span style="color:#4e9a06">&#34;cash_out_internal_transfer&#34;</span>
 </code></pre></div><p>A idempotência de webhooks deverá ser validada no campo &lsquo;x-stone-webhook-event-id&rsquo; disponível no header.</p>
+<br>
 <h4 id="o-payload-das-notificações-segue-a-seguinte-estrutura"><strong>O payload das notificações segue a seguinte estrutura:</strong></h4>
 <table>
 <thead>
