@@ -184,6 +184,19 @@
     </item>
     
     <item>
+      <title>Docs: Link de Pagamento</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/</link>
+      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Pix (Alpha)</title>
       <link>https://stone-co.github.io/docs/referencia-da-api/pix/</link>
       <pubDate>Wed, 31 Mar 2021 18:00:00 -0300</pubDate>
@@ -213,19 +226,6 @@ Além de sua ampla grade de funcionamento e pequeno tempo de processamento, o Pi
 &lt;li&gt;&lt;strong&gt;Usuário Pagador&lt;/strong&gt;: é quem vai pagar a transação que está sendo efetuada. Fazendo um comparativo com o arranjo de cartões seria mais ou menos o equivalente ao comprador / dono do cartão.&lt;br&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Link de Pagamento</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/</link>
-      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
-      
-      <guid>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/</guid>
-      <description>
-        
-        
-        
       </description>
     </item>
     
