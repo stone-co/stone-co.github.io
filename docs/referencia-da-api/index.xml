@@ -184,6 +184,39 @@
     </item>
     
     <item>
+      <title>Docs: Pix (Alpha)</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pix/</link>
+      <pubDate>Wed, 31 Mar 2021 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/</guid>
+      <description>
+        
+        
+        
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;A integração com o Pix ainda está em Alpha, o que significa que temos um grupo pequeno de parceiros testando a funcionalidade para que possamos fazer ajustes e então liberar para todos os parceiros.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;h4 id=&#34;o-que-é-o-pix&#34;&gt;&lt;strong&gt;O que é o Pix?&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;O Pix é a nova modalidade de pagamentos instantâneos do Banco Central, que entrou em vigor no Brasil inteiro no dia 16 de novembro de 2020. Através do Pix, é possível realizar transações bancárias 24 horas por dia, todos os dias do ano, incluindo finais de semana e feriados.
+&lt;br&gt;&lt;br&gt;
+Além de sua ampla grade de funcionamento e pequeno tempo de processamento, o Pix busca simplificar a experiência do usuário que consegue passar o dinheiro para outro participante informando apenas seu telefone, documento (CPF/CNPJ), seu email ou lendo um QR Code. Lembrando que também é possível fazer um Pix informando os dados bancários, como é feito em uma TED.
+&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+&lt;h4 id=&#34;participantes-do-pix&#34;&gt;&lt;strong&gt;Participantes do Pix&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;O Pix tem quatro tipos de participantes principais:&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Participante Direto (PSP direto)&lt;/strong&gt;: Instituição homologada junto ao Banco Central (BC) que fará o processamento do Pix junto aos sistemas do BC tanto do ponto de vista informacional, quanto do ponto de vista financeiro. Ou seja, além de ser responsável por toda a troca de informação com os sistemas do Pix, quando agindo como instituição do pagador será a instituição que enviará o dinheiro para o BC e quando agindo como instituição do recebedor receberá o dinheiro do BC. Fazendo um comparativo com o arranjo de cartões seria mais ou menos o equivalente a adquirência e o emissor dependendo se estamos agindo ao lado do recebedor ou do pagador respectivamente. &lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Participante Indireto (PSP indireto)&lt;/strong&gt;: Instituição homologada junto ao Banco Central que fará parte do arranjo do Pix tanto do ponto de vista informacional, quanto do ponto de vista financeiro, mas que usará um participante direto para fazer a intermediação da integração com os sistemas do Pix. Fazendo um comparativo com o arranjo de cartões seria mais ou menos o equivalente a uma subadquirente. &lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Usuário Recebedor&lt;/strong&gt;: é quem vai receber o dinheiro da transação que está sendo efetuada. Fazendo um comparativo com o arranjo de cartões, seria mais ou menos o equivalente ao lojista. &lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Usuário Pagador&lt;/strong&gt;: é quem vai pagar a transação que está sendo efetuada. Fazendo um comparativo com o arranjo de cartões seria mais ou menos o equivalente ao comprador / dono do cartão.&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Link de Pagamento</title>
       <link>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/</link>
       <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
