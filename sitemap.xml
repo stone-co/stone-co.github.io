@@ -48,17 +48,7 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/stone-openbank/</loc>
-    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/overview/</loc>
-    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/stone-openbank/overview/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
   </url>
   
@@ -172,11 +162,6 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/stone-openbank/autenticacao/</loc>
-    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/verificar-status-de-uma-entidade/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
   </url>
@@ -261,11 +246,6 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/stone-openbank/data-e-hora/</loc>
-    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/regras-de-negocio/</loc>
     <lastmod>2020-10-24T00:14:01+00:00</lastmod>
   </url>
@@ -341,11 +321,6 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/stone-openbank/paginacao/</loc>
-    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/campos/</loc>
     <lastmod>2020-10-20T15:04:35+00:00</lastmod>
   </url>
@@ -401,11 +376,6 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/stone-openbank/valores-financeiros/</loc>
-    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/o-objeto-saldo/</loc>
     <lastmod>2020-03-11T00:25:58+00:00</lastmod>
   </url>
@@ -456,11 +426,6 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/stone-openbank/codigos-de-resposta/</loc>
-    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/listar-boletos/</loc>
     <lastmod>2020-03-09T17:11:01+00:00</lastmod>
   </url>
@@ -502,11 +467,6 @@
   
   <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/mensagens-de-erro/</loc>
-    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/stone-openbank/mensagens-de-erro/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
   </url>
   
