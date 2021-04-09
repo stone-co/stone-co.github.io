@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/recargas/overview/</loc>
+    <lastmod>2021-04-06T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/guias/integracao/panda/authorization/</loc>
     <lastmod>2021-03-18T14:00:00-03:00</lastmod>
   </url>
@@ -127,6 +132,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-celular/</loc>
+    <lastmod>2021-04-06T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/guias/conta-stone-sdk/sdk-sample-ios/</loc>
     <lastmod>2021-03-23T11:00:00-03:00</lastmod>
   </url>
@@ -221,6 +231,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-jogos/</loc>
+    <lastmod>2021-04-06T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/guias/conta-stone-sdk/sdk-sample-android/</loc>
     <lastmod>2021-03-23T11:00:00-03:00</lastmod>
   </url>
@@ -301,6 +316,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-conteudo-digital/</loc>
+    <lastmod>2021-04-06T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/detalhes-de-um-link-de-pagamento/</loc>
     <lastmod>2021-03-15T15:00:00-03:00</lastmod>
   </url>
@@ -361,6 +381,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-tv-por-assinatura/</loc>
+    <lastmod>2021-04-06T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/criar-link-de-pagamento/</loc>
     <lastmod>2021-03-15T11:00:00-03:00</lastmod>
   </url>
@@ -403,6 +428,11 @@
   <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-internas/retornando-uma-transferencia-interna/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-meios-de-transporte/</loc>
+    <lastmod>2021-04-06T18:00:00-03:00</lastmod>
   </url>
   
   <url>
@@ -604,8 +634,13 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/recargas/</loc>
+    <lastmod>2021-04-06T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/</loc>
-    <lastmod>2021-04-01T18:00:00-03:00</lastmod>
+    <lastmod>2021-04-06T18:00:00-03:00</lastmod>
   </url>
   
   <url>
