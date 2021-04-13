@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.08a51929e65dba2f1ce1aba791570801.json"
+  data-offline-search-index-json-src="/offline-search-index.56644db95bee004bb24fd34b36ea5496.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.08a51929e65dba2f1ce1aba791570801.json"
+  data-offline-search-index-json-src="/offline-search-index.56644db95bee004bb24fd34b36ea5496.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3503,7 +3503,7 @@
 	
 	<hr>
 <br>
-<p>Objetivo dessa documentação é pontuar as particularidades de cada tipo de recarga ofereceida na nossa API.</p>
+<p>Objetivo dessa documentação é pontuar as particularidades de cada tipo de recarga oferecida na nossa API.</p>
 
 
 <div class="alert alert-primary" role="alert">
@@ -3536,10 +3536,6 @@
 <td>Valor da recarga desejado.</td>
 </tr>
 <tr>
-<td>cellphone</td>
-<td>Número de celular que receberá a recarga.</td>
-</tr>
-<tr>
 <td>provider_id</td>
 <td>Id da operadora.</td>
 </tr>
@@ -3554,6 +3550,10 @@
 <tr>
 <td>product_code</td>
 <td>Informação referente ao código do bilhete único de SP.</td>
+</tr>
+<tr>
+<td>x-stone-idempotency-key</td>
+<td>Valor exclusivo gerado pelo cliente que o servidor de recursos usa para reconhecer novas tentativas subsequentes da mesma solicitação. (Opcional)</td>
 </tr>
 </tbody>
 </table>
