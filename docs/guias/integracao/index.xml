@@ -710,6 +710,10 @@ No início desta sessão detalhamos o passo a passo desse procedimento, neste t�
 &lt;td&gt;Representa que pagamento do boleto foi confirmado.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
+&lt;td&gt;barcode_payment_invoice_expired&lt;/td&gt;
+&lt;td&gt;Representa que o boleto está expirado.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td&gt;cash_in_barcode_payment&lt;/td&gt;
 &lt;td&gt;Representa a entrada do valor do boleto na conta do beneficiário.&lt;/td&gt;
 &lt;/tr&gt;
@@ -886,12 +890,14 @@ No início desta sessão detalhamos o passo a passo desse procedimento, neste t�
 &lt;tr&gt;
 &lt;th&gt;Tipo de Evento&lt;/th&gt;
 &lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Exemplo&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;consent_requested&lt;/td&gt;
 &lt;td&gt;Representa a confirmação do pedido de consentimento por parte do user.&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/webhooks/exemplo_consent_request.json&#34;&gt;consent_request&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
