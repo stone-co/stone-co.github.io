@@ -36,6 +36,27 @@
 &lt;/div&gt;
 
 &lt;br&gt;
+&lt;h4 id=&#34;tipos-de-recargas&#34;&gt;&lt;strong&gt;Tipos de Recargas&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-celular/&#34;&gt;&lt;strong&gt;Recarga para Celular;&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-jogos/&#34;&gt;&lt;strong&gt;Recarga para Jogos;&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-conteudo-digital/&#34;&gt;&lt;strong&gt;Recarga para Conteúdo Digital;&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-tv-por-assinatura/&#34;&gt;&lt;strong&gt;Recarga para TV por Assinatura;&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-meios-de-transporte/&#34;&gt;&lt;strong&gt;Recarga para Meios de Transporte.&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
 &lt;h4 id=&#34;glossário&#34;&gt;&lt;strong&gt;Glossário&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;br&gt;
@@ -51,7 +72,7 @@
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;account_id&lt;/td&gt;
-&lt;td&gt;id da conta de pagamento.&lt;/td&gt;
+&lt;td&gt;Identificador da conta.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;amount&lt;/td&gt;
@@ -79,27 +100,6 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;br&gt;
-&lt;h4 id=&#34;tipos-de-recargas&#34;&gt;&lt;strong&gt;Tipos de Recargas&lt;/strong&gt;&lt;/h4&gt;
-&lt;hr&gt;
-&lt;br&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-celular/&#34;&gt;&lt;strong&gt;Recarga de Celular;&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-jogos/&#34;&gt;&lt;strong&gt;Recarga de Jogos;&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-conteudo-digital/&#34;&gt;&lt;strong&gt;Conteúdo Digital;&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-tv-por-assinatura/&#34;&gt;&lt;strong&gt;TV por assinatura;&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-meios-de-transporte/&#34;&gt;&lt;strong&gt;Meios de Transporte.&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
 &lt;br&gt;
 
       </description>
@@ -318,6 +318,16 @@
 &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 
+
+&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Status_code: 403&lt;/h4&gt;
+
+    &lt;br&gt;
+&lt;p&gt;Caso receba como resposta o &lt;em&gt;status_code: 403&lt;/em&gt;, &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/recargas/fluxo-challenge/&#34;&gt;clique aqui&lt;/a&gt; para ter acesso ao &lt;em&gt;fluxo de autorização do challenge&lt;/em&gt; que deverá ser enviado no &lt;em&gt;Header&lt;/em&gt; do &lt;em&gt;Request&lt;/em&gt; (x-stone-challenge-solution).
+
+&lt;/div&gt;
+
+&lt;br&gt;
       </description>
     </item>
     
@@ -584,6 +594,17 @@
 &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 
+
+&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Status_code: 403&lt;/h4&gt;
+
+    &lt;br&gt;
+&lt;p&gt;Caso receba como resposta o &lt;em&gt;status_code: 403&lt;/em&gt;, &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/recargas/fluxo-challenge/&#34;&gt;clique aqui&lt;/a&gt; para ter acesso ao &lt;em&gt;fluxo de autorização do challenge&lt;/em&gt; que deverá ser enviado no &lt;em&gt;Header&lt;/em&gt; do &lt;em&gt;Request&lt;/em&gt; (x-stone-challenge-solution).
+
+&lt;/div&gt;
+
+&lt;br&gt;
+
       </description>
     </item>
     
@@ -736,8 +757,18 @@
     &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;transaction_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;b6cb2b73-0e30-4a93-9de6-31201628df79&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
     &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;pin&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;6365-4427-6400-1327&amp;#34;&lt;/span&gt;
 &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 
+
+&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Status_code: 403&lt;/h4&gt;
+
+    &lt;br&gt;
+&lt;p&gt;Caso receba como resposta o &lt;em&gt;status_code: 403&lt;/em&gt;, &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/recargas/fluxo-challenge/&#34;&gt;clique aqui&lt;/a&gt; para ter acesso ao &lt;em&gt;fluxo de autorização do challenge&lt;/em&gt; que deverá ser enviado no &lt;em&gt;Header&lt;/em&gt; do &lt;em&gt;Request&lt;/em&gt; (x-stone-challenge-solution).
+
+&lt;/div&gt;
+
+&lt;br&gt;
       </description>
     </item>
     
@@ -1011,8 +1042,18 @@
     &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;transaction_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;7b367d74-f2b8-4088-8329-6426816ff995&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
     &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;pin&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
 &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 
+
+&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Status_code: 403&lt;/h4&gt;
+
+    &lt;br&gt;
+&lt;p&gt;Caso receba como resposta o &lt;em&gt;status_code: 403&lt;/em&gt;, &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/recargas/fluxo-challenge/&#34;&gt;clique aqui&lt;/a&gt; para ter acesso ao &lt;em&gt;fluxo de autorização do challenge&lt;/em&gt; que deverá ser enviado no &lt;em&gt;Header&lt;/em&gt; do &lt;em&gt;Request&lt;/em&gt; (x-stone-challenge-solution).
+
+&lt;/div&gt;
+
+&lt;br&gt;
       </description>
     </item>
     
@@ -1175,8 +1216,18 @@
     &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;transaction_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;0ae808a6-3a8f-4838-afd8-44fce7218c9a&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
     &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;pin&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;6365-4427-6400-1327&amp;#34;&lt;/span&gt;
 &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 
+
+&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Status_code: 403&lt;/h4&gt;
+
+    &lt;br&gt;
+&lt;p&gt;Caso receba como resposta o &lt;em&gt;status_code: 403&lt;/em&gt;, &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/recargas/fluxo-challenge/&#34;&gt;clique aqui&lt;/a&gt; para ter acesso ao &lt;em&gt;fluxo de autorização do challenge&lt;/em&gt; que deverá ser enviado no &lt;em&gt;Header&lt;/em&gt; do &lt;em&gt;Request&lt;/em&gt; (x-stone-challenge-solution).
+
+&lt;/div&gt;
+
+&lt;br&gt;
       </description>
     </item>
     
