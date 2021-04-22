@@ -360,14 +360,6 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3O
 &lt;li&gt;&lt;em&gt;Sandbox&lt;/em&gt;: &lt;a href=&#34;https://sandbox-api.openbank.stone.com.br&#34;&gt;https://sandbox-api.openbank.stone.com.br&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Produção&lt;/em&gt;: &lt;a href=&#34;https://api.openbank.stone.com.br&#34;&gt;https://api.openbank.stone.com.br&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-
-&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Fluxo de Autorização&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Para continuar com o fluxo de autorização, clique &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/panda/authorization/#fluxo-de-autoriza%C3%A7%C3%A3o-de-challenge&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
-
-&lt;/div&gt;
-
 &lt;br&gt;
 &lt;p&gt;&lt;strong&gt;Bem-vindo ao time de fintechs do futuro!&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Esta chamada retorna um &lt;code&gt;access_token&lt;/code&gt; que pode ser usado nas próximas chamadas.&lt;/p&gt;
