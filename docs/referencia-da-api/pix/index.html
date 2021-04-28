@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.723a1d10269e4c4c7abce76ac66ef22d.json"
+  data-offline-search-index-json-src="/offline-search-index.113dd6b6ef8c561431267fb451e58485.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.723a1d10269e4c4c7abce76ac66ef22d.json"
+  data-offline-search-index-json-src="/offline-search-index.113dd6b6ef8c561431267fb451e58485.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3534,8 +3534,41 @@ Além de sua ampla grade de funcionamento e pequeno tempo de processamento, o Pi
 <li><strong>Participante Direto (PSP direto)</strong>: Instituição homologada junto ao Banco Central (BC) que fará o processamento do Pix junto aos sistemas do BC tanto do ponto de vista informacional, quanto do ponto de vista financeiro. Ou seja, além de ser responsável por toda a troca de informação com os sistemas do Pix, quando agindo como instituição do pagador será a instituição que enviará o dinheiro para o BC e quando agindo como instituição do recebedor receberá o dinheiro do BC. Fazendo um comparativo com o arranjo de cartões seria mais ou menos o equivalente a adquirência e o emissor dependendo se estamos agindo ao lado do recebedor ou do pagador respectivamente. <br></li>
 <li><strong>Participante Indireto (PSP indireto)</strong>: Instituição homologada junto ao Banco Central que fará parte do arranjo do Pix tanto do ponto de vista informacional, quanto do ponto de vista financeiro, mas que usará um participante direto para fazer a intermediação da integração com os sistemas do Pix. Fazendo um comparativo com o arranjo de cartões seria mais ou menos o equivalente a uma subadquirente. <br></li>
 <li><strong>Usuário Recebedor</strong>: é quem vai receber o dinheiro da transação que está sendo efetuada. Fazendo um comparativo com o arranjo de cartões, seria mais ou menos o equivalente ao lojista. <br></li>
-<li><strong>Usuário Pagador</strong>: é quem vai pagar a transação que está sendo efetuada. Fazendo um comparativo com o arranjo de cartões seria mais ou menos o equivalente ao comprador / dono do cartão.<br></li>
+<li><strong>Usuário Pagador</strong>: é quem vai pagar a transação que está sendo efetuada. Fazendo um comparativo com o arranjo de cartões seria mais ou menos o equivalente ao comprador / dono do cartão.<br><br></li>
 </ul>
+<h4 id="status-de-um-pix"><strong>Status de um Pix</strong></h4>
+<p>Os status possiveis são: <code>CREATED</code>, <code>CONFIRMED</code>, <code>FAILED</code>, <code>MONEY_RESERVED</code>, <code>REFUNDED</code> e <code>SETTLED</code>. A partir do momento que um Pix é criado, ele <strong>nunca expira</strong>.</p>
+<ul>
+<li>
+<p><code>CREATED</code> -  Significa que o Pix foi criado e está aguardando confirmação.</p>
+</li>
+<li>
+<p><code>CONFIRMED</code> - Significa que o Pix que foi criado e estava com o status <code>CREATED</code>, foi confirmado.</p>
+</li>
+<li>
+<p><code>MONEY_RESERVED</code> - Significa que o Pix que foi confirmado e estava com o status <code>CONFIRMED</code>, teve o dinheiro retirado da conta do cliente e reservado em uma conta gráfica a parte para a operação.</p>
+</li>
+<li>
+<p><code>SETTLED</code> - Significa que o Pix que estava com o estado de <code>MONEY_RESERVED</code>, foi finalizado e liquidamos o dinheiro reservado na conta gráfica da operação.</p>
+</li>
+<li>
+<p><code>REFUNDED</code> - Significa que o Pix que estava com o estado de <code>MONEY_RESERVED</code>, foi rejeitado ou devolvido.</p>
+</li>
+<li>
+<p><code>FAILED</code> - Significa que o Pix que estava com o estado de <code>CONFIRMED</code>, falhou no momento de reservar o dinheiro, podendo ser devido a falta de saldo do cliente, e portanto ele vai para o estado de <code>FAILED</code> e o fluxo da operação se encerra.</p>
+</li>
+</ul>
+<h4 id="fluxo-para-criação-de-um-pix"><strong>Fluxo para criação de um Pix</strong></h4>
+<ol>
+<li>Realiza request através do <a href="/docs/referencia-da-api/pix/criar-pagamento-pendente/">endpoint</a> /api/v1/pix/outbound_pix_payments enviando parâmetros validos. Este irá retornar uma resposta com os dados do Pix.</li>
+<li>Realiza request através do <a href="/docs/referencia-da-api/pix/confirmar-pagamento-pendente/">endpoint</a> /api/v1/pix/outbound_pix_payments/{id}/actions/confirm informando o campo <code>id</code> retornado pela resposta do passo 1.</li>
+</ol>
+<h4 id="fluxo-de-criação-de-pix-através-da-leitura-do-qrcode"><strong>Fluxo de criação de Pix através da leitura do QRCode</strong></h4>
+<ol>
+<li>Realiza request através do <a href="/docs/referencia-da-api/pix/buscar-dados-qrcode/">endpoint</a> /api/v1/outbound_pix_payments/brcode informando o QRCode através do campo <code>brcode</code>. Este irá retornar uma reposta com os dados do QRCode.</li>
+<li>Realiza request através do <a href="/docs/referencia-da-api/pix/criar-pagamento-pendente/">endpoint</a> /api/v1/pix/outbound_pix_payments enviando parâmetros validos. Este irá retornar uma resposta com os dados do Pix.</li>
+<li>Realiza request através do <a href="/docs/referencia-da-api/pix/confirmar-pagamento-pendente/">endpoint</a> /api/v1/pix/outbound_pix_payments/{id}/actions/confirm informando o campo <code>id</code> retornado pela resposta do passo 2.</li>
+</ol>
 
         <div class="section-index">
     
