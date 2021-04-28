@@ -599,17 +599,20 @@ Stone e, se aprovada, será gerado um &lt;code&gt;account_id&lt;/code&gt; para o
         
         
         &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;O extrato mostra todos os tipos de transações que ocorreram em determinada conta de pagamento.&lt;/p&gt;
 &lt;p&gt;Cada transação é uma nova entrada no extrato e elas estão listadas abaixo com seus campos.&lt;/p&gt;
 &lt;p&gt;Para ver a estrutura de cada transação, basta dar uma olhadinha &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/estrutura-de-transacoes-no-extrato/&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+&lt;br&gt;
 &lt;h3 id=&#34;tipos-de-transação&#34;&gt;Tipos de Transação&lt;/h3&gt;
 &lt;p&gt;Veja os possíveis valores para o campo &lt;code&gt;type&lt;/code&gt;, sua descrição e as possíveis combinações com o campo &lt;code&gt;operation&lt;/code&gt;.&lt;/p&gt;
+&lt;br&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;Valores &lt;br&gt; &lt;code&gt;type&lt;/code&gt;&lt;/th&gt;
-&lt;th&gt;Descrição &lt;br&gt;&lt;/th&gt;
-&lt;th&gt;Valores possíveis&lt;br&gt;&lt;code&gt;operation&lt;/code&gt;&lt;/th&gt;
+&lt;th&gt;Valores (&lt;code&gt;type&lt;/code&gt;)&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Valores possíveis (&lt;code&gt;operation&lt;/code&gt;)&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -650,7 +653,7 @@ Stone e, se aprovada, será gerado um &lt;code&gt;account_id&lt;/code&gt; para o
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;loan_payments&lt;/td&gt;
-&lt;td&gt;Valor referente a um empréstimo/crédito&lt;/td&gt;
+&lt;td&gt;Valor referente a um empréstimo/crédito.&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;credit&lt;/code&gt; ou &lt;code&gt;debit&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -716,8 +719,10 @@ Stone e, se aprovada, será gerado um &lt;code&gt;account_id&lt;/code&gt; para o
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;h3 id=&#34;campos-das-transações&#34;&gt;Campos das Transações&lt;/h3&gt;
 &lt;p&gt;Todas as entradas do extrato tem alguns campos padrões, são eles:&lt;/p&gt;
+&lt;br&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -775,7 +780,9 @@ Stone e, se aprovada, será gerado um &lt;code&gt;account_id&lt;/code&gt; para o
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;Abaixo temos os campos que são utilizados em cada tipo de transação no extrato:&lt;/p&gt;
+&lt;br&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -987,7 +994,9 @@ Stone e, se aprovada, será gerado um &lt;code&gt;account_id&lt;/code&gt; para o
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h6 id=&#34;campos-do-objeto-counter_party&#34;&gt;Campos do Objeto &lt;code&gt;counter_party&lt;/code&gt;&lt;/h6&gt;
+&lt;br&gt;
+&lt;h6 id=&#34;campos-do-objeto--counter_party&#34;&gt;Campos do Objeto  (&lt;code&gt;counter_party&lt;/code&gt;):&lt;/h6&gt;
+&lt;br&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1009,7 +1018,9 @@ Stone e, se aprovada, será gerado um &lt;code&gt;account_id&lt;/code&gt; para o
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h6 id=&#34;campos-do-objeto-account&#34;&gt;Campos do Objeto &lt;code&gt;account&lt;/code&gt;&lt;/h6&gt;
+&lt;br&gt;
+&lt;h6 id=&#34;campos-do-objeto-account&#34;&gt;Campos do Objeto (&lt;code&gt;account&lt;/code&gt;):&lt;/h6&gt;
+&lt;br&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1046,7 +1057,9 @@ Stone e, se aprovada, será gerado um &lt;code&gt;account_id&lt;/code&gt; para o
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h6 id=&#34;campos-do-objeto-entity-&#34;&gt;Campos do Objeto &lt;code&gt;entity&lt;/code&gt; :&lt;/h6&gt;
+&lt;br&gt;
+&lt;h6 id=&#34;campos-do-objeto-entity&#34;&gt;Campos do Objeto (&lt;code&gt;entity&lt;/code&gt;):&lt;/h6&gt;
+&lt;br&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1073,7 +1086,9 @@ Stone e, se aprovada, será gerado um &lt;code&gt;account_id&lt;/code&gt; para o
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h6 id=&#34;campos-do-objeto-account_settlement_policy_retention&#34;&gt;Campos do Objeto &lt;code&gt;account_settlement_policy_retention&lt;/code&gt;&lt;/h6&gt;
+&lt;br&gt;
+&lt;h6 id=&#34;campos-do-objeto-account_settlement_policy_retention&#34;&gt;Campos do Objeto (&lt;code&gt;account_settlement_policy_retention&lt;/code&gt;):&lt;/h6&gt;
+&lt;br&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1105,7 +1120,9 @@ Stone e, se aprovada, será gerado um &lt;code&gt;account_id&lt;/code&gt; para o
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h6 id=&#34;campos-do-objeto-applied_retention_rules&#34;&gt;Campos do Objeto &lt;code&gt;applied_retention_rules&lt;/code&gt;&lt;/h6&gt;
+&lt;br&gt;
+&lt;h6 id=&#34;campos-do-objeto-applied_retention_rules&#34;&gt;Campos do Objeto (&lt;code&gt;applied_retention_rules&lt;/code&gt;):&lt;/h6&gt;
+&lt;br&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1162,7 +1179,9 @@ Stone e, se aprovada, será gerado um &lt;code&gt;account_id&lt;/code&gt; para o
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h6 id=&#34;campos-do-objeto-retained_portion&#34;&gt;Campos do Objeto &lt;code&gt;retained_portion&lt;/code&gt;&lt;/h6&gt;
+&lt;br&gt;
+&lt;h6 id=&#34;campos-do-objeto-retained_portion&#34;&gt;Campos do Objeto (&lt;code&gt;retained_portion&lt;/code&gt;):&lt;/h6&gt;
+&lt;br&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1184,7 +1203,9 @@ Stone e, se aprovada, será gerado um &lt;code&gt;account_id&lt;/code&gt; para o
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h6 id=&#34;campos-do-objeto-original_operation_entry&#34;&gt;Campos do Objeto &lt;code&gt;original_operation_entry&lt;/code&gt;&lt;/h6&gt;
+&lt;br&gt;
+&lt;h6 id=&#34;campos-do-objeto-original_operation_entry&#34;&gt;Campos do Objeto (&lt;code&gt;original_operation_entry&lt;/code&gt;):&lt;/h6&gt;
+&lt;br&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1236,7 +1257,9 @@ Stone e, se aprovada, será gerado um &lt;code&gt;account_id&lt;/code&gt; para o
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h6 id=&#34;campos-do-objeto-beneficiary&#34;&gt;Campos do Objeto &lt;code&gt;beneficiary&lt;/code&gt;&lt;/h6&gt;
+&lt;br&gt;
+&lt;h6 id=&#34;campos-do-objeto-beneficiary&#34;&gt;Campos do Objeto (&lt;code&gt;beneficiary&lt;/code&gt;):&lt;/h6&gt;
+&lt;br&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1268,7 +1291,9 @@ Stone e, se aprovada, será gerado um &lt;code&gt;account_id&lt;/code&gt; para o
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h6 id=&#34;campos-do-objeto-card_acceptor&#34;&gt;Campos do Objeto &lt;code&gt;card_acceptor&lt;/code&gt;&lt;/h6&gt;
+&lt;br&gt;
+&lt;h6 id=&#34;campos-do-objeto-card_acceptor&#34;&gt;Campos do Objeto (&lt;code&gt;card_acceptor&lt;/code&gt;):&lt;/h6&gt;
+&lt;br&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1300,7 +1325,9 @@ Stone e, se aprovada, será gerado um &lt;code&gt;account_id&lt;/code&gt; para o
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h6 id=&#34;campos-do-objeto-transaction_authorization&#34;&gt;Campos do Objeto &lt;code&gt;transaction_authorization&lt;/code&gt;&lt;/h6&gt;
+&lt;br&gt;
+&lt;h6 id=&#34;campos-do-objeto-transaction_authorization&#34;&gt;Campos do Objeto (&lt;code&gt;transaction_authorization&lt;/code&gt;):&lt;/h6&gt;
+&lt;br&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1347,7 +1374,9 @@ Stone e, se aprovada, será gerado um &lt;code&gt;account_id&lt;/code&gt; para o
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h6 id=&#34;campos-do-objeto-captured_value&#34;&gt;Campos do Objeto &lt;code&gt;captured_value&lt;/code&gt;&lt;/h6&gt;
+&lt;br&gt;
+&lt;h6 id=&#34;campos-do-objeto-captured_value&#34;&gt;Campos do Objeto (&lt;code&gt;captured_value&lt;/code&gt;):&lt;/h6&gt;
+&lt;br&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1369,7 +1398,9 @@ Stone e, se aprovada, será gerado um &lt;code&gt;account_id&lt;/code&gt; para o
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h6 id=&#34;campos-do-objeto-value&#34;&gt;Campos do Objeto &lt;code&gt;value&lt;/code&gt;&lt;/h6&gt;
+&lt;br&gt;
+&lt;h6 id=&#34;campos-do-objeto-value&#34;&gt;Campos do Objeto (&lt;code&gt;value&lt;/code&gt;):&lt;/h6&gt;
+&lt;br&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1391,7 +1422,9 @@ Stone e, se aprovada, será gerado um &lt;code&gt;account_id&lt;/code&gt; para o
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h6 id=&#34;campos-do-objeto-transaction_chargeback&#34;&gt;Campos do Objeto &lt;code&gt;transaction_chargeback&lt;/code&gt;&lt;/h6&gt;
+&lt;br&gt;
+&lt;h6 id=&#34;campos-do-objeto-transaction_chargeback&#34;&gt;Campos do Objeto (&lt;code&gt;transaction_chargeback&lt;/code&gt;):&lt;/h6&gt;
+&lt;br&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
