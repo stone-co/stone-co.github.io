@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.75.1" /><link rel="alternate" type="application/rss&#43;xml" href="https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/criar-nova-identidade/index.xml">
+<meta name="generator" content="Hugo 0.75.1" /><link rel="alternate" type="application/rss&#43;xml" href="https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-dados-do-pedido-da-conta-de-pagamento/index.xml">
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
@@ -18,15 +18,15 @@
 <link rel="icon" type="image/png" href="/favicons/android-icon-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-icon-192x192.png" sizes="192x192">
 
-<title>Criar Nova Identidade | Stone OpenBank</title><meta property="og:title" content="Criar Nova Identidade" />
+<title>Consultar Dados do Pedido da Conta de Pagamento | Stone OpenBank</title><meta property="og:title" content="Consultar Dados do Pedido da Conta de Pagamento" />
 <meta property="og:description" content="Escreva o Banco do futuro. Uma linha de código por vez." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/criar-nova-identidade/" />
+<meta property="og:url" content="https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-dados-do-pedido-da-conta-de-pagamento/" />
 <meta property="og:updated_time" content="2020-09-21T18:00:00-03:00" /><meta property="og:site_name" content="Stone OpenBank" />
-<meta itemprop="name" content="Criar Nova Identidade">
+<meta itemprop="name" content="Consultar Dados do Pedido da Conta de Pagamento">
 <meta itemprop="description" content="Escreva o Banco do futuro. Uma linha de código por vez.">
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Criar Nova Identidade"/>
+<meta name="twitter:title" content="Consultar Dados do Pedido da Conta de Pagamento"/>
 <meta name="twitter:description" content="Escreva o Banco do futuro. Uma linha de código por vez."/>
 
 
@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.f1449797f2612870bf1656116c9986ae.json"
+  data-offline-search-index-json-src="/offline-search-index.bf8b5f5c5006a3389d824d804f29932d.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.f1449797f2612870bf1656116c9986ae.json"
+  data-offline-search-index-json-src="/offline-search-index.bf8b5f5c5006a3389d824d804f29932d.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -1082,10 +1082,35 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/dados-da-conta/criar-nova-identidade/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Criar Nova Identidade</a>
+    <a  href="/docs/referencia-da-api/dados-da-conta/criar-nova-conta-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar Novo Pedido de Conta de Pagamento</a>
   </li>
   <ul>
-    <li class="collapse show" id="docsreferencia-da-apidados-da-contacriar-nova-identidade">
+    <li class="collapse " id="docsreferencia-da-apidados-da-contacriar-nova-conta-de-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/dados-da-conta/consultar-dados-do-pedido-da-conta-de-pagamento/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Consultar Dados do Pedido da Conta de Pagamento</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="docsreferencia-da-apidados-da-contaconsultar-dados-do-pedido-da-conta-de-pagamento">
       
       
       
@@ -3515,7 +3540,7 @@
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/criar-nova-identidade/">Criar Nova Identidade</a>
+	<a href="https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-dados-do-pedido-da-conta-de-pagamento/">Consultar Dados do Pedido da Conta de Pagamento</a>
 </li>
 
 	</ol>
@@ -3524,21 +3549,17 @@
             
 <div class="td-content">
 	<div class="entry-title">
-		<h1>Criar Nova Identidade</h1>
+		<h1>Consultar Dados do Pedido da Conta de Pagamento</h1>
         </div>
 	
 	<hr>
-<p>Realiza o cadastro de conta de pagamento para pessoa física ou pessoa jurídica.</p>
-<hr>
 <br>
-<p>O cadastro é feito de forma assíncrona de forma a permitir:</p>
-<ul>
-<li>uma maior velocidade de resposta.</li>
-<li>resiliência a falhas a partir de retentativas. Com isso conseguimos evitar que erros ocasionais como falhas de infraestrutura afete a nossa retenção de clientes no cadastro.</li>
-</ul>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">POST https://sandbox-api.openbank.stone.com.br/api/v1/applications/:client_id/signups
-</span></code></pre></div><hr>
+<p>Provê um conjunto de informações para acompanhar o pedido de cadastro da conta de pagamento.</p>
+<hr>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">GET https://sandbox-api.openbank.stone.com.br/api/v1/applications/:client_id/signups/:sign_up_request_id
+</span></code></pre></div><br>
 <h4 id="authorization"><strong>Authorization</strong></h4>
+<hr>
 
 
 <div class="pageinfo pageinfo-primary">
@@ -3553,119 +3574,193 @@
 
 </div>
 
-<hr>
+<br>
 <h4 id="request-parameters"><strong>Request Parameters</strong></h4>
 <hr>
+<br>
 <h5 id="path-parameter"><strong>PATH PARAMETER</strong></h5>
 <hr>
 <p><strong>client_id</strong>* <code>string</code></p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#204a87;font-weight:bold">&#34;client_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;7fc3a55f-b6a3-4b92-a07a-4166bg392341&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><h5 id="headers"><strong>HEADERS</strong></h5>
+<p><strong>sign_up_request_id</strong>* <code>string</code></p>
+<br>
+<h5 id="header"><strong>HEADER</strong></h5>
 <hr>
-<p><strong>x-stone-idempotency-key</strong> <code>string</code></p>
 <p><strong>x-stone-subject-token</strong> <code>string</code></p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#204a87;font-weight:bold">&#34;x-stone-idempotency-key&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;25478963571458&#34;</span><span style="color:#000;font-weight:bold">,</span> 
-  <span style="color:#204a87;font-weight:bold">&#34;x-stone-subject-token&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJhY2NvdW50cy1odWJpZEBvcGVuYmFuay5zdG9uZS5jb20uYnIiLCJuYmYiOjE2MTU0NzI9GjAsInNlc3Npb25fbWV0YWRhdGEiOnsiZW1wcmVzYVpXIjoxLCJjaGF2ZVpXIjoienciLCJwcm9kdWNhbyI6ZmFsc2V9LCJpc3MiOiJkODAzMDQ4ZC03MzA2LTQxNTYtYjNlMS1hNjlkMWNiZjQ3ODEiLCJyZWRpcmVjdF91cmkiOiJodHRwOi8vbG9jYWxob3N0Ojg1ODUvc3RvbmViYW5rL2NvbnNlbnRyZWRpcmVjdCIsInR5cGUiOiJjb25zZW50IiwiZXhwIjoxNjE1NDc5OTI5LCJpYWJ3OjE2MTU0NzI3MTksImp0aSI6Ijk0NTlmMjhhLTQ5NDEtNDA2Zi05YjExLWFmMjdhMWQ2MzEyMCJ9.SptDNxVKp5W_9B&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><br>
-<h4 id="request-body"><strong>Request Body</strong></h4>
+<br>
+<h5 id="responses"><strong>Responses</strong></h5>
 <hr>
-<p>Consiste nos dados do usuário e opcionalmente na organização que iremos cadastrar.</p>
-<p>Por consistir de dados do usuário que são potencialmente sensíveis, o corpo da requisição deve ser criptografado com o mesmo procedimento utilizado para criptografar o corpo do sign_up público.</p>
-<p>O corpo da requisição terá o formato:</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;jwe&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;...&#34;</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><p>No exemplo do editor abaixo, forneço o corpo descriptografado da requisição. O campo metadata contém dados customizados que a aplicação desejar salvar no pedido de sign up.</p>
-
-
-<div class="pageinfo pageinfo-primary">
-<p><strong>Observação</strong></p>
-<p>Lembre-se de passar no header <em>x-stone-idempotency-key</em> um UUID, isso ajuda que a requisição fique idempotente. Isto é, permite que chame a mesma requisição múltiplas vezes criando apenas um cadastro.</p>
-
-</div>
-
-<h5 id="schema"><strong>Schema</strong></h5>
-<hr>
-<p><strong>object:</strong></p>
-<ul>
-<li>
-<p><strong>user</strong>* <code>object</code></p>
-<ul>
-<li>
-<p><strong>document</strong>* <code>string</code></p>
-</li>
-<li>
-<p><strong>document_type</strong>* <code>string</code></p>
-</li>
-<li>
-<p><strong>full_name</strong>* <code>string</code></p>
-</li>
-<li>
-<p><strong>email</strong>* <code>string</code></p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>organization:</strong>* <code>string</code> or <code>Object</code></p>
-<ul>
-<li>
-<p><strong>document</strong>* <code>string</code></p>
-</li>
-<li>
-<p><strong>document_type</strong>* <code>string</code></p>
-</li>
-<li>
-<p><strong>full_name</strong> <code>string</code></p>
-</li>
-<li>
-<p><strong>email</strong> <code>string</code></p>
-</li>
-<li>
-<p><strong>metadata</strong> <code>object</code></p>
-</li>
-</ul>
-</li>
-</ul>
-<h5 id="example">Example</h5>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#204a87;font-weight:bold">&#34;user&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;document&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;52762077044&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;document_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;cpf&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;full_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Fulano da Silva&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;email&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;any_valid_non_burner_email1231@gmail.com&#34;</span>
-  <span style="color:#000;font-weight:bold">},</span>
-  <span style="color:#204a87;font-weight:bold">&#34;organization&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;document&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;67946893000133&#34;</span><span style="color:#000;font-weight:bold">,</span>
-    <span style="color:#204a87;font-weight:bold">&#34;document_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;cnpj&#34;</span>
-  <span style="color:#000;font-weight:bold">},</span>
-  <span style="color:#204a87;font-weight:bold">&#34;metadata&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;id_salesperson&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;12322&#34;</span>
-  <span style="color:#000;font-weight:bold">}</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><h5 id="responses"><strong>Responses</strong></h5>
-<hr>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#0000cf;font-weight:bold">202</span> <span style="color:#a40000">Accepted</span>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#0000cf;font-weight:bold">200</span> <span style="color:#a40000">ok</span> 
 </code></pre></div>
 
 <div class="pageinfo pageinfo-primary">
-<p><strong>Observação</strong></p>
-<p>Por ser uma chamada assíncrona temos como resposta o código de status 202 e o id do pedido de requisição. Esse pode ser utilizado pela API de consulta do pedido de requisição para verificar os metadados e o estado atual do cadastro do cliente.</p>
+<p><strong>A resposta contém os seguintes dados:</strong></p>
+<ul>
+<li>id: identificador do pedido de sign up</li>
+<li>owner_id: identificador do usuário ou organização dona da conta de pagamento</li>
+<li>owner_type: tipo do dono da conta de pagamento (user ou organization)</li>
+<li>user_id: id do usuário atrelado a conta de pagamento</li>
+<li>organization_id: id da organização atrelada a conta de pagamento (pode ser nulo caso seja uma conta apenas de PF).</li>
+<li>user_email_verified: indica se o usuário está com o e-mail verificado.</li>
+<li>user_assessment_request_status: status do assessment request para criação do usuário.</li>
+<li>organization_assessment_request_status: status do assessment request para criação da organização (pode ser nulo caso seja uma conta apenas de PF).</li>
+<li>subject_id: id da aplicação que criou esse pedido de sign up.</li>
+<li>status: em qual status está o pedido de sign up created, kyc_analysis(em análise de kyc), finished, failed</li>
+<li>error: apenas presente caso o status seja failed, contém informações do motivo de falha ao fazer o sign up.</li>
+<li>metadata: metadados customizados passados ao realizar o cadastro.</li>
+<li>request_metadata: metadados da requisição de cadastro. Ex: user-agent, ip.</li>
+<li>resource_details: detalhes envolvendos esse cadastro. Ex: usuário verificou o e-mail, horário que o usuário verificou e-mail, assessment de usuário aprovado, conta de pagamento aberta/fechada/inexistente.</li>
+<li>resource_type: tipo de recurso principal criado (usuário, organização, conta de pagamento).</li>
+<li>user: alguns campos do usuário, atualmente só carregamos o id e o approval_status (limited|approved|partially_rejected|pending_analysis).</li>
+<li>organization: alguns campos da organização, atualmente só carregamos o id e o approval_status.</li>
+<li>inserted_at: timestamp da criação do pedido de conta de pagamento.</li>
+<li>updated_at: timestamp da última atualização do pedido de conta de pagamento.</li>
+</ul>
 
 </div>
 
-<h5 id="schema-1"><strong>Schema</strong></h5>
+<br>
+<h5 id="schema"><strong>Schema</strong></h5>
 <hr>
+<br>
 <p><strong>Object:</strong></p>
 <ul>
-<li><strong>id</strong>* <code>string</code></li>
+<li>
+<p><strong>id</strong> <code>string</code></p>
+</li>
+<li>
+<p><strong>owner_id</strong> <code>string</code></p>
+</li>
+<li>
+<p><strong>owner_type</strong> <code>string</code></p>
+</li>
+<li>
+<p><strong>user_id</strong> <code>string</code></p>
+</li>
+<li>
+<p><strong>organization_id</strong> <code>string</code></p>
+</li>
+<li>
+<p><strong>subject_id</strong> <code>string</code></p>
+</li>
+<li>
+<p><strong>status</strong> <code>string</code></p>
+</li>
+<li>
+<p><strong>error</strong> <code>string</code></p>
+</li>
+<li>
+<p><strong>matadata</strong> <code>string</code></p>
+</li>
+<li>
+<p><strong>request_matadata</strong> <code>string</code></p>
+</li>
+<li>
+<p><strong>insert_at</strong> <code>string</code></p>
+</li>
+<li>
+<p><strong>update_at</strong> <code>string</code></p>
+</li>
 </ul>
-<h5 id="example-1">Example</h5>
+<p><strong>resource_details</strong> <code>object</code></p>
+<ul>
+<li>
+<p><strong>account_status</strong> <code>boolean</code> or <code>string</code></p>
+</li>
+<li>
+<p><strong>account_status_changed_at</strong> <code>string</code></p>
+</li>
+<li>
+<p><strong>account_status_timestamp</strong> <code>string</code></p>
+</li>
+<li>
+<p><strong>organization_automatic_checks_status</strong> <code>string</code></p>
+</li>
+<li>
+<p><strong>organization_automatic_checks_status_change_at</strong> <code>string</code></p>
+</li>
+<li>
+<p><strong>organization_automatic_checks_status_timestamp</strong> <code>string</code></p>
+</li>
+<li>
+<p><strong>organization_input_assessment_status</strong> <code>string</code></p>
+</li>
+<li>
+<p><strong>organization_input_assessment_status_change_at</strong> <code>string</code></p>
+</li>
+<li>
+<p><strong>organization_input_assessment_status_timestamp</strong> <code>string</code></p>
+</li>
+<li>
+<p><strong>user_automatic_checks_status</strong> <code>string</code></p>
+</li>
+<li>
+<p><strong>user_automatic_checks_status_change_at</strong> <code>string</code></p>
+</li>
+<li>
+<p><strong>user_automatic_checks_status_timestamp</strong> <code>string</code></p>
+</li>
+<li>
+<p><strong>user_input_assessment_status</strong> <code>string</code></p>
+</li>
+<li>
+<p><strong>user_input_assessment_status_change_at</strong> <code>string</code></p>
+</li>
+<li>
+<p><strong>user_input_assessment_status_timestamp</strong> <code>string</code></p>
+</li>
+</ul>
+<p><strong>resource_type</strong> <code>string</code></p>
+<br>
+<h5 id="example">Example</h5>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#000;font-weight:bold">{</span>
-  <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;9c6197d8-4b76-422c-ba81-11fb1ca97313&#34;</span>
+  <span style="color:#204a87;font-weight:bold">&#34;error&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ea3c66b7-e8cb-46b8-a140-bd6f33738380&#34;</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">&#34;inserted_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-08-11T12:39:53.659803&#34;</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">&#34;marketing_data&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">&#34;utm_adname&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;utm_campaign&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;utm_content&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;utm_medium&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;utm_source&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;utm_term&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span>
+  <span style="color:#000;font-weight:bold">},</span>
+  <span style="color:#204a87;font-weight:bold">&#34;metadata&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{},</span>
+  <span style="color:#204a87;font-weight:bold">&#34;organization_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;3bf2ac6f-2219-4027-8516-d9457f7e6a96&#34;</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">&#34;owner_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;organization:3bf2ac6f-2219-4027-8516-d9457f7e6a96&#34;</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">&#34;owner_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;organization&#34;</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">&#34;request_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ef53b9b8c8d2dfdf227ee47ca2b9d2ed&#34;</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">&#34;request_metadata&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">&#34;device_generated_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;idempotency_key&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;platform_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;referer&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;remote_ip&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;10.20.201.251, 10.9.2.19&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;request_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ef53b9b8c8d2dfdf227ee47ca2b9d2ed&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;user_agent&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;PostmanRuntime/7.26.1&#34;</span>
+  <span style="color:#000;font-weight:bold">},</span>
+  <span style="color:#204a87;font-weight:bold">&#34;resource_details&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">&#34;account_status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;created&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;account_status_changed_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-11-26T19:20:10.219377&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;account_status_timestamp&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-11-26T19:20:10.219377&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;user_automatic_checks_status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;partially_rejected&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;user_automatic_checks_status_changed_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-11-26T19:20:10.219377&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;user_automatic_checks_status_timestamp&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-11-25T19:33:14&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;user_email_verified&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;user_email_verified_changed_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-11-26T19:20:10.219377&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;user_email_verified_timestamp&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-11-25T19:35:44.770362&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;user_input_assessment_status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;approved&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;user_input_assessment_status_changed_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-11-26T19:20:10.219377&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;user_input_assessment_status_timestamp&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-11-25T19:33:13&#34;</span>
+  <span style="color:#000;font-weight:bold">},</span>
+  <span style="color:#204a87;font-weight:bold">&#34;resource_type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;srn:resource:paymentaccount&#34;</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;kyc_analysis&#34;</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">&#34;subject_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;user:790081f7-92ce-428f-8334-6443ecc3cbb2&#34;</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">&#34;updated_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2020-08-11T12:39:56.568580&#34;</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">&#34;user_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1f4b4f98-f2a2-4ae6-9d4d-2a8dbe5473e1&#34;</span><span style="color:#000;font-weight:bold">,</span>
+  <span style="color:#204a87;font-weight:bold">&#34;user&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">&#34;approval_status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;approved&#34;</span><span style="color:#000;font-weight:bold">,</span>
+    <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2d2e6aba-ce11-49be-88c0-0641843cabdc&#34;</span>
+  <span style="color:#000;font-weight:bold">}</span>
 <span style="color:#000;font-weight:bold">}</span>
 </code></pre></div>
         <div class="section-index">
@@ -3675,6 +3770,8 @@
     
     
     <hr class="panel-line">
+        
+            
         
             
         

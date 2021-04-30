@@ -58,7 +58,7 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/criar-nova-identidade/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/criar-nova-conta-de-pagamento/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
   </url>
   
@@ -168,6 +168,11 @@
   
   <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/autenticacao/</loc>
+    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-dados-do-pedido-da-conta-de-pagamento/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
   </url>
   
