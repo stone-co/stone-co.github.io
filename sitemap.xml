@@ -88,11 +88,6 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/folha-de-pagamento/listar-pagamentos-de-folha/</loc>
-    <lastmod>2019-09-16T19:01:55+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/docs/guias/a-conta-stone/overview/</loc>
     <lastmod>2020-12-29T14:00:48+00:00</lastmod>
   </url>
@@ -192,11 +187,6 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/folha-de-pagamento/criar-pagamento-de-folha/</loc>
-    <lastmod>2019-09-30T17:25:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/docs/guias/a-conta-stone/modelos-de-parceria/</loc>
     <lastmod>2020-12-09T14:51:36+00:00</lastmod>
   </url>
@@ -273,11 +263,6 @@
   <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/objetos-simulacao-de-pagamento/</loc>
     <lastmod>2020-05-01T01:03:24+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/folha-de-pagamento/consultar-pagamento-de-folha/</loc>
-    <lastmod>2019-09-12T17:25:16+00:00</lastmod>
   </url>
   
   <url>
@@ -614,11 +599,6 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/folha-de-pagamento/</loc>
-    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-todas-as-taxas/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
   </url>
@@ -661,11 +641,6 @@
   <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/comprovantes/como-emitir-um-comprovante/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/folha-de-pagamento/listar-salarios-de-uma-folha/</loc>
-    <lastmod>2019-09-16T18:49:01+00:00</lastmod>
   </url>
   
   <url>
