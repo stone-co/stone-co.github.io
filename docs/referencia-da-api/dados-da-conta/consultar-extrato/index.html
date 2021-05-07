@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.5efbf8ca0e17b459b1261d9f08823f6d.json"
+  data-offline-search-index-json-src="/offline-search-index.59f50d22eae04020ea80fd6cf2b42e8e.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.5efbf8ca0e17b459b1261d9f08823f6d.json"
+  data-offline-search-index-json-src="/offline-search-index.59f50d22eae04020ea80fd6cf2b42e8e.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3432,29 +3432,38 @@
 </span></code></pre></div><hr>
 <p><strong>PATH PARAMS</strong></p>
 <hr>
-<p><strong>account_id</strong>  <code>string</code></p>
-<p>Identificador da Conta.</p>
+<br>
+<p><strong>account_id</strong>  <code>string</code><br>
+Identificador da Conta.</p>
 <p><br> <br></p>
 <p><strong>QUERY PARAMS</strong></p>
 <hr>
 <p><strong>limit</strong>  <code>int32</code></p>
-<hr>
-<p><strong>before</strong>  <code>string</code></p>
-<p>Traz a página anterior ao cursor.</p>
-<hr>
-<p><strong>after</strong>  <code>string</code></p>
-<p>Traz a página posterior ao cursor.</p>
-<hr>
-<p><strong>start_datetime</strong>  <code>string</code></p>
-<p>Format: ISO8601 - &ldquo;YYYY-MM-DDThh:mm:ssZ&rdquo;</p>
-<hr>
-<p><strong>end_datetime</strong>  <code>string</code></p>
-<p>Format: ISO8601 - &ldquo;YYYY-MM-DDThh:mm:ssZ&rdquo;</p>
-<hr>
-<p><strong>type</strong>  <code>string</code></p>
-<p>Filtra o extrato por um ou mais tipos de registro.</p>
+<br>
+<p><strong>before</strong>  <code>string</code><br>
+Traz a página anterior ao cursor.</p>
+<br>
+<p><strong>after</strong>  <code>string</code><br>
+Traz a página posterior ao cursor.</p>
+<br>
+<p><strong>start_datetime</strong>  <code>string</code><br>
+Valor referente a data de criação da transação.<br>
+Format: ISO8601 - &ldquo;YYYY-MM-DDThh:mm:ssZ&rdquo;</p>
+<br>
+<p><strong>end_datetime</strong>  <code>string</code><br>
+Valor referente a data de criação da transação.<br>
+Format: ISO8601 - &ldquo;YYYY-MM-DDThh:mm:ssZ&rdquo;</p>
+<br>
+<p><strong>type</strong>  <code>string</code><br>
+Filtra o extrato por um ou mais tipos de registro.</p>
 <p>Valores possíveis: <code>internal</code>, <code>external</code>, <code>external_refund</code>, <code>payment</code>, <code>payment_refund</code>, <code>balance_block</code>, <code>card_payment</code>, <code>salary_portability</code>, <code>salary_portability_refund</code>, <code>salary_portability_employer_refund</code> e <code>instant_payment</code>.</p>
-<p>Para escolher mais de um type, basta incluir no final da requisição os types, exemplo:  <code>/statement?type[]=external&amp;type[]=internal</code></p>
+<p>Para escolher mais de um type, basta incluir no final da requisição os types.</p>
+<p>Exemplo:</p>
+<ul>
+<li><code>/statement?type[]=external&amp;type[]=internal</code>;</li>
+<li><code>/statement?operation=credit|debit</code>.</li>
+</ul>
+<br>
 <hr>
 
 

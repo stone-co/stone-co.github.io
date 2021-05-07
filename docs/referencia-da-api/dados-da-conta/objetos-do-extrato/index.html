@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.5efbf8ca0e17b459b1261d9f08823f6d.json"
+  data-offline-search-index-json-src="/offline-search-index.59f50d22eae04020ea80fd6cf2b42e8e.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.5efbf8ca0e17b459b1261d9f08823f6d.json"
+  data-offline-search-index-json-src="/offline-search-index.59f50d22eae04020ea80fd6cf2b42e8e.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3604,7 +3604,7 @@
 </tr>
 <tr>
 <td>created_at</td>
-<td>Data de processamento da transação / de entrada da transação no extrato. Formato: datetime.</td>
+<td>Data de início de processamento da transação / de entrada da transação no extrato. Formato: datetime.</td>
 <td><code>String</code></td>
 </tr>
 <tr>
@@ -3695,7 +3695,7 @@
 </tr>
 <tr>
 <td>operation_amount</td>
-<td>Valor da operação, sem o valor da taxa.</td>
+<td>Valor da operação, sem o valor da taxa. Para cash-outs, operation_amount + fee_amount = -amount, e para cash-in operation_amount - fee_amount = amount.</td>
 <td><em>Integer</em></td>
 <td><code>external</code>, <code>external_refund</code>, <code>instant_payment</code>, <code>internal</code>, <code>outbound_stone_prepaid_card_payment</code>, <code>outbound_stone_prepaid_card_payment_refund</code>, <code>outbound_stone_prepaid_card_payment_chargeback</code>, <code>outbound_stone_prepaid_card_withdrawal</code>, <code>outbound_stone_prepaid_card_withdrawal_refund</code>, <code>payment</code>, <code>payment_refund</code></td>
 </tr>
