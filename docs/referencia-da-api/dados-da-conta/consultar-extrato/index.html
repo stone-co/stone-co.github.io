@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.59f50d22eae04020ea80fd6cf2b42e8e.json"
+  data-offline-search-index-json-src="/offline-search-index.ecad2e7d0f581ca7b2bcc1a0ada080eb.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.59f50d22eae04020ea80fd6cf2b42e8e.json"
+  data-offline-search-index-json-src="/offline-search-index.ecad2e7d0f581ca7b2bcc1a0ada080eb.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3429,15 +3429,16 @@
 	
 	<hr>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/statement
-</span></code></pre></div><hr>
+</span></code></pre></div><br>
 <p><strong>PATH PARAMS</strong></p>
 <hr>
 <br>
 <p><strong>account_id</strong>  <code>string</code><br>
 Identificador da Conta.</p>
-<p><br> <br></p>
+<br> 
 <p><strong>QUERY PARAMS</strong></p>
 <hr>
+<br>
 <p><strong>limit</strong>  <code>int32</code></p>
 <br>
 <p><strong>before</strong>  <code>string</code><br>
@@ -3464,7 +3465,7 @@ Filtra o extrato por um ou mais tipos de registro.</p>
 <li><code>/statement?operation=credit|debit</code>.</li>
 </ul>
 <br>
-<hr>
+<br>
 
 
 <div class="pageinfo pageinfo-primary">
@@ -3482,11 +3483,14 @@ Filtra o extrato por um ou mais tipos de registro.</p>
 
 </div>
 
-<hr>
+<br>
 <h5 id="response">Response</h5>
+<hr>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">201 Created
 </span><span style="color:#a40000">content-type: application/json
-</span></code></pre></div><p>Body</p>
+</span></code></pre></div><br>
+<h5 id="body">Body</h5>
+<hr>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
     <span style="color:#204a87;font-weight:bold">&#34;cursor&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
         <span style="color:#204a87;font-weight:bold">&#34;after&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
@@ -3547,8 +3551,20 @@ Filtra o extrato por um ou mais tipos de registro.</p>
         <span style="color:#000;font-weight:bold">}</span>
     <span style="color:#000;font-weight:bold">]</span>
 <span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><p>Note que, na resposta acima, foram feitas duas transferências, uma interna e uma externa, ambas com as suas particularidades de retorno.</p>
-<p>Em cada extrato há duas informações: {balance before} e {balance after}. O <code>_balance_before_</code> registra o saldo do usuário antes da operação, e o <code>_balance_after_</code> registra o saldo após a operação dado o <code>_balance_before_</code> menos o valor da operação.</p>
+</code></pre></div><br>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Observação</h4>
+
+    <br>
+<p>Na resposta acima foram feitas duas transferências, uma interna e uma externa, ambas com as suas particularidades de retorno.</p>
+<p>Em cada extrato há duas informações: {balance before} e {balance after}. <br>
+O <code>_balance_before_</code> registra o saldo do usuário antes da operação, e o <code>_balance_after_</code> registra o saldo após a operação dado o <code>_balance_before_</code> menos o valor da operação.</p>
+
+
+</div>
+
 
         <div class="section-index">
     

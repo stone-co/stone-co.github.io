@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.59f50d22eae04020ea80fd6cf2b42e8e.json"
+  data-offline-search-index-json-src="/offline-search-index.ecad2e7d0f581ca7b2bcc1a0ada080eb.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.59f50d22eae04020ea80fd6cf2b42e8e.json"
+  data-offline-search-index-json-src="/offline-search-index.ecad2e7d0f581ca7b2bcc1a0ada080eb.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3429,14 +3429,16 @@
 	
 	<hr>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/fees/fee_type
-</span></code></pre></div><hr>
+</span></code></pre></div><br>
 <p><strong>PATH PARAMS</strong></p>
 <hr>
-<p><strong>account_id</strong>  <code>string</code></p>
-<p>Identificador da conta.</p>
-<hr>
-<p><strong>fee_type</strong>  <code>string</code></p>
-<p>Tipo de taxa. Valores possíveis: <code>internal_transfer</code>, <code>external_transfer</code>, <code>barcode_payment</code>, <code>outbound_stone_prepaid_card_payment</code>, <code>outbound_stone_prepaid_card_withdrawal</code> e <code>barcode_payment_invoice</code>.</p>
+<br>
+<p><strong>account_id</strong>  <code>string</code><br>
+Identificador da conta.</p>
+<br>
+<p><strong>fee_type</strong>  <code>string</code><br>
+Tipo de taxa. Valores possíveis: <code>internal_transfer</code>, <code>external_transfer</code>, <code>barcode_payment</code>, <code>outbound_stone_prepaid_card_payment</code>, <code>outbound_stone_prepaid_card_withdrawal</code> e <code>barcode_payment_invoice</code>.</p>
+<br>
 
 
 <div class="pageinfo pageinfo-primary">
@@ -3446,11 +3448,14 @@
 
 </div>
 
-<hr>
+<br>
 <h5 id="response">Response</h5>
+<hr>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">201 OK
 </span><span style="color:#a40000">content-type: application/json
-</span></code></pre></div><p>Body</p>
+</span></code></pre></div><br>
+<h5 id="body">Body</h5>
+<hr>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">
 <span style="color:#000;font-weight:bold">{</span>
   <span style="color:#204a87;font-weight:bold">&#34;amount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">130</span><span style="color:#000;font-weight:bold">,</span>
