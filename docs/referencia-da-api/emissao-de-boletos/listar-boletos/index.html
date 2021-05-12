@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.ecad2e7d0f581ca7b2bcc1a0ada080eb.json"
+  data-offline-search-index-json-src="/offline-search-index.5629550918e8486e339e0dd0b17a9224.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.ecad2e7d0f581ca7b2bcc1a0ada080eb.json"
+  data-offline-search-index-json-src="/offline-search-index.5629550918e8486e339e0dd0b17a9224.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3432,6 +3432,7 @@
 </span></code></pre></div><hr>
 <h4 id="query-params"><strong>QUERY PARAMS</strong></h4>
 <hr>
+<br>
 <p><strong>account_id</strong>* <code>string</code>
 <br> Identificador da conta.</p>
 <hr>
@@ -3448,13 +3449,14 @@
 <br> Valores Permitidos: CREATED, SETTLED, REGISTERED, EXPIRED, PENDING.</p>
 <hr>
 <p><strong>amount</strong> <code>integer</code>
-<br></p>
+<br> Valor do boleto bancário gerado, em centavos de reais.</p>
 <hr>
 <p><strong>issuance_date</strong> <code>string</code>
-<br></p>
+<br> Data da emissão de boleto bancário. Formato &ldquo;YYYY-MM-DD&rdquo;.</p>
 <hr>
 <p><strong>expiration_date</strong> <code>string</code>
-<br></p>
+<br> Data de vencimento do boleto bancário. Mesmo depois dessa data expirar o pagamento ainda pode ser feito.
+Formato &ldquo;YYYY-MM-DD&rdquo;.</p>
 <hr>
 <p><strong>settled_date</strong> <code>string</code>
 <br></p>
@@ -3487,6 +3489,12 @@
 <br></p>
 <hr>
 <p><strong>end_settled_date</strong> <code>string</code></p>
+<hr>
+<p><strong>barcode</strong><code>string</code>
+<br> Código de barras.</p>
+<hr>
+<p><strong>writable_line</strong><code>string</code>
+<br> Código de barras traduzidos em números.</p>
 <br>
 <h4 id="response"><strong>Response</strong></h4>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#0000cf;font-weight:bold">200</span> <span style="color:#a40000">OK</span>
