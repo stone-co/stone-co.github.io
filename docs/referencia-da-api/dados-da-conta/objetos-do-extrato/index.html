@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.53e0023c7fb6bd06c8f4e6d25bc7426f.json"
+  data-offline-search-index-json-src="/offline-search-index.6c064e7bacb2571949454b3055da657c.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.53e0023c7fb6bd06c8f4e6d25bc7426f.json"
+  data-offline-search-index-json-src="/offline-search-index.6c064e7bacb2571949454b3055da657c.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3497,6 +3497,11 @@
 <td><code>credit</code> ou <code>debit</code></td>
 </tr>
 <tr>
+<td>outbound_pix_payment</td>
+<td>Envio de um Pix.</td>
+<td><code>debit</code></td>
+</tr>
+<tr>
 <td>outbound_stone_prepaid_card_payment</td>
 <td>Compra feita com Cartão Stone.</td>
 <td><code>debit</code></td>
@@ -3535,6 +3540,26 @@
 <td>payroll</td>
 <td>Folha de pagamento.</td>
 <td><code>debit</code></td>
+</tr>
+<tr>
+<td>pix_payment</td>
+<td>Recebimento de Pix.</td>
+<td><code>credit</code></td>
+</tr>
+<tr>
+<td>refund_for_pix_payment</td>
+<td>Devolução de um Pix recebido.</td>
+<td><code>debit</code></td>
+</tr>
+<tr>
+<td>refund_reversal_for_pix_payment</td>
+<td>Recebimento de um Pix que havia devolvido.</td>
+<td><code>credit</code></td>
+</tr>
+<tr>
+<td>refund_for_outbound_pix_payment</td>
+<td>Devolução de um Pix que havia enviado.</td>
+<td><code>credit</code></td>
 </tr>
 <tr>
 <td>salary</td>
@@ -3604,7 +3629,7 @@
 </tr>
 <tr>
 <td>created_at</td>
-<td>Data de início de processamento da transação / de entrada da transação no extrato. Formato: datetime.</td>
+<td>Data de processamento da transação / de entrada da transação no extrato. Formato: datetime.</td>
 <td><code>String</code></td>
 </tr>
 <tr>
@@ -3614,7 +3639,7 @@
 </tr>
 <tr>
 <td>id</td>
-<td>Identificador da transação que originou essa movimentação no extrato</td>
+<td>Identificador da transação que originou essa movimentação no extrato.</td>
 <td><code>String</code></td>
 </tr>
 </tbody>
@@ -3636,7 +3661,7 @@
 <tr>
 <td>operation_amount</td>
 <td>Valor bloqueado ou desbloqueado na operação.</td>
-<td><em>String</em></td>
+<td><em>Integer</em></td>
 <td><code>balance_blocked</code>, <code>balance_unblocked</code></td>
 </tr>
 <tr>
@@ -3695,7 +3720,7 @@
 </tr>
 <tr>
 <td>operation_amount</td>
-<td>Valor da operação, sem o valor da taxa. Para cash-outs, operation_amount + fee_amount = -amount, e para cash-in operation_amount - fee_amount = amount.</td>
+<td>Valor da operação, sem o valor da taxa.</td>
 <td><em>Integer</em></td>
 <td><code>external</code>, <code>external_refund</code>, <code>instant_payment</code>, <code>internal</code>, <code>outbound_stone_prepaid_card_payment</code>, <code>outbound_stone_prepaid_card_payment_refund</code>, <code>outbound_stone_prepaid_card_payment_chargeback</code>, <code>outbound_stone_prepaid_card_withdrawal</code>, <code>outbound_stone_prepaid_card_withdrawal_refund</code>, <code>payment</code>, <code>payment_refund</code></td>
 </tr>
@@ -3779,7 +3804,7 @@
 </tr>
 <tr>
 <td>acquirer_name</td>
-<td>Nome do adquirente</td>
+<td>Nome do adquirente.</td>
 <td><em>String</em></td>
 <td><code>outbound_stone_prepaid_card_payment</code>, <code>outbound_stone_prepaid_card_payment_refund</code>, <code>outbound_stone_prepaid_card_payment_chargeback</code>, <code>outbound_stone_prepaid_card_withdrawal</code>, <code>outbound_stone_prepaid_card_withdrawal_refund</code></td>
 </tr>
@@ -3873,7 +3898,7 @@
 <tr>
 <td>account_code</td>
 <td>Código da Conta.</td>
-<td><em>Integer</em></td>
+<td><em>String</em></td>
 </tr>
 <tr>
 <td>account_type</td>
@@ -3883,12 +3908,12 @@
 <tr>
 <td>branch_code</td>
 <td>Agência da conta.</td>
-<td><em>Integer</em></td>
+<td><em>String</em></td>
 </tr>
 <tr>
 <td>institution</td>
 <td>Código da instituição da conta.</td>
-<td><em>Integer</em></td>
+<td><em>String</em></td>
 </tr>
 <tr>
 <td>institution_name</td>
@@ -3912,7 +3937,7 @@
 <tr>
 <td>document</td>
 <td>Número de documento do responsável da conta.</td>
-<td><em>Integer</em></td>
+<td><em>String</em></td>
 </tr>
 <tr>
 <td>document_type</td>

@@ -503,7 +503,7 @@ Qualquer problema encontrado durante esta fase deve ser resolvido antes de pross
 &lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;clinet_id&lt;/td&gt;
+&lt;td&gt;client_id&lt;/td&gt;
 &lt;td&gt;Será o ClientID da Aplicação Parceira.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
