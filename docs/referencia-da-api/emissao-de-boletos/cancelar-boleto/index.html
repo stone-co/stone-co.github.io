@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.11627dfc9f360ccf2332a34daecb9f61.json"
+  data-offline-search-index-json-src="/offline-search-index.905647e70409e0b30a95c9c9d6aebce0.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.11627dfc9f360ccf2332a34daecb9f61.json"
+  data-offline-search-index-json-src="/offline-search-index.905647e70409e0b30a95c9c9d6aebce0.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3357,17 +3357,26 @@
 </span></code></pre></div><hr>
 <h4 id="query-params"><strong>QUERY PARAMS</strong></h4>
 <hr>
+<br>
 <p><strong>id</strong>* <code>string</code>
 <br> Identificador do boleto que se quer cancelar.</p>
 <br>
 <p>O cancelamento do boleto ocorre de forma assíncrona. Após a solicitação de cancelamento ser efetuada com sucesso, o status será alterado para <code>cancelation_requested</code>.</p>
 <p>Assim que o processo de cancelamento terminar, o status será alterado para <code>CANCELLED</code>.
 <br>Para acompanhar o processo de cancelamento, utilize a api /barcode_payment_invoices/{id}/ e observe o status do boleto.</p>
+<br>
+
+
+<div class="pageinfo pageinfo-primary">
+<p><strong>Atenção</strong></p>
 <p>Não será possível cancelar o boleto caso:</p>
 <ul>
 <li>exista algum pagamento em progresso</li>
 <li>o boleto esteja com status <code>SETTLED</code></li>
 </ul>
+
+</div>
+
 <br> 
 <h4 id="response"><strong>Response</strong></h4>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#0000cf;font-weight:bold">200</span> <span style="color:#a40000">OK</span>

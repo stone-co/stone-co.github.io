@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.11627dfc9f360ccf2332a34daecb9f61.json"
+  data-offline-search-index-json-src="/offline-search-index.905647e70409e0b30a95c9c9d6aebce0.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.11627dfc9f360ccf2332a34daecb9f61.json"
+  data-offline-search-index-json-src="/offline-search-index.905647e70409e0b30a95c9c9d6aebce0.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3357,22 +3357,29 @@
 </span></code></pre></div><hr>
 <h4 id="body-params"><strong>BODY PARAMS</strong></h4>
 <hr>
+<br>
 <p><strong>account_id</strong>* <code>string</code>
 <br> Identificador da conta que irá gerar o documento.</p>
 <hr>
+<br>
 <p><strong>amount</strong>* <code>int32</code>
 <br> Valor do boleto em centavos de Real, ou seja, 20 reais fica 2000.</p>
 <hr>
+<br>
 <p><strong>expiration_date</strong>* <code>string</code>
 <bR>Data de vencimento do boleto bancário. Mesmo depois dessa data expirar o pagamento ainda pode ser feito. Formato: <code>yyyy-mm-dd</code></p>
 <hr>
+<br>
 <p><strong>limit_date</strong> <code>string</code>
 <br>Data limite para pagamento do boleto bancário. Deve ser igual ou maior que data de vencimento. Se não informada, será usada a <code>expiration_date</code>.</p>
 <hr>
+<br>
 <p><strong>invoice_type</strong>* <code>string</code>
 <br>Tipo de boleto bancário. Valores suportados: <code>proposal</code>, <code>deposit</code> e <code>bill_of_exchange</code>.</p>
 <hr>
+<br>
 <p><strong>customer</strong> <code>object</code>
+<br>
 <br>     <strong>document</strong> <code>string</code> <em>(obrigatório)</em>
 <br>     Número do documento do pagador sem pontos. Não é obrigatório no tipo <code>deposit</code>.
 <br>
@@ -3382,29 +3389,37 @@
 <br>     <strong>trade_name</strong> <code>string</code> <em>(obrigatório)</em>
 <br>     Nome fantasia do pagador. Obrigatório no caso de pagador PJ.</p>
 <hr>
+<br>
 <p><strong>discounts</strong> <code>array_of_objects</code>
-<br>     <strong>date</strong> <code>string</code>
+<br></p>
+<p><br>     <strong>date</strong> <code>string</code>
 <br>     Data até a qual o desconto deve ser aplicado. Formato ISO8601 <code>&quot;YYYY-MM-DD&quot;</code>. Só é aceito no tipo de cobrança.
 <br>
 <br>     <strong>value</strong> <code>string</code>
 <br>     Valor percentual (%) do desconto que será aplicado ao boleto. O valor do deve ser maior que 0.0 e até 90.0. Formato decimal. Ex: &ldquo;20.0&rdquo;. Só é aceito no tipo de cobrança.</p>
 <hr>
+<br>
 <p><strong>fine</strong> <code>object</code>
-<br>     <strong>date</strong> <code>string</code> <em>(obrigatório)</em>
+<br></p>
+<p><br>     <strong>date</strong> <code>string</code> <em>(obrigatório)</em>
 <br>     Data que define o dia a partir do qual a multa deve ser aplicada ao boleto. Caso não seja infromada será consiederada a data de validdade. Só é aceito no tipo de cobrança.
 <br>
 <br>     <strong>value</strong> <code>string</code> <em>(obrigatório)</em>
 <br>     Valor percentual (%) da multa que será aplicada ao boleto. O valor do deve ser maior que 0.0 e até 2.0. Formato decimal. Ex: &ldquo;2.0&rdquo;. Só é aceito no tipo de cobrança.</p>
 <hr>
+<br>
 <p><strong>interest</strong> <code>object</code>
-<br>     <strong>date</strong> <code>string</code> <em>(obrigatório)</em>
+<br></p>
+<p><br>     <strong>date</strong> <code>string</code> <em>(obrigatório)</em>
 <br>     Data que define o dia a partir do qual os juros passam a ser aplicados ao boleto. Só é aceito no tipo de cobrança.
 <br>
 <br>     <strong>value</strong> <code>string</code> <em>(obrigatório)</em>
 <br>     Valor parcentual (%) dos juros que será aplicado ao boleto por mês. O valor do deve ser maior que 0.0 e até 1.0. Formato decimal. Ex: &ldquo;1.0&rdquo;. Só é aceito no tipo de cobrança.</p>
 <hr>
+<br>
 <p><strong>receiver</strong> <code>object</code>
-<br>     <strong>legal_name</strong> <code>string</code>
+<br></p>
+<p><br>     <strong>legal_name</strong> <code>string</code>
 <br>     É o nome que identifica o sacado avalista para fins legais, administrativos e outros fins oficiais.
 <br>
 <br>     <strong>document</strong> <code>string</code>
@@ -3412,6 +3427,7 @@
 <p><br><br></p>
 <h4 id="headers"><strong>HEADERS</strong></h4>
 <hr>
+<br>
 <p><strong>x-stone-idempotency-key</strong> <code>string</code>
 <br>Chave de idempotência</p>
 <br>
