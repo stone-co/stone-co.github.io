@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.905647e70409e0b30a95c9c9d6aebce0.json"
+  data-offline-search-index-json-src="/offline-search-index.d57c2dda2430f0828fed5dac92ee6fe1.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.905647e70409e0b30a95c9c9d6aebce0.json"
+  data-offline-search-index-json-src="/offline-search-index.d57c2dda2430f0828fed5dac92ee6fe1.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3352,26 +3352,37 @@
 		<h1>O Que É Uma Transferência</h1>
         </div>
 	
-	<h4 id="conceito">Conceito</h4>
+	<hr>
+<br>
+<h3 id="conceito">Conceito</h3>
+<hr>
+<br>
 <p>Oferecemos uma API de Transferências, na qual permite-se efetuar a movimentação de fundos entre contas bancárias, podendo ser:</p>
+<br>
 <ul>
 <li>
-<p>Transferência interna: Transferência entre duas Contas Stone. O valor transferido é creditado instantaneamente na conta destinatária, independente do horário e dia da efetuação da transação.</p>
+<p><a href="/docs/referencia-da-api/transferencias/transferencias-internas">Transferência interna</a>: Transferência entre duas Contas Stone. O valor transferido é creditado instantaneamente na conta destinatária, independente do horário e dia da efetuação da transação.</p>
 </li>
 <li>
-<p>Transferência externa: TED (Transferência Eletrônica Disponível) para outros bancos. Nos dias úteis, entre 6:30 e 17:23, a transação é processada de forma assíncrona e o valor é creditado na conta destino em poucas horas. Caso a operação seja efetuada fora do horário citado e/ou em dias não úteis, a transação será agendada automaticamente para o dia útil seguinte.</p>
+<p><a href="/docs/referencia-da-api/transferencias/transferencias-externas">Transferência externa</a>: TED (Transferência Eletrônica Disponível) para outros bancos. Nos dias úteis, entre 6:30 e 17:23, a transação é processada de forma assíncrona e o valor é creditado na conta destino em poucas horas. Caso a operação seja efetuada fora do horário citado e/ou em dias não úteis, a transação será agendada automaticamente para o dia útil seguinte.</p>
 </li>
 </ul>
-<h4 id="status">Status</h4>
+<br>
+<h4 id="status">Status:</h4>
+<br>
 <h5 id="segue-abaixo-os-status-possíveis-de-uma-transferência-externa">Segue abaixo os status possíveis de uma <strong>transferência externa</strong>:</h5>
+<br>
 <p><img src="/docs/referencia-da-api/transferencias/o-que-e-uma-transferencia/1b90b91-Transfrncia_Externa.png" alt="status_TED"></p>
-<p>A transferência externa criada pela parceira aguardará a <a href="/docs/guias/integracao/aprovacao">aprovação</a> do usuário da conta no estado <code>CREATED</code>. Essa transferência pode ser rejeitada pela usuário, concluindo no estado <code>REJECTED</code>, e não será efetuada. Caso ela seja uma transferência agendada, é possível que o prazo do agendamento expire antes dela obter aprovação, encerrando em <code>EXPIRED</code>.</p>
+<br>
+<p>A transferência externa criada pelo parceiro aguardará a <a href="/docs/guias/integracao/aprovacao">aprovação</a> do usuário da conta no estado <code>CREATED</code>. Essa transferência pode ser rejeitada pelo usuário, concluindo no estado <code>REJECTED</code>, e não será efetuada. Caso ela seja uma transferência agendada, é possível que o prazo do agendamento expire antes dela obter aprovação, encerrando em <code>EXPIRED</code>.</p>
 <p>Caso ela seja agendada e aprovada dentro do prazo, seguirá para o estado <code>SCHEDULED</code>, e será efetuada  na data do agendamento. É importante observar que caso a criação da transferência externa, tanto pelo parceiro quanto pelo usuário, seja feita fora do horário de 6:30 às 17:23, ela seguirá para um estado de <code>DELAYED_TO_NEXT_BUSINESS_DAY</code>, em que ela será agendada para a próxima janela de execução. É possível que o usuário cancele a transferência antes dela ser efetuada, encerrando no estado <code>CANCELLED</code>.</p>
 <p>Quando é o próprio usuário que cria a transação, o fluxo já se inicia no estado <code>APPROVED</code> ou <code>SCHEDULED</code>, caso tenha sido criada com agendamento. A transferência poderá falhar apenas caso não haja fundos e terminará no estado <code>FAILED</code>. Caso tenha sido aprovada e haja fundos, a Stone realizará a transferência para o banco externo, obtendo o estado <code>FINISHED</code>. Caso haja algum problema como, por exemplo, dados incorretos, ele será reembolsado e irá  finalizar no estado <code>REFUNDED</code>.</p>
 <p>Para a transferência interna o fluxo é similar. Neste caso não haverá o estado <code>REFUNDED</code>, já que antes de realizar a transferência já conferimos a existência da conta destino. Não haverá também o estado <code>DELAYED_TO_NEXT_BUSINESS_DAY</code>, porque não há limites de horário para a realização de transferências para outras contas Stone.</p>
 <p>É possível consultar o status de uma transação a qualquer momento para saber em qual estado ela está.</p>
+<br>
 <h5 id="segue-abaixo-os-status-possíveis-de-uma-transferência-interna">Segue abaixo os status possíveis de uma <strong>transferência interna</strong>:</h5>
 <p><img src="/docs/referencia-da-api/transferencias/o-que-e-uma-transferencia/0d9c77f-Transferncia_Interna.png" alt="status_TransfInterna"></p>
+<br>
 
 
 <div class="pageinfo pageinfo-primary">
@@ -3379,9 +3390,13 @@
 
 </div>
 
+<br>
 <h4 id="falhas-em-transferências">Falhas em transferências</h4>
+<hr>
+<br>
 <p>Falha é qualquer erro que ocorra entre a criação e a movimentação do dinheiro na conta. Ou seja, qualquer condição que era válida no momento da criação da transferência, mas que mudou nas etapas seguintes.</p>
 <p>A seguir listamos algumas das falhas possíveis para transações de transferência, tanto para interna quanto para externa.</p>
+<br>
 <table>
 <thead>
 <tr>
@@ -3402,11 +3417,19 @@
 <td>2</td>
 <td>A operação falhou por uma restrição em uma das contas.</td>
 </tr>
+<tr>
+<td>409</td>
+<td>É recebido esse erro quando é realizado o envio de uma nova TED anteriormente enviada com sucesso, porém, com a mesma chave de idempotência.</td>
+</tr>
 </tbody>
 </table>
+<br>
 <h4 id="reembolsos-em-transferências">Reembolsos em transferências</h4>
+<hr>
+<br>
 <p><strong>Reembolsos ocorrem apenas em transferências para outros bancos</strong>, já que para transferências internas conferimos a existência da conta destino antes de realizar a transferência.<br>
 Abaixo listamos algumas das razões possíveis para ocorrer reembolsos, como também seus códigos correspondentes.</p>
+<br>
 <table>
 <thead>
 <tr>

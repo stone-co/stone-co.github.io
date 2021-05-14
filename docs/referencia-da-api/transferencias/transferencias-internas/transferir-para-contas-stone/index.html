@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.905647e70409e0b30a95c9c9d6aebce0.json"
+  data-offline-search-index-json-src="/offline-search-index.d57c2dda2430f0828fed5dac92ee6fe1.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.905647e70409e0b30a95c9c9d6aebce0.json"
+  data-offline-search-index-json-src="/offline-search-index.d57c2dda2430f0828fed5dac92ee6fe1.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3362,7 +3362,10 @@
 		<h1>Transferir para Contas Stone</h1>
         </div>
 	
-	<p>Faz transferências monetárias para outra conta dentro da Stone. <br></p>
+	<hr>
+<br>
+<p>Faz transferências monetárias para outra conta dentro da Stone. <br></p>
+<br>
 <p>A transferência pode ser agendada, através do campo <code>scheduled_to</code>. A data usada no campo <code>scheduled_to</code> deve estar entre a data <code>next_available_execution_date</code> e a data limite retornada no campo <code>execution_limit_date</code> da <a href="/docs/referencia-da-api/agendamento/calendario-de-agendamento/">API de caléndario de agendamento</a> chamada com o parâmetro <code>operation_type=internal_transfer</code>.</p>
 <p>Caso a data escolhida seja menor do que <code>next_available_execution_date</code>, a transferência será executada imediatamente. <br>
 Caso a data seja maior que <code>execution_limit_date</code>, será retornado um erro 422.</p>
@@ -3372,6 +3375,7 @@ Caso a data seja maior que <code>execution_limit_date</code>, será retornado um
 </span></code></pre></div><hr>
 <h4 id="body-params"><strong>BODY PARAMS</strong></h4>
 <hr>
+<br>
 <p><strong>amount</strong>* <code>int32</code>
 <br>Valor da transferência em centavos de Real, ou seja, um real fica 100.</p>
 <hr>
@@ -3394,6 +3398,7 @@ Caso a data seja maior que <code>execution_limit_date</code>, será retornado um
 <br>
 <h4 id="headers"><strong>HEADERS</strong></h4>
 <hr>
+<br>
 <p><strong>x-stone-idempotency-key</strong> <code>string</code>
 <br>Chave de idempotência</p>
 <p><br>As transferências internas estão disponíveis 24hs por dia. Elas se referem a transações entre contas Stone.</p>

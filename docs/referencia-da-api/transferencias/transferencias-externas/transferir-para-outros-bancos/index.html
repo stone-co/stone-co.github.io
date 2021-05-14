@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.905647e70409e0b30a95c9c9d6aebce0.json"
+  data-offline-search-index-json-src="/offline-search-index.d57c2dda2430f0828fed5dac92ee6fe1.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.905647e70409e0b30a95c9c9d6aebce0.json"
+  data-offline-search-index-json-src="/offline-search-index.d57c2dda2430f0828fed5dac92ee6fe1.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3362,16 +3362,21 @@
 		<h1>Transferir para Outros Bancos</h1>
         </div>
 	
-	<p>Faz transferências monetárias para outra instituição (TED). Não é permitido realizar uma TED de uma conta Stone para outra conta Stone.</p>
+	<hr>
+<br>
+<p>Faz transferências monetárias para outra instituição (TED). Não é permitido realizar uma TED de uma conta Stone para outra conta Stone.</p>
+<br>
 <p>Caso a transferência seja criada em um dia não útil ou fora do horário de funcionamento de TEDs, a transferência será agendada automaticamente para o dia seguinte. Nesse caso seu status será <code>DELAYED_TO_NEXT_BUSINESS_DAY</code>, como também a flag <code>delayed_to_next_business_day = true</code>. O campo <code>scheduled_to_effective</code> conterá a data para a qual a TED foi agendada.</p>
 <p>A transferência também pode ser agendada através do campo <code>scheduled_to</code>. A data usada no campo <code>scheduled_to</code> deve estar entre a data <code>next_available_execution_date</code> e a data limite retornada no campo <code>execution_limit_date</code> da <a href="/docs/referencia-da-api/agendamento/calendario-de-agendamento/">API de calendário de agendamento</a> chamada com o parâmetro <code>operation_type=external_transfer</code>. Caso a data escolhida seja menor do que <code>next_available_execution_date</code>, a transferência será executada imediatamente. Caso a data seja maior que <code>execution_limit_date</code> será retornado um erro 422.</p>
 <p>Caso a data escolhida não seja um dia útil, a transferência será automaticamente agendada para o próximo dia útil depois do escolhido. O dia útil requisitado (que veio na request) e o efetivo (em que de fato o agendamento vai ocorrer) são representados pelos campos <code>scheduled_to_requested</code> e <code>scheduled_to_effective</code>.</p>
 <p>A data usada no campo <code>scheduled_to</code> deve obedecer a data limite retornada na <a href="/docs/referencia-da-api/agendamento/calendario-de-agendamento/">API de calendario de agendamento</a>. Caso contrário, será retornado um erro 422 na criação.</p>
+<br>
 <hr>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">POST https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers
 </span></code></pre></div><hr>
 <h4 id="body-params"><strong>BODY PARAMS</strong></h4>
 <hr>
+<br>
 <p><strong>amount</strong>* <code>int32</code>
 <br>Valor da transferência em centavos de Real, ou seja, um real fica 100.</p>
 <hr>
@@ -3417,6 +3422,7 @@
 <br>
 <h4 id="headers"><strong>HEADERS</strong></h4>
 <hr>
+<br>
 <p><strong>x-stone-idempotency-key</strong> <code>string</code>
 <br>Chave de idempotência</p>
 <br>

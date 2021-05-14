@@ -23,26 +23,37 @@
       <description>
         
         
-        &lt;h4 id=&#34;conceito&#34;&gt;Conceito&lt;/h4&gt;
+        &lt;hr&gt;
+&lt;br&gt;
+&lt;h3 id=&#34;conceito&#34;&gt;Conceito&lt;/h3&gt;
+&lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;Oferecemos uma API de Transferências, na qual permite-se efetuar a movimentação de fundos entre contas bancárias, podendo ser:&lt;/p&gt;
+&lt;br&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Transferência interna: Transferência entre duas Contas Stone. O valor transferido é creditado instantaneamente na conta destinatária, independente do horário e dia da efetuação da transação.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-internas&#34;&gt;Transferência interna&lt;/a&gt;: Transferência entre duas Contas Stone. O valor transferido é creditado instantaneamente na conta destinatária, independente do horário e dia da efetuação da transação.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Transferência externa: TED (Transferência Eletrônica Disponível) para outros bancos. Nos dias úteis, entre 6:30 e 17:23, a transação é processada de forma assíncrona e o valor é creditado na conta destino em poucas horas. Caso a operação seja efetuada fora do horário citado e/ou em dias não úteis, a transação será agendada automaticamente para o dia útil seguinte.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-externas&#34;&gt;Transferência externa&lt;/a&gt;: TED (Transferência Eletrônica Disponível) para outros bancos. Nos dias úteis, entre 6:30 e 17:23, a transação é processada de forma assíncrona e o valor é creditado na conta destino em poucas horas. Caso a operação seja efetuada fora do horário citado e/ou em dias não úteis, a transação será agendada automaticamente para o dia útil seguinte.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;status&#34;&gt;Status&lt;/h4&gt;
+&lt;br&gt;
+&lt;h4 id=&#34;status&#34;&gt;Status:&lt;/h4&gt;
+&lt;br&gt;
 &lt;h5 id=&#34;segue-abaixo-os-status-possíveis-de-uma-transferência-externa&#34;&gt;Segue abaixo os status possíveis de uma &lt;strong&gt;transferência externa&lt;/strong&gt;:&lt;/h5&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/docs/referencia-da-api/transferencias/o-que-e-uma-transferencia/1b90b91-Transfrncia_Externa.png&#34; alt=&#34;status_TED&#34;&gt;&lt;/p&gt;
-&lt;p&gt;A transferência externa criada pela parceira aguardará a &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/aprovacao&#34;&gt;aprovação&lt;/a&gt; do usuário da conta no estado &lt;code&gt;CREATED&lt;/code&gt;. Essa transferência pode ser rejeitada pela usuário, concluindo no estado &lt;code&gt;REJECTED&lt;/code&gt;, e não será efetuada. Caso ela seja uma transferência agendada, é possível que o prazo do agendamento expire antes dela obter aprovação, encerrando em &lt;code&gt;EXPIRED&lt;/code&gt;.&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;A transferência externa criada pelo parceiro aguardará a &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/aprovacao&#34;&gt;aprovação&lt;/a&gt; do usuário da conta no estado &lt;code&gt;CREATED&lt;/code&gt;. Essa transferência pode ser rejeitada pelo usuário, concluindo no estado &lt;code&gt;REJECTED&lt;/code&gt;, e não será efetuada. Caso ela seja uma transferência agendada, é possível que o prazo do agendamento expire antes dela obter aprovação, encerrando em &lt;code&gt;EXPIRED&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Caso ela seja agendada e aprovada dentro do prazo, seguirá para o estado &lt;code&gt;SCHEDULED&lt;/code&gt;, e será efetuada  na data do agendamento. É importante observar que caso a criação da transferência externa, tanto pelo parceiro quanto pelo usuário, seja feita fora do horário de 6:30 às 17:23, ela seguirá para um estado de &lt;code&gt;DELAYED_TO_NEXT_BUSINESS_DAY&lt;/code&gt;, em que ela será agendada para a próxima janela de execução. É possível que o usuário cancele a transferência antes dela ser efetuada, encerrando no estado &lt;code&gt;CANCELLED&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Quando é o próprio usuário que cria a transação, o fluxo já se inicia no estado &lt;code&gt;APPROVED&lt;/code&gt; ou &lt;code&gt;SCHEDULED&lt;/code&gt;, caso tenha sido criada com agendamento. A transferência poderá falhar apenas caso não haja fundos e terminará no estado &lt;code&gt;FAILED&lt;/code&gt;. Caso tenha sido aprovada e haja fundos, a Stone realizará a transferência para o banco externo, obtendo o estado &lt;code&gt;FINISHED&lt;/code&gt;. Caso haja algum problema como, por exemplo, dados incorretos, ele será reembolsado e irá  finalizar no estado &lt;code&gt;REFUNDED&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Para a transferência interna o fluxo é similar. Neste caso não haverá o estado &lt;code&gt;REFUNDED&lt;/code&gt;, já que antes de realizar a transferência já conferimos a existência da conta destino. Não haverá também o estado &lt;code&gt;DELAYED_TO_NEXT_BUSINESS_DAY&lt;/code&gt;, porque não há limites de horário para a realização de transferências para outras contas Stone.&lt;/p&gt;
 &lt;p&gt;É possível consultar o status de uma transação a qualquer momento para saber em qual estado ela está.&lt;/p&gt;
+&lt;br&gt;
 &lt;h5 id=&#34;segue-abaixo-os-status-possíveis-de-uma-transferência-interna&#34;&gt;Segue abaixo os status possíveis de uma &lt;strong&gt;transferência interna&lt;/strong&gt;:&lt;/h5&gt;
 &lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/docs/referencia-da-api/transferencias/o-que-e-uma-transferencia/0d9c77f-Transferncia_Interna.png&#34; alt=&#34;status_TransfInterna&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
 
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
@@ -50,9 +61,13 @@
 
 &lt;/div&gt;
 
+&lt;br&gt;
 &lt;h4 id=&#34;falhas-em-transferências&#34;&gt;Falhas em transferências&lt;/h4&gt;
+&lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;Falha é qualquer erro que ocorra entre a criação e a movimentação do dinheiro na conta. Ou seja, qualquer condição que era válida no momento da criação da transferência, mas que mudou nas etapas seguintes.&lt;/p&gt;
 &lt;p&gt;A seguir listamos algumas das falhas possíveis para transações de transferência, tanto para interna quanto para externa.&lt;/p&gt;
+&lt;br&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -73,11 +88,19 @@
 &lt;td&gt;2&lt;/td&gt;
 &lt;td&gt;A operação falhou por uma restrição em uma das contas.&lt;/td&gt;
 &lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;409&lt;/td&gt;
+&lt;td&gt;É recebido esse erro quando é realizado o envio de uma nova TED anteriormente enviada com sucesso, porém, com a mesma chave de idempotência.&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;br&gt;
 &lt;h4 id=&#34;reembolsos-em-transferências&#34;&gt;Reembolsos em transferências&lt;/h4&gt;
+&lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;Reembolsos ocorrem apenas em transferências para outros bancos&lt;/strong&gt;, já que para transferências internas conferimos a existência da conta destino antes de realizar a transferência.&lt;br&gt;
 Abaixo listamos algumas das razões possíveis para ocorrer reembolsos, como também seus códigos correspondentes.&lt;/p&gt;
+&lt;br&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -145,9 +168,12 @@ Abaixo listamos algumas das razões possíveis para ocorrer reembolsos, como tam
       <description>
         
         
-        &lt;p&gt;Abaixo vamos trazer os campos de cada tipo de transferência.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h4 id=&#34;transferência-interna&#34;&gt;Transferência Interna&lt;/h4&gt;
+        &lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;Abaixo vamos trazer os campos de cada tipo de transferência.&lt;/p&gt;
+&lt;br&gt;
+&lt;h4 id=&#34;transferência-interna&#34;&gt;Transferência Interna:&lt;/h4&gt;
+&lt;br&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -255,7 +281,8 @@ Abaixo listamos algumas das razões possíveis para ocorrer reembolsos, como tam
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;br&gt;   
-&lt;h4 id=&#34;transferência-externa&#34;&gt;Transferência Externa&lt;/h4&gt;
+&lt;h4 id=&#34;transferência-externa&#34;&gt;Transferência Externa:&lt;/h4&gt;
+&lt;br&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -378,7 +405,8 @@ Abaixo listamos algumas das razões possíveis para ocorrer reembolsos, como tam
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;br&gt;
-&lt;h5 id=&#34;campos-do-objeto-target&#34;&gt;Campos do objeto &lt;strong&gt;target&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;campos-do-objeto-target&#34;&gt;Campos do objeto &lt;strong&gt;target&lt;/strong&gt;:&lt;/h5&gt;
+&lt;br&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -401,7 +429,8 @@ Abaixo listamos algumas das razões possíveis para ocorrer reembolsos, como tam
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;br&gt;
-&lt;h5 id=&#34;campos-do-objeto-account&#34;&gt;Campos do objeto &lt;strong&gt;account&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;campos-do-objeto-account&#34;&gt;Campos do objeto &lt;strong&gt;account&lt;/strong&gt;:&lt;/h5&gt;
+&lt;br&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -444,7 +473,8 @@ Abaixo listamos algumas das razões possíveis para ocorrer reembolsos, como tam
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;br&gt;
-&lt;h5 id=&#34;campos-do-objeto-entity&#34;&gt;Campos do objeto &lt;strong&gt;entity&lt;/strong&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;campos-do-objeto-entity&#34;&gt;Campos do objeto &lt;strong&gt;entity&lt;/strong&gt;:&lt;/h5&gt;
+&lt;br&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -471,6 +501,7 @@ Abaixo listamos algumas das razões possíveis para ocorrer reembolsos, como tam
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;br&gt;
 
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
