@@ -23,16 +23,20 @@
       <description>
         
         
-        &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/internal_transfers
+        &lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/internal_transfers
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;amount&lt;/strong&gt;  &lt;code&gt;int32&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Valor da transferência em centavos de Real, ou seja, um real é igual a 100.&lt;/p&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Identificador da conta que está enviando a transferência.&lt;/p&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;target&lt;/strong&gt;  &lt;code&gt;object&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -44,15 +48,18 @@ Número da conta. Padrão: &lt;code&gt;^\d+$&lt;/code&gt;&lt;/li&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;description&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Descrição da transação. Essa descrição será exibida tanto no extrato de quem enviou quanto de quem recebeu (limite 200 caracteres).&lt;/p&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;scheduled_to&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Formato: &lt;code&gt;yyyy-mm-dd&lt;/code&gt;&lt;/p&gt;
 &lt;br&gt;
 &lt;hr&gt;
 &lt;h4 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Chave de idempotência.&lt;/p&gt;
 &lt;br&gt;
@@ -99,16 +106,20 @@ Número da conta. Padrão: &lt;code&gt;^\d+$&lt;/code&gt;&lt;/li&gt;
       <description>
         
         
-        &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/external_transfers
+        &lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/external_transfers
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;amount&lt;/strong&gt;  &lt;code&gt;int32&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Valor da transferência em centavos de Real, ou seja, um real é igual a 100.&lt;/p&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Identificador da conta.&lt;/p&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;target&lt;/strong&gt;  &lt;code&gt;object&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -147,14 +158,17 @@ Tipo do documento da dona da conta alvo. Pode ser &lt;code&gt;cpf&lt;/code&gt; o
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;scheduled_to&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Formato: &lt;code&gt;yyyy-mm-dd&lt;/code&gt;&lt;/p&gt;
 &lt;br&gt; 
 &lt;hr&gt;
 &lt;h4 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Chave de idempotência.&lt;/p&gt;
+&lt;br&gt;
 &lt;hr&gt;
 &lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;202 Accepted
@@ -210,9 +224,14 @@ Tipo do documento da dona da conta alvo. Pode ser &lt;code&gt;cpf&lt;/code&gt; o
         
         
         &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;O Dry Run de pagamentos retorna, além do &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/pagamentos/o-objeto-pagamento/&#34;&gt;Objeto Pagamento&lt;/a&gt; em si, os Objetos &lt;a href=&#34;#objeto-barcode-details&#34;&gt;Barcode Details&lt;/a&gt; e &lt;a href=&#34;#objeto-details&#34;&gt;Details&lt;/a&gt;.&lt;/p&gt;
+&lt;br&gt;
 &lt;h3 id=&#34;objeto-barcode-details&#34;&gt;Objeto Barcode Details&lt;/h3&gt;
+&lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;O Objeto Barcode Details é composto por meio da extração das informações contidas no código de barras informado, dispondo-as nos seguintes campos:&lt;/p&gt;
+&lt;br&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -254,7 +273,10 @@ Tipo do documento da dona da conta alvo. Pode ser &lt;code&gt;cpf&lt;/code&gt; o
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;br&gt;
 &lt;h3 id=&#34;objeto-details&#34;&gt;Objeto Details&lt;/h3&gt;
+&lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;O Objeto Details traz informações do status atual desse documento segundo sua fonte emissora, como juros, multas, horário limite de pagamento, entre outras. Veja todas as informações retornadas abaixo.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -390,6 +412,16 @@ Tipo do documento da dona da conta alvo. Pode ser &lt;code&gt;cpf&lt;/code&gt; o
 &lt;td&gt;Código numérico que acompanha o código de barras.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;unpayable_reason_code&lt;/td&gt;
+&lt;td&gt;Código que representa o motivo de estar impagável.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;unpayable_reason_description&lt;/td&gt;
+&lt;td&gt;Descrição do motivo de estar impagável.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
@@ -405,23 +437,28 @@ Tipo do documento da dona da conta alvo. Pode ser &lt;code&gt;cpf&lt;/code&gt; o
       <description>
         
         
-        &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/payments
+        &lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/payments
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;barcode&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Código de barras do documento.&lt;/p&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Identificador da conta pagadora&lt;/p&gt;
 &lt;br&gt;
 &lt;hr&gt;
 &lt;h4 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Chave de idempotência&lt;/p&gt;
+&lt;br&gt;
 &lt;hr&gt;
-&lt;h6 id=&#34;results-params&#34;&gt;Results Params&lt;/h6&gt;
+&lt;h5 id=&#34;results-params&#34;&gt;Results Params&lt;/h5&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -440,6 +477,7 @@ Tipo do documento da dona da conta alvo. Pode ser &lt;code&gt;cpf&lt;/code&gt; o
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;br&gt;
 &lt;hr&gt;
 &lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;200 ok
@@ -489,6 +527,8 @@ Tipo do documento da dona da conta alvo. Pode ser &lt;code&gt;cpf&lt;/code&gt; o
         &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;total_added_value&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
         &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;total_discounted_value&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
         &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;updatable_value&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;unpayable_reason_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;unpayable_reason_description&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
         &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2000&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
         &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;writable_line&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;846800000008737300480016102554660849071951908103&amp;#34;&lt;/span&gt;
     &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;

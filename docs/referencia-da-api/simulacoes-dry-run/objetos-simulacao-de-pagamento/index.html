@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.d57c2dda2430f0828fed5dac92ee6fe1.json"
+  data-offline-search-index-json-src="/offline-search-index.fb1e9bdf81b5184c83cd16f4c16267e7.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.d57c2dda2430f0828fed5dac92ee6fe1.json"
+  data-offline-search-index-json-src="/offline-search-index.fb1e9bdf81b5184c83cd16f4c16267e7.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3364,9 +3364,14 @@
         </div>
 	
 	<hr>
+<br>
 <p>O Dry Run de pagamentos retorna, além do <a href="/docs/referencia-da-api/pagamentos/o-objeto-pagamento/">Objeto Pagamento</a> em si, os Objetos <a href="#objeto-barcode-details">Barcode Details</a> e <a href="#objeto-details">Details</a>.</p>
+<br>
 <h3 id="objeto-barcode-details">Objeto Barcode Details</h3>
+<hr>
+<br>
 <p>O Objeto Barcode Details é composto por meio da extração das informações contidas no código de barras informado, dispondo-as nos seguintes campos:</p>
+<br>
 <table>
 <thead>
 <tr>
@@ -3408,7 +3413,10 @@
 </tr>
 </tbody>
 </table>
+<br>
 <h3 id="objeto-details">Objeto Details</h3>
+<hr>
+<br>
 <p>O Objeto Details traz informações do status atual desse documento segundo sua fonte emissora, como juros, multas, horário limite de pagamento, entre outras. Veja todas as informações retornadas abaixo.</p>
 <table>
 <thead>
@@ -3542,6 +3550,16 @@
 <tr>
 <td>writable_line</td>
 <td>Código numérico que acompanha o código de barras.</td>
+<td><em>String</em></td>
+</tr>
+<tr>
+<td>unpayable_reason_code</td>
+<td>Código que representa o motivo de estar impagável.</td>
+<td><em>String</em></td>
+</tr>
+<tr>
+<td>unpayable_reason_description</td>
+<td>Descrição do motivo de estar impagável.</td>
 <td><em>String</em></td>
 </tr>
 </tbody>

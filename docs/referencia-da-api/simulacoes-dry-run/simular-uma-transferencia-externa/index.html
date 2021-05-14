@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.d57c2dda2430f0828fed5dac92ee6fe1.json"
+  data-offline-search-index-json-src="/offline-search-index.fb1e9bdf81b5184c83cd16f4c16267e7.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.d57c2dda2430f0828fed5dac92ee6fe1.json"
+  data-offline-search-index-json-src="/offline-search-index.fb1e9bdf81b5184c83cd16f4c16267e7.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3352,16 +3352,20 @@
 		<h1>Simular uma Transferência Externa</h1>
         </div>
 	
-	<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/external_transfers
+	<hr>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/external_transfers
 </span></code></pre></div><hr>
 <h4 id="body-params"><strong>BODY PARAMS</strong></h4>
 <hr>
+<br>
 <p><strong>amount</strong>  <code>int32</code></p>
 <p>Valor da transferência em centavos de Real, ou seja, um real é igual a 100.</p>
 <hr>
+<br>
 <p><strong>account_id</strong>  <code>string</code></p>
 <p>Identificador da conta.</p>
 <hr>
+<br>
 <p><strong>target</strong>  <code>object</code></p>
 <ul>
 <li>
@@ -3400,14 +3404,17 @@ Tipo do documento da dona da conta alvo. Pode ser <code>cpf</code> ou <code>cnpj
 </li>
 </ul>
 <hr>
+<br>
 <p><strong>scheduled_to</strong>  <code>string</code></p>
 <p>Formato: <code>yyyy-mm-dd</code></p>
 <br> 
 <hr>
 <h4 id="headers"><strong>HEADERS</strong></h4>
 <hr>
+<br>
 <p><strong>x-stone-idempotency-key</strong>  <code>string</code></p>
 <p>Chave de idempotência.</p>
+<br>
 <hr>
 <h5 id="response"><strong>Response</strong></h5>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">202 Accepted
