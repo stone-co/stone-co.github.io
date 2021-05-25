@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Stone OpenBank – Panda</title>
-    <link>https://stone-co.github.io/docs/guias/integracao/panda/</link>
-    <description>Recent content in Panda on Stone OpenBank</description>
+    <title>Stone OpenBank – INTEGRAÇÃO PARA FORNECEDORES</title>
+    <link>https://stone-co.github.io/docs/guias/integracao-para-fornecedores/</link>
+    <description>Recent content in INTEGRAÇÃO PARA FORNECEDORES on Stone OpenBank</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 18 Mar 2021 09:00:00 -0300</lastBuildDate>
+    <lastBuildDate>Wed, 19 May 2021 09:00:00 -0300</lastBuildDate>
     
-	  <atom:link href="https://stone-co.github.io/docs/guias/integracao/panda/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="https://stone-co.github.io/docs/guias/integracao-para-fornecedores/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Docs: Autorizar</title>
-      <link>https://stone-co.github.io/docs/guias/integracao/panda/authorization/</link>
+      <link>https://stone-co.github.io/docs/guias/integracao-para-fornecedores/authorization/</link>
       <pubDate>Thu, 18 Mar 2021 14:00:00 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/guias/integracao/panda/authorization/</guid>
+      <guid>https://stone-co.github.io/docs/guias/integracao-para-fornecedores/authorization/</guid>
       <description>
         
         

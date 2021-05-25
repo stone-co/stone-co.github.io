@@ -1200,19 +1200,5 @@ Alguns bancos utilizam códigos verificadores com letras no número da conta ao 
       </description>
     </item>
     
-    <item>
-      <title>Docs: Panda</title>
-      <link>https://stone-co.github.io/docs/guias/integracao/panda/</link>
-      <pubDate>Thu, 18 Mar 2021 09:00:00 -0300</pubDate>
-      
-      <guid>https://stone-co.github.io/docs/guias/integracao/panda/</guid>
-      <description>
-        
-        
-        &lt;p&gt;Documentação para integração no sistema interno Panda.&lt;/p&gt;
-
-      </description>
-    </item>
-    
   </channel>
 </rss>
