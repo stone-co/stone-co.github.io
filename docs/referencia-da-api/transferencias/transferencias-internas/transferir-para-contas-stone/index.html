@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.0e715d6141a8339017e94ded76595ddc.json"
+  data-offline-search-index-json-src="/offline-search-index.c0faa0db4ce1daa6dad2d6255177d504.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.0e715d6141a8339017e94ded76595ddc.json"
+  data-offline-search-index-json-src="/offline-search-index.c0faa0db4ce1daa6dad2d6255177d504.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3394,7 +3394,18 @@
 <p>A transferência pode ser agendada, através do campo <code>scheduled_to</code>. A data usada no campo <code>scheduled_to</code> deve estar entre a data <code>next_available_execution_date</code> e a data limite retornada no campo <code>execution_limit_date</code> da <a href="/docs/referencia-da-api/agendamento/calendario-de-agendamento/">API de caléndario de agendamento</a> chamada com o parâmetro <code>operation_type=internal_transfer</code>.</p>
 <p>Caso a data escolhida seja menor do que <code>next_available_execution_date</code>, a transferência será executada imediatamente. <br>
 Caso a data seja maior que <code>execution_limit_date</code>, será retornado um erro 422.</p>
-<p>A criação e o agendamento de transferências internas pode acontecer em qualquer dia (incluindo fins de semana e feriados) e em qualquer horário.</p>
+<br>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Horário de funcionamento</h4>
+
+    <br>
+<p>A criação e o agendamento de transferências internas pode acontecer em qualquer dia (incluindo fins de semana e feriados) e em qualquer horário.
+
+</div>
+
+<br>
 <hr>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">POST https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers
 </span></code></pre></div><hr>
@@ -3404,9 +3415,11 @@ Caso a data seja maior que <code>execution_limit_date</code>, será retornado um
 <p><strong>amount</strong>* <code>int32</code>
 <br>Valor da transferência em centavos de Real, ou seja, um real fica 100.</p>
 <hr>
+<br>
 <p><strong>account_id</strong>* <code>string</code>
 <br>Identificador da conta que está enviando a transferência.</p>
 <hr>
+<br>
 <p><strong>target</strong> <code>object</code>
 <br>
     <strong>account</strong> <code>object</code>
@@ -3415,9 +3428,11 @@ Caso a data seja maior que <code>execution_limit_date</code>, será retornado um
 <br>
         Número da conta. Padrão: <code>^\d+$</code></p>
 <hr>
+<br>
 <p><strong>description</strong> <code>string</code>
 <br>Descrição da transação. Essa descrição será exibida tanto no extrato de quem enviou quanto de quem recebeu (limite 200 caracteres).</p>
 <hr>
+<br>
 <p><strong>scheduled_to</strong> <code>string</code>
 <br>Formato: <code>yyyy-mm-dd</code></p>
 <br>

@@ -27,6 +27,17 @@
 &lt;br&gt;
 &lt;p&gt;Faz transferências monetárias para outra instituição (TED). Não é permitido realizar uma TED de uma conta Stone para outra conta Stone.&lt;/p&gt;
 &lt;br&gt;
+
+
+&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Horário de funcionamento&lt;/h4&gt;
+
+    &lt;br&gt;
+&lt;p&gt;A &lt;strong&gt;API de Transferência Externa&lt;/strong&gt; fica disponível em dias úteis, das 6h30 às 17h20, a transação é processada de forma assíncrona e o valor é creditado na conta destino em poucas horas.
+
+&lt;/div&gt;
+
+&lt;br&gt;
 &lt;p&gt;Caso a transferência seja criada em um dia não útil ou fora do horário de funcionamento de TEDs, a transferência será agendada automaticamente para o dia seguinte. Nesse caso seu status será &lt;code&gt;DELAYED_TO_NEXT_BUSINESS_DAY&lt;/code&gt;, como também a flag &lt;code&gt;delayed_to_next_business_day = true&lt;/code&gt;. O campo &lt;code&gt;scheduled_to_effective&lt;/code&gt; conterá a data para a qual a TED foi agendada.&lt;/p&gt;
 &lt;p&gt;A transferência também pode ser agendada através do campo &lt;code&gt;scheduled_to&lt;/code&gt;. A data usada no campo &lt;code&gt;scheduled_to&lt;/code&gt; deve estar entre a data &lt;code&gt;next_available_execution_date&lt;/code&gt; e a data limite retornada no campo &lt;code&gt;execution_limit_date&lt;/code&gt; da &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/agendamento/calendario-de-agendamento/&#34;&gt;API de calendário de agendamento&lt;/a&gt; chamada com o parâmetro &lt;code&gt;operation_type=external_transfer&lt;/code&gt;. Caso a data escolhida seja menor do que &lt;code&gt;next_available_execution_date&lt;/code&gt;, a transferência será executada imediatamente. Caso a data seja maior que &lt;code&gt;execution_limit_date&lt;/code&gt; será retornado um erro 422.&lt;/p&gt;
 &lt;p&gt;Caso a data escolhida não seja um dia útil, a transferência será automaticamente agendada para o próximo dia útil depois do escolhido. O dia útil requisitado (que veio na request) e o efetivo (em que de fato o agendamento vai ocorrer) são representados pelos campos &lt;code&gt;scheduled_to_requested&lt;/code&gt; e &lt;code&gt;scheduled_to_effective&lt;/code&gt;.&lt;/p&gt;
@@ -41,9 +52,11 @@
 &lt;p&gt;&lt;strong&gt;amount&lt;/strong&gt;* &lt;code&gt;int32&lt;/code&gt;
 &lt;br&gt;Valor da transferência em centavos de Real, ou seja, um real fica 100.&lt;/p&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
 &lt;br&gt;Identificador da conta que está enviando a transferência.&lt;/p&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;target&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
 &lt;br&gt;&lt;br&gt;
     &lt;strong&gt;account&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
@@ -64,6 +77,7 @@
 &lt;br&gt;
         Tipo de conta destino (verifique mais abaixo os tipos disponíveis).&lt;/p&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;entity&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
 &lt;br&gt;&lt;br&gt;
   &lt;strong&gt;name&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
@@ -78,6 +92,7 @@
 &lt;br&gt;
   Tipo do documento do dono da conta alvo. Pode ser &lt;code&gt;CPF&lt;/code&gt; ou &lt;code&gt;CNPJ&lt;/code&gt;.&lt;/p&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;scheduled_to&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
 &lt;br&gt;Formato: &lt;code&gt;yyyy-mm-dd&lt;/code&gt;&lt;/p&gt;
 &lt;br&gt;
@@ -201,12 +216,15 @@ Essa transformação é aplicada pela API antes dos dados serem armazenados.&lt;
 &lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
 &lt;br&gt;Identificador da conta.&lt;/p&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;before&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
 &lt;br&gt;Cursor opaco da paginação.&lt;/p&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;after&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
 &lt;br&gt;Cursor opaco da paginação.&lt;/p&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;limit&lt;/strong&gt;* &lt;code&gt;int32&lt;/code&gt;
 &lt;br&gt;Limite de itens retornados.&lt;/p&gt;
 &lt;br&gt;

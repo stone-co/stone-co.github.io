@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.0e715d6141a8339017e94ded76595ddc.json"
+  data-offline-search-index-json-src="/offline-search-index.c0faa0db4ce1daa6dad2d6255177d504.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.0e715d6141a8339017e94ded76595ddc.json"
+  data-offline-search-index-json-src="/offline-search-index.c0faa0db4ce1daa6dad2d6255177d504.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3391,6 +3391,17 @@
 <br>
 <p>Faz transferências monetárias para outra instituição (TED). Não é permitido realizar uma TED de uma conta Stone para outra conta Stone.</p>
 <br>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Horário de funcionamento</h4>
+
+    <br>
+<p>A <strong>API de Transferência Externa</strong> fica disponível em dias úteis, das 6h30 às 17h20, a transação é processada de forma assíncrona e o valor é creditado na conta destino em poucas horas.
+
+</div>
+
+<br>
 <p>Caso a transferência seja criada em um dia não útil ou fora do horário de funcionamento de TEDs, a transferência será agendada automaticamente para o dia seguinte. Nesse caso seu status será <code>DELAYED_TO_NEXT_BUSINESS_DAY</code>, como também a flag <code>delayed_to_next_business_day = true</code>. O campo <code>scheduled_to_effective</code> conterá a data para a qual a TED foi agendada.</p>
 <p>A transferência também pode ser agendada através do campo <code>scheduled_to</code>. A data usada no campo <code>scheduled_to</code> deve estar entre a data <code>next_available_execution_date</code> e a data limite retornada no campo <code>execution_limit_date</code> da <a href="/docs/referencia-da-api/agendamento/calendario-de-agendamento/">API de calendário de agendamento</a> chamada com o parâmetro <code>operation_type=external_transfer</code>. Caso a data escolhida seja menor do que <code>next_available_execution_date</code>, a transferência será executada imediatamente. Caso a data seja maior que <code>execution_limit_date</code> será retornado um erro 422.</p>
 <p>Caso a data escolhida não seja um dia útil, a transferência será automaticamente agendada para o próximo dia útil depois do escolhido. O dia útil requisitado (que veio na request) e o efetivo (em que de fato o agendamento vai ocorrer) são representados pelos campos <code>scheduled_to_requested</code> e <code>scheduled_to_effective</code>.</p>
@@ -3405,9 +3416,11 @@
 <p><strong>amount</strong>* <code>int32</code>
 <br>Valor da transferência em centavos de Real, ou seja, um real fica 100.</p>
 <hr>
+<br>
 <p><strong>account_id</strong>* <code>string</code>
 <br>Identificador da conta que está enviando a transferência.</p>
 <hr>
+<br>
 <p><strong>target</strong> <code>object</code>
 <br><br>
     <strong>account</strong> <code>object</code>
@@ -3428,6 +3441,7 @@
 <br>
         Tipo de conta destino (verifique mais abaixo os tipos disponíveis).</p>
 <hr>
+<br>
 <p><strong>entity</strong> <code>object</code>
 <br><br>
   <strong>name</strong> <code>string</code> <em>(obrigatório)</em>
@@ -3442,6 +3456,7 @@
 <br>
   Tipo do documento do dono da conta alvo. Pode ser <code>CPF</code> ou <code>CNPJ</code>.</p>
 <hr>
+<br>
 <p><strong>scheduled_to</strong> <code>string</code>
 <br>Formato: <code>yyyy-mm-dd</code></p>
 <br>

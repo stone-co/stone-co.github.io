@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.0e715d6141a8339017e94ded76595ddc.json"
+  data-offline-search-index-json-src="/offline-search-index.c0faa0db4ce1daa6dad2d6255177d504.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.0e715d6141a8339017e94ded76595ddc.json"
+  data-offline-search-index-json-src="/offline-search-index.c0faa0db4ce1daa6dad2d6255177d504.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3390,19 +3390,35 @@
 		<h1>O Que É Um Pagamento</h1>
         </div>
 	
-	<h3 id="conceito">Conceito</h3>
+	<hr>
+<br>
+<h3 id="conceito">Conceito</h3>
+<hr>
 <br>
 <p>Oferecemos uma API de Pagamentos, através da qual é possível efetuar o pagamento de contas com código de barras como, por exemplo, boletos, contas de luz, água, gás, IPTU, IPVA, entre outras.</p>
-<p>Nossa API suporta pagamento de todos os boletos CIP e um grande número de concessionárias e tributos.</p>
+<p>Nossa API suporta pagamentos de todos os boletos CIP e um grande número de concessionárias/tributos. A janela de pagamentos de concessionárias pode variar de acordo com a empresa emissora. Pagamentos processados após o horário limite imposto pelo emissor serão acolhidos no dia útil seguinte.</p>
 <br>
-<hr>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Horário de funcionamento</h4>
+
+    <br>
+<p>A API de Pagamentos fica disponível todos os dias das 00h00 até 23h50. Boletos pagos após 23h50 serão acolhidos no dia útil seguinte.
+
+</div>
+
+<br>
 <h3 id="estados">Estados</h3>
+<hr>
 <br>
 <p>Segue abaixo os estados possíveis de um <strong>pagamento</strong>:</p>
+<br>
 <p><img src="/docs/referencia-da-api/pagamentos/o-que-e-um-pagamento/estados_pagamento.png" alt="Imagem 1"></p>
 <br>
-<hr>
 <h3 id="falhas-em-pagamentos">Falhas em Pagamentos</h3>
+<hr>
+<br>
 <p>Falha é qualquer erro que ocorra entre a criação e a movimentação do dinheiro na conta. Ou seja, qualquer condição que era válida no momento da criação do pagamento, mas que mudou nas etapas seguintes.</p>
 <p>A seguir listamos algumas das falhas possíveis para operações de pagamento.</p>
 <br>
@@ -3437,8 +3453,9 @@
 </tbody>
 </table>
 <br>
-<hr>
 <h3 id="reembolsos-em-pagamentos">Reembolsos em Pagamentos</h3>
+<hr>
+<br>
 <p>Abaixo listamos algumas das razões possíveis para ocorrer reembolsos, como também seus códigos correspondentes.</p>
 <br>
 <table>

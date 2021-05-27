@@ -23,12 +23,15 @@
       <description>
         
         
-        &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/outbound_pix_payments/brcode
+        &lt;hr&gt;
+&lt;br&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/outbound_pix_payments/brcode
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A API para criação de um Pix é a mesma, independente se você deseja enviar um Pix via inserção manual de dados ou via chave. Se o pagamento for iniciado por meio da leitura de um QR Code, você vai precisar obter os dados do QR Code primeiro, para depois criar o Pix.&lt;/p&gt;
 &lt;p&gt;E esse é o objetivo desse endpoint.&lt;/p&gt;
 &lt;br&gt;
 &lt;h4 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;authorization&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;br&gt;
 &lt;p&gt;Exemplo:&lt;/p&gt;
@@ -38,8 +41,10 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;O body deve conter a string do QRCode obtida a partir da imagem ou copia e cola.
 Para QRCode do tipo dinâmico com multa, juros, desconto é necessário informar os campos &lt;code&gt;payment_date&lt;/code&gt; e &lt;code&gt;owner_account&lt;/code&gt;&lt;/p&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;brcode&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;owner_account&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;br&gt; Identificador do usuário da conta&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;payment_date&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
@@ -53,9 +58,12 @@ Para QRCode do tipo dinâmico com multa, juros, desconto é necessário informar
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;br&gt;
 &lt;h5 id=&#34;responses&#34;&gt;&lt;strong&gt;Responses&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;A resposta varia de acordo com o tipo de QR Code que você está lendo, que pode ser um QR Code Estático, um QR Code Dinâmico de pagamento imediato ou um QR Code Dinâmico com multa, juros, desconto. Esse último ainda não é suportado, entra em vigor no Brasil em maio, já estamos desenvolvendo.&lt;/p&gt;
 &lt;br&gt;
 &lt;h6 id=&#34;payload-retornado-ao-consultar-um-qr-code-estático&#34;&gt;&lt;strong&gt;Payload retornado ao consultar um QR Code estático&lt;/strong&gt;&lt;/h6&gt;
+&lt;hr&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;200 OK
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;static&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
@@ -68,6 +76,7 @@ Para QRCode do tipo dinâmico com multa, juros, desconto é necessário informar
 &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h6 id=&#34;payload-retornado-ao-consultar-um-qr-code-dinâmico&#34;&gt;&lt;strong&gt;Payload retornado ao consultar um QR Code dinâmico&lt;/strong&gt;&lt;/h6&gt;
+&lt;hr&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;200 OK
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;dynamic&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
@@ -96,12 +105,15 @@ Para QRCode do tipo dinâmico com multa, juros, desconto é necessário informar
 &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h6 id=&#34;retornado-quando-o-qrcode-não-pode-ser-obtido&#34;&gt;&lt;strong&gt;Retornado quando o QRCode não pode ser obtido&lt;/strong&gt;&lt;/h6&gt;
+&lt;hr&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;400
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;srn:error:bad_request&amp;#34;&lt;/span&gt;
 &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h6 id=&#34;retornado-quando-o-tipo-do-qrcode-não-foi-suportado-ainda&#34;&gt;&lt;strong&gt;Retornado quando o tipo do QRCode não foi suportado ainda&lt;/strong&gt;&lt;/h6&gt;
+&lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;Ex.: QRCode com vencimento, juros e multa.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;501
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
@@ -120,13 +132,18 @@ Para QRCode do tipo dinâmico com multa, juros, desconto é necessário informar
       <description>
         
         
-        &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/outbound_pix_payments
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esse endpoint foi idealizado para criação de um Pix pendente de confirmação enviando os dados do destino ou uma chave Pix.&lt;/p&gt;
+        &lt;hr&gt;
+&lt;br&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/outbound_pix_payments
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;p&gt;Esse endpoint foi idealizado para criação de um Pix pendente de confirmação enviando os dados do destino ou uma chave Pix.&lt;/p&gt;
 &lt;p&gt;Ou seja, com este endpoint é possível fazer um pix informando tanto o campo &lt;code&gt;key&lt;/code&gt; como informando o campo &lt;code&gt;target&lt;/code&gt;.&lt;/p&gt;
+&lt;br&gt;
 
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
 &lt;p&gt;&lt;strong&gt;CONSIDERAÇÕES IMPORTANTES&lt;/strong&gt;&lt;/p&gt;
+&lt;br&gt;
 &lt;ul&gt;
 &lt;li&gt;O campo &lt;code&gt;key&lt;/code&gt; se torna obrigatório na presença do campo &lt;code&gt;transaction_id&lt;/code&gt;.&lt;br&gt;&lt;/li&gt;
 &lt;li&gt;A ausência do campo &lt;code&gt;key&lt;/code&gt;, que seria o envio de um Pix pela Chave Pix torna o campo &lt;code&gt;target&lt;/code&gt;, que é o campo com os dados bancários do destino, &lt;strong&gt;obrigatório&lt;/strong&gt;.&lt;br&gt;&lt;/li&gt;
@@ -139,6 +156,7 @@ Para QRCode do tipo dinâmico com multa, juros, desconto é necessário informar
 &lt;br&gt;
 &lt;h4 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;authorization&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
 &lt;br&gt;Chave de idempotência&lt;/p&gt;
@@ -151,6 +169,7 @@ Para QRCode do tipo dinâmico com multa, juros, desconto é necessário informar
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
 &lt;br&gt;Identificador da conta&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;amount&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;
@@ -284,8 +303,12 @@ Para QRCode do tipo dinâmico com multa, juros, desconto é necessário informar
       <description>
         
         
-        &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/otbound_pix_payments/{id}/actions/confirm
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Na confirmação, o body pode conter opcionalmente os campos &lt;code&gt;amount&lt;/code&gt; e &lt;code&gt;description&lt;/code&gt;, caso eles não tenham sido preenchidos na criação.&lt;/p&gt;
+        &lt;hr&gt;
+&lt;br&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/otbound_pix_payments/{id}/actions/confirm
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;p&gt;Na confirmação, o body pode conter opcionalmente os campos &lt;code&gt;amount&lt;/code&gt; e &lt;code&gt;description&lt;/code&gt;, caso eles não tenham sido preenchidos na criação.&lt;/p&gt;
+&lt;br&gt;
 
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
@@ -300,6 +323,7 @@ Para QRCode do tipo dinâmico com multa, juros, desconto é necessário informar
 &lt;br&gt;
 &lt;h4 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;authorization&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
 &lt;br&gt;Chave de idempotência&lt;/p&gt;
@@ -312,10 +336,12 @@ Para QRCode do tipo dinâmico com multa, juros, desconto é necessário informar
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h4 id=&#34;parameters-request&#34;&gt;&lt;strong&gt;PARAMETERS REQUEST&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;br&gt;
 &lt;h4 id=&#34;body-request&#34;&gt;&lt;strong&gt;BODY REQUEST&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;amount&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;
 &lt;br&gt;Valor a ser transferido&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;description&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;

@@ -23,19 +23,35 @@
       <description>
         
         
-        &lt;h3 id=&#34;conceito&#34;&gt;Conceito&lt;/h3&gt;
+        &lt;hr&gt;
+&lt;br&gt;
+&lt;h3 id=&#34;conceito&#34;&gt;Conceito&lt;/h3&gt;
+&lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;Oferecemos uma API de Pagamentos, através da qual é possível efetuar o pagamento de contas com código de barras como, por exemplo, boletos, contas de luz, água, gás, IPTU, IPVA, entre outras.&lt;/p&gt;
-&lt;p&gt;Nossa API suporta pagamento de todos os boletos CIP e um grande número de concessionárias e tributos.&lt;/p&gt;
+&lt;p&gt;Nossa API suporta pagamentos de todos os boletos CIP e um grande número de concessionárias/tributos. A janela de pagamentos de concessionárias pode variar de acordo com a empresa emissora. Pagamentos processados após o horário limite imposto pelo emissor serão acolhidos no dia útil seguinte.&lt;/p&gt;
 &lt;br&gt;
-&lt;hr&gt;
+
+
+&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Horário de funcionamento&lt;/h4&gt;
+
+    &lt;br&gt;
+&lt;p&gt;A API de Pagamentos fica disponível todos os dias das 00h00 até 23h50. Boletos pagos após 23h50 serão acolhidos no dia útil seguinte.
+
+&lt;/div&gt;
+
+&lt;br&gt;
 &lt;h3 id=&#34;estados&#34;&gt;Estados&lt;/h3&gt;
+&lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;Segue abaixo os estados possíveis de um &lt;strong&gt;pagamento&lt;/strong&gt;:&lt;/p&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/docs/referencia-da-api/pagamentos/o-que-e-um-pagamento/estados_pagamento.png&#34; alt=&#34;Imagem 1&#34;&gt;&lt;/p&gt;
 &lt;br&gt;
-&lt;hr&gt;
 &lt;h3 id=&#34;falhas-em-pagamentos&#34;&gt;Falhas em Pagamentos&lt;/h3&gt;
+&lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;Falha é qualquer erro que ocorra entre a criação e a movimentação do dinheiro na conta. Ou seja, qualquer condição que era válida no momento da criação do pagamento, mas que mudou nas etapas seguintes.&lt;/p&gt;
 &lt;p&gt;A seguir listamos algumas das falhas possíveis para operações de pagamento.&lt;/p&gt;
 &lt;br&gt;
@@ -70,8 +86,9 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;br&gt;
-&lt;hr&gt;
 &lt;h3 id=&#34;reembolsos-em-pagamentos&#34;&gt;Reembolsos em Pagamentos&lt;/h3&gt;
+&lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;Abaixo listamos algumas das razões possíveis para ocorrer reembolsos, como também seus códigos correspondentes.&lt;/p&gt;
 &lt;br&gt;
 &lt;table&gt;
@@ -150,7 +167,9 @@
       <description>
         
         
-        &lt;table&gt;
+        &lt;hr&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;Chave&lt;/th&gt;
@@ -284,8 +303,9 @@
       <description>
         
         
-        &lt;p&gt;Usado para realizar pagamentos de boleto e concessionárias.&lt;/p&gt;
-&lt;hr&gt;
+        &lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;Usado para realizar pagamentos de boleto e concessionárias.&lt;/p&gt;
 &lt;br&gt;
 
 
@@ -305,24 +325,24 @@
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;barcode&lt;/strong&gt;*  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Código de barras do documento.&lt;/p&gt;
-&lt;br&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;*  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Identificador da conta que irá pagar o documento.&lt;/p&gt;
-&lt;br&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;scheduled_to&lt;/strong&gt;*  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Formato: &lt;code&gt;yyyy-mm-dd&lt;/code&gt;&lt;/p&gt;
 &lt;br&gt;
-&lt;hr&gt;
 &lt;h4 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt;*  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Chave de idempotencia.&lt;/p&gt;
 &lt;br&gt;
----
 &lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;202&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;Accepted&lt;/span&gt; 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
@@ -363,26 +383,27 @@
       <description>
         
         
-        &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/payments
+        &lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/payments
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h4 id=&#34;query-params&#34;&gt;&lt;strong&gt;QUERY PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;*  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Identificador da conta.&lt;/p&gt;
-&lt;br&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;before&lt;/strong&gt;*  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Cursor opaco da paginação.&lt;/p&gt;
-&lt;br&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;after&lt;/strong&gt;*  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Cursor opaco da paginação.&lt;/p&gt;
-&lt;br&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;limit&lt;/strong&gt;*  &lt;code&gt;int32&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Limit de itens retornados.&lt;/p&gt;
 &lt;br&gt;
-&lt;hr&gt;
 &lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;200&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;OK&lt;/span&gt; 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
@@ -497,14 +518,15 @@
       <description>
         
         
-        &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/payments/payment_id
+        &lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/payments/payment_id
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h4 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;payment_id&lt;/strong&gt;*  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Identificador do pagamento.&lt;/p&gt;
 &lt;br&gt;
-&lt;hr&gt;
 &lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;200&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;OK&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
@@ -550,13 +572,14 @@
       <description>
         
         
-        &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/payments/payment_id/cancel
+        &lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/payments/payment_id/cancel
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h4 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;payment_id&lt;/strong&gt;*  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;br&gt;
-&lt;hr&gt;
 &lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;204&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;No&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;Content&lt;/span&gt; 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -572,7 +595,8 @@
       <description>
         
         
-        &lt;br&gt;
+        &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;Existem regras de serviço em &lt;em&gt;sandbox&lt;/em&gt; diferentes às de &lt;em&gt;produção&lt;/em&gt;. São elas:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Nenhum boleto será pago em nosso ambiente de &lt;em&gt;sandbox&lt;/em&gt;;&lt;/li&gt;

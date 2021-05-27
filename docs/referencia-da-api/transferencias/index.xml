@@ -56,8 +56,11 @@
 &lt;br&gt;
 
 
-&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;No ambiente de &lt;em&gt;sandbox&lt;/em&gt;, a API de transferência externa fica disponível de 6:30 às 17:23 todos os dias, inclusive nos fins de semana e feriados, para facilitar os testes.&lt;/p&gt;
+&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Horário de funcionamento&lt;/h4&gt;
+
+    &lt;br&gt;
+&lt;p&gt;No ambiente de &lt;em&gt;sandbox&lt;/em&gt;, a API de transferência externa fica disponível de 6:30 às 17:23 todos os dias, inclusive nos fins de semana e feriados, para facilitar os testes.
 
 &lt;/div&gt;
 

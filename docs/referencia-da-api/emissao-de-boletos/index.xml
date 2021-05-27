@@ -78,6 +78,44 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
 &lt;br&gt;
 &lt;p&gt;Segue abaixo os status possíveis de um &lt;strong&gt;boleto gerado&lt;/strong&gt;:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/status/status_do_boleto.PNG&#34; alt=&#34;status_boleto&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;h3 id=&#34;glossário&#34;&gt;Glossário&lt;/h3&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Termo&lt;/th&gt;
+&lt;th&gt;Definição&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Created&lt;/td&gt;
+&lt;td&gt;Boleto criado.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;registered&lt;/td&gt;
+&lt;td&gt;Registro do Boleto foi efetuado.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Settled&lt;/td&gt;
+&lt;td&gt;Pagamento do Boleto foi liquidado.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Expired&lt;/td&gt;
+&lt;td&gt;Passou a data limite de pagamento do boleto.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cancelattion_request&lt;/td&gt;
+&lt;td&gt;Pedido de cancelamento de um boleto ainda não pago.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Cancelled&lt;/td&gt;
+&lt;td&gt;Boleto Cancelado pela solicitação.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
       </description>
     </item>
@@ -594,8 +632,35 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
         
         
         &lt;hr&gt;
+&lt;br&gt;
+
+
+&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Horário de funcionamento&lt;/h4&gt;
+
+    &lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;API de Boletos&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Fica disponível para emissão todos os dias da semana, 24 horas por dia;&lt;/p&gt;
+&lt;p&gt;O registro de boletos é automático, executado no momento da criação do boleto, pode demorar de 3 segundos a 15 minutos a depender do volume de boletos emitidos.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Liquidação de Boletos&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Para boletos emitidos e pagos na Stone terão a sua liquidação efetuada no mesmo dia. Boletos emitidos na Stone e pagos em outras instituições, serão liquidados em até D+2 dias úteis.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+
+
+&lt;/div&gt;
+
+&lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;br&gt;
@@ -760,8 +825,9 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
         
         
         &lt;hr&gt;
+&lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h4 id=&#34;query-params&#34;&gt;&lt;strong&gt;QUERY PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;br&gt;
@@ -996,8 +1062,9 @@ Formato &amp;ldquo;YYYY-MM-DD&amp;rdquo;.&lt;/p&gt;
         
         
         &lt;hr&gt;
+&lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices/id
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h4 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;br&gt;
@@ -1076,8 +1143,9 @@ Formato &amp;ldquo;YYYY-MM-DD&amp;rdquo;.&lt;/p&gt;
         
         
         &lt;hr&gt;
+&lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/exports/barcode_payment_invoices/id
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h4 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;br&gt;
@@ -1104,8 +1172,29 @@ Formato &amp;ldquo;YYYY-MM-DD&amp;rdquo;.&lt;/p&gt;
         
         
         &lt;hr&gt;
+&lt;br&gt;
+
+
+&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Horário de funcionamento&lt;/h4&gt;
+
+    &lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Baixa Manual de Boletos&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A API para baixa manual de boletos e concessionárias fica disponível 24/7;&lt;/p&gt;
+&lt;p&gt;Baixa de boletos realizadas após às 23h50 ocorrerão no dia útil seguinte em que a operação foi realizada;&lt;/p&gt;
+&lt;p&gt;Baixa manual de concessionárias são realizadas entre 7h00 e 20h00, ou seja, baixas solicitadas após às 20h serão realizadas às 7h do dia seguinte.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+
+
+&lt;/div&gt;
+
+&lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoice/id/cancel
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h4 id=&#34;query-params&#34;&gt;&lt;strong&gt;QUERY PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;br&gt;

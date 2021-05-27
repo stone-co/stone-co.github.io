@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.0e715d6141a8339017e94ded76595ddc.json"
+  data-offline-search-index-json-src="/offline-search-index.c0faa0db4ce1daa6dad2d6255177d504.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.0e715d6141a8339017e94ded76595ddc.json"
+  data-offline-search-index-json-src="/offline-search-index.c0faa0db4ce1daa6dad2d6255177d504.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3377,12 +3377,15 @@
 		<h1>Buscar dados do QRCode</h1>
         </div>
 	
-	<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/outbound_pix_payments/brcode
+	<hr>
+<br>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/outbound_pix_payments/brcode
 </span></code></pre></div><p>A API para criação de um Pix é a mesma, independente se você deseja enviar um Pix via inserção manual de dados ou via chave. Se o pagamento for iniciado por meio da leitura de um QR Code, você vai precisar obter os dados do QR Code primeiro, para depois criar o Pix.</p>
 <p>E esse é o objetivo desse endpoint.</p>
 <br>
 <h4 id="headers"><strong>HEADERS</strong></h4>
 <hr>
+<br>
 <p><strong>authorization</strong>* <code>string</code></p>
 <br>
 <p>Exemplo:</p>
@@ -3392,8 +3395,10 @@
 </code></pre></div><br>
 <h4 id="body-params"><strong>BODY PARAMS</strong></h4>
 <hr>
+<br>
 <p>O body deve conter a string do QRCode obtida a partir da imagem ou copia e cola.
 Para QRCode do tipo dinâmico com multa, juros, desconto é necessário informar os campos <code>payment_date</code> e <code>owner_account</code></p>
+<br>
 <p><strong>brcode</strong>* <code>string</code></p>
 <p><strong>owner_account</strong> <code>string</code> <br> Identificador do usuário da conta</p>
 <p><strong>payment_date</strong> <code>string</code>
@@ -3407,9 +3412,12 @@ Para QRCode do tipo dinâmico com multa, juros, desconto é necessário informar
 </code></pre></div><br>
 <br>
 <h5 id="responses"><strong>Responses</strong></h5>
+<hr>
+<br>
 <p>A resposta varia de acordo com o tipo de QR Code que você está lendo, que pode ser um QR Code Estático, um QR Code Dinâmico de pagamento imediato ou um QR Code Dinâmico com multa, juros, desconto. Esse último ainda não é suportado, entra em vigor no Brasil em maio, já estamos desenvolvendo.</p>
 <br>
 <h6 id="payload-retornado-ao-consultar-um-qr-code-estático"><strong>Payload retornado ao consultar um QR Code estático</strong></h6>
+<hr>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">200 OK
 </span></code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
   <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;static&#34;</span><span style="color:#000;font-weight:bold">,</span>
@@ -3422,6 +3430,7 @@ Para QRCode do tipo dinâmico com multa, juros, desconto é necessário informar
 <span style="color:#000;font-weight:bold">}</span>
 </code></pre></div><br>
 <h6 id="payload-retornado-ao-consultar-um-qr-code-dinâmico"><strong>Payload retornado ao consultar um QR Code dinâmico</strong></h6>
+<hr>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">200 OK
 </span></code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
   <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;dynamic&#34;</span><span style="color:#000;font-weight:bold">,</span>
@@ -3450,12 +3459,15 @@ Para QRCode do tipo dinâmico com multa, juros, desconto é necessário informar
 <span style="color:#000;font-weight:bold">}</span>
 </code></pre></div><br>
 <h6 id="retornado-quando-o-qrcode-não-pode-ser-obtido"><strong>Retornado quando o QRCode não pode ser obtido</strong></h6>
+<hr>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">400
 </span></code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
   <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;srn:error:bad_request&#34;</span>
 <span style="color:#000;font-weight:bold">}</span>
 </code></pre></div><br>
 <h6 id="retornado-quando-o-tipo-do-qrcode-não-foi-suportado-ainda"><strong>Retornado quando o tipo do QRCode não foi suportado ainda</strong></h6>
+<hr>
+<br>
 <p>Ex.: QRCode com vencimento, juros e multa.</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">501
 </span></code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>

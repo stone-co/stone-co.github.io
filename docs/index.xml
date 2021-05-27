@@ -23,7 +23,8 @@
       <description>
         
         
-        &lt;br&gt;
+        &lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;Existem regras de serviço em &lt;em&gt;sandbox&lt;/em&gt; diferentes às de &lt;em&gt;produção&lt;/em&gt;. São elas:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Nenhum boleto será pago em nosso ambiente de &lt;em&gt;sandbox&lt;/em&gt;;&lt;/li&gt;

@@ -27,14 +27,7 @@
 &lt;br&gt;
 &lt;p&gt;É uma funcionalidade da Conta Stone que permite criar links de pagamentos que podem ser compartilhados para a realização de vendas à distância.&lt;/p&gt;
 &lt;p&gt;O link é uma funcionalidade padrão da Conta Stone que é habilitada no momento em que o usuário é aprovado no KYC.&lt;/p&gt;
-
-
-&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Atenção&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Cada Conta Stone estará apta a gerar e gerenciar seus próprios links de pagamentos, independentemente de ser de um usuário ou uma organização.&lt;/p&gt;
-
-&lt;/div&gt;
-
 &lt;br&gt;
 &lt;h4 id=&#34;status-do-link-de-pagamento&#34;&gt;&lt;strong&gt;Status do link de pagamento&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
@@ -68,6 +61,7 @@
         &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;Cada Conta Stone possui sua própria configuração de criação de link de pagamento que limitam valor máximo permitido, configurações de checkout e outros parâmetros.&lt;/p&gt;
+&lt;br&gt;
 
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
@@ -76,9 +70,12 @@
 
 &lt;/div&gt;
 
+&lt;br&gt;
 &lt;hr&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/payment_links/{account_id}/config
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;response&#34;&gt;Response&lt;/h5&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;response&#34;&gt;Response&lt;/h5&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Json&#34; data-lang=&#34;Json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
 	&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;accepted_multi_payment_methods&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[],&lt;/span&gt;
 	&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;bank_slip&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
@@ -119,7 +116,8 @@
         &lt;hr&gt;
 &lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/payment_links/{account_id}/orders
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;response&#34;&gt;Response&lt;/h5&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;h5 id=&#34;response&#34;&gt;Response&lt;/h5&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Json&#34; data-lang=&#34;Json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
 	&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;data&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[{&lt;/span&gt;
 			&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1000&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
@@ -219,7 +217,8 @@
         &lt;hr&gt;
 &lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/payment_links/{account_id}/orders/{order_id}
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;response&#34;&gt;Response&lt;/h5&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;h5 id=&#34;response&#34;&gt;Response&lt;/h5&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Json&#34; data-lang=&#34;Json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
 	&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1000&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
 	&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;charges&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[{&lt;/span&gt;
@@ -461,8 +460,20 @@
         
         &lt;hr&gt;
 &lt;br&gt;
+
+
+&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Horário de funcionamento&lt;/h4&gt;
+
+    &lt;br&gt;
+&lt;p&gt;A API de Link de Pagamentos fica disponível todos os dias da semana, 24 horas por dia.
+
+&lt;/div&gt;
+
+&lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/payment_links/orders
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;body-request&#34;&gt;Body Request&lt;/h5&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;h5 id=&#34;body-request&#34;&gt;Body Request&lt;/h5&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Json&#34; data-lang=&#34;Json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
 	&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;436df6e1-1d38-4637-892d-106a5e0b3154&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
 	&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;items&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[{&lt;/span&gt;
@@ -605,6 +616,7 @@
         &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;Para cancelar um link de pagamento, temos que fechar um pedido, o que vai passar a impedir que qualquer inclusão de item ou novas transações sejam feitas para aquele pedido específico.&lt;/p&gt;
+&lt;br&gt;
 
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
@@ -615,12 +627,16 @@
 
 &lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;PATCH https://sandbox-api.openbank.stone.com.br/api/v1/payment_links/orders/{order_id}/closed
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;body-request&#34;&gt;Body Request&lt;/h5&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;h5 id=&#34;body-request&#34;&gt;Body Request&lt;/h5&gt;
+&lt;hr&gt;
+&lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Json&#34; data-lang=&#34;Json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
 	&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
 	&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;canceled&amp;#34;&lt;/span&gt;
 &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;response&#34;&gt;Response&lt;/h5&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;h5 id=&#34;response&#34;&gt;Response&lt;/h5&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Json&#34; data-lang=&#34;Json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
 	&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1000&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
 	&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;checkouts&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[{&lt;/span&gt;

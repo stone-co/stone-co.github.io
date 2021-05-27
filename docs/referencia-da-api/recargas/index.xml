@@ -26,12 +26,15 @@
         &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;Objetivo dessa documentação é pontuar as particularidades de cada tipo de recarga oferecida na nossa API.&lt;/p&gt;
+&lt;p&gt;Para efetuar uma recarga o cliente precisa ter saldo suficiente em conta, a recarga é cobrada logo após a confirmação;&lt;/p&gt;
+&lt;br&gt;
 
 
 &lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
-&lt;h4 class=&#34;alert-heading&#34;&gt;Atenção&lt;/h4&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Horário de funcionamento&lt;/h4&gt;
 
-    Para efetuar uma recarga o cliente precisa ter saldo suficiente em conta, a recarga é cobrada logo após a confirmação.
+    &lt;br&gt;
+&lt;p&gt;A API de Recargas fica disponível todos os dias da semana, 24 horas por dia!
 
 &lt;/div&gt;
 
@@ -130,8 +133,10 @@
 &lt;p&gt;Ao confirmar a recarga, adicionaremos os créditos junto a operadora.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;br&gt;
 &lt;h5 id=&#34;operadoras-disponíveis&#34;&gt;&lt;strong&gt;Operadoras disponíveis&lt;/strong&gt;&lt;/h5&gt;
 &lt;hr&gt;
+&lt;br&gt;
 &lt;ul&gt;
 &lt;li&gt;Claro;&lt;/li&gt;
 &lt;li&gt;Correios;&lt;/li&gt;
@@ -145,13 +150,23 @@
 &lt;li&gt;Claro Fixo;&lt;/li&gt;
 &lt;li&gt;Surf Telecom.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;br&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Atenção&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Os valores oferecidos para a recarga não são flexíveis e variam de acordo com a operadora.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;br&gt;
 
 
 &lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
-&lt;h4 class=&#34;alert-heading&#34;&gt;Atenção&lt;/h4&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Horário de funcionamento&lt;/h4&gt;
 
     &lt;br&gt;
-&lt;p&gt;Os valores oferecidos para a recarga não são flexíveis e variam de acordo com a operadora.
+&lt;p&gt;A liquidação da recarga poderá ser executada em até 24 horas, porém, costuma ser efetuada em questão de segundos.
 
 &lt;/div&gt;
 
@@ -372,13 +387,23 @@
 &lt;li&gt;Xbox Live;&lt;/li&gt;
 &lt;li&gt;Xbox Live (CSV).&lt;/li&gt;
 &lt;/ul&gt;
+&lt;br&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Atenção&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Os valores oferecidos para a recarga não são flexíveis e variam de acordo com a operadora.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;br&gt;
 
 
 &lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
-&lt;h4 class=&#34;alert-heading&#34;&gt;Atenção&lt;/h4&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Horário de funcionamento&lt;/h4&gt;
 
     &lt;br&gt;
-&lt;p&gt;Os valores oferecidos para a recarga não são flexíveis e variam de acordo com a operadora.
+&lt;p&gt;A liquidação é executada no provedor em questões de segundos. O resgate dos créditos é feito ao informar o Código PIN retornado após a confirmação da recarga.
 
 &lt;/div&gt;
 
@@ -554,15 +579,24 @@
 &lt;li&gt;Spotify;&lt;/li&gt;
 &lt;li&gt;Ifood.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;br&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Atenção&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Para o Spotify os valores oferecidos não são flexíveis;&lt;/p&gt;
+&lt;p&gt;Quanto ao Ifood a escolha do valor é flexível, com o mínimo de R$1,00 e máximo de R$149,00.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;br&gt;
 
 
 &lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
-&lt;h4 class=&#34;alert-heading&#34;&gt;Atenção&lt;/h4&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Horário de funcionamento&lt;/h4&gt;
 
     &lt;br&gt;
-&lt;p&gt;Para o Spotify os valores oferecidos não são flexíveis.&lt;/p&gt;
-&lt;p&gt;Quanto ao Ifood a escolha do valor é flexível, com o mínimo de R$1,00 e máximo de R$149,00.&lt;/p&gt;
-
+&lt;p&gt;A liquidação é executada no provedor em questões de segundos. O resgate dos créditos é feito ao informar o Código PIN retornado após a confirmação da recarga.
 
 &lt;/div&gt;
 
@@ -716,13 +750,23 @@
 &lt;li&gt;Oi TV;&lt;/li&gt;
 &lt;li&gt;SKY TV.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;br&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Atenção&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Para cada provedor, há um diferente &lt;strong&gt;plano/valor&lt;/strong&gt; disponível.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;br&gt;
 
 
 &lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
-&lt;h4 class=&#34;alert-heading&#34;&gt;Atenção&lt;/h4&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Horário de funcionamento&lt;/h4&gt;
 
     &lt;br&gt;
-&lt;p&gt;Para cada provedor, há um diferente &lt;strong&gt;plano/valor&lt;/strong&gt; disponível.
+&lt;p&gt;A liquidação da recarga poderá ser executada em até 24 horas, porém, costuma ser efetuada em questão de segundos.
 
 &lt;/div&gt;
 
@@ -914,14 +958,48 @@
 &lt;li&gt;Uber;&lt;/li&gt;
 &lt;li&gt;Bilhete Único de SP.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;br&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Atenção&lt;/strong&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Uber&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;O valor escolhido para recarga, deverá estar entre R$1,00 e R$121,00.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Bilhete único de SP&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;O valor de recarga varia de acordo com as quotas mínimas/máximas pré-estabelecidas.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+
+&lt;br&gt;
 
 
 &lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
-&lt;h4 class=&#34;alert-heading&#34;&gt;Atenção&lt;/h4&gt;
+&lt;h4 class=&#34;alert-heading&#34;&gt;Horário de funcionamento&lt;/h4&gt;
 
     &lt;br&gt;
-&lt;p&gt;O valor escolhido para recarga do Provedor Uber, deverá estar entre R$1,00 e R$121,00.&lt;/p&gt;
-&lt;p&gt;O valor de recarga para o provedor Bilhete Único de SP varia de acordo com as quotas mínimas/máximas pré-estabelecidas.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Uber&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;A liquidação da recarga é executada no provedor em questão de segundos. O resgaste dos créditos é feito ao informar o Código PIN retornado após a confirmação da recarga.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Bilhete único de SP&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;O &lt;em&gt;BU&lt;/em&gt; é recarregado após o cliente aproximar o cartão à catraca.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 
 
 &lt;/div&gt;
