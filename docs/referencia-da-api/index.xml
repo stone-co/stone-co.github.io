@@ -145,6 +145,20 @@
     </item>
     
     <item>
+      <title>Docs: KYC (Alpha)</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/kyc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/kyc/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Os endpoints utilizados serão:&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Link de Pagamento</title>
       <link>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/</link>
       <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>

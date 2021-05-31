@@ -28,6 +28,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/zchaves-pix/</loc>
+    <lastmod>2020-09-17T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/guias/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
   </url>
@@ -113,6 +118,10 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/kyc/buscar-informacoes-pendentes/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/transferencias/o-que-e-uma-transferencia/</loc>
   </url>
   
@@ -153,6 +162,11 @@
   
   <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/</loc>
+    <lastmod>2020-09-17T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/zchaves-pix/status/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
   </url>
   
@@ -207,6 +221,10 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/kyc/consultar-url-para-foto/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/transferencias/o-objeto-transferencia/</loc>
   </url>
   
@@ -228,6 +246,11 @@
   <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/listar-links-de-pagamento-da-conta/</loc>
     <lastmod>2021-03-11T15:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/zchaves-pix/criar-uma-chave-pix/</loc>
+    <lastmod>2020-09-17T18:00:00-03:00</lastmod>
   </url>
   
   <url>
@@ -296,6 +319,10 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/kyc/enviar-fotos/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-conteudo-digital/</loc>
     <lastmod>2021-04-06T18:00:00-03:00</lastmod>
   </url>
@@ -303,6 +330,11 @@
   <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/detalhes-de-um-link-de-pagamento/</loc>
     <lastmod>2021-03-15T15:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/zchaves-pix/excluir-uma-chave-pix/</loc>
+    <lastmod>2020-09-17T18:00:00-03:00</lastmod>
   </url>
   
   <url>
@@ -361,6 +393,10 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/kyc/enviar-dados-do-usuario/</loc>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-tv-por-assinatura/</loc>
     <lastmod>2021-04-06T18:00:00-03:00</lastmod>
   </url>
@@ -368,6 +404,11 @@
   <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/criar-link-de-pagamento/</loc>
     <lastmod>2021-03-15T11:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/zchaves-pix/detalhar-uma-chave-pix/</loc>
+    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
   </url>
   
   <url>
@@ -421,6 +462,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/zchaves-pix/listar-chaves-pix/</loc>
+    <lastmod>2020-09-17T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/pagamentos/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
   </url>
@@ -471,6 +517,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/zchaves-pix/reivindicar-uma-chave-pix/</loc>
+    <lastmod>2020-09-17T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/</loc>
     <lastmod>2020-10-28T19:48:19+00:00</lastmod>
   </url>
@@ -515,6 +566,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/zchaves-pix/aprovar-ou-rejeitar-reivindica%C3%A7%C3%A3o/</loc>
+    <lastmod>2020-09-17T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/comprovantes/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
   </url>
@@ -540,6 +596,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/zchaves-pix/detalhar-uma-reivindica%C3%A7%C3%A3o/</loc>
+    <lastmod>2020-09-17T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/contatos/excluir-conta-bancaria-de-um-contato/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
   </url>
@@ -560,6 +621,11 @@
   
   <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/instituicoes/</loc>
+    <lastmod>2020-09-17T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/zchaves-pix/listar-reivindicacoes/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
   </url>
   
@@ -591,6 +657,10 @@
   <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/kyc/</loc>
   </url>
   
   <url>
