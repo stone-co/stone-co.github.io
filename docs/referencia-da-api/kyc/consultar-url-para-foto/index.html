@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.b2d399e2da50448b79daa4bf35b1bddf.json"
+  data-offline-search-index-json-src="/offline-search-index.a12fb7c577cb3d713289559f4f4fd814.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.b2d399e2da50448b79daa4bf35b1bddf.json"
+  data-offline-search-index-json-src="/offline-search-index.a12fb7c577cb3d713289559f4f4fd814.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3752,23 +3752,28 @@
 		<h1>Consultar URL para envio da foto</h1>
         </div>
 	
-	<p>Nesse endpoint será informada a URL de cada uma das fotos enviadas de um usuário.</p>
+	<hr>
+<br>
+<p>Nesse endpoint será informada a URL de cada uma das fotos enviadas de um usuário.</p>
 <p>Essa chamada deve ser realizada para cada foto que será enviada, por exemplo, na maioria dos casos é solicitada a foto da frente do documento, do verso do documento e de uma selfie com o documento, então esse endpoint, nesse caso, será chamado 3 vezes, cada um com o nome diferenciado do arquivo que será enviado.</p>
+<br>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">POST https://sandbox-api.openbank.stone.com.br/api/v1/storage/{{image_name.jpg}}
 </span></code></pre></div><br>
 <h4 id="headers"><strong>HEADERS</strong></h4>
 <hr>
+<br>
 <p><strong>authorization</strong>*
 <br>Bearer token</p>
 <p><strong>Content-Type</strong>* : image/jpeg</p>
 <br>
 <h4 id="path-params"><strong>PATH PARAMS</strong></h4>
 <hr>
+<br>
 <p>Nome da imagem que será enviado, no formato <code>.JPG</code>.</p>
 <br>
 <h4 id="response"><strong>Response</strong></h4>
 <hr>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">200 OK
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#0000cf;font-weight:bold">200</span> <span style="color:#a40000">OK</span>
 </code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
     <span style="color:#204a87;font-weight:bold">&#34;public_url&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;https://storage.googleapis.com/sdb-inside-gateway-frontend-3727/YXBwbGljYXRpb246MDY1ZWNiMDgtMjQzOS00MGMwLThlMTMtMmI0M2MyMTc0M2Uz/c0ea5f60-3d4c-4fc0-815e-bb62681fdd4b/image_name.jpg&#34;</span><span style="color:#000;font-weight:bold">,</span>
     <span style="color:#204a87;font-weight:bold">&#34;upload_info&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
@@ -3779,8 +3784,10 @@
         <span style="color:#204a87;font-weight:bold">&#34;url&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;https://storage.googleapis.com/sdb-inside-gateway-frontend-3727/YXBwbGljYXRpb246MDY1ZWNiMDgtMjQzOS00MGMwLThlMTMtMmI0M2MyMTc0M2Uz/c0ea5f60-3d4c-4fc0-815e-bb62681fdd4b/image_name.jpg?Expires=1622485791&amp;GoogleAccessId=sdb-inside-gateway-c914%40inside-gateway-724c.iam.gserviceaccount.com&amp;Signature=Yy3xZLRyo95oRIVfNWz3J55Cs8YfiRinx0CCY%2BVQtm3PcU%2B2u2eHiSF8yIzO7sRWaHdZ9r6t8j964fS2J3mrbQOvUn68yrW4mVv1%2FQSr1J0kgQ%2B2fIq8JoHw%2BTlwe%2Fbt%2FufKwAq1Y2Kvcsi%2FKO%2BIMyqL8KwwmmcC%2F5oetCfnYg%2BJq2jty01ULuuG6UWvsxiSVjfNNRnOTqQBQ4Ws6r62YoK0xC5A2GrNnACfN4R5%2BKbv4VXoKLKYQ0pGZF3MPHFcbJW4y59XOmIFJP%2F00Xjw8SreELGtk0iCQoIMxU8pEEZQALAIpesTquKGzNqqAgL5RNc46sh6%2BjtNbrwBnhM1vQ%3D%3D&#34;</span>
     <span style="color:#000;font-weight:bold">}</span>
 <span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><p>A resposta do campo <code>public_url</code> deverá ser enviado no endpoint de <a href="/docs/referencia-da-api/kyc/enviar-dados-do-usuario/">enviar os dados de um usuário</a>.</p>
+</code></pre></div><br>
+<p>A resposta do campo <code>public_url</code> deverá ser enviado no endpoint de <a href="/docs/referencia-da-api/kyc/enviar-dados-do-usuario/">enviar os dados de um usuário</a>.</p>
 <p>O campo <code>url</code> deverá ser usado no endpoint para enviar de fato a imagem, no endpoint <a href="/docs/referencia-da-api/kyc/enviar-fotos/">enviar fotos</a>. Esse campo contém as <em>Query Params</em> desse endpoint.</p>
+<br>
 <p>Próximo passo:</p>
 <h4 id="enviar-fotosdocsreferencia-da-apikycenviar-fotos"><a href="/docs/referencia-da-api/kyc/enviar-fotos/">Enviar fotos</a>.</h4>
 

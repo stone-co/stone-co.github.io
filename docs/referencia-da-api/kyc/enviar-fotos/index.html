@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.b2d399e2da50448b79daa4bf35b1bddf.json"
+  data-offline-search-index-json-src="/offline-search-index.a12fb7c577cb3d713289559f4f4fd814.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.b2d399e2da50448b79daa4bf35b1bddf.json"
+  data-offline-search-index-json-src="/offline-search-index.a12fb7c577cb3d713289559f4f4fd814.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3752,43 +3752,51 @@
 		<h1>Enviar fotos do usuário</h1>
         </div>
 	
-	<p>Nesse endpoint serão enviadas as fotos do usuário necessários para realização da análise do KYC.</p>
+	<hr>
+<br>
+<p>Nesse endpoint serão enviadas as fotos do usuário necessários para realização da análise do KYC.</p>
 <p>Deverá ser um request do tipo <code>PUT</code> com o endereço recebido no campo <code>url</code> do endpoint de <a href="/docs/referencia-da-api/kyc/consultar-url-para-foto/">Consultar URL para envio da foto</a>.</p>
+<br>
 <p>Exemplo:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">PUT https://storage.googleapis.com/sdb-inside-gateway-frontend-3727/dXNlcjo4YTZmMzYzZi05Mzg4LTRiMzEtOGY0ZC05Zjk2NTAyY2Q1NzA=/53acaa13-f74b-4884-9420-f05b0ca79d25/doc_cnh_front.jpg?Expires=1615042461&amp;GoogleAccessId=sdb-inside-gateway-c914%40inside-gateway-724c.iam.gserviceaccount.com&amp;Signature=L1kzM4t2dq4qjzJ9gP%2BM7N7o2UWlQ59TXYui7OyMBe107TvVvSLEqN%2B1VL4Y5pBK%2FKqKoJWXKGizT6PNC%2BP5aPRz9qR94m1oPG2lsNspjFLO%2BdrRhdMTx21ylHNLIOWy54vJ5A84WIAlnAIZvHU7%2B1a2%2BRn8Wd3b62djcOpndFEAYCJDQBBENLwY%2B0Qs0KbumICdVWNqfxwttaOj%2FDpzMqp0TrDfmx8xfL5FyIzyBn7BYwfmhJeWU2VFjWVztohj0wiOIPcHlK%2BUkgGNYQ8qXYMY5aWeO6A55%2FO20QErizp%2BX2Ad2YlfS5mOozXvjFPShR7%2FRBxkhAj%2BEFx9EyVy2A%3D%3D
 </span></code></pre></div><br>
 <h4 id="headers"><strong>HEADERS</strong></h4>
 <hr>
-<p><strong>Content-Type</strong>: image/jpg
 <br>
-<strong>x-goog-acl</strong>: public-read</p>
+<p><strong>Content-Type</strong>: image/jpeg</p>
+<br>
+<p><strong>x-goog-acl</strong>: public-read</p>
 <br>
 <h4 id="query-params"><strong>QUERY PARAMS</strong></h4>
 <hr>
 <br>
 <p><strong>Expires</strong>*
 <br>Dado virá no campo <code>url</code> do endpoint de Consultar URL para envio da foto.</p>
+<br>
 <p><strong>GoogleAccessId</strong>*
 <br>Dado virá no campo <code>url</code> do endpoint de Consultar URL para envio da foto.</p>
+<br>
 <p><strong>Signature</strong>*
 <br>Dado virá no campo <code>url</code> do endpoint de Consultar URL para envio da foto.</p>
 <br>
-<h4 id="body-params">*<em>BODY PARAMS</em></h4>
+<h4 id="body-params"><strong>BODY PARAMS</strong></h4>
 <hr>
+<br>
 <p><strong>photo</strong>* <code>binary</code></p>
 <br>
 <h4 id="response"><strong>Response</strong></h4>
 <hr>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">200 OK
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#0000cf;font-weight:bold">200</span> <span style="color:#a40000">OK</span>
 </code></pre></div><hr>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">400 Bad Request
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#0000cf;font-weight:bold">400</span> <span style="color:#a40000">Bad</span> <span style="color:#a40000">Request</span>
 </code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#a40000">&lt;?xml</span> <span style="color:#a40000">version=&#39;</span><span style="color:#0000cf;font-weight:bold">1.0</span><span style="color:#a40000">&#39;</span> <span style="color:#a40000">encoding=&#39;UTF</span><span style="color:#0000cf;font-weight:bold">-8</span><span style="color:#a40000">&#39;?&gt;</span>
 <span style="color:#a40000">&lt;Error&gt;</span>
 <span style="color:#a40000">&lt;Code&gt;ExpiredToken&lt;/Code&gt;</span>
 <span style="color:#a40000">&lt;Message&gt;The</span> <span style="color:#a40000">provided</span> <span style="color:#a40000">token</span> <span style="color:#a40000">has</span> <span style="color:#a40000">expired.&lt;/Message&gt;</span>
 <span style="color:#a40000">&lt;Details&gt;Request</span> <span style="color:#a40000">signature</span> <span style="color:#a40000">expired</span> <span style="color:#a40000">at:</span> <span style="color:#0000cf;font-weight:bold">2021-03-06</span><span style="color:#a40000">T</span><span style="color:#0000cf;font-weight:bold">14</span><span style="color:#a40000">:</span> <span style="color:#0000cf;font-weight:bold">54</span><span style="color:#a40000">:</span> <span style="color:#0000cf;font-weight:bold">21</span><span style="color:#a40000">+</span><span style="color:#0000cf;font-weight:bold">00</span><span style="color:#a40000">:</span> <span style="color:#0000cf;font-weight:bold">00</span><span style="color:#a40000">&lt;/Details&gt;</span>
 <span style="color:#a40000">&lt;/Error&gt;</span>
-</code></pre></div><p>Próximo passo:</p>
+</code></pre></div><br>
+<p>Próximo passo:</p>
 <h4 id="enviar-dados-do-usuáriodocsreferencia-da-apikycenviar-dados-do-usuario"><a href="/docs/referencia-da-api/kyc/enviar-dados-do-usuario/">Enviar dados do usuário</a>.</h4>
 
         <div class="section-index">

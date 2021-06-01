@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.b2d399e2da50448b79daa4bf35b1bddf.json"
+  data-offline-search-index-json-src="/offline-search-index.a12fb7c577cb3d713289559f4f4fd814.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.b2d399e2da50448b79daa4bf35b1bddf.json"
+  data-offline-search-index-json-src="/offline-search-index.a12fb7c577cb3d713289559f4f4fd814.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3752,8 +3752,11 @@
 		<h1>Buscar informações pendentes</h1>
         </div>
 	
-	<p>Nesse endpoint é possível verificar as informações de KYC que se encontram pendentes de resposta.</p>
+	<hr>
+<br>
+<p>Nesse endpoint é possível verificar as informações de KYC que se encontram pendentes de resposta.</p>
 <p>A partir do <em>response</em> desse endpoint, é possível verificar os <em>ids</em> das informações que estão faltando para que possamos enviar os dados no endpoint para <a href="/docs/referencia-da-api/kyc/enviar-dados-do-usuario/">responder o KYC</a>.</p>
+<br>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">GET https://sandbox-api.openbank.stone.com.br/api/v1/users/{id_do_usuario}/kyc/request
 </span></code></pre></div><br>
 <h4 id="headers"><strong>HEADERS</strong></h4>
@@ -3764,7 +3767,7 @@
 <br>
 <h4 id="response"><strong>Response</strong></h4>
 <hr>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">200 OK
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#0000cf;font-weight:bold">200</span> <span style="color:#a40000">OK</span>
 </code></pre></div><div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#000;font-weight:bold">{</span>
     <span style="color:#204a87;font-weight:bold">&#34;checks&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
         <span style="color:#000;font-weight:bold">{</span>
@@ -3889,7 +3892,8 @@
     <span style="color:#204a87;font-weight:bold">&#34;updated_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2021-05-31T15:04:48Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
     <span style="color:#204a87;font-weight:bold">&#34;user_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ef49c647-1dc9-47e8-a559-108cdf7e65a4&#34;</span>
 <span style="color:#000;font-weight:bold">}</span>
-</code></pre></div><p>Próximo passo:</p>
+</code></pre></div><br>
+<p>Próximo passo:</p>
 <h4 id="consultar-url-para-envio-da-fotodocsreferencia-da-apikycconsultar-url-para-foto"><a href="/docs/referencia-da-api/kyc/consultar-url-para-foto/">Consultar URL para envio da foto</a>.</h4>
 
         <div class="section-index">
