@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.2e0c94b127e19da261f21c143a179586.json"
+  data-offline-search-index-json-src="/offline-search-index.b2d399e2da50448b79daa4bf35b1bddf.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.2e0c94b127e19da261f21c143a179586.json"
+  data-offline-search-index-json-src="/offline-search-index.b2d399e2da50448b79daa4bf35b1bddf.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3758,6 +3758,7 @@
 <p>Para sua utilização, é preciso que a aplicação tenha cadastrado no formulário a URI para a qual enviaremos um POST com os dados do evento. A aplicação deverá estar preparada para lidar com cada evento de forma adequada.</p>
 <p>Ao enviar um webhook, esperamos receber uma resposta do range 200 que indica o sucesso no recebimento dessa notificação por parte da sua aplicação. Caso a resposta seja um código diferente do range 200, encaramos como falha no recebimento do webhook e repetimos o envio até receber um sucesso ou batermos o número máximo de 50 tentativas no envio de um evento.</p>
 <p>A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) sobre as quais ela opera dado o escopo de funcionalidades sobre o qual foi dado consentimento. Vale lembrar que os webhooks serão enviados independente se o evento for via API ou via APP.</p>
+<br>
 
 
 <div class="pageinfo pageinfo-primary">
@@ -3768,7 +3769,10 @@
 
 <br>
 <h4 id="os-eventos-que-geram-notificações-são"><strong>Os eventos que geram notificações são:</strong></h4>
+<hr>
+<br>
 <h5 id="emissão-de-boleto"><strong>Emissão de Boleto:</strong></h5>
+<br>
 <table>
 <thead>
 <tr>
@@ -3778,32 +3782,34 @@
 </thead>
 <tbody>
 <tr>
-<td>barcode_payment_invoice_created</td>
+<td><a href="/docs/guias/integracao/webhooks/barcode_payment_invoice_created.json">barcode_payment_invoice_created</a></td>
 <td>Representa a criação/emissão de um boleto.</td>
 </tr>
 <tr>
-<td>barcode_payment_invoice_registered</td>
+<td><a href="/docs/guias/integracao/webhooks/barcode_payment_invoice_registered.json">barcode_payment_invoice_registered</a></td>
 <td>Representa o registro de um boleto.</td>
 </tr>
 <tr>
-<td>barcode_payment_invoice_payment_promissed</td>
+<td><a href="/docs/guias/integracao/webhooks/barcode_payment_invoice_payment_promissed.json">barcode_payment_invoice_payment_promissed</a></td>
 <td>Representa que o pagamento do boleto foi acolhido em alguma instituição.</td>
 </tr>
 <tr>
-<td>barcode_payment_invoice_settled</td>
+<td><a href="/docs/guias/integracao/webhooks/barcode_payment_invoice_settled.json">barcode_payment_invoice_settled</a></td>
 <td>Representa que pagamento do boleto foi confirmado.</td>
 </tr>
 <tr>
-<td>barcode_payment_invoice_expired</td>
+<td><a href="/docs/guias/integracao/webhooks/barcode_payment_invoice_expired.json">barcode_payment_invoice_expired</a></td>
 <td>Representa que o boleto está expirado.</td>
 </tr>
 <tr>
-<td>cash_in_barcode_payment</td>
+<td><a href="/docs/guias/integracao/webhooks/cash_in_barcode_payment.json">cash_in_barcode_payment</a></td>
 <td>Representa a entrada do valor do boleto na conta do beneficiário.</td>
 </tr>
 </tbody>
 </table>
+<br>
 <h5 id="pagamento-de-boleto"><strong>Pagamento de Boleto:</strong></h5>
+<br>
 <table>
 <thead>
 <tr>
@@ -3858,7 +3864,9 @@
 </tr>
 </tbody>
 </table>
+<br>
 <h5 id="transferência-interna"><strong>Transferência interna:</strong></h5>
+<br>
 <table>
 <thead>
 <tr>
@@ -3909,7 +3917,9 @@
 </tr>
 </tbody>
 </table>
+<br>
 <h5 id="transferência-externa"><strong>Transferência externa:</strong></h5>
+<br>
 <table>
 <thead>
 <tr>
@@ -3968,7 +3978,9 @@
 </tr>
 </tbody>
 </table>
+<br>
 <h5 id="pix"><strong>Pix:</strong></h5>
+<br>
 <table>
 <thead>
 <tr>
@@ -3991,57 +4003,58 @@
 </tr>
 </tbody>
 </table>
+<br>
 <h5 id="consentimento"><strong>Consentimento:</strong></h5>
+<br>
 <table>
 <thead>
 <tr>
 <th>Tipo de Evento</th>
 <th>Descrição</th>
-<th>Exemplo</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>consent_requested</td>
-<td>Representa a confirmação do pedido de consentimento por parte do user.</td>
 <td><a href="/docs/guias/integracao/webhooks/exemplo_consent_request.json">consent_request</a></td>
+<td>Representa a confirmação do pedido de consentimento por parte do user.</td>
 </tr>
 </tbody>
 </table>
+<br>
 <h5 id="abertura-de-conta"><strong>Abertura de conta:</strong></h5>
+<br>
 <table>
 <thead>
 <tr>
 <th>Tipo de Evento</th>
 <th>Descrição</th>
-<th>Exemplo</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>sign_up_created</td>
+<td><a href="/docs/guias/integracao/webhooks/A1.json">sign_up_created</a></td>
 <td>Enviado quando é feito o pedido de abertura de conta.</td>
-<td><a href="/docs/guias/integracao/webhooks/A1.json">A1</a></td>
 </tr>
 <tr>
-<td>sign_up_status_updated</td>
+<td><a href="/docs/guias/integracao/webhooks/A2.json">sign_up_status_updated</a></td>
 <td>Enviado quando é feito uma atualização dos dados na abertura da conta.</td>
-<td><a href="/docs/guias/integracao/webhooks/A2.json">A2</a></td>
 </tr>
 <tr>
-<td>sign_up_resource_details_updated</td>
+<td><a href="/docs/guias/integracao/webhooks/A3.json">sign_up_resource_details_updated</a></td>
 <td>Serão enviados diversos webhooks com este tipo de evento de acordo com a evolução da abertura de conta. Ex: <code>account_created</code>, <code>user_email_verified</code>, &hellip;.</td>
-<td><a href="/docs/guias/integracao/webhooks/A3.json">A3</a></td>
 </tr>
 </tbody>
 </table>
 <br>
 <h4 id="o-header-das-notificações-segue-a-seguinte-estrutura"><strong>O header das notificações segue a seguinte estrutura:</strong></h4>
+<hr>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#a40000">x-stone-webhook-event-id:</span> <span style="color:#4e9a06">&#34;930bbd6d-0c7a-4fe4-8b50-4b82a20cb847&#34;</span>
 <span style="color:#a40000">x-stone-webhook-event-type:</span> <span style="color:#4e9a06">&#34;cash_out_internal_transfer&#34;</span>
 </code></pre></div><p>A idempotência de webhooks deverá ser validada no campo &lsquo;x-stone-webhook-event-id&rsquo; disponível no header.</p>
 <br>
 <h4 id="o-payload-das-notificações-segue-a-seguinte-estrutura"><strong>O payload das notificações segue a seguinte estrutura:</strong></h4>
+<hr>
+<br>
 <table>
 <thead>
 <tr>
@@ -4092,6 +4105,7 @@
 </tr>
 </tbody>
 </table>
+<br>
 
 
 <div class="pageinfo pageinfo-primary">
@@ -4100,6 +4114,7 @@
 
 </div>
 
+<br>
 <p>Exemplo:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
    <span style="color:#204a87;font-weight:bold">&#34;env&#34;</span><span style="color:#000;font-weight:bold">:</span><span style="color:#4e9a06">&#34;sandbox&#34;</span><span style="color:#000;font-weight:bold">,</span>
@@ -4140,13 +4155,18 @@
 <span style="color:#000;font-weight:bold">}</span>
 </code></pre></div><br>
 <h4 id="trabalhando-com-webhooks"><strong>Trabalhando com Webhooks</strong></h4>
+<hr>
+<br>
 <h5 id="webhooks-seguros"><strong>Webhooks Seguros</strong></h5>
+<br>
 <p>Nossa API envia webhooks de forma segura para evitar que eles sejam abertos e/ou alterados. Isso é feito em duas etapas:</p>
 <ul>
 <li>Assinatura do conteúdo usando uma das nossas <a href="https://api.openbank.stone.com.br/api/v1/discovery/keys">chaves públicas</a>.</li>
 <li>Ciframento do resultado usando a chave pública do destinatário.</li>
 </ul>
+<br>
 <h5 id="como-eu-posso-abrir-de-forma-segura-o-conteúdo-de-um-webhook"><strong>Como eu posso abrir de forma segura o conteúdo de um webhook?</strong></h5>
+<br>
 <p>Para poder visualizar o conteúdo de um webhook é necessário fazer o caminho inverso:</p>
 <ol>
 <li><strong>Decifrar o conteúdo do webhook</strong> usando sua chave privada. O resultado é um token JWT assinado com a nossa chave;</li>
@@ -4154,6 +4174,8 @@
 </ol>
 <br>
 <h5 id="1---decifrar-o-conteúdo-do-webhook"><strong>1 - Decifrar o conteúdo do webhook</strong></h5>
+<hr>
+<br>
 <p>O webhook irá chegar com um payload parecido com esse:</p>
 <div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
   <span style="color:#204a87;font-weight:bold">&#34;encrypted_body&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;xxxxxxxxxxxxxx conteúdo cifrado&#34;</span>
@@ -4169,6 +4191,8 @@
 <p>A chave a ser utilizada tem que ser a <strong>chave privada</strong> par da <strong>chave pública</strong> usada na autenticação da aplicação.</p>
 <br>
 <h5 id="2---verificar-a-assinatura-do-token"><strong>2 - Verificar a assinatura do token</strong></h5>
+<hr>
+<br>
 <p>Até este momento deciframos apenas um conteúdo que pode ser gerado por qualquer um que tenha acesso a chave pública da aplicação.</p>
 <p>Nós utilizamos a assinatura do conteúdo em token JWS (JSON Web Signing) compacto como uma outra camada de verificação de segurança no conteúdo do webhook.</p>
 <p>Esse token possui em seus &ldquo;claims&rdquo; (alegações) o conteúdo do webhook. Para garantir que ele foi gerado pela Stone, você deve validar a assinatura dele consultando nossas chaves públicas de assinatura.</p>
@@ -4177,12 +4201,16 @@
 <p>Para não ter que buscar a nossa chave pública a cada validação de assinatura, você pode salvar nossa chave do seu lado (por exemplo, através de um cache), de forma que caso aconteça algum erro na validação você volte a consultar o nosso serviço para buscar a chave pública mais atual. Assim você desonera  sua aplicação sem perder a resiliência a mudanças de chave do nosso lado.</p>
 <p>Veja <a href="https://hexdocs.pm/joken_jwks/JokenJwks.DefaultStrategyTemplate.html#content">aqui</a> as melhores práticas para fazer essa implementação.</p>
 <p>O algoritmo que usamos será <em>sempre RS256</em>. Há uma lista de bibliotecas que tratam de assinatura de token em <a href="https://jwt.io/">jwt.io</a>.</p>
+<br>
 <h5 id="segurança"><strong>Segurança</strong></h5>
+<br>
 <p>É importante seguir os dois passos aqui: tanto decifrar quanto verificar a assinatura. Isso irá garantir que não apenas geramos algo que não pode ser lido por alguém que <em>não possui</em> a chave pública quanto que nosso conteúdo foi assinado pela Stone.</p>
 <p>Também aconselhamos cuidado na configuração do cliente que irá consultar as nossas chaves. Certifique-se que ele não está vulnerável a servidores intermediários propositalmente mal configurados. Um exemplo comum é um servidor configurado para protocolos conhecidamente falhos.</p>
 <p>Sempre que em dúvida, consulte nossa API com os IDs dos dados no conteúdo do webhook.</p>
 <p>Mais informações sobre JavaScript Object Signing and Encryption, como JWTs, JWEs, JWSs, <a href="https://www.ca.com/pt/blog-latam/os-beneficios-de-jwtjwsjwe-no-designs-de-apis.html">aqui</a>.</p>
+<br>
 <h5 id="webhooks-idempotentes"><strong>Webhooks idempotentes</strong></h5>
+<br>
 <p>No geral um evento, quando recepcionado com sucesso, é enviado apenas uma vez pela Stone, mas é possível que em algum cenário extraordinário um webhook acabe sendo enviado mais de uma vez e por isso desenvolvemos uma lógica de idempotência de eventos.</p>
 <p>Todo webhook gerado pela Stone leva consigo uma chave de idempotência enviada no campo <code>x-stone-webhook-event-id</code> do header.</p>
 <p>É importante que essa chave seja sempre salva pela sua aplicação e que a cada novo evento você verifique a idempotência desse evento evitando processar duas vezes um mesmo evento.</p>
