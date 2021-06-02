@@ -305,7 +305,7 @@ Para QRCode do tipo dinâmico com multa, juros, desconto é necessário informar
         
         &lt;hr&gt;
 &lt;br&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/otbound_pix_payments/{id}/actions/confirm
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/outbound_pix_payments/{id}/actions/confirm
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;p&gt;Na confirmação, o body pode conter opcionalmente os campos &lt;code&gt;amount&lt;/code&gt; e &lt;code&gt;description&lt;/code&gt;, caso eles não tenham sido preenchidos na criação.&lt;/p&gt;
 &lt;br&gt;
