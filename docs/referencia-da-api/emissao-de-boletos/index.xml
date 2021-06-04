@@ -15,7 +15,7 @@
     
     
     <item>
-      <title>Docs: Overview Emissão de Boletos</title>
+      <title>Docs: Overview </title>
       <link>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/overview-emissao-de-boletos/</link>
       <pubDate>Mon, 30 Mar 2020 07:01:34 +0000</pubDate>
       
@@ -27,7 +27,7 @@
 &lt;br&gt;
 &lt;p&gt;Nessa API, os boletos são separados em três grupos que apresentam regras de funcionamento diferentes: Depósito, Proposta e Cobrança. Veja abaixo os grupos e seus tipos.&lt;/p&gt;
 &lt;br&gt;
-&lt;h4 id=&#34;depósito&#34;&gt;Depósito&lt;/h4&gt;
+&lt;h5 id=&#34;--depósito&#34;&gt;- Depósito&lt;/h5&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;Tem como objetivo fazer um deposito na conta pelo próprio dono da conta.&lt;/p&gt;
@@ -36,7 +36,7 @@
 &lt;li&gt;&lt;code&gt;deposit&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;br&gt;
-&lt;h4 id=&#34;proposta&#34;&gt;Proposta&lt;/h4&gt;
+&lt;h5 id=&#34;--proposta&#34;&gt;- Proposta&lt;/h5&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;Tem como objetivo apresentar uma proposta a um terceiro. Não tem caráter de cobrança.&lt;/p&gt;
@@ -45,7 +45,7 @@
 &lt;li&gt;&lt;code&gt;proposal&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;br&gt;
-&lt;h4 id=&#34;cobrança&#34;&gt;Cobrança&lt;/h4&gt;
+&lt;h5 id=&#34;--cobrança&#34;&gt;- Cobrança&lt;/h5&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;Tem como objetivo cobrar um terceiro. Tem caráter oficial de cobrança. Existem tipos de cobrança específicos de acordo com atividade que está orginando a cobrança. Abaixo veremos a lista dos tipos disponíveis. &lt;br&gt;
@@ -61,25 +61,14 @@ A duplicata mercantil é especifica para cobranças advindas de vendas de produt
 Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Status</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/status/</link>
-      <pubDate>Mon, 27 Apr 2020 12:00:07 +0000</pubDate>
-      
-      <guid>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/status/</guid>
-      <description>
-        
-        
-        &lt;hr&gt;
+&lt;br&gt;
+&lt;h3 id=&#34;status&#34;&gt;Status&lt;/h3&gt;
+&lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;Segue abaixo os status possíveis de um &lt;strong&gt;boleto gerado&lt;/strong&gt;:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/status/status_do_boleto.PNG&#34; alt=&#34;status_boleto&#34;&gt;&lt;/p&gt;
 &lt;br&gt;
-&lt;h3 id=&#34;glossário&#34;&gt;Glossário&lt;/h3&gt;
+&lt;h4 id=&#34;glossário&#34;&gt;Glossário&lt;/h4&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;table&gt;
@@ -116,161 +105,11 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Regras de negócio</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/regras-de-negocio/</link>
-      <pubDate>Sun, 26 Apr 2020 22:22:46 +0000</pubDate>
-      
-      <guid>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/regras-de-negocio/</guid>
-      <description>
-        
-        
-        &lt;hr&gt;
 &lt;br&gt;
-&lt;h4 id=&#34;válidas-para-todos-os-tipos-de-boleto&#34;&gt;Válidas para todos os tipos de boleto&lt;/h4&gt;
+&lt;h3 id=&#34;campos-de-um-boleto&#34;&gt;Campos de um Boleto&lt;/h3&gt;
 &lt;hr&gt;
 &lt;br&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Regras&lt;/th&gt;
-&lt;th&gt;Todos os tipos&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Registro&lt;/td&gt;
-&lt;td&gt;O registro de boletos é automático e feito em até alguns poucos minutos após sua emissão.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Baixa final&lt;/td&gt;
-&lt;td&gt;Um boleto não pago sofrerá baixa automática sete dias após sua data limite.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Baixa por pagamento&lt;/td&gt;
-&lt;td&gt;Ao ser pago o boleto sofrerá baixa automática, impedindo novos pagamentos desse mesmo documento.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Baixa solicitada&lt;/td&gt;
-&lt;td&gt;Quando o amissor solicita a baixa de um boleto que ainda não foi pago e não chegou a data limite.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Data de vencimento&lt;/td&gt;
-&lt;td&gt;Precisa ser igual ou maior que o dia atual e igual ou menor do que a limit_date. Caso seja um dia não útil o pagamento poderá ser feito até o próximo dia útil.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Formato / Layout&lt;/td&gt;
-&lt;td&gt;Hoje os dados do boleto são devolvidos no formato PDF através de um link.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;br&gt;
-&lt;h4 id=&#34;variáveis-por-tipo-de-boleto&#34;&gt;Variáveis por tipo de boleto&lt;/h4&gt;
-&lt;hr&gt;
-&lt;br&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Regras&lt;/th&gt;
-&lt;th&gt;Depósito&lt;/th&gt;
-&lt;th&gt;Proposta&lt;/th&gt;
-&lt;th&gt;Cobrança &lt;em&gt;(todos os tipos)&lt;/em&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Disponível para&lt;/td&gt;
-&lt;td&gt;Todas as contas de pagamento da base.&lt;/td&gt;
-&lt;td&gt;Todas as contas de pagamento da base.&lt;/td&gt;
-&lt;td&gt;É necessário sinalizar na integração para habilitação desse tipo para a conta pagamento.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Data limite&lt;br&gt;&lt;em&gt;(limit_date)&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;Sempre deve ser igual a data de vencimento, podendo ser até 365 dias após a data de emissão. &lt;br&gt;Caso seja um dia não útil o pagamento poderá ser feito até o próximo dia útil.&lt;br&gt;Caso seja informada alguma data diferente da vencimento retornará erro. Caso não seja informada será configurada automaticamente a data de vencimento.&lt;/td&gt;
-&lt;td&gt;Deve ser igual ou maior a data de vencimento.&lt;br&gt;&lt;br&gt;Caso não seja informada será configurada automaticamente a data de vencimento.&lt;/td&gt;
-&lt;td&gt;Deve ser igual ou maior a data de vencimento.&lt;br&gt;&lt;br&gt;Caso não seja informada será configurada automaticamente a data de vencimento.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Pagamento&lt;/td&gt;
-&lt;td&gt;Não obrigatório&lt;/td&gt;
-&lt;td&gt;Não obrigatório&lt;/td&gt;
-&lt;td&gt;Obrigatório&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Pagador&lt;br&gt; &lt;em&gt;(customer)&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;Sempre deve ser igual ao beneficiário.&lt;br&gt;Caso seja informado algum dado diferente do beneficiário será ignorado.&lt;br&gt; Caso não seja informado será configurado automaticamente com dados do beneficiário.&lt;/td&gt;
-&lt;td&gt;Pode ser diferente do beneficiário.&lt;br&gt;&lt;br&gt;Obrigatório o envio do objeto.&lt;/td&gt;
-&lt;td&gt;Pode ser diferente do beneficiário.&lt;br&gt;&lt;br&gt;Obrigatório o envio do objeto.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Valor&lt;br&gt; &lt;em&gt;(amount)&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;Valor Min de R$ 20,00 e valor Max: R$ 10.000,00.&lt;/td&gt;
-&lt;td&gt;Valor Min de R$ 20,00 e valor Max: R$ 10.000,00.&lt;/td&gt;
-&lt;td&gt;Valor Min de R$ 20,00 e valor Max: R$ 10.000,00.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Juros&lt;br&gt; &lt;em&gt;(interest)&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;Não suporta&lt;/td&gt;
-&lt;td&gt;Não suporta&lt;/td&gt;
-&lt;td&gt;Juros deve ser maior que 0% e até 1% ao mês.&lt;br&gt;O valor é aplicado por dia levando em conta o valor proporcional dado o juros mensal. Ex: 1% ao mês, seria 0,033% ao dia.&lt;br&gt;O juros passam a contar a partir da data informada. Essa data tem que ser maior que o vencimento e menor que data limite. Caso nenhuma data seja informada serão aplicados a patir do dia seguinte ao vencimento.&lt;br&gt;Nos casos em que a data de vencimento cai em um dia não últil ela é automaticamente estendida para o próximo dia útil e os juros só passam a ser aplicados depois dessa data.&lt;br&gt;Campo não obrigatório, só preencher se for aplicar juros.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Multa&lt;br&gt; &lt;em&gt;(fine)&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;Não suporta&lt;/td&gt;
-&lt;td&gt;Não suporta&lt;/td&gt;
-&lt;td&gt;Multa deve ser maior que 0% e até 2% do valor do boleto.&lt;br&gt;A multa é cobrada uma única vez.&lt;br&gt;A multa passa a contar a partir da data informada. Essa data tem que ser maior que o vencimento e menor que data limite.&lt;br&gt;Caso nenhuma data seja informada será aplicada a patir do dia seguinte ao vencimento.&lt;br&gt;Nos casos em que a data de vencimento cai em um dia não últil ela é automaticamente estendida para o próximo dia útil e a multa só passará a ser aplicada depois dessa data.&lt;br&gt;Campo não obrigatório, só preencher se for aplicar multa.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Desconto&lt;br&gt; &lt;em&gt;(discount)&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;Não suporta&lt;/td&gt;
-&lt;td&gt;Não suporta&lt;/td&gt;
-&lt;td&gt;Desconto deve ser maior que 0% e até 90%.&lt;br&gt;O desconto se aplica caso o pagameto seja feito até a data informada. A data informada deve ser menor do que a data de vencimento do boleto e maior que sua data de emissão.&lt;br&gt;Campo não obrigatório, só preencher se for aplicar desconto.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Múltiplos descontos&lt;/td&gt;
-&lt;td&gt;Não suporta&lt;/td&gt;
-&lt;td&gt;Não suporta&lt;/td&gt;
-&lt;td&gt;É possível aplicar até 3 descontos a um boleto onde cada um terá sua data até a qual o desconto é válido.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Sacador avalista&lt;br&gt; &lt;em&gt;(receiver)&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;Não suporta&lt;/td&gt;
-&lt;td&gt;Quando um boleto é emitido em uma conta, mas o comprador final reconhece a compra em nome de outra empresa é possível usar o campo sacador avalista para apresentar o nome dessa empresa no boleto.&lt;br&gt;O beneficiário final não muda, ou seja, o valor do boleto será liquidado para a conta que o emitiu.&lt;br&gt;Funcionalidade comumente usada por subadquirentes.&lt;/td&gt;
-&lt;td&gt;Quando um boleto é emitido em uma conta, mas o comprador final reconhece a compra em nome de outra empresa é possível usar o campo sacador avalista para apresentar o nome da empresa que o comprador reconhe no boleto.&lt;br&gt;O beneficiário final não muda, ou seja, o valor do boleto será liquidado para a conta que o emitiu.&lt;br&gt;Funcionalidade comumente usada por subadquirentes.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;hr&gt;
-&lt;br&gt;
-
-
-&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;&lt;strong&gt;Atenção&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Desconto em boleto não é valido para pagamentos realizados no final de semana.&lt;/p&gt;
-
-&lt;/div&gt;
-
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Campos</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/campos/</link>
-      <pubDate>Sun, 26 Apr 2020 21:06:22 +0000</pubDate>
-      
-      <guid>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/campos/</guid>
-      <description>
-        
-        
-        &lt;hr&gt;
-&lt;br&gt;
-&lt;h4 id=&#34;boleto&#34;&gt;Boleto&lt;/h4&gt;
-&lt;hr&gt;
+&lt;p&gt;Segue os campos possíveis para um boleto.&lt;/p&gt;
 &lt;br&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -423,7 +262,7 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;br&gt;
-&lt;h5 id=&#34;campos-do-objeto-beneficiary&#34;&gt;Campos do objeto &lt;code&gt;beneficiary&lt;/code&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;campos-do-objeto---beneficiary&#34;&gt;Campos do objeto - &lt;code&gt;beneficiary&lt;/code&gt;&lt;/h5&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;table&gt;
@@ -475,7 +314,7 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;br&gt;
-&lt;h5 id=&#34;campos-do-objeto-discount&#34;&gt;Campos do objeto &lt;code&gt;discount&lt;/code&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;campos-do-objeto---discount&#34;&gt;Campos do objeto - &lt;code&gt;discount&lt;/code&gt;&lt;/h5&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;table&gt;
@@ -503,7 +342,7 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;br&gt;
-&lt;h5 id=&#34;campos-do-objeto-fee_metadata&#34;&gt;Campos do objeto &lt;code&gt;fee_metadata&lt;/code&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;campos-do-objeto---fee_metadata&#34;&gt;Campos do objeto - &lt;code&gt;fee_metadata&lt;/code&gt;&lt;/h5&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;table&gt;
@@ -549,7 +388,7 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;br&gt;
-&lt;h5 id=&#34;campos-do-objeto-fine&#34;&gt;Campos do objeto &lt;code&gt;fine&lt;/code&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;campos-do-objeto---fine&#34;&gt;Campos do objeto - &lt;code&gt;fine&lt;/code&gt;&lt;/h5&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;table&gt;
@@ -577,7 +416,7 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;br&gt;
-&lt;h5 id=&#34;campos-do-objeto-interest&#34;&gt;Campos do objeto &lt;code&gt;interest&lt;/code&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;campos-do-objeto---interest&#34;&gt;Campos do objeto - &lt;code&gt;interest&lt;/code&gt;&lt;/h5&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;table&gt;
@@ -605,7 +444,7 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;br&gt;
-&lt;h5 id=&#34;campos-do-objeto-customer&#34;&gt;Campos do objeto &lt;code&gt;customer&lt;/code&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;campos-do-objeto---customer&#34;&gt;Campos do objeto - &lt;code&gt;customer&lt;/code&gt;&lt;/h5&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;table&gt;
@@ -645,7 +484,7 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;br&gt;
-&lt;h5 id=&#34;campos-do-objeto-receiver&#34;&gt;Campos do objeto &lt;code&gt;receiver&lt;/code&gt;&lt;/h5&gt;
+&lt;h5 id=&#34;campos-do-objeto---receiver&#34;&gt;Campos do objeto - &lt;code&gt;receiver&lt;/code&gt;&lt;/h5&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;table&gt;
@@ -672,6 +511,157 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/regras-de-negocio&#34;&gt;Regras de Negócio&lt;/a&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/emitir-boleto&#34;&gt;Emitir Boleto&lt;/a&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/listar-boletos&#34;&gt;Listar Boletos&lt;/a&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/retornar-um-boleto&#34;&gt;Retornar um Boleto&lt;/a&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/gerar-boleto-pdf&#34;&gt;Gerar PDF Boleto&lt;/a&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/cancelar-boleto&#34;&gt;Cancelar um Boleto&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Regras de negócio</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/regras-de-negocio/</link>
+      <pubDate>Sun, 26 Apr 2020 22:22:46 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/regras-de-negocio/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;br&gt;
+&lt;h4 id=&#34;válidas-para-todos-os-tipos-de-boleto&#34;&gt;Válidas para todos os tipos de boleto&lt;/h4&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Regras&lt;/th&gt;
+&lt;th&gt;Todos os tipos&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Registro&lt;/td&gt;
+&lt;td&gt;O registro de boletos é automático e feito em até alguns poucos minutos após sua emissão.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Baixa final&lt;/td&gt;
+&lt;td&gt;Um boleto não pago sofrerá baixa automática sete dias após sua data limite.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Baixa por pagamento&lt;/td&gt;
+&lt;td&gt;Ao ser pago o boleto sofrerá baixa automática, impedindo novos pagamentos desse mesmo documento.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Baixa solicitada&lt;/td&gt;
+&lt;td&gt;Quando o amissor solicita a baixa de um boleto que ainda não foi pago e não chegou a data limite.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Data de vencimento&lt;/td&gt;
+&lt;td&gt;Precisa ser igual ou maior que o dia atual e igual ou menor do que a limit_date. Caso seja um dia não útil o pagamento poderá ser feito até o próximo dia útil.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Formato / Layout&lt;/td&gt;
+&lt;td&gt;Hoje os dados do boleto são devolvidos no formato PDF através de um link.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;h4 id=&#34;variáveis-por-tipo-de-boleto&#34;&gt;Variáveis por tipo de boleto&lt;/h4&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Regras&lt;/th&gt;
+&lt;th&gt;Depósito&lt;/th&gt;
+&lt;th&gt;Proposta&lt;/th&gt;
+&lt;th&gt;Cobrança &lt;em&gt;(todos os tipos)&lt;/em&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Disponível para&lt;/td&gt;
+&lt;td&gt;Todas as contas de pagamento da base.&lt;/td&gt;
+&lt;td&gt;Todas as contas de pagamento da base.&lt;/td&gt;
+&lt;td&gt;É necessário sinalizar na integração para habilitação desse tipo para a conta pagamento.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Data limite&lt;br&gt;&lt;em&gt;(limit_date)&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Sempre deve ser igual a data de vencimento, podendo ser até 365 dias após a data de emissão. &lt;br&gt;Caso seja um dia não útil o pagamento poderá ser feito até o próximo dia útil.&lt;br&gt;Caso seja informada alguma data diferente da vencimento retornará erro. Caso não seja informada será configurada automaticamente a data de vencimento.&lt;/td&gt;
+&lt;td&gt;Deve ser igual ou maior a data de vencimento.&lt;br&gt;&lt;br&gt;Caso não seja informada será configurada automaticamente a data de vencimento.&lt;/td&gt;
+&lt;td&gt;Deve ser igual ou maior a data de vencimento.&lt;br&gt;&lt;br&gt;Caso não seja informada será configurada automaticamente a data de vencimento.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Pagamento&lt;/td&gt;
+&lt;td&gt;Não obrigatório&lt;/td&gt;
+&lt;td&gt;Não obrigatório&lt;/td&gt;
+&lt;td&gt;Obrigatório&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Pagador&lt;br&gt; &lt;em&gt;(customer)&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Sempre deve ser igual ao beneficiário.&lt;br&gt;Caso seja informado algum dado diferente do beneficiário será ignorado.&lt;br&gt; Caso não seja informado será configurado automaticamente com dados do beneficiário.&lt;/td&gt;
+&lt;td&gt;Pode ser diferente do beneficiário.&lt;br&gt;&lt;br&gt;Obrigatório o envio do objeto.&lt;/td&gt;
+&lt;td&gt;Pode ser diferente do beneficiário.&lt;br&gt;&lt;br&gt;Obrigatório o envio do objeto.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Valor&lt;br&gt; &lt;em&gt;(amount)&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Valor Min de R$ 20,00 e valor Max: R$ 10.000,00.&lt;/td&gt;
+&lt;td&gt;Valor Min de R$ 20,00 e valor Max: R$ 10.000,00.&lt;/td&gt;
+&lt;td&gt;Valor Min de R$ 20,00 e valor Max: R$ 10.000,00.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Juros&lt;br&gt; &lt;em&gt;(interest)&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Não suporta&lt;/td&gt;
+&lt;td&gt;Não suporta&lt;/td&gt;
+&lt;td&gt;Juros deve ser maior que 0% e até 1% ao mês.&lt;br&gt;O valor é aplicado por dia levando em conta o valor proporcional dado o juros mensal. Ex: 1% ao mês, seria 0,033% ao dia.&lt;br&gt;O juros passam a contar a partir da data informada. Essa data tem que ser maior que o vencimento e menor que data limite. Caso nenhuma data seja informada serão aplicados a patir do dia seguinte ao vencimento.&lt;br&gt;Nos casos em que a data de vencimento cai em um dia não últil ela é automaticamente estendida para o próximo dia útil e os juros só passam a ser aplicados depois dessa data.&lt;br&gt;Campo não obrigatório, só preencher se for aplicar juros.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Multa&lt;br&gt; &lt;em&gt;(fine)&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Não suporta&lt;/td&gt;
+&lt;td&gt;Não suporta&lt;/td&gt;
+&lt;td&gt;Multa deve ser maior que 0% e até 2% do valor do boleto.&lt;br&gt;A multa é cobrada uma única vez.&lt;br&gt;A multa passa a contar a partir da data informada. Essa data tem que ser maior que o vencimento e menor que data limite.&lt;br&gt;Caso nenhuma data seja informada será aplicada a patir do dia seguinte ao vencimento.&lt;br&gt;Nos casos em que a data de vencimento cai em um dia não últil ela é automaticamente estendida para o próximo dia útil e a multa só passará a ser aplicada depois dessa data.&lt;br&gt;Campo não obrigatório, só preencher se for aplicar multa.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Desconto&lt;br&gt; &lt;em&gt;(discount)&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Não suporta&lt;/td&gt;
+&lt;td&gt;Não suporta&lt;/td&gt;
+&lt;td&gt;Desconto deve ser maior que 0% e até 90%.&lt;br&gt;O desconto se aplica caso o pagameto seja feito até a data informada. A data informada deve ser menor do que a data de vencimento do boleto e maior que sua data de emissão.&lt;br&gt;Campo não obrigatório, só preencher se for aplicar desconto.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Múltiplos descontos&lt;/td&gt;
+&lt;td&gt;Não suporta&lt;/td&gt;
+&lt;td&gt;Não suporta&lt;/td&gt;
+&lt;td&gt;É possível aplicar até 3 descontos a um boleto onde cada um terá sua data até a qual o desconto é válido.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Sacador avalista&lt;br&gt; &lt;em&gt;(receiver)&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Não suporta&lt;/td&gt;
+&lt;td&gt;Quando um boleto é emitido em uma conta, mas o comprador final reconhece a compra em nome de outra empresa é possível usar o campo sacador avalista para apresentar o nome dessa empresa no boleto.&lt;br&gt;O beneficiário final não muda, ou seja, o valor do boleto será liquidado para a conta que o emitiu.&lt;br&gt;Funcionalidade comumente usada por subadquirentes.&lt;/td&gt;
+&lt;td&gt;Quando um boleto é emitido em uma conta, mas o comprador final reconhece a compra em nome de outra empresa é possível usar o campo sacador avalista para apresentar o nome da empresa que o comprador reconhe no boleto.&lt;br&gt;O beneficiário final não muda, ou seja, o valor do boleto será liquidado para a conta que o emitiu.&lt;br&gt;Funcionalidade comumente usada por subadquirentes.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;br&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Atenção&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Desconto em boleto não é valido para pagamentos realizados no final de semana.&lt;/p&gt;
+
+&lt;/div&gt;
+
 
       </description>
     </item>
@@ -800,7 +790,7 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;br&gt;
-&lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;responses&#34;&gt;&lt;strong&gt;Responses&lt;/strong&gt;&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;200&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;OK&lt;/span&gt;
 &lt;span style=&#34;color:#a40000&#34;&gt;content-type:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;application/json&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
@@ -865,7 +855,117 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
     &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;CREATED&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
     &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;writable_line&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;19790000056313907246482159290061784560000002100&amp;#34;&lt;/span&gt;
 &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;201&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;Created&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;ec363b21-113f-44e9-8cc3-dfcdb3cc2dc3&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2100&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;barcode&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;19797845600000021000000063139072468215929006&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;beneficiary&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1085737&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;39809096038&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;legal_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Pereira da Silva&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;trade_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;
+  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2020-07-27T18:25:38Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_by&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user:34a071d5-e1d4-4cb0-acf7-ca9b106fec65&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;customer&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;11121744590&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;legal_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Pereira da Silva&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;trade_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;
+  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;discounts&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2020-11-20&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;0.1&amp;#34;&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;],&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;expiration_date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2020-12-01&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;fee&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;fee_metadata&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;billing_exemption_participant&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;fee&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;max_free&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;5&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;original_fee&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;200&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;remaining_free&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;5&lt;/span&gt;
+  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;fine&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-01-02&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;
+  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;172caf21-13de-4baa-9823-a21ac17ba8fa&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;interest&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-01-02&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;
+  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;invoice_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;bill_of_exchange&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;issuance_date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2020-07-27&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;limit_date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-02-01&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;our_number&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;63139072468215929006&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;payer&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;11121740790&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;document_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;legal_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Pereira da Silva&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;trade_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;
+  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;receiver&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;registered_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;settled_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;CREATED&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;writable_line&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;19790000056313907246482159290061784560000002100&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;400&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;Bad&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;Request&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;error&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;is invalid&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;path&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
+        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;customer&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;trade_name&amp;#34;&lt;/span&gt;
+      &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;error&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;is invalid&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;path&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
+        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;customer&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;legal_name&amp;#34;&lt;/span&gt;
+      &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
+    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;],&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;srn:error:validation&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;401&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;Unauthorized&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;srn:error:unauthenticated&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;403&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;Forbidden&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;srn:error:unauthorized&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;409&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;Conflict&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;srn:error:conflict&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;422&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;Unprocessable&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;Entity&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;barcode_payment_invoice_bill_of_exchange is not ena bled on this account&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
+  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;srn:error:product_not_enabled&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
       </description>
     </item>
     
