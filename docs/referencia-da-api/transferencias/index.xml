@@ -32,10 +32,10 @@
 &lt;br&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-internas&#34;&gt;Transferência interna&lt;/a&gt;: Transferência entre duas Contas Stone. O valor transferido é creditado instantaneamente na conta destinatária, independente do horário e dia da efetuação da transação.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;../../../docs/referencia-da-api/transferencias/transferencias-internas&#34;&gt;Transferência interna&lt;/a&gt;: Transferência entre duas Contas Stone. O valor transferido é creditado instantaneamente na conta destinatária, independente do horário e dia da efetuação da transação.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-externas&#34;&gt;Transferência externa&lt;/a&gt;: TED (Transferência Eletrônica Disponível) para outros bancos. Nos dias úteis, entre 6:30 e 17:23, a transação é processada de forma assíncrona e o valor é creditado na conta destino em poucas horas. Caso a operação seja efetuada fora do horário citado e/ou em dias não úteis, a transação será agendada automaticamente para o dia útil seguinte.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;../../../docs/referencia-da-api/transferencias/transferencias-externas&#34;&gt;Transferência externa&lt;/a&gt;: TED (Transferência Eletrônica Disponível) para outros bancos. Nos dias úteis, entre 6:30 e 17:23, a transação é processada de forma assíncrona e o valor é creditado na conta destino em poucas horas. Caso a operação seja efetuada fora do horário citado e/ou em dias não úteis, a transação será agendada automaticamente para o dia útil seguinte.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;br&gt;
@@ -43,16 +43,16 @@
 &lt;br&gt;
 &lt;h5 id=&#34;segue-abaixo-os-status-possíveis-de-uma-transferência-externa&#34;&gt;Segue abaixo os status possíveis de uma &lt;strong&gt;transferência externa&lt;/strong&gt;:&lt;/h5&gt;
 &lt;br&gt;
-&lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/docs/referencia-da-api/transferencias/o-que-e-uma-transferencia/1b90b91-Transfrncia_Externa.png&#34; alt=&#34;status_TED&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../../docs/referencia-da-api/transferencias/o-que-e-uma-transferencia/1b90b91-Transfrncia_Externa.png&#34; alt=&#34;status_TED&#34;&gt;&lt;/p&gt;
 &lt;br&gt;
-&lt;p&gt;A transferência externa criada pelo parceiro aguardará a &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/aprovacao&#34;&gt;aprovação&lt;/a&gt; do usuário da conta no estado &lt;code&gt;CREATED&lt;/code&gt;. Essa transferência pode ser rejeitada pelo usuário, concluindo no estado &lt;code&gt;REJECTED&lt;/code&gt;, e não será efetuada. Caso ela seja uma transferência agendada, é possível que o prazo do agendamento expire antes dela obter aprovação, encerrando em &lt;code&gt;EXPIRED&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;A transferência externa criada pelo parceiro aguardará a &lt;a href=&#34;../../../docs/guias/integracao/aprovacao&#34;&gt;aprovação&lt;/a&gt; do usuário da conta no estado &lt;code&gt;CREATED&lt;/code&gt;. Essa transferência pode ser rejeitada pelo usuário, concluindo no estado &lt;code&gt;REJECTED&lt;/code&gt;, e não será efetuada. Caso ela seja uma transferência agendada, é possível que o prazo do agendamento expire antes dela obter aprovação, encerrando em &lt;code&gt;EXPIRED&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Caso ela seja agendada e aprovada dentro do prazo, seguirá para o estado &lt;code&gt;SCHEDULED&lt;/code&gt;, e será efetuada  na data do agendamento. É importante observar que caso a criação da transferência externa, tanto pelo parceiro quanto pelo usuário, seja feita fora do horário de 6:30 às 17:23, ela seguirá para um estado de &lt;code&gt;DELAYED_TO_NEXT_BUSINESS_DAY&lt;/code&gt;, em que ela será agendada para a próxima janela de execução. É possível que o usuário cancele a transferência antes dela ser efetuada, encerrando no estado &lt;code&gt;CANCELLED&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Quando é o próprio usuário que cria a transação, o fluxo já se inicia no estado &lt;code&gt;APPROVED&lt;/code&gt; ou &lt;code&gt;SCHEDULED&lt;/code&gt;, caso tenha sido criada com agendamento. A transferência poderá falhar apenas caso não haja fundos e terminará no estado &lt;code&gt;FAILED&lt;/code&gt;. Caso tenha sido aprovada e haja fundos, a Stone realizará a transferência para o banco externo, obtendo o estado &lt;code&gt;FINISHED&lt;/code&gt;. Caso haja algum problema como, por exemplo, dados incorretos, ele será reembolsado e irá  finalizar no estado &lt;code&gt;REFUNDED&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Para a transferência interna o fluxo é similar. Neste caso não haverá o estado &lt;code&gt;REFUNDED&lt;/code&gt;, já que antes de realizar a transferência já conferimos a existência da conta destino. Não haverá também o estado &lt;code&gt;DELAYED_TO_NEXT_BUSINESS_DAY&lt;/code&gt;, porque não há limites de horário para a realização de transferências para outras contas Stone.&lt;/p&gt;
 &lt;p&gt;É possível consultar o status de uma transação a qualquer momento para saber em qual estado ela está.&lt;/p&gt;
 &lt;br&gt;
 &lt;h5 id=&#34;segue-abaixo-os-status-possíveis-de-uma-transferência-interna&#34;&gt;Segue abaixo os status possíveis de uma &lt;strong&gt;transferência interna&lt;/strong&gt;:&lt;/h5&gt;
-&lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/docs/referencia-da-api/transferencias/o-que-e-uma-transferencia/0d9c77f-Transferncia_Interna.png&#34; alt=&#34;status_TransfInterna&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../../docs/referencia-da-api/transferencias/o-que-e-uma-transferencia/0d9c77f-Transferncia_Interna.png&#34; alt=&#34;status_TransfInterna&#34;&gt;&lt;/p&gt;
 &lt;br&gt;
 
 
@@ -203,7 +203,7 @@ Abaixo listamos algumas das razões possíveis para ocorrer reembolsos, como tam
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;target&lt;/td&gt;
-&lt;td&gt;Objeto com os dados de conta destino. Veja &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/transferencias/2-o-objeto-transferencia/#campos-do-objeto-target&#34;&gt;abaixo&lt;/a&gt; seus campos.&lt;/td&gt;
+&lt;td&gt;Objeto com os dados de conta destino. Veja &lt;a href=&#34;../../../docs/referencia-da-api/transferencias/2-o-objeto-transferencia/#campos-do-objeto-target&#34;&gt;abaixo&lt;/a&gt; seus campos.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -312,7 +312,7 @@ Abaixo listamos algumas das razões possíveis para ocorrer reembolsos, como tam
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;target&lt;/td&gt;
-&lt;td&gt;Objeto com os dados de conta destino. Veja abaixo seus campos. Veja seus campos &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/transferencias/o-objeto-transferencia/#campos-do-objeto-target&#34;&gt;aqui&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Objeto com os dados de conta destino. Veja abaixo seus campos. Veja seus campos &lt;a href=&#34;../../../docs/referencia-da-api/transferencias/o-objeto-transferencia/#campos-do-objeto-target&#34;&gt;aqui&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -421,12 +421,12 @@ Abaixo listamos algumas das razões possíveis para ocorrer reembolsos, como tam
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;account&lt;/td&gt;
-&lt;td&gt;Objeto que representa a conta destino da transferência. Veja os campos desse objeto &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/transferencias/o-objeto-transferencia/#campos-do-objeto-account&#34;&gt;abaixo&lt;/a&gt;.&lt;/td&gt;
+&lt;td&gt;Objeto que representa a conta destino da transferência. Veja os campos desse objeto &lt;a href=&#34;../../../docs/referencia-da-api/transferencias/o-objeto-transferencia/#campos-do-objeto-account&#34;&gt;abaixo&lt;/a&gt;.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;entity&lt;/td&gt;
-&lt;td&gt;Objeto que contem os dados do indivíduo ou companhia responsável pela conta. Veja os campos desse objeto &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/transferencias/2-o-objeto-transferencia/#campos-do-objeto-entity&#34;&gt;abaixo&lt;/a&gt;.&lt;/td&gt;
+&lt;td&gt;Objeto que contem os dados do indivíduo ou companhia responsável pela conta. Veja os campos desse objeto &lt;a href=&#34;../../../docs/referencia-da-api/transferencias/2-o-objeto-transferencia/#campos-do-objeto-entity&#34;&gt;abaixo&lt;/a&gt;.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;

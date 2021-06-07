@@ -3,29 +3,28 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.75.1" /><link rel="alternate" type="application/rss&#43;xml" href="https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-extrato/index.xml">
+<meta name="generator" content="Hugo 0.83.1" /><link rel="alternate" type="application/rss&#43;xml" href="https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-extrato/index.xml">
 <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 
-<link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico" >
-<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
-<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
-<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicons/android-icon-36x36.png" sizes="36x36">
-<link rel="icon" type="image/png" href="/favicons/android-icon-48x48.png" sizes="48x48">
-<link rel="icon" type="image/png" href="/favicons/android-icon-72x72.png" sizes="72x72">
-<link rel="icon" type="image/png" href="/favicons/android-icon-96x96.png" sizes="96x96">
-<link rel="icon" type="image/png" href="/favicons/android-icon-144x144.png" sizes="144x144">
-<link rel="icon" type="image/png" href="/favicons/android-icon-192x192.png" sizes="192x192">
+<link rel="shortcut icon" type="image/x-icon" href="../../../../favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="../../../../favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="../../../../favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="../../../../favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="../../../../favicons/android-icon-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="../../../../favicons/android-icon-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="../../../../favicons/android-icon-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="../../../../favicons/android-icon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="../../../../favicons/android-icon-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="../../../../favicons/android-icon-192x192.png" sizes="192x192">
 
 <title>Consultar Extrato | Stone OpenBank</title><meta property="og:title" content="Consultar Extrato" />
 <meta property="og:description" content="Escreva o Banco do futuro. Uma linha de código por vez." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-extrato/" />
-<meta property="og:updated_time" content="2020-04-20T20:28:41+00:00" /><meta property="og:site_name" content="Stone OpenBank" />
+<meta property="og:url" content="https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-extrato/" /><meta property="og:site_name" content="Stone OpenBank" />
+
 <meta itemprop="name" content="Consultar Extrato">
-<meta itemprop="description" content="Escreva o Banco do futuro. Uma linha de código por vez.">
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="Escreva o Banco do futuro. Uma linha de código por vez."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Consultar Extrato"/>
 <meta name="twitter:description" content="Escreva o Banco do futuro. Uma linha de código por vez."/>
 
@@ -35,8 +34,8 @@
 
 
 
-<link rel="preload" href="/scss/main.min.b90511ec0072e86ab4c7de18ff71275cbf23099556e9c566ed87b03578f85d09.css" as="style">
-<link href="/scss/main.min.b90511ec0072e86ab4c7de18ff71275cbf23099556e9c566ed87b03578f85d09.css" rel="stylesheet" integrity="">
+<link rel="preload" href="../../../../scss/main.min.e1b83e1d4c669def141d4ce63fea85b4a714e8b2a1a5231611052dc1810c0349.css" as="style">
+<link href="../../../../scss/main.min.e1b83e1d4c669def141d4ce63fea85b4a714e8b2a1a5231611052dc1810c0349.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -57,8 +56,8 @@
     <header>
       
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
-        <a class="navbar-brand" href="/">
-		<span class="navbar-logo"><svg width="173" height="65" viewBox="0 0 377 65" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)"><path d="M0 0V65H376.494V0H0zM373.484 61.9958H3.00976V3.0042H373.484V61.9958z" fill="#fff"/><path d="M131.609 43.4244C136.807 43.4244 140.911 40.1471 140.911 33.3193 140.911 26.4916 136.807 23.7605 131.882 23.7605 126.41 23.7605 122.306 27.3109 122.306 33.8655 122.306 39.8739 125.863 43.4244 131.609 43.4244zM131.882 26.7647C135.166 26.7647 137.081 28.9496 137.081 33.3193 137.081 38.2353 134.892 40.4202 131.609 40.4202 128.325 40.4202 126.136 38.2353 126.136 33.5924 126.136 29.2227 128.599 26.7647 131.882 26.7647z" fill="#fff"/><path d="M145.837 51.3446H149.394C149.394 48.6135 149.394 45.6093 149.394 42.8782 150.488 43.4244 151.856 43.6976 153.498 43.6976 158.696 43.6976 162.801 40.4202 162.801 33.5925 162.801 27.311 159.517 24.0337 154.866 24.0337 152.403 24.0337 150.488 25.1261 149.12 26.4917V24.0337H145.563C145.563 26.4917 145.563 29.2228 145.563 31.4076V41.2396C146.11 44.5169 146.11 47.7942 145.837 51.3446zM149.667 37.6892C149.667 34.4118 149.667 31.4076 149.667 28.1303 150.762 27.311 152.13 26.7648 153.771 26.7648 157.055 26.7648 159.244 28.6765 159.244 33.5925S156.781 40.6934 153.224 40.6934C151.856 40.6934 150.488 40.4202 149.667 40.1471V37.6892z" fill="#fff"/><path d="M176.481 43.4245C179.217 43.4245 181.406 42.6052 182.774 41.5128L183.048 38.2354C181.406 39.601 179.217 40.1472 177.029 40.1472 173.472 40.1472 170.462 38.2354 170.462 33.5926H183.322C183.322 33.0464 183.595 31.9539 183.595 30.8615 183.595 25.9455 180.586 23.4875 175.934 23.4875 170.188 23.4875 166.905 27.5842 166.905 33.5926 166.905 40.4203 171.009 43.4245 176.481 43.4245zM175.66 26.7649C177.849 26.7649 180.038 28.1304 180.038 30.8615V31.1346H170.735C171.283 28.4035 173.198 26.7649 175.66 26.7649z" fill="#fff"/><path d="M188.52 43.1513H192.077C192.077 37.6891 192.077 32.2269 192.077 28.4034 193.171 27.584 194.54 27.0378 196.728 27.0378 199.191 27.0378 201.106 28.1302 201.106 31.1344V36.5966C201.106 38.7815 201.106 40.9664 201.106 43.1513H204.937C204.937 41.7857 204.937 38.5084 204.937 36.5966V30.5882C204.937 26.2185 202.474 23.7605 198.644 23.7605 195.634 23.7605 193.719 25.126 192.351 26.4916V24.3067H188.794C188.794 25.9454 188.794 27.584 188.794 28.9496V37.6891C188.52 39.6008 188.52 41.2395 188.52 43.1513z" fill="#fff"/><path d="M219.712 42.0588C221.08 42.8782 223.817 43.4244 226.279 43.4244 232.846 43.4244 236.676 39.3277 236.676 33.0462 236.676 26.4916 233.119 23.7605 228.742 23.7605 226.553 23.7605 224.911 24.5798 223.543 25.6723 223.543 22.6681 223.543 19.6639 223.543 16.6597H219.986C219.986 19.1177 219.986 21.5756 219.986 24.0336V34.6849C219.712 37.1429 219.712 39.6008 219.712 42.0588zM227.1 26.4916C230.657 26.4916 232.846 28.6765 232.846 33.3193 232.846 37.9622 230.383 40.6933 226.279 40.6933 225.185 40.6933 224.09 40.4202 223.269 40.1471 223.269 35.7773 223.269 31.6807 223.269 27.3109 224.09 27.0378 225.458 26.4916 227.1 26.4916z" fill="#fff"/><path d="M247.348 32.5001C242.97 33.0463 240.234 34.685 240.234 38.2354 240.234 41.5127 242.423 43.4244 245.706 43.4244 248.169 43.4244 250.084 42.6051 251.726 40.9665 251.999 42.332 252.82 43.4244 255.009 43.4244 256.377 43.4244 257.198 43.1513 257.745 42.6051V40.1471C257.472 40.4202 256.924 40.4202 256.377 40.4202 255.283 40.4202 255.009 39.6009 255.009 38.5085 255.009 37.416 255.009 33.8656 255.009 30.0421 255.009 26.7648 253.641 24.0337 247.621 24.0337 244.612 24.0337 242.149 24.853 240.781 25.3992L241.328 28.4034C242.696 27.5841 244.885 27.0379 247.074 27.0379 250.358 27.0379 251.452 28.4034 251.452 31.1345V31.9539L247.348 32.5001zM251.726 39.0547C250.084 40.1471 248.442 40.4202 247.074 40.4202 244.885 40.4202 243.791 39.6009 243.791 37.6892 243.791 36.0505 244.885 35.2312 247.348 34.685L251.452 34.1387C251.726 36.0505 251.726 37.9623 251.726 39.0547z" fill="#fff"/><path d="M261.849 43.1513H265.406C265.406 37.6891 265.406 32.2269 265.406 28.4034 266.501 27.584 267.869 27.0378 270.058 27.0378 272.52 27.0378 274.435 28.1302 274.435 31.1344V36.5966C274.435 38.7815 274.435 40.9664 274.435 43.1513H278.266C278.266 41.7857 278.266 38.5084 278.266 36.5966V30.5882C278.266 26.2185 275.803 23.7605 271.973 23.7605 268.963 23.7605 267.048 25.126 265.68 26.4916V24.3067H262.123C262.123 25.9454 262.123 27.584 262.123 28.9496V37.6891C261.849 39.6008 261.849 41.2395 261.849 43.1513z" fill="#fff"/><path d="M301.25 42.8781C298.24 39.6008 295.504 36.5966 292.494 33.3192L300.702 24.5798 296.325 24.3066C293.588 27.584 290.852 30.5882 288.116 33.5924 291.126 36.8697 293.862 39.8739 296.598 43.1512L301.25 42.8781z" fill="#fff"/><path d="M287.842 43.1513c0-7.920200000000001.0-18.5715.0-26.4916H284.285C284.285 24.5798 284.285 35.2311 284.285 43.1513H287.842z" fill="#fff"/><path d="M306.996 20.7562C308.364 20.7562 309.458 19.9369 309.458 18.5713 309.458 17.2058 308.364 16.3865 306.996 16.3865S304.533 17.2058 304.533 18.5713C304.533 19.9369 305.628 20.7562 306.996 20.7562z" fill="#fff"/><path d="M305.08 43.1512H308.637C308.637 36.8697 308.637 30.5882 308.637 24.3066H305.08C305.354 30.315 305.354 36.8697 305.08 43.1512z" fill="#fff"/><path d="M315.478 43.1513H319.035C319.035 37.6891 319.035 32.2269 319.035 28.4034 320.129 27.584 321.497 27.0378 323.686 27.0378 326.149 27.0378 328.064 28.1302 328.064 31.1344V36.5966C328.064 38.7815 328.064 40.9664 328.064 43.1513H331.894C331.894 41.7857 331.894 38.5084 331.894 36.5966V30.5882C331.894 26.2185 329.432 23.7605 325.601 23.7605 322.592 23.7605 320.676 25.126 319.308 26.4916V24.3067H315.751C315.751 25.9454 315.751 27.584 315.751 28.9496V37.6891C315.478 39.6008 315.478 41.2395 315.478 43.1513z" fill="#fff"/><path d="M335.999 46.1555C335.999 49.9791 340.924 51.3446 345.028 51.3446 350.227 51.3446 354.604 49.1597 354.604 45.0631 354.604 40.9665 350.5 40.4202 346.943 39.874 344.481 39.6009 342.292 39.3278 342.292 37.9623 342.292 37.1429 342.839 36.5967 344.207 36.3236H344.481C348.858 36.3236 352.142 33.8656 352.142 30.3152 352.142 28.6765 351.595 27.5841 350.5 26.7648 351.868 26.7648 352.142 27.0379 354.057 27.0379H354.331L354.604 24.3068H351.868C348.311 24.3068 346.943 24.0337 345.301 24.0337 340.376 24.0337 337.093 26.4917 337.093 30.3152 337.093 33.3194 339.008 35.2312 341.744 36.0505 340.376 36.5967 339.556 37.6892 339.556 39.0547 339.556 40.1471 340.103 40.9665 340.924 41.5127 337.914 42.332 335.999 43.4244 335.999 46.1555zM340.65 30.3152C340.65 28.1303 342.292 26.4917 344.754 26.4917 347.217 26.4917 348.585 27.8572 348.585 30.0421 348.585 32.227 346.67 33.8656 344.481 33.8656S340.65 32.7732 340.65 30.3152zM343.386 42.332C343.933 42.6051 344.754 42.6051 345.575 42.6051 348.585 43.1513 351.047 43.4244 351.047 45.3362 351.047 47.5211 348.585 48.6135 345.301 48.6135 342.839 48.6135 339.829 47.7942 339.829 45.6093 339.829 43.9707 341.197 43.1513 343.386 42.332z" fill="#fff"/><path d="M71.9606 43.4245H76.0648L76.3385 43.1514V32.227C76.3385 29.2228 77.9801 27.5842 80.4427 27.5842 82.9052 27.5842 84.5469 29.2228 84.5469 32.227V43.1514L84.8205 43.4245H88.9247L89.1983 43.1514V32.227C89.1983 27.5842 86.4622 23.4875 80.4427 23.4875 74.4232 23.4875 71.687 27.5842 71.687 32.227V43.1514L71.9606 43.4245z" fill="#fff"/><path d="M44.5994 43.6974C45.9675 43.6974 47.0619 43.4243 47.3356 43.4243L47.6092 43.1511V39.8738L47.3356 39.6007C47.0619 39.6007 46.5147 39.6007 46.2411 39.6007 44.5994 39.6007 43.7786 39.0545 43.7786 37.4158V28.1301H47.3356L47.6092 27.857V24.3066L47.3356 24.0335H43.505V20.7562C43.505 20.4831 43.2313 20.21 43.2313 20.21H39.4007C39.1271 20.21 38.8535 20.4831 38.8535 20.7562V37.689C38.8535 42.0587 41.316 43.6974 44.5994 43.6974z" fill="#fff"/><path d="M27.9087 35.2309 29.824 35.504C31.1921 35.7771 32.0129 36.3234 32.0129 37.6889 32.0129 39.0545 30.9185 40.1469 28.7296 40.1469 25.4462 40.1469 22.9837 38.7813 22.7101 38.7813L22.4364 39.3276 21.8892 41.5124C21.6156 42.0587 21.8892 42.3318 22.1628 42.3318 23.2573 42.878 26.5407 43.6973 28.7296 43.6973 33.1074 43.6973 36.3908 40.9662 36.3908 37.4158 36.3908 33.3192 33.6546 32.2267 30.0976 31.4074L28.1823 31.1343C26.8143 30.8612 25.9934 30.315 25.9934 29.2225 25.9934 27.857 27.3615 27.0376 29.2768 27.0376 32.0129 27.0376 33.9282 28.1301 34.2019 28.1301L34.4755 27.857 35.2963 25.1259C35.5699 24.8528 35.5699 24.8528 35.2963 24.5797 33.6546 23.7603 32.0129 23.2141 29.5504 23.2141 24.899 23.2141 21.8892 25.9452 21.8892 29.2225 21.6156 32.7729 24.3517 34.4116 27.9087 35.2309z" fill="#fff"/><path d="M59.1008 43.9704C64.8467 43.9704 69.2245 39.6007 69.2245 33.5923S64.8467 23.2141 59.1008 23.2141 48.9771 27.5839 48.9771 33.5923 53.3549 43.9704 59.1008 43.9704zM59.1008 27.3108C62.1105 27.3108 64.5731 29.4956 64.5731 33.5923 64.5731 37.6889 61.8369 39.8738 59.1008 39.8738 56.091 39.8738 53.6285 37.6889 53.6285 33.5923 53.6285 29.4956 56.091 27.3108 59.1008 27.3108z" fill="#fff"/><path d="M101.511 43.9704C105.615 43.9704 108.351 42.3318 109.72 40.42L109.993 39.8738S109.993 39.6007 109.72 39.3276L108.078 37.6889C107.531 37.4158 107.531 37.1427 107.257 37.1427S106.983 37.1427 106.983 37.4158C105.889 39.0544 104.247 39.8738 101.785 39.8738 99.0486 39.8738 97.1333 37.962 96.586 34.6847H109.172C110.54 34.6847 110.814 34.1385 110.814 33.3192 110.814 27.3107 107.257 23.2141 101.785 23.2141 96.586 23.2141 91.9346 27.3107 91.9346 33.3192 91.9346 40.1469 96.586 43.9704 101.511 43.9704zM101.511 27.0376C104.521 27.0376 106.163 28.9494 106.163 31.4074H96.586C97.1333 28.9494 98.7749 27.0376 101.511 27.0376z" fill="#fff"/></g><defs><clipPath id="clip0"><rect width="376.493" height="65" fill="#fff"/></clipPath></defs></svg></span><span class="text-hide">Stone OpenBank</span>
+        <a class="navbar-brand" href="../../../../">
+		<span class="navbar-logo"><svg width="173" height="65" viewBox="0 0 377 65" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)"><path d="M0 0V65H376.494V0H0zM373.484 61.9958H3.00976V3.0042H373.484V61.9958z" fill="#fff"/><path d="M131.609 43.4244C136.807 43.4244 140.911 40.1471 140.911 33.3193c0-6.8277-4.10400000000001-9.5588-9.029-9.5588C126.41 23.7605 122.306 27.3109 122.306 33.8655c0 6.0084 3.557 9.5589 9.30300000000001 9.5589zM131.882 26.7647C135.166 26.7647 137.081 28.9496 137.081 33.3193 137.081 38.2353 134.892 40.4202 131.609 40.4202 128.325 40.4202 126.136 38.2353 126.136 33.5924 126.136 29.2227 128.599 26.7647 131.882 26.7647z" fill="#fff"/><path d="M145.837 51.3446H149.394c0-2.7311.0-5.7353.0-8.4664C150.488 43.4244 151.856 43.6976 153.498 43.6976c5.19800000000001.0 9.303-3.2774 9.303-10.1051C162.801 27.311 159.517 24.0337 154.866 24.0337 152.403 24.0337 150.488 25.1261 149.12 26.4917v-2.458H145.563c0 2.458.0 5.1891.0 7.3739v9.832C146.11 44.5169 146.11 47.7942 145.837 51.3446zM149.667 37.6892c0-3.2774.0-6.2816.0-9.5589C150.762 27.311 152.13 26.7648 153.771 26.7648 157.055 26.7648 159.244 28.6765 159.244 33.5925S156.781 40.6934 153.224 40.6934C151.856 40.6934 150.488 40.4202 149.667 40.1471V37.6892z" fill="#fff"/><path d="M176.481 43.4245C179.217 43.4245 181.406 42.6052 182.774 41.5128L183.048 38.2354C181.406 39.601 179.217 40.1472 177.029 40.1472 173.472 40.1472 170.462 38.2354 170.462 33.5926h12.86C183.322 33.0464 183.595 31.9539 183.595 30.8615c0-4.916-3.00899999999999-7.374-7.661-7.374-5.74600000000001.0-9.029 4.0967-9.029 10.1051C166.905 40.4203 171.009 43.4245 176.481 43.4245zM175.66 26.7649C177.849 26.7649 180.038 28.1304 180.038 30.8615V31.1346h-9.303C171.283 28.4035 173.198 26.7649 175.66 26.7649z" fill="#fff"/><path d="M188.52 43.1513H192.077c0-5.4622.0-10.9244.0-14.7479C193.171 27.584 194.54 27.0378 196.728 27.0378 199.191 27.0378 201.106 28.1302 201.106 31.1344v5.4622c0 2.1849.0 4.3698.0 6.5547H204.937c0-1.3656.0-4.6429.0-6.5547V30.5882C204.937 26.2185 202.474 23.7605 198.644 23.7605 195.634 23.7605 193.719 25.126 192.351 26.4916V24.3067H188.794c0 1.6387.0 3.2773.0 4.6429v8.7395C188.52 39.6008 188.52 41.2395 188.52 43.1513z" fill="#fff"/><path d="M219.712 42.0588C221.08 42.8782 223.817 43.4244 226.279 43.4244 232.846 43.4244 236.676 39.3277 236.676 33.0462c0-6.5546-3.55699999999999-9.2857-7.934-9.2857C226.553 23.7605 224.911 24.5798 223.543 25.6723c0-3.0042.0-6.0084.0-9.0126H219.986c0 2.458.0 4.9159.0 7.3739V34.6849C219.712 37.1429 219.712 39.6008 219.712 42.0588zM227.1 26.4916C230.657 26.4916 232.846 28.6765 232.846 33.3193 232.846 37.9622 230.383 40.6933 226.279 40.6933 225.185 40.6933 224.09 40.4202 223.269 40.1471c0-4.36980000000001.0-8.4664.0-12.8362C224.09 27.0378 225.458 26.4916 227.1 26.4916z" fill="#fff"/><path d="M247.348 32.5001C242.97 33.0463 240.234 34.685 240.234 38.2354 240.234 41.5127 242.423 43.4244 245.706 43.4244 248.169 43.4244 250.084 42.6051 251.726 40.9665 251.999 42.332 252.82 43.4244 255.009 43.4244 256.377 43.4244 257.198 43.1513 257.745 42.6051v-2.458C257.472 40.4202 256.924 40.4202 256.377 40.4202 255.283 40.4202 255.009 39.6009 255.009 38.5085c0-1.0925.0-4.6429.0-8.4664.0-3.2773-1.368-6.0084-7.38799999999998-6.0084C244.612 24.0337 242.149 24.853 240.781 25.3992L241.328 28.4034C242.696 27.5841 244.885 27.0379 247.074 27.0379 250.358 27.0379 251.452 28.4034 251.452 31.1345V31.9539L247.348 32.5001zM251.726 39.0547C250.084 40.1471 248.442 40.4202 247.074 40.4202 244.885 40.4202 243.791 39.6009 243.791 37.6892 243.791 36.0505 244.885 35.2312 247.348 34.685L251.452 34.1387C251.726 36.0505 251.726 37.9623 251.726 39.0547z" fill="#fff"/><path d="M261.849 43.1513H265.406c0-5.4622.0-10.9244.0-14.7479C266.501 27.584 267.869 27.0378 270.058 27.0378 272.52 27.0378 274.435 28.1302 274.435 31.1344v5.4622c0 2.1849.0 4.3698.0 6.5547H278.266c0-1.3656.0-4.6429.0-6.5547V30.5882C278.266 26.2185 275.803 23.7605 271.973 23.7605 268.963 23.7605 267.048 25.126 265.68 26.4916V24.3067H262.123c0 1.6387.0 3.2773.0 4.6429v8.7395C261.849 39.6008 261.849 41.2395 261.849 43.1513z" fill="#fff"/><path d="M301.25 42.8781C298.24 39.6008 295.504 36.5966 292.494 33.3192L300.702 24.5798 296.325 24.3066C293.588 27.584 290.852 30.5882 288.116 33.5924 291.126 36.8697 293.862 39.8739 296.598 43.1512L301.25 42.8781z" fill="#fff"/><path d="M287.842 43.1513c0-7.9202.0-18.5715.0-26.4916H284.285c0 7.9201.0 18.5714.0 26.4916H287.842z" fill="#fff"/><path d="M306.996 20.7562C308.364 20.7562 309.458 19.9369 309.458 18.5713 309.458 17.2058 308.364 16.3865 306.996 16.3865S304.533 17.2058 304.533 18.5713C304.533 19.9369 305.628 20.7562 306.996 20.7562z" fill="#fff"/><path d="M305.08 43.1512H308.637c0-6.2815.0-12.563.0-18.8446H305.08C305.354 30.315 305.354 36.8697 305.08 43.1512z" fill="#fff"/><path d="M315.478 43.1513H319.035c0-5.4622.0-10.9244.0-14.7479C320.129 27.584 321.497 27.0378 323.686 27.0378 326.149 27.0378 328.064 28.1302 328.064 31.1344v5.4622c0 2.1849.0 4.3698.0 6.5547H331.894c0-1.3656.0-4.6429.0-6.5547V30.5882C331.894 26.2185 329.432 23.7605 325.601 23.7605 322.592 23.7605 320.676 25.126 319.308 26.4916V24.3067H315.751c0 1.6387.0 3.2773.0 4.6429v8.7395C315.478 39.6008 315.478 41.2395 315.478 43.1513z" fill="#fff"/><path d="M335.999 46.1555c0 3.8236 4.92499999999995 5.1891 9.029 5.1891C350.227 51.3446 354.604 49.1597 354.604 45.0631 354.604 40.9665 350.5 40.4202 346.943 39.874 344.481 39.6009 342.292 39.3278 342.292 37.9623 342.292 37.1429 342.839 36.5967 344.207 36.3236H344.481c4.37700000000001.0 7.661-2.458 7.661-6.0084C352.142 28.6765 351.595 27.5841 350.5 26.7648 351.868 26.7648 352.142 27.0379 354.057 27.0379H354.331L354.604 24.3068H351.868C348.311 24.3068 346.943 24.0337 345.301 24.0337 340.376 24.0337 337.093 26.4917 337.093 30.3152 337.093 33.3194 339.008 35.2312 341.744 36.0505 340.376 36.5967 339.556 37.6892 339.556 39.0547 339.556 40.1471 340.103 40.9665 340.924 41.5127 337.914 42.332 335.999 43.4244 335.999 46.1555zM340.65 30.3152c0-2.1849 1.642-3.8235 4.10400000000004-3.8235C347.217 26.4917 348.585 27.8572 348.585 30.0421 348.585 32.227 346.67 33.8656 344.481 33.8656S340.65 32.7732 340.65 30.3152zM343.386 42.332C343.933 42.6051 344.754 42.6051 345.575 42.6051 348.585 43.1513 351.047 43.4244 351.047 45.3362 351.047 47.5211 348.585 48.6135 345.301 48.6135 342.839 48.6135 339.829 47.7942 339.829 45.6093c0-1.6386 1.368-2.458 3.55700000000002-3.2773z" fill="#fff"/><path d="M71.9606 43.4245H76.0648C76.3385 43.4245 76.3385 43.4245 76.3385 43.1514V32.227c0-3.0042 1.6416-4.6428 4.10420000000001-4.6428C82.9052 27.5842 84.5469 29.2228 84.5469 32.227V43.1514C84.5469 43.4245 84.8205 43.4245 84.8205 43.4245H88.9247C89.1983 43.4245 89.1983 43.4245 89.1983 43.1514V32.227c0-4.6428-2.73610000000001-8.7395-8.7556-8.7395C74.4232 23.4875 71.687 27.5842 71.687 32.227V43.1514L71.9606 43.4245z" fill="#fff"/><path d="M44.5994 43.6974C45.9675 43.6974 47.0619 43.4243 47.3356 43.4243 47.6092 43.4243 47.6092 43.1511 47.6092 43.1511V39.8738C47.6092 39.6007 47.6092 39.6007 47.3356 39.6007 47.0619 39.6007 46.5147 39.6007 46.2411 39.6007 44.5994 39.6007 43.7786 39.0545 43.7786 37.4158V28.1301h3.557C47.6092 28.1301 47.6092 27.857 47.6092 27.857V24.3066C47.6092 24.0335 47.3356 24.0335 47.3356 24.0335H43.505V20.7562C43.505 20.4831 43.2313 20.21 43.2313 20.21H39.4007C39.1271 20.21 38.8535 20.4831 38.8535 20.7562V37.689C38.8535 42.0587 41.316 43.6974 44.5994 43.6974z" fill="#fff"/><path d="M27.9087 35.2309 29.824 35.504C31.1921 35.7771 32.0129 36.3234 32.0129 37.6889 32.0129 39.0545 30.9185 40.1469 28.7296 40.1469c-3.2834.0-5.7459-1.3656-6.0195-1.3656C22.4364 38.7813 22.4364 38.7813 22.4364 39.3276l-.5472 2.1848C21.6156 42.0587 21.8892 42.3318 22.1628 42.3318 23.2573 42.878 26.5407 43.6973 28.7296 43.6973c4.3778.0 7.6612-2.7311 7.6612-6.2815.0-4.0966-2.7362-5.1891-6.2932-6.0084L28.1823 31.1343C26.8143 30.8612 25.9934 30.315 25.9934 29.2225c0-1.3655 1.3681-2.1849 3.2834-2.1849 2.7361.0 4.6514 1.0925 4.9251 1.0925C34.4755 28.1301 34.4755 28.1301 34.4755 27.857L35.2963 25.1259C35.5699 24.8528 35.5699 24.8528 35.2963 24.5797 33.6546 23.7603 32.0129 23.2141 29.5504 23.2141c-4.6514.0-7.6612 2.7311-7.6612 6.0084C21.6156 32.7729 24.3517 34.4116 27.9087 35.2309z" fill="#fff"/><path d="M59.1008 43.9704c5.7459.0 10.1237-4.3697 10.1237-10.3781S64.8467 23.2141 59.1008 23.2141 48.9771 27.5839 48.9771 33.5923s4.3778 10.3781 10.1237 10.3781zm0-16.6596c3.0097.0 5.4723 2.1848 5.4723 6.2815.0 4.0966-2.7362 6.2815-5.4723 6.2815C56.091 39.8738 53.6285 37.6889 53.6285 33.5923c0-4.0967 2.4625-6.2815 5.4723-6.2815z" fill="#fff"/><path d="M101.511 43.9704c4.104.0 6.84-1.6386 8.209-3.5504L109.993 39.8738S109.993 39.6007 109.72 39.3276l-1.642-1.6387C107.531 37.4158 107.531 37.1427 107.257 37.1427S106.983 37.1427 106.983 37.4158C105.889 39.0544 104.247 39.8738 101.785 39.8738 99.0486 39.8738 97.1333 37.962 96.586 34.6847h12.586C110.54 34.6847 110.814 34.1385 110.814 33.3192 110.814 27.3107 107.257 23.2141 101.785 23.2141 96.586 23.2141 91.9346 27.3107 91.9346 33.3192 91.9346 40.1469 96.586 43.9704 101.511 43.9704zm0-16.9328c3.01000000000001.0 4.652 1.9118 4.652 4.3698H96.586C97.1333 28.9494 98.7749 27.0376 101.511 27.0376z" fill="#fff"/></g><defs><clipPath id="clip0"><rect width="376.493" height="65" fill="#fff"/></clipPath></defs></svg></span><span class="text-hide">Stone OpenBank</span>
 	</a>
 	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
 		<ul class="navbar-nav mt-2 mt-lg-0">
@@ -71,7 +70,7 @@
 				
 				
 				
-				<a class="nav-link" href="/docs/guias/" ><span>Guias</span></a>
+				<a class="nav-link" href="../../../../docs/guias/" ><span>Guias</span></a>
 			</li>
 			
 			<li class="nav-item mr-4 mb-2 mb-lg-0">
@@ -81,7 +80,7 @@
 				
 				
 				
-				<a class="nav-link active" href="/docs/referencia-da-api/" ><span class="active">Referência da API</span></a>
+				<a class="nav-link active" href="../../../../docs/referencia-da-api/" ><span class="active">Referência da API</span></a>
 			</li>
 			
 			
@@ -95,12 +94,12 @@
 <input
   type="search"
   class="form-control td-search-input"
-  placeholder="&#xf002; Procurar…"
-  aria-label="Procurar…"
+  placeholder="&#xf002; [i18n] ui_search"
+  aria-label="[i18n] ui_search"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.1c3d68230663a3f1bce808d9e588a9f8.json"
-  data-offline-search-base-href="/"
+  data-offline-search-index-json-src="../../../../offline-search-index.1c3d68230663a3f1bce808d9e588a9f8.json"
+  data-offline-search-base-href="../../../../"
   data-offline-search-max-results="10"
 >
 
@@ -127,12 +126,12 @@
 <input
   type="search"
   class="form-control td-search-input"
-  placeholder="&#xf002; Procurar…"
-  aria-label="Procurar…"
+  placeholder="&#xf002; [i18n] ui_search"
+  aria-label="[i18n] ui_search"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.1c3d68230663a3f1bce808d9e588a9f8.json"
-  data-offline-search-base-href="/"
+  data-offline-search-index-json-src="../../../../offline-search-index.1c3d68230663a3f1bce808d9e588a9f8.json"
+  data-offline-search-base-href="../../../../"
   data-offline-search-max-results="10"
 >
 
@@ -153,7 +152,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Stone Openbank</a>
+    <a  href="../../../../docs/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Stone Openbank</a>
   </li>
   <ul>
     <li class="collapse show" id="docs">
@@ -171,7 +170,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Guias</a>
+    <a  href="../../../../docs/guias/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Guias</a>
   </li>
   <ul>
     <li class="collapse " id="docsguias">
@@ -189,7 +188,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/stone-openbank-api/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Stone OpenBank API</a>
+    <a  href="../../../../docs/guias/stone-openbank-api/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Stone OpenBank API</a>
   </li>
   <ul>
     <li class="collapse " id="docsguiasstone-openbank-api">
@@ -207,7 +206,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/stone-openbank-api/overview/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Overview</a>
+    <a  href="../../../../docs/guias/stone-openbank-api/overview/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Overview</a>
   </li>
   <ul>
     <li class="collapse " id="docsguiasstone-openbank-apioverview">
@@ -232,7 +231,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/stone-openbank-api/quickstart/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Quickstart</a>
+    <a  href="../../../../docs/guias/stone-openbank-api/quickstart/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Quickstart</a>
   </li>
   <ul>
     <li class="collapse " id="docsguiasstone-openbank-apiquickstart">
@@ -257,7 +256,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/stone-openbank-api/ambientes-da-api/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Ambientes da API</a>
+    <a  href="../../../../docs/guias/stone-openbank-api/ambientes-da-api/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Ambientes da API</a>
   </li>
   <ul>
     <li class="collapse " id="docsguiasstone-openbank-apiambientes-da-api">
@@ -289,7 +288,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/a-conta-stone/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">A Conta Stone</a>
+    <a  href="../../../../docs/guias/a-conta-stone/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">A Conta Stone</a>
   </li>
   <ul>
     <li class="collapse " id="docsguiasa-conta-stone">
@@ -307,7 +306,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/a-conta-stone/overview/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Overview</a>
+    <a  href="../../../../docs/guias/a-conta-stone/overview/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Overview</a>
   </li>
   <ul>
     <li class="collapse " id="docsguiasa-conta-stoneoverview">
@@ -332,7 +331,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/a-conta-stone/modelos-de-parceria/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Modelos de Parceria</a>
+    <a  href="../../../../docs/guias/a-conta-stone/modelos-de-parceria/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Modelos de Parceria</a>
   </li>
   <ul>
     <li class="collapse " id="docsguiasa-conta-stonemodelos-de-parceria">
@@ -357,7 +356,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/a-conta-stone/aplicativos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Aplicativos</a>
+    <a  href="../../../../docs/guias/a-conta-stone/aplicativos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Aplicativos</a>
   </li>
   <ul>
     <li class="collapse " id="docsguiasa-conta-stoneaplicativos">
@@ -389,7 +388,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/integracao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Integração</a>
+    <a  href="../../../../docs/guias/integracao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Integração</a>
   </li>
   <ul>
     <li class="collapse " id="docsguiasintegracao">
@@ -407,7 +406,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/integracao/cadastro-da-aplicacao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cadastro da Aplicação</a>
+    <a  href="../../../../docs/guias/integracao/cadastro-da-aplicacao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cadastro da Aplicação</a>
   </li>
   <ul>
     <li class="collapse " id="docsguiasintegracaocadastro-da-aplicacao">
@@ -425,7 +424,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Gerando o par de chaves</a>
+    <a  href="../../../../docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Gerando o par de chaves</a>
   </li>
   <ul>
     <li class="collapse " id="docsguiasintegracaocadastro-da-aplicacaogerando-o-par-de-chaves">
@@ -457,7 +456,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/integracao/boas-praticas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Boas Práticas</a>
+    <a  href="../../../../docs/guias/integracao/boas-praticas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Boas Práticas</a>
   </li>
   <ul>
     <li class="collapse " id="docsguiasintegracaoboas-praticas">
@@ -482,7 +481,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/integracao/autenticacao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Autenticação</a>
+    <a  href="../../../../docs/guias/integracao/autenticacao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Autenticação</a>
   </li>
   <ul>
     <li class="collapse " id="docsguiasintegracaoautenticacao">
@@ -507,7 +506,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/integracao/testando-a-api/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Testando a API</a>
+    <a  href="../../../../docs/guias/integracao/testando-a-api/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Testando a API</a>
   </li>
   <ul>
     <li class="collapse " id="docsguiasintegracaotestando-a-api">
@@ -532,7 +531,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/integracao/consentimento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consentimento</a>
+    <a  href="../../../../docs/guias/integracao/consentimento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consentimento</a>
   </li>
   <ul>
     <li class="collapse " id="docsguiasintegracaoconsentimento">
@@ -557,7 +556,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/integracao/aprovacao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Aprovação</a>
+    <a  href="../../../../docs/guias/integracao/aprovacao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Aprovação</a>
   </li>
   <ul>
     <li class="collapse " id="docsguiasintegracaoaprovacao">
@@ -582,7 +581,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/integracao/webhooks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Webhooks</a>
+    <a  href="../../../../docs/guias/integracao/webhooks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Webhooks</a>
   </li>
   <ul>
     <li class="collapse " id="docsguiasintegracaowebhooks">
@@ -607,7 +606,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/integracao/reembolso-de-transferencias/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Reembolso de transferências</a>
+    <a  href="../../../../docs/guias/integracao/reembolso-de-transferencias/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Reembolso de transferências</a>
   </li>
   <ul>
     <li class="collapse " id="docsguiasintegracaoreembolso-de-transferencias">
@@ -639,7 +638,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/tutoriais/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Tutoriais</a>
+    <a  href="../../../../docs/guias/tutoriais/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Tutoriais</a>
   </li>
   <ul>
     <li class="collapse " id="docsguiastutoriais">
@@ -657,7 +656,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/tutoriais/integrando-na-pratica/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Integrando na Prática</a>
+    <a  href="../../../../docs/guias/tutoriais/integrando-na-pratica/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Integrando na Prática</a>
   </li>
   <ul>
     <li class="collapse " id="docsguiastutoriaisintegrando-na-pratica">
@@ -689,7 +688,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/integracao-para-fornecedores/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Integração para Fornecedores</a>
+    <a  href="../../../../docs/guias/integracao-para-fornecedores/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Integração para Fornecedores</a>
   </li>
   <ul>
     <li class="collapse " id="docsguiasintegracao-para-fornecedores">
@@ -707,7 +706,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/guias/integracao-para-fornecedores/authorization/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Autorizar</a>
+    <a  href="../../../../docs/guias/integracao-para-fornecedores/authorization/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Autorizar</a>
   </li>
   <ul>
     <li class="collapse " id="docsguiasintegracao-para-fornecedoresauthorization">
@@ -746,7 +745,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Referência da API</a>
+    <a  href="../../../../docs/referencia-da-api/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Referência da API</a>
   </li>
   <ul>
     <li class="collapse show" id="docsreferencia-da-api">
@@ -764,7 +763,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/padroes-da-api/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Padrões da API</a>
+    <a  href="../../../../docs/referencia-da-api/padroes-da-api/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Padrões da API</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipadroes-da-api">
@@ -782,7 +781,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/padroes-da-api/overview/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Overview</a>
+    <a  href="../../../../docs/referencia-da-api/padroes-da-api/overview/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Overview</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipadroes-da-apioverview">
@@ -807,7 +806,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/padroes-da-api/autenticacao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Autenticação</a>
+    <a  href="../../../../docs/referencia-da-api/padroes-da-api/autenticacao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Autenticação</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipadroes-da-apiautenticacao">
@@ -832,7 +831,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/padroes-da-api/data-e-hora/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Data e Hora</a>
+    <a  href="../../../../docs/referencia-da-api/padroes-da-api/data-e-hora/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Data e Hora</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipadroes-da-apidata-e-hora">
@@ -857,7 +856,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/padroes-da-api/paginacao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Paginação</a>
+    <a  href="../../../../docs/referencia-da-api/padroes-da-api/paginacao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Paginação</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipadroes-da-apipaginacao">
@@ -882,7 +881,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/padroes-da-api/valores-financeiros/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Valores Financeiros</a>
+    <a  href="../../../../docs/referencia-da-api/padroes-da-api/valores-financeiros/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Valores Financeiros</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipadroes-da-apivalores-financeiros">
@@ -907,7 +906,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/padroes-da-api/codigos-de-resposta/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Códigos De Resposta</a>
+    <a  href="../../../../docs/referencia-da-api/padroes-da-api/codigos-de-resposta/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Códigos De Resposta</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipadroes-da-apicodigos-de-resposta">
@@ -932,7 +931,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/padroes-da-api/mensagens-de-erro/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Mensagens De Erro</a>
+    <a  href="../../../../docs/referencia-da-api/padroes-da-api/mensagens-de-erro/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Mensagens De Erro</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipadroes-da-apimensagens-de-erro">
@@ -964,7 +963,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/dados-da-conta/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Dados da Conta</a>
+    <a  href="../../../../docs/referencia-da-api/dados-da-conta/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Dados da Conta</a>
   </li>
   <ul>
     <li class="collapse show" id="docsreferencia-da-apidados-da-conta">
@@ -982,7 +981,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/dados-da-conta/criar-nova-conta-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar Novo Pedido de Conta de Pagamento</a>
+    <a  href="../../../../docs/referencia-da-api/dados-da-conta/criar-nova-conta-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar Novo Pedido de Conta de Pagamento</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apidados-da-contacriar-nova-conta-de-pagamento">
@@ -1007,7 +1006,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/dados-da-conta/consultar-dados-do-pedido-da-conta-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Dados do Pedido da Conta de Pagamento</a>
+    <a  href="../../../../docs/referencia-da-api/dados-da-conta/consultar-dados-do-pedido-da-conta-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Dados do Pedido da Conta de Pagamento</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apidados-da-contaconsultar-dados-do-pedido-da-conta-de-pagamento">
@@ -1032,7 +1031,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/dados-da-conta/verificar-status-de-uma-entidade/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Verificar Status de Uma Entidade</a>
+    <a  href="../../../../docs/referencia-da-api/dados-da-conta/verificar-status-de-uma-entidade/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Verificar Status de Uma Entidade</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apidados-da-contaverificar-status-de-uma-entidade">
@@ -1057,7 +1056,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/dados-da-conta/overview-dados-da-conta/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O Que é Uma Conta</a>
+    <a  href="../../../../docs/referencia-da-api/dados-da-conta/overview-dados-da-conta/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O Que é Uma Conta</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apidados-da-contaoverview-dados-da-conta">
@@ -1082,7 +1081,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/dados-da-conta/consultar-dados-da-conta/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Dados da Conta</a>
+    <a  href="../../../../docs/referencia-da-api/dados-da-conta/consultar-dados-da-conta/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Dados da Conta</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apidados-da-contaconsultar-dados-da-conta">
@@ -1107,7 +1106,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/dados-da-conta/consultar-todas-as-contas-as-quais-o-usuario-tem-acesso/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Todas Contas às Quais Se Tem Acesso</a>
+    <a  href="../../../../docs/referencia-da-api/dados-da-conta/consultar-todas-as-contas-as-quais-o-usuario-tem-acesso/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Todas Contas às Quais Se Tem Acesso</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apidados-da-contaconsultar-todas-as-contas-as-quais-o-usuario-tem-acesso">
@@ -1132,7 +1131,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/dados-da-conta/o-objeto-saldo/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O Objeto Saldo</a>
+    <a  href="../../../../docs/referencia-da-api/dados-da-conta/o-objeto-saldo/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O Objeto Saldo</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apidados-da-contao-objeto-saldo">
@@ -1157,7 +1156,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/dados-da-conta/consultar-o-saldo/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar o Saldo</a>
+    <a  href="../../../../docs/referencia-da-api/dados-da-conta/consultar-o-saldo/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar o Saldo</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apidados-da-contaconsultar-o-saldo">
@@ -1182,7 +1181,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Objetos do Extrato</a>
+    <a  href="../../../../docs/referencia-da-api/dados-da-conta/objetos-do-extrato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Objetos do Extrato</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apidados-da-contaobjetos-do-extrato">
@@ -1200,7 +1199,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/estrutura-de-transacoes-no-extrato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Estrutura de Transações no Extrato</a>
+    <a  href="../../../../docs/referencia-da-api/dados-da-conta/objetos-do-extrato/estrutura-de-transacoes-no-extrato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Estrutura de Transações no Extrato</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apidados-da-contaobjetos-do-extratoestrutura-de-transacoes-no-extrato">
@@ -1232,7 +1231,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/dados-da-conta/consultar-extrato/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Consultar Extrato</a>
+    <a  href="../../../../docs/referencia-da-api/dados-da-conta/consultar-extrato/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Consultar Extrato</a>
   </li>
   <ul>
     <li class="collapse show" id="docsreferencia-da-apidados-da-contaconsultar-extrato">
@@ -1257,7 +1256,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/dados-da-conta/consultar-uma-entrada-no-extrato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Uma Entrada no Extrato</a>
+    <a  href="../../../../docs/referencia-da-api/dados-da-conta/consultar-uma-entrada-no-extrato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Uma Entrada no Extrato</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apidados-da-contaconsultar-uma-entrada-no-extrato">
@@ -1282,7 +1281,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/dados-da-conta/o-objeto-taxa/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O Objeto Taxas</a>
+    <a  href="../../../../docs/referencia-da-api/dados-da-conta/o-objeto-taxa/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O Objeto Taxas</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apidados-da-contao-objeto-taxa">
@@ -1307,7 +1306,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/dados-da-conta/consultar-taxas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Taxas</a>
+    <a  href="../../../../docs/referencia-da-api/dados-da-conta/consultar-taxas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Taxas</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apidados-da-contaconsultar-taxas">
@@ -1332,7 +1331,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/dados-da-conta/consultar-todas-as-taxas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Todas as Taxas</a>
+    <a  href="../../../../docs/referencia-da-api/dados-da-conta/consultar-todas-as-taxas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Todas as Taxas</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apidados-da-contaconsultar-todas-as-taxas">
@@ -1364,7 +1363,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/simulacoes-dry-run/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Simulações (DRY-RUN)</a>
+    <a  href="../../../../docs/referencia-da-api/simulacoes-dry-run/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Simulações (DRY-RUN)</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apisimulacoes-dry-run">
@@ -1382,7 +1381,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/simulacoes-dry-run/simular-uma-transferencia-interna/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Simular uma Transferência Interna</a>
+    <a  href="../../../../docs/referencia-da-api/simulacoes-dry-run/simular-uma-transferencia-interna/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Simular uma Transferência Interna</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apisimulacoes-dry-runsimular-uma-transferencia-interna">
@@ -1407,7 +1406,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/simulacoes-dry-run/simular-uma-transferencia-externa/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Simular uma Transferência Externa</a>
+    <a  href="../../../../docs/referencia-da-api/simulacoes-dry-run/simular-uma-transferencia-externa/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Simular uma Transferência Externa</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apisimulacoes-dry-runsimular-uma-transferencia-externa">
@@ -1432,7 +1431,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/simulacoes-dry-run/objetos-simulacao-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Objetos da Simulação de Pagamento</a>
+    <a  href="../../../../docs/referencia-da-api/simulacoes-dry-run/objetos-simulacao-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Objetos da Simulação de Pagamento</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apisimulacoes-dry-runobjetos-simulacao-de-pagamento">
@@ -1457,7 +1456,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/simulacoes-dry-run/simular-o-pagamento-de-um-documento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Simular o Pagamento de Um Documento</a>
+    <a  href="../../../../docs/referencia-da-api/simulacoes-dry-run/simular-o-pagamento-de-um-documento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Simular o Pagamento de Um Documento</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apisimulacoes-dry-runsimular-o-pagamento-de-um-documento">
@@ -1489,7 +1488,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/transferencias/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Transferências</a>
+    <a  href="../../../../docs/referencia-da-api/transferencias/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Transferências</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apitransferencias">
@@ -1507,7 +1506,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/transferencias/o-que-e-uma-transferencia/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O Que É Uma Transferência</a>
+    <a  href="../../../../docs/referencia-da-api/transferencias/o-que-e-uma-transferencia/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O Que É Uma Transferência</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apitransferenciaso-que-e-uma-transferencia">
@@ -1532,7 +1531,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/transferencias/o-objeto-transferencia/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O Objeto Transferência</a>
+    <a  href="../../../../docs/referencia-da-api/transferencias/o-objeto-transferencia/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O Objeto Transferência</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apitransferenciaso-objeto-transferencia">
@@ -1557,7 +1556,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/transferencias/transferencias-internas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Transferências Internas</a>
+    <a  href="../../../../docs/referencia-da-api/transferencias/transferencias-internas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Transferências Internas</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apitransferenciastransferencias-internas">
@@ -1575,7 +1574,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/transferencias/transferencias-internas/transferir-para-contas-stone/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Transferir para Contas Stone</a>
+    <a  href="../../../../docs/referencia-da-api/transferencias/transferencias-internas/transferir-para-contas-stone/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Transferir para Contas Stone</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apitransferenciastransferencias-internastransferir-para-contas-stone">
@@ -1600,7 +1599,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/transferencias/transferencias-internas/listar-transferencias-internas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Transferências Internas</a>
+    <a  href="../../../../docs/referencia-da-api/transferencias/transferencias-internas/listar-transferencias-internas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Transferências Internas</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apitransferenciastransferencias-internaslistar-transferencias-internas">
@@ -1625,7 +1624,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/transferencias/transferencias-internas/retornando-uma-transferencia-interna/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Retornando uma Transferência Interna</a>
+    <a  href="../../../../docs/referencia-da-api/transferencias/transferencias-internas/retornando-uma-transferencia-interna/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Retornando uma Transferência Interna</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apitransferenciastransferencias-internasretornando-uma-transferencia-interna">
@@ -1650,7 +1649,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/transferencias/transferencias-internas/cancelamento-de-uma-transferencia-interna-agendada/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cancelamento de Uma Transferência Interna Agendada</a>
+    <a  href="../../../../docs/referencia-da-api/transferencias/transferencias-internas/cancelamento-de-uma-transferencia-interna-agendada/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cancelamento de Uma Transferência Interna Agendada</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apitransferenciastransferencias-internascancelamento-de-uma-transferencia-interna-agendada">
@@ -1682,7 +1681,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/transferencias/transferencias-externas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Transferências Externas</a>
+    <a  href="../../../../docs/referencia-da-api/transferencias/transferencias-externas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Transferências Externas</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apitransferenciastransferencias-externas">
@@ -1700,7 +1699,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/transferencias/transferencias-externas/transferir-para-outros-bancos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Transferir para Outros Bancos</a>
+    <a  href="../../../../docs/referencia-da-api/transferencias/transferencias-externas/transferir-para-outros-bancos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Transferir para Outros Bancos</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apitransferenciastransferencias-externastransferir-para-outros-bancos">
@@ -1725,7 +1724,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/transferencias/transferencias-externas/listar-transferencias-externas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Transferências Externas</a>
+    <a  href="../../../../docs/referencia-da-api/transferencias/transferencias-externas/listar-transferencias-externas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Transferências Externas</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apitransferenciastransferencias-externaslistar-transferencias-externas">
@@ -1750,7 +1749,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/transferencias/transferencias-externas/retornar-uma-transferencia-externa/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Retornar Uma Transferência Externa</a>
+    <a  href="../../../../docs/referencia-da-api/transferencias/transferencias-externas/retornar-uma-transferencia-externa/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Retornar Uma Transferência Externa</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apitransferenciastransferencias-externasretornar-uma-transferencia-externa">
@@ -1775,7 +1774,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/transferencias/transferencias-externas/cancelamento-de-uma-transferencia-externa-agendada/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cancelamento de Uma Transferência Externa Agendada</a>
+    <a  href="../../../../docs/referencia-da-api/transferencias/transferencias-externas/cancelamento-de-uma-transferencia-externa-agendada/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cancelamento de Uma Transferência Externa Agendada</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apitransferenciastransferencias-externascancelamento-de-uma-transferencia-externa-agendada">
@@ -1814,7 +1813,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/pagamentos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Pagamentos</a>
+    <a  href="../../../../docs/referencia-da-api/pagamentos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Pagamentos</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipagamentos">
@@ -1832,7 +1831,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/pagamentos/o-que-e-um-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O Que É Um Pagamento</a>
+    <a  href="../../../../docs/referencia-da-api/pagamentos/o-que-e-um-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O Que É Um Pagamento</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipagamentoso-que-e-um-pagamento">
@@ -1857,7 +1856,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/pagamentos/o-objeto-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O  Objeto Pagamento</a>
+    <a  href="../../../../docs/referencia-da-api/pagamentos/o-objeto-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O  Objeto Pagamento</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipagamentoso-objeto-pagamento">
@@ -1882,7 +1881,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/pagamentos/criar-um-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar Um Pagamento</a>
+    <a  href="../../../../docs/referencia-da-api/pagamentos/criar-um-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar Um Pagamento</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipagamentoscriar-um-pagamento">
@@ -1907,7 +1906,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/pagamentos/listar-pagamentos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Pagamentos</a>
+    <a  href="../../../../docs/referencia-da-api/pagamentos/listar-pagamentos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Pagamentos</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipagamentoslistar-pagamentos">
@@ -1932,7 +1931,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/pagamentos/retornar-um-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Retornar Um Pagamento</a>
+    <a  href="../../../../docs/referencia-da-api/pagamentos/retornar-um-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Retornar Um Pagamento</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipagamentosretornar-um-pagamento">
@@ -1957,7 +1956,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/pagamentos/cancelamento-de-um-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cancelamento de um Pagamento Agendado</a>
+    <a  href="../../../../docs/referencia-da-api/pagamentos/cancelamento-de-um-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cancelamento de um Pagamento Agendado</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipagamentoscancelamento-de-um-pagamento">
@@ -1975,7 +1974,7 @@
         
           
           
-          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencia-da-apipagamentosconsideracoes_importantesconsiderac3a7c3b5es-importantes" href="/docs/referencia-da-api/pagamentos/consideracoes_importantes/considera%C3%A7%C3%B5es-importantes/">Considerações Importantes</a>
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencia-da-apipagamentosconsideracoes_importantesconsiderac3a7c3b5es-importantes" href="../../../../docs/referencia-da-api/pagamentos/consideracoes_importantes/considera%C3%A7%C3%B5es-importantes/">Considerações Importantes</a>
         
       
       
@@ -1997,7 +1996,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/agendamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Agendamento</a>
+    <a  href="../../../../docs/referencia-da-api/agendamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Agendamento</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apiagendamento">
@@ -2015,7 +2014,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/agendamento/operacoes-agendadas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Operações Agendadas</a>
+    <a  href="../../../../docs/referencia-da-api/agendamento/operacoes-agendadas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Operações Agendadas</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apiagendamentooperacoes-agendadas">
@@ -2040,7 +2039,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/agendamento/calendario-de-agendamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Calendário de Agendamento</a>
+    <a  href="../../../../docs/referencia-da-api/agendamento/calendario-de-agendamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Calendário de Agendamento</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apiagendamentocalendario-de-agendamento">
@@ -2072,7 +2071,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/comprovantes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Comprovantes</a>
+    <a  href="../../../../docs/referencia-da-api/comprovantes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Comprovantes</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apicomprovantes">
@@ -2090,7 +2089,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/comprovantes/como-emitir-um-comprovante/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Como Emitir Um Comprovante</a>
+    <a  href="../../../../docs/referencia-da-api/comprovantes/como-emitir-um-comprovante/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Como Emitir Um Comprovante</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apicomprovantescomo-emitir-um-comprovante">
@@ -2122,7 +2121,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/instituicoes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Instituições</a>
+    <a  href="../../../../docs/referencia-da-api/instituicoes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Instituições</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apiinstituicoes">
@@ -2140,7 +2139,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/instituicoes/overview-instituicao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Overview Instituições</a>
+    <a  href="../../../../docs/referencia-da-api/instituicoes/overview-instituicao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Overview Instituições</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apiinstituicoesoverview-instituicao">
@@ -2165,7 +2164,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/instituicoes/listar-instituicoes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Instituições</a>
+    <a  href="../../../../docs/referencia-da-api/instituicoes/listar-instituicoes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Instituições</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apiinstituicoeslistar-instituicoes">
@@ -2190,7 +2189,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/instituicoes/retornar-uma-instituicao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Retornar Uma Instituição</a>
+    <a  href="../../../../docs/referencia-da-api/instituicoes/retornar-uma-instituicao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Retornar Uma Instituição</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apiinstituicoesretornar-uma-instituicao">
@@ -2222,7 +2221,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/contatos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Contatos</a>
+    <a  href="../../../../docs/referencia-da-api/contatos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Contatos</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apicontatos">
@@ -2240,7 +2239,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/contatos/o-objeto-contato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O Objeto Contato</a>
+    <a  href="../../../../docs/referencia-da-api/contatos/o-objeto-contato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O Objeto Contato</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apicontatoso-objeto-contato">
@@ -2265,7 +2264,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/contatos/criar-um-contato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar Um Contato</a>
+    <a  href="../../../../docs/referencia-da-api/contatos/criar-um-contato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar Um Contato</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apicontatoscriar-um-contato">
@@ -2290,7 +2289,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/contatos/listar-contatos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Contatos</a>
+    <a  href="../../../../docs/referencia-da-api/contatos/listar-contatos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Contatos</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apicontatoslistar-contatos">
@@ -2315,7 +2314,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/contatos/retornar-um-contato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Retornar Um Contato</a>
+    <a  href="../../../../docs/referencia-da-api/contatos/retornar-um-contato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Retornar Um Contato</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apicontatosretornar-um-contato">
@@ -2340,7 +2339,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/contatos/atualizar-contato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Atualizar Contato</a>
+    <a  href="../../../../docs/referencia-da-api/contatos/atualizar-contato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Atualizar Contato</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apicontatosatualizar-contato">
@@ -2365,7 +2364,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/contatos/excluir-um-contato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Excluir Um Contato</a>
+    <a  href="../../../../docs/referencia-da-api/contatos/excluir-um-contato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Excluir Um Contato</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apicontatosexcluir-um-contato">
@@ -2390,7 +2389,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/contatos/adicionar-conta-bancaria-a-um-contato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Adicionar Conta Bancária a Um Contato</a>
+    <a  href="../../../../docs/referencia-da-api/contatos/adicionar-conta-bancaria-a-um-contato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Adicionar Conta Bancária a Um Contato</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apicontatosadicionar-conta-bancaria-a-um-contato">
@@ -2415,7 +2414,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/contatos/atualizar-conta-bancaria-de-um-contato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Atualizar Conta Bancária de Um Contato</a>
+    <a  href="../../../../docs/referencia-da-api/contatos/atualizar-conta-bancaria-de-um-contato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Atualizar Conta Bancária de Um Contato</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apicontatosatualizar-conta-bancaria-de-um-contato">
@@ -2440,7 +2439,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/contatos/excluir-conta-bancaria-de-um-contato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Excluir Conta Bancária de Um Contato</a>
+    <a  href="../../../../docs/referencia-da-api/contatos/excluir-conta-bancaria-de-um-contato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Excluir Conta Bancária de Um Contato</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apicontatosexcluir-conta-bancaria-de-um-contato">
@@ -2472,7 +2471,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/emissao-de-boletos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Boletos</a>
+    <a  href="../../../../docs/referencia-da-api/emissao-de-boletos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Boletos</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apiemissao-de-boletos">
@@ -2490,7 +2489,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/emissao-de-boletos/overview-emissao-de-boletos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Overview </a>
+    <a  href="../../../../docs/referencia-da-api/emissao-de-boletos/overview-emissao-de-boletos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Overview </a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apiemissao-de-boletosoverview-emissao-de-boletos">
@@ -2515,7 +2514,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/emissao-de-boletos/regras-de-negocio/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Regras de negócio</a>
+    <a  href="../../../../docs/referencia-da-api/emissao-de-boletos/regras-de-negocio/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Regras de negócio</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apiemissao-de-boletosregras-de-negocio">
@@ -2540,7 +2539,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/emissao-de-boletos/emitir-boleto/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Emitir Boleto</a>
+    <a  href="../../../../docs/referencia-da-api/emissao-de-boletos/emitir-boleto/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Emitir Boleto</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apiemissao-de-boletosemitir-boleto">
@@ -2565,7 +2564,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/emissao-de-boletos/listar-boletos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Boletos</a>
+    <a  href="../../../../docs/referencia-da-api/emissao-de-boletos/listar-boletos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Boletos</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apiemissao-de-boletoslistar-boletos">
@@ -2590,7 +2589,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/emissao-de-boletos/retornar-um-boleto/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Retornar Um Boleto</a>
+    <a  href="../../../../docs/referencia-da-api/emissao-de-boletos/retornar-um-boleto/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Retornar Um Boleto</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apiemissao-de-boletosretornar-um-boleto">
@@ -2615,7 +2614,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/emissao-de-boletos/gerar-boleto-pdf/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Gerar PDF Boleto</a>
+    <a  href="../../../../docs/referencia-da-api/emissao-de-boletos/gerar-boleto-pdf/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Gerar PDF Boleto</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apiemissao-de-boletosgerar-boleto-pdf">
@@ -2640,7 +2639,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/emissao-de-boletos/cancelar-boleto/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cancelar um boleto</a>
+    <a  href="../../../../docs/referencia-da-api/emissao-de-boletos/cancelar-boleto/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cancelar um boleto</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apiemissao-de-boletoscancelar-boleto">
@@ -2672,7 +2671,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/kyc/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">KYC (Alpha)</a>
+    <a  href="../../../../docs/referencia-da-api/kyc/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">KYC (Alpha)</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apikyc">
@@ -2690,7 +2689,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/kyc/buscar-informacoes-pendentes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Buscar informações pendentes</a>
+    <a  href="../../../../docs/referencia-da-api/kyc/buscar-informacoes-pendentes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Buscar informações pendentes</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apikycbuscar-informacoes-pendentes">
@@ -2715,7 +2714,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/kyc/consultar-url-para-foto/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar URL para envio da foto</a>
+    <a  href="../../../../docs/referencia-da-api/kyc/consultar-url-para-foto/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar URL para envio da foto</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apikycconsultar-url-para-foto">
@@ -2740,7 +2739,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/kyc/enviar-fotos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Enviar fotos do usuário</a>
+    <a  href="../../../../docs/referencia-da-api/kyc/enviar-fotos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Enviar fotos do usuário</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apikycenviar-fotos">
@@ -2765,7 +2764,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/kyc/enviar-dados-do-usuario/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Enviar dados do usuário</a>
+    <a  href="../../../../docs/referencia-da-api/kyc/enviar-dados-do-usuario/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Enviar dados do usuário</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apikycenviar-dados-do-usuario">
@@ -2797,7 +2796,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/link-de-pagamentos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Link de Pagamento</a>
+    <a  href="../../../../docs/referencia-da-api/link-de-pagamentos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Link de Pagamento</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apilink-de-pagamentos">
@@ -2815,7 +2814,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/link-de-pagamentos/o-que-e-um-link-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O Que É Um Link De Pagamento</a>
+    <a  href="../../../../docs/referencia-da-api/link-de-pagamentos/o-que-e-um-link-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O Que É Um Link De Pagamento</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apilink-de-pagamentoso-que-e-um-link-de-pagamento">
@@ -2840,7 +2839,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/link-de-pagamentos/configuracoes-da-conta-para-um-link-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Configurações da conta para um Link de Pagamento</a>
+    <a  href="../../../../docs/referencia-da-api/link-de-pagamentos/configuracoes-da-conta-para-um-link-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Configurações da conta para um Link de Pagamento</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apilink-de-pagamentosconfiguracoes-da-conta-para-um-link-de-pagamento">
@@ -2865,7 +2864,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/link-de-pagamentos/listar-links-de-pagamento-da-conta/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Links de Pagamentos da Conta</a>
+    <a  href="../../../../docs/referencia-da-api/link-de-pagamentos/listar-links-de-pagamento-da-conta/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Links de Pagamentos da Conta</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apilink-de-pagamentoslistar-links-de-pagamento-da-conta">
@@ -2890,7 +2889,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/link-de-pagamentos/detalhes-de-um-link-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Detalhes de um Link de Pagamento</a>
+    <a  href="../../../../docs/referencia-da-api/link-de-pagamentos/detalhes-de-um-link-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Detalhes de um Link de Pagamento</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apilink-de-pagamentosdetalhes-de-um-link-de-pagamento">
@@ -2915,7 +2914,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/link-de-pagamentos/criar-link-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar Link de Pagamento</a>
+    <a  href="../../../../docs/referencia-da-api/link-de-pagamentos/criar-link-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar Link de Pagamento</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apilink-de-pagamentoscriar-link-de-pagamento">
@@ -2940,7 +2939,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/link-de-pagamentos/cancelar-link-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cancelar um Link de Pagamento</a>
+    <a  href="../../../../docs/referencia-da-api/link-de-pagamentos/cancelar-link-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cancelar um Link de Pagamento</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apilink-de-pagamentoscancelar-link-de-pagamento">
@@ -2972,7 +2971,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Pix (Alpha)</a>
+    <a  href="../../../../docs/referencia-da-api/pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Pix (Alpha)</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipix">
@@ -2990,7 +2989,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/pix/buscar-dados-qrcode/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Buscar dados do QRCode</a>
+    <a  href="../../../../docs/referencia-da-api/pix/buscar-dados-qrcode/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Buscar dados do QRCode</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipixbuscar-dados-qrcode">
@@ -3015,7 +3014,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/pix/criar-pagamento-pendente/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar um pagamento pendente</a>
+    <a  href="../../../../docs/referencia-da-api/pix/criar-pagamento-pendente/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar um pagamento pendente</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipixcriar-pagamento-pendente">
@@ -3040,7 +3039,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/pix/confirmar-pagamento-pendente/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Confirmar um pagamento pendente</a>
+    <a  href="../../../../docs/referencia-da-api/pix/confirmar-pagamento-pendente/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Confirmar um pagamento pendente</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipixconfirmar-pagamento-pendente">
@@ -3072,7 +3071,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/recargas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Recargas</a>
+    <a  href="../../../../docs/referencia-da-api/recargas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Recargas</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apirecargas">
@@ -3090,7 +3089,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/recargas/overview/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Overview</a>
+    <a  href="../../../../docs/referencia-da-api/recargas/overview/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Overview</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apirecargasoverview">
@@ -3115,7 +3114,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/recargas/recarga-de-celular/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Recarga para Celular</a>
+    <a  href="../../../../docs/referencia-da-api/recargas/recarga-de-celular/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Recarga para Celular</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apirecargasrecarga-de-celular">
@@ -3140,7 +3139,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/recargas/recarga-de-jogos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Recarga para Jogos</a>
+    <a  href="../../../../docs/referencia-da-api/recargas/recarga-de-jogos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Recarga para Jogos</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apirecargasrecarga-de-jogos">
@@ -3165,7 +3164,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/recargas/recarga-de-conteudo-digital/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Recarga para Conteúdo Digital</a>
+    <a  href="../../../../docs/referencia-da-api/recargas/recarga-de-conteudo-digital/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Recarga para Conteúdo Digital</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apirecargasrecarga-de-conteudo-digital">
@@ -3190,7 +3189,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/recargas/recarga-de-tv-por-assinatura/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Recarga para TV por Assinatura</a>
+    <a  href="../../../../docs/referencia-da-api/recargas/recarga-de-tv-por-assinatura/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Recarga para TV por Assinatura</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apirecargasrecarga-de-tv-por-assinatura">
@@ -3215,7 +3214,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/recargas/recarga-de-meios-de-transporte/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Recarga para Meios de Transporte</a>
+    <a  href="../../../../docs/referencia-da-api/recargas/recarga-de-meios-de-transporte/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Recarga para Meios de Transporte</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apirecargasrecarga-de-meios-de-transporte">
@@ -3240,7 +3239,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/recargas/fluxo-challenge/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Fluxo de autorização de challenge</a>
+    <a  href="../../../../docs/referencia-da-api/recargas/fluxo-challenge/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Fluxo de autorização de challenge</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apirecargasfluxo-challenge">
@@ -3272,7 +3271,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/conta-stone-sdk/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Conta Stone SDK (Beta)</a>
+    <a  href="../../../../docs/referencia-da-api/conta-stone-sdk/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Conta Stone SDK (Beta)</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apiconta-stone-sdk">
@@ -3290,7 +3289,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/conta-stone-sdk/overview/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Overview</a>
+    <a  href="../../../../docs/referencia-da-api/conta-stone-sdk/overview/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Overview</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apiconta-stone-sdkoverview">
@@ -3315,7 +3314,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/conta-stone-sdk/sdk-sample-ios/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Sample iOS</a>
+    <a  href="../../../../docs/referencia-da-api/conta-stone-sdk/sdk-sample-ios/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Sample iOS</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apiconta-stone-sdksdk-sample-ios">
@@ -3340,7 +3339,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/conta-stone-sdk/sdk-sample-android/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Sample Android</a>
+    <a  href="../../../../docs/referencia-da-api/conta-stone-sdk/sdk-sample-android/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Sample Android</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apiconta-stone-sdksdk-sample-android">
@@ -3453,8 +3452,8 @@
         </div>
 	
 	<hr>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/statement
-</span></code></pre></div><br>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/statement
+</code></pre></div><br>
 <p><strong>PATH PARAMS</strong></p>
 <hr>
 <br>
@@ -3504,78 +3503,78 @@ Filtra o extrato por um ou mais tipos de registro.</p>
 
 <div class="pageinfo pageinfo-primary">
 <p><strong>Tipos diferentes de extratos</strong></p>
-<p>O extrato é dividido por tipos de movimentação. É possível consultar qual foi a movimentação pelo <code>type</code> da resposta. No exemplo acima, podemos notar que tivemos duas movimentações: uma transferência interna (<code>type:internal</code>) e uma transferência externa (<code>type:external</code>), ambas com campos de resposta diferentes. Veja neste <a href="/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/">link</a> para mais informações sobre o JSON Schema de cada tipo de operação.</p>
+<p>O extrato é dividido por tipos de movimentação. É possível consultar qual foi a movimentação pelo <code>type</code> da resposta. No exemplo acima, podemos notar que tivemos duas movimentações: uma transferência interna (<code>type:internal</code>) e uma transferência externa (<code>type:external</code>), ambas com campos de resposta diferentes. Veja neste <a href="../../../../docs/referencia-da-api/dados-da-conta/objetos-do-extrato/">link</a> para mais informações sobre o JSON Schema de cada tipo de operação.</p>
 
 </div>
 
 <br>
 <h5 id="response">Response</h5>
 <hr>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a40000">201 Created
-</span><span style="color:#a40000">content-type: application/json
-</span></code></pre></div><br>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">201 Created
+content-type: application/json
+</code></pre></div><br>
 <h5 id="body">Body</h5>
 <hr>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">&#34;cursor&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-        <span style="color:#204a87;font-weight:bold">&#34;after&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;before&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-        <span style="color:#204a87;font-weight:bold">&#34;limit&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">25</span>
-    <span style="color:#000;font-weight:bold">},</span>
-    <span style="color:#204a87;font-weight:bold">&#34;data&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">[</span>
-        <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;amount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">-1600</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;balance_after&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">9998300</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;balance_before&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">9999900</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;counter_party&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-                <span style="color:#204a87;font-weight:bold">&#34;account&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-                    <span style="color:#204a87;font-weight:bold">&#34;account_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;58859&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                    <span style="color:#204a87;font-weight:bold">&#34;branch_code&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;1&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                    <span style="color:#204a87;font-weight:bold">&#34;institution&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;16501555&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                    <span style="color:#204a87;font-weight:bold">&#34;institution_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Stone Pagamentos S.A.&#34;</span>
-                <span style="color:#000;font-weight:bold">},</span>
-                <span style="color:#204a87;font-weight:bold">&#34;entity&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-                    <span style="color:#204a87;font-weight:bold">&#34;name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;João Amigavel&#34;</span>
-                <span style="color:#000;font-weight:bold">}</span>
-            <span style="color:#000;font-weight:bold">},</span>
-            <span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2019-07-31T19:13:56Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;description&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;fee_amount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;5357781a-c318-41aa-80eb-269df1b65ba3&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;operation&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;debit&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;operation_amount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">1600</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;operation_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;4aab75b9-c15f-4d27-82e2-ec9c549c1cd8&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;scheduled_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;scheduled_to&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;FINISHED&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;internal&#34;</span>
-        <span style="color:#000;font-weight:bold">},</span>
-        <span style="color:#000;font-weight:bold">{</span>
-            <span style="color:#204a87;font-weight:bold">&#34;amount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">-100</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;balance_after&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">9999900</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;balance_before&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">10000000</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;barcode&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;89690000000010003139343476533694034641055662&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;created_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;2019-07-31T19:12:51Z&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;details&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#000;font-weight:bold">{</span>
-                <span style="color:#204a87;font-weight:bold">&#34;bank_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#204a87;font-weight:bold">&#34;expiration_date&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#204a87;font-weight:bold">&#34;recipient_cpf_cnpj&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;90890860998&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#204a87;font-weight:bold">&#34;recipient_name&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;Sr. Luiz Bulhões&#34;</span><span style="color:#000;font-weight:bold">,</span>
-                <span style="color:#204a87;font-weight:bold">&#34;writable_line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;896900000002010003139341347653369400346410556622&#34;</span>
-            <span style="color:#000;font-weight:bold">},</span>
-            <span style="color:#204a87;font-weight:bold">&#34;fee_amount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">0</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;4d1d6f7b-187c-4ad4-acb6-4bf573609a6b&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;operation&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;debit&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;operation_amount&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">100</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;operation_id&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;ace4331a-45ef-488a-9fde-c439739b9d4a&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;scheduled_at&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;scheduled_to&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">null</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;status&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;FINISHED&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;type&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;payment&#34;</span><span style="color:#000;font-weight:bold">,</span>
-            <span style="color:#204a87;font-weight:bold">&#34;writable_line&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#4e9a06">&#34;896900000002010003139341347653369400346410556622&#34;</span>
-        <span style="color:#000;font-weight:bold">}</span>
-    <span style="color:#000;font-weight:bold">]</span>
-<span style="color:#000;font-weight:bold">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+    <span style="color:#ff79c6">&#34;cursor&#34;</span>: {
+        <span style="color:#ff79c6">&#34;after&#34;</span>: <span style="color:#ff79c6">null</span>,
+        <span style="color:#ff79c6">&#34;before&#34;</span>: <span style="color:#ff79c6">null</span>,
+        <span style="color:#ff79c6">&#34;limit&#34;</span>: <span style="color:#bd93f9">25</span>
+    },
+    <span style="color:#ff79c6">&#34;data&#34;</span>: [
+        {
+            <span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">-1600</span>,
+            <span style="color:#ff79c6">&#34;balance_after&#34;</span>: <span style="color:#bd93f9">9998300</span>,
+            <span style="color:#ff79c6">&#34;balance_before&#34;</span>: <span style="color:#bd93f9">9999900</span>,
+            <span style="color:#ff79c6">&#34;counter_party&#34;</span>: {
+                <span style="color:#ff79c6">&#34;account&#34;</span>: {
+                    <span style="color:#ff79c6">&#34;account_code&#34;</span>: <span style="color:#f1fa8c">&#34;58859&#34;</span>,
+                    <span style="color:#ff79c6">&#34;branch_code&#34;</span>: <span style="color:#f1fa8c">&#34;1&#34;</span>,
+                    <span style="color:#ff79c6">&#34;institution&#34;</span>: <span style="color:#f1fa8c">&#34;16501555&#34;</span>,
+                    <span style="color:#ff79c6">&#34;institution_name&#34;</span>: <span style="color:#f1fa8c">&#34;Stone Pagamentos S.A.&#34;</span>
+                },
+                <span style="color:#ff79c6">&#34;entity&#34;</span>: {
+                    <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;João Amigavel&#34;</span>
+                }
+            },
+            <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2019-07-31T19:13:56Z&#34;</span>,
+            <span style="color:#ff79c6">&#34;description&#34;</span>: <span style="color:#f1fa8c">&#34;&#34;</span>,
+            <span style="color:#ff79c6">&#34;fee_amount&#34;</span>: <span style="color:#bd93f9">0</span>,
+            <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;5357781a-c318-41aa-80eb-269df1b65ba3&#34;</span>,
+            <span style="color:#ff79c6">&#34;operation&#34;</span>: <span style="color:#f1fa8c">&#34;debit&#34;</span>,
+            <span style="color:#ff79c6">&#34;operation_amount&#34;</span>: <span style="color:#bd93f9">1600</span>,
+            <span style="color:#ff79c6">&#34;operation_id&#34;</span>: <span style="color:#f1fa8c">&#34;4aab75b9-c15f-4d27-82e2-ec9c549c1cd8&#34;</span>,
+            <span style="color:#ff79c6">&#34;scheduled_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+            <span style="color:#ff79c6">&#34;scheduled_to&#34;</span>: <span style="color:#ff79c6">null</span>,
+            <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;FINISHED&#34;</span>,
+            <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;internal&#34;</span>
+        },
+        {
+            <span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">-100</span>,
+            <span style="color:#ff79c6">&#34;balance_after&#34;</span>: <span style="color:#bd93f9">9999900</span>,
+            <span style="color:#ff79c6">&#34;balance_before&#34;</span>: <span style="color:#bd93f9">10000000</span>,
+            <span style="color:#ff79c6">&#34;barcode&#34;</span>: <span style="color:#f1fa8c">&#34;89690000000010003139343476533694034641055662&#34;</span>,
+            <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2019-07-31T19:12:51Z&#34;</span>,
+            <span style="color:#ff79c6">&#34;details&#34;</span>: {
+                <span style="color:#ff79c6">&#34;bank_name&#34;</span>: <span style="color:#ff79c6">null</span>,
+                <span style="color:#ff79c6">&#34;expiration_date&#34;</span>: <span style="color:#ff79c6">null</span>,
+                <span style="color:#ff79c6">&#34;recipient_cpf_cnpj&#34;</span>: <span style="color:#f1fa8c">&#34;90890860998&#34;</span>,
+                <span style="color:#ff79c6">&#34;recipient_name&#34;</span>: <span style="color:#f1fa8c">&#34;Sr. Luiz Bulhões&#34;</span>,
+                <span style="color:#ff79c6">&#34;writable_line&#34;</span>: <span style="color:#f1fa8c">&#34;896900000002010003139341347653369400346410556622&#34;</span>
+            },
+            <span style="color:#ff79c6">&#34;fee_amount&#34;</span>: <span style="color:#bd93f9">0</span>,
+            <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;4d1d6f7b-187c-4ad4-acb6-4bf573609a6b&#34;</span>,
+            <span style="color:#ff79c6">&#34;operation&#34;</span>: <span style="color:#f1fa8c">&#34;debit&#34;</span>,
+            <span style="color:#ff79c6">&#34;operation_amount&#34;</span>: <span style="color:#bd93f9">100</span>,
+            <span style="color:#ff79c6">&#34;operation_id&#34;</span>: <span style="color:#f1fa8c">&#34;ace4331a-45ef-488a-9fde-c439739b9d4a&#34;</span>,
+            <span style="color:#ff79c6">&#34;scheduled_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+            <span style="color:#ff79c6">&#34;scheduled_to&#34;</span>: <span style="color:#ff79c6">null</span>,
+            <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;FINISHED&#34;</span>,
+            <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;payment&#34;</span>,
+            <span style="color:#ff79c6">&#34;writable_line&#34;</span>: <span style="color:#f1fa8c">&#34;896900000002010003139341347653369400346410556622&#34;</span>
+        }
+    ]
+}
 </code></pre></div><br>
 
 
@@ -3866,7 +3865,7 @@ O <code>_balance_before_</code> registra o saldo do usuário antes da operação
 	
 	
 
-	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 20.04.2020
+	<div class="text-muted mt-5 pt-3 border-top">[i18n] post_last_mod 20.04.2020
 </div>
 </div>
 
@@ -3884,7 +3883,7 @@ O <code>_balance_before_</code> registra o saldo do usuário antes da operação
         
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2021 Stone Todos os direitos reservados</small>
+        <small class="text-white">&copy; 2021 Stone [i18n] footer_all_rights_reserved</small>
         
 	
       </div>
@@ -3909,7 +3908,7 @@ O <code>_balance_before_</code> registra o saldo do usuário antes da operação
 
 
 
-<script src="/js/main.min.f820bfc507c3ebefe17f8881ec4ee10013f3b89ad9555a50acf9bb1771e6823f.js" integrity="sha256-&#43;CC/xQfD6&#43;/hf4iB7E7hABPzuJrZVVpQrPm7F3Hmgj8=" crossorigin="anonymous"></script>
+<script src="../../../../js/main.min.906bd02f142be20eb94bb49539a18a3e93ec0b9ff5f5dcf3796eed436a6103d2.js" integrity="sha256-kGvQLxQr4g65S7SVOaGKPpPsC5/19dzzeW7tQ2phA9I=" crossorigin="anonymous"></script>
 
 
 

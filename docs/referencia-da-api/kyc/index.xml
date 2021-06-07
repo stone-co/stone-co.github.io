@@ -25,10 +25,10 @@
         &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;Nesse endpoint é possível verificar as informações de KYC que se encontram pendentes de resposta.&lt;/p&gt;
-&lt;p&gt;A partir do &lt;em&gt;response&lt;/em&gt; desse endpoint, é possível verificar os &lt;em&gt;ids&lt;/em&gt; das informações que estão faltando para que possamos enviar os dados no endpoint para &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/kyc/enviar-dados-do-usuario/&#34;&gt;responder o KYC&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;A partir do &lt;em&gt;response&lt;/em&gt; desse endpoint, é possível verificar os &lt;em&gt;ids&lt;/em&gt; das informações que estão faltando para que possamos enviar os dados no endpoint para &lt;a href=&#34;../../../docs/referencia-da-api/kyc/enviar-dados-do-usuario/&#34;&gt;responder o KYC&lt;/a&gt;.&lt;/p&gt;
 &lt;br&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/users/{id_do_usuario}/kyc/request
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/users/{id_do_usuario}/kyc/request
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h4 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;br&gt;
@@ -37,134 +37,134 @@
 &lt;br&gt;
 &lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Json&#34; data-lang=&#34;Json&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;200&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;OK&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;checks&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;detailed_reason&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Precisamos de algumas informações&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;field_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;birthdate&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;400bf541-788f-4d5f-86b1-6519f318ca65&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;input_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user_input&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;account_request&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;requested&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;detailed_reason&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Precisamos de algumas informações&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;field_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;phone_number&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;6747569e-ea50-4b71-9230-7e0fd8b92d6d&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;input_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user_input&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;account_request&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;requested&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;detailed_reason&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Precisamos de algumas informações&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;field_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;address&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;4f485886-1546-4726-b4e1-baa21bb0f4a1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;input_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user_input&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;account_request&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;requested&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;detailed_reason&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Precisamos de algumas informações&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;field_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;document_photo&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cbe5a713-2d02-49b3-85e4-97bf39c27354&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;input_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user_input&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;account_request&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;requested&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;detailed_reason&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Precisamos de algumas informações&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;field_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;document_selfies&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;5b6d185d-e080-4534-b346-389fffae7294&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;input_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user_input&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;account_request&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;requested&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;income_ranges&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
-                    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;formatted&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Até R$ 5.000,00&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;range&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;lower_bounds&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;upper_bounds&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;500000&lt;/span&gt;
-                        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-                    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-                    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;formatted&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Entre R$ 5.000,01 e R$ 10.000,00&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;range&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;lower_bounds&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;500001&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;upper_bounds&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1000000&lt;/span&gt;
-                        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-                    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-                    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;formatted&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Entre R$ 10.000,01 e R$ 20.000,00&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;range&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;lower_bounds&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1000001&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;upper_bounds&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2000000&lt;/span&gt;
-                        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-                    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-                    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;formatted&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Entre R$ 20.000,01 e R$ 100.000,00&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;range&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;lower_bounds&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2000001&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;upper_bounds&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;10000000&lt;/span&gt;
-                        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-                    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-                    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;formatted&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Entre R$ 100.000,01 e R$ 1.000.000,00&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;range&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;lower_bounds&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;10000001&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;upper_bounds&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;100000000&lt;/span&gt;
-                        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-                    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-                    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;formatted&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Mais de R$ 1.000.000,00&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;range&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;lower_bounds&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;100000001&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;upper_bounds&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;
-                        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-                    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-                &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
-            &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;detailed_reason&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Precisamos de algumas informações&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;field_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;total_income_range&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;a24ad007-2d63-4108-8340-16b843873be2&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;input_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user_input&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;account_request&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;requested&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;],&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{},&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;50a22e82-1fe6-407b-b76c-986f46db60e8&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;input_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user_input&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;is_mandatory&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;account_request&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;requested&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;user_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;ef49c647-1dc9-47e8-a559-108cdf7e65a4&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Json&#34; data-lang=&#34;Json&#34;&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;200&lt;/span&gt; OK
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;checks&amp;#34;&lt;/span&gt;: [
+        {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;detailed_reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Precisamos de algumas informações&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;field_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;birthdate&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;400bf541-788f-4d5f-86b1-6519f318ca65&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;input_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user_input&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;account_request&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;requested&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;
+        },
+        {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;detailed_reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Precisamos de algumas informações&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;field_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;phone_number&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;6747569e-ea50-4b71-9230-7e0fd8b92d6d&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;input_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user_input&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;account_request&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;requested&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;
+        },
+        {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;detailed_reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Precisamos de algumas informações&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;field_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;address&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;4f485886-1546-4726-b4e1-baa21bb0f4a1&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;input_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user_input&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;account_request&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;requested&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;
+        },
+        {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;detailed_reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Precisamos de algumas informações&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;field_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;document_photo&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;cbe5a713-2d02-49b3-85e4-97bf39c27354&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;input_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user_input&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;account_request&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;requested&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;
+        },
+        {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;detailed_reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Precisamos de algumas informações&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;field_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;document_selfies&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;5b6d185d-e080-4534-b346-389fffae7294&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;input_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user_input&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;account_request&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;requested&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;
+        },
+        {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;: {
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;income_ranges&amp;#34;&lt;/span&gt;: [
+                    {
+                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;formatted&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Até R$ 5.000,00&amp;#34;&lt;/span&gt;,
+                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;range&amp;#34;&lt;/span&gt;: {
+                            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;lower_bounds&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+                            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;upper_bounds&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;500000&lt;/span&gt;
+                        }
+                    },
+                    {
+                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;formatted&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Entre R$ 5.000,01 e R$ 10.000,00&amp;#34;&lt;/span&gt;,
+                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;range&amp;#34;&lt;/span&gt;: {
+                            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;lower_bounds&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;500001&lt;/span&gt;,
+                            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;upper_bounds&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;1000000&lt;/span&gt;
+                        }
+                    },
+                    {
+                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;formatted&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Entre R$ 10.000,01 e R$ 20.000,00&amp;#34;&lt;/span&gt;,
+                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;range&amp;#34;&lt;/span&gt;: {
+                            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;lower_bounds&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;1000001&lt;/span&gt;,
+                            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;upper_bounds&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;2000000&lt;/span&gt;
+                        }
+                    },
+                    {
+                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;formatted&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Entre R$ 20.000,01 e R$ 100.000,00&amp;#34;&lt;/span&gt;,
+                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;range&amp;#34;&lt;/span&gt;: {
+                            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;lower_bounds&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;2000001&lt;/span&gt;,
+                            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;upper_bounds&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;10000000&lt;/span&gt;
+                        }
+                    },
+                    {
+                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;formatted&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Entre R$ 100.000,01 e R$ 1.000.000,00&amp;#34;&lt;/span&gt;,
+                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;range&amp;#34;&lt;/span&gt;: {
+                            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;lower_bounds&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;10000001&lt;/span&gt;,
+                            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;upper_bounds&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;100000000&lt;/span&gt;
+                        }
+                    },
+                    {
+                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;formatted&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Mais de R$ 1.000.000,00&amp;#34;&lt;/span&gt;,
+                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;range&amp;#34;&lt;/span&gt;: {
+                            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;lower_bounds&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;100000001&lt;/span&gt;,
+                            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;upper_bounds&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;
+                        }
+                    }
+                ]
+            },
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;detailed_reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Precisamos de algumas informações&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;field_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;total_income_range&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;a24ad007-2d63-4108-8340-16b843873be2&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;input_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user_input&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;account_request&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;requested&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;
+        }
+    ],
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;: {},
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;50a22e82-1fe6-407b-b76c-986f46db60e8&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;input_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user_input&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;is_mandatory&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;true&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;account_request&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;requested&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;user_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ef49c647-1dc9-47e8-a559-108cdf7e65a4&amp;#34;&lt;/span&gt;
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;p&gt;Próximo passo:&lt;/p&gt;
-&lt;h4 id=&#34;consultar-url-para-envio-da-fotodocsreferencia-da-apikycconsultar-url-para-foto&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/kyc/consultar-url-para-foto/&#34;&gt;Consultar URL para envio da foto&lt;/a&gt;.&lt;/h4&gt;
+&lt;h4 id=&#34;consultar-url-para-envio-da-fotodocsreferencia-da-apikycconsultar-url-para-foto&#34;&gt;&lt;a href=&#34;../../../docs/referencia-da-api/kyc/consultar-url-para-foto/&#34;&gt;Consultar URL para envio da foto&lt;/a&gt;.&lt;/h4&gt;
 
       </description>
     </item>
@@ -183,8 +183,8 @@
 &lt;p&gt;Nesse endpoint será informada a URL de cada uma das fotos enviadas de um usuário.&lt;/p&gt;
 &lt;p&gt;Essa chamada deve ser realizada para cada foto que será enviada, por exemplo, na maioria dos casos é solicitada a foto da frente do documento, do verso do documento e de uma selfie com o documento, então esse endpoint, nesse caso, será chamado 3 vezes, cada um com o nome diferenciado do arquivo que será enviado.&lt;/p&gt;
 &lt;br&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/storage/{{image_name.jpg}}
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/storage/{{image_name.jpg}}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h4 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;br&gt;
@@ -199,23 +199,23 @@
 &lt;br&gt;
 &lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Json&#34; data-lang=&#34;Json&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;200&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;OK&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;public_url&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;https://storage.googleapis.com/sdb-inside-gateway-frontend-3727/YXBwbGljYXRpb246MDY1ZWNiMDgtMjQzOS00MGMwLThlMTMtMmI0M2MyMTc0M2Uz/c0ea5f60-3d4c-4fc0-815e-bb62681fdd4b/image_name.jpg&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;upload_info&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;headers&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;content-type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;image/jpeg&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;x-goog-acl&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;public-read&amp;#34;&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;url&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;https://storage.googleapis.com/sdb-inside-gateway-frontend-3727/YXBwbGljYXRpb246MDY1ZWNiMDgtMjQzOS00MGMwLThlMTMtMmI0M2MyMTc0M2Uz/c0ea5f60-3d4c-4fc0-815e-bb62681fdd4b/image_name.jpg?Expires=1622485791&amp;amp;GoogleAccessId=sdb-inside-gateway-c914%40inside-gateway-724c.iam.gserviceaccount.com&amp;amp;Signature=Yy3xZLRyo95oRIVfNWz3J55Cs8YfiRinx0CCY%2BVQtm3PcU%2B2u2eHiSF8yIzO7sRWaHdZ9r6t8j964fS2J3mrbQOvUn68yrW4mVv1%2FQSr1J0kgQ%2B2fIq8JoHw%2BTlwe%2Fbt%2FufKwAq1Y2Kvcsi%2FKO%2BIMyqL8KwwmmcC%2F5oetCfnYg%2BJq2jty01ULuuG6UWvsxiSVjfNNRnOTqQBQ4Ws6r62YoK0xC5A2GrNnACfN4R5%2BKbv4VXoKLKYQ0pGZF3MPHFcbJW4y59XOmIFJP%2F00Xjw8SreELGtk0iCQoIMxU8pEEZQALAIpesTquKGzNqqAgL5RNc46sh6%2BjtNbrwBnhM1vQ%3D%3D&amp;#34;&lt;/span&gt;
-    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Json&#34; data-lang=&#34;Json&#34;&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;200&lt;/span&gt; OK
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;public_url&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://storage.googleapis.com/sdb-inside-gateway-frontend-3727/YXBwbGljYXRpb246MDY1ZWNiMDgtMjQzOS00MGMwLThlMTMtMmI0M2MyMTc0M2Uz/c0ea5f60-3d4c-4fc0-815e-bb62681fdd4b/image_name.jpg&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;upload_info&amp;#34;&lt;/span&gt;: {
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;headers&amp;#34;&lt;/span&gt;: {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;content-type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;image/jpeg&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;x-goog-acl&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;public-read&amp;#34;&lt;/span&gt;
+        },
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;url&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://storage.googleapis.com/sdb-inside-gateway-frontend-3727/YXBwbGljYXRpb246MDY1ZWNiMDgtMjQzOS00MGMwLThlMTMtMmI0M2MyMTc0M2Uz/c0ea5f60-3d4c-4fc0-815e-bb62681fdd4b/image_name.jpg?Expires=1622485791&amp;amp;GoogleAccessId=sdb-inside-gateway-c914%40inside-gateway-724c.iam.gserviceaccount.com&amp;amp;Signature=Yy3xZLRyo95oRIVfNWz3J55Cs8YfiRinx0CCY%2BVQtm3PcU%2B2u2eHiSF8yIzO7sRWaHdZ9r6t8j964fS2J3mrbQOvUn68yrW4mVv1%2FQSr1J0kgQ%2B2fIq8JoHw%2BTlwe%2Fbt%2FufKwAq1Y2Kvcsi%2FKO%2BIMyqL8KwwmmcC%2F5oetCfnYg%2BJq2jty01ULuuG6UWvsxiSVjfNNRnOTqQBQ4Ws6r62YoK0xC5A2GrNnACfN4R5%2BKbv4VXoKLKYQ0pGZF3MPHFcbJW4y59XOmIFJP%2F00Xjw8SreELGtk0iCQoIMxU8pEEZQALAIpesTquKGzNqqAgL5RNc46sh6%2BjtNbrwBnhM1vQ%3D%3D&amp;#34;&lt;/span&gt;
+    }
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
-&lt;p&gt;A resposta do campo &lt;code&gt;public_url&lt;/code&gt; deverá ser enviado no endpoint de &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/kyc/enviar-dados-do-usuario/&#34;&gt;enviar os dados de um usuário&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;O campo &lt;code&gt;url&lt;/code&gt; deverá ser usado no endpoint para enviar de fato a imagem, no endpoint &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/kyc/enviar-fotos/&#34;&gt;enviar fotos&lt;/a&gt;. Esse campo contém as &lt;em&gt;Query Params&lt;/em&gt; desse endpoint.&lt;/p&gt;
+&lt;p&gt;A resposta do campo &lt;code&gt;public_url&lt;/code&gt; deverá ser enviado no endpoint de &lt;a href=&#34;../../../docs/referencia-da-api/kyc/enviar-dados-do-usuario/&#34;&gt;enviar os dados de um usuário&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;O campo &lt;code&gt;url&lt;/code&gt; deverá ser usado no endpoint para enviar de fato a imagem, no endpoint &lt;a href=&#34;../../../docs/referencia-da-api/kyc/enviar-fotos/&#34;&gt;enviar fotos&lt;/a&gt;. Esse campo contém as &lt;em&gt;Query Params&lt;/em&gt; desse endpoint.&lt;/p&gt;
 &lt;br&gt;
 &lt;p&gt;Próximo passo:&lt;/p&gt;
-&lt;h4 id=&#34;enviar-fotosdocsreferencia-da-apikycenviar-fotos&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/kyc/enviar-fotos/&#34;&gt;Enviar fotos&lt;/a&gt;.&lt;/h4&gt;
+&lt;h4 id=&#34;enviar-fotosdocsreferencia-da-apikycenviar-fotos&#34;&gt;&lt;a href=&#34;../../../docs/referencia-da-api/kyc/enviar-fotos/&#34;&gt;Enviar fotos&lt;/a&gt;.&lt;/h4&gt;
 
       </description>
     </item>
@@ -232,11 +232,11 @@
         &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;Nesse endpoint serão enviadas as fotos do usuário necessários para realização da análise do KYC.&lt;/p&gt;
-&lt;p&gt;Deverá ser um request do tipo &lt;code&gt;PUT&lt;/code&gt; com o endereço recebido no campo &lt;code&gt;url&lt;/code&gt; do endpoint de &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/kyc/consultar-url-para-foto/&#34;&gt;Consultar URL para envio da foto&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Deverá ser um request do tipo &lt;code&gt;PUT&lt;/code&gt; com o endereço recebido no campo &lt;code&gt;url&lt;/code&gt; do endpoint de &lt;a href=&#34;../../../docs/referencia-da-api/kyc/consultar-url-para-foto/&#34;&gt;Consultar URL para envio da foto&lt;/a&gt;.&lt;/p&gt;
 &lt;br&gt;
 &lt;p&gt;Exemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;PUT https://storage.googleapis.com/sdb-inside-gateway-frontend-3727/dXNlcjo4YTZmMzYzZi05Mzg4LTRiMzEtOGY0ZC05Zjk2NTAyY2Q1NzA=/53acaa13-f74b-4884-9420-f05b0ca79d25/doc_cnh_front.jpg?Expires=1615042461&amp;amp;GoogleAccessId=sdb-inside-gateway-c914%40inside-gateway-724c.iam.gserviceaccount.com&amp;amp;Signature=L1kzM4t2dq4qjzJ9gP%2BM7N7o2UWlQ59TXYui7OyMBe107TvVvSLEqN%2B1VL4Y5pBK%2FKqKoJWXKGizT6PNC%2BP5aPRz9qR94m1oPG2lsNspjFLO%2BdrRhdMTx21ylHNLIOWy54vJ5A84WIAlnAIZvHU7%2B1a2%2BRn8Wd3b62djcOpndFEAYCJDQBBENLwY%2B0Qs0KbumICdVWNqfxwttaOj%2FDpzMqp0TrDfmx8xfL5FyIzyBn7BYwfmhJeWU2VFjWVztohj0wiOIPcHlK%2BUkgGNYQ8qXYMY5aWeO6A55%2FO20QErizp%2BX2Ad2YlfS5mOozXvjFPShR7%2FRBxkhAj%2BEFx9EyVy2A%3D%3D
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;PUT https://storage.googleapis.com/sdb-inside-gateway-frontend-3727/dXNlcjo4YTZmMzYzZi05Mzg4LTRiMzEtOGY0ZC05Zjk2NTAyY2Q1NzA=/53acaa13-f74b-4884-9420-f05b0ca79d25/doc_cnh_front.jpg?Expires=1615042461&amp;amp;GoogleAccessId=sdb-inside-gateway-c914%40inside-gateway-724c.iam.gserviceaccount.com&amp;amp;Signature=L1kzM4t2dq4qjzJ9gP%2BM7N7o2UWlQ59TXYui7OyMBe107TvVvSLEqN%2B1VL4Y5pBK%2FKqKoJWXKGizT6PNC%2BP5aPRz9qR94m1oPG2lsNspjFLO%2BdrRhdMTx21ylHNLIOWy54vJ5A84WIAlnAIZvHU7%2B1a2%2BRn8Wd3b62djcOpndFEAYCJDQBBENLwY%2B0Qs0KbumICdVWNqfxwttaOj%2FDpzMqp0TrDfmx8xfL5FyIzyBn7BYwfmhJeWU2VFjWVztohj0wiOIPcHlK%2BUkgGNYQ8qXYMY5aWeO6A55%2FO20QErizp%2BX2Ad2YlfS5mOozXvjFPShR7%2FRBxkhAj%2BEFx9EyVy2A%3D%3D
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h4 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;br&gt;
@@ -263,18 +263,18 @@
 &lt;br&gt;
 &lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Json&#34; data-lang=&#34;Json&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;200&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;OK&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Json&#34; data-lang=&#34;Json&#34;&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;200&lt;/span&gt; OK
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Json&#34; data-lang=&#34;Json&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;400&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;Bad&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;Request&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;&amp;lt;?xml&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;version=&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1.0&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;encoding=&amp;#39;UTF&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;-8&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;?&amp;gt;&lt;/span&gt;
-&lt;span style=&#34;color:#a40000&#34;&gt;&amp;lt;Error&amp;gt;&lt;/span&gt;
-&lt;span style=&#34;color:#a40000&#34;&gt;&amp;lt;Code&amp;gt;ExpiredToken&amp;lt;/Code&amp;gt;&lt;/span&gt;
-&lt;span style=&#34;color:#a40000&#34;&gt;&amp;lt;Message&amp;gt;The&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;provided&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;token&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;has&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;expired.&amp;lt;/Message&amp;gt;&lt;/span&gt;
-&lt;span style=&#34;color:#a40000&#34;&gt;&amp;lt;Details&amp;gt;Request&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;signature&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;expired&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;at:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2021-03-06&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;T&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;14&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;54&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;21&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;00&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;00&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;&amp;lt;/Details&amp;gt;&lt;/span&gt;
-&lt;span style=&#34;color:#a40000&#34;&gt;&amp;lt;/Error&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-Json&#34; data-lang=&#34;Json&#34;&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;400&lt;/span&gt; Bad Request
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&amp;lt;?xml version=&amp;#39;&lt;span style=&#34;color:#bd93f9&#34;&gt;1.0&lt;/span&gt;&amp;#39; encoding=&amp;#39;UTF&lt;span style=&#34;color:#bd93f9&#34;&gt;-8&lt;/span&gt;&amp;#39;?&amp;gt;
+&amp;lt;Error&amp;gt;
+&amp;lt;Code&amp;gt;ExpiredToken&amp;lt;/Code&amp;gt;
+&amp;lt;Message&amp;gt;The provided token has expired.&amp;lt;/Message&amp;gt;
+&amp;lt;Details&amp;gt;Request signature expired at: &lt;span style=&#34;color:#bd93f9&#34;&gt;2021-03-06&lt;/span&gt;T&lt;span style=&#34;color:#bd93f9&#34;&gt;14&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;54&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;21&lt;/span&gt;+&lt;span style=&#34;color:#bd93f9&#34;&gt;00&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;00&lt;/span&gt;&amp;lt;/Details&amp;gt;
+&amp;lt;/Error&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;p&gt;Próximo passo:&lt;/p&gt;
-&lt;h4 id=&#34;enviar-dados-do-usuáriodocsreferencia-da-apikycenviar-dados-do-usuario&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/kyc/enviar-dados-do-usuario/&#34;&gt;Enviar dados do usuário&lt;/a&gt;.&lt;/h4&gt;
+&lt;h4 id=&#34;enviar-dados-do-usuáriodocsreferencia-da-apikycenviar-dados-do-usuario&#34;&gt;&lt;a href=&#34;../../../docs/referencia-da-api/kyc/enviar-dados-do-usuario/&#34;&gt;Enviar dados do usuário&lt;/a&gt;.&lt;/h4&gt;
 
       </description>
     </item>
@@ -292,8 +292,8 @@
 &lt;br&gt;
 &lt;p&gt;Nesse endpoint serão solicitados os dados do usuário necessários para realização do envio dos mesmos para início da análise do KYC.&lt;/p&gt;
 &lt;br&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/users/{{user_id}}/kyc/answer
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/users/{{user_id}}/kyc/answer
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h4 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;br&gt;
@@ -309,185 +309,185 @@ Ex: ef49c647-1dc9-58e8-a559-108cdf7e65a4&lt;/p&gt;
 &lt;br&gt;
 &lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;answers&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;check_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;{{birthdate_id}}&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2000-10-10&amp;#34;&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;check_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;{{phone_number_id}}&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;21971697123&amp;#34;&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;check_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;{{address_id}}&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;street&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Rua Buarque de Macedo&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;city&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Rio de Janeiro&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;country&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Brasil&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;extra&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;postal_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;22220030&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;street_number&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;38383838&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;neighborhood&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Flamengo&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;state&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;RJ&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;reference_point&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
-            &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;check_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;{{document_photo_id}}&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;CNH&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;front&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;https://storage.googleapis.com/sdb-inside-gateway-frontend-3727/dXNlcjo4YTZmMzYzZi05Mzg4LTRiMzEtOGY0ZC05Zjk2NTAyY2Q1NzA=/53acaa13-f74b-4884-9420-f05b0ca79d25/doc_cnh_front.jpg&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;back&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;https://storage.googleapis.com/sdb-inside-gateway-frontend-3727/dXNlcjo4YTZmMzYzZi05Mzg4LTRiMzEtOGY0ZC05Zjk2NTAyY2Q1NzA=/53acaa13-f74b-4884-9420-f05b0ca79d25/doc_cnh_front.jpg&amp;#34;&lt;/span&gt;
-            &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;check_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;{{document_selfies_id}}&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
-                &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;https:\/\/storage.googleapis.com\/hml-inside-gateway-frontend-4715\/dXNlcjplZDFhZTdjYy0zZGRhLTQ3MGMtYjlhMi02ZmI5MzJhY2U2NDc=\/79767818-0254-4f85-9cdb-f560013036d0\/CBED44AF-900B-4EC7-B8BF-DB7373BF4070.jpg&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;https:\/\/storage.googleapis.com\/hml-inside-gateway-frontend-4715\/dXNlcjplZDFhZTdjYy0zZGRhLTQ3MGMtYjlhMi02ZmI5MzJhY2U2NDc=\/b2ea2032-c7f2-4c4d-b377-90920afec4cd\/43964A19-69C4-451B-8CF9-B66F8C8CC0A8.jpg&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;https:\/\/storage.googleapis.com\/hml-inside-gateway-frontend-4715\/dXNlcjplZDFhZTdjYy0zZGRhLTQ3MGMtYjlhMi02ZmI5MzJhY2U2NDc=\/6aacb6d4-91f2-416e-8b04-72cca5313984\/591B208A-0374-4642-A38E-DAC0A9AFCF53.jpg&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;https:\/\/storage.googleapis.com\/hml-inside-gateway-frontend-4715\/dXNlcjplZDFhZTdjYy0zZGRhLTQ3MGMtYjlhMi02ZmI5MzJhY2U2NDc=\/43e42571-4d6e-4fda-9b45-c99276b18024\/B6076B95-B67F-4DAE-85F1-CAB1FA013B30.jpg&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;https:\/\/storage.googleapis.com\/hml-inside-gateway-frontend-4715\/dXNlcjplZDFhZTdjYy0zZGRhLTQ3MGMtYjlhMi02ZmI5MzJhY2U2NDc=\/89f45dbc-5797-4f4c-b067-8d04e7dc1c6d\/7BFB3285-BE78-4F73-B36E-087DDD82CA6A.jpg&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;https:\/\/storage.googleapis.com\/hml-inside-gateway-frontend-4715\/dXNlcjplZDFhZTdjYy0zZGRhLTQ3MGMtYjlhMi02ZmI5MzJhY2U2NDc=\/acddcea6-94ce-4d70-bf8a-95f8b1cfa145\/8673814D-7B81-4DEB-A15A-CD431A91DAD2.jpg&amp;#34;&lt;/span&gt;
-            &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;check_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;{{total_income_range_id}}&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;upper_bounds&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;500000&lt;/span&gt;
-            &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;answers&amp;#34;&lt;/span&gt;: [
+        {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;check_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;{{birthdate_id}}&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2000-10-10&amp;#34;&lt;/span&gt;
+        },
+        {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;check_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;{{phone_number_id}}&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;21971697123&amp;#34;&lt;/span&gt;
+        },
+        {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;check_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;{{address_id}}&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;: {
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;street&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Rua Buarque de Macedo&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;city&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Rio de Janeiro&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;country&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Brasil&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;extra&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;postal_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;22220030&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;street_number&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;38383838&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;neighborhood&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Flamengo&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;state&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;RJ&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reference_point&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+            }
+        },
+        {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;check_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;{{document_photo_id}}&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;: {
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;CNH&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;front&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://storage.googleapis.com/sdb-inside-gateway-frontend-3727/dXNlcjo4YTZmMzYzZi05Mzg4LTRiMzEtOGY0ZC05Zjk2NTAyY2Q1NzA=/53acaa13-f74b-4884-9420-f05b0ca79d25/doc_cnh_front.jpg&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;back&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://storage.googleapis.com/sdb-inside-gateway-frontend-3727/dXNlcjo4YTZmMzYzZi05Mzg4LTRiMzEtOGY0ZC05Zjk2NTAyY2Q1NzA=/53acaa13-f74b-4884-9420-f05b0ca79d25/doc_cnh_front.jpg&amp;#34;&lt;/span&gt;
+            }
+        },
+        {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;check_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;{{document_selfies_id}}&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;: [
+                &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https:\/\/storage.googleapis.com\/hml-inside-gateway-frontend-4715\/dXNlcjplZDFhZTdjYy0zZGRhLTQ3MGMtYjlhMi02ZmI5MzJhY2U2NDc=\/79767818-0254-4f85-9cdb-f560013036d0\/CBED44AF-900B-4EC7-B8BF-DB7373BF4070.jpg&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https:\/\/storage.googleapis.com\/hml-inside-gateway-frontend-4715\/dXNlcjplZDFhZTdjYy0zZGRhLTQ3MGMtYjlhMi02ZmI5MzJhY2U2NDc=\/b2ea2032-c7f2-4c4d-b377-90920afec4cd\/43964A19-69C4-451B-8CF9-B66F8C8CC0A8.jpg&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https:\/\/storage.googleapis.com\/hml-inside-gateway-frontend-4715\/dXNlcjplZDFhZTdjYy0zZGRhLTQ3MGMtYjlhMi02ZmI5MzJhY2U2NDc=\/6aacb6d4-91f2-416e-8b04-72cca5313984\/591B208A-0374-4642-A38E-DAC0A9AFCF53.jpg&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https:\/\/storage.googleapis.com\/hml-inside-gateway-frontend-4715\/dXNlcjplZDFhZTdjYy0zZGRhLTQ3MGMtYjlhMi02ZmI5MzJhY2U2NDc=\/43e42571-4d6e-4fda-9b45-c99276b18024\/B6076B95-B67F-4DAE-85F1-CAB1FA013B30.jpg&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https:\/\/storage.googleapis.com\/hml-inside-gateway-frontend-4715\/dXNlcjplZDFhZTdjYy0zZGRhLTQ3MGMtYjlhMi02ZmI5MzJhY2U2NDc=\/89f45dbc-5797-4f4c-b067-8d04e7dc1c6d\/7BFB3285-BE78-4F73-B36E-087DDD82CA6A.jpg&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https:\/\/storage.googleapis.com\/hml-inside-gateway-frontend-4715\/dXNlcjplZDFhZTdjYy0zZGRhLTQ3MGMtYjlhMi02ZmI5MzJhY2U2NDc=\/acddcea6-94ce-4d70-bf8a-95f8b1cfa145\/8673814D-7B81-4DEB-A15A-CD431A91DAD2.jpg&amp;#34;&lt;/span&gt;
+            ]
+        },
+        {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;check_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;{{total_income_range_id}}&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;: {
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;upper_bounds&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;500000&lt;/span&gt;
+            }
+        }
+    ]
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;200 OK
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;checks&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;detailed_reason&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Precisamos de algumas informações&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;field_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;birthdate&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;400bf541-788f-4d5f-86b1-6519f318ca65&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;input_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user_input&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;account_request&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;answered&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-05-31T20:10:18Z&amp;#34;&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;detailed_reason&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Precisamos de algumas informações&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;field_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;phone_number&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;6747569e-ea50-4b71-9230-7e0fd8b92d6d&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;input_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user_input&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;account_request&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;answered&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-05-31T20:10:18Z&amp;#34;&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;detailed_reason&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Precisamos de algumas informações&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;field_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;address&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;4f485886-1546-4726-b4e1-baa21bb0f4a1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;input_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user_input&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;account_request&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;answered&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-05-31T20:10:18Z&amp;#34;&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;detailed_reason&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Precisamos de algumas informações&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;field_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;document_photo&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cbe5a713-2d02-49b3-85e4-97bf39c27354&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;input_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user_input&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;account_request&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;answered&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-05-31T20:10:18Z&amp;#34;&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;detailed_reason&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Precisamos de algumas informações&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;field_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;document_selfies&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;5b6d185d-e080-4534-b346-389fffae7294&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;input_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user_input&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;account_request&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;answered&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-05-31T20:10:18Z&amp;#34;&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;income_ranges&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
-                    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;formatted&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Até R$ 5.000,00&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;range&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;lower_bounds&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;upper_bounds&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;500000&lt;/span&gt;
-                        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-                    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-                    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;formatted&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Entre R$ 5.000,01 e R$ 10.000,00&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;range&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;lower_bounds&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;500001&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;upper_bounds&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1000000&lt;/span&gt;
-                        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-                    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-                    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;formatted&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Entre R$ 10.000,01 e R$ 20.000,00&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;range&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;lower_bounds&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1000001&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;upper_bounds&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2000000&lt;/span&gt;
-                        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-                    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-                    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;formatted&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Entre R$ 20.000,01 e R$ 100.000,00&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;range&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;lower_bounds&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2000001&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;upper_bounds&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;10000000&lt;/span&gt;
-                        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-                    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-                    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;formatted&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Entre R$ 100.000,01 e R$ 1.000.000,00&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;range&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;lower_bounds&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;10000001&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;upper_bounds&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;100000000&lt;/span&gt;
-                        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-                    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-                    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;formatted&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Mais de R$ 1.000.000,00&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;range&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;lower_bounds&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;100000001&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;upper_bounds&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;
-                        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-                    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-                &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
-            &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;detailed_reason&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Precisamos de algumas informações&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;field_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;total_income_range&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;a24ad007-2d63-4108-8340-16b843873be2&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;input_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user_input&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;account_request&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;answered&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-05-31T20:10:18Z&amp;#34;&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;],&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{},&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;50a22e82-1fe6-407b-b76c-986f46db60e8&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;input_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user_input&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;is_mandatory&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;account_request&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;answered&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-05-31T20:10:18Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;user_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;ef49c647-1dc9-47e8-a559-108cdf7e65a4&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;200 OK
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;checks&amp;#34;&lt;/span&gt;: [
+        {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;detailed_reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Precisamos de algumas informações&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;field_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;birthdate&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;400bf541-788f-4d5f-86b1-6519f318ca65&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;input_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user_input&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;account_request&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;answered&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-31T20:10:18Z&amp;#34;&lt;/span&gt;
+        },
+        {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;detailed_reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Precisamos de algumas informações&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;field_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;phone_number&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;6747569e-ea50-4b71-9230-7e0fd8b92d6d&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;input_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user_input&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;account_request&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;answered&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-31T20:10:18Z&amp;#34;&lt;/span&gt;
+        },
+        {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;detailed_reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Precisamos de algumas informações&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;field_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;address&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;4f485886-1546-4726-b4e1-baa21bb0f4a1&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;input_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user_input&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;account_request&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;answered&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-31T20:10:18Z&amp;#34;&lt;/span&gt;
+        },
+        {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;detailed_reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Precisamos de algumas informações&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;field_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;document_photo&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;cbe5a713-2d02-49b3-85e4-97bf39c27354&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;input_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user_input&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;account_request&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;answered&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-31T20:10:18Z&amp;#34;&lt;/span&gt;
+        },
+        {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;detailed_reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Precisamos de algumas informações&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;field_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;document_selfies&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;5b6d185d-e080-4534-b346-389fffae7294&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;input_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user_input&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;account_request&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;answered&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-31T20:10:18Z&amp;#34;&lt;/span&gt;
+        },
+        {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;: {
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;income_ranges&amp;#34;&lt;/span&gt;: [
+                    {
+                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;formatted&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Até R$ 5.000,00&amp;#34;&lt;/span&gt;,
+                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;range&amp;#34;&lt;/span&gt;: {
+                            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;lower_bounds&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+                            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;upper_bounds&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;500000&lt;/span&gt;
+                        }
+                    },
+                    {
+                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;formatted&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Entre R$ 5.000,01 e R$ 10.000,00&amp;#34;&lt;/span&gt;,
+                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;range&amp;#34;&lt;/span&gt;: {
+                            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;lower_bounds&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;500001&lt;/span&gt;,
+                            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;upper_bounds&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;1000000&lt;/span&gt;
+                        }
+                    },
+                    {
+                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;formatted&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Entre R$ 10.000,01 e R$ 20.000,00&amp;#34;&lt;/span&gt;,
+                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;range&amp;#34;&lt;/span&gt;: {
+                            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;lower_bounds&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;1000001&lt;/span&gt;,
+                            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;upper_bounds&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;2000000&lt;/span&gt;
+                        }
+                    },
+                    {
+                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;formatted&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Entre R$ 20.000,01 e R$ 100.000,00&amp;#34;&lt;/span&gt;,
+                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;range&amp;#34;&lt;/span&gt;: {
+                            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;lower_bounds&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;2000001&lt;/span&gt;,
+                            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;upper_bounds&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;10000000&lt;/span&gt;
+                        }
+                    },
+                    {
+                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;formatted&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Entre R$ 100.000,01 e R$ 1.000.000,00&amp;#34;&lt;/span&gt;,
+                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;range&amp;#34;&lt;/span&gt;: {
+                            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;lower_bounds&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;10000001&lt;/span&gt;,
+                            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;upper_bounds&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;100000000&lt;/span&gt;
+                        }
+                    },
+                    {
+                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;formatted&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Mais de R$ 1.000.000,00&amp;#34;&lt;/span&gt;,
+                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;range&amp;#34;&lt;/span&gt;: {
+                            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;lower_bounds&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;100000001&lt;/span&gt;,
+                            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;upper_bounds&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;
+                        }
+                    }
+                ]
+            },
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;detailed_reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Precisamos de algumas informações&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;field_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;total_income_range&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;a24ad007-2d63-4108-8340-16b843873be2&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;input_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user_input&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;account_request&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;answered&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-31T20:10:18Z&amp;#34;&lt;/span&gt;
+        }
+    ],
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;context&amp;#34;&lt;/span&gt;: {},
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-31T15:04:48Z&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;50a22e82-1fe6-407b-b76c-986f46db60e8&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;input_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user_input&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;is_mandatory&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;true&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;account_request&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;answered&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-31T20:10:18Z&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;user_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ef49c647-1dc9-47e8-a559-108cdf7e65a4&amp;#34;&lt;/span&gt;
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>

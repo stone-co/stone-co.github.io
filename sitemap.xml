@@ -1,655 +1,391 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/pix/buscar-dados-qrcode/</loc>
     <lastmod>2021-04-01T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/recargas/overview/</loc>
     <lastmod>2021-04-06T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/guias/integracao-para-fornecedores/authorization/</loc>
     <lastmod>2021-03-18T14:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/o-que-e-um-link-de-pagamento/</loc>
     <lastmod>2021-03-10T16:30:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/estrutura-de-transacoes-no-extrato/</loc>
     <lastmod>2021-02-19T13:14:16+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/guias/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/instituicoes/overview-instituicao/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/guias/stone-openbank-api/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/overview/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/criar-nova-conta-de-pagamento/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/overview-emissao-de-boletos/</loc>
     <lastmod>2020-12-23T13:10:22+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves/</loc>
     <lastmod>2021-02-01T22:52:07+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/</loc>
     <lastmod>2020-09-29T12:03:51+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/conta-stone-sdk/overview/</loc>
     <lastmod>2019-11-19T22:48:16+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/guias/a-conta-stone/overview/</loc>
     <lastmod>2020-12-29T14:00:48+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/contatos/o-objeto-contato/</loc>
     <lastmod>2019-06-06T19:54:27+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/guias/stone-openbank-api/overview/</loc>
     <lastmod>2021-02-01T22:49:07+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/guias/integracao/boas-praticas/</loc>
     <lastmod>2020-06-02T17:07:48+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/pagamentos/o-que-e-um-pagamento/</loc>
     <lastmod>2021-02-01T22:02:27+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/simular-uma-transferencia-interna/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/kyc/buscar-informacoes-pendentes/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/transferencias/o-que-e-uma-transferencia/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/pix/criar-pagamento-pendente/</loc>
     <lastmod>2021-04-01T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-celular/</loc>
     <lastmod>2021-04-06T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/conta-stone-sdk/sdk-sample-ios/</loc>
     <lastmod>2021-03-23T11:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/configuracoes-da-conta-para-um-link-de-pagamento/</loc>
     <lastmod>2021-03-11T14:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/guias/a-conta-stone/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/instituicoes/listar-instituicoes/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/autenticacao/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-dados-do-pedido-da-conta-de-pagamento/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/verificar-status-de-uma-entidade/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/guias/a-conta-stone/modelos-de-parceria/</loc>
     <lastmod>2020-12-09T14:51:36+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/pagamentos/o-objeto-pagamento/</loc>
     <lastmod>2020-04-28T15:16:04+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/guias/stone-openbank-api/quickstart/</loc>
     <lastmod>2019-07-15T20:15:50+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/contatos/criar-um-contato/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/overview-dados-da-conta/</loc>
     <lastmod>2020-05-01T00:15:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/simular-uma-transferencia-externa/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/kyc/consultar-url-para-foto/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/transferencias/o-objeto-transferencia/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/pix/confirmar-pagamento-pendente/</loc>
     <lastmod>2021-04-01T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-jogos/</loc>
     <lastmod>2021-04-06T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/conta-stone-sdk/sdk-sample-android/</loc>
     <lastmod>2021-03-23T11:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/listar-links-de-pagamento-da-conta/</loc>
     <lastmod>2021-03-11T15:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/guias/integracao/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/instituicoes/retornar-uma-instituicao/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/data-e-hora/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/regras-de-negocio/</loc>
     <lastmod>2020-10-24T00:14:01+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/objetos-simulacao-de-pagamento/</loc>
     <lastmod>2020-05-01T01:03:24+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/guias/stone-openbank-api/ambientes-da-api/</loc>
     <lastmod>2019-07-24T18:37:37+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/guias/a-conta-stone/aplicativos/</loc>
     <lastmod>2019-07-23T18:17:41+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/pagamentos/criar-um-pagamento/</loc>
     <lastmod>2020-04-28T15:16:04+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/guias/integracao/autenticacao/</loc>
     <lastmod>2020-07-20T07:37:56+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/contatos/listar-contatos/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-internas/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-internas/transferir-para-contas-stone/</loc>
     <lastmod>2020-03-02T18:59:37+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-dados-da-conta/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/kyc/enviar-fotos/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-conteudo-digital/</loc>
     <lastmod>2021-04-06T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/detalhes-de-um-link-de-pagamento/</loc>
     <lastmod>2021-03-15T15:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/guias/tutoriais/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/paginacao/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/guias/integracao/testando-a-api/</loc>
     <lastmod>2019-07-10T18:16:57+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/simular-o-pagamento-de-um-documento/</loc>
     <lastmod>2020-06-04T00:43:25+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/contatos/retornar-um-contato/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/pagamentos/listar-pagamentos/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-externas/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-internas/listar-transferencias-internas/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-todas-as-contas-as-quais-o-usuario-tem-acesso/</loc>
     <lastmod>2020-04-30T00:51:36+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/kyc/enviar-dados-do-usuario/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-tv-por-assinatura/</loc>
     <lastmod>2021-04-06T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/criar-link-de-pagamento/</loc>
     <lastmod>2021-03-15T11:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/transferencias/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/valores-financeiros/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/o-objeto-saldo/</loc>
     <lastmod>2020-03-11T00:25:58+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/emitir-boleto/</loc>
     <lastmod>2020-12-21T20:31:32+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/guias/integracao/consentimento/</loc>
     <lastmod>2020-12-29T13:36:51+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/contatos/atualizar-contato/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/pagamentos/retornar-um-pagamento/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-internas/retornando-uma-transferencia-interna/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/recargas/recarga-de-meios-de-transporte/</loc>
     <lastmod>2021-04-06T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/cancelar-link-de-pagamento/</loc>
     <lastmod>2021-03-15T11:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/pagamentos/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/codigos-de-resposta/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/listar-boletos/</loc>
     <lastmod>2020-03-09T17:11:01+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/guias/integracao/aprovacao/</loc>
     <lastmod>2019-06-12T21:07:47+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/pagamentos/cancelamento-de-um-pagamento/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-internas/cancelamento-de-uma-transferencia-interna-agendada/</loc>
     <lastmod>2019-04-29T18:22:59+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/contatos/excluir-um-contato/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-o-saldo/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/recargas/fluxo-challenge/</loc>
     <lastmod>2021-04-06T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/agendamento/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/</loc>
     <lastmod>2020-10-28T19:48:19+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/mensagens-de-erro/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/retornar-um-boleto/</loc>
     <lastmod>2020-03-06T17:19:19+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/guias/integracao/webhooks/</loc>
     <lastmod>2021-02-01T22:57:33+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/contatos/adicionar-conta-bancaria-a-um-contato/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/pagamentos/consideracoes_importantes/considera%C3%A7%C3%B5es-importantes/</loc>
     <lastmod>2020-09-23T00:01:30+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-externas/transferir-para-outros-bancos/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/guias/integracao/reembolso-de-transferencias/</loc>
     <lastmod>2020-10-09T19:44:31+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/gerar-boleto-pdf/</loc>
     <lastmod>2020-09-22T15:54:16+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/comprovantes/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/contatos/atualizar-conta-bancaria-de-um-contato/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-externas/listar-transferencias-externas/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-extrato/</loc>
     <lastmod>2020-04-20T20:28:41+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/guias/integracao-para-fornecedores/</loc>
     <lastmod>2021-05-19T09:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/contatos/excluir-conta-bancaria-de-um-contato/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-externas/retornar-uma-transferencia-externa/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-uma-entrada-no-extrato/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/cancelar-boleto/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/instituicoes/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/o-objeto-taxa/</loc>
     <lastmod>2020-06-26T01:50:43+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-externas/cancelamento-de-uma-transferencia-externa-agendada/</loc>
     <lastmod>2019-04-29T20:22:41+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/contatos/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-taxas/</loc>
     <lastmod>2020-03-30T14:45:05+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-todas-as-taxas/</loc>
     <lastmod>2019-12-02T22:56:58+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/kyc/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/pix/</loc>
     <lastmod>2021-03-31T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/recargas/</loc>
     <lastmod>2021-04-06T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/conta-stone-sdk/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/agendamento/operacoes-agendadas/</loc>
     <lastmod>2021-05-25T17:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/</loc>
     <lastmod>2021-05-25T17:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/agendamento/calendario-de-agendamento/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/comprovantes/como-emitir-um-comprovante/</loc>
     <lastmod>2020-09-17T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/docs/guias/tutoriais/integrando-na-pratica/</loc>
     <lastmod>2020-12-29T13:59:12+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://stone-co.github.io/search/</loc>
   </url>
-  
 </urlset>

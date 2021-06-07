@@ -26,13 +26,13 @@
         &lt;hr&gt;
 &lt;br&gt;
 &lt;ol&gt;
-&lt;li&gt;Será enviado pelo nosso time de parcerias o formulário para criação das &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/#credenciais-da-minha-aplica%C3%A7%C3%A3o&#34;&gt;credenciais da sua aplicação&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Será enviado pelo nosso time de parcerias o formulário para criação das &lt;a href=&#34;../../../docs/guias/integracao/cadastro-da-aplicacao/#credenciais-da-minha-aplica%C3%A7%C3%A3o&#34;&gt;credenciais da sua aplicação&lt;/a&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Atenção&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Será necessário &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves&#34;&gt;gerar um par de chaves RSA 4096&lt;/a&gt; e compartilhar a &lt;strong&gt;chave pública&lt;/strong&gt; conosco no formato PEM e extensão .pub&lt;/p&gt;
+&lt;p&gt;Será necessário &lt;a href=&#34;../../../docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves&#34;&gt;gerar um par de chaves RSA 4096&lt;/a&gt; e compartilhar a &lt;strong&gt;chave pública&lt;/strong&gt; conosco no formato PEM e extensão .pub&lt;/p&gt;
 
 &lt;/div&gt;
 
@@ -50,9 +50,9 @@
 
 &lt;br&gt;
 &lt;h4 id=&#34;credenciais-da-minha-aplicação&#34;&gt;&lt;strong&gt;Credenciais da minha aplicação&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;O identificador que representa uma aplicação parceira na API Stone OpenBank é chamado de &lt;code&gt;cliend_id&lt;/code&gt;. Ele é gerada pela Stone e é único. Ele será utilizada no processo de &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;autenticação&lt;/a&gt; junto a API identificando assim todos os requests provenientes dessa aplicação.&lt;/p&gt;
-&lt;p&gt;Alguns processos da nossa API, como o próprio processo de &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;autenticação&lt;/a&gt;, envolvem uma etapa de criptografia assimétrica, assim na hora da criação do &lt;code&gt;client_id&lt;/code&gt; da sua aplicação atrelaremos a ele a chave pública fornecida por você.&lt;/p&gt;
-&lt;p&gt;Montamos um guia para te ajudar a gerar seu &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves&#34;&gt;par de chaves assimétricas&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;O identificador que representa uma aplicação parceira na API Stone OpenBank é chamado de &lt;code&gt;cliend_id&lt;/code&gt;. Ele é gerada pela Stone e é único. Ele será utilizada no processo de &lt;a href=&#34;../../../docs/guias/integracao/autenticacao&#34;&gt;autenticação&lt;/a&gt; junto a API identificando assim todos os requests provenientes dessa aplicação.&lt;/p&gt;
+&lt;p&gt;Alguns processos da nossa API, como o próprio processo de &lt;a href=&#34;../../../docs/guias/integracao/autenticacao&#34;&gt;autenticação&lt;/a&gt;, envolvem uma etapa de criptografia assimétrica, assim na hora da criação do &lt;code&gt;client_id&lt;/code&gt; da sua aplicação atrelaremos a ele a chave pública fornecida por você.&lt;/p&gt;
+&lt;p&gt;Montamos um guia para te ajudar a gerar seu &lt;a href=&#34;../../../docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves&#34;&gt;par de chaves assimétricas&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Cada &lt;code&gt;client_id&lt;/code&gt; tem também as URIs de webhook e URI de redirect que serão configuradas de acordo com as informações fornecidas pelo parceiro.&lt;/p&gt;
 &lt;br&gt;
 
@@ -101,8 +101,8 @@ Se isso ocorrer em um período curto demais pode ocasionar uma resposta &lt;code
 &lt;li&gt;Uma chamada com a &lt;strong&gt;chave de idempotênca maior que 72 caracteres&lt;/strong&gt; retornará um erro &lt;code&gt;HTTP 431&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;simulações-dry-run&#34;&gt;&lt;strong&gt;Simulações (dry-run)&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;Nossos endpoints que envolvem operações financeiras suportam &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/&#34;&gt;Simulações (dry-run)&lt;/a&gt;, permitindo que o usuário visualize com antecedência o que vai acontecer nessa operação.&lt;/p&gt;
-&lt;p&gt;Em alguns casos, as Simulações permitem enriquecer os dados de uma operação, como, por exemplo o &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/simular-o-pagamento-de-um-documento/&#34;&gt;Pagamento de Boletos&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Nossos endpoints que envolvem operações financeiras suportam &lt;a href=&#34;../../../docs/referencia-da-api/simulacoes-dry-run/&#34;&gt;Simulações (dry-run)&lt;/a&gt;, permitindo que o usuário visualize com antecedência o que vai acontecer nessa operação.&lt;/p&gt;
+&lt;p&gt;Em alguns casos, as Simulações permitem enriquecer os dados de uma operação, como, por exemplo o &lt;a href=&#34;../../../docs/referencia-da-api/simulacoes-dry-run/simular-o-pagamento-de-um-documento/&#34;&gt;Pagamento de Boletos&lt;/a&gt;.&lt;/p&gt;
 
       </description>
     </item>
@@ -121,8 +121,8 @@ Se isso ocorrer em um período curto demais pode ocasionar uma resposta &lt;code
 &lt;br&gt;
 &lt;p&gt;Segurança sempre foi um assunto complexo, principalmente por ter uma terminologia específica. Para facilitar ao máximo a integração com a nossa API, procuramos adotar padrões estabelecidos de mercado.&lt;/p&gt;
 &lt;h4 id=&#34;autenticação-de-aplicativos-parceiros&#34;&gt;&lt;strong&gt;Autenticação de Aplicativos Parceiros&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;Cada Aplicativo recebe um identificador exclusivo chamado &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/#credenciais-da-minha-aplica%C3%A7%C3%A3o&#34;&gt;clientID&lt;/a&gt; quando é criado. Esse ID não pode ser modificado e será usado no token de acesso do seu aplicativo quando chamar a API.&lt;/p&gt;
-&lt;p&gt;Outra informação importante é o &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves/&#34;&gt;par de chaves&lt;/a&gt; do seu aplicativo, que deve ser mantida confidencial em todos os momentos. Se alguém obtiver acesso a sua chave privada, essa pessoa poderá acessar recursos protegidos em nome do seu aplicativo. Isso não pode acontecer sob hipótese alguma.&lt;/p&gt;
+&lt;p&gt;Cada Aplicativo recebe um identificador exclusivo chamado &lt;a href=&#34;../../../docs/guias/integracao/cadastro-da-aplicacao/#credenciais-da-minha-aplica%C3%A7%C3%A3o&#34;&gt;clientID&lt;/a&gt; quando é criado. Esse ID não pode ser modificado e será usado no token de acesso do seu aplicativo quando chamar a API.&lt;/p&gt;
+&lt;p&gt;Outra informação importante é o &lt;a href=&#34;../../../docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves/&#34;&gt;par de chaves&lt;/a&gt; do seu aplicativo, que deve ser mantida confidencial em todos os momentos. Se alguém obtiver acesso a sua chave privada, essa pessoa poderá acessar recursos protegidos em nome do seu aplicativo. Isso não pode acontecer sob hipótese alguma.&lt;/p&gt;
 &lt;p&gt;O desenvolvedor deve usar essa chave privada para assinar os tokens enviados para a Stone e nos enviar a chave pública para verificarmos a assinatura.&lt;/p&gt;
 &lt;h4 id=&#34;autenticação-com-o-auth-e-open-id-connect&#34;&gt;&lt;strong&gt;Autenticação com o Auth e Open ID Connect&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&#34;https://oauth.net/2/&#34;&gt;OAuth 2.0&lt;/a&gt; é um padrão de autorização que permite ao usuário conceder acesso limitado a seus recursos na Conta Stone para Aplicativos de Parceiros, sem precisar expor suas credenciais. Ou seja, o cliente não precisa compartilhar seu login e senha com ninguém.&lt;/p&gt;
@@ -149,10 +149,10 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3O
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;header&lt;/strong&gt;: possui informações sobre o algoritmo de criptografia utilizado, entre outros metadados deste processo, como um id da chave utilizada. Na nossa API utilizaremos sempre o algoritmo &amp;ldquo;RS256&amp;rdquo;. Falaremos mais sobre ele. Um exemplo de &lt;em&gt;header&lt;/em&gt; seria:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;alg&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;RS256&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;typ&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;JWT&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;alg&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;RS256&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;typ&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;JWT&amp;#34;&lt;/span&gt;
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Este deve ser encondado na &lt;em&gt;base 64&lt;/em&gt; para ser incluído no token. Para o exemplo, fica: &lt;code&gt;eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9&lt;/code&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;payload&lt;/strong&gt;: um conjunto de alegações (&lt;em&gt;claims&lt;/em&gt;, do inglês) que possuem a estrutura chave/valor. É aqui que colocamos informações como tempo de expiração do token, qual o id da Aplicação e etc.&lt;/li&gt;
@@ -218,10 +218,10 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3O
 &lt;/ul&gt;
 &lt;p&gt;A chamada é com o método &lt;code&gt;POST&lt;/code&gt; com o header  &lt;code&gt;Content-Type&lt;/code&gt;  e &lt;code&gt;User-Agent&lt;/code&gt;.  O &lt;code&gt;Content-Type&lt;/code&gt; informado deve ser &lt;code&gt;x-www-form-urlencoded&lt;/code&gt; (o mesmo usado por submissão de formulários HTML) e o header &lt;code&gt;User-Agent&lt;/code&gt; deve estar habilitado.&lt;/p&gt;
 &lt;p&gt;Ex.:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;user-agent&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Nome da aplicação&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;content-type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;application/x-www-form-urlencoded&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;user-agent&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Nome da aplicação&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;content-type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;application/x-www-form-urlencoded&amp;#34;&lt;/span&gt;
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;glossário&#34;&gt;&lt;strong&gt;Glossário&lt;/strong&gt;&lt;/h5&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -255,9 +255,9 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3O
 &lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
 &lt;h4 class=&#34;alert-heading&#34;&gt;Curl&lt;/h4&gt;
 
-    &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-  &lt;span style=&#34;color:#a40000&#34;&gt;curl&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;-X&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;POST&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;https://sandbox-accounts.openbank.stone.com.br/auth/realms/stone_bank/protocol/openid-connect/token&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;-H&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;content-type:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;application/x-www-form-urlencoded&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;-d&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;client_id=ID_EXEMPLO&amp;amp;grant_type=client_credentials&amp;amp;client_assertion_type=urn:ietf:params:oauth:client-assertion-type:jwt-bearer&amp;amp;client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c&amp;#39;&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+    &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+  curl -X POST https://sandbox-accounts.openbank.stone.com.br/auth/realms/stone_bank/protocol/openid-connect/token -H &amp;#39;content-type: application/x-www-form-urlencoded&amp;#39; -d &amp;#39;client_id=ID_EXEMPLO&amp;amp;grant_type=client_credentials&amp;amp;client_assertion_type=urn:ietf:params:oauth:client-assertion-type:jwt-bearer&amp;amp;client_assertion=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c&amp;#39;
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
@@ -267,82 +267,82 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3O
 &lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
 &lt;h4 class=&#34;alert-heading&#34;&gt;Python&lt;/h4&gt;
 
-    &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;jwt&lt;/span&gt;
-&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;time&lt;/span&gt;
-&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;requests&lt;/span&gt;
-&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;subprocess&lt;/span&gt;
+    &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; jwt
+&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; time
+&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; requests
+&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; subprocess
 
-&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;AppData&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;__init__&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#3465a4&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;client_id&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;base_url&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;base_auth_url&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;private_key&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;):&lt;/span&gt;
-    &lt;span style=&#34;color:#3465a4&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;client_id&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;client_id&lt;/span&gt;
-    &lt;span style=&#34;color:#3465a4&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;base_url&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;base_url&lt;/span&gt;
-    &lt;span style=&#34;color:#3465a4&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;base_auth_url&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;base_auth_url&lt;/span&gt;
-    &lt;span style=&#34;color:#3465a4&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;private_key&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;private_key&lt;/span&gt;
-
-
-&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;getApplicationData&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;():&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;AppData&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;
-        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;insira aqui seu client_id&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;https://sandbox-api.openbank.stone.com.br/api/v1&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;https://sandbox-accounts.openbank.stone.com.br&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-        &lt;span style=&#34;color:#000&#34;&gt;private_key&lt;/span&gt;
-    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
-
-&lt;span style=&#34;color:#000&#34;&gt;private_key&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&amp;#34;&amp;#34;-----BEGIN RSA PRIVATE KEY-----
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;                Insira aqui sua private_key
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;-----END RSA PRIVATE KEY-----&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#ff79c6&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;AppData&lt;/span&gt;:
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;def&lt;/span&gt; __init__(self, client_id, base_url, base_auth_url, private_key):
+    self&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;client_id &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; client_id
+    self&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;base_url &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; base_url
+    self&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;base_auth_url &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; base_auth_url
+    self&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;private_key &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; private_key
 
 
-&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;getToken&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;():&lt;/span&gt;
+&lt;span style=&#34;color:#ff79c6&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;getApplicationData&lt;/span&gt;():
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;return&lt;/span&gt; AppData(
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;insira aqui seu client_id&amp;#39;&lt;/span&gt;,
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;https://sandbox-api.openbank.stone.com.br/api/v1&amp;#39;&lt;/span&gt;,
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;https://sandbox-accounts.openbank.stone.com.br&amp;#39;&lt;/span&gt;,
+        private_key
+    )
 
-    &lt;span style=&#34;color:#000&#34;&gt;app_data&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;getApplicationData&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()&lt;/span&gt;
-
-    &lt;span style=&#34;color:#000&#34;&gt;base_url&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;{app_data.base_auth_url}/auth/realms/stone_bank&amp;#39;&lt;/span&gt;
-    &lt;span style=&#34;color:#000&#34;&gt;auth_url&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;{base_url}/protocol/openid-connect/token&amp;#39;&lt;/span&gt;
-
-    &lt;span style=&#34;color:#000&#34;&gt;payload&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;exp&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;time&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;time&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;())&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;3600&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;nbf&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;time&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;time&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()),&lt;/span&gt;
-        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;aud&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;base_url&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;realm&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;stone_bank&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;sub&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;app_data&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;client_id&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;clientId&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;app_data&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;client_id&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;jti&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;str&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;time&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;time&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()),&lt;/span&gt;
-        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;iat&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;time&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;time&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;())&lt;/span&gt;
-    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-
-    &lt;span style=&#34;color:#000&#34;&gt;token&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;jwt&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;encode&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;payload&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;app_data&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;private_key&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;algorithm&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;RS256&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
-
-    &lt;span style=&#34;color:#000&#34;&gt;headers&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;Content-Type&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;application/x-www-form-urlencoded&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;User-Agent&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;Insira aqui o Nome da Aplicação&amp;#39;&lt;/span&gt;
-    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-
-    &lt;span style=&#34;color:#000&#34;&gt;token_payload&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;client_id&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;app_data&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;client_id&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;grant_type&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;client_credentials&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;client_assertion&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;token&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;decode&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(),&lt;/span&gt;
-        &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;client_assertion_type&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;urn:ietf:params:oauth:client-assertion-type:jwt-bearer&amp;#39;&lt;/span&gt;
-    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;requests&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;post&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;auth_url&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;data&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;token_payload&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;headers&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;headers&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+private_key &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;#34;&amp;#34;-----BEGIN RSA PRIVATE KEY-----
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;                Insira aqui sua private_key
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;-----END RSA PRIVATE KEY-----&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
 
 
-&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# COMENTAR PRA NÃO COPIAR O TOKEN&lt;/span&gt;
-&lt;span style=&#34;color:#000&#34;&gt;response&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;getToken&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()&lt;/span&gt;
-&lt;span style=&#34;color:#000&#34;&gt;access_token&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;response&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;json&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;()[&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;access_token&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
+&lt;span style=&#34;color:#ff79c6&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;getToken&lt;/span&gt;():
 
-&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;access_token&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+    app_data &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; getApplicationData()
+
+    base_url &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; f&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;{app_data.base_auth_url}/auth/realms/stone_bank&amp;#39;&lt;/span&gt;
+    auth_url &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; f&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;{base_url}/protocol/openid-connect/token&amp;#39;&lt;/span&gt;
+
+    payload &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; {
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;exp&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;int&lt;/span&gt;(time&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;time()) &lt;span style=&#34;color:#ff79c6&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;3600&lt;/span&gt;,
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;nbf&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;int&lt;/span&gt;(time&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;time()),
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;aud&amp;#39;&lt;/span&gt;: base_url,
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;realm&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;stone_bank&amp;#39;&lt;/span&gt;,
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;sub&amp;#39;&lt;/span&gt;: app_data&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;client_id,
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;clientId&amp;#39;&lt;/span&gt;: app_data&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;client_id,
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;jti&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;str&lt;/span&gt;(time&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;time()),
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;iat&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;int&lt;/span&gt;(time&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;time())
+    }
+
+    token &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; jwt&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;encode(payload, app_data&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;private_key, algorithm&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;RS256&amp;#39;&lt;/span&gt;)
+
+    headers &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; {
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;Content-Type&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;application/x-www-form-urlencoded&amp;#39;&lt;/span&gt;,
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;User-Agent&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;Insira aqui o Nome da Aplicação&amp;#39;&lt;/span&gt;
+    }
+
+    token_payload &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; {
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;client_id&amp;#39;&lt;/span&gt;: app_data&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;client_id,
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;grant_type&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;client_credentials&amp;#39;&lt;/span&gt;,
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;client_assertion&amp;#39;&lt;/span&gt;: token&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;decode(),
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;client_assertion_type&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;urn:ietf:params:oauth:client-assertion-type:jwt-bearer&amp;#39;&lt;/span&gt;
+    }
+
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;return&lt;/span&gt; requests&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;post(auth_url, data&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;token_payload, headers&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;headers)
+
+
+&lt;span style=&#34;color:#6272a4&#34;&gt;# COMENTAR PRA NÃO COPIAR O TOKEN&lt;/span&gt;
+response &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; getToken()
+access_token &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; response&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;json()[&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;access_token&amp;#39;&lt;/span&gt;]
+
+&lt;span style=&#34;color:#ff79c6&#34;&gt;print&lt;/span&gt; (access_token)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
 
 &lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;access_token&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ijh3eWRUZGpzTEdYVSJ9.eyJqdGkiOiIzM2RlNjg2Mi1iYmVkLTQ3ZWYtYTY5Yi0wNDAzNTI0YTRhNGEiLCJleHAiOjE1NTkyNDg3OTUsIm5iZiI6MCwiaWF0IjoxNTU5MjQ3ODk1LCJpc3MiOiJodHRwczovL3NhbmRib3gtYWNjb3VudHMub3BlbmJhbmsuc3RvbmUuY29tLmJyL2F1dGgvcmVhbG1zL3N0b25lX2JhbmsiLCJzdWIiOiJjMWExZmE5NC0zOTc4LTRhNjgtODBlNy1mZWU2ZTkwNmNiMmUiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiJhN2YxN2QxMC1jMGY1LTQzMzItOWE5MC1lNDQxMTVmMWNlMGEiLCJhY3IiOiIxIiwic2NvcGUiOiJleHBlbmQ6dHJhbnNmZXJzOmludGVybmFsIGVudGl0eTpsZWdhbF93cml0ZSBlbnRpdHk6d3JpdGUgcHJpbmNpcGFsOmNvbnNlbnQgZW1haWwgZXhwZW5kOnRyYW5zZmVyczpleHRlcm5hbCBzdG9uZV9zdWJqZWN0X2lkIGV4cGVuZDpyZWFkIGV4cGVuZDpib2xldG9pc3N1YW5jZSBlbnRpdHk6cmVhZCBwcm9maWxlIHBheW1lbnRhY2NvdW50OiogZXhwZW5kOnBheW1lbnRzIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInN0b25lX3N1YmplY3RfaWQiOiJ1c2VyOjNmMDcwN2NiLWEyYzgtNDlhMS04NDc4LWFjMDg1MGY5Njc4MCIsIm5hbWUiOiJKb2FvIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiam9hby5leGVtcGxvQGVtYWlsLmNvbS5iciIsImdpdmVuX25hbWUiOiJKb2FvIiwiZW1haWwiOiJqb2FvLmV4ZW1wbG9AZW1haWwuY29tLmJyIn0.baf0-ZMg_IPtoReTpQBnMIYPjrLWFklPT7T1CGE2ecxfxt-a3h1CSdveK0Xd0f9FWna6obcSIonHn7HD0mJnxwBoIK8w6_cg_ODTS-l2jgGWVTl-jN41rdyTg5kgtTT6M3v02QJxTOfklo9mpW4tX8cZorx5vP_ykb5Kk186PGxYTJ9mGwQEuyrHl7-mc8aN7x10Ue7P_fk2Br43T2uR7LoFFIVM9I45p1hntZx-e59alleIuUqnZzk5Vo8knk67ZEJEAWOiigS0yyyy9gT3wqPypBYnoP3SMVws7e6lfKuZasCS58z8arJiYVQVgF6xSoQQdDBTY4I1_5kL-phmAA&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;access_token&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ijh3eWRUZGpzTEdYVSJ9.eyJqdGkiOiIzM2RlNjg2Mi1iYmVkLTQ3ZWYtYTY5Yi0wNDAzNTI0YTRhNGEiLCJleHAiOjE1NTkyNDg3OTUsIm5iZiI6MCwiaWF0IjoxNTU5MjQ3ODk1LCJpc3MiOiJodHRwczovL3NhbmRib3gtYWNjb3VudHMub3BlbmJhbmsuc3RvbmUuY29tLmJyL2F1dGgvcmVhbG1zL3N0b25lX2JhbmsiLCJzdWIiOiJjMWExZmE5NC0zOTc4LTRhNjgtODBlNy1mZWU2ZTkwNmNiMmUiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiJhN2YxN2QxMC1jMGY1LTQzMzItOWE5MC1lNDQxMTVmMWNlMGEiLCJhY3IiOiIxIiwic2NvcGUiOiJleHBlbmQ6dHJhbnNmZXJzOmludGVybmFsIGVudGl0eTpsZWdhbF93cml0ZSBlbnRpdHk6d3JpdGUgcHJpbmNpcGFsOmNvbnNlbnQgZW1haWwgZXhwZW5kOnRyYW5zZmVyczpleHRlcm5hbCBzdG9uZV9zdWJqZWN0X2lkIGV4cGVuZDpyZWFkIGV4cGVuZDpib2xldG9pc3N1YW5jZSBlbnRpdHk6cmVhZCBwcm9maWxlIHBheW1lbnRhY2NvdW50OiogZXhwZW5kOnBheW1lbnRzIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInN0b25lX3N1YmplY3RfaWQiOiJ1c2VyOjNmMDcwN2NiLWEyYzgtNDlhMS04NDc4LWFjMDg1MGY5Njc4MCIsIm5hbWUiOiJKb2FvIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiam9hby5leGVtcGxvQGVtYWlsLmNvbS5iciIsImdpdmVuX25hbWUiOiJKb2FvIiwiZW1haWwiOiJqb2FvLmV4ZW1wbG9AZW1haWwuY29tLmJyIn0.baf0-ZMg_IPtoReTpQBnMIYPjrLWFklPT7T1CGE2ecxfxt-a3h1CSdveK0Xd0f9FWna6obcSIonHn7HD0mJnxwBoIK8w6_cg_ODTS-l2jgGWVTl-jN41rdyTg5kgtTT6M3v02QJxTOfklo9mpW4tX8cZorx5vP_ykb5Kk186PGxYTJ9mGwQEuyrHl7-mc8aN7x10Ue7P_fk2Br43T2uR7LoFFIVM9I45p1hntZx-e59alleIuUqnZzk5Vo8knk67ZEJEAWOiigS0yyyy9gT3wqPypBYnoP3SMVws7e6lfKuZasCS58z8arJiYVQVgF6xSoQQdDBTY4I1_5kL-phmAA&amp;#34;&lt;/span&gt;,
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h4 id=&#34;3-usando-o-access_token-da-resposta&#34;&gt;&lt;strong&gt;3. Usando o access_token da resposta&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;Se tudo deu certo no passo anterior, a resposta do servidor será um JSON com uma chave &lt;code&gt;access_token&lt;/code&gt;, onde terá o valor de um token de sessão.&lt;/p&gt;
@@ -381,59 +381,59 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3O
 &lt;p&gt;Nossa API é baseada em &lt;a href=&#34;https://pt.wikipedia.org/wiki/REST&#34;&gt;REST&lt;/a&gt; e a comunicação é feita utilizando métodos de &lt;a href=&#34;https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods&#34;&gt;requisição HTTP&lt;/a&gt; (&lt;strong&gt;GET&lt;/strong&gt;, &lt;strong&gt;POST&lt;/strong&gt;, &lt;strong&gt;PUT&lt;/strong&gt;, &lt;strong&gt;DELETE&lt;/strong&gt;, etc)&lt;/p&gt;
 &lt;p&gt;Para todos os endpoints, o formato esperado para o &lt;code&gt;content_type&lt;/code&gt; é sempre &lt;code&gt;application/json&lt;/code&gt;. A URL base para a API em Sandbox é &lt;code&gt;https://sandbox-api.openbank.stone.com.br/api/v1&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Abaixo temos um exemplo de uma requisição válida para a API em Sandbox, utilizando a ferramenta &lt;code&gt;curl&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;curl&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;--request&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;GET&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;\&lt;/span&gt; 
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;curl --request GET \ 
   
-  &lt;span style=&#34;color:#a40000&#34;&gt;--url&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;https://sandbox-api.openbank.stone.com.br/api/v&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;/institutions/&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;197&lt;/span&gt;
+  --url https://sandbox-api.openbank.stone.com.br/api/v&lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;/institutions/&lt;span style=&#34;color:#bd93f9&#34;&gt;197&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;O retorno das chamadas na API será, por padrão, um objeto do tipo JSON. A chamada anterior tem a seguinte resposta:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;ispb_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;16501555&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Stone Pagamentos S.A.&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;number_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;197&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;short_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;STONE PAGAMENTOS S.A.&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;ispb_code&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;16501555&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Stone Pagamentos S.A.&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;number_code&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;197&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;short_name&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;STONE PAGAMENTOS S.A.&amp;#34;&lt;/span&gt;
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A chamada abaixo é usada para enviar uma TED. Nesse caso, adicionamos como &lt;em&gt;headers&lt;/em&gt; o tipo de conteúdo como sendo &lt;code&gt;application/json&lt;/code&gt; e a autenticação via &lt;code&gt;Bearer token&lt;/code&gt;, como discutida na sessão de autenticação.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;curl&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;--request&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;POST&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;\&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;curl --request POST \
   
-  &lt;span style=&#34;color:#a40000&#34;&gt;--url&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;https://sandbox-api.openbank.stone.com.br/api/v&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;/external_transfers&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;\&lt;/span&gt;
-  &lt;span style=&#34;color:#a40000&#34;&gt;--header&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;Content-Type:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;application/json&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;\&lt;/span&gt;
-  &lt;span style=&#34;color:#a40000&#34;&gt;--header&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;authorization:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;Bearer&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;token&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;\&lt;/span&gt;
-  &lt;span style=&#34;color:#a40000&#34;&gt;--data&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;3000&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;target&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:{&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:{&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;654321&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1234&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;260&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;entity&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:{&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;05971627007&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Nome do destinatário&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}},&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;f49a9d13-18dc-4811-b286-edd168a428b2&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;&lt;/span&gt;
+  --url https://sandbox-api.openbank.stone.com.br/api/v&lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;/external_transfers \
+  --header &amp;#39;Content-Type: application/json&amp;#39; \
+  --header &amp;#39;authorization: Bearer {token}&amp;#39; \
+  --data &amp;#39;{&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;3000&lt;/span&gt;,&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target&amp;#34;&lt;/span&gt;:{&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account&amp;#34;&lt;/span&gt;:{&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;654321&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;1234&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;260&amp;#34;&lt;/span&gt;},&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;entity&amp;#34;&lt;/span&gt;:{&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;05971627007&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Nome do destinatário&amp;#34;&lt;/span&gt;}},&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;f49a9d13-18dc-4811-b286-edd168a428b2&amp;#34;&lt;/span&gt;}&amp;#39;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Essas requisições geram respostas, conforme podemos ver abaixo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;  
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;16600&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;approval_expired_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;approved_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2019-06-07T18:57:57Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;approved_by&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user:b2b80e9a-7412-47de-b303-2f70f3c8e279&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;cancelled_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2019-06-07T18:57:57Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_by&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user:b2b80e9a-7412-47de-b303-2f70f3c8e279&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;delayed_to_next_business_day&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;failed_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;fee&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;finished_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;05e2950b-ff0c-4b8f-aa5f-7055bb8bc6f1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;refund_reason_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;refund_reason_description&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;refunded_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;rejected_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;rejected_by&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;scheduled_to_effective&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;scheduled_to_requested&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;settled_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;APPROVED&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;target&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:{&lt;/span&gt;  
-      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:{&lt;/span&gt;  
-         &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1241441&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-         &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1241&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-         &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;00000000&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-         &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;institution_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Banco do Brasil S.A.&amp;#34;&lt;/span&gt;
-      &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;entity&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:{&lt;/span&gt;  
-         &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;37818425098&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-         &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;fulano novo&amp;#34;&lt;/span&gt;
-      &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-   &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{  
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;16600&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;approval_expired_at&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;approved_at&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2019-06-07T18:57:57Z&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;approved_by&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user:b2b80e9a-7412-47de-b303-2f70f3c8e279&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cancelled_at&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2019-06-07T18:57:57Z&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_by&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user:b2b80e9a-7412-47de-b303-2f70f3c8e279&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;delayed_to_next_business_day&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#ff79c6&#34;&gt;false&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;failed_at&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fee&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;finished_at&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;05e2950b-ff0c-4b8f-aa5f-7055bb8bc6f1&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;refund_reason_code&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;refund_reason_description&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;refunded_at&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;rejected_at&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;rejected_by&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;scheduled_to_effective&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;scheduled_to_requested&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;settled_at&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;APPROVED&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target&amp;#34;&lt;/span&gt;:{  
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account&amp;#34;&lt;/span&gt;:{  
+         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;1241441&amp;#34;&lt;/span&gt;,
+         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;1241&amp;#34;&lt;/span&gt;,
+         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;00000000&amp;#34;&lt;/span&gt;,
+         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution_name&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Banco do Brasil S.A.&amp;#34;&lt;/span&gt;
+      },
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;entity&amp;#34;&lt;/span&gt;:{  
+         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;37818425098&amp;#34;&lt;/span&gt;,
+         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;fulano novo&amp;#34;&lt;/span&gt;
+      }
+   }
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h4 id=&#34;homologando-sua-integração&#34;&gt;&lt;strong&gt;Homologando sua Integração&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;Uma vez que o seu sistema que integra na API do Stone OpenBank está pronto e testado em Sandbox, você vai passar pelo processo de Homologação antes de ir para Produção.
@@ -550,34 +550,34 @@ Qualquer problema encontrado durante esta fase deve ser resolvido antes de pross
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;br&gt;
-&lt;p&gt;Observe que é preciso &lt;strong&gt;assinar o token JWT com a chave privada da aplicação e o algoritmo RS256&lt;/strong&gt;, assim como é feito para o token de &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;autenticação&lt;/a&gt;. Dessa forma, neste token também é preciso incluir um header com as informações sobre o algoritmo de criptografia utilizado, entre outros metadados, como um id da chave utilizada. Por exemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;alg&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;RS256&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;typ&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;JWT&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;p&gt;Observe que é preciso &lt;strong&gt;assinar o token JWT com a chave privada da aplicação e o algoritmo RS256&lt;/strong&gt;, assim como é feito para o token de &lt;a href=&#34;../../../docs/guias/integracao/autenticacao&#34;&gt;autenticação&lt;/a&gt;. Dessa forma, neste token também é preciso incluir um header com as informações sobre o algoritmo de criptografia utilizado, entre outros metadados, como um id da chave utilizada. Por exemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;alg&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;RS256&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;typ&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;JWT&amp;#34;&lt;/span&gt;
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Atenção&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Apesar do ClientID ser o disponibilizado pela Stone ao parceiro no &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao&#34;&gt;Cadastro da Aplicação&lt;/a&gt; e o mesmo utilizado para montar o token de &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;autenticação&lt;/a&gt;, observe que o &lt;strong&gt;nome do campo&lt;/strong&gt; para esse token é &lt;code&gt;client_id&lt;/code&gt;, diferente de &lt;code&gt;clientId&lt;/code&gt; utilizado no token de autenticação.&lt;/p&gt;
+&lt;p&gt;Apesar do ClientID ser o disponibilizado pela Stone ao parceiro no &lt;a href=&#34;../../../docs/guias/integracao/cadastro-da-aplicacao&#34;&gt;Cadastro da Aplicação&lt;/a&gt; e o mesmo utilizado para montar o token de &lt;a href=&#34;../../../docs/guias/integracao/autenticacao&#34;&gt;autenticação&lt;/a&gt;, observe que o &lt;strong&gt;nome do campo&lt;/strong&gt; para esse token é &lt;code&gt;client_id&lt;/code&gt;, diferente de &lt;code&gt;clientId&lt;/code&gt; utilizado no token de autenticação.&lt;/p&gt;
 
 &lt;/div&gt;
 
 &lt;p&gt;Assim, um exemplo de claims para este token seria:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;consent&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;client_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;MY CLIENT ID&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt; 
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;iss&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;MY CLIENT ID&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;redirect_uri&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;https://mypreviouslyregistereduri.com&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;session_metadata&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;user_session&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;xxxxxxxxxxxxxxxxxxxxx&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;iat&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1542235633&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;nbf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1542235633&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;exp&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1549069563&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;jti&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;41e8aa9f-bb9c-4fd2-9953-2595dbbd5a83&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;aud&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;accounts-hubid@openbank.stone.com.br&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;consent&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;client_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;MY CLIENT ID&amp;#34;&lt;/span&gt;, 
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;iss&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;MY CLIENT ID&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;redirect_uri&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://mypreviouslyregistereduri.com&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;session_metadata&amp;#34;&lt;/span&gt;: {
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;user_session&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;xxxxxxxxxxxxxxxxxxxxx&amp;#34;&lt;/span&gt;,
+  },
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;iat&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;1542235633&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;nbf&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;1542235633&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;exp&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;1549069563&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;jti&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;41e8aa9f-bb9c-4fd2-9953-2595dbbd5a83&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;aud&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;accounts-hubid@openbank.stone.com.br&amp;#34;&lt;/span&gt;
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h4 id=&#34;redirect-callback&#34;&gt;&lt;strong&gt;Redirect callback&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;O usuário irá visualizar as permissões às quais a Aplicação Parceira está pedindo acesso e poderá optar por ignorar ou consentir o acesso.&lt;/p&gt;
@@ -617,16 +617,16 @@ Qualquer problema encontrado durante esta fase deve ser resolvido antes de pross
 
 &lt;p&gt;Assim, fica fácil para o desenvolvedor prover uma experiência para ambos os casos: basta validar estes campos!&lt;/p&gt;
 &lt;h4 id=&#34;fluxo-para-o-usuário&#34;&gt;&lt;strong&gt;Fluxo para o usuário&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;Para uma integração &lt;a href=&#34;https://stone-co.github.io/docs/guias/a-conta-stone/modelos-de-parceria&#34;&gt;Open Banking&lt;/a&gt; de sucesso é essencial considerar a experiência do usuário, principalmente em fluxos de redirecionamento como para o consentimento.
+&lt;p&gt;Para uma integração &lt;a href=&#34;../../../docs/guias/a-conta-stone/modelos-de-parceria&#34;&gt;Open Banking&lt;/a&gt; de sucesso é essencial considerar a experiência do usuário, principalmente em fluxos de redirecionamento como para o consentimento.
 No início desta sessão detalhamos o passo a passo desse procedimento, neste tópico vamos exemplificar algumas das principais telas utilizadas.&lt;/p&gt;
 &lt;p&gt;Ao seguir o link gerado pelo desenvolvedor, o usuário será redirecionado para uma página da Stone. Solicitaremos ao dono o acesso à sua conta, explicitando quais permissões ele está concedendo à aplicação parceira. Podemos observar abaixo um exemplo de tela em que isso ocorre.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/docs/guias/integracao/consentimento/consentimento.png&#34; alt=&#34;imagem_consentimento&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../../docs/guias/integracao/consentimento/consentimento.png&#34; alt=&#34;imagem_consentimento&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Caso o usuário opte por conceder o acesso no botão &lt;code&gt;Permitir&lt;/code&gt; e ocorra tudo bem, será exibida uma tela de sucesso, confirmando que a permissão foi concedida. Podemos observar um exemplo dessa tela abaixo.&lt;/p&gt;
-&lt;p&gt;Ao clicar no botão &lt;code&gt;Ok, entendi&lt;/code&gt; ele será redirecionado para uma página da aplicação parceira, cujo endereço foi definido no &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao&#34;&gt;cadastro da aplicação&lt;/a&gt;, em Redirect URI.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/docs/guias/integracao/consentimento/consentimento-aprovado.png&#34; alt=&#34;imagem_consentimento_aprovado&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Ao clicar no botão &lt;code&gt;Ok, entendi&lt;/code&gt; ele será redirecionado para uma página da aplicação parceira, cujo endereço foi definido no &lt;a href=&#34;../../../docs/guias/integracao/cadastro-da-aplicacao&#34;&gt;cadastro da aplicação&lt;/a&gt;, em Redirect URI.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../../docs/guias/integracao/consentimento/consentimento-aprovado.png&#34; alt=&#34;imagem_consentimento_aprovado&#34;&gt;&lt;/p&gt;
 &lt;p&gt;É possível que ocorra também um caso em que o usuário já concedeu o acesso à aplicação parceira. Neste caso, o usuário irá visualizar uma tela como o seguinte exemplo.&lt;/p&gt;
 &lt;p&gt;Assim como no caso anterior, ele também será redirecionado para uma página da aplicação parceira ao clicar no botão &lt;code&gt;Ok, entendi&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/docs/guias/integracao/consentimento/com-consentimento.png&#34; alt=&#34;imagem_com_consentimento&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../../docs/guias/integracao/consentimento/com-consentimento.png&#34; alt=&#34;imagem_com_consentimento&#34;&gt;&lt;/p&gt;
 
       </description>
     </item>
@@ -643,7 +643,7 @@ No início desta sessão detalhamos o passo a passo desse procedimento, neste t�
         &lt;p&gt;Como o dono da conta permite que uma transação criada pelo parceiro seja realizada.&lt;/p&gt;
 &lt;hr&gt;
 &lt;br&gt;
-&lt;p&gt;A &lt;strong&gt;Aprovação de uma Transação&lt;/strong&gt; tem como objetivo garantir que toda movimentação financeira de saída de uma conta seja feita somente por um usuário devidamente autorizado. É um procedimento em que o usuário &lt;em&gt;que já concedeu o &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/consentimento&#34;&gt;consentimento&lt;/a&gt;&lt;/em&gt; é notificado da criação de uma transação e direcionado para uma página onde é possível visualizar todas as transações criadas pelo parceiro. Nessa página é possível aprovar ou rejeitar uma transação, possibilitando ou impedindo sua realização. É importante lembrar que apenas Aplicativos com consentimento podem criar transações.&lt;/p&gt;
+&lt;p&gt;A &lt;strong&gt;Aprovação de uma Transação&lt;/strong&gt; tem como objetivo garantir que toda movimentação financeira de saída de uma conta seja feita somente por um usuário devidamente autorizado. É um procedimento em que o usuário &lt;em&gt;que já concedeu o &lt;a href=&#34;../../../docs/guias/integracao/consentimento&#34;&gt;consentimento&lt;/a&gt;&lt;/em&gt; é notificado da criação de uma transação e direcionado para uma página onde é possível visualizar todas as transações criadas pelo parceiro. Nessa página é possível aprovar ou rejeitar uma transação, possibilitando ou impedindo sua realização. É importante lembrar que apenas Aplicativos com consentimento podem criar transações.&lt;/p&gt;
 &lt;p&gt;No &lt;strong&gt;Open Banking&lt;/strong&gt;, o parceiro pode criar uma transação na conta do usuário, mas esta só será efetuada se houver a aprovação do usuário dono da conta. Esse procedimento assegura ao dono da conta de que não haverá movimentação de seu dinheiro sem sua permissão, além de proteger a aplicação de eventuais erros, ataques ou bugs que iniciem transações não desejadas pelo usuário.&lt;/p&gt;
 &lt;p&gt;O &lt;strong&gt;Aprovador&lt;/strong&gt; é um aplicativo utilizado pelo usuário para realizar a autorização de transações criadas pelo parceiro. Além disso, através do aplicativo é possível manter um histórico de movimentação de saída de uma conta. Nesse histórico é possível visualizar os valores movimentados, o destino das movimentações e o usuário que autorizou as transações. É possível também utilizá-lo para realizar aprovações em lote, ou seja, aprovar um grande número de transações pendentes ao mesmo tempo.&lt;/p&gt;
 &lt;p&gt;Além de aprovar transações pelo aplicativo &lt;strong&gt;Aprovador Stone&lt;/strong&gt;, também é possível aprovar pelo aplicativo &lt;strong&gt;Conta Stone&lt;/strong&gt;, no menu &amp;ldquo;Aprovar transações&amp;rdquo;.&lt;/p&gt;
@@ -690,27 +690,27 @@ No início desta sessão detalhamos o passo a passo desse procedimento, neste t�
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/webhooks/barcode_payment_invoice_created.json&#34;&gt;barcode_payment_invoice_created&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;../../../docs/guias/integracao/webhooks/barcode_payment_invoice_created.json&#34;&gt;barcode_payment_invoice_created&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Representa a criação/emissão de um boleto.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/webhooks/barcode_payment_invoice_registered.json&#34;&gt;barcode_payment_invoice_registered&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;../../../docs/guias/integracao/webhooks/barcode_payment_invoice_registered.json&#34;&gt;barcode_payment_invoice_registered&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Representa o registro de um boleto.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/webhooks/barcode_payment_invoice_payment_promissed.json&#34;&gt;barcode_payment_invoice_payment_promissed&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;../../../docs/guias/integracao/webhooks/barcode_payment_invoice_payment_promissed.json&#34;&gt;barcode_payment_invoice_payment_promissed&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Representa que o pagamento do boleto foi acolhido em alguma instituição.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/webhooks/barcode_payment_invoice_settled.json&#34;&gt;barcode_payment_invoice_settled&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;../../../docs/guias/integracao/webhooks/barcode_payment_invoice_settled.json&#34;&gt;barcode_payment_invoice_settled&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Representa que pagamento do boleto foi confirmado.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/webhooks/barcode_payment_invoice_expired.json&#34;&gt;barcode_payment_invoice_expired&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;../../../docs/guias/integracao/webhooks/barcode_payment_invoice_expired.json&#34;&gt;barcode_payment_invoice_expired&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Representa que o boleto está expirado.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/webhooks/cash_in_barcode_payment.json&#34;&gt;cash_in_barcode_payment&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;../../../docs/guias/integracao/webhooks/cash_in_barcode_payment.json&#34;&gt;cash_in_barcode_payment&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Representa a entrada do valor do boleto na conta do beneficiário.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -923,7 +923,7 @@ No início desta sessão detalhamos o passo a passo desse procedimento, neste t�
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/webhooks/exemplo_consent_request.json&#34;&gt;consent_request&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;../../../docs/guias/integracao/webhooks/exemplo_consent_request.json&#34;&gt;consent_request&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Representa a confirmação do pedido de consentimento por parte do user.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -940,15 +940,15 @@ No início desta sessão detalhamos o passo a passo desse procedimento, neste t�
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/webhooks/A1.json&#34;&gt;sign_up_created&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;../../../docs/guias/integracao/webhooks/A1.json&#34;&gt;sign_up_created&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Enviado quando é feito o pedido de abertura de conta.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/webhooks/A2.json&#34;&gt;sign_up_status_updated&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;../../../docs/guias/integracao/webhooks/A2.json&#34;&gt;sign_up_status_updated&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Enviado quando é feito uma atualização dos dados na abertura da conta.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/webhooks/A3.json&#34;&gt;sign_up_resource_details_updated&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;../../../docs/guias/integracao/webhooks/A3.json&#34;&gt;sign_up_resource_details_updated&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Serão enviados diversos webhooks com este tipo de evento de acordo com a evolução da abertura de conta. Ex: &lt;code&gt;account_created&lt;/code&gt;, &lt;code&gt;user_email_verified&lt;/code&gt;, &amp;hellip;.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -956,8 +956,8 @@ No início desta sessão detalhamos o passo a passo desse procedimento, neste t�
 &lt;br&gt;
 &lt;h4 id=&#34;o-header-das-notificações-segue-a-seguinte-estrutura&#34;&gt;&lt;strong&gt;O header das notificações segue a seguinte estrutura:&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;x-stone-webhook-event-id:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;930bbd6d-0c7a-4fe4-8b50-4b82a20cb847&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#a40000&#34;&gt;x-stone-webhook-event-type:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cash_out_internal_transfer&amp;#34;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;x-stone-webhook-event-id: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;930bbd6d-0c7a-4fe4-8b50-4b82a20cb847&amp;#34;&lt;/span&gt;
+x-stone-webhook-event-type: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;cash_out_internal_transfer&amp;#34;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A idempotência de webhooks deverá ser validada no campo &amp;lsquo;x-stone-webhook-event-id&amp;rsquo; disponível no header.&lt;/p&gt;
 &lt;br&gt;
 &lt;h4 id=&#34;o-payload-das-notificações-segue-a-seguinte-estrutura&#34;&gt;&lt;strong&gt;O payload das notificações segue a seguinte estrutura:&lt;/strong&gt;&lt;/h4&gt;
@@ -977,7 +977,7 @@ No início desta sessão detalhamos o passo a passo desse procedimento, neste t�
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;event_type&lt;/td&gt;
-&lt;td&gt;Especifica qual tipo de evento disparou a notificação. Veja os valores possíveis &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/webhooks/#os-eventos-que-geram-notifica%C3%A7%C3%B5es-s%C3%A3o&#34;&gt;aqui&lt;/a&gt;.&lt;/td&gt;
+&lt;td&gt;Especifica qual tipo de evento disparou a notificação. Veja os valores possíveis &lt;a href=&#34;../../../docs/guias/integracao/webhooks/#os-eventos-que-geram-notifica%C3%A7%C3%B5es-s%C3%A3o&#34;&gt;aqui&lt;/a&gt;.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;id&lt;/td&gt;
@@ -1024,43 +1024,43 @@ No início desta sessão detalhamos o passo a passo desse procedimento, neste t�
 
 &lt;br&gt;
 &lt;p&gt;Exemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;env&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;sandbox&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;event_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cash_in_internal_transfer&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;event_happened_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2020-05-13T14:58:15Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;event_notified_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2020-05-13T14:58:15Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;iat&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1589381895&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;jti&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2o79sqemde14mv76eo00jsc3&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;nbf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1589381895&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;target_data&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:{&lt;/span&gt;
-      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;09c016b2-876a-450a-9f40-316f8e2f8778&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;balance_after&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;balance_before&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;counter_party&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:{&lt;/span&gt;
-         &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:{&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;841412&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;institution&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;16501555&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;institution_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Stone Pagamentos S.A.&amp;#34;&lt;/span&gt;
-         &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-         &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;entity&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:{&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Loja Da Maria&amp;#34;&lt;/span&gt;
-         &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-      &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2020-05-13T14:58:15Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;54abd61c-3b18-401c-9816-951cbe135149&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;operation&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;credit&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;FINISHED&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;internal&amp;#34;&lt;/span&gt;
-   &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;target_detail_uri&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;target_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;target_statement_uri&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;https://sandbox-api.openbank.stone.com.br/api/v1/statement/entries/54abd61c-3b18-401c-9816-951cbe135149&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-   &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;target_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;internal_transfer&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;env&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sandbox&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;event_type&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;cash_in_internal_transfer&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;event_happened_at&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2020-05-13T14:58:15Z&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;event_notified_at&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2020-05-13T14:58:15Z&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;iat&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;1589381895&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;jti&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2o79sqemde14mv76eo00jsc3&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;nbf&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;1589381895&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_data&amp;#34;&lt;/span&gt;:{
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;09c016b2-876a-450a-9f40-316f8e2f8778&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;balance_after&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;balance_before&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;counter_party&amp;#34;&lt;/span&gt;:{
+         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account&amp;#34;&lt;/span&gt;:{
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;841412&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;16501555&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution_name&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Stone Pagamentos S.A.&amp;#34;&lt;/span&gt;
+         },
+         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;entity&amp;#34;&lt;/span&gt;:{
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Loja Da Maria&amp;#34;&lt;/span&gt;
+         }
+      },
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2020-05-13T14:58:15Z&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;54abd61c-3b18-401c-9816-951cbe135149&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;operation&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;credit&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;FINISHED&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;internal&amp;#34;&lt;/span&gt;
+   },
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_detail_uri&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_statement_uri&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://sandbox-api.openbank.stone.com.br/api/v1/statement/entries/54abd61c-3b18-401c-9816-951cbe135149&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_type&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;internal_transfer&amp;#34;&lt;/span&gt;
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h4 id=&#34;trabalhando-com-webhooks&#34;&gt;&lt;strong&gt;Trabalhando com Webhooks&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
@@ -1085,9 +1085,9 @@ No início desta sessão detalhamos o passo a passo desse procedimento, neste t�
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;O webhook irá chegar com um payload parecido com esse:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;encrypted_body&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;xxxxxxxxxxxxxx conteúdo cifrado&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;encrypted_body&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;xxxxxxxxxxxxxx conteúdo cifrado&amp;#34;&lt;/span&gt;
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;O valor do campo &amp;ldquo;encrypted_body&amp;rdquo; é um token no formato JWE (JSON Web Encryption) compacto. Esse formato é um padrão e várias linguagens possuem bibliotecas prontas para ele.&lt;/p&gt;
 &lt;p&gt;O algoritmo utilizado é: &lt;strong&gt;RSA-OAEP-256&lt;/strong&gt; com &lt;strong&gt;A256GCM&lt;/strong&gt;. Para decifrar o conteúdo é necessário uma biblioteca que suporte estes algoritmos como:&lt;/p&gt;
 &lt;ul&gt;
@@ -1127,56 +1127,56 @@ No início desta sessão detalhamos o passo a passo desse procedimento, neste t�
 &lt;br&gt;
 &lt;p&gt;Caso tenha dificuldade para identificar algum webhook enviado pela Stone na URI indicada para receber webhooks, disponibilizamos um endpoint que traz todos os webhooks já enviados para a sua aplicação.&lt;/p&gt;
 &lt;p&gt;Para acessar, basta fazer o comando abaixo, lembrando que no &lt;em&gt;header&lt;/em&gt; deve ser enviado o Bearer token no campo &lt;code&gt;authorization&lt;/code&gt; e o client_id é o id da sua aplicação, passado pelo time de integração.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/applications/application:{{client_id}}/webhooks
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/applications/application:{{client_id}}/webhooks
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Exemplo de Response&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;client_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;application:de4d224b-3f79-4b4d-8ff5-c1bc475830e5&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-06-02T19:40:24Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;data&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;env&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;sandbox&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;event_happened_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-06-02T19:40:23Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;event_notified_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-06-02T19:40:24Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;event_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;cash_out_internal_transfer_finished&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;7919b78a-630e-4ad4-bb12-91eec729175d&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;target_data&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;6745bdf0-7647-40cd-8666-d78bb15fbd38&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;4000&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;approval_expired_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;approved_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-06-02T19:40:23Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;approved_by&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user:24017c13-1f9d-44e4-b4af-007f695cece3&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;batch_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;cancelled_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;cancelled_by&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-06-02T19:40:23Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_by&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user:24017c13-1f9d-44e4-b4af-007f695cece3&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;failed_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;failure_reason_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;failure_reason_description&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;fee&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;finished_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-06-02T19:40:23Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;7919b78a-630e-4ad4-bb12-91eec729175d&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;rejected_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;rejected_by&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;scheduled_to&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;settled_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2021-06-02T19:40:23Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;FINISHED&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;target&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;55382931&amp;#34;&lt;/span&gt;
-                    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-                    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;entity&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-                        &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
-                    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-                &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;target_account_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;55382931&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;target_account_owner_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
-            &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;target_detail_uri&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers/7919b78a-630e-4ad4-bb12-91eec729175d&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;target_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;7919b78a-630e-4ad4-bb12-91eec729175d&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;target_statement_uri&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;target_type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;internal_transfer_finished&amp;#34;&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;    {
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;client_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;application:de4d224b-3f79-4b4d-8ff5-c1bc475830e5&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-06-02T19:40:24Z&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;data&amp;#34;&lt;/span&gt;: {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;env&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sandbox&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;event_happened_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-06-02T19:40:23Z&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;event_notified_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-06-02T19:40:24Z&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;event_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;cash_out_internal_transfer_finished&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;7919b78a-630e-4ad4-bb12-91eec729175d&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_data&amp;#34;&lt;/span&gt;: {
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;6745bdf0-7647-40cd-8666-d78bb15fbd38&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;4000&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;approval_expired_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;approved_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-06-02T19:40:23Z&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;approved_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user:24017c13-1f9d-44e4-b4af-007f695cece3&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;batch_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cancelled_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cancelled_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-06-02T19:40:23Z&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user:24017c13-1f9d-44e4-b4af-007f695cece3&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;failed_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;failure_reason_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;failure_reason_description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fee&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;finished_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-06-02T19:40:23Z&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;7919b78a-630e-4ad4-bb12-91eec729175d&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;rejected_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;rejected_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;scheduled_to&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;settled_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-06-02T19:40:23Z&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;FINISHED&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target&amp;#34;&lt;/span&gt;: {
+                    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account&amp;#34;&lt;/span&gt;: {
+                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;55382931&amp;#34;&lt;/span&gt;
+                    },
+                    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;entity&amp;#34;&lt;/span&gt;: {
+                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+                    }
+                },
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;55382931&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_account_owner_name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+            },
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_detail_uri&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers/7919b78a-630e-4ad4-bb12-91eec729175d&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;7919b78a-630e-4ad4-bb12-91eec729175d&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_statement_uri&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;internal_transfer_finished&amp;#34;&lt;/span&gt;
+        }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>

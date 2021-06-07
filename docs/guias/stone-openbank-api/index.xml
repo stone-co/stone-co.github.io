@@ -30,12 +30,12 @@
 &lt;br&gt;
 &lt;p&gt;Aqui na Stone a gente acredita não apenas que o &lt;strong&gt;cliente&lt;/strong&gt; tem razão, mas que ele &lt;strong&gt;é a nossa razão&lt;/strong&gt;. Somos fiéis defensores da competição e acreditamos que isso melhora o mercado como um todo, o que, por sua vez, melhora a vida da nossa razão.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Foi com base nesse sentimento pró-competição que montamos a Stone OpenBank API: a primeira API de Open Banking plugada diretamente no STR.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;A &lt;a href=&#34;https://stone-co.github.io/docs/guias/a-conta-stone/overview&#34;&gt;Conta Stone&lt;/a&gt; é a nossa oferta para clientes PJ e PF, tanto para aqueles que já pertencem a base da Stone Adquirente, como para aqueles que utilizam outras adquirentes e buscam uma nova forma de se relacionar com sua conta.&lt;/p&gt;
+&lt;p&gt;A &lt;a href=&#34;../../../docs/guias/a-conta-stone/overview&#34;&gt;Conta Stone&lt;/a&gt; é a nossa oferta para clientes PJ e PF, tanto para aqueles que já pertencem a base da Stone Adquirente, como para aqueles que utilizam outras adquirentes e buscam uma nova forma de se relacionar com sua conta.&lt;/p&gt;
 &lt;p&gt;O Aplicativo da Conta Stone é mais um parceiro da Stone OpenBank API, usando exatamente os mesmos acessos e APIs descritos nesse documento. &amp;ldquo;Eat your own dogfood&amp;rdquo; aplicado na prática.&lt;/p&gt;
 &lt;p&gt;Assim como nós pudemos criar o nosso aplicativo de conta em cima dessa API, você pode fazer o mesmo ou integrar as funcionalidades de automação bancária no seu negócio.&lt;/p&gt;
 &lt;h3 id=&#34;o-que-oferecemos&#34;&gt;O que oferecemos?&lt;/h3&gt;
 &lt;br&gt;
-&lt;p&gt;Com a &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/&#34;&gt;API&lt;/a&gt; da Conta Stone você pode disponibilizar para os seus clientes:&lt;/p&gt;
+&lt;p&gt;Com a &lt;a href=&#34;../../../docs/referencia-da-api/&#34;&gt;API&lt;/a&gt; da Conta Stone você pode disponibilizar para os seus clientes:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Consulta de saldos e extratos;&lt;/li&gt;
 &lt;li&gt;Envio e recebimento de transferências tanto de outras Contas Stone como de outros bancos via TED;&lt;/li&gt;
@@ -52,19 +52,19 @@
 &lt;p&gt;Por enquanto, ainda não estamos realizando on-board de parceiros em auto-serviço. Por isso, todos os interessados em firmar parcerias devem entrar em contato com o nosso time de parcerias seguindo os seguintes passos:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;Envie um e-mail para &lt;a href=&#34;mailto:parcerias@openbank.stone.com.br&#34;&gt;parcerias@openbank.stone.com.br&lt;/a&gt;. Nosso time entrará em contato para entender o melhor &lt;a href=&#34;https://stone-co.github.io/docs/guias/a-conta-stone/modelos-de-parceria&#34;&gt;modelo de parceria&lt;/a&gt; para o seu negócio.&lt;/p&gt;
+&lt;p&gt;Envie um e-mail para &lt;a href=&#34;mailto:parcerias@openbank.stone.com.br&#34;&gt;parcerias@openbank.stone.com.br&lt;/a&gt;. Nosso time entrará em contato para entender o melhor &lt;a href=&#34;../../../docs/guias/a-conta-stone/modelos-de-parceria&#34;&gt;modelo de parceria&lt;/a&gt; para o seu negócio.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Será enviado pelo nosso time o formulário para &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao&#34;&gt;cadastro da aplicação&lt;/a&gt; em sandbox.&lt;/p&gt;
+&lt;p&gt;Será enviado pelo nosso time o formulário para &lt;a href=&#34;../../../docs/guias/integracao/cadastro-da-aplicacao&#34;&gt;cadastro da aplicação&lt;/a&gt; em sandbox.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Você será inserido na nossa ferramenta de comunicação com o time de suporte e terá durante todo o processo de integração uma equipe te ajudando com as possíveis dúvidas. Nessa mesma ferramenta serão disponibilizadas suas credencias de sandbox.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Quando sua integração estiver pronta realizaremos o procedimento de &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/testando-a-api&#34;&gt;homologação&lt;/a&gt; para garantir o funcionamento da integração. Em seguida, a utilização em Produção já será possível.&lt;/p&gt;
+&lt;p&gt;Quando sua integração estiver pronta realizaremos o procedimento de &lt;a href=&#34;../../../docs/guias/integracao/testando-a-api&#34;&gt;homologação&lt;/a&gt; para garantir o funcionamento da integração. Em seguida, a utilização em Produção já será possível.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Mais informações sobre o processo de integração &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Mais informações sobre o processo de integração &lt;a href=&#34;../../../docs/guias/integracao/cadastro-da-aplicacao&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
 
       </description>
     </item>
@@ -88,8 +88,8 @@
 &lt;br&gt;
 &lt;p&gt;&lt;strong&gt;ClientID&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Obtenha o seu &lt;em&gt;Access Token&lt;/em&gt;, enviando um e-mail para nosso time de Parcerias através de &lt;a href=&#34;mailto:parcerias@openbank.stone.com.br&#34;&gt;parcerias@openbank.stone.com.br&lt;/a&gt;.
-Somente com o &lt;em&gt;Access Token&lt;/em&gt; em mãos você consegue realizar as &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;autenticações&lt;/a&gt; necessárias para realizar as &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/stone-openbank/&#34;&gt;chamadas&lt;/a&gt; na &lt;strong&gt;Stone Open Bank API&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;O time de Parcerias do Stone Open Bank irá te enviar um formulário para preenchimento com os dados sobre seu projeto e posteriormente irá gerar um &lt;em&gt;ClientID&lt;/em&gt;. Uma vez cadastrado e com o seu &lt;em&gt;ClientID&lt;/em&gt; em mãos, você poderá realizar o processo de &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;autenticação da aplicação&lt;/a&gt;, que permitirá que obtenha-se o &lt;em&gt;Access Token&lt;/em&gt;. Este processo de &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;autenticação &lt;/a&gt; consiste nas seguintes etapas:&lt;/p&gt;
+Somente com o &lt;em&gt;Access Token&lt;/em&gt; em mãos você consegue realizar as &lt;a href=&#34;../../../docs/guias/integracao/autenticacao&#34;&gt;autenticações&lt;/a&gt; necessárias para realizar as &lt;a href=&#34;../../../docs/referencia-da-api/stone-openbank/&#34;&gt;chamadas&lt;/a&gt; na &lt;strong&gt;Stone Open Bank API&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;O time de Parcerias do Stone Open Bank irá te enviar um formulário para preenchimento com os dados sobre seu projeto e posteriormente irá gerar um &lt;em&gt;ClientID&lt;/em&gt;. Uma vez cadastrado e com o seu &lt;em&gt;ClientID&lt;/em&gt; em mãos, você poderá realizar o processo de &lt;a href=&#34;../../../docs/guias/integracao/autenticacao&#34;&gt;autenticação da aplicação&lt;/a&gt;, que permitirá que obtenha-se o &lt;em&gt;Access Token&lt;/em&gt;. Este processo de &lt;a href=&#34;../../../docs/guias/integracao/autenticacao&#34;&gt;autenticação &lt;/a&gt; consiste nas seguintes etapas:&lt;/p&gt;
 &lt;br&gt;
 &lt;p&gt;&lt;strong&gt;Geração de um token que contenha:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -118,7 +118,7 @@ content-type x-www-form-urlencoded
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
 &lt;p&gt;&lt;strong&gt;O fluxo acima é um exemplo de como iniciar a sua integração com a Stone Open Bank API.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Para detalhes sobre o processo de integração, consultar a página &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;Como Integrar com a API&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Para detalhes sobre o processo de integração, consultar a página &lt;a href=&#34;../../../docs/guias/integracao/autenticacao&#34;&gt;Como Integrar com a API&lt;/a&gt;.&lt;/p&gt;
 
 &lt;/div&gt;
 
@@ -142,12 +142,12 @@ content-type x-www-form-urlencoded
 &lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
 &lt;h4 class=&#34;alert-heading&#34;&gt;cURL&lt;/h4&gt;
 
-    &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;curl&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;--request&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;POST&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;\&lt;/span&gt; 
+    &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;curl --request POST \ 
   
-  &lt;span style=&#34;color:#a40000&#34;&gt;--url&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;https://sandbox-api.openbank.stone.com.br/api/v&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;/external_transfers&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;\&lt;/span&gt;
-  &lt;span style=&#34;color:#a40000&#34;&gt;--header&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;Content-Type:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;application/json&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;\&lt;/span&gt;
-  &lt;span style=&#34;color:#a40000&#34;&gt;--header&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;authorization:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;Bearer&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;token&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;\&lt;/span&gt;
-  &lt;span style=&#34;color:#a40000&#34;&gt;--data&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;3000&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;target&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:{&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:{&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;654321&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1234&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;260&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;entity&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:{&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;05971627007&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Nome do destinatário&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}},&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;f49a9d13-18dc-4811-b286-edd168a428b2&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;&lt;/span&gt;
+  --url https://sandbox-api.openbank.stone.com.br/api/v&lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;/external_transfers \
+  --header &amp;#39;Content-Type: application/json&amp;#39; \
+  --header &amp;#39;authorization: Bearer {token}&amp;#39; \
+  --data &amp;#39;{&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;3000&lt;/span&gt;,&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target&amp;#34;&lt;/span&gt;:{&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account&amp;#34;&lt;/span&gt;:{&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;654321&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;1234&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;260&amp;#34;&lt;/span&gt;},&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;entity&amp;#34;&lt;/span&gt;:{&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;05971627007&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Nome do destinatário&amp;#34;&lt;/span&gt;}},&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;f49a9d13-18dc-4811-b286-edd168a428b2&amp;#34;&lt;/span&gt;}&amp;#39;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
@@ -157,20 +157,20 @@ content-type x-www-form-urlencoded
 &lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
 &lt;h4 class=&#34;alert-heading&#34;&gt;Ruby&lt;/h4&gt;
 
-    &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;require&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;uri&amp;#39;&lt;/span&gt;
-&lt;span style=&#34;color:#a40000&#34;&gt;require&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;net/http&amp;#39;&lt;/span&gt;
+    &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;require &amp;#39;uri&amp;#39;
+require &amp;#39;net/http&amp;#39;
 
-&lt;span style=&#34;color:#a40000&#34;&gt;url&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;URI(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;)&lt;/span&gt;
+url = URI(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers&amp;#34;&lt;/span&gt;)
 
-&lt;span style=&#34;color:#a40000&#34;&gt;http&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;Net::HTTP.new(url.host,&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;url.port)&lt;/span&gt;
-&lt;span style=&#34;color:#a40000&#34;&gt;http.use_ssl&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = &lt;span style=&#34;color:#ff79c6&#34;&gt;true&lt;/span&gt;
 
-&lt;span style=&#34;color:#a40000&#34;&gt;request&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;Net::HTTP::Post.new(url)&lt;/span&gt;
-&lt;span style=&#34;color:#a40000&#34;&gt;request&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;authorization&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;Bearer&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;token&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;&lt;/span&gt;
-&lt;span style=&#34;color:#a40000&#34;&gt;request.body&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;{\&amp;#34;amount\&amp;#34;:10050,\&amp;#34;target\&amp;#34;:{\&amp;#34;account\&amp;#34;:{\&amp;#34;account_code\&amp;#34;:\&amp;#34;1456879\&amp;#34;,\&amp;#34;branch_code\&amp;#34;:\&amp;#34;0633\&amp;#34;,\&amp;#34;institution_code\&amp;#34;:\&amp;#34;379\&amp;#34;},\&amp;#34;entity\&amp;#34;:{\&amp;#34;cpf\&amp;#34;:\&amp;#34;67385417752\&amp;#34;,\&amp;#34;name\&amp;#34;:\&amp;#34;Vitoria Silva Correia\&amp;#34;}},\&amp;#34;account_id\&amp;#34;:\&amp;#34;200568\&amp;#34;}&amp;#34;&lt;/span&gt;
+request = Net::HTTP::Post.new(url)
+request[&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;authorization&amp;#34;&lt;/span&gt;] = &amp;#39;Bearer {token}&amp;#39;
+request.body = &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;{\&amp;#34;amount\&amp;#34;:10050,\&amp;#34;target\&amp;#34;:{\&amp;#34;account\&amp;#34;:{\&amp;#34;account_code\&amp;#34;:\&amp;#34;1456879\&amp;#34;,\&amp;#34;branch_code\&amp;#34;:\&amp;#34;0633\&amp;#34;,\&amp;#34;institution_code\&amp;#34;:\&amp;#34;379\&amp;#34;},\&amp;#34;entity\&amp;#34;:{\&amp;#34;cpf\&amp;#34;:\&amp;#34;67385417752\&amp;#34;,\&amp;#34;name\&amp;#34;:\&amp;#34;Vitoria Silva Correia\&amp;#34;}},\&amp;#34;account_id\&amp;#34;:\&amp;#34;200568\&amp;#34;}&amp;#34;&lt;/span&gt;
 
-&lt;span style=&#34;color:#a40000&#34;&gt;response&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;http.request(request)&lt;/span&gt;
-&lt;span style=&#34;color:#a40000&#34;&gt;puts&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;response.read_body&lt;/span&gt;
+response = http.request(request)
+puts response.read_body
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
@@ -180,35 +180,35 @@ content-type x-www-form-urlencoded
 &lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
 &lt;h4 class=&#34;alert-heading&#34;&gt;JavaScript&lt;/h4&gt;
 
-    &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;data&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;JSON.stringify(&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;10050&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;target&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1456879&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;0633&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;379&amp;#34;&lt;/span&gt;
-    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;entity&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;67385417752&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Vitoria Silva Correia&amp;#34;&lt;/span&gt;
-    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;200568&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;);&lt;/span&gt;
+    &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;var data = JSON.stringify({
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;10050&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target&amp;#34;&lt;/span&gt;: {
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;1456879&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;0633&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;379&amp;#34;&lt;/span&gt;
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;entity&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;67385417752&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Vitoria Silva Correia&amp;#34;&lt;/span&gt;
+    }
+  },
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;200568&amp;#34;&lt;/span&gt;
+});
 
-&lt;span style=&#34;color:#a40000&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;xhr&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;XMLHttpRequest();&lt;/span&gt;
-&lt;span style=&#34;color:#a40000&#34;&gt;xhr.withCredentials&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;;&lt;/span&gt;
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = &lt;span style=&#34;color:#ff79c6&#34;&gt;true&lt;/span&gt;;
 
-&lt;span style=&#34;color:#a40000&#34;&gt;xhr.addEventListener(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;readystatechange&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-  &lt;span style=&#34;color:#a40000&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;(this.readyState&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;===&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;this.DONE)&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#a40000&#34;&gt;console.log(this.responseText);&lt;/span&gt;
-  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;span style=&#34;color:#a40000&#34;&gt;});&lt;/span&gt;
+xhr.addEventListener(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;readystatechange&amp;#34;&lt;/span&gt;, function () {
+  if (this.readyState === this.DONE) {
+    console.log(this.responseText);
+  }
+});
 
-&lt;span style=&#34;color:#a40000&#34;&gt;xhr.open(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;POST&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;);&lt;/span&gt;
-&lt;span style=&#34;color:#a40000&#34;&gt;xhr.setRequestHeader(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;authorization&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Bearer {token}&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;);&lt;/span&gt;
+xhr.open(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;POST&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers&amp;#34;&lt;/span&gt;);
+xhr.setRequestHeader(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;authorization&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Bearer {token}&amp;#34;&lt;/span&gt;);
 
-&lt;span style=&#34;color:#a40000&#34;&gt;xhr.send(data);&lt;/span&gt;
+xhr.send(data);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
@@ -218,16 +218,16 @@ content-type x-www-form-urlencoded
 &lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
 &lt;h4 class=&#34;alert-heading&#34;&gt;Python&lt;/h4&gt;
 
-    &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;requests&lt;/span&gt;
+    &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;import requests
 
-&lt;span style=&#34;color:#a40000&#34;&gt;url&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers&amp;#34;&lt;/span&gt;
+url = &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers&amp;#34;&lt;/span&gt;
 
-&lt;span style=&#34;color:#a40000&#34;&gt;payload&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;{\&amp;#34;amount\&amp;#34;:10050,\&amp;#34;target\&amp;#34;:{\&amp;#34;account\&amp;#34;:{\&amp;#34;account_code\&amp;#34;:\&amp;#34;1456879\&amp;#34;,\&amp;#34;branch_code\&amp;#34;:\&amp;#34;0633\&amp;#34;,\&amp;#34;institution_code\&amp;#34;:\&amp;#34;379\&amp;#34;},\&amp;#34;entity\&amp;#34;:{\&amp;#34;cpf\&amp;#34;:\&amp;#34;67385417752\&amp;#34;,\&amp;#34;name\&amp;#34;:\&amp;#34;Vitoria Silva Correia\&amp;#34;}},\&amp;#34;account_id\&amp;#34;:\&amp;#34;200568\&amp;#34;}&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#a40000&#34;&gt;headers&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;authorization&amp;#39;:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;Bearer&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;{token&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;}&lt;/span&gt;
+payload = &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;{\&amp;#34;amount\&amp;#34;:10050,\&amp;#34;target\&amp;#34;:{\&amp;#34;account\&amp;#34;:{\&amp;#34;account_code\&amp;#34;:\&amp;#34;1456879\&amp;#34;,\&amp;#34;branch_code\&amp;#34;:\&amp;#34;0633\&amp;#34;,\&amp;#34;institution_code\&amp;#34;:\&amp;#34;379\&amp;#34;},\&amp;#34;entity\&amp;#34;:{\&amp;#34;cpf\&amp;#34;:\&amp;#34;67385417752\&amp;#34;,\&amp;#34;name\&amp;#34;:\&amp;#34;Vitoria Silva Correia\&amp;#34;}},\&amp;#34;account_id\&amp;#34;:\&amp;#34;200568\&amp;#34;}&amp;#34;&lt;/span&gt;
+headers = {&amp;#39;authorization&amp;#39;: &amp;#39;Bearer {token}&amp;#39;}
 
-&lt;span style=&#34;color:#a40000&#34;&gt;response&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;requests.request(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;POST&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;url,&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;data=payload,&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;headers=headers)&lt;/span&gt;
+response = requests.request(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;POST&amp;#34;&lt;/span&gt;, url, data=payload, headers=headers)
 
-&lt;span style=&#34;color:#a40000&#34;&gt;print(response.text)&lt;/span&gt;
+print(response.text)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
@@ -237,51 +237,51 @@ content-type x-www-form-urlencoded
 &lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
 &lt;h4 class=&#34;alert-heading&#34;&gt;C#&lt;/h4&gt;
 
-    &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;client&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;RestClient(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;);&lt;/span&gt;
-&lt;span style=&#34;color:#a40000&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;request&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;RestRequest(Method.POST);&lt;/span&gt;
-&lt;span style=&#34;color:#a40000&#34;&gt;request.AddHeader(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;authorization&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Bearer {token}&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;);&lt;/span&gt;
-&lt;span style=&#34;color:#a40000&#34;&gt;request.AddParameter(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;undefined&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;{\&amp;#34;amount\&amp;#34;:10050,\&amp;#34;target\&amp;#34;:{\&amp;#34;account\&amp;#34;:{\&amp;#34;account_code\&amp;#34;:\&amp;#34;1456879\&amp;#34;,\&amp;#34;branch_code\&amp;#34;:\&amp;#34;0633\&amp;#34;,\&amp;#34;institution_code\&amp;#34;:\&amp;#34;379\&amp;#34;},\&amp;#34;entity\&amp;#34;:{\&amp;#34;cpf\&amp;#34;:\&amp;#34;67385417752\&amp;#34;,\&amp;#34;name\&amp;#34;:\&amp;#34;Vitoria Silva Correia\&amp;#34;}},\&amp;#34;account_id\&amp;#34;:\&amp;#34;200568\&amp;#34;}&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;ParameterType.RequestBody);&lt;/span&gt;
-&lt;span style=&#34;color:#a40000&#34;&gt;IRestResponse&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;response&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;client.Execute(request);&lt;/span&gt;
+    &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;var client = new RestClient(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers&amp;#34;&lt;/span&gt;);
+var request = new RestRequest(Method.POST);
+request.AddHeader(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;authorization&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Bearer {token}&amp;#34;&lt;/span&gt;);
+request.AddParameter(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;undefined&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;{\&amp;#34;amount\&amp;#34;:10050,\&amp;#34;target\&amp;#34;:{\&amp;#34;account\&amp;#34;:{\&amp;#34;account_code\&amp;#34;:\&amp;#34;1456879\&amp;#34;,\&amp;#34;branch_code\&amp;#34;:\&amp;#34;0633\&amp;#34;,\&amp;#34;institution_code\&amp;#34;:\&amp;#34;379\&amp;#34;},\&amp;#34;entity\&amp;#34;:{\&amp;#34;cpf\&amp;#34;:\&amp;#34;67385417752\&amp;#34;,\&amp;#34;name\&amp;#34;:\&amp;#34;Vitoria Silva Correia\&amp;#34;}},\&amp;#34;account_id\&amp;#34;:\&amp;#34;200568\&amp;#34;}&amp;#34;&lt;/span&gt;, ParameterType.RequestBody);
+IRestResponse response = client.Execute(request);
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
 
-&lt;p&gt;Caso queira saber mais sobre as chamadas disponíveis na nossa API, consulte nossos endpoints em &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/overview/&#34;&gt;API Reference&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Caso queira saber mais sobre as chamadas disponíveis na nossa API, consulte nossos endpoints em &lt;a href=&#34;../../../docs/referencia-da-api/padroes-da-api/overview/&#34;&gt;API Reference&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;4---construindo-o-seu-app&#34;&gt;4 - Construindo o seu App&lt;/h3&gt;
 &lt;br&gt;
 &lt;p&gt;Com a resposta gerada pela requisição da TED acima, você poderá elaborar uma tela exibindo as informações da transferência realizada. Por exemplo, para construir a tela abaixo:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/docs/guias/stone-openbank-api/quickstart/Tela-Transferencia.png&#34; alt=&#34;imagem_tela_de_transferencia&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../../docs/guias/stone-openbank-api/quickstart/Tela-Transferencia.png&#34; alt=&#34;imagem_tela_de_transferencia&#34;&gt;&lt;/p&gt;
 &lt;p&gt;É utilizada a requisição citada 3º passo, tendo como resposta o seguinte JSON:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;10050&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;approved_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2018-10-08T22:13:51Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;approved_by&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user:380f9968-8946-4f88-a781-be8b7efc1f90&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;2018-10-08T22:13:51Z&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;created_by&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;user:380f9968-8946-4f88-a781-be8b7efc1f90&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;failed_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;fee&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;79573d4a-613a-4ac7-8970-39c39fc18e5a&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;refunded_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;rejected_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;rejected_by&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;settled_at&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-  &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;target&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;1456879&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;0633&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;379&amp;#34;&lt;/span&gt;
-    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;},&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;entity&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;67385417752&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-      &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;Vitoria Silva Correia&amp;#34;&lt;/span&gt;
-    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-  &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;10050&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;approved_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2018-10-08T22:13:51Z&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;approved_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user:380f9968-8946-4f88-a781-be8b7efc1f90&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2018-10-08T22:13:51Z&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user:380f9968-8946-4f88-a781-be8b7efc1f90&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;failed_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fee&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;79573d4a-613a-4ac7-8970-39c39fc18e5a&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;refunded_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;rejected_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;rejected_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;settled_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target&amp;#34;&lt;/span&gt;: {
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;1456879&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;0633&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;379&amp;#34;&lt;/span&gt;
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;entity&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;67385417752&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Vitoria Silva Correia&amp;#34;&lt;/span&gt;
+    }
+  }
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Entenda mais sobre a Transfers API e a sua requisição de TED&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Detalhes sobre a Transfers API se encontram na página &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/transferencias/transferencias-externas/transferir-para-outros-bancos&#34;&gt;Transferir para Outros Bancos&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Detalhes sobre a Transfers API se encontram na página &lt;a href=&#34;../../../docs/referencia-da-api/transferencias/transferencias-externas/transferir-para-outros-bancos&#34;&gt;Transferir para Outros Bancos&lt;/a&gt;.&lt;/p&gt;
 
 &lt;/div&gt;
 

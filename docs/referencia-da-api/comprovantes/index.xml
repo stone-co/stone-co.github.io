@@ -27,8 +27,8 @@
 &lt;p&gt;As operações que podem ter seu comprovante gerado são apenas as operações: Pagamento com código de barras, envio de TEDs, envio de transferências internas e extrato.&lt;/p&gt;
 &lt;p&gt;Comprovantes podem ser gerados apenas para transferências em estados de sucesso, como aprovada e agendada.&lt;/p&gt;
 &lt;p&gt;Comprovantes para extrato aceitam os parâmetros adicionais &lt;code&gt;start_datetime&lt;/code&gt; e &lt;code&gt;end_datetime&lt;/code&gt; para especificar o intervalo de tempo cujas entradas serão levadas em consideração ao gerar o comprovante.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#a40000&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/receipts
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/receipts
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;resource_type&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
@@ -49,8 +49,8 @@
 &lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;200&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;OK&lt;/span&gt;
-&lt;span style=&#34;color:#a40000&#34;&gt;content-type:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;application/json&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;200&lt;/span&gt; OK
+content-type: application/json
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Retorna o PDF do comprovante&lt;/p&gt;
 
       </description>

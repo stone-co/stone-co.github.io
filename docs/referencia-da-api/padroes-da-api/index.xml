@@ -33,7 +33,7 @@
 &lt;br&gt;
 &lt;p&gt;Aqui na Stone a gente acredita não apenas que o &lt;strong&gt;cliente&lt;/strong&gt; tem razão, mas que ele &lt;strong&gt;é a nossa razão&lt;/strong&gt;. Somos fiéis defensores da competição e acreditamos que isso melhora o mercado como um todo, o que, por sua vez, melhora a vida da nossa razão.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Foi com base nesse sentimento pró-competição que montamos a Stone OpenBank API: a primeira API de Open Banking plugada diretamente no STR.&lt;/strong&gt;
-A &lt;a href=&#34;https://stone-co.github.io/docs/guias/a-conta-stone/&#34;&gt;Conta Stone&lt;/a&gt; é a nossa oferta para clientes PJ e PF, tanto para aqueles que já pertencem a base da Stone Adquirente, como para aqueles que utilizam outras adquirentes e buscam uma nova forma de se relacionar com sua conta.&lt;/p&gt;
+A &lt;a href=&#34;../../../docs/guias/a-conta-stone/&#34;&gt;Conta Stone&lt;/a&gt; é a nossa oferta para clientes PJ e PF, tanto para aqueles que já pertencem a base da Stone Adquirente, como para aqueles que utilizam outras adquirentes e buscam uma nova forma de se relacionar com sua conta.&lt;/p&gt;
 &lt;p&gt;O Aplicativo da Conta Stone é mais um parceiro da Stone OpenBank API, usando exatamente os mesmos acessos e APIs descritos nesse documento. &amp;quot;Eat your own dogfood&amp;quot; aplicado na prática.&lt;/p&gt;
 &lt;p&gt;Assim como nós pudemos criar o nosso aplicativo de conta em cima dessa API, você pode fazer o mesmo ou integrar as funcionalidades de automação bancária no seu negócio.&lt;/p&gt;
 &lt;br&gt;
@@ -60,44 +60,44 @@ A &lt;a href=&#34;https://stone-co.github.io/docs/guias/a-conta-stone/&#34;&gt;C
 &lt;ol&gt;
 &lt;li&gt;Preencha nosso &lt;a href=&#34;https://app.pipefy.com/public/form/Qz4ptt_W/?origem_do_lead=Documenta%C3%A7%C3%A3o&#34;&gt;formulário&lt;/a&gt; para receber as informações necessárias para utilizar nossa API em Sandbox.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;A partir do preenchimento do formulário vamos registrar a sua Aplicação no nosso sistema e enviar as credenciais de acesso para o &lt;a href=&#34;https://stone-co.github.io/docs/guias/stone-openbank-api/ambientes-da-api/&#34;&gt;ambiente de Sandbox&lt;/a&gt;. Além disso, vamos também criar contas de pagamento em Sandbox para você e sua equipe poderem testar a integração.&lt;/p&gt;
+&lt;p&gt;A partir do preenchimento do formulário vamos registrar a sua Aplicação no nosso sistema e enviar as credenciais de acesso para o &lt;a href=&#34;../../../docs/guias/stone-openbank-api/ambientes-da-api/&#34;&gt;ambiente de Sandbox&lt;/a&gt;. Além disso, vamos também criar contas de pagamento em Sandbox para você e sua equipe poderem testar a integração.&lt;/p&gt;
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;Teste nossas APIS em Sandbox à vontade e, quando estiver pronto, informe ao time de parcerias da Stone através do e-mail &lt;a href=&#34;mailto:parcerias@openbank.stone.com.br&#34;&gt;parcerias@openbank.stone.com.br&lt;/a&gt;.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;O processo envolve algumas reuniões presenciais ou por vídeo para a gente entender o melhor &lt;a href=&#34;https://stone-co.github.io/docs/guias/a-conta-stone/modelos-de-parceria/&#34;&gt;modelo de parceria&lt;/a&gt; para o seu negócio.&lt;/p&gt;
+&lt;p&gt;O processo envolve algumas reuniões presenciais ou por vídeo para a gente entender o melhor &lt;a href=&#34;../../../docs/guias/a-conta-stone/modelos-de-parceria/&#34;&gt;modelo de parceria&lt;/a&gt; para o seu negócio.&lt;/p&gt;
 &lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;Após tudo integrado, vem a &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/testando-a-api/&#34;&gt;homologação&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Após tudo integrado, vem a &lt;a href=&#34;../../../docs/guias/integracao/testando-a-api/&#34;&gt;homologação&lt;/a&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;A Stone, com a ajuda do parceiro, vai realizar testes na Aplicação ainda em Sandbox para garantir que tudo funciona conforme o esperado e que nenhum cliente vai ser prejudicado por bugs em Produção.&lt;/p&gt;
-&lt;p&gt;Todo o processo para realização do cadastro se encontra descrito detalhadamente &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Todo o processo para realização do cadastro se encontra descrito detalhadamente &lt;a href=&#34;../../../docs/guias/integracao/cadastro-da-aplicacao/&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
 &lt;br&gt;
 &lt;h4 id=&#34;como-integrar-com-a-api&#34;&gt;Como integrar com a API&lt;/h4&gt;
 &lt;hr&gt;
 &lt;br&gt;
-&lt;p&gt;Todos os processos e requerimentos para a utilização de nossa API se encontram descritros detalhadamente em nossa &lt;a href=&#34;https://stone-co.github.io/docs/&#34;&gt;Documentação&lt;/a&gt;:&lt;/p&gt;
-&lt;h4 id=&#34;quickstartdocsguiasstone-openbank-apiquickstart&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/stone-openbank-api/quickstart/&#34;&gt;Quickstart&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Todos os processos e requerimentos para a utilização de nossa API se encontram descritros detalhadamente em nossa &lt;a href=&#34;../../../docs/&#34;&gt;Documentação&lt;/a&gt;:&lt;/p&gt;
+&lt;h4 id=&#34;quickstartdocsguiasstone-openbank-apiquickstart&#34;&gt;&lt;a href=&#34;../../../docs/guias/stone-openbank-api/quickstart/&#34;&gt;Quickstart&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Faça a sua primeira movimentação financeira de teste seguindo esses três passos!&lt;/p&gt;
-&lt;h4 id=&#34;ambientes-da-apidocsguiasstone-openbank-apiambientes-da-api&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/stone-openbank-api/ambientes-da-api/&#34;&gt;Ambientes da API&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;ambientes-da-apidocsguiasstone-openbank-apiambientes-da-api&#34;&gt;&lt;a href=&#34;../../../docs/guias/stone-openbank-api/ambientes-da-api/&#34;&gt;Ambientes da API&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Como funcionam nossos ambientes de Sandbox e Produção.&lt;/p&gt;
-&lt;h4 id=&#34;a-conta-stonedocsguiasa-conta-stone&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/a-conta-stone/&#34;&gt;A Conta Stone&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;a-conta-stonedocsguiasa-conta-stone&#34;&gt;&lt;a href=&#34;../../../docs/guias/a-conta-stone/&#34;&gt;A Conta Stone&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Como funciona este novo produto da Stone, criado para devolver à cliente o controle de sua conta de pagamentos.&lt;/p&gt;
-&lt;h4 id=&#34;modelos-de-parceriadocsguiasa-conta-stonemodelos-de-parceria&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/a-conta-stone/modelos-de-parceria/&#34;&gt;Modelos de Parceria&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;modelos-de-parceriadocsguiasa-conta-stonemodelos-de-parceria&#34;&gt;&lt;a href=&#34;../../../docs/guias/a-conta-stone/modelos-de-parceria/&#34;&gt;Modelos de Parceria&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Como funcionam os principais modelos de parceria que oferecemos para aplicações que desejam integrar com a nossa API.&lt;/p&gt;
-&lt;h4 id=&#34;aplicativosdocsguiasa-conta-stoneaplicativos&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/a-conta-stone/aplicativos/&#34;&gt;Aplicativos&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;aplicativosdocsguiasa-conta-stoneaplicativos&#34;&gt;&lt;a href=&#34;../../../docs/guias/a-conta-stone/aplicativos/&#34;&gt;Aplicativos&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;O que são os aplicativos desenvolvidos pela Stone e por parceiros.&lt;/p&gt;
-&lt;h4 id=&#34;cadastro-da-aplicaçãodocsguiasintegracaocadastro-da-aplicacao&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/&#34;&gt;Cadastro da Aplicação&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;Passo a passo para obter acesso e conseguir se autenticar em nossa API de &lt;a href=&#34;https://stone-co.github.io/docs/guias/stone-openbank-api/ambientes-da-api/#ambiente-de-sandbox&#34;&gt;Sandbox&lt;/a&gt;.&lt;/p&gt;
-&lt;h4 id=&#34;autenticaçãodocsguiasintegracaoautenticacao&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao/&#34;&gt;Autenticação&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;cadastro-da-aplicaçãodocsguiasintegracaocadastro-da-aplicacao&#34;&gt;&lt;a href=&#34;../../../docs/guias/integracao/cadastro-da-aplicacao/&#34;&gt;Cadastro da Aplicação&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Passo a passo para obter acesso e conseguir se autenticar em nossa API de &lt;a href=&#34;../../../docs/guias/stone-openbank-api/ambientes-da-api/#ambiente-de-sandbox&#34;&gt;Sandbox&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;autenticaçãodocsguiasintegracaoautenticacao&#34;&gt;&lt;a href=&#34;../../../docs/guias/integracao/autenticacao/&#34;&gt;Autenticação&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Aqui você encontra todos os detalhes sobre o processo de se autenticar na nossa API.&lt;/p&gt;
-&lt;h4 id=&#34;testando-a-apidocsguiasintegracaotestando-a-api&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/testando-a-api/&#34;&gt;Testando a API&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;Teste nossa API no ambiente de &lt;a href=&#34;https://stone-co.github.io/docs/guias/stone-openbank-api/ambientes-da-api/#ambiente-de-sandbox&#34;&gt;Sandbox &lt;/a&gt; para garantir que tudo funciona conforme o esperado e que nenhuma cliente vai ser prejudicada por bugs em Produção.&lt;/p&gt;
-&lt;h4 id=&#34;consentimentodocsguiasintegracaoconsentimento&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/consentimento/&#34;&gt;Consentimento&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;testando-a-apidocsguiasintegracaotestando-a-api&#34;&gt;&lt;a href=&#34;../../../docs/guias/integracao/testando-a-api/&#34;&gt;Testando a API&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Teste nossa API no ambiente de &lt;a href=&#34;../../../docs/guias/stone-openbank-api/ambientes-da-api/#ambiente-de-sandbox&#34;&gt;Sandbox &lt;/a&gt; para garantir que tudo funciona conforme o esperado e que nenhuma cliente vai ser prejudicada por bugs em Produção.&lt;/p&gt;
+&lt;h4 id=&#34;consentimentodocsguiasintegracaoconsentimento&#34;&gt;&lt;a href=&#34;../../../docs/guias/integracao/consentimento/&#34;&gt;Consentimento&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Descrição de todo o processo de como obter acesso às contas de pagamento de suas clientes.&lt;/p&gt;
-&lt;h4 id=&#34;aprovaçãodocsguiasintegracaoaprovacao&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/aprovacao/&#34;&gt;Aprovação&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;aprovaçãodocsguiasintegracaoaprovacao&#34;&gt;&lt;a href=&#34;../../../docs/guias/integracao/aprovacao/&#34;&gt;Aprovação&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Como o dono da conta permite que uma transação criada pelo parceiro seja realizada.&lt;/p&gt;
-&lt;h4 id=&#34;webhooksdocsguiasintegracaowebhooks&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/webhooks/&#34;&gt;Webhooks&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;webhooksdocsguiasintegracaowebhooks&#34;&gt;&lt;a href=&#34;../../../docs/guias/integracao/webhooks/&#34;&gt;Webhooks&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Como notificamos o sistema parceiro da ocorrência de eventos.&lt;/p&gt;
-&lt;h4 id=&#34;boas-práticasdocsguiasintegracaoboas-praticas&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/boas-praticas/&#34;&gt;Boas Práticas&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;boas-práticasdocsguiasintegracaoboas-praticas&#34;&gt;&lt;a href=&#34;../../../docs/guias/integracao/boas-praticas/&#34;&gt;Boas Práticas&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Como armazenar dados e realizar operações em nossa API de forma segura.&lt;/p&gt;
 
       </description>
@@ -126,16 +126,16 @@ A seguir, juntamos alguns desses padrões para simplificar a vida da desenvolved
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;A nossa API só aceita chamadas autenticadas, ou seja, chamadas cujo sujeito da ação conseguimos identificar.&lt;/p&gt;
-&lt;p&gt;Caso ainda não tenha realizado o procedimento para obter seu token de acesso, por favor siga o passo a passo descrito na página &lt;strong&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao/&#34;&gt;Autenticação&lt;/a&gt;&lt;/strong&gt; de nossos Guias.&lt;/p&gt;
+&lt;p&gt;Caso ainda não tenha realizado o procedimento para obter seu token de acesso, por favor siga o passo a passo descrito na página &lt;strong&gt;&lt;a href=&#34;../../../docs/guias/integracao/autenticacao/&#34;&gt;Autenticação&lt;/a&gt;&lt;/strong&gt; de nossos Guias.&lt;/p&gt;
 &lt;p&gt;Caso tenha em mãos seu token de acesso, já é possível realizar chamadas autenticadas.&lt;/p&gt;
 &lt;p&gt;Para isso, exigimos que nas &lt;a href=&#34;https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods&#34;&gt;requisições HTTP&lt;/a&gt; exista no cabeçalho um campo chamado &lt;code&gt;authorization&lt;/code&gt;, cujo valor será &amp;ldquo;Bearer&amp;rdquo; seguido do token de acesso.&lt;/p&gt;
 &lt;p&gt;Exemplo de cabeçalho de uma chamada autenticada:&lt;/p&gt;
 &lt;h4 id=&#34;header&#34;&gt;Header&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#000&#34;&gt;GET&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;/api/v1/accounts&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;HTTP&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1.1&lt;/span&gt;
-&lt;span style=&#34;color:#000&#34;&gt;Host&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;sandbox-api.openbank.stone.com.br&lt;/span&gt;
-&lt;span style=&#34;color:#000&#34;&gt;User-Agent&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Nome da aplicação&lt;/span&gt;
-&lt;span style=&#34;color:#000&#34;&gt;Accept&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;*/*&lt;/span&gt;
-&lt;span style=&#34;color:#000&#34;&gt;authorization&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#50fa7b&#34;&gt;GET&lt;/span&gt; /api/v1/accounts &lt;span style=&#34;color:#ff79c6&#34;&gt;HTTP&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;1.1&lt;/span&gt;
+Host&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; sandbox-api.openbank.stone.com.br
+User-Agent&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; Nome da aplicação
+Accept&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; */*
+authorization&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
@@ -182,27 +182,27 @@ A seguir, juntamos alguns desses padrões para simplificar a vida da desenvolved
         &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;Nossas APIs usam um padrão de paginação por cursor. O retorno possui o seguinte formato:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
- &lt;span style=&#34;color:#a40000&#34;&gt;cursor:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#a40000&#34;&gt;after:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;string | null&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color:#a40000&#34;&gt;before:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;string | null&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-    &lt;span style=&#34;color:#a40000&#34;&gt;limit:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;number&amp;#34;&lt;/span&gt;
- &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;,&lt;/span&gt;
- &lt;span style=&#34;color:#a40000&#34;&gt;data:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;array&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;object&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;,&lt;/span&gt;
-&lt;span style=&#34;color:#a40000&#34;&gt;}&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+ cursor: {
+    after: &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;string | null&amp;#34;&lt;/span&gt;,
+    before: &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;string | null&amp;#34;&lt;/span&gt;,
+    limit: &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;number&amp;#34;&lt;/span&gt;
+ },
+ data: array[object],
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h4 id=&#34;como-funciona&#34;&gt;Como funciona:&lt;/h4&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;Deve-se informar o limite de items para a paginação, passando o parâmetro &lt;strong&gt;?limit=10&lt;/strong&gt;. Na resposta dessa query, será retornado as hashs referente ao cursor no momento da resposta, ex.:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
- &lt;span style=&#34;color:#a40000&#34;&gt;cursor:&lt;/span&gt; &lt;span style=&#34;color:#a40000&#34;&gt;{&lt;/span&gt;
- &lt;span style=&#34;color:#a40000&#34;&gt;after:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;ASsa987fqw&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
- &lt;span style=&#34;color:#a40000&#34;&gt;before:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;null&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
- &lt;span style=&#34;color:#a40000&#34;&gt;limit:&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;10&amp;#34;&lt;/span&gt;
- &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;,&lt;/span&gt;
- &lt;span style=&#34;color:#a40000&#34;&gt;data:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[]&lt;/span&gt;&lt;span style=&#34;color:#a40000&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;color:#a40000&#34;&gt;}&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+ cursor: {
+ after: &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;ASsa987fqw&amp;#34;&lt;/span&gt;,
+ before: &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;null&amp;#34;&lt;/span&gt;,
+ limit: &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;10&amp;#34;&lt;/span&gt;
+ },
+ data: [];
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Assim, caso queira consultar o próximo cursor, acrescentar o parâmetro after na chamada: &lt;strong&gt;?limit=10&amp;amp;after=ASsa987fqw&lt;/strong&gt;, será retornado a próxima paginação.&lt;/p&gt;
 
       </description>
@@ -317,25 +317,25 @@ A seguir, juntamos alguns desses padrões para simplificar a vida da desenvolved
         
         &lt;hr&gt;
 &lt;br&gt;
-&lt;p&gt;Nossos endpoints seguem um padrão de mensagens. Toda mensagem de erro, por exemplo, seguirá o modelo &amp;ldquo;srn:error:xxx&amp;quot; e um &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/codigos-de-resposta/&#34;&gt;código HTTP&lt;/a&gt; apropriado para a falha.&lt;/p&gt;
+&lt;p&gt;Nossos endpoints seguem um padrão de mensagens. Toda mensagem de erro, por exemplo, seguirá o modelo &amp;ldquo;srn:error:xxx&amp;quot; e um &lt;a href=&#34;../../../docs/referencia-da-api/padroes-da-api/codigos-de-resposta/&#34;&gt;código HTTP&lt;/a&gt; apropriado para a falha.&lt;/p&gt;
 &lt;p&gt;Exemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;srn:error:target_account_not_found&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:target_account_not_found&amp;#34;&lt;/span&gt;
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;p&gt;Alguns endpoints têm uma resposta mais completa, entregando a mensagem de erro mencionada e mais detalhes.&lt;/p&gt;
 &lt;p&gt;Exemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;errors&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;error&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;is invalid&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;
-                &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;path&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;
-                    &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;tax_id&amp;#34;&lt;/span&gt;
-                    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
-        &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
-    &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;],&lt;/span&gt;
-    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;srn:error:bad_request&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;errors&amp;#34;&lt;/span&gt;: [
+        {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;error&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;is invalid&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;path&amp;#34;&lt;/span&gt;: [
+                    &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;tax_id&amp;#34;&lt;/span&gt;
+                    ]
+        }
+    ],
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:bad_request&amp;#34;&lt;/span&gt;
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
