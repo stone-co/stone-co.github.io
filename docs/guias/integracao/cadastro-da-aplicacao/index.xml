@@ -32,7 +32,7 @@
 &lt;p&gt;Após a instalação, você deve acrescentar o caminho do programa na variável &lt;code&gt;PATH&lt;/code&gt; e adicionar mais uma variável &lt;code&gt;OPENSSL_CONF&lt;/code&gt; para o arquivo &lt;code&gt;openssl.cfg&lt;/code&gt;, que normalmente vai ser &lt;code&gt;C:\Program Files\OpenSSL-Win64\bin\openssl.cfg&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Mas &lt;strong&gt;atenção&lt;/strong&gt; para ajustar o caminho para o local onde você instalou a ferramenta:&lt;/p&gt;
 &lt;br&gt;
-&lt;p&gt;&lt;img src=&#34;../../../../docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves/gerando-o-par-de-chaves.png&#34; alt=&#34;imagem_gerando_o_par_de_chaves&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves/gerando-o-par-de-chaves.png&#34; alt=&#34;imagem_gerando_o_par_de_chaves&#34;&gt;&lt;/p&gt;
 &lt;br&gt;
 &lt;p&gt;Você está pronto para gerar as chaves!&lt;/p&gt;
 &lt;p&gt;Em &lt;strong&gt;todas&lt;/strong&gt; as plataformas - Linux, MacOS e Windows - os comandos do OpenSSL são iguais:&lt;/p&gt;

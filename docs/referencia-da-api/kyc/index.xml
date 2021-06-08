@@ -25,7 +25,7 @@
         &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;Nesse endpoint é possível verificar as informações de KYC que se encontram pendentes de resposta.&lt;/p&gt;
-&lt;p&gt;A partir do &lt;em&gt;response&lt;/em&gt; desse endpoint, é possível verificar os &lt;em&gt;ids&lt;/em&gt; das informações que estão faltando para que possamos enviar os dados no endpoint para &lt;a href=&#34;../../../docs/referencia-da-api/kyc/enviar-dados-do-usuario/&#34;&gt;responder o KYC&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;A partir do &lt;em&gt;response&lt;/em&gt; desse endpoint, é possível verificar os &lt;em&gt;ids&lt;/em&gt; das informações que estão faltando para que possamos enviar os dados no endpoint para &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/kyc/enviar-dados-do-usuario/&#34;&gt;responder o KYC&lt;/a&gt;.&lt;/p&gt;
 &lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/users/{id_do_usuario}/kyc/request
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
@@ -164,7 +164,7 @@
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;p&gt;Próximo passo:&lt;/p&gt;
-&lt;h4 id=&#34;consultar-url-para-envio-da-fotodocsreferencia-da-apikycconsultar-url-para-foto&#34;&gt;&lt;a href=&#34;../../../docs/referencia-da-api/kyc/consultar-url-para-foto/&#34;&gt;Consultar URL para envio da foto&lt;/a&gt;.&lt;/h4&gt;
+&lt;h4 id=&#34;consultar-url-para-envio-da-fotodocsreferencia-da-apikycconsultar-url-para-foto&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/kyc/consultar-url-para-foto/&#34;&gt;Consultar URL para envio da foto&lt;/a&gt;.&lt;/h4&gt;
 
       </description>
     </item>
@@ -211,11 +211,11 @@
     }
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
-&lt;p&gt;A resposta do campo &lt;code&gt;public_url&lt;/code&gt; deverá ser enviado no endpoint de &lt;a href=&#34;../../../docs/referencia-da-api/kyc/enviar-dados-do-usuario/&#34;&gt;enviar os dados de um usuário&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;O campo &lt;code&gt;url&lt;/code&gt; deverá ser usado no endpoint para enviar de fato a imagem, no endpoint &lt;a href=&#34;../../../docs/referencia-da-api/kyc/enviar-fotos/&#34;&gt;enviar fotos&lt;/a&gt;. Esse campo contém as &lt;em&gt;Query Params&lt;/em&gt; desse endpoint.&lt;/p&gt;
+&lt;p&gt;A resposta do campo &lt;code&gt;public_url&lt;/code&gt; deverá ser enviado no endpoint de &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/kyc/enviar-dados-do-usuario/&#34;&gt;enviar os dados de um usuário&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;O campo &lt;code&gt;url&lt;/code&gt; deverá ser usado no endpoint para enviar de fato a imagem, no endpoint &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/kyc/enviar-fotos/&#34;&gt;enviar fotos&lt;/a&gt;. Esse campo contém as &lt;em&gt;Query Params&lt;/em&gt; desse endpoint.&lt;/p&gt;
 &lt;br&gt;
 &lt;p&gt;Próximo passo:&lt;/p&gt;
-&lt;h4 id=&#34;enviar-fotosdocsreferencia-da-apikycenviar-fotos&#34;&gt;&lt;a href=&#34;../../../docs/referencia-da-api/kyc/enviar-fotos/&#34;&gt;Enviar fotos&lt;/a&gt;.&lt;/h4&gt;
+&lt;h4 id=&#34;enviar-fotosdocsreferencia-da-apikycenviar-fotos&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/kyc/enviar-fotos/&#34;&gt;Enviar fotos&lt;/a&gt;.&lt;/h4&gt;
 
       </description>
     </item>
@@ -232,7 +232,7 @@
         &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;Nesse endpoint serão enviadas as fotos do usuário necessários para realização da análise do KYC.&lt;/p&gt;
-&lt;p&gt;Deverá ser um request do tipo &lt;code&gt;PUT&lt;/code&gt; com o endereço recebido no campo &lt;code&gt;url&lt;/code&gt; do endpoint de &lt;a href=&#34;../../../docs/referencia-da-api/kyc/consultar-url-para-foto/&#34;&gt;Consultar URL para envio da foto&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Deverá ser um request do tipo &lt;code&gt;PUT&lt;/code&gt; com o endereço recebido no campo &lt;code&gt;url&lt;/code&gt; do endpoint de &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/kyc/consultar-url-para-foto/&#34;&gt;Consultar URL para envio da foto&lt;/a&gt;.&lt;/p&gt;
 &lt;br&gt;
 &lt;p&gt;Exemplo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;PUT https://storage.googleapis.com/sdb-inside-gateway-frontend-3727/dXNlcjo4YTZmMzYzZi05Mzg4LTRiMzEtOGY0ZC05Zjk2NTAyY2Q1NzA=/53acaa13-f74b-4884-9420-f05b0ca79d25/doc_cnh_front.jpg?Expires=1615042461&amp;amp;GoogleAccessId=sdb-inside-gateway-c914%40inside-gateway-724c.iam.gserviceaccount.com&amp;amp;Signature=L1kzM4t2dq4qjzJ9gP%2BM7N7o2UWlQ59TXYui7OyMBe107TvVvSLEqN%2B1VL4Y5pBK%2FKqKoJWXKGizT6PNC%2BP5aPRz9qR94m1oPG2lsNspjFLO%2BdrRhdMTx21ylHNLIOWy54vJ5A84WIAlnAIZvHU7%2B1a2%2BRn8Wd3b62djcOpndFEAYCJDQBBENLwY%2B0Qs0KbumICdVWNqfxwttaOj%2FDpzMqp0TrDfmx8xfL5FyIzyBn7BYwfmhJeWU2VFjWVztohj0wiOIPcHlK%2BUkgGNYQ8qXYMY5aWeO6A55%2FO20QErizp%2BX2Ad2YlfS5mOozXvjFPShR7%2FRBxkhAj%2BEFx9EyVy2A%3D%3D
@@ -274,7 +274,7 @@
 &amp;lt;/Error&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;p&gt;Próximo passo:&lt;/p&gt;
-&lt;h4 id=&#34;enviar-dados-do-usuáriodocsreferencia-da-apikycenviar-dados-do-usuario&#34;&gt;&lt;a href=&#34;../../../docs/referencia-da-api/kyc/enviar-dados-do-usuario/&#34;&gt;Enviar dados do usuário&lt;/a&gt;.&lt;/h4&gt;
+&lt;h4 id=&#34;enviar-dados-do-usuáriodocsreferencia-da-apikycenviar-dados-do-usuario&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/kyc/enviar-dados-do-usuario/&#34;&gt;Enviar dados do usuário&lt;/a&gt;.&lt;/h4&gt;
 
       </description>
     </item>

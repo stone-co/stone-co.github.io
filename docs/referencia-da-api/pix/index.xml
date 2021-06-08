@@ -148,7 +148,7 @@ Para QRCode do tipo dinâmico com multa, juros, desconto é necessário informar
 &lt;li&gt;O campo &lt;code&gt;key&lt;/code&gt; se torna obrigatório na presença do campo &lt;code&gt;transaction_id&lt;/code&gt;.&lt;br&gt;&lt;/li&gt;
 &lt;li&gt;A ausência do campo &lt;code&gt;key&lt;/code&gt;, que seria o envio de um Pix pela Chave Pix torna o campo &lt;code&gt;target&lt;/code&gt;, que é o campo com os dados bancários do destino, &lt;strong&gt;obrigatório&lt;/strong&gt;.&lt;br&gt;&lt;/li&gt;
 &lt;li&gt;É possivel criar um Pix somente informando o campo &lt;code&gt;account_id&lt;/code&gt; sem precisar informar o campo &lt;code&gt;source&lt;/code&gt;.&lt;br&gt;&lt;/li&gt;
-&lt;li&gt;Após a criação do Pix através desse endpoint é necessário confirmar o mesmo através do &lt;a href=&#34;../../../docs/referencia-da-api/pix/confirmar-pagamento-pendente/&#34;&gt;endpoint&lt;/a&gt; &lt;code&gt;/api/v1/pix/outbound_pix_payments/{id}/actions/confirm&lt;/code&gt;. Caso o Pix não seja confirmado, ele permanece no status de &lt;code&gt;CREATED&lt;/code&gt; até ser confirmado.&lt;/li&gt;
+&lt;li&gt;Após a criação do Pix através desse endpoint é necessário confirmar o mesmo através do &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/pix/confirmar-pagamento-pendente/&#34;&gt;endpoint&lt;/a&gt; &lt;code&gt;/api/v1/pix/outbound_pix_payments/{id}/actions/confirm&lt;/code&gt;. Caso o Pix não seja confirmado, ele permanece no status de &lt;code&gt;CREATED&lt;/code&gt; até ser confirmado.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;/div&gt;

@@ -26,13 +26,13 @@
         &lt;hr&gt;
 &lt;br&gt;
 &lt;ol&gt;
-&lt;li&gt;Será enviado pelo nosso time de parcerias o formulário para criação das &lt;a href=&#34;../../../docs/guias/integracao/cadastro-da-aplicacao/#credenciais-da-minha-aplica%C3%A7%C3%A3o&#34;&gt;credenciais da sua aplicação&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Será enviado pelo nosso time de parcerias o formulário para criação das &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/#credenciais-da-minha-aplica%C3%A7%C3%A3o&#34;&gt;credenciais da sua aplicação&lt;/a&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Atenção&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Será necessário &lt;a href=&#34;../../../docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves&#34;&gt;gerar um par de chaves RSA 4096&lt;/a&gt; e compartilhar a &lt;strong&gt;chave pública&lt;/strong&gt; conosco no formato PEM e extensão .pub&lt;/p&gt;
+&lt;p&gt;Será necessário &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves&#34;&gt;gerar um par de chaves RSA 4096&lt;/a&gt; e compartilhar a &lt;strong&gt;chave pública&lt;/strong&gt; conosco no formato PEM e extensão .pub&lt;/p&gt;
 
 &lt;/div&gt;
 
@@ -50,9 +50,9 @@
 
 &lt;br&gt;
 &lt;h4 id=&#34;credenciais-da-minha-aplicação&#34;&gt;&lt;strong&gt;Credenciais da minha aplicação&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;O identificador que representa uma aplicação parceira na API Stone OpenBank é chamado de &lt;code&gt;cliend_id&lt;/code&gt;. Ele é gerada pela Stone e é único. Ele será utilizada no processo de &lt;a href=&#34;../../../docs/guias/integracao/autenticacao&#34;&gt;autenticação&lt;/a&gt; junto a API identificando assim todos os requests provenientes dessa aplicação.&lt;/p&gt;
-&lt;p&gt;Alguns processos da nossa API, como o próprio processo de &lt;a href=&#34;../../../docs/guias/integracao/autenticacao&#34;&gt;autenticação&lt;/a&gt;, envolvem uma etapa de criptografia assimétrica, assim na hora da criação do &lt;code&gt;client_id&lt;/code&gt; da sua aplicação atrelaremos a ele a chave pública fornecida por você.&lt;/p&gt;
-&lt;p&gt;Montamos um guia para te ajudar a gerar seu &lt;a href=&#34;../../../docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves&#34;&gt;par de chaves assimétricas&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;O identificador que representa uma aplicação parceira na API Stone OpenBank é chamado de &lt;code&gt;cliend_id&lt;/code&gt;. Ele é gerada pela Stone e é único. Ele será utilizada no processo de &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;autenticação&lt;/a&gt; junto a API identificando assim todos os requests provenientes dessa aplicação.&lt;/p&gt;
+&lt;p&gt;Alguns processos da nossa API, como o próprio processo de &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;autenticação&lt;/a&gt;, envolvem uma etapa de criptografia assimétrica, assim na hora da criação do &lt;code&gt;client_id&lt;/code&gt; da sua aplicação atrelaremos a ele a chave pública fornecida por você.&lt;/p&gt;
+&lt;p&gt;Montamos um guia para te ajudar a gerar seu &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves&#34;&gt;par de chaves assimétricas&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Cada &lt;code&gt;client_id&lt;/code&gt; tem também as URIs de webhook e URI de redirect que serão configuradas de acordo com as informações fornecidas pelo parceiro.&lt;/p&gt;
 &lt;br&gt;
 
@@ -101,8 +101,8 @@ Se isso ocorrer em um período curto demais pode ocasionar uma resposta &lt;code
 &lt;li&gt;Uma chamada com a &lt;strong&gt;chave de idempotênca maior que 72 caracteres&lt;/strong&gt; retornará um erro &lt;code&gt;HTTP 431&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;simulações-dry-run&#34;&gt;&lt;strong&gt;Simulações (dry-run)&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;Nossos endpoints que envolvem operações financeiras suportam &lt;a href=&#34;../../../docs/referencia-da-api/simulacoes-dry-run/&#34;&gt;Simulações (dry-run)&lt;/a&gt;, permitindo que o usuário visualize com antecedência o que vai acontecer nessa operação.&lt;/p&gt;
-&lt;p&gt;Em alguns casos, as Simulações permitem enriquecer os dados de uma operação, como, por exemplo o &lt;a href=&#34;../../../docs/referencia-da-api/simulacoes-dry-run/simular-o-pagamento-de-um-documento/&#34;&gt;Pagamento de Boletos&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Nossos endpoints que envolvem operações financeiras suportam &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/&#34;&gt;Simulações (dry-run)&lt;/a&gt;, permitindo que o usuário visualize com antecedência o que vai acontecer nessa operação.&lt;/p&gt;
+&lt;p&gt;Em alguns casos, as Simulações permitem enriquecer os dados de uma operação, como, por exemplo o &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/simular-o-pagamento-de-um-documento/&#34;&gt;Pagamento de Boletos&lt;/a&gt;.&lt;/p&gt;
 
       </description>
     </item>
@@ -121,8 +121,8 @@ Se isso ocorrer em um período curto demais pode ocasionar uma resposta &lt;code
 &lt;br&gt;
 &lt;p&gt;Segurança sempre foi um assunto complexo, principalmente por ter uma terminologia específica. Para facilitar ao máximo a integração com a nossa API, procuramos adotar padrões estabelecidos de mercado.&lt;/p&gt;
 &lt;h4 id=&#34;autenticação-de-aplicativos-parceiros&#34;&gt;&lt;strong&gt;Autenticação de Aplicativos Parceiros&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;Cada Aplicativo recebe um identificador exclusivo chamado &lt;a href=&#34;../../../docs/guias/integracao/cadastro-da-aplicacao/#credenciais-da-minha-aplica%C3%A7%C3%A3o&#34;&gt;clientID&lt;/a&gt; quando é criado. Esse ID não pode ser modificado e será usado no token de acesso do seu aplicativo quando chamar a API.&lt;/p&gt;
-&lt;p&gt;Outra informação importante é o &lt;a href=&#34;../../../docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves/&#34;&gt;par de chaves&lt;/a&gt; do seu aplicativo, que deve ser mantida confidencial em todos os momentos. Se alguém obtiver acesso a sua chave privada, essa pessoa poderá acessar recursos protegidos em nome do seu aplicativo. Isso não pode acontecer sob hipótese alguma.&lt;/p&gt;
+&lt;p&gt;Cada Aplicativo recebe um identificador exclusivo chamado &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/#credenciais-da-minha-aplica%C3%A7%C3%A3o&#34;&gt;clientID&lt;/a&gt; quando é criado. Esse ID não pode ser modificado e será usado no token de acesso do seu aplicativo quando chamar a API.&lt;/p&gt;
+&lt;p&gt;Outra informação importante é o &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/gerando-o-par-de-chaves/&#34;&gt;par de chaves&lt;/a&gt; do seu aplicativo, que deve ser mantida confidencial em todos os momentos. Se alguém obtiver acesso a sua chave privada, essa pessoa poderá acessar recursos protegidos em nome do seu aplicativo. Isso não pode acontecer sob hipótese alguma.&lt;/p&gt;
 &lt;p&gt;O desenvolvedor deve usar essa chave privada para assinar os tokens enviados para a Stone e nos enviar a chave pública para verificarmos a assinatura.&lt;/p&gt;
 &lt;h4 id=&#34;autenticação-com-o-auth-e-open-id-connect&#34;&gt;&lt;strong&gt;Autenticação com o Auth e Open ID Connect&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&#34;https://oauth.net/2/&#34;&gt;OAuth 2.0&lt;/a&gt; é um padrão de autorização que permite ao usuário conceder acesso limitado a seus recursos na Conta Stone para Aplicativos de Parceiros, sem precisar expor suas credenciais. Ou seja, o cliente não precisa compartilhar seu login e senha com ninguém.&lt;/p&gt;
@@ -550,7 +550,7 @@ Qualquer problema encontrado durante esta fase deve ser resolvido antes de pross
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;br&gt;
-&lt;p&gt;Observe que é preciso &lt;strong&gt;assinar o token JWT com a chave privada da aplicação e o algoritmo RS256&lt;/strong&gt;, assim como é feito para o token de &lt;a href=&#34;../../../docs/guias/integracao/autenticacao&#34;&gt;autenticação&lt;/a&gt;. Dessa forma, neste token também é preciso incluir um header com as informações sobre o algoritmo de criptografia utilizado, entre outros metadados, como um id da chave utilizada. Por exemplo:&lt;/p&gt;
+&lt;p&gt;Observe que é preciso &lt;strong&gt;assinar o token JWT com a chave privada da aplicação e o algoritmo RS256&lt;/strong&gt;, assim como é feito para o token de &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;autenticação&lt;/a&gt;. Dessa forma, neste token também é preciso incluir um header com as informações sobre o algoritmo de criptografia utilizado, entre outros metadados, como um id da chave utilizada. Por exemplo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;alg&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;RS256&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;typ&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;JWT&amp;#34;&lt;/span&gt;
@@ -559,7 +559,7 @@ Qualquer problema encontrado durante esta fase deve ser resolvido antes de pross
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Atenção&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Apesar do ClientID ser o disponibilizado pela Stone ao parceiro no &lt;a href=&#34;../../../docs/guias/integracao/cadastro-da-aplicacao&#34;&gt;Cadastro da Aplicação&lt;/a&gt; e o mesmo utilizado para montar o token de &lt;a href=&#34;../../../docs/guias/integracao/autenticacao&#34;&gt;autenticação&lt;/a&gt;, observe que o &lt;strong&gt;nome do campo&lt;/strong&gt; para esse token é &lt;code&gt;client_id&lt;/code&gt;, diferente de &lt;code&gt;clientId&lt;/code&gt; utilizado no token de autenticação.&lt;/p&gt;
+&lt;p&gt;Apesar do ClientID ser o disponibilizado pela Stone ao parceiro no &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao&#34;&gt;Cadastro da Aplicação&lt;/a&gt; e o mesmo utilizado para montar o token de &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;autenticação&lt;/a&gt;, observe que o &lt;strong&gt;nome do campo&lt;/strong&gt; para esse token é &lt;code&gt;client_id&lt;/code&gt;, diferente de &lt;code&gt;clientId&lt;/code&gt; utilizado no token de autenticação.&lt;/p&gt;
 
 &lt;/div&gt;
 
@@ -617,16 +617,16 @@ Qualquer problema encontrado durante esta fase deve ser resolvido antes de pross
 
 &lt;p&gt;Assim, fica fácil para o desenvolvedor prover uma experiência para ambos os casos: basta validar estes campos!&lt;/p&gt;
 &lt;h4 id=&#34;fluxo-para-o-usuário&#34;&gt;&lt;strong&gt;Fluxo para o usuário&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;Para uma integração &lt;a href=&#34;../../../docs/guias/a-conta-stone/modelos-de-parceria&#34;&gt;Open Banking&lt;/a&gt; de sucesso é essencial considerar a experiência do usuário, principalmente em fluxos de redirecionamento como para o consentimento.
+&lt;p&gt;Para uma integração &lt;a href=&#34;https://stone-co.github.io/docs/guias/a-conta-stone/modelos-de-parceria&#34;&gt;Open Banking&lt;/a&gt; de sucesso é essencial considerar a experiência do usuário, principalmente em fluxos de redirecionamento como para o consentimento.
 No início desta sessão detalhamos o passo a passo desse procedimento, neste tópico vamos exemplificar algumas das principais telas utilizadas.&lt;/p&gt;
 &lt;p&gt;Ao seguir o link gerado pelo desenvolvedor, o usuário será redirecionado para uma página da Stone. Solicitaremos ao dono o acesso à sua conta, explicitando quais permissões ele está concedendo à aplicação parceira. Podemos observar abaixo um exemplo de tela em que isso ocorre.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../../../docs/guias/integracao/consentimento/consentimento.png&#34; alt=&#34;imagem_consentimento&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/docs/guias/integracao/consentimento/consentimento.png&#34; alt=&#34;imagem_consentimento&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Caso o usuário opte por conceder o acesso no botão &lt;code&gt;Permitir&lt;/code&gt; e ocorra tudo bem, será exibida uma tela de sucesso, confirmando que a permissão foi concedida. Podemos observar um exemplo dessa tela abaixo.&lt;/p&gt;
-&lt;p&gt;Ao clicar no botão &lt;code&gt;Ok, entendi&lt;/code&gt; ele será redirecionado para uma página da aplicação parceira, cujo endereço foi definido no &lt;a href=&#34;../../../docs/guias/integracao/cadastro-da-aplicacao&#34;&gt;cadastro da aplicação&lt;/a&gt;, em Redirect URI.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../../../docs/guias/integracao/consentimento/consentimento-aprovado.png&#34; alt=&#34;imagem_consentimento_aprovado&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Ao clicar no botão &lt;code&gt;Ok, entendi&lt;/code&gt; ele será redirecionado para uma página da aplicação parceira, cujo endereço foi definido no &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao&#34;&gt;cadastro da aplicação&lt;/a&gt;, em Redirect URI.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/docs/guias/integracao/consentimento/consentimento-aprovado.png&#34; alt=&#34;imagem_consentimento_aprovado&#34;&gt;&lt;/p&gt;
 &lt;p&gt;É possível que ocorra também um caso em que o usuário já concedeu o acesso à aplicação parceira. Neste caso, o usuário irá visualizar uma tela como o seguinte exemplo.&lt;/p&gt;
 &lt;p&gt;Assim como no caso anterior, ele também será redirecionado para uma página da aplicação parceira ao clicar no botão &lt;code&gt;Ok, entendi&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../../../docs/guias/integracao/consentimento/com-consentimento.png&#34; alt=&#34;imagem_com_consentimento&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/docs/guias/integracao/consentimento/com-consentimento.png&#34; alt=&#34;imagem_com_consentimento&#34;&gt;&lt;/p&gt;
 
       </description>
     </item>
@@ -643,7 +643,7 @@ No início desta sessão detalhamos o passo a passo desse procedimento, neste t�
         &lt;p&gt;Como o dono da conta permite que uma transação criada pelo parceiro seja realizada.&lt;/p&gt;
 &lt;hr&gt;
 &lt;br&gt;
-&lt;p&gt;A &lt;strong&gt;Aprovação de uma Transação&lt;/strong&gt; tem como objetivo garantir que toda movimentação financeira de saída de uma conta seja feita somente por um usuário devidamente autorizado. É um procedimento em que o usuário &lt;em&gt;que já concedeu o &lt;a href=&#34;../../../docs/guias/integracao/consentimento&#34;&gt;consentimento&lt;/a&gt;&lt;/em&gt; é notificado da criação de uma transação e direcionado para uma página onde é possível visualizar todas as transações criadas pelo parceiro. Nessa página é possível aprovar ou rejeitar uma transação, possibilitando ou impedindo sua realização. É importante lembrar que apenas Aplicativos com consentimento podem criar transações.&lt;/p&gt;
+&lt;p&gt;A &lt;strong&gt;Aprovação de uma Transação&lt;/strong&gt; tem como objetivo garantir que toda movimentação financeira de saída de uma conta seja feita somente por um usuário devidamente autorizado. É um procedimento em que o usuário &lt;em&gt;que já concedeu o &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/consentimento&#34;&gt;consentimento&lt;/a&gt;&lt;/em&gt; é notificado da criação de uma transação e direcionado para uma página onde é possível visualizar todas as transações criadas pelo parceiro. Nessa página é possível aprovar ou rejeitar uma transação, possibilitando ou impedindo sua realização. É importante lembrar que apenas Aplicativos com consentimento podem criar transações.&lt;/p&gt;
 &lt;p&gt;No &lt;strong&gt;Open Banking&lt;/strong&gt;, o parceiro pode criar uma transação na conta do usuário, mas esta só será efetuada se houver a aprovação do usuário dono da conta. Esse procedimento assegura ao dono da conta de que não haverá movimentação de seu dinheiro sem sua permissão, além de proteger a aplicação de eventuais erros, ataques ou bugs que iniciem transações não desejadas pelo usuário.&lt;/p&gt;
 &lt;p&gt;O &lt;strong&gt;Aprovador&lt;/strong&gt; é um aplicativo utilizado pelo usuário para realizar a autorização de transações criadas pelo parceiro. Além disso, através do aplicativo é possível manter um histórico de movimentação de saída de uma conta. Nesse histórico é possível visualizar os valores movimentados, o destino das movimentações e o usuário que autorizou as transações. É possível também utilizá-lo para realizar aprovações em lote, ou seja, aprovar um grande número de transações pendentes ao mesmo tempo.&lt;/p&gt;
 &lt;p&gt;Além de aprovar transações pelo aplicativo &lt;strong&gt;Aprovador Stone&lt;/strong&gt;, também é possível aprovar pelo aplicativo &lt;strong&gt;Conta Stone&lt;/strong&gt;, no menu &amp;ldquo;Aprovar transações&amp;rdquo;.&lt;/p&gt;
@@ -690,27 +690,27 @@ No início desta sessão detalhamos o passo a passo desse procedimento, neste t�
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;../../../docs/guias/integracao/webhooks/barcode_payment_invoice_created.json&#34;&gt;barcode_payment_invoice_created&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/webhooks/barcode_payment_invoice_created.json&#34;&gt;barcode_payment_invoice_created&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Representa a criação/emissão de um boleto.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;../../../docs/guias/integracao/webhooks/barcode_payment_invoice_registered.json&#34;&gt;barcode_payment_invoice_registered&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/webhooks/barcode_payment_invoice_registered.json&#34;&gt;barcode_payment_invoice_registered&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Representa o registro de um boleto.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;../../../docs/guias/integracao/webhooks/barcode_payment_invoice_payment_promissed.json&#34;&gt;barcode_payment_invoice_payment_promissed&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/webhooks/barcode_payment_invoice_payment_promissed.json&#34;&gt;barcode_payment_invoice_payment_promissed&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Representa que o pagamento do boleto foi acolhido em alguma instituição.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;../../../docs/guias/integracao/webhooks/barcode_payment_invoice_settled.json&#34;&gt;barcode_payment_invoice_settled&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/webhooks/barcode_payment_invoice_settled.json&#34;&gt;barcode_payment_invoice_settled&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Representa que pagamento do boleto foi confirmado.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;../../../docs/guias/integracao/webhooks/barcode_payment_invoice_expired.json&#34;&gt;barcode_payment_invoice_expired&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/webhooks/barcode_payment_invoice_expired.json&#34;&gt;barcode_payment_invoice_expired&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Representa que o boleto está expirado.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;../../../docs/guias/integracao/webhooks/cash_in_barcode_payment.json&#34;&gt;cash_in_barcode_payment&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/webhooks/cash_in_barcode_payment.json&#34;&gt;cash_in_barcode_payment&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Representa a entrada do valor do boleto na conta do beneficiário.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -923,7 +923,7 @@ No início desta sessão detalhamos o passo a passo desse procedimento, neste t�
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;../../../docs/guias/integracao/webhooks/exemplo_consent_request.json&#34;&gt;consent_request&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/webhooks/exemplo_consent_request.json&#34;&gt;consent_request&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Representa a confirmação do pedido de consentimento por parte do user.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -940,15 +940,15 @@ No início desta sessão detalhamos o passo a passo desse procedimento, neste t�
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;../../../docs/guias/integracao/webhooks/A1.json&#34;&gt;sign_up_created&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/webhooks/A1.json&#34;&gt;sign_up_created&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Enviado quando é feito o pedido de abertura de conta.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;../../../docs/guias/integracao/webhooks/A2.json&#34;&gt;sign_up_status_updated&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/webhooks/A2.json&#34;&gt;sign_up_status_updated&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Enviado quando é feito uma atualização dos dados na abertura da conta.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;../../../docs/guias/integracao/webhooks/A3.json&#34;&gt;sign_up_resource_details_updated&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/webhooks/A3.json&#34;&gt;sign_up_resource_details_updated&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Serão enviados diversos webhooks com este tipo de evento de acordo com a evolução da abertura de conta. Ex: &lt;code&gt;account_created&lt;/code&gt;, &lt;code&gt;user_email_verified&lt;/code&gt;, &amp;hellip;.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -977,7 +977,7 @@ x-stone-webhook-event-type: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;c
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;event_type&lt;/td&gt;
-&lt;td&gt;Especifica qual tipo de evento disparou a notificação. Veja os valores possíveis &lt;a href=&#34;../../../docs/guias/integracao/webhooks/#os-eventos-que-geram-notifica%C3%A7%C3%B5es-s%C3%A3o&#34;&gt;aqui&lt;/a&gt;.&lt;/td&gt;
+&lt;td&gt;Especifica qual tipo de evento disparou a notificação. Veja os valores possíveis &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/webhooks/#os-eventos-que-geram-notifica%C3%A7%C3%B5es-s%C3%A3o&#34;&gt;aqui&lt;/a&gt;.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;id&lt;/td&gt;

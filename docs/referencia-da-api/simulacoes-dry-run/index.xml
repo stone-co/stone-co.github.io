@@ -225,7 +225,7 @@ content-type: application/json
         
         &lt;hr&gt;
 &lt;br&gt;
-&lt;p&gt;O Dry Run de pagamentos retorna, além do &lt;a href=&#34;../../../docs/referencia-da-api/pagamentos/o-objeto-pagamento/&#34;&gt;Objeto Pagamento&lt;/a&gt; em si, os Objetos &lt;a href=&#34;#objeto-barcode-details&#34;&gt;Barcode Details&lt;/a&gt; e &lt;a href=&#34;#objeto-details&#34;&gt;Details&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;O Dry Run de pagamentos retorna, além do &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/pagamentos/o-objeto-pagamento/&#34;&gt;Objeto Pagamento&lt;/a&gt; em si, os Objetos &lt;a href=&#34;#objeto-barcode-details&#34;&gt;Barcode Details&lt;/a&gt; e &lt;a href=&#34;#objeto-details&#34;&gt;Details&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Como complemento, descrevemos os possíveis resultados para o campo &lt;a href=&#34;#document_payment_type&#34;&gt;document_payment_type&lt;/a&gt;.&lt;/p&gt;
 &lt;br&gt;
 &lt;h3 id=&#34;objeto-barcode-details&#34;&gt;Objeto Barcode Details&lt;/h3&gt;

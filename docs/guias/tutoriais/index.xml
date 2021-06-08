@@ -27,8 +27,8 @@
 &lt;br&gt;
 &lt;p&gt;Neste tutorial vamos ver como:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Gerar o token de &lt;a href=&#34;../../../docs/guias/integracao/autenticacao&#34;&gt;autenticação&lt;/a&gt;;&lt;/li&gt;
-&lt;li&gt;Gerar o token e link de &lt;a href=&#34;../../../docs/guias/integracao/consentimento&#34;&gt;consentimento&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Gerar o token de &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;autenticação&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Gerar o token e link de &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/consentimento&#34;&gt;consentimento&lt;/a&gt;;&lt;/li&gt;
 &lt;li&gt;Operar em contas que já concederam acesso à aplicação parceira.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Utilizaremos a linguagem Python na versão 3.7 para montar o token e a &lt;a href=&#34;https://pyjwt.readthedocs.io/en/latest/&#34;&gt;biblioteca PyJWT&lt;/a&gt; para assiná-lo.&lt;/p&gt;
@@ -41,7 +41,7 @@
 &lt;/div&gt;
 
 &lt;h4 id=&#34;1-conhecendo-os-dados&#34;&gt;&lt;strong&gt;1. Conhecendo os dados&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;Como resultado do &lt;a href=&#34;../../../docs/guias/integracao/cadastro-da-aplicacao&#34;&gt;cadastro da sua aplicação&lt;/a&gt;, você recebeu um ClientID. Além disso, nos forneceu uma chave pública e manteve em segredo uma chave privada. Agora vamos ver como utilizá-los na prática.&lt;/p&gt;
+&lt;p&gt;Como resultado do &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao&#34;&gt;cadastro da sua aplicação&lt;/a&gt;, você recebeu um ClientID. Além disso, nos forneceu uma chave pública e manteve em segredo uma chave privada. Agora vamos ver como utilizá-los na prática.&lt;/p&gt;
 &lt;p&gt;Para montar os tokens, tenha em mãos o seu &lt;code&gt;redirect_uri&lt;/code&gt; cadastrado, o seu ClientID e sua chave privada.&lt;/p&gt;
 &lt;h4 id=&#34;2-se-preparando-para-gerar-tokens&#34;&gt;&lt;strong&gt;2. Se preparando para gerar tokens&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;Aqui vamos importar as bibliotecas que vamos utilizar e definir algumas constantes.&lt;/p&gt;
@@ -70,10 +70,10 @@ API_URL = &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://sandbox-api
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Se chegou a este mesmo resultado, você tem uma função que pode ser utilizada para assinar qualquer um dos seus tokens.&lt;/p&gt;
 &lt;p&gt;A biblioteca escolhida incluiu automaticamente no header as informações de tipo e algorítimo utilizados para gerar o token. Para se certificar da validade do token é possível utilizar o site &lt;a href=&#34;https://jwt.io&#34;&gt;jwt.io&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Observe que trabalhamos com vários tokens JWT diferentes e utilizamos claims diferentes de acordo com a finalidade do token.&lt;/p&gt;
-&lt;p&gt;Para o token de autenticação, é preciso utilizar os claims descritos em &lt;a href=&#34;../../../docs/guias/integracao/autenticacao&#34;&gt;Autenticação&lt;/a&gt;; para o token de consentimento, serão utilizados os claims descritos em &lt;a href=&#34;../../../docs/guias/integracao/consentimento&#34;&gt;Consentimento&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Para o token de autenticação, é preciso utilizar os claims descritos em &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao&#34;&gt;Autenticação&lt;/a&gt;; para o token de consentimento, serão utilizados os claims descritos em &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/consentimento&#34;&gt;Consentimento&lt;/a&gt;.&lt;/p&gt;
 &lt;br&gt;
 &lt;h4 id=&#34;3-montando-o-token-de-autenticação&#34;&gt;&lt;strong&gt;3. Montando o token de autenticação&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;Inicialmente, é preciso consultar quais os claims específicos do token de autenticação na &lt;a href=&#34;../../../docs/guias/integracao/autenticacao#claims&#34;&gt;documentação&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Inicialmente, é preciso consultar quais os claims específicos do token de autenticação na &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao#claims&#34;&gt;documentação&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Através da função que construimos é possível gerar e assinar esse token de forma simples.&lt;/p&gt;
 &lt;p&gt;Esse token será enviado para a Stone através de uma chamada para nosso servidor de autenticação, e enviaremos como resposta um &lt;code&gt;access_token&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;O &lt;code&gt;access_token&lt;/code&gt; também é do tipo JWT, e funciona como uma chave de acesso para todas requisições na API.&lt;/p&gt;
@@ -111,8 +111,8 @@ def authenticate():
 &lt;p&gt;Para utilizar o token de acesso, é preciso apenas adicionar esse token em um cabeçalho &lt;code&gt;authorization&lt;/code&gt; com o valor &lt;code&gt;Bearer TOKEN&lt;/code&gt;. Com isso, já é possível operar na API como é demonstrado mais a frente.&lt;/p&gt;
 &lt;br&gt;
 &lt;h4 id=&#34;4-montando-o-link-de-consentimento&#34;&gt;&lt;strong&gt;4. Montando o link de consentimento&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;Assim como para o token de autenticação, inicialmente consultamos quais os claims específicos do token de consentimento na &lt;a href=&#34;../../../docs/guias/integracao/consentimento#gerando-o-token&#34;&gt;documentação&lt;/a&gt; e, em seguida, utilizamos a função que construimos para gerar e assinar o token.&lt;/p&gt;
-&lt;p&gt;Neste caso, vamos um pouco além da geração do token, utilizando uma função para montar o link de consentimento com os três parâmetros especificados na &lt;a href=&#34;../../../docs/guias/integracao/consentimento#o-link-de-consentimento-deve-conter-tr%C3%AAs-par%C3%A2metros&#34;&gt;documentação&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Assim como para o token de autenticação, inicialmente consultamos quais os claims específicos do token de consentimento na &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/consentimento#gerando-o-token&#34;&gt;documentação&lt;/a&gt; e, em seguida, utilizamos a função que construimos para gerar e assinar o token.&lt;/p&gt;
+&lt;p&gt;Neste caso, vamos um pouco além da geração do token, utilizando uma função para montar o link de consentimento com os três parâmetros especificados na &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/consentimento#o-link-de-consentimento-deve-conter-tr%C3%AAs-par%C3%A2metros&#34;&gt;documentação&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Resumindo o passo a passo para obter o link do consentimento, é preciso:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Montar os claims para o token;&lt;/li&gt;
@@ -149,7 +149,7 @@ def authenticate():
 &lt;p&gt;Utilizando seu &lt;code&gt;access_token&lt;/code&gt; já é possível acessar as funcionalidades da API, de acordo com o que a sua aplicação tem permissão de fazer. Para ter permissão de criar transações em contas de usuários, ou até de visualizar seus dados, é preciso obter consentimento do dono da conta. Isso é possível enviando o link construído no passo anterior para a usuária, para que ela possa dar acesso à conta.&lt;/p&gt;
 &lt;h5 id=&#34;consultando-as-contas-às-quais-a-aplicação-parceira-tem-acesso&#34;&gt;&lt;strong&gt;Consultando as contas às quais a aplicação parceira tem acesso&lt;/strong&gt;&lt;/h5&gt;
 &lt;p&gt;Através da API é possível, por exemplo, consultar a quais contas você tem acesso, tanto no caso de você ser uma aplicação parceira com consentimento para acessar contas, quanto no caso de você ser proprietário de alguma conta.&lt;/p&gt;
-&lt;p&gt;Para isso, é preciso apenas consultar o endpoint &lt;a href=&#34;../../../docs/referencia-da-api/dados-da-conta/consultar-todas-as-contas-as-quais-o-usuario-tem-acesso&#34;&gt;Consultar Todas Contas às Quais Se Tem Acesso&lt;/a&gt;, utilizando seu &lt;code&gt;access_token&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Para isso, é preciso apenas consultar o endpoint &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-todas-as-contas-as-quais-o-usuario-tem-acesso&#34;&gt;Consultar Todas Contas às Quais Se Tem Acesso&lt;/a&gt;, utilizando seu &lt;code&gt;access_token&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Outra forma de acessar esse endpoint é realizando uma chamada para nossa API, enviando seu &lt;code&gt;access_token&lt;/code&gt; em um header. Abaixo podemos observar isso em um exemplo de função que poderia ser utilizada para realizar essa consulta.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;def operational_accounts(access_token, pagination_params={}):
     url = f&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;{API_URL}/accounts&amp;#34;&lt;/span&gt;
@@ -168,7 +168,7 @@ def authenticate():
 &lt;p&gt;&lt;code&gt;access_token&lt;/code&gt; : É o resultado de uma autenticação bem sucedida. Sempre que uma aplicação parceira se autenticar receberá um token de acesso, cuja validade é informada em seus claims;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;pagination_params&lt;/code&gt;: A maior parte dos nossos endpoints utilizam uma &lt;a href=&#34;../../../docs/referencia-da-api/stone-openbank/paginacao&#34;&gt;paginação padrão&lt;/a&gt;. Isso permite realizar requisições HTTP de forma mais prática, além de poupar consumo de rede.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pagination_params&lt;/code&gt;: A maior parte dos nossos endpoints utilizam uma &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/stone-openbank/paginacao&#34;&gt;paginação padrão&lt;/a&gt;. Isso permite realizar requisições HTTP de forma mais prática, além de poupar consumo de rede.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;E, por fim, obtem-se como resposta uma lista das contas às quais a aplicação tem acesso.&lt;/p&gt;
@@ -176,7 +176,7 @@ def authenticate():
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Padrões da Nossa API&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Seguimos alguns padrões para alguns tipos de dados em toda a nossa API. &lt;a href=&#34;../../../docs/referencia-da-api/stone-openbank/data-e-hora&#34;&gt;Aqui&lt;/a&gt; se encontram alguns destes padrões.&lt;/p&gt;
+&lt;p&gt;Seguimos alguns padrões para alguns tipos de dados em toda a nossa API. &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/stone-openbank/data-e-hora&#34;&gt;Aqui&lt;/a&gt; se encontram alguns destes padrões.&lt;/p&gt;
 
 &lt;/div&gt;
 
