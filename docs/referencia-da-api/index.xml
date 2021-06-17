@@ -241,21 +241,12 @@
 &lt;p&gt;&lt;code&gt;FAILED&lt;/code&gt; - Significa que o Pix que estava com o estado de &lt;code&gt;CONFIRMED&lt;/code&gt;, falhou no momento de reservar o dinheiro, podendo ser devido a falta de saldo do cliente, e portanto ele vai para o estado de &lt;code&gt;FAILED&lt;/code&gt; e o fluxo da operação se encerra.&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;fluxo-para-criação-de-um-pix&#34;&gt;&lt;strong&gt;Fluxo para criação de um Pix&lt;/strong&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;api-pix-do-bacen&#34;&gt;&lt;strong&gt;API Pix do BACEN&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;br&gt;
-&lt;ol&gt;
-&lt;li&gt;Realiza request através do &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/pix/criar-pagamento-pendente/&#34;&gt;endpoint&lt;/a&gt; /api/v1/pix/outbound_pix_payments enviando parâmetros validos. Este irá retornar uma resposta com os dados do Pix.&lt;/li&gt;
-&lt;li&gt;Realiza request através do &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/pix/confirmar-pagamento-pendente/&#34;&gt;endpoint&lt;/a&gt; /api/v1/pix/outbound_pix_payments/{id}/actions/confirm informando o campo &lt;code&gt;id&lt;/code&gt; retornado pela resposta do passo 1.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&#34;fluxo-de-criação-de-pix-através-da-leitura-do-qrcode&#34;&gt;&lt;strong&gt;Fluxo de criação de Pix através da leitura do QRCode&lt;/strong&gt;&lt;/h4&gt;
-&lt;hr&gt;
-&lt;br&gt;
-&lt;ol&gt;
-&lt;li&gt;Realiza request através do &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/pix/buscar-dados-qrcode/&#34;&gt;endpoint&lt;/a&gt; /api/v1/outbound_pix_payments/brcode informando o QRCode através do campo &lt;code&gt;brcode&lt;/code&gt;. Este irá retornar uma reposta com os dados do QRCode.&lt;/li&gt;
-&lt;li&gt;Realiza request através do &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/pix/criar-pagamento-pendente/&#34;&gt;endpoint&lt;/a&gt; /api/v1/pix/outbound_pix_payments enviando parâmetros validos. Este irá retornar uma resposta com os dados do Pix.&lt;/li&gt;
-&lt;li&gt;Realiza request através do &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/pix/confirmar-pagamento-pendente/&#34;&gt;endpoint&lt;/a&gt; /api/v1/pix/outbound_pix_payments/{id}/actions/confirm informando o campo &lt;code&gt;id&lt;/code&gt; retornado pela resposta do passo 2.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;Para determinados casos, é possível utilizar a API de Pix do BACEN. Para acessá-la, clique &lt;a href=&#34;https://bacen.github.io/pix-api/index.html&#34;&gt;aqui&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h5 id=&#34;para-realizar-transações-com-pix-siga-de-acordo-com-o-menu-abaixo&#34;&gt;Para realizar transações com Pix, siga de acordo com o menu abaixo:&lt;/h5&gt;
 
       </description>
     </item>
