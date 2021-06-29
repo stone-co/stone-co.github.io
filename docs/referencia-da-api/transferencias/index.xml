@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Stone OpenBank – Transferências</title>
+    <title>Stone OpenBank – TRANSFERÊNCIAS</title>
     <link>https://stone-co.github.io/docs/referencia-da-api/transferencias/</link>
-    <description>Recent content in Transferências on Stone OpenBank</description>
+    <description>Recent content in TRANSFERÊNCIAS on Stone OpenBank</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 13 May 2020 18:00:00 -0300</lastBuildDate>
     
@@ -101,9 +101,25 @@
 &lt;h4 id=&#34;reembolsos-em-transferências&#34;&gt;Reembolsos em transferências&lt;/h4&gt;
 &lt;hr&gt;
 &lt;br&gt;
-&lt;p&gt;&lt;strong&gt;Reembolsos ocorrem apenas em transferências para outros bancos&lt;/strong&gt;, já que para transferências internas conferimos a existência da conta destino antes de realizar a transferência.&lt;br&gt;
-Abaixo listamos algumas das razões possíveis para ocorrer reembolsos, como também seus códigos correspondentes.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Reembolsos ocorrem apenas em transferências para outros bancos&lt;/strong&gt;, já que para transferências internas conferimos a existência da conta destino antes de realizar a transferência.&lt;br&gt;&lt;/p&gt;
+&lt;h5 id=&#34;porque-uma-transferência-é-reembolsada&#34;&gt;&lt;strong&gt;Porque uma transferência é reembolsada?&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;Temos vários motivos para que uma transferência retorne, sendo os casos mais comuns conta, agência ou documento do destino errados e saldo insuficiente na conta de origem.
+O reembolso de uma transferência somente é realizado quando ela ocorre para contas que não sejam Contas Stone, ou seja, quando ocorrem transferências externas.&lt;/p&gt;
 &lt;br&gt;
+&lt;h5 id=&#34;quando-pode-ocorrer-um-reembolso&#34;&gt;&lt;strong&gt;Quando pode ocorrer um reembolso&lt;/strong&gt;&lt;/h5&gt;
+&lt;h6 id=&#34;saldo-insuficiente&#34;&gt;&lt;strong&gt;Saldo insuficiente&lt;/strong&gt;&lt;/h6&gt;
+&lt;p&gt;Através da nossa API é possível agendar uma transferência. Ocorre refund nesses casos quando, na data agendada para a transferência, a conta origem não possuir saldo suficiente em conta.&lt;/p&gt;
+&lt;h6 id=&#34;dados-da-transferência-incorretos&#34;&gt;&lt;strong&gt;Dados da transferência incorretos&lt;/strong&gt;&lt;/h6&gt;
+&lt;p&gt;Ao realizar uma transferência o usuário precisará enviar os dados da conta destino. Caso os dados de agência, conta ou documento do destino estejam incorretos ou inexistentes, a transferência retorna indicando esse erro.&lt;/p&gt;
+&lt;h6 id=&#34;tipo-de-transação-ou-finalidade-inválida&#34;&gt;&lt;strong&gt;Tipo de transação ou finalidade inválida&lt;/strong&gt;&lt;/h6&gt;
+&lt;p&gt;Caso a conta destinatária não seja do tipo especificado na transferência ou algum dado do destino é inválido. Exemplo: conta destinatária é corrente e o tipo informado era conta poupança ou envio no nome fantasia do destino enquanto era esperado o nome da razão social.&lt;/p&gt;
+&lt;h6 id=&#34;dados-ausentes-ou-inválidos&#34;&gt;&lt;strong&gt;Dados ausentes ou inválidos&lt;/strong&gt;&lt;/h6&gt;
+&lt;p&gt;Quando uma transferência é realizada sem um dado obrigatório para a finalização da mesma, como código verificador, agência não informada ou quando o formato de um dado é inválido.
+Alguns bancos utilizam códigos verificadores com letras no número da conta ao invés de números, nesses casos, a Conta Stone solicita que a conta origem digite ‘0’ no lugar dessa letra, para que a transferência ocorra com sucesso.&lt;/p&gt;
+&lt;h6 id=&#34;cpfcnpj-inapto-junto-à-receita-federal&#34;&gt;&lt;strong&gt;CPF/CNPJ inapto junto à Receita Federal&lt;/strong&gt;&lt;/h6&gt;
+&lt;p&gt;Nesse caso, a transferência é retornada para a conta de origem, porém, caso a mesma pessoa tenha acesso a outra conta com outro documento, ela poderá receber a transferência. Exemplo: A pessoa possui o CPF inapto junto à Receita Federal então não poderá receber a transferência em sua conta de pessoa física, porém, se essa mesma pessoa for sócia de uma empresa, nada impede que a transferência seja realizada para conta de pessoa jurídica, a não ser que o CNPJ também esteja inapto.&lt;/p&gt;
+&lt;h5 id=&#34;códigos-de-reembolsos&#34;&gt;&lt;strong&gt;Códigos de Reembolsos&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;Ocorre somente em casos de transferências externas.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -114,39 +130,39 @@ Abaixo listamos algumas das razões possíveis para ocorrer reembolsos, como tam
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;Ocorreu um erro durante a transferência. Por favor, tente novamente.&lt;/td&gt;
+&lt;td&gt;Ocorreu um erro de processamento no sistema de origem durante a transferência.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;A conta destino não existe mais. Por favor, entre em contato com o titular.&lt;/td&gt;
+&lt;td&gt;A conta destino é inexistente.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;A agência ou conta do destino estão incorretas. Por favor, confira os dados e tente novamente.&lt;/td&gt;
+&lt;td&gt;A conta ou agência destino é inexistente.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;O CPF/CNPJ do destino está incorreto. Por favor, confira os dados e tente novamente.&lt;/td&gt;
+&lt;td&gt;O documento do destino está incorreto.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;4&lt;/td&gt;
-&lt;td&gt;Mensagem Inválida para o Tipo de Transação ou Finalidade.&lt;/td&gt;
+&lt;td&gt;Conta destinatária do crédito inválida para o tipo de transação ou finalidade.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;5&lt;/td&gt;
-&lt;td&gt;Ocorreu um problema devido ao grande volume de transações. Tente novamente.&lt;/td&gt;
+&lt;td&gt;Erro de processamento no sistema de origem durante a transferência.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;6&lt;/td&gt;
-&lt;td&gt;A conta destino não está apta a receber o valor enviado. Por favor, entre em contato com o titular.&lt;/td&gt;
+&lt;td&gt;Transferência supera limite para o tipo de conta destino / Conta destinatária do crédito inválida para o tipo de transação ou finalidade.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;7&lt;/td&gt;
-&lt;td&gt;Não conformidade no pagamento.&lt;/td&gt;
+&lt;td&gt;Não conformidade no pagamento. Exemplo: pagamento a um fornecedor com o valor diferente que o devido.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;8&lt;/td&gt;
-&lt;td&gt;Os dados informados estão incorretos. Por favor, confira e tente novamente.&lt;/td&gt;
+&lt;td&gt;Os dados informados estão incorretos: Código Identificador de Transferência Inválido / Campo obrigatório ausente / Formato do dado inválido / Agência não informada.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;9&lt;/td&gt;
@@ -154,7 +170,23 @@ Abaixo listamos algumas das razões possíveis para ocorrer reembolsos, como tam
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;A instituição financeira do destino não é válida.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;A conta destino não pode ter mais de 13 dígitos para o tipo de conta escolhido. Por favor, confira os dados e tente novamente.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
 &lt;td&gt;Por solicitação de cliente da instituição participante recebedora.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;Devolução de ordem bancária pelo agente financeiro.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;Beneficiário não identificado - Documentos com código de barras.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;

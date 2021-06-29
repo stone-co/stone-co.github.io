@@ -15,7 +15,7 @@
     
     
     <item>
-      <title>Docs: Padrões da API</title>
+      <title>Docs: PADRÕES DA API</title>
       <link>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/</link>
       <pubDate>Wed, 13 May 2020 18:00:00 -0300</pubDate>
       
@@ -28,7 +28,7 @@
     </item>
     
     <item>
-      <title>Docs: Dados da conta</title>
+      <title>Docs: DADOS DA CONTA</title>
       <link>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/</link>
       <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
       
@@ -41,7 +41,7 @@
     </item>
     
     <item>
-      <title>Docs: Simulações (DRY-RUN)</title>
+      <title>Docs: SIMULAÇÕES (DRY-RUN)</title>
       <link>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/</link>
       <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
       
@@ -54,7 +54,7 @@
     </item>
     
     <item>
-      <title>Docs: Transferências</title>
+      <title>Docs: TRANSFERÊNCIAS</title>
       <link>https://stone-co.github.io/docs/referencia-da-api/transferencias/</link>
       <pubDate>Wed, 13 May 2020 18:00:00 -0300</pubDate>
       
@@ -67,7 +67,7 @@
     </item>
     
     <item>
-      <title>Docs: Pagamentos</title>
+      <title>Docs: PAGAMENTOS</title>
       <link>https://stone-co.github.io/docs/referencia-da-api/pagamentos/</link>
       <pubDate>Wed, 13 May 2020 18:00:00 -0300</pubDate>
       
@@ -80,7 +80,7 @@
     </item>
     
     <item>
-      <title>Docs: Agendamento</title>
+      <title>Docs: AGENDAMENTO</title>
       <link>https://stone-co.github.io/docs/referencia-da-api/agendamento/</link>
       <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
       
@@ -93,7 +93,7 @@
     </item>
     
     <item>
-      <title>Docs: Comprovantes</title>
+      <title>Docs: COMPROVANTES</title>
       <link>https://stone-co.github.io/docs/referencia-da-api/comprovantes/</link>
       <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
       
@@ -106,7 +106,7 @@
     </item>
     
     <item>
-      <title>Docs: Instituições</title>
+      <title>Docs: INSTITUIÇÕES</title>
       <link>https://stone-co.github.io/docs/referencia-da-api/instituicoes/</link>
       <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
       
@@ -119,7 +119,7 @@
     </item>
     
     <item>
-      <title>Docs: Contatos</title>
+      <title>Docs: CONTATOS</title>
       <link>https://stone-co.github.io/docs/referencia-da-api/contatos/</link>
       <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
       
@@ -132,7 +132,7 @@
     </item>
     
     <item>
-      <title>Docs: Boletos</title>
+      <title>Docs: BOLETOS</title>
       <link>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/</link>
       <pubDate>Wed, 13 May 2020 18:00:00 -0300</pubDate>
       
@@ -153,13 +153,15 @@
       <description>
         
         
-        &lt;p&gt;Os endpoints utilizados serão:&lt;/p&gt;
+        &lt;BR&gt;
+&lt;p&gt;Atualmente os endpoints de KYC só podem ser utilizados em casos especiais. Caso seja de seu interesse, contate nosso time comercial através desse &lt;a href=&#34;https://app.pipefy.com/public/form/Qz4ptt_W/?origem_do_lead=Documenta%C3%A7%C3%A3o&#34; target=&#34;_blank&#34;&gt;formulário &lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Os endpoints utilizados serão:&lt;/p&gt;
 
       </description>
     </item>
     
     <item>
-      <title>Docs: Link de Pagamento</title>
+      <title>Docs: LINK DE PAGAMENTO</title>
       <link>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/</link>
       <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
       
@@ -172,7 +174,7 @@
     </item>
     
     <item>
-      <title>Docs: Pix (Alpha)</title>
+      <title>Docs: PIX (Alpha)</title>
       <link>https://stone-co.github.io/docs/referencia-da-api/pix/</link>
       <pubDate>Wed, 31 Mar 2021 18:00:00 -0300</pubDate>
       
@@ -252,24 +254,11 @@
     </item>
     
     <item>
-      <title>Docs: Recargas</title>
+      <title>Docs: RECARGAS</title>
       <link>https://stone-co.github.io/docs/referencia-da-api/recargas/</link>
       <pubDate>Tue, 30 Mar 2021 18:00:00 -0300</pubDate>
       
       <guid>https://stone-co.github.io/docs/referencia-da-api/recargas/</guid>
-      <description>
-        
-        
-        
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Conta Stone SDK (Beta)</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/conta-stone-sdk/</link>
-      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
-      
-      <guid>https://stone-co.github.io/docs/referencia-da-api/conta-stone-sdk/</guid>
       <description>
         
         

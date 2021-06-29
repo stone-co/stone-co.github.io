@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Stone OpenBank – Padrões da API</title>
+    <title>Stone OpenBank – PADRÕES DA API</title>
     <link>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/</link>
-    <description>Recent content in Padrões da API on Stone OpenBank</description>
+    <description>Recent content in PADRÕES DA API on Stone OpenBank</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 13 May 2020 18:00:00 -0300</lastBuildDate>
     
@@ -99,6 +99,54 @@ A &lt;a href=&#34;https://stone-co.github.io/docs/guias/a-conta-stone/&#34;&gt;C
 &lt;p&gt;Como notificamos o sistema parceiro da ocorrência de eventos.&lt;/p&gt;
 &lt;h4 id=&#34;boas-práticasdocsguiasintegracaoboas-praticas&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/boas-praticas/&#34;&gt;Boas Práticas&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Como armazenar dados e realizar operações em nossa API de forma segura.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Boas Práticas</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/boas-praticas/</link>
+      <pubDate>Tue, 21 May 2019 20:10:39 +0000</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/boas-praticas/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;h4 id=&#34;tokens-jwt&#34;&gt;&lt;strong&gt;Tokens JWT&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Tokens JWT são dados sensíveis, assim como senhas ou dados de cartões de crédito. Por isso, é de extrema importância manusear e armazenar esses dados corretamente.&lt;/p&gt;
+&lt;h4 id=&#34;não-armazene-tokens-no-local-storage&#34;&gt;&lt;strong&gt;Não armazene tokens no &lt;em&gt;local storage&lt;/em&gt;&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;O armazenamento local de um Browser não é um lugar seguro para se armazenar dados sensíveis. Dados armazenados no local storage podem:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ser acessados via Javascript;&lt;/li&gt;
+&lt;li&gt;Ser vulneráveis a Cross-Site Scripting.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;caso-um-backend-esteja-disponível&#34;&gt;&lt;strong&gt;Caso um backend esteja disponível&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Se sua Aplicação tem um backend disponível, os tokens devem ser manuseados server-side.&lt;/p&gt;
+&lt;h4 id=&#34;caso-um-backend-não-esteja-disponível&#34;&gt;&lt;strong&gt;Caso um backend não esteja disponível&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Se sua Aplicação é uma Single Page Application, a Aplicação deve requisitar os tokens e armazená-los em memória sem nenhuma persistência. Faça as chamadas de API usando os tokens armazenados em memória.&lt;/p&gt;
+&lt;p&gt;Para outros casos, informações sobre boas práticas com Tokens JWT estão disponíveis &lt;a href=&#34;https://auth0.com/docs/security/store-tokens&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;idempotência&#34;&gt;&lt;strong&gt;Idempotência&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Nossos endpoints que envolvem operações financeiras suportam &lt;a href=&#34;https://pt.wikipedia.org/wiki/Idempot%C3%AAncia&#34;&gt;Idempotência&lt;/a&gt;. Existe a possibilidade de ocorrer operações duplicadas, como, por exemplo, com a queda de conexão 3G durante a realização de uma operação. Para evitar que a mesma operação ocorra mais de uma vez no nosso sistema, sempre envie o cabeçalho de Idempotência (x-stone-idempotency-key).&lt;/p&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Tamanho máximo&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A chave de idempotência deve ter um tamanho máximo de 72 caracteres.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Observe abaixo cada caso possível em relação à &lt;strong&gt;chave de idempotência&lt;/strong&gt; e seus retornos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Uma chamada com &lt;strong&gt;outra chave de idempotência&lt;/strong&gt;, &lt;strong&gt;independente do corpo da requisição&lt;/strong&gt;, será tratada como uma nova requisição.&lt;/li&gt;
+&lt;li&gt;Uma chamada com a &lt;strong&gt;mesma chave de idempotência&lt;/strong&gt; e o &lt;strong&gt;mesmo corpo da requisição&lt;/strong&gt; retornará a mesma resposta que foi recebida anteriormente, devido a um cache.
+Se isso ocorrer em um período curto demais pode ocasionar uma resposta &lt;code&gt;HTTP 423&lt;/code&gt;, indicando que o recurso está travado e que a requisição original ainda está em processamento. Neste caso, é necessária uma retentativa desta chamada.&lt;/li&gt;
+&lt;li&gt;Uma chamada com a &lt;strong&gt;mesma chave de idempotência&lt;/strong&gt; e com o &lt;strong&gt;corpo da requisição diferente do original&lt;/strong&gt; retornará um erro de idempotência &lt;code&gt;HTTP 409&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Uma chamada com a &lt;strong&gt;chave de idempotênca maior que 72 caracteres&lt;/strong&gt; retornará um erro &lt;code&gt;HTTP 431&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;simulações-dry-run&#34;&gt;&lt;strong&gt;Simulações (dry-run)&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;Nossos endpoints que envolvem operações financeiras suportam &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/&#34;&gt;Simulações (dry-run)&lt;/a&gt;, permitindo que o usuário visualize com antecedência o que vai acontecer nessa operação.&lt;/p&gt;
+&lt;p&gt;Em alguns casos, as Simulações permitem enriquecer os dados de uma operação, como, por exemplo o &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/simular-o-pagamento-de-um-documento/&#34;&gt;Pagamento de Boletos&lt;/a&gt;.&lt;/p&gt;
 
       </description>
     </item>

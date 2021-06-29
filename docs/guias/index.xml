@@ -4,7 +4,7 @@
     <link>https://stone-co.github.io/docs/guias/</link>
     <description>Recent content in Guias on Stone OpenBank</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 17 Sep 2020 18:00:00 -0300</lastBuildDate>
+    <lastBuildDate>Mon, 28 Jun 2021 09:00:00 -0300</lastBuildDate>
     
 	  <atom:link href="https://stone-co.github.io/docs/guias/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,11 +15,11 @@
     
     
     <item>
-      <title>Docs: STONE OPENBANK API</title>
-      <link>https://stone-co.github.io/docs/guias/stone-openbank-api/</link>
-      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      <title>Docs: STONE OPEN BANKING</title>
+      <link>https://stone-co.github.io/docs/guias/stone-open-banking/</link>
+      <pubDate>Mon, 28 Jun 2021 09:00:00 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/guias/stone-openbank-api/</guid>
+      <guid>https://stone-co.github.io/docs/guias/stone-open-banking/</guid>
       <description>
         
         
@@ -28,11 +28,11 @@
     </item>
     
     <item>
-      <title>Docs: A CONTA STONE</title>
-      <link>https://stone-co.github.io/docs/guias/a-conta-stone/</link>
-      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      <title>Docs: TOKEN DE ACESSO</title>
+      <link>https://stone-co.github.io/docs/guias/token-de-acesso/</link>
+      <pubDate>Mon, 28 Jun 2021 09:00:00 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/guias/a-conta-stone/</guid>
+      <guid>https://stone-co.github.io/docs/guias/token-de-acesso/</guid>
       <description>
         
         
@@ -41,11 +41,11 @@
     </item>
     
     <item>
-      <title>Docs: INTEGRAÇÃO</title>
-      <link>https://stone-co.github.io/docs/guias/integracao/</link>
-      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      <title>Docs: CONTA DE PAGAMENTO</title>
+      <link>https://stone-co.github.io/docs/guias/conta-de-pagamento/</link>
+      <pubDate>Mon, 28 Jun 2021 09:00:00 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/guias/integracao/</guid>
+      <guid>https://stone-co.github.io/docs/guias/conta-de-pagamento/</guid>
       <description>
         
         
@@ -54,11 +54,25 @@
     </item>
     
     <item>
-      <title>Docs: TUTORIAIS</title>
-      <link>https://stone-co.github.io/docs/guias/tutoriais/</link>
-      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      <title>Docs: CONSENTIMENTO</title>
+      <link>https://stone-co.github.io/docs/guias/consentimento/</link>
+      <pubDate>Mon, 28 Jun 2021 09:00:00 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/guias/tutoriais/</guid>
+      <guid>https://stone-co.github.io/docs/guias/consentimento/</guid>
+      <description>
+        
+        
+        &lt;br&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: APROVAÇÃO</title>
+      <link>https://stone-co.github.io/docs/guias/aprovacao/</link>
+      <pubDate>Mon, 28 Jun 2021 09:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/guias/aprovacao/</guid>
       <description>
         
         
@@ -67,15 +81,692 @@
     </item>
     
     <item>
-      <title>Docs: INTEGRAÇÃO PARA FORNECEDORES</title>
-      <link>https://stone-co.github.io/docs/guias/integracao-para-fornecedores/</link>
-      <pubDate>Wed, 19 May 2021 09:00:00 -0300</pubDate>
+      <title>Docs: WEBHOOKS</title>
+      <link>https://stone-co.github.io/docs/guias/webhooks/</link>
+      <pubDate>Mon, 28 Jun 2021 09:00:00 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/guias/integracao-para-fornecedores/</guid>
+      <guid>https://stone-co.github.io/docs/guias/webhooks/</guid>
       <description>
         
         
-        &lt;p&gt;Documentação para integração no sistema interno Panda.&lt;/p&gt;
+        &lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;A ocorrência de certos eventos pode ser importante em diversos fluxos na integração de uma aplicação com a API Stone Open Banking. Por isso, utilizamos webhooks para notificar as aplicações integradas da ocorrência destes eventos.&lt;/p&gt;
+&lt;p&gt;Para sua utilização, é preciso que a aplicação tenha cadastrado no &lt;a href=&#34;https://stone-co.github.io/docs/guias/stone-open-banking/quickstart-de-integracao/#testes-em-sandbox&#34;&gt;formulário&lt;/a&gt; a URI para a qual enviaremos um POST com os dados do evento. A aplicação deverá estar preparada para lidar com cada evento de forma adequada.&lt;/p&gt;
+&lt;p&gt;Ao enviar um webhook, esperamos receber uma resposta do range 200 que indica o sucesso no recebimento dessa notificação por parte da sua aplicação. Caso a resposta seja um código diferente do range 200, encaramos como falha no recebimento do webhook e repetimos o envio até receber um sucesso ou batermos o número máximo de 50 tentativas no envio de um evento.
+Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um padrão de horários de tentativas.&lt;/p&gt;
+&lt;p&gt;A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) sobre as quais ela opera dado o escopo de funcionalidades disponíveis na sua aplicação e também recebem os eventos relacionados às contas sobre as quais foi dado consentimento.
+&lt;br&gt;Vale lembrar que os webhooks serão enviados independente se o evento for via API ou via APP.&lt;/p&gt;
+&lt;br&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Virada em Produção&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;É imprescindível que a aplicação esteja recebendo e tratando de forma adequada todos os tipos de webhook referente as funcionalidades que implementou.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;br&gt;
+&lt;h4 id=&#34;os-eventos-que-geram-notificações-são&#34;&gt;&lt;strong&gt;Os eventos que geram notificações são:&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;emissão-de-boleto&#34;&gt;&lt;strong&gt;Emissão de Boleto:&lt;/strong&gt;&lt;/h5&gt;
+&lt;br&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Tipo de Evento&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Descrição&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/webhooks/barcode_payment_invoice_created.json/?target=_blank&#34;&gt;barcode_payment_invoice_created&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Representa a criação/emissão de um boleto.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/webhooks/barcode_payment_invoice_registered.json&#34;&gt;barcode_payment_invoice_registered&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Representa o registro de um boleto.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/webhooks/barcode_payment_invoice_payment_promissed.json&#34;&gt;barcode_payment_invoice_payment_promissed&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Representa que o pagamento do boleto foi acolhido em alguma instituição.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/webhooks/barcode_payment_invoice_settled.json&#34;&gt;barcode_payment_invoice_settled&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Representa que pagamento do boleto foi confirmado.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/webhooks/barcode_payment_invoice_expired.json&#34;&gt;barcode_payment_invoice_expired&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Representa que o boleto está expirado.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/webhooks/cash_in_barcode_payment.json&#34;&gt;cash_in_barcode_payment&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Representa a entrada do valor do boleto na conta do beneficiário.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;pagamento-de-boleto&#34;&gt;&lt;strong&gt;Pagamento de Boleto:&lt;/strong&gt;&lt;/h5&gt;
+&lt;br&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Tipo de Evento&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_in_payment_refund&lt;/td&gt;
+&lt;td&gt;Representa o reembolso de um pagamento mal sucedido.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_out_payment&lt;/td&gt;
+&lt;td&gt;Representa a criação de um pagamento.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_out_payment_failed&lt;/td&gt;
+&lt;td&gt;Representa a falha na criação de um pagamento.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_out_payment_scheduled&lt;/td&gt;
+&lt;td&gt;Representa o agendamento de um pagamento.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_out_payment_scheduled_failed&lt;/td&gt;
+&lt;td&gt;Representa a falha no agendamento de um pagamento.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_out_payment_approved&lt;/td&gt;
+&lt;td&gt;Representa a aprovação de um pagamento.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_out_payment_execution_started&lt;/td&gt;
+&lt;td&gt;Representa o início da execução de um pagamento.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_out_payment_cancelled&lt;/td&gt;
+&lt;td&gt;Representa o cancelamento de um pagamento.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_out_payment_rejected&lt;/td&gt;
+&lt;td&gt;Representa a rejeição de um pagamento.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_out_payment_finished&lt;/td&gt;
+&lt;td&gt;Representa a finalização de um pagamento.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_out_payment_expired&lt;/td&gt;
+&lt;td&gt;Representa a expiração de um pagamento.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;transferência-interna&#34;&gt;&lt;strong&gt;Transferência interna:&lt;/strong&gt;&lt;/h5&gt;
+&lt;br&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Tipo de Evento&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_in_internal_transfer&lt;/td&gt;
+&lt;td&gt;Representa o recebimento de uma transferência interna.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_out_internal_transfer&lt;/td&gt;
+&lt;td&gt;Representa a criação de uma transferência interna.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_out_internal_transfer_failed&lt;/td&gt;
+&lt;td&gt;Representa a falha na criação de uma transferência interna.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_out_internal_transfer_scheduled&lt;/td&gt;
+&lt;td&gt;Representa o agendamento de uma transferência interna.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_out_internal_transfer_scheduled_failed&lt;/td&gt;
+&lt;td&gt;Representa a falha no agendamento de uma transferência interna.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_out_internal_transfer_approved&lt;/td&gt;
+&lt;td&gt;Representa a aprovação de uma transferência interna.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_out_internal_transfer_cancelled&lt;/td&gt;
+&lt;td&gt;Representa o cancelamento de uma transferência interna.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_out_internal_transfer_rejected&lt;/td&gt;
+&lt;td&gt;Representa a rejeição de uma transferência interna.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_out_internal_transfer_finished&lt;/td&gt;
+&lt;td&gt;Representa a finalização de uma transferência interna.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_out_internal_transfer_expired&lt;/td&gt;
+&lt;td&gt;Representa a expiração de uma transferência interna.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;transferência-externa&#34;&gt;&lt;strong&gt;Transferência externa:&lt;/strong&gt;&lt;/h5&gt;
+&lt;br&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Tipo de Evento&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_in_external_transfer&lt;/td&gt;
+&lt;td&gt;Representa o recebimento de uma transferência externa.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_in_external_transfer_refund&lt;/td&gt;
+&lt;td&gt;Representa o reembolso de uma transferência externa mal sucedida.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_out_external_transfer&lt;/td&gt;
+&lt;td&gt;Representa a criação de uma transferência externa.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_out_external_transfer_failed&lt;/td&gt;
+&lt;td&gt;Representa a falha na criação de uma transferência externa.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_out_external_transfer_scheduled&lt;/td&gt;
+&lt;td&gt;Representa o agendamento de uma transferência externa.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_out_external_transfer_scheduled_failed&lt;/td&gt;
+&lt;td&gt;Representa a falha no agendamento de uma transferência externa.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_out_external_transfer_approved&lt;/td&gt;
+&lt;td&gt;Representa a aprovação de uma transferência externa.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_out_external_transfer_execution_started&lt;/td&gt;
+&lt;td&gt;Representa o início da execução de uma transferência externa.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_out_external_transfer_cancelled&lt;/td&gt;
+&lt;td&gt;Representa o cancelamento de uma transferência externa.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_out_external_transfer_rejected&lt;/td&gt;
+&lt;td&gt;Representa a rejeição de uma transferência externa.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_out_external_transfer_finished&lt;/td&gt;
+&lt;td&gt;Representa a finalização de uma transferência externa.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cash_out_external_transfer_expired&lt;/td&gt;
+&lt;td&gt;Representa a expiração de uma transferência externa.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;pix&#34;&gt;&lt;strong&gt;Pix:&lt;/strong&gt;&lt;/h5&gt;
+&lt;br&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Tipo de Evento&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/WEBHOOKS/pix_json/pix.entries.key_created.json&#34;&gt;pix_entries_key_created&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Representa a criação de uma chave Pix.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/WEBHOOKS/pix_json/pix.entries.deleted.json&#34;&gt;pix_entries_deleted&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Representa a deleção de uma chave Pix.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/WEBHOOKS/pix_json/pix.entries.failed.json&#34;&gt;pix_entries_failed&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Representa a falha na criação de uma chave Pix.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/WEBHOOKS/pix_json/pix.entries.claims.waiting_resolution.json&#34;&gt;pix_entries_claims_waiting_resolution&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Representa que estamos aguardando a resposta da cliente sobre a claim (confirmação ou cancelamento).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/WEBHOOKS/pix_json/pix.entries.claims.confirmed.json&#34;&gt;pix_entries_claims_confirmed&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Representa que a cliente confirmou a claim, passando a chave para outra instituição.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/WEBHOOKS/pix_json/pix.entries.claims.automatically_confirmed_waiting_resolution.json&#34;&gt;pix_entries_claims_automatically_confirmed_waiting_resolution&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Representa que a reivindicação de posse foi automaticamente confirmada porque a cliente não respondeu no prazo de 7 dias corridos.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/WEBHOOKS/pix_json/pix.entries.claims.automatically_confirmed.json&#34;&gt;pix_entries_claims_automatically_confirmed&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Representa que foi realizada a confirmação da reivindicação de posse automaticamente, porque a cliente não respondeu dentro dos 14 dias de prazo. Aqui a reivindicação não pode ser mais cancelada.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/WEBHOOKS/pix_json/pix.entries.claims.cancelled.json&#34;&gt;pix_entries_claims_cancelled&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Representa cancelamento da solicitação da claim por parte da cliente, mantendo a chave cadastrada na conta original.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/WEBHOOKS/pix_json/pix.entries.claims.automatically_cancelled.json&#34;&gt;pix_entries_claims_automatically_cancelled&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Representa cancelamento automático da da solicitação de portabilidade, por falta de resposta da cliente nos 7 dias de prazo.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/WEBHOOKS/pix_json/pix_payment_invoice.json&#34;&gt;pix_payment_invoice&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Representa um QR Code dinâmico imediato.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/WEBHOOKS/pix_json/pix_payment_invoice_with_due_date.json&#34;&gt;pix_payment_invoice_with_due_date&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Representa um QR Code dinâmico com vencimento, multa, juros, desconto e abatimento.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/WEBHOOKS/pix_json/pix_invoice_payment_created.json&#34;&gt;pix_invoice_payment_created&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Representa a criação de um QR Code dinâmico.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/WEBHOOKS/pix_json/pix_invoice_payment_cancelled.json&#34;&gt;pix_invoice_payment_cancelled&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Representa o cancelamento de um QR Code dinâmico.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/WEBHOOKS/pix_json/pix_invoice_payment_paid.json&#34;&gt;pix_invoice_payment_paid&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Representa o pagamento com sucesso de um QR Code dinâmico.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/WEBHOOKS/pix_json/inbound_pix_payment.json&#34;&gt;inbound_pix_payment&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Representa um cash-in de Pix.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/WEBHOOKS/pix_json/pix_inbound_payment_received.json&#34;&gt;pix_inbound_payment_received&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Representa o recebimento de um cash-in de Pix, podendo estar associada a um QR Code estatático, dinâmico imediato ou dinâmico com vencimento. Essa associação será representada pela presença de um dos seguintes atributos dentro do target_data: &lt;br&gt;- &lt;code&gt;pix_payment_invoice&lt;/code&gt; : Invoice dinâmica imediata; &lt;br&gt;- &lt;code&gt;pix_payment_static_invoice&lt;/code&gt; : Invoice estática; &lt;br&gt;- &lt;code&gt;pix_payment_invoice_with_due_date&lt;/code&gt; : Invoice dinâmica com vencimento, multa, juros, desconto e abatimento.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/WEBHOOKS/pix_json/pix_refund_payment.json&#34;&gt;pix_refund_payment&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Representa uma devolução (cash-out) associada a um inbound payment (cash-in).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/WEBHOOKS/pix_json/pix.inbound_payment.refund.created.json&#34;&gt;pix_inbound_payment_refund_created&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Representa a criação de uma devolução associada a uma transação Pix. Lembrando que estamos falando da devolução (cash-out) de um cash-in.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/WEBHOOKS/pix_json/pix.inbound_payment.refund.failed.json&#34;&gt;pix_inbound_payment_refund_failed&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Representa que houve falha na criação da devolução (cash-out) de um cash-in de Pix.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/WEBHOOKS/pix_json/pix.inbound_payment.refund.money_reserved.json&#34;&gt;pix_inbound_payment_refund_money_reserved&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Representa a reserva de dinheiro (impacto no saldo da cliente) após à criação com sucesso de uma devolução (cash-out) de um cash-in de Pix.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/WEBHOOKS/pix_json/pix.inbound_payment.refund.settled.json&#34;&gt;pix_inbound_payment_refund_settled&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Representa que a devolução (cash-out) de um cash-in de Pix foi realizada com sucesso.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/WEBHOOKS/pix_json/pix.inbound_payment.refund.reversed.json&#34;&gt;pix_inbound_payment_refund_reversed&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Representa que a devolução (cash-out) de um cash-in de Pix foi rejeitada.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;pix_outbound_payment_created&lt;/td&gt;
+&lt;td&gt;Representa a criação de um cash-out de Pix.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;pix_outbound_payment_money_reserved&lt;/td&gt;
+&lt;td&gt;Representa a reserva de dinheiro (impacto no saldo da cliente) após à criação com sucesso de um cash-out de Pix.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;pix_outbound_payment_failed&lt;/td&gt;
+&lt;td&gt;Representa a falha na criação de um cash-out de Pix.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;pix_outbound_payment_settled&lt;/td&gt;
+&lt;td&gt;Representa a liquidação com sucesso de um cash-out de Pix.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;pix_outbound_payment_refunded&lt;/td&gt;
+&lt;td&gt;Representa a devolução de um cash-out de Pix.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;consentimento&#34;&gt;&lt;strong&gt;Consentimento:&lt;/strong&gt;&lt;/h5&gt;
+&lt;br&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Tipo de Evento&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/webhooks/exemplo_consent_request.json&#34;&gt;consent_request&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Representa a confirmação do pedido de consentimento por parte do user.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;abertura-de-conta&#34;&gt;&lt;strong&gt;Abertura de conta:&lt;/strong&gt;&lt;/h5&gt;
+&lt;br&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Tipo de Evento&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/webhooks/A1.json&#34;&gt;sign_up_created&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Representa o pedido de abertura de conta.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/webhooks/A2.json&#34;&gt;sign_up_status_updated&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Representa quando há uma atualização dos dados na abertura da conta.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/webhooks/A3.json&#34;&gt;sign_up_resource_details_updated&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Representa o envio de diversos webhooks de acordo com a evolução da abertura de conta. Ex: &lt;code&gt;account_created&lt;/code&gt;, &lt;code&gt;user_email_verified&lt;/code&gt;, &amp;hellip;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;link-de-pagamento&#34;&gt;&lt;strong&gt;Link de Pagamento:&lt;/strong&gt;&lt;/h5&gt;
+&lt;br&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Tipo de Evento&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/webhooks/lp_order_created.json&#34;&gt;order_created&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Representa a criação do link de pagamento. &lt;br&gt;Também é enviado um &lt;a href=&#34;https://stone-co.github.io/docs/guias/webhooks/lp_order_created_status_pending.json&#34;&gt;segundo webhook&lt;/a&gt; deste tipo que representa que o pagador executou o pagamento. &lt;br&gt;Neste caso, o campo &lt;code&gt;status&lt;/code&gt; do webhook terá seu valor alterado para &lt;code&gt;pending&lt;/code&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/webhooks/lp_order_paid.json&#34;&gt;order_paid&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Representa o pagamento em si do link de pagamento.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/webhooks/lp_order_closed.json&#34;&gt;order_closed&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Representa a finalização do link de pagamento.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;h4 id=&#34;o-header-das-notificações-segue-a-seguinte-estrutura&#34;&gt;&lt;strong&gt;O header das notificações segue a seguinte estrutura:&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;x-stone-webhook-event-id: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;930bbd6d-0c7a-4fe4-8b50-4b82a20cb847&amp;#34;&lt;/span&gt;
+x-stone-webhook-event-type: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;cash_out_internal_transfer&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A idempotência de webhooks deverá ser validada no campo &amp;lsquo;x-stone-webhook-event-id&amp;rsquo; disponível no header.&lt;/p&gt;
+&lt;br&gt;
+&lt;h4 id=&#34;o-payload-das-notificações-segue-a-seguinte-estrutura&#34;&gt;&lt;strong&gt;O payload das notificações segue a seguinte estrutura:&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Campo&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;env&lt;/td&gt;
+&lt;td&gt;Especifica de qual ambiente partiu o evento. Valores possíveis: sandbox ou production.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;event_type&lt;/td&gt;
+&lt;td&gt;Especifica qual tipo de evento disparou a notificação. Veja os valores possíveis &lt;a href=&#34;https://stone-co.github.io/docs/guias/webhooks/#os-eventos-que-geram-notifica%C3%A7%C3%B5es-s%C3%A3o&#34;&gt;aqui&lt;/a&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;id&lt;/td&gt;
+&lt;td&gt;É o identificador da notificação.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;event_notified_at&lt;/td&gt;
+&lt;td&gt;É a hora em que a notificação está sendo enviada.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;event_happened_at&lt;/td&gt;
+&lt;td&gt;É a hora em que o evento ocorreu.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;target_data&lt;/td&gt;
+&lt;td&gt;Objeto com as informações detalhadas do recurso que gerou o evento. Apesar de ter campo variáveis sempre conterá o campo account_id.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;target_detail_uri&lt;/td&gt;
+&lt;td&gt;É o endereço onde se pode consultar os detalhes do recurso.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;target_id&lt;/td&gt;
+&lt;td&gt;É o identificador do recurso que gerou o evento.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;target_statement_uri&lt;/td&gt;
+&lt;td&gt;É o endereço da entrada no extrato referente ao recurso.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;target_type&lt;/td&gt;
+&lt;td&gt;É o tipo do recurso.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Inclusão de campos&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A implementação não deve ser strict no parser do payload. Ao longo do tempo os payloads podem sofrer a inclusão de campos.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;br&gt;
+&lt;p&gt;Exemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;env&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sandbox&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;event_type&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;cash_in_internal_transfer&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;event_happened_at&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2020-05-13T14:58:15Z&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;event_notified_at&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2020-05-13T14:58:15Z&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;iat&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;1589381895&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;jti&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2o79sqemde14mv76eo00jsc3&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;nbf&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;1589381895&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_data&amp;#34;&lt;/span&gt;:{
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;09c016b2-876a-450a-9f40-316f8e2f8778&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;balance_after&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;balance_before&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;counter_party&amp;#34;&lt;/span&gt;:{
+         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account&amp;#34;&lt;/span&gt;:{
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;841412&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;16501555&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution_name&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Stone Pagamentos S.A.&amp;#34;&lt;/span&gt;
+         },
+         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;entity&amp;#34;&lt;/span&gt;:{
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Loja Da Maria&amp;#34;&lt;/span&gt;
+         }
+      },
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2020-05-13T14:58:15Z&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;54abd61c-3b18-401c-9816-951cbe135149&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;operation&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;credit&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;FINISHED&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;internal&amp;#34;&lt;/span&gt;
+   },
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_detail_uri&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_statement_uri&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://sandbox-api.openbank.stone.com.br/api/v1/statement/entries/54abd61c-3b18-401c-9816-951cbe135149&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_type&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;internal_transfer&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;h4 id=&#34;trabalhando-com-webhooks&#34;&gt;&lt;strong&gt;Trabalhando com Webhooks&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;webhooks-seguros&#34;&gt;&lt;strong&gt;Webhooks Seguros&lt;/strong&gt;&lt;/h5&gt;
+&lt;br&gt;
+&lt;p&gt;Nossa API envia webhooks de forma segura para evitar que eles sejam abertos e/ou alterados. Isso é feito em duas etapas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Assinatura do conteúdo usando uma das nossas &lt;a href=&#34;https://api.openbank.stone.com.br/api/v1/discovery/keys&#34;&gt;chaves públicas&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Ciframento do resultado usando a chave pública do destinatário.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;como-eu-posso-abrir-de-forma-segura-o-conteúdo-de-um-webhook&#34;&gt;&lt;strong&gt;Como eu posso abrir de forma segura o conteúdo de um webhook?&lt;/strong&gt;&lt;/h5&gt;
+&lt;br&gt;
+&lt;p&gt;Para poder visualizar o conteúdo de um webhook é necessário fazer o caminho inverso:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Decifrar o conteúdo do webhook&lt;/strong&gt; usando sua chave privada. O resultado é um token JWT assinado com a nossa chave;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Verificar a assinatura do token&lt;/strong&gt; com a nossa chave pública.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;1---decifrar-o-conteúdo-do-webhook&#34;&gt;&lt;strong&gt;1 - Decifrar o conteúdo do webhook&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;O webhook irá chegar com um payload parecido com esse:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;encrypted_body&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;xxxxxxxxxxxxxx conteúdo cifrado&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;O valor do campo &amp;ldquo;encrypted_body&amp;rdquo; é um token no formato JWE (JSON Web Encryption) compacto. Esse formato é um padrão e várias linguagens possuem bibliotecas prontas para ele.&lt;/p&gt;
+&lt;p&gt;O algoritmo utilizado é: &lt;strong&gt;RSA-OAEP-256&lt;/strong&gt; com &lt;strong&gt;A256GCM&lt;/strong&gt;. Para decifrar o conteúdo é necessário uma biblioteca que suporte estes algoritmos como:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/square/js-jose&#34;&gt;JavaScript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://bitbucket.org/b_c/jose4j/wiki/Home&#34;&gt;Java&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hexdocs.pm/jose/JOSE.html&#34;&gt;Erlang/Elixir&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/square/go-jose&#34;&gt;Go&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A chave a ser utilizada tem que ser a &lt;strong&gt;chave privada&lt;/strong&gt; par da &lt;strong&gt;chave pública&lt;/strong&gt; usada na autenticação da aplicação.&lt;/p&gt;
+&lt;p&gt;Um exemplo para decodificar o webhook pode ser verificado no código em Python abaixo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;from&lt;/span&gt; jwcrypto &lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; jwk, jwe
+&lt;span style=&#34;color:#ff79c6&#34;&gt;from&lt;/span&gt; jwcrypto.common &lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; json_encode
+&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; jwt
+&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; time
+&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; subprocess
+&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; simplejson &lt;span style=&#34;color:#ff79c6&#34;&gt;as&lt;/span&gt; json
+
+webhook_response &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;encrypted_body&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;eyJhbGciOiJSU0EtT0FFz2C15nwK...kadnFeyS100SDgTPA9pO5GS4_jZw.SwKpGLZ_f2-q-Gw&amp;#34;&lt;/span&gt;}
+
+token &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; webhook_response[&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;encrypted_body&amp;#39;&lt;/span&gt;]
+
+&lt;span style=&#34;color:#ff79c6&#34;&gt;with&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;open&lt;/span&gt;(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;private-key.pem&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;rb&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#ff79c6&#34;&gt;as&lt;/span&gt; pemfile:
+    jwk_private_key &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; jwk&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;JWK&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;from_pem(pemfile&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;read())
+
+jwetoken &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; jwe&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;JWE()
+jwetoken&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;deserialize(token)
+jwetoken&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;decrypt(jwk_private_key)
+payload &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; jwetoken&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;payload&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;decode(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;utf-8&amp;#39;&lt;/span&gt;)
+
+jwt_decoded &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; jwt&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;decode(payload, options&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;{&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;verify_signature&amp;#34;&lt;/span&gt;: False})
+jwt_parsed &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; json_encode(jwt_decoded)
+
+subprocess&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;run(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;pbcopy&amp;#39;&lt;/span&gt;, universal_newlines&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;True, &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;input&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;jwt_parsed)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;h5 id=&#34;2---verificar-a-assinatura-do-token&#34;&gt;&lt;strong&gt;2 - Verificar a assinatura do token&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;Até este momento deciframos apenas um conteúdo que pode ser gerado por qualquer um que tenha acesso a chave pública da aplicação.&lt;/p&gt;
+&lt;p&gt;Nós utilizamos a assinatura do conteúdo em token JWS (JSON Web Signing) compacto como uma outra camada de verificação de segurança no conteúdo do webhook.&lt;/p&gt;
+&lt;p&gt;Esse token possui em seus &amp;ldquo;claims&amp;rdquo; (alegações) o conteúdo do webhook. Para garantir que ele foi gerado pela Stone, você deve validar a assinatura dele consultando nossas chaves públicas de assinatura.&lt;/p&gt;
+&lt;p&gt;As chaves públicas da Stone estão publicadas &lt;a href=&#34;https://sandbox-api.openbank.stone.com.br/api/v1/discovery/keys&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Repare que cada chave possui um &lt;em&gt;kid&lt;/em&gt; (key ID) e um &lt;em&gt;use&lt;/em&gt; (sig ou enc). O token JWS possui um header que diz qual é o id da chave usada para assiná-lo. Assim, é necessário, em primeiro lugar, garantir que o token foi assinado com uma chave que está publicada pela Stone.&lt;/p&gt;
+&lt;p&gt;Para não ter que buscar a nossa chave pública a cada validação de assinatura, você pode salvar nossa chave do seu lado (por exemplo, através de um cache), de forma que caso aconteça algum erro na validação você volte a consultar o nosso serviço para buscar a chave pública mais atual. Assim você desonera  sua aplicação sem perder a resiliência a mudanças de chave do nosso lado.&lt;/p&gt;
+&lt;p&gt;Veja &lt;a href=&#34;https://hexdocs.pm/joken_jwks/JokenJwks.DefaultStrategyTemplate.html#content&#34;&gt;aqui&lt;/a&gt; as melhores práticas para fazer essa implementação.&lt;/p&gt;
+&lt;p&gt;O algoritmo que usamos será &lt;em&gt;sempre RS256&lt;/em&gt;. Há uma lista de bibliotecas que tratam de assinatura de token em &lt;a href=&#34;https://jwt.io/&#34;&gt;jwt.io&lt;/a&gt;.&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;segurança&#34;&gt;&lt;strong&gt;Segurança&lt;/strong&gt;&lt;/h5&gt;
+&lt;br&gt;
+&lt;p&gt;É importante seguir os dois passos aqui: tanto decifrar quanto verificar a assinatura. Isso irá garantir que não apenas geramos algo que não pode ser lido por alguém que &lt;em&gt;não possui&lt;/em&gt; a chave pública quanto que nosso conteúdo foi assinado pela Stone.&lt;/p&gt;
+&lt;p&gt;Também aconselhamos cuidado na configuração do cliente que irá consultar as nossas chaves. Certifique-se que ele não está vulnerável a servidores intermediários propositalmente mal configurados. Um exemplo comum é um servidor configurado para protocolos conhecidamente falhos.&lt;/p&gt;
+&lt;p&gt;Sempre que em dúvida, consulte nossa API com os IDs dos dados no conteúdo do webhook.&lt;/p&gt;
+&lt;p&gt;Mais informações sobre JavaScript Object Signing and Encryption, como JWTs, JWEs, JWSs, &lt;a href=&#34;https://www.ca.com/pt/blog-latam/os-beneficios-de-jwtjwsjwe-no-designs-de-apis.html&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;webhooks-idempotentes&#34;&gt;&lt;strong&gt;Webhooks idempotentes&lt;/strong&gt;&lt;/h5&gt;
+&lt;br&gt;
+&lt;p&gt;No geral um evento, quando recepcionado com sucesso, é enviado apenas uma vez pela Stone, mas é possível que em algum cenário extraordinário um webhook acabe sendo enviado mais de uma vez e por isso desenvolvemos uma lógica de idempotência de eventos.&lt;/p&gt;
+&lt;p&gt;Todo webhook gerado pela Stone leva consigo uma chave de idempotência enviada no campo &lt;code&gt;x-stone-webhook-event-id&lt;/code&gt; do header.&lt;/p&gt;
+&lt;p&gt;É importante que essa chave seja sempre salva pela sua aplicação e que a cada novo evento você verifique a idempotência desse evento evitando processar duas vezes um mesmo evento.&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;endpoint-para-verificar-webhooks-enviados&#34;&gt;&lt;strong&gt;Endpoint para verificar webhooks enviados&lt;/strong&gt;&lt;/h5&gt;
+&lt;br&gt;
+&lt;p&gt;Caso tenha dificuldade para identificar algum webhook enviado pela Stone na URI indicada para receber webhooks, disponibilizamos um endpoint que traz todos os webhooks já enviados para a sua aplicação.&lt;/p&gt;
+&lt;p&gt;Para acessar, basta fazer o comando abaixo, lembrando que no &lt;em&gt;header&lt;/em&gt; deve ser enviado o Bearer token no campo &lt;code&gt;authorization&lt;/code&gt; e o client_id é o id da sua aplicação, passado pelo time de integração.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/applications/application:{{client_id}}/webhooks
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Exemplo de Response&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;    {
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;client_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;application:de4d224b-3f79-4b4d-8ff5-c1bc475830e5&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-06-02T19:40:24Z&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;data&amp;#34;&lt;/span&gt;: {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;env&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sandbox&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;event_happened_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-06-02T19:40:23Z&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;event_notified_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-06-02T19:40:24Z&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;event_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;cash_out_internal_transfer_finished&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;7919b78a-630e-4ad4-bb12-91eec729175d&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_data&amp;#34;&lt;/span&gt;: {
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;6745bdf0-7647-40cd-8666-d78bb15fbd38&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;4000&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;approval_expired_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;approved_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-06-02T19:40:23Z&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;approved_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user:24017c13-1f9d-44e4-b4af-007f695cece3&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;batch_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cancelled_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cancelled_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-06-02T19:40:23Z&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user:24017c13-1f9d-44e4-b4af-007f695cece3&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;failed_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;failure_reason_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;failure_reason_description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fee&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;finished_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-06-02T19:40:23Z&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;7919b78a-630e-4ad4-bb12-91eec729175d&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;rejected_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;rejected_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;scheduled_to&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;settled_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-06-02T19:40:23Z&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;FINISHED&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target&amp;#34;&lt;/span&gt;: {
+                    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account&amp;#34;&lt;/span&gt;: {
+                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;55382931&amp;#34;&lt;/span&gt;
+                    },
+                    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;entity&amp;#34;&lt;/span&gt;: {
+                        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+                    }
+                },
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;55382931&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_account_owner_name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+            },
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_detail_uri&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers/7919b78a-630e-4ad4-bb12-91eec729175d&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;7919b78a-630e-4ad4-bb12-91eec729175d&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_statement_uri&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;internal_transfer_finished&amp;#34;&lt;/span&gt;
+        }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: SDK</title>
+      <link>https://stone-co.github.io/docs/guias/sdk/</link>
+      <pubDate>Mon, 28 Jun 2021 09:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/guias/sdk/</guid>
+      <description>
+        
+        
+        &lt;br&gt;
 
       </description>
     </item>

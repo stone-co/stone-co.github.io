@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Stone OpenBank – Boletos</title>
+    <title>Stone OpenBank – BOLETOS</title>
     <link>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/</link>
-    <description>Recent content in Boletos on Stone OpenBank</description>
+    <description>Recent content in BOLETOS on Stone OpenBank</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 13 May 2020 18:00:00 -0300</lastBuildDate>
     
@@ -48,7 +48,7 @@
 &lt;h5 id=&#34;--cobrança&#34;&gt;- Cobrança&lt;/h5&gt;
 &lt;hr&gt;
 &lt;br&gt;
-&lt;p&gt;Tem como objetivo cobrar um terceiro. Tem caráter oficial de cobrança. Existem tipos de cobrança específicos de acordo com atividade que está orginando a cobrança. Abaixo veremos a lista dos tipos disponíveis. &lt;br&gt;
+&lt;p&gt;Tem como objetivo cobrar um terceiro. Tem caráter oficial de cobrança. Existem tipos de cobrança específicos de acordo com atividade que está originando a cobrança. Abaixo veremos a lista dos tipos disponíveis. &lt;br&gt;
 Importante ressaltar que pode haver restrição de habilitação de um determinado tipo para uma conta de acordo com as atividades listadas para esse CNPJ em seu registro ofical (CNAE).&lt;/p&gt;
 &lt;p&gt;Tipo (type):&lt;/p&gt;
 &lt;ul&gt;
@@ -66,7 +66,7 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;Segue abaixo os status possíveis de um &lt;strong&gt;boleto gerado&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/status/status_do_boleto.PNG&#34; alt=&#34;status_boleto&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/overview-emissao-de-boletos/status.png&#34; alt=&#34;status_boleto&#34;&gt;&lt;/p&gt;
 &lt;br&gt;
 &lt;h4 id=&#34;glossário&#34;&gt;Glossário&lt;/h4&gt;
 &lt;hr&gt;
@@ -141,7 +141,7 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;beneficiary&lt;/td&gt;
-&lt;td&gt;Objeto com os dados do beneficiário. Veja os campos desse &lt;code&gt;object&lt;/code&gt; &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/campos/#campos-do-objeto-beneficiary&#34;&gt;abaixo&lt;/a&gt;.&lt;/td&gt;
+&lt;td&gt;Objeto com os dados do beneficiário. Veja os campos desse &lt;code&gt;object&lt;/code&gt; &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/overview-emissao-de-boletos/#campos-do-objeto---beneficiary&#34;&gt;abaixo&lt;/a&gt;.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;- - - - - - - - - - -&lt;/td&gt;
 &lt;/tr&gt;
@@ -159,13 +159,13 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;customer&lt;/td&gt;
-&lt;td&gt;Objeto com os dados do cliente que será informa como pagador no ato de registro do boleto. Veja os campos desse &lt;code&gt;object&lt;/code&gt; &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/campos/#campos-do-objeto-customer&#34;&gt;abaixo&lt;/a&gt;.&lt;/td&gt;
+&lt;td&gt;Objeto com os dados do cliente que será informa como pagador no ato de registro do boleto. Veja os campos desse &lt;code&gt;object&lt;/code&gt; &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/overview-emissao-de-boletos/#campos-do-objeto---customer&#34;&gt;abaixo&lt;/a&gt;.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;- - - - - - - - - - -&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;discount&lt;/td&gt;
-&lt;td&gt;Objeto com os dados referentes ao desconto. Veja os campos desse &lt;code&gt;object&lt;/code&gt; &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/campos/#campos-do-objeto-discount&#34;&gt;abaixo&lt;/a&gt;.&lt;/td&gt;
+&lt;td&gt;Objeto com os dados referentes ao desconto. Veja os campos desse &lt;code&gt;object&lt;/code&gt; &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/overview-emissao-de-boletos/#campos-do-objeto---discount&#34;&gt;abaixo&lt;/a&gt;.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;- - - - - - - - - - -&lt;/td&gt;
 &lt;/tr&gt;
@@ -183,13 +183,13 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;fee_metadata&lt;/td&gt;
-&lt;td&gt;Objeto que identifica detalhes sobre a aplicação da taxa. Veja os campos desse &lt;code&gt;object&lt;/code&gt; &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/campos/#campos-do-objeto-fee_metadata&#34;&gt;abaixo&lt;/a&gt;.&lt;/td&gt;
+&lt;td&gt;Objeto que identifica detalhes sobre a aplicação da taxa. Veja os campos desse &lt;code&gt;object&lt;/code&gt; &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/overview-emissao-de-boletos/#campos-do-objeto---fee_metadata&#34;&gt;abaixo&lt;/a&gt;.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;- - - - - - - - - - -&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;fine&lt;/td&gt;
-&lt;td&gt;Objeto com os dados referentes a multa. Veja os campos desse &lt;code&gt;object&lt;/code&gt; &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/campos/#campos-do-objeto-fine&#34;&gt;abaixo&lt;/a&gt;.&lt;/td&gt;
+&lt;td&gt;Objeto com os dados referentes a multa. Veja os campos desse &lt;code&gt;object&lt;/code&gt; &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/overview-emissao-de-boletos/#campos-do-objeto---fine&#34;&gt;abaixo&lt;/a&gt;.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;- - - - - - - - - - -&lt;/td&gt;
 &lt;/tr&gt;
@@ -201,7 +201,7 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;interest&lt;/td&gt;
-&lt;td&gt;Objeto com os dados referentes aos juros. Veja os campos desse &lt;code&gt;object&lt;/code&gt; &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/campos/#campos-do-objeto-interest&#34;&gt;abaixo&lt;/a&gt;.&lt;/td&gt;
+&lt;td&gt;Objeto com os dados referentes aos juros. Veja os campos desse &lt;code&gt;object&lt;/code&gt; &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/overview-emissao-de-boletos/#campos-do-objeto---interest&#34;&gt;abaixo&lt;/a&gt;.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;- - - - - - - - - - -&lt;/td&gt;
 &lt;/tr&gt;
@@ -231,7 +231,7 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;receiver&lt;/td&gt;
-&lt;td&gt;Objeto com os dados do sacador avalista. Veja os campos desse &lt;code&gt;object&lt;/code&gt; &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/campos/#campos-do-objeto-receiver&#34;&gt;abaixo&lt;/a&gt;.&lt;/td&gt;
+&lt;td&gt;Objeto com os dados do sacador avalista. Veja os campos desse &lt;code&gt;object&lt;/code&gt; &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/overview-emissao-de-boletos/#campos-do-objeto---receiver&#34;&gt;abaixo&lt;/a&gt;.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;- - - - - - - - - - -&lt;/td&gt;
 &lt;/tr&gt;
