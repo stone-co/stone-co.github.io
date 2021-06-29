@@ -3474,27 +3474,27 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left"><a href="/docs/guias/webhooks/barcode_payment_invoice_created.json/?target=_blank">barcode_payment_invoice_created</a></td>
+<td style="text-align:left"><a href="barcode_payment_invoice_created.json">barcode_payment_invoice_created</a></td>
 <td style="text-align:left">Representa a criação/emissão de um boleto.</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="/docs/guias/webhooks/barcode_payment_invoice_registered.json">barcode_payment_invoice_registered</a></td>
+<td style="text-align:left"><a href="barcode_payment_invoice_registered.json">barcode_payment_invoice_registered</a></td>
 <td style="text-align:left">Representa o registro de um boleto.</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="/docs/guias/webhooks/barcode_payment_invoice_payment_promissed.json">barcode_payment_invoice_payment_promissed</a></td>
+<td style="text-align:left"><a href="barcode_payment_invoice_payment_promissed.json">barcode_payment_invoice_payment_promissed</a></td>
 <td style="text-align:left">Representa que o pagamento do boleto foi acolhido em alguma instituição.</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="/docs/guias/webhooks/barcode_payment_invoice_settled.json">barcode_payment_invoice_settled</a></td>
+<td style="text-align:left"><a href="barcode_payment_invoice_settled.json">barcode_payment_invoice_settled</a></td>
 <td style="text-align:left">Representa que pagamento do boleto foi confirmado.</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="/docs/guias/webhooks/barcode_payment_invoice_expired.json">barcode_payment_invoice_expired</a></td>
+<td style="text-align:left"><a href="barcode_payment_invoice_expired.json">barcode_payment_invoice_expired</a></td>
 <td style="text-align:left">Representa que o boleto está expirado.</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="/docs/guias/webhooks/cash_in_barcode_payment.json">cash_in_barcode_payment</a></td>
+<td style="text-align:left"><a href="cash_in_barcode_payment.json">cash_in_barcode_payment</a></td>
 <td style="text-align:left">Representa a entrada do valor do boleto na conta do beneficiário.</td>
 </tr>
 </tbody>
@@ -3682,91 +3682,91 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 </thead>
 <tbody>
 <tr>
-<td><a href="/docs/guias/WEBHOOKS/pix_json/pix.entries.key_created.json">pix_entries_key_created</a></td>
+<td><a href="pix_json/pix.entries.key_created.json">pix_entries_key_created</a></td>
 <td>Representa a criação de uma chave Pix.</td>
 </tr>
 <tr>
-<td><a href="/docs/guias/WEBHOOKS/pix_json/pix.entries.deleted.json">pix_entries_deleted</a></td>
+<td><a href="pix_json/pix.entries.deleted.json">pix_entries_deleted</a></td>
 <td>Representa a deleção de uma chave Pix.</td>
 </tr>
 <tr>
-<td><a href="/docs/guias/WEBHOOKS/pix_json/pix.entries.failed.json">pix_entries_failed</a></td>
+<td><a href="pix_json/pix.entries.failed.json">pix_entries_failed</a></td>
 <td>Representa a falha na criação de uma chave Pix.</td>
 </tr>
 <tr>
-<td><a href="/docs/guias/WEBHOOKS/pix_json/pix.entries.claims.waiting_resolution.json">pix_entries_claims_waiting_resolution</a></td>
+<td><a href="pix_json/pix.entries.claims.waiting_resolution.json">pix_entries_claims_waiting_resolution</a></td>
 <td>Representa que estamos aguardando a resposta da cliente sobre a claim (confirmação ou cancelamento).</td>
 </tr>
 <tr>
-<td><a href="/docs/guias/WEBHOOKS/pix_json/pix.entries.claims.confirmed.json">pix_entries_claims_confirmed</a></td>
+<td><a href="pix_json/pix.entries.claims.confirmed.json">pix_entries_claims_confirmed</a></td>
 <td>Representa que a cliente confirmou a claim, passando a chave para outra instituição.</td>
 </tr>
 <tr>
-<td><a href="/docs/guias/WEBHOOKS/pix_json/pix.entries.claims.automatically_confirmed_waiting_resolution.json">pix_entries_claims_automatically_confirmed_waiting_resolution</a></td>
+<td><a href="pix_json/pix.entries.claims.automatically_confirmed_waiting_resolution.json">pix_entries_claims_automatically_confirmed_waiting_resolution</a></td>
 <td>Representa que a reivindicação de posse foi automaticamente confirmada porque a cliente não respondeu no prazo de 7 dias corridos.</td>
 </tr>
 <tr>
-<td><a href="/docs/guias/WEBHOOKS/pix_json/pix.entries.claims.automatically_confirmed.json">pix_entries_claims_automatically_confirmed</a></td>
+<td><a href="pix_json/pix.entries.claims.automatically_confirmed.json">pix_entries_claims_automatically_confirmed</a></td>
 <td>Representa que foi realizada a confirmação da reivindicação de posse automaticamente, porque a cliente não respondeu dentro dos 14 dias de prazo. Aqui a reivindicação não pode ser mais cancelada.</td>
 </tr>
 <tr>
-<td><a href="/docs/guias/WEBHOOKS/pix_json/pix.entries.claims.cancelled.json">pix_entries_claims_cancelled</a></td>
+<td><a href="pix_json/pix.entries.claims.cancelled.json">pix_entries_claims_cancelled</a></td>
 <td>Representa cancelamento da solicitação da claim por parte da cliente, mantendo a chave cadastrada na conta original.</td>
 </tr>
 <tr>
-<td><a href="/docs/guias/WEBHOOKS/pix_json/pix.entries.claims.automatically_cancelled.json">pix_entries_claims_automatically_cancelled</a></td>
+<td><a href="pix_json/pix.entries.claims.automatically_cancelled.json">pix_entries_claims_automatically_cancelled</a></td>
 <td>Representa cancelamento automático da da solicitação de portabilidade, por falta de resposta da cliente nos 7 dias de prazo.</td>
 </tr>
 <tr>
-<td><a href="/docs/guias/WEBHOOKS/pix_json/pix_payment_invoice.json">pix_payment_invoice</a></td>
+<td><a href="pix_json/pix_payment_invoice.json">pix_payment_invoice</a></td>
 <td>Representa um QR Code dinâmico imediato.</td>
 </tr>
 <tr>
-<td><a href="/docs/guias/WEBHOOKS/pix_json/pix_payment_invoice_with_due_date.json">pix_payment_invoice_with_due_date</a></td>
+<td><a href="pix_json/pix_payment_invoice_with_due_date.json">pix_payment_invoice_with_due_date</a></td>
 <td>Representa um QR Code dinâmico com vencimento, multa, juros, desconto e abatimento.</td>
 </tr>
 <tr>
-<td><a href="/docs/guias/WEBHOOKS/pix_json/pix_invoice_payment_created.json">pix_invoice_payment_created</a></td>
+<td><a href="pix_json/pix_invoice_payment_created.json">pix_invoice_payment_created</a></td>
 <td>Representa a criação de um QR Code dinâmico.</td>
 </tr>
 <tr>
-<td><a href="/docs/guias/WEBHOOKS/pix_json/pix_invoice_payment_cancelled.json">pix_invoice_payment_cancelled</a></td>
+<td><a href="pix_json/pix_invoice_payment_cancelled.json">pix_invoice_payment_cancelled</a></td>
 <td>Representa o cancelamento de um QR Code dinâmico.</td>
 </tr>
 <tr>
-<td><a href="/docs/guias/WEBHOOKS/pix_json/pix_invoice_payment_paid.json">pix_invoice_payment_paid</a></td>
+<td><a href="pix_json/pix_invoice_payment_paid.json">pix_invoice_payment_paid</a></td>
 <td>Representa o pagamento com sucesso de um QR Code dinâmico.</td>
 </tr>
 <tr>
-<td><a href="/docs/guias/WEBHOOKS/pix_json/inbound_pix_payment.json">inbound_pix_payment</a></td>
+<td><a href="pix_json/inbound_pix_payment.json">inbound_pix_payment</a></td>
 <td>Representa um cash-in de Pix.</td>
 </tr>
 <tr>
-<td><a href="/docs/guias/WEBHOOKS/pix_json/pix_inbound_payment_received.json">pix_inbound_payment_received</a></td>
+<td><a href="pix_json/pix_inbound_payment_received.json">pix_inbound_payment_received</a></td>
 <td>Representa o recebimento de um cash-in de Pix, podendo estar associada a um QR Code estatático, dinâmico imediato ou dinâmico com vencimento. Essa associação será representada pela presença de um dos seguintes atributos dentro do target_data: <br>- <code>pix_payment_invoice</code> : Invoice dinâmica imediata; <br>- <code>pix_payment_static_invoice</code> : Invoice estática; <br>- <code>pix_payment_invoice_with_due_date</code> : Invoice dinâmica com vencimento, multa, juros, desconto e abatimento.</td>
 </tr>
 <tr>
-<td><a href="/docs/guias/WEBHOOKS/pix_json/pix_refund_payment.json">pix_refund_payment</a></td>
+<td><a href="pix_json/pix_refund_payment.json">pix_refund_payment</a></td>
 <td>Representa uma devolução (cash-out) associada a um inbound payment (cash-in).</td>
 </tr>
 <tr>
-<td><a href="/docs/guias/WEBHOOKS/pix_json/pix.inbound_payment.refund.created.json">pix_inbound_payment_refund_created</a></td>
+<td><a href="pix_json/pix.inbound_payment.refund.created.json">pix_inbound_payment_refund_created</a></td>
 <td>Representa a criação de uma devolução associada a uma transação Pix. Lembrando que estamos falando da devolução (cash-out) de um cash-in.</td>
 </tr>
 <tr>
-<td><a href="/docs/guias/WEBHOOKS/pix_json/pix.inbound_payment.refund.failed.json">pix_inbound_payment_refund_failed</a></td>
+<td><a href="pix_json/pix.inbound_payment.refund.failed.json">pix_inbound_payment_refund_failed</a></td>
 <td>Representa que houve falha na criação da devolução (cash-out) de um cash-in de Pix.</td>
 </tr>
 <tr>
-<td><a href="/docs/guias/WEBHOOKS/pix_json/pix.inbound_payment.refund.money_reserved.json">pix_inbound_payment_refund_money_reserved</a></td>
+<td><a href="pix_json/pix.inbound_payment.refund.money_reserved.json">pix_inbound_payment_refund_money_reserved</a></td>
 <td>Representa a reserva de dinheiro (impacto no saldo da cliente) após à criação com sucesso de uma devolução (cash-out) de um cash-in de Pix.</td>
 </tr>
 <tr>
-<td><a href="/docs/guias/WEBHOOKS/pix_json/pix.inbound_payment.refund.settled.json">pix_inbound_payment_refund_settled</a></td>
+<td><a href="pix_json/pix.inbound_payment.refund.settled.json">pix_inbound_payment_refund_settled</a></td>
 <td>Representa que a devolução (cash-out) de um cash-in de Pix foi realizada com sucesso.</td>
 </tr>
 <tr>
-<td><a href="/docs/guias/WEBHOOKS/pix_json/pix.inbound_payment.refund.reversed.json">pix_inbound_payment_refund_reversed</a></td>
+<td><a href="pix_json/pix.inbound_payment.refund.reversed.json">pix_inbound_payment_refund_reversed</a></td>
 <td>Representa que a devolução (cash-out) de um cash-in de Pix foi rejeitada.</td>
 </tr>
 <tr>
@@ -3803,7 +3803,7 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 </thead>
 <tbody>
 <tr>
-<td><a href="/docs/guias/webhooks/exemplo_consent_request.json">consent_request</a></td>
+<td><a href="exemplo_consent_request.json">consent_request</a></td>
 <td>Representa a confirmação do pedido de consentimento por parte do user.</td>
 </tr>
 </tbody>
@@ -3820,15 +3820,15 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 </thead>
 <tbody>
 <tr>
-<td><a href="/docs/guias/webhooks/A1.json">sign_up_created</a></td>
+<td><a href="A1.json">sign_up_created</a></td>
 <td>Representa o pedido de abertura de conta.</td>
 </tr>
 <tr>
-<td><a href="/docs/guias/webhooks/A2.json">sign_up_status_updated</a></td>
+<td><a href="A2.json">sign_up_status_updated</a></td>
 <td>Representa quando há uma atualização dos dados na abertura da conta.</td>
 </tr>
 <tr>
-<td><a href="/docs/guias/webhooks/A3.json">sign_up_resource_details_updated</a></td>
+<td><a href="A3.json">sign_up_resource_details_updated</a></td>
 <td>Representa o envio de diversos webhooks de acordo com a evolução da abertura de conta. Ex: <code>account_created</code>, <code>user_email_verified</code>, &hellip;.</td>
 </tr>
 </tbody>
@@ -3845,15 +3845,15 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 </thead>
 <tbody>
 <tr>
-<td><a href="/docs/guias/webhooks/lp_order_created.json">order_created</a></td>
-<td>Representa a criação do link de pagamento. <br>Também é enviado um <a href="/docs/guias/webhooks/lp_order_created_status_pending.json">segundo webhook</a> deste tipo que representa que o pagador executou o pagamento. <br>Neste caso, o campo <code>status</code> do webhook terá seu valor alterado para <code>pending</code>.</td>
+<td><a href="lp_order_created.json">order_created</a></td>
+<td>Representa a criação do link de pagamento. <br>Também é enviado um <a href="lp_order_created_status_pending.json">segundo webhook</a> deste tipo que representa que o pagador executou o pagamento. <br>Neste caso, o campo <code>status</code> do webhook terá seu valor alterado para <code>pending</code>.</td>
 </tr>
 <tr>
-<td><a href="/docs/guias/webhooks/lp_order_paid.json">order_paid</a></td>
+<td><a href="lp_order_paid.json">order_paid</a></td>
 <td>Representa o pagamento em si do link de pagamento.</td>
 </tr>
 <tr>
-<td><a href="/docs/guias/webhooks/lp_order_closed.json">order_closed</a></td>
+<td><a href="lp_order_closed.json">order_closed</a></td>
 <td>Representa a finalização do link de pagamento.</td>
 </tr>
 </tbody>
@@ -3882,7 +3882,7 @@ x-stone-webhook-event-type: <span style="color:#f1fa8c">&#34;cash_out_internal_t
 </tr>
 <tr>
 <td>event_type</td>
-<td>Especifica qual tipo de evento disparou a notificação. Veja os valores possíveis <a href="/docs/guias/webhooks/#os-eventos-que-geram-notifica%C3%A7%C3%B5es-s%C3%A3o">aqui</a>.</td>
+<td>Especifica qual tipo de evento disparou a notificação. Veja os valores possíveis <a href="#os-eventos-que-geram-notifica%C3%A7%C3%B5es-s%C3%A3o">aqui</a>.</td>
 </tr>
 <tr>
 <td>id</td>

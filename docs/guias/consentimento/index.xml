@@ -46,10 +46,10 @@
 &lt;h6 id=&#34;usuário-acessa-o-link-e-dá-consentimento-ao-parceiro&#34;&gt;&lt;strong&gt;Usuário acessa o link e dá consentimento ao parceiro&lt;/strong&gt;&lt;/h6&gt;
 &lt;p&gt;Ao acessar o link, o usuário será direcionado para um página da Stone em que irá escolher a quais contas de pagamento ele deseja conceder acesso ao parceiro. Ele também poderá verificar a quais escopos o parceiro passará a ter acesso após dar consentimento. Uma vez dado o consentimento, o usuário deverá ser direcionado de volta a uma página do parceiro.&lt;/p&gt;
 &lt;p&gt;Veja abaixo um exemplo da tela de pedido de consentimento que será disponibilizada ao cliente:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/docs/guias/CONSENTIMENTO/Fluxo-de-consentimento/solicitacao-de-consentimento.png&#34; alt=&#34;solicitacao-consentimento&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;solicitacao-de-consentimento.png&#34; alt=&#34;solicitacao-consentimento&#34;&gt;&lt;/p&gt;
 &lt;br&gt;
 Veja abaixo um exemplo de permissão concedida:
-&lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/docs/guias/CONSENTIMENTO/Fluxo-de-consentimento/consentimento-aprovado.png&#34; alt=&#34;consentimento-aprovado&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;consentimento-aprovado.png&#34; alt=&#34;consentimento-aprovado&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;Ao clicar no botão &amp;ldquo;Ok, entendi&amp;rdquo; o usuário será redirecionado para uma página da aplicação parceira, cujo endereço foi definido no &lt;a href=&#34;https://stone-co.github.io/docs/guias/token-de-acesso/cadastro-da-aplicacao/&#34;&gt;Cadastro da Aplicação&lt;/a&gt;.&lt;/p&gt;
 &lt;br&gt;
 &lt;h6 id=&#34;usuário-acessa-o-link-e-não-dá-consentimento-ao-parceiro&#34;&gt;&lt;strong&gt;Usuário acessa o link e não dá consentimento ao parceiro&lt;/strong&gt;&lt;/h6&gt;
