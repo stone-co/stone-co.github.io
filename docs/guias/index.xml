@@ -23,7 +23,68 @@
       <description>
         
         
-        
+        &lt;br&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;Seja bem vindo à documentação de Open Banking da Stone!&lt;/strong&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;O Open Banking, ou sistema financeiro aberto, é a possibilidade de clientes de produtos e serviços financeiros permitirem o compartilhamento de suas informações entre diferentes instituições autorizadas pelo Banco Central e a movimentação de suas contas bancárias a partir de diferentes plataformas e não apenas pelo aplicativo ou site do banco, de forma segura, ágil e conveniente.&lt;/p&gt;
+&lt;p&gt;Como na Stone somos fiéis defensores da competição e temos o cliente como nossa razão de existir, acreditamos na revolução proporcionada por esse sistema e construímos a primeira API de Open Banking plugada diretamente no coração do STR. Acreditamos que nosso produto poderá gerar novos modelos de negócios, dar maior controle e transparência, além de permitir automatizações e ganho de eficiência para as empresas.&lt;/p&gt;
+&lt;p&gt;A partir da integração e uso da API Stone Open Banking, você poderá movimentar a sua própria conta Stone por meio de uma API RESTful  com todas as funcionalidades de cash in e cash out. Caso você tenha uma plataforma, você também poderá solicitar acesso a contas terceiras para disponibilizar funcionalidades financeiras e agregar ainda mais valor ao seu produto. É claro que para acessar e iniciar transações em contas terceiras, será preciso obter o Consentimento do usuário dono da conta, um conceito essencial para o bom funcionamento do Open Banking.&lt;/p&gt;
+&lt;p&gt;Nesta documentação você pode explorar todos os produtos e funcionalidades que a nossa API oferece! Além disso, como todas as chamadas em nossa API deverão ser autenticadas para identificação  do sujeito de cada ação, vamos detalhar como funciona o acesso via token.
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Para iniciar, confira um passo a passo da nossa integração abaixo aqui no &lt;a href=&#34;https://stone-co.github.io/docs/guias/stone-open-banking/#quickstart&#34;&gt;Quickstart&lt;/a&gt;!&lt;/p&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;quickstart&#34;&gt;Quickstart&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h5 id=&#34;contato-comercial&#34;&gt;Contato Comercial&lt;/h5&gt;
+&lt;p&gt;Para realizar chamadas em nossa API, primeiro precisamos que você preencha este &lt;a href=&#34;https://app.pipefy.com/public/form/Qz4ptt_W/?origem_do_lead=Documenta%C3%A7%C3%A3o&#34; target=&#34;_blank&#34;&gt; formulário &lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Nosso time de parcerias entrará em contato em até 24 horas para entender seu modelo de negócio e te apresentar a proposta mais adequada.&lt;/p&gt;
+&lt;p&gt;Você também receberá um contrato para formalização da parceria.&lt;/p&gt;
+&lt;p&gt;Por enquanto, ainda não estamos realizando onboard de parceiros em autosserviço, mas queremos liberar isso em breve!
+&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;h5 id=&#34;testes-em-sandbox&#34;&gt;Testes em Sandbox&lt;/h5&gt;
+&lt;p&gt;Após contato com nosso time, você receberá o formulário para testes em  ambiente de Sandbox, que deverá ser preenchido contendo a sua &lt;a href=&#34;https://stone-co.github.io/docs/guias/token-de-acesso/#gerar-chaves-de-acesso&#34;&gt;Chave Pública&lt;/a&gt;.
+Quando recebermos essa chave, faremos o &lt;a href=&#34;https://stone-co.github.io/docs/guias/token-de-acesso/#cadastro-da-aplicação&#34;&gt;Cadastro da sua Aplicação&lt;/a&gt; e te retornaremos um ClientID, o seu identificador único aqui na Stone.&lt;/p&gt;
+&lt;p&gt;Com o ClientID em mãos, você já pode fazer o processo de &lt;a href=&#34;https://stone-co.github.io/docs/guias/token-de-acesso/#autenticação&#34;&gt;Autenticação&lt;/a&gt;, que terá como resultado a liberação do seu Access Token, ou seu &lt;a href=&#34;https://stone-co.github.io/docs/guias/token-de-acesso/#overview&#34;&gt;Token de Acesso&lt;/a&gt; e realizar as &lt;a href=&#34;https://stone-co.github.io/docs/guias/token-de-acesso/#chamada-autenticada&#34;&gt;chamadas autenticadas&lt;/a&gt; em sandbox.&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;Pronto!&lt;/strong&gt; Agora você já pode começar os testes e realizar ações em nossa API - em ambiente de Sandbox.
+&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;h5 id=&#34;homologação&#34;&gt;Homologação&lt;/h5&gt;
+&lt;p&gt;Assim que os testes em Sandbox forem finalizados, vamos te guiar no processo de Homologação.&lt;/p&gt;
+&lt;p&gt;Esse processo consiste em executar todas as ações que a sua Aplicação tem permissão para fazer, numa sequência definida e com o acompanhamento e registro pela equipe da Stone.&lt;/p&gt;
+&lt;p&gt;O objetivo é garantir que tudo esteja funcionando como esperado e que você tenha acesso a todos os recursos necessários.
+&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;h5 id=&#34;produção&#34;&gt;Produção&lt;/h5&gt;
+&lt;p&gt;Finalmente, para integrar em Ambiente de Produção você vai nos enviar uma nova Chave Pública - iremos solicitar em um Formulário para Virada em Produção - para que a gente gere o seu ClientID de Produção. Você vai realizar as mesmas etapas que já fez para obtenção do Access Token em sandbox, que permitirá a realização de &lt;a href=&#34;https://stone-co.github.io/docs/guias/token-de-acesso/#chamada-autenticada&#34;&gt;Chamadas Autenticadas&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Caso você tenha uma plataforma, ERP ou outro sistema e deseje realizar ações em uma conta de outro usuário (um cliente seu, por exemplo), você deverá pedir o &lt;a href=&#34;https://stone-co.github.io/docs/guias/consentimento/&#34;&gt;Consentimento&lt;/a&gt; do mesmo para realização das chamadas. Caso seja para sua própria conta, pode desconsiderar esse processo, mas lembre-se de que você precisará &lt;a href=&#34;https://stone-co.github.io/docs/guias/conta-de-pagamento/#abertura-de-conta&#34;&gt;abrir uma Conta Stone&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Atenção!&lt;/strong&gt; Ressaltamos que os dois ambientes disponíveis são completamente separados, ou seja, usuários criados em ambiente de Sandbox não existem em Produção, e vice-versa. Vale lembrar que os ambientes, em termos de funcionalidades, são exatamente iguais.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Importante!&lt;/strong&gt; O acesso ao ambiente de Produção só será liberado após testes em Sandbox realizados e roteiro de Homologação validado.&lt;/p&gt;
+&lt;p&gt;Confira abaixo as URLs para acesso aos ambientes:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Ambiente&lt;/th&gt;
+&lt;th&gt;Endpoint de acesso&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Sandbox&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://sandbox-api.openbank.stone.com.br&#34;&gt;https://sandbox-api.openbank.stone.com.br&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Produção&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://api.openbank.stone.com.br&#34;&gt;https://api.openbank.stone.com.br&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+
       </description>
     </item>
     
@@ -36,7 +97,206 @@
       <description>
         
         
-        
+        &lt;br&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;hr&gt;
+&lt;br&gt;
+Para realizar chamadas na API Stone Open Banking, será necessário ter em mãos um Token de Acesso, ou Access Token. 
+&lt;br&gt;O Token de Acesso gerado será no formato JWT e funcionará como uma chave de acesso para todas as requisições na API. 
+&lt;br&gt;
+&lt;br&gt;
+O JWT é um padrão (RFC-7519) de mercado que define como transmitir e armazenar objetos JSON de forma compacta e segura entre diferentes aplicações. Os dados nele contidos podem ser validados a qualquer momento pois o token é assinado digitalmente.
+&lt;br&gt;
+&lt;br&gt;
+Para receber esse Token de Acesso, será necessário que você gere um  JWT local, com suas partes em base64 já decodificadas e que deverá ser formado por três seções:
+
+
+&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
+
+
+    &lt;p&gt;Header: é um objeto JSON que define informações sobre o tipo do token (typ) - nesse caso JWT - e o algoritmo de criptografia usado em sua assinatura (alg) - no nosso caso usamos sempre o RS256.&lt;/p&gt;
+&lt;p&gt;Payload: é um objeto JSON com as Claims (informações /alegações) da entidade tratada. São as informações que o JWT carrega, tipicamente a data de expiração do token (&amp;ldquo;EXPiration date&amp;rdquo;), quem gerou aquele token (&amp;ldquo;ISSuer&amp;rdquo;), quando (&amp;ldquo;Instanciated AT&amp;rdquo;), quem deve consumi-lo (&amp;ldquo;AUDience&amp;rdquo;), e o que mais for necessário entre as partes — como por exemplo um ID de usuário. Para esta etapa, você precisará de um ClientID, ou seja, o identificador recebido após realização do &lt;a href=&#34;https://stone-co.github.io/docs/guias/token-de-acesso/#cadastro-da-aplica%C3%A7%C3%A3o&#34;&gt;Cadastro da sua Aplicação&lt;/a&gt; com a Stone. &lt;br&gt;Além disso, você deverá preencher os Claims conforme nosso processo de &lt;a href=&#34;https://stone-co.github.io/docs/guias/token-de-acesso/#autentica%C3%A7%C3%A3o&#34;&gt;Autenticação&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Signature: É a assinatura única de cada token que é gerada a partir de um algoritmo de criptografia e tem seu corpo com base no header, no payload e na chave secreta definida pela aplicação. A assinatura é que vai garantir a integridade do token, se ele foi modificado e se realmente foi gerado por você. Para essa etapa, você já deve ter &lt;a href=&#34;https://stone-co.github.io/docs/guias/token-de-acesso/#gerar-chaves-de-acesso&#34;&gt;gerado um par de chaves&lt;/a&gt;.&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+&lt;p&gt;Após a geração do token local formado acima, é preciso fazer uma chamada para o nosso servidor de &lt;a href=&#34;https://stone-co.github.io/docs/guias/token-de-acesso/#autenticação&#34;&gt;Autenticação&lt;/a&gt; para que a gente faça a validação e retorne o Token de Acesso.&lt;/p&gt;
+&lt;p&gt;Provido com o Token de Acesso (token que já foi autenticado), você poderá acessar os endpoints da aplicação, que antes estavam restritos. Para realizar esse acesso, é preciso informar esse token no header Authorization da requisição e, por convenção, após a palavra Bearer.&lt;/p&gt;
+&lt;p&gt;Em seguida, vamos te guiar para realizar as seguintes etapas para obtenção do seu Token de Acesso:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/token-de-acesso/#gerar-chaves-de-acesso&#34;&gt;Gerar um par de chaves de acesso&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/token-de-acesso/#cadastro-da-aplicação&#34;&gt;Cadastrar  sua Aplicação&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/token-de-acesso/#autenticação&#34;&gt;Fazer a Autenticação&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/token-de-acesso/#chamada-autenticada&#34;&gt;Realizar Chamada Autenticada&lt;/a&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;gerar-chaves-de-acesso&#34;&gt;Gerar Chaves de acesso&lt;/h2&gt;
+&lt;hr&gt;
+&lt;br&gt;
+Para obter o seu Access Token, será necessário gerar um par de chaves RSA 4096. Você deverá assinar o JWT com a chave privada e nos enviar a chave pública no formato PEM e extensão .pub. &lt;br&gt;&lt;br&gt;
+&lt;p&gt;Embora existam vários métodos para criação de pares de chaves público e privada, a ferramenta OpenSSL de código aberto é uma das mais usadas, por isso, recomendamos o seu uso.&lt;/p&gt;
+&lt;p&gt;Em todas as plataformas disponíveis - Linux, MacOS e Windows, os comandos do OpenSSL são iguais: &lt;br&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;openssl genrsa -out mykey.pem 4096
+openssl rsa -in mykey.pem -pubout &amp;gt; mykey.pub
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Algumas dicas importantes:&lt;/p&gt;
+
+
+&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
+
+
+    &lt;p&gt;Linux: é uma ferramenta padrão que já vem instalada em quase todas as distribuições.&lt;/p&gt;
+&lt;p&gt;MacOS: há algumas formas de instalar, sendo o uso da ferramenta “brew” um dos mais simples.&lt;/p&gt;
+&lt;p&gt;Windows: É possível adquirí-la através da &lt;a href=&#34;https://slproweb.com/products/Win32OpenSSL.html&#34;&gt;Página de Download&lt;/a&gt;, e obter detalhes sobre o processo de instalação através do &lt;a href=&#34;https://tecadmin.net/install-openssl-on-windows/&#34;&gt;Tutorial de Instalação&lt;/a&gt;. Após a instalação, você deve acrescentar o caminho do programa na variável PATH e adicionar mais uma variável OPENSSL_CONF para o arquivo openssl.cfg, que normalmente vai ser &amp;ldquo;C:\Program Files\OpenSSL-Win64\bin\openssl.cfg&amp;rdquo;. Atente-se para ajustar o caminho para o local onde você instalou a ferramenta.&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+&lt;p&gt;Agora você já pode gerar o seu par de chaves. A chave pública será solicitada pelo nosso time durante a integração. Nós deixamos a chave pública guardada de forma segura e usaremos para validar o seu token num processo de criptografia assimétrica. &lt;br&gt;&lt;strong&gt;A chave que deverá ser enviada para Stone através do formulário de integração é sempre a chave pública (arquivo .pub).&lt;/strong&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Atenção!&lt;/strong&gt;&lt;br&gt;
+&lt;br&gt;Você nunca deve compartilhar a chave privada (arquivo.pem)! A chave privada deve ser armazenada de forma segura por você. &lt;br&gt;Em posse da sua chave privada, qualquer aplicação pode decodificar a assinatura e verificar se ela é válida. &lt;br&gt; Por isso destacamos a importância de manter essa informação em segredo.&lt;/p&gt;
+&lt;p&gt;Depois de obter seu par de chaves, você está pronto para iniciar conosco o &lt;a href=&#34;https://stone-co.github.io/docs/guias/token-de-acesso/#cadastro-da-aplicação&#34;&gt;Cadastro da Aplicação&lt;/a&gt;.&lt;/p&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;cadastro-da-aplicação&#34;&gt;Cadastro da Aplicação&lt;/h2&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;Qualquer parceiro ou cliente que deseje acessar e/ou movimentar a sua conta ou de terceiros pela nossa API precisará ter sua aplicação identificada. O identificador que representa a sua aplicação na Stone é chamado ClientID.&lt;/p&gt;
+&lt;p&gt;O ClientID será usado no processo de Autenticação, permitindo a identificação da origem dos requests feitos por API. Ou seja, ele será usado no seu Token de Acesso para realizar chamadas. O ClientID é gerado pela Stone, é único e não será alterado posteriormente.&lt;/p&gt;
+&lt;p&gt;Para obter um ClientID, você deverá entrar em &lt;a href=&#34;https://app.pipefy.com/public/form/Qz4ptt_W/?origem_do_lead=Documenta%C3%A7%C3%A3o&#34;&gt;contato&lt;/a&gt; com nosso time comercial. Em seguida, pediremos algumas informações para cadastrar sua aplicação. Neste formulário, será necessário enviar ao time da Stone:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;A sua &lt;a href=&#34;https://stone-co.github.io/docs/guias/token-de-acesso/#gerar-chaves-de-acesso&#34;&gt;chave pública&lt;/a&gt; - que será atrelada ao cadastro da sua aplicação&lt;/li&gt;
+&lt;li&gt;Uma URI de Redirect - precisamos de um local público para redirecionarmos o usuário final depois que ele aprovar ou reprovar o &lt;a href=&#34;https://stone-co.github.io/docs/guias/consentimento/#overview&#34;&gt;Consentimento&lt;/a&gt; de acesso à sua plataforma. Caso você esteja fazendo a integração para acesso à sua própria conta, pode desconsiderar essa etapa.&lt;/li&gt;
+&lt;li&gt;Uma URI de Webhooks - Precisamos de um local público para enviar mudanças de estado das contas para aplicações. Essa URI irá receber as informações das Webhooks para seu processamento.&lt;/li&gt;
+&lt;li&gt;Sua Linguagem de desenvolvimento - Nossa infraestrutura disponibiliza uma API RESTful com respostas em JSON.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Após o recebimento de todas as informações e cadastro da sua aplicação, enviaremos o seu ClientID por e-mail.&lt;/p&gt;
+&lt;p&gt;Atenção! O ClientID será enviado para o e-mail identificado no formulário como dono da aplicação. Caso você queira movimentar a sua própria conta, este e-mail deverá ser o mesmo cadastrado no momento de &lt;a href=&#34;https://stone-co.github.io/docs/guias/conta-de-pagamento/#abertura-de-conta&#34;&gt;abertura da Conta&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Pronto! Com seu ClientID em mãos, você já pode realizar o processo de &lt;a href=&#34;https://stone-co.github.io/docs/guias/token-de-acesso/#autenticação&#34;&gt;Autenticação&lt;/a&gt;.&lt;/p&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;autenticação&#34;&gt;Autenticação&lt;/h2&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;Para realizar o processo de Autenticação, você deverá enviar uma requisição ao nosso servidor contendo um JWT. O JWT enviado deverá conter as credenciais da sua aplicação (&lt;a href=&#34;https://stone-co.github.io/docs/guias/token-de-acesso/#cadastro-da-aplicação&#34;&gt;ClientID&lt;/a&gt; e deverá ser assinado com a chave privada. Ao receber o request, faremos o processo de validação do token enviado, pois já teremos recebido e armazenado a sua chave pública.&lt;/p&gt;
+&lt;p&gt;Uma vez que o token seja válido e tenha sido autenticado em nosso servidor, enviaremos como resposta o Access Token, ou seja, o seu Token de Acesso. &lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h5 id=&#34;padrões-utilizados-na-autenticação&#34;&gt;&lt;strong&gt;Padrões utilizados na Autenticação&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;Para facilitar ao máximo a integração com nossa API, escolhemos padrões estabelecidos no mercado para realização do processo de autenticação - descritos abaixo.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;OAuth 2.0&lt;/strong&gt; é um padrão de autorização que vai permitir ao usuário conceder acesso limitado a recursos na Conta Stone para Aplicações sem a necessidade de expor suas credenciais. Isso significa que o cliente não precisará compartilhar login e senha com ninguém.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;OpenID Connect&lt;/strong&gt; é uma camada de identidade construída em cima do OAuth 2.0 que permite a fácil verificação da identidade do usuário, bem como a capacidade de obter informações básicas de perfil do provedor de identidade - no nosso caso, a Conta Stone. &lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h5 id=&#34;especificações-do-jwt-para-realizar-autenticação&#34;&gt;&lt;strong&gt;Especificações do JWT para realizar autenticação&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;Primeiramente temos que gerar um token JWT local para conseguir se autenticar com sucesso. Esse token deverá ser preenchido com os claims com os seguintes valores:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Nome&lt;/th&gt;
+&lt;th&gt;Valor&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;exp&lt;/td&gt;
+&lt;td&gt;Tempo de expiração do token em segundos desde o início da era UNIX (1970). É UTC e não pode ser maior que 15 min. Ex: &amp;ldquo;exp&amp;rdquo;: 1542235633&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;nbf&lt;/td&gt;
+&lt;td&gt;&amp;ldquo;Not before&amp;rdquo;, ou seja, data a partir da qual o token é válido. É UTC. Ex: &amp;ldquo;nbf&amp;rdquo;: 1542235633&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;aud&lt;/td&gt;
+&lt;td&gt;Quem é a &amp;ldquo;audiência&amp;rdquo; deste token. No caso, é o nosso servidor de autenticação. &lt;br&gt;Para o ambiente de Sandbox será: &lt;a href=&#34;https://sandbox-accounts.openbank.stone.com.br/auth/realms/stone_bank&#34;&gt;https://sandbox-accounts.openbank.stone.com.br/auth/realms/stone_bank&lt;/a&gt; . &lt;br&gt;Para Produção será: &lt;a href=&#34;https://accounts.openbank.stone.com.br/auth/realms/stone_bank&#34;&gt;https://accounts.openbank.stone.com.br/auth/realms/stone_bank&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;realm&lt;/td&gt;
+&lt;td&gt;Qual é o &amp;ldquo;reino&amp;rdquo; das nossos usuários. Será sempre &amp;ldquo;stone_bank&amp;rdquo;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;sub&lt;/td&gt;
+&lt;td&gt;O sujeito referente ao token. Deve ser o ClientID enviado ao desenvolvedor pós-cadastro da Aplicação.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;clientId&lt;/td&gt;
+&lt;td&gt;Mesmo valor de sub, ou seja, o ClientID enviado ao desenvolvedor pós-cadastro da Aplicação.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;jti&lt;/td&gt;
+&lt;td&gt;Identificador único do token gerado. Normalmente se utiliza um UUID, mas não é obrigatório usar esse formato desde que a unicidade seja garantida. &lt;a href=&#34;https://tools.ietf.org/html/rfc7519#section-4.1.7&#34;&gt;Mais informações&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;iat&lt;/td&gt;
+&lt;td&gt;Momento em que o token foi gerado. É UTC. Ex. &amp;ldquo;iat&amp;rdquo;: 1542235633&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Após gerar esse token localmente, partiremos para receber o access_token e realizar as &lt;a href=&#34;https://stone-co.github.io/docs/guias/token-de-acesso/#chamada-autenticada&#34;&gt;chamadas autenticadas&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;O request para receber o access_token é realizado através do método POST com as informações abaixo:
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Header&lt;/strong&gt;&lt;br&gt;Na nossa API, usaremos sempre o algoritmo &lt;strong&gt;RS256&lt;/strong&gt;. Este algoritmo especificado nesta RFC usa criptografia “RSASSA-PKCS1-v1_5 com SHA-256”.
+Abaixo você encontrará um exemplo de header.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;alg&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;RS256&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;typ&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;JWT&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A chamada é com o método &lt;strong&gt;POST&lt;/strong&gt; com o header &lt;strong&gt;Content-Type&lt;/strong&gt; e &lt;strong&gt;User-Agent&lt;/strong&gt;. &lt;br&gt;O &lt;strong&gt;Content-Type&lt;/strong&gt; informado deve ser &lt;strong&gt;x-www-form-urlencoded&lt;/strong&gt; (o mesmo usado por submissão de formulários HTML) e o header &lt;strong&gt;User-Agent&lt;/strong&gt; deve estar habilitado com o nome da sua aplicação. Verifique o exemplo abaixo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;user-agent&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Nome da aplicação&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;content-type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;application/x-www-form-urlencoded&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;Payload&lt;/strong&gt; &lt;br&gt;É um objeto JSON que trará as informações que usaremos para verificar a autenticidade da chamada e retornar o Token de acesso. É necessário enviar o campo &lt;code&gt;ClientID&lt;/code&gt;, o campo &lt;code&gt;grant_type&lt;/code&gt; que será um campo de valor fixo (&lt;strong&gt;client_credentials&lt;/strong&gt;), o campo &lt;code&gt;client_assertion&lt;/code&gt; que será o token gerado localmente citado acima e por último o campo &lt;code&gt;client_assertion_type&lt;/code&gt; que também terá seu valor fixo (&lt;strong&gt;urn:ietf:params:oauth:client-assertion-type:jwt-bearer&lt;/strong&gt;), fechando o fluxo de client credentials para o servidor.&lt;/p&gt;
+&lt;br&gt;
+Este request deverá ser realizado nas seguintes URLs (por ambiente):
+&lt;br&gt;&lt;br&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Ambiente&lt;/th&gt;
+&lt;th&gt;Endpoint de Acesso&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Sandbox&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://sandbox-accounts.openbank.stone.com.br/auth/realms/stone_bank/protocol/openid-connect/token&#34;&gt;https://sandbox-accounts.openbank.stone.com.br/auth/realms/stone_bank/protocol/openid-connect/token&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Produção&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://accounts.openbank.stone.com.br/auth/realms/stone_bank/protocol/openid-connect/token&#34;&gt;https://accounts.openbank.stone.com.br/auth/realms/stone_bank/protocol/openid-connect/token&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Você deverá receber como resposta um JSON com uma chave, ou seja, o seu Token de Acesso, que permitirá que você faça &lt;a href=&#34;https://stone-co.github.io/docs/guias/token-de-acesso/#chamada-autenticada&#34;&gt;Chamadas Autenticadas&lt;/a&gt;.&lt;/p&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;chamada-autenticada&#34;&gt;Chamada autenticada&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;Após realizar o processo de &lt;a href=&#34;https://stone-co.github.io/docs/guias/token-de-acesso/#autenticação&#34;&gt;Autenticação&lt;/a&gt; e receber como resposta o seu Token de Acesso, basta colocá-lo no header Authorization. Você irá usar o valor recebido para preenchimento do Bearer ACCESS_TOKEN de todas as chamadas realizadas em nossa API.&lt;/p&gt;
+&lt;p&gt;Além do Token de acesso, é necessário preencher sempre no header o campo &lt;strong&gt;User-Agent&lt;/strong&gt; que deve estar habilitado com o nome da sua aplicação.&lt;/p&gt;
+&lt;p&gt;Para realizar chamadas autenticadas em nossa API, disponibilizamos as seguintes URLs: &lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Ambiente&lt;/th&gt;
+&lt;th&gt;Endpoint de Acesso&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Sandbox&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://sandbox-api.openbank.stone.com.br&#34;&gt;https://sandbox-api.openbank.stone.com.br&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Produção&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://api.openbank.stone.com.br&#34;&gt;https://api.openbank.stone.com.br&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Não solicite um token por chamada!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;O access_token possui duração de 15 minutos e você deve utilizar esse mesmo token durante todo seu período de utilização, não importa quais e quantas chamadas diferentes sua aplicação irá fazer nesse período.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;A seguir, vamos te guiar pela seção &lt;a href=&#34;https://stone-co.github.io/docs/guias/conta-de-pagamento/&#34;&gt;Conta de Pagamento&lt;/a&gt;, onde você poderá entender mais sobre as características do nosso negócio e sobre o processo de abertura de conta.&lt;/p&gt;
+
       </description>
     </item>
     
@@ -49,7 +309,59 @@
       <description>
         
         
-        
+        &lt;br&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;Somos uma Instituição de Pagamentos emissora de moeda eletrônica autorizada pelo Banco Central e por isso podemos oferecer uma Conta de Pagamento.
+&lt;br&gt;Nesse tipo de conta, os recursos devem ser depositados previamente, ou seja, oferecemos uma conta do tipo pré-paga aos nossos clientes. Dessa forma, não haverá geração de fatura nem saldo negativo.&lt;/p&gt;
+&lt;p&gt;Através de uma conta de pagamento você tem acesso a serviços financeiros sem precisar ir a um banco. É possível fazer e receber Pix, TEDs, como também realizar o pagamento de boletos e outros serviços básicos de uma conta corrente.
+&lt;br&gt;Além disso, toda a gestão da conta pode ser feita online, simplificando atividades do dia a dia. Inclusive, para abrir uma conta, você não precisa se deslocar até uma agência. Mesmo assim, se precisar de alguém para te ajudar, a Stone está disponível para contato.&lt;/p&gt;
+&lt;p&gt;Caso você ainda não possua uma conta para movimentar por meio do seu Token de Acesso, você pode realizar o processo de &lt;a href=&#34;https://stone-co.github.io/docs/guias/conta-de-pagamento/#abertura-de-conta&#34;&gt;Abertura de Conta&lt;/a&gt; pelo nosso App (disponível em &lt;a href=&#34;https://apps.apple.com/br/app/stone/id1438680035&#34;&gt;iOS&lt;/a&gt; e &lt;a href=&#34;https://play.google.com/store/apps/details?id=co.stone.banking.mobile.flagship&amp;amp;hl=pt_BR&amp;amp;gl=US&#34;&gt;Android&lt;/a&gt;). Esse processo também deve ser feito caso você seja uma plataforma e deseje oferecer abertura de conta Stone aos seus clientes, pois também precisaremos do seu perfil cadastrado aqui.&lt;/p&gt;
+&lt;p&gt;O processo de abertura de conta pode ser resumido em duas etapas que serão detalhadas a seguir:&lt;br&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/conta-de-pagamento/#envio-de-dados-cadastrais&#34;&gt;Envio de Dados Cadastrais&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/conta-de-pagamento/#kyc-know-your-customer&#34;&gt;Realização do processo de KYC (Know Your Customer)&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;abertura-de-conta&#34;&gt;Abertura de Conta&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;envio-de-dados-cadastrais&#34;&gt;&lt;strong&gt;Envio de Dados Cadastrais&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;O processo de abertura de conta será iniciado quando o usuário preencher os dados básicos de cadastro para criação de sua identidade na Stone. A identidade é o perfil do usuário na Stone e será gerido sempre por nós. Os dados solicitados nesta etapa serão Nome Completo, CPF, CNPJ, Razão Social e E-mail.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Atenção!&lt;/strong&gt;
+&lt;br&gt;Para contas do tipo Pessoa Jurídica, a abertura deverá ser feita obrigatoriamente por um sócio ou responsável legal. Dependendo do tipo de cadastro, poderemos solicitar ainda alguns documentos como comprovante de MEI, Registro em Junta Comercial, entre outros.&lt;/p&gt;
+&lt;p&gt;O recebimento dos dados iniciais pela Stone pode ser feito via aplicativo (&lt;a href=&#34;https://apps.apple.com/br/app/stone/id1438680035&#34;&gt;iOS&lt;/a&gt; e &lt;a href=&#34;https://play.google.com/store/apps/details?id=co.stone.banking.mobile.flagship&amp;amp;hl=pt_BR&amp;amp;gl=US&#34;&gt;Android&lt;/a&gt;) com o usuário dono da conta realizando o processo de preenchimento diretamente pelo app ou pode ser feito por API, caso você seja uma plataforma e queira oferecer o &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/criar-nova-conta-de-pagamento/&#34;&gt;processo de abertura de conta Stone&lt;/a&gt; em seu produto.
+&lt;br&gt;Caso escolhe realizar o processo por API, após o recebimento dos dados cadastrais, faremos uma primeira validação e, em seguida, iremos disparar um e-mail para criação de senha de acesso pelo usuário.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Credenciais&lt;/strong&gt;: A identidade é acessada através das credenciais do usuário, como, por exemplo, um e-mail e uma senha. Hoje essas credenciais dão acesso apenas ao perfil do usuário na Stone, e não estão relacionadas às credenciais usadas por outros serviços que podem estar integrados à Conta Stone, como o Guiabolso, por exemplo. Entretanto, o objetivo é que no futuro a identidade na Stone funcione como uma conta de usuário no Google ou no Facebook, por exemplo. A partir de um único conjunto de credenciais ser possível se conectar à vários serviços.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Pronto!&lt;/strong&gt; Com e-mail validado e senha criada o usuário já pode realizar o processo de KYC (Know Your Customer).&lt;/p&gt;
+&lt;br&gt;
+&lt;h3 id=&#34;kyc-know-your-customer&#34;&gt;&lt;strong&gt;KYC (Know Your Customer)&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Como somos regulados pelo Banco Central, temos a responsabilidade de realizar uma análise de documentos e procedimentos chamados KYC (Know Your Customer). Essa análise é realizada com cuidado internamente para evitar fraudes, principalmente falsidade ideológica.&lt;/p&gt;
+&lt;p&gt;Nesse processo, solicitamos algumas informações além dos dados já enviados pelo cliente, como selfies e fotos de documentos. Todas as informações são analisadas para que o cadastro do usuário seja aprovado ou não.&lt;/p&gt;
+&lt;p&gt;Com todas as validações feitas e aprovadas, o usuário terá sua conta aberta e pronta para uso.
+Para plataformas que queiram oferecer o processo de abertura de conta Stone de maneira integrada, o envio das informações iniciais poderá ser feito usando nossa API. Já para recebimento dos dados de KYC, será necessário o uso da nossa SDK - detalhada na &lt;a href=&#34;https://stone-co.github.io/docs/guias/sdk/&#34;&gt;seção exclusiva&lt;/a&gt; sobre suas funcionalidades e usos.&lt;/p&gt;
+&lt;br&gt;
+&lt;h3 id=&#34;identificador&#34;&gt;&lt;strong&gt;Identificador&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Em nossa modelagem de conta de pagamento, utilizamos dois conceitos para refletir as etapas mencionadas acima:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;user_id&lt;/td&gt;
+&lt;td&gt;Identificador que se refere ao seu perfil na Stone contendo informações cadastrais como nome, sobrenome e CPF ou CNPJ.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;account_id&lt;/td&gt;
+&lt;td&gt;Identificador que se refere a sua conta na Stone, contendo dados da sua conta de pagamento.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
       </description>
     </item>
     
@@ -63,7 +375,187 @@
         
         
         &lt;br&gt;
-
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;O &lt;strong&gt;Consentimento&lt;/strong&gt; é um conceito fundamental no Open Banking, pois a partir da realização deste processo, um usuário poderá permitir o compartilhamento de suas informações entre diferentes instituições autorizadas pelo Banco Central e a movimentação de suas contas bancárias a partir de diferentes plataformas e não apenas pelo aplicativo ou site do banco, de forma segura, ágil e conveniente.&lt;/p&gt;
+&lt;p&gt;Para instituições que desejem pedir consentimento a usuários da Conta Stone, basta gerar um link de consentimento em nossa API e enviar o mesmo para avaliação do usuário dono da conta.
+&lt;br&gt;A partir da aprovação do usuário, a plataforma parceira terá acesso aos escopos solicitados.&lt;/p&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;fluxo-de-consentimento&#34;&gt;Fluxo de Consentimento&lt;/h2&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;A partir da abertura de conta realizada pelo usuário, uma plataforma poderá solicitar acesso ao compartilhamento de informações e iniciação de pagamentos na conta de um usuário. Para isso, deverá gerar um &lt;strong&gt;Link de Consentimento&lt;/strong&gt; dentro do padrão estabelecido.&lt;/p&gt;
+&lt;p&gt;Após gerar e enviar o Link ao usuário, poderão acontecer três situações, das quais o parceiro será notificado:&lt;/p&gt;
+&lt;h6 id=&#34;usuário-acessa-o-link-e-dá-consentimento-ao-parceiro&#34;&gt;&lt;strong&gt;Usuário acessa o link e dá consentimento ao parceiro&lt;/strong&gt;&lt;/h6&gt;
+&lt;p&gt;Ao acessar o link, o usuário será direcionado para um página da Stone em que irá escolher a quais contas de pagamento ele deseja conceder acesso ao parceiro. Ele também poderá verificar a quais escopos o parceiro passará a ter acesso após dar consentimento. Uma vez dado o consentimento, o usuário deverá ser direcionado de volta a uma página do parceiro.&lt;/p&gt;
+&lt;p&gt;Veja abaixo um exemplo da tela de pedido de consentimento que será disponibilizada ao cliente:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;solicitacao-de-consentimento.png&#34; alt=&#34;solicitacao-consentimento&#34;&gt;&lt;/p&gt;
+&lt;br&gt;
+Veja abaixo um exemplo de permissão concedida:
+&lt;p&gt;&lt;img src=&#34;consentimento-aprovado.png&#34; alt=&#34;consentimento-aprovado&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;Ao clicar no botão &amp;ldquo;Ok, entendi&amp;rdquo; o usuário será redirecionado para uma página da aplicação parceira, cujo endereço foi definido no &lt;a href=&#34;https://stone-co.github.io/docs/guias/token-de-acesso/#cadastro-da-aplicação&#34;&gt;Cadastro da Aplicação&lt;/a&gt;.&lt;/p&gt;
+&lt;br&gt;
+&lt;h6 id=&#34;usuário-acessa-o-link-e-não-dá-consentimento-ao-parceiro&#34;&gt;&lt;strong&gt;Usuário acessa o link e não dá consentimento ao parceiro&lt;/strong&gt;&lt;/h6&gt;
+&lt;br&gt;
+&lt;p&gt;Pode acontecer também o caso em que o usuário rejeitar o consentimento solicitado. Neste caso, ele será redirecionado a uma página do parceiro. O parceiro, neste caso, não poderá acessar informações nem operar a conta do usuário.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Atenção!&lt;/strong&gt; &lt;br&gt;Em ambos os casos citados acima, faremos um redirecionamento para a URI cadastrada no token. Acrescentaremos na URI os seguintes campos:&lt;/p&gt;
+&lt;br&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Valor&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;session_metadata&lt;/td&gt;
+&lt;td&gt;Com os mesmos os valores de passados no token.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;consent_result&lt;/td&gt;
+&lt;td&gt;Indica o resultado do pedido de consentimento e pode ter os seguintes valores:&lt;br&gt;- &lt;code&gt;ignored&lt;/code&gt;: caso o usuário não dê consentimento;&lt;br&gt;- &lt;code&gt;approved&lt;/code&gt;: caso ele dê o consentimento e&lt;br&gt;- &lt;code&gt;already_granted&lt;/code&gt;: caso o consentimento desse recurso para essa aplicação já tenha sido dado anteriormente.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;resource_id&lt;/td&gt;
+&lt;td&gt;Identificador do resource ao qual o consentimento foi dado. Só é retornado quando o resultado do consent é &lt;code&gt;approved&lt;/code&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;p&gt;Quando o consent_result é &lt;code&gt;approved&lt;/code&gt; é enviado também o webhook consent_requested com os dados do consentimento dado. Dessa forma, você poderá prover uma experiência fluída para ambos os casos, basta validar estes campos!&lt;/p&gt;
+&lt;br&gt;
+&lt;h6 id=&#34;usuário-ignora-o-link&#34;&gt;&lt;strong&gt;Usuário ignora o link&lt;/strong&gt;&lt;/h6&gt;
+&lt;br&gt;
+&lt;p&gt;O link de consentimento tem validade de 2 horas após a sua geração. Caso o usuário não acesse o mesmo dentro desse período, será necessário gerar um novo link e fazer um novo envio.&lt;/p&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;gerando-link-de-consentimento&#34;&gt;Gerando Link de Consentimento&lt;/h2&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;Após cadastrar e autenticar a sua aplicação, você está apto a pedir consentimento aos seus clientes que tenham realizado a abertura de uma conta Stone. Ressaltamos que toda interação com o usuário neste processo será gerida por nossa plataforma.&lt;/p&gt;
+&lt;p&gt;Seguindo os parâmetros descritos abaixo, você deverá enviar o link ao usuário por meio da sua aplicação.
+&lt;br&gt;O link de consentimento deve ser enviado dentro da própria aplicação. Você pode, por exemplo, disponibilizar um botão em sua plataforma para que o usuário acesse o link. Este link não deve ser enviado ao usuário por e-mail sob hipótese alguma.&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;parâmetros-do-link-de-consentimento&#34;&gt;&lt;strong&gt;Parâmetros do link de consentimento&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;O link de consentimento deverá conter três parâmetros:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;client_id: o ClientID recebido pelo desenvolvedor pós-cadastro;&lt;/li&gt;
+&lt;li&gt;type: no caso, será sempre o valor “consent”;&lt;/li&gt;
+&lt;li&gt;jwt: será um token gerado localmente pelo desenvolvedor com a mesma chave privada e algoritmo que ele usa para se autenticar. Mais detalhes abaixo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Com estes parâmetros, basta gerar um link no seguinte formato (por ambiente), substituindo CLIENT_ID e JWT por seus respectivos valores:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Sandbox&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://sandbox.conta.stone.com.br/consentimento?client_id=CLIENT_ID&amp;amp;jwt=JWT&#34;&gt;https://sandbox.conta.stone.com.br/consentimento?client_id=CLIENT_ID&amp;amp;jwt=JWT&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Produção&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://conta.stone.com.br/consentimento?client_id=CLIENT_ID&amp;amp;jwt=JWT&#34;&gt;https://conta.stone.com.br/consentimento?client_id=CLIENT_ID&amp;amp;jwt=JWT&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;p&gt;Assim como fizemos o processo de gerar um Token de Acesso autenticado, também será gerado um JWT para pedido do Consentimento.&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;especificações-do-jwt-para-pedir-consentimento&#34;&gt;&lt;strong&gt;Especificações do JWT para pedir consentimento&lt;/strong&gt;&lt;/h5&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;Header&lt;/strong&gt;
+&lt;br&gt;Observe que é preciso assinar o token JWT com a chave privada da aplicação e o algoritmo RS256, assim como é feito para o token de autenticação. Dessa forma, neste token também é preciso incluir um header com as informações sobre o algoritmo de criptografia utilizado, entre outros metadados, como um id da chave utilizada. Por exemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;alg&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;RS256&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;typ&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;JWT&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;Payload&lt;/strong&gt;
+&lt;br&gt;O token deve conter os claims abaixo:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Campos  &lt;strong&gt;Obrigatórios&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;type&lt;/td&gt;
+&lt;td&gt;Será sempre &amp;ldquo;consent&amp;rdquo; neste caso.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;client_id&lt;/td&gt;
+&lt;td&gt;Será o ClientID da Aplicação Parceira.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;redirect_uri&lt;/td&gt;
+&lt;td&gt;A URI para redirecionamento após a ação do usuário. Esta URI foi informada previamente no cadastro da Aplicação Parceira. Caso seja enviada uma URI diferente, retornará erro.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;session_metadata&lt;/td&gt;
+&lt;td&gt;Um objeto que contenha qualquer chave relevante para o parceiro identificar a sessão do usuário. Este valor estará presente na URI de redirecionamento e não pode ser nulo ou um mapa vazio.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Objeto&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;iss&lt;/td&gt;
+&lt;td&gt;Usar o client_id da Aplicação.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;iat&lt;/td&gt;
+&lt;td&gt;Momento em que o token foi gerado. É um timestamp UTC. Exemplo: &amp;ldquo;iat&amp;rdquo;: 1542235633.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Int&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;aud&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;mailto:accounts-hubid@openbank.stone.com.br&#34;&gt;accounts-hubid@openbank.stone.com.br&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;jti&lt;/td&gt;
+&lt;td&gt;Identificador único do token gerado. Normalmente se utiliza um UUID.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;nbf&lt;/td&gt;
+&lt;td&gt;É o momento em que o token passa a ser válido. Na maioria dos casos terá o mesmo valor que iat (issued at) pois queremos que ele esteja válido logo a partir do momento de geração.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Int&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;exp&lt;/td&gt;
+&lt;td&gt;Momento de expiração do token em segundos desde o início da era UNIX (1970). É um timestamp UTC e não pode ser maior que 2 horas. Exemplo: &amp;ldquo;exp&amp;rdquo;: 1542235633&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Int&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+&lt;p&gt;Segue um exemplo de como ficariam os claims preenchidos:&lt;/p&gt;
+&lt;br&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;consent&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;client_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;MY CLIENT ID&amp;#34;&lt;/span&gt;, 
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;iss&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;MY CLIENT ID&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;redirect_uri&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://mypreviouslyregistereduri.com&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;session_metadata&amp;#34;&lt;/span&gt;: {
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;user_session&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;xxxxxxxxxxxxxxxxxxxxx&amp;#34;&lt;/span&gt;,
+  },
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;iat&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;1542235633&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;nbf&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;1542235633&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;exp&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;1549069563&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;jti&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;41e8aa9f-bb9c-4fd2-9953-2595dbbd5a83&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;aud&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;accounts-hubid@openbank.stone.com.br&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
     
@@ -76,7 +568,21 @@
       <description>
         
         
-        
+        &lt;br&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;No Open Banking, uma plataforma poderá criar uma transação na conta do usuário, mas esta só será efetuada se houver a aprovação do usuário dono da conta. Esse procedimento assegura ao dono da conta que não haverá movimentação de seu dinheiro sem sua permissão, além de proteger a aplicação de eventuais erros, ataques ou bugs que iniciem transações não desejadas pelo usuário.&lt;/p&gt;
+&lt;p&gt;A Aprovação de uma Transação tem como objetivo garantir que toda movimentação financeira de saída de uma conta seja feita somente por um usuário devidamente autorizado. É um procedimento em que o usuário que já concedeu o consentimento é notificado da criação de uma transação e direcionado para uma página onde é possível visualizar todas as transações criadas pelo parceiro. Nessa página é possível aprovar ou rejeitar uma transação, possibilitando ou impedindo sua realização. É importante lembrar que apenas aplicativos que tenham obtido &lt;a href=&#34;https://stone-co.github.io/docs/guias/consentimento/&#34;&gt;consentimento&lt;/a&gt; podem criar transações.&lt;/p&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;aprovando-uma-transação&#34;&gt;Aprovando uma transação&lt;/h2&gt;
+&lt;br&gt;
+&lt;p&gt;Caso uma transação tenha sido iniciada por uma plataforma terceira em uma conta Stone, oferecemos algumas formas ao usuário para que o mesmo possa avaliar e realizar a aprovação ou reprovação das transações. Verifique o melhor formato para seu negócio abaixo:&lt;/p&gt;
+&lt;h5 id=&#34;aplicativo-aprovador&#34;&gt;&lt;strong&gt;Aplicativo Aprovador&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;O Aprovador é um aplicativo utilizado pelo usuário para realizar a autorização de transações criadas pelo parceiro. Além disso, através do aplicativo é possível manter um histórico de movimentação de saída de uma conta. Nesse histórico é possível visualizar os valores movimentados, o destino das movimentações e o usuário que autorizou as transações. É possível também utilizá-lo para realizar aprovações em lote, ou seja, aprovar um grande número de transações pendentes ao mesmo tempo.
+Baixe agora o aplicativo na plataforma &lt;a href=&#34;https://apps.apple.com/br/app/aprovador-stone/id1440677386&#34;&gt;iOs&lt;/a&gt; ou &lt;a href=&#34;https://play.google.com/store/apps/details?id=br.com.stone.approver&amp;amp;hl=pt_BR&amp;amp;gl=US&#34;&gt;Android&lt;/a&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;aplicativo-stone&#34;&gt;&lt;strong&gt;Aplicativo Stone&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;Além de aprovar transações pelo aplicativo Aprovador Stone, também é possível aprovar pelo aplicativo Stone, no menu “Aprovar transações”. Para baixar o aplicativo na plataforma iOS, &lt;a href=&#34;https://apps.apple.com/br/app/stone/id1438680035&#34;&gt;clique aqui&lt;/a&gt;. Tem um Android? Também temos um aplicativo para você &lt;a href=&#34;https://play.google.com/store/apps/details?id=co.stone.banking.mobile.flagship&amp;amp;hl=pt_BR&amp;amp;gl=US&#34;&gt;clicando aqui&lt;/a&gt;&lt;/p&gt;
+
       </description>
     </item>
     
@@ -91,8 +597,11 @@
         
         &lt;hr&gt;
 &lt;br&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;A ocorrência de certos eventos pode ser importante em diversos fluxos na integração de uma aplicação com a API Stone Open Banking. Por isso, utilizamos webhooks para notificar as aplicações integradas da ocorrência destes eventos.&lt;/p&gt;
-&lt;p&gt;Para sua utilização, é preciso que a aplicação tenha cadastrado no &lt;a href=&#34;https://stone-co.github.io/docs/guias/stone-open-banking/quickstart-de-integracao/#testes-em-sandbox&#34;&gt;formulário&lt;/a&gt; a URI para a qual enviaremos um POST com os dados do evento. A aplicação deverá estar preparada para lidar com cada evento de forma adequada.&lt;/p&gt;
+&lt;p&gt;Para sua utilização, é preciso que a aplicação tenha cadastrado no &lt;a href=&#34;https://stone-co.github.io/docs/guias/stone-open-banking/#testes-em-sandbox&#34;&gt;formulário&lt;/a&gt; a URI para a qual enviaremos um POST com os dados do evento. A aplicação deverá estar preparada para lidar com cada evento de forma adequada.&lt;/p&gt;
 &lt;p&gt;Ao enviar um webhook, esperamos receber uma resposta do range 200 que indica o sucesso no recebimento dessa notificação por parte da sua aplicação. Caso a resposta seja um código diferente do range 200, encaramos como falha no recebimento do webhook e repetimos o envio até receber um sucesso ou batermos o número máximo de 50 tentativas no envio de um evento.
 Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um padrão de horários de tentativas.&lt;/p&gt;
 &lt;p&gt;A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) sobre as quais ela opera dado o escopo de funcionalidades disponíveis na sua aplicação e também recebem os eventos relacionados às contas sobre as quais foi dado consentimento.
@@ -107,7 +616,7 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 &lt;/div&gt;
 
 &lt;br&gt;
-&lt;h4 id=&#34;os-eventos-que-geram-notificações-são&#34;&gt;&lt;strong&gt;Os eventos que geram notificações são:&lt;/strong&gt;&lt;/h4&gt;
+&lt;h3 id=&#34;eventos-que-geram-notificações&#34;&gt;Eventos que geram notificações&lt;/h3&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;h5 id=&#34;emissão-de-boleto&#34;&gt;&lt;strong&gt;Emissão de Boleto:&lt;/strong&gt;&lt;/h5&gt;
@@ -506,13 +1015,13 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;br&gt;
-&lt;h4 id=&#34;o-header-das-notificações-segue-a-seguinte-estrutura&#34;&gt;&lt;strong&gt;O header das notificações segue a seguinte estrutura:&lt;/strong&gt;&lt;/h4&gt;
+&lt;h2 id=&#34;estrutura-do-header-das-notificações&#34;&gt;Estrutura do header das notificações&lt;/h2&gt;
 &lt;hr&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;x-stone-webhook-event-id: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;930bbd6d-0c7a-4fe4-8b50-4b82a20cb847&amp;#34;&lt;/span&gt;
 x-stone-webhook-event-type: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;cash_out_internal_transfer&amp;#34;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A idempotência de webhooks deverá ser validada no campo &amp;lsquo;x-stone-webhook-event-id&amp;rsquo; disponível no header.&lt;/p&gt;
 &lt;br&gt;
-&lt;h4 id=&#34;o-payload-das-notificações-segue-a-seguinte-estrutura&#34;&gt;&lt;strong&gt;O payload das notificações segue a seguinte estrutura:&lt;/strong&gt;&lt;/h4&gt;
+&lt;h2 id=&#34;estrutura-do-payload-das-notificações&#34;&gt;Estrutura do payload das notificações&lt;/h2&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;table&gt;
@@ -614,10 +1123,10 @@ x-stone-webhook-event-type: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;c
    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_type&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;internal_transfer&amp;#34;&lt;/span&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
-&lt;h4 id=&#34;trabalhando-com-webhooks&#34;&gt;&lt;strong&gt;Trabalhando com Webhooks&lt;/strong&gt;&lt;/h4&gt;
+&lt;h2 id=&#34;trabalhando-com-webhooks&#34;&gt;Trabalhando com Webhooks&lt;/h2&gt;
 &lt;hr&gt;
 &lt;br&gt;
-&lt;h5 id=&#34;webhooks-seguros&#34;&gt;&lt;strong&gt;Webhooks Seguros&lt;/strong&gt;&lt;/h5&gt;
+&lt;h3 id=&#34;webhooks-seguros&#34;&gt;&lt;strong&gt;Webhooks Seguros&lt;/strong&gt;&lt;/h3&gt;
 &lt;br&gt;
 &lt;p&gt;Nossa API envia webhooks de forma segura para evitar que eles sejam abertos e/ou alterados. Isso é feito em duas etapas:&lt;/p&gt;
 &lt;ul&gt;
@@ -693,13 +1202,14 @@ subprocess&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;run(&lt;span s
 &lt;p&gt;Sempre que em dúvida, consulte nossa API com os IDs dos dados no conteúdo do webhook.&lt;/p&gt;
 &lt;p&gt;Mais informações sobre JavaScript Object Signing and Encryption, como JWTs, JWEs, JWSs, &lt;a href=&#34;https://www.ca.com/pt/blog-latam/os-beneficios-de-jwtjwsjwe-no-designs-de-apis.html&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
 &lt;br&gt;
-&lt;h5 id=&#34;webhooks-idempotentes&#34;&gt;&lt;strong&gt;Webhooks idempotentes&lt;/strong&gt;&lt;/h5&gt;
+&lt;h3 id=&#34;webhooks-idempotentes&#34;&gt;&lt;strong&gt;Webhooks idempotentes&lt;/strong&gt;&lt;/h3&gt;
 &lt;br&gt;
 &lt;p&gt;No geral um evento, quando recepcionado com sucesso, é enviado apenas uma vez pela Stone, mas é possível que em algum cenário extraordinário um webhook acabe sendo enviado mais de uma vez e por isso desenvolvemos uma lógica de idempotência de eventos.&lt;/p&gt;
 &lt;p&gt;Todo webhook gerado pela Stone leva consigo uma chave de idempotência enviada no campo &lt;code&gt;x-stone-webhook-event-id&lt;/code&gt; do header.&lt;/p&gt;
 &lt;p&gt;É importante que essa chave seja sempre salva pela sua aplicação e que a cada novo evento você verifique a idempotência desse evento evitando processar duas vezes um mesmo evento.&lt;/p&gt;
 &lt;br&gt;
-&lt;h5 id=&#34;endpoint-para-verificar-webhooks-enviados&#34;&gt;&lt;strong&gt;Endpoint para verificar webhooks enviados&lt;/strong&gt;&lt;/h5&gt;
+&lt;h2 id=&#34;endpoint-para-verificar-webhooks-enviados&#34;&gt;Endpoint para verificar webhooks enviados&lt;/h2&gt;
+&lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;Caso tenha dificuldade para identificar algum webhook enviado pela Stone na URI indicada para receber webhooks, disponibilizamos um endpoint que traz todos os webhooks já enviados para a sua aplicação.&lt;/p&gt;
 &lt;p&gt;Para acessar, basta fazer o comando abaixo, lembrando que no &lt;em&gt;header&lt;/em&gt; deve ser enviado o Bearer token no campo &lt;code&gt;authorization&lt;/code&gt; e o client_id é o id da sua aplicação, passado pelo time de integração.&lt;/p&gt;
@@ -767,7 +1277,402 @@ subprocess&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;run(&lt;span s
         
         
         &lt;br&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;SDK é a abreviação de Software Development Kit ou, em português, Kit de Desenvolvimento de Software. Um SDK é um conjunto de ferramentas de desenvolvimento de software capaz de facilitar a integração de sistemas em diferentes linguagens de programação. Além disso, usando um SDK é possível ter mais segurança e confiabilidade no processo de integração.&lt;/p&gt;
+&lt;p&gt;Construímos a Conta Stone SDK com o objetivo de permitir que parceiros como plataformas e ERPs possam realizar o processo de abertura de conta Stone sem que seus usuários tenham que fazer o download do nosso aplicativo (iOS e Android).
+&lt;br&gt;Assim, de maneira segura, os usuários poderão realizar os processo de autenticação e KYC interagindo de maneira direta com a Stone, mas por meio da SDK integrada pelo parceiro.&lt;/p&gt;
+&lt;p&gt;A Conta Stone SDK funciona como ponto de entrada para os três processos abaixo:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SDK de Autenticação (Auth SDK): Responsável por executar o processo de Autenticação seguindo os padrões especificados.&lt;/li&gt;
+&lt;li&gt;Verificação  de KYC (Pegasus SDK):  Responsável por capturar as informações do usuário que está realizando cadastro na conta.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Após obter o seu &lt;a href=&#34;https://stone-co.github.io/docs/guias/token-de-acesso/&#34;&gt;Token de Acesso&lt;/a&gt;, caso deseje usar nossa SDK e disponibilizar as etapas acima descritas aos seus usuários, siga os próximos passos para instalação do kit para &lt;a href=&#34;https://stone-co.github.io/docs/guias/sdk/#integração-ios&#34;&gt;iOS&lt;/a&gt; e &lt;a href=&#34;https://stone-co.github.io/docs/guias/sdk/#integração-android&#34;&gt;Android&lt;/a&gt;.&lt;/p&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;integração-android&#34;&gt;Integração Android&lt;/h2&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;A Conta Stone SDK é responsável por todo o fluxo de login e Know Your Customer da &lt;a href=&#34;https://stone-co.github.io/docs/guias/stone-open-banking/overview/&#34;&gt;Stone Openbank API&lt;/a&gt;.&lt;/p&gt;
+&lt;h5 id=&#34;contato&#34;&gt;&lt;strong&gt;Contato&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;Se durante a integração encontrar algum problema ou ponto de melhoria entre em contato com a gente através da ferramenta de suporte.&lt;/p&gt;
+&lt;h5 id=&#34;como-funciona&#34;&gt;&lt;strong&gt;Como funciona&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;A Conta Stone SDK é o ponto de entrada para acesso às nossas SDKs de autenticação, aprovação e verificação de &lt;a href=&#34;https://en.wikipedia.org/wiki/Know_your_customer&#34;&gt;KYC&lt;/a&gt; (&lt;em&gt;Know your constumer&lt;/em&gt;).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;A SDK de autenticação é responsável por executar todo o processo de autenticação seguindo as diretrizes do &lt;a href=&#34;https://oauth.net/2/&#34;&gt;oAuth2&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A SDK de aprovação é responsável pelo processo de aprovação e rejeição de transações.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A SDK de KYC é responsável por capturar as informações do usuário que está realizando cadastro na conta.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;como-integrar-com-a-conta-stone-sdk&#34;&gt;&lt;strong&gt;Como Integrar com a Conta Stone SDk&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;Antes de começar a integração é necessário obter uma chave de acesso ao repositório, pois trata-se de um repositório privado. Para obter esta chave entre em contato com a gente.&lt;/p&gt;
+&lt;p&gt;No arquivo &lt;code&gt;build.gradle&lt;/code&gt; do projeto adicione a URL do repositório e substitua o &lt;code&gt;{access-key}&lt;/code&gt; pela chave fornecida.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;maven { url &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://packagecloud.io/priv/${access-key}/Stone/stoneid/maven2&amp;#34;&lt;/span&gt;}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Também é preciso adicionar o Jetpack, pois usamos algumas libs que estão disponíveis neste repositório.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;maven { url &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;https://jitpack.io&amp;#39;&lt;/span&gt; }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Importe a dependência da Conta Stone SDK.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;implementation &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;co.stone:conta:${latest_version}&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A Conta Stone SDK utiliza o Firebase para implementar alguns de seus serviços, logo é necessário ter um projeto no firebase e integrá-lo no seu app. Para mais informações sobre como adicionar o Firebase ao seu projeto acesse este &lt;a href=&#34;https://firebase.google.com/docs/android/setup&#34;&gt;link&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Sincronize o projeto e pronto, já é possível utilizar a Conta Stone SDK!&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;inicializando-a-sdk&#34;&gt;&lt;strong&gt;Inicializando a SDK&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;Uma vez que a dependência foi importada o passo seguinte da integração é inicializar a SDK no seu app, para isso é necessário especificar os parâmetros abaixo.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;private val environment &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; Environment&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;Sandbox
 
+ ContaStone&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;initialize(
+            application &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; application,
+            environment &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; environment,
+            appInfo &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; AppInfo(
+                name &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Conta Stone Sample App&amp;#34;&lt;/span&gt;,
+                applicationId &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; BuildConfig&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;APPLICATION_ID,
+                buildId &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; BuildConfig&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;BUILD_TYPE,
+                version &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; BuildConfig&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;VERSION_NAME
+            ),
+            authFlowUIConfig &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; AuthFlowUIConfig(themeId &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; R&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;style&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;Theme_ContaStoneSdkSample),
+            clientId &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;myapp@example.com.br&amp;#34;&lt;/span&gt;,
+            deepLinkUris &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; DeepLinkUris(
+                uriLogout &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sample://uri.logout&amp;#34;&lt;/span&gt;,
+                uriChat &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sample://uri.chat&amp;#34;&lt;/span&gt;,
+                uriDashboard &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sample//uri.dashboard&amp;#34;&lt;/span&gt;,
+                uriHelp &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sample://uri.help&amp;#34;&lt;/span&gt;,
+                uriKyc &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sample://uri.kyc&amp;#34;&lt;/span&gt;,
+                uriUpdateApp &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sample://uri.update.app&amp;#34;&lt;/span&gt;
+            ),
+            httpClientConfig &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; HttpClientConfig(),
+            logger &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; InternalLogger(),
+            tokenKeyMasterUri &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;  URI(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;android-keystore://stone-mobile&amp;#34;&lt;/span&gt;)
+        )
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;application&lt;/code&gt;: Trata-se da instância do Application do seu app.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;environment&lt;/code&gt;: Existem 3 ambientes para os quais a sdk pode apontar: &lt;code&gt;Homolog&lt;/code&gt;, &lt;code&gt;Sandbox&lt;/code&gt; e &lt;code&gt;Production&lt;/code&gt; para fins de teste use o &lt;code&gt;Environment.Sandbox&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;appInfo&lt;/code&gt;: Informações referentes ao app como nome, versão e buildId.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;client_id&lt;/code&gt;: Identificador fornecido pelo time de suporte OpenBank.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;authFlowUIConfig&lt;/code&gt;: Com esta configuração é possível passar o tema da sua aplicação para a SDK, assim as cores principais do estilo do seu app serão aplicadas nas telas internas da SDK.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;httpClientConfig&lt;/code&gt;: Trata-se de configurações HTTP customizadas do cliente, como &lt;code&gt;interceptors&lt;/code&gt;, &lt;code&gt;connectionTimeoutMs&lt;/code&gt;, &lt;code&gt;readTimeoutMs&lt;/code&gt;, &lt;code&gt;writeTimeoutMs&lt;/code&gt; e &lt;code&gt;networkInterceptors&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;tokenKeyMasterUri&lt;/code&gt;: Uma URI para a chave mestra no formato &lt;code&gt;android-keystore://&lt;/code&gt;. Essa chave será utilizada para acessar o Keystore do android e salvar o token do usuário de forma segura.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;deepLinkUris&lt;/code&gt;: Uris usadas para fazer a navegação para Activities externas a sdk. Exemplo, a &lt;code&gt;uriLogout&lt;/code&gt; se refere a Activity que o usuário deve ser redirecionada depois que ele for deslogada do app, essa navegação é feita por deeplink.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;iniciando-fluxo-de-autenticação-e-verificação-de-kyc&#34;&gt;&lt;strong&gt;Iniciando fluxo de Autenticação e verificação de KYC&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;Para iniciar o fluxo de autenticação e verificação de KYC é necessário chamar o método abaixo.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;contaStoneSdk&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;startAuthAndVerificationFlowForResult(
+            context &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; this,
+            params &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; VerificationParams(
+                launchMode &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; VerificationLaunchMode&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;StartingApp,
+                authMode &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; AuthFlowMode&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;RegisteredUser
+            ),
+            requestCode &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; LOGIN_RC
+        )
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;O atributo &lt;code&gt;params&lt;/code&gt; recebe dois argumentos: O modo de inicialização, o qual define como que o fluxo deve ser iniciado e o &lt;code&gt;authMode&lt;/code&gt; que neste caso sempre vai ser &lt;code&gt;AuthFlowMode.RegisteredUser&lt;/code&gt;. O modo de inicialização pode ser:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;StartingApp&lt;/code&gt; - Inicia todo o fluxo de autenticação e check de KYC.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;AccountSelectionRequest&lt;/code&gt; - Exibe a tela de troca de conta e lida com a escolha do usuário nos casos em que o usuário em questão possui mais de uma conta de pagamento.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;PushNotificationReceived&lt;/code&gt; - Deve ser iniciado ao receber um push notification referente ao processo de abertura de conta.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;NewAccountCreated&lt;/code&gt; - Deve ser chamado após a criação de uma nova conta de pagamento para que seja verificado se esta conta não possui nenhuma pendência em seu cadastro.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Este método inicia a Activity principal da SDK e executa os fluxos internos de autenticação e verificação de KYC. Quando o processo é finalizado a Conta Stone SDK retorna um &lt;code&gt;Result&lt;/code&gt; através do &lt;code&gt;onActivityResult&lt;/code&gt; da Activity que deve ser tratado pelo app.&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;lidando-com-o-resultado-da-sdk&#34;&gt;&lt;strong&gt;Lidando com o resultado da SDK&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;Ao finalizar o fluxo de autenticação e verificação a SDK emite um resultado para o app informando o desfecho do fluxo. Segue abaixo um exemplo de como tratar o resultado emitido pela Conta Stone SDK e o que cada um significa.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt; override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+         &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;super&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;onActivityResult(requestCode, resultCode, data)
+         &lt;span style=&#34;color:#ff79c6&#34;&gt;if&lt;/span&gt; (requestCode &lt;span style=&#34;color:#ff79c6&#34;&gt;==&lt;/span&gt; LOGIN_RC) {
+             val result &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; contaStoneSdk&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;parseAuthAndVerificationResult(data)
+ 
+             when (result) {
+                 &lt;span style=&#34;color:#ff79c6&#34;&gt;is&lt;/span&gt; AuthAndVerificationResult&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;Ok &lt;span style=&#34;color:#ff79c6&#34;&gt;-&amp;gt;&lt;/span&gt; toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;User is authenticated&amp;#34;&lt;/span&gt;)
+                 &lt;span style=&#34;color:#ff79c6&#34;&gt;is&lt;/span&gt; AuthAndVerificationResult&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;MissingData &lt;span style=&#34;color:#ff79c6&#34;&gt;-&amp;gt;&lt;/span&gt; toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;some information is missing&amp;#34;&lt;/span&gt;)
+                 &lt;span style=&#34;color:#ff79c6&#34;&gt;is&lt;/span&gt; AuthAndVerificationResult&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;UserCancelled &lt;span style=&#34;color:#ff79c6&#34;&gt;-&amp;gt;&lt;/span&gt; toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;User cancelled flow&amp;#34;&lt;/span&gt;)
+                 &lt;span style=&#34;color:#ff79c6&#34;&gt;is&lt;/span&gt; AuthAndVerificationResult&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;Error &lt;span style=&#34;color:#ff79c6&#34;&gt;-&amp;gt;&lt;/span&gt; toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Error during login ${result.error}&amp;#34;&lt;/span&gt;)
+                 &lt;span style=&#34;color:#ff79c6&#34;&gt;is&lt;/span&gt; AuthAndVerificationResult&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;UserLoggedOut &lt;span style=&#34;color:#ff79c6&#34;&gt;-&amp;gt;&lt;/span&gt; toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;User requests logout&amp;#34;&lt;/span&gt;)
+                 &lt;span style=&#34;color:#ff79c6&#34;&gt;is&lt;/span&gt; AuthAndVerificationResult&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;BlockedUser &lt;span style=&#34;color:#ff79c6&#34;&gt;-&amp;gt;&lt;/span&gt; toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;User is blocked&amp;#34;&lt;/span&gt;)
+             }
+         }
+     }
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;h5 id=&#34;como-fazer-logout&#34;&gt;&lt;strong&gt;Como fazer logout&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;Para deslogar o usuário podemos fazer uma chamada para o método de logout seguindo o exemplo abaixo.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;contaStoneSdk&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;logout {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;if&lt;/span&gt; (it &lt;span style=&#34;color:#ff79c6&#34;&gt;!=&lt;/span&gt; null) {
+                toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Error on logout. Try again!&amp;#34;&lt;/span&gt;)
+            } &lt;span style=&#34;color:#ff79c6&#34;&gt;else&lt;/span&gt; toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user successfully logged out&amp;#34;&lt;/span&gt;)
+        }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Quando a exception é nula o logout ocorreu com sucesso, quando não, algum erro ocorreu durante o fluxo.&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;obtendo-o-client-autenticado&#34;&gt;&lt;strong&gt;Obtendo o Client autenticado&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;A authSDK é responsável por todo o processo de autenticação incluindo a adição do token no header das chamadas para a API do Stone Openbank. Para isso a SDK fornece um &lt;code&gt;OkHttpClient&lt;/code&gt; configurado que pode ser utilizado nas chamadas HTTP do seu app. Este client possui &lt;a href=&#34;https://owasp.org/www-community/controls/Certificate_and_Public_Key_Pinning&#34;&gt;certificate pinning&lt;/a&gt; com os certificados da API do Stone OpenBank e é possível acessá-lo chamando o método &lt;code&gt;contaStone.auth().client()&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;private fun performAuthenticatedRequest() {
+        val httpService &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; HttpService&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;BankingGatewaySandbox
+        val client &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; contaStoneSdk&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;auth()&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;getOkHttpClient(httpService)
+
+        val request &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; Request&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;Builder()
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;url(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;${httpService.url}/api/v1/institutions&amp;#34;&lt;/span&gt;)
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;get()
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;build()
+
+        val callback &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;object&lt;/span&gt; : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                runOnMainThread {
+                    toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Error fetching institutions $e&amp;#34;&lt;/span&gt;)
+                }
+            }
+
+            override fun onResponse(call: Call, response: Response) {
+                runOnMainThread {
+                    toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Request executed successfully&amp;#34;&lt;/span&gt;)
+                }
+            }
+        }
+
+        client&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;newCall(request)&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;enqueue(callback)
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;!---
+##### **Como inicializar o Aprovador**
+---
+
+Para conseguir iniciar o aprovador é necessário fazer a chamada conforme o exemplo abaixo:
+
+```python
+contaStoneSdk.startApproverForResult(
+                        source = this,
+                        requestCode = APPROVER_RQ,
+                        params = ApproverParams(loggedAccount, ApproverLaunchMode.SDKLaunchMode)
+                    )
+```
+
+Para recuperar o `loggedAccount` a Conta Stone SDK disponibiliza a sessão do usuário logado com todas as informações que o `LoggedAccount` precisa:
+
+```python
+contaStoneSdk.getSession(
+                onComplete = { result -&gt;
+                    when (result) {
+                        is SessionResult.Success -&gt; {
+                                currentAccount?.paymentAccount?.let {
+                                        LoggedAccountInfo(
+                                            id = it.id,
+                                            accountNumber = it.accountCode,
+                                            accountOwner = currentAccount?.owner?.name.orEmpty(),
+                                            accountOwnerDocument = currentAccount?.owner?.document.orEmpty(),
+                                            bankName = &#34;Stone Pagamentos S.A&#34;,
+                                            bankNumber = &#34;197&#34;,
+                                            branchNumber = &#34;0001&#34;,
+                                            userLoggedName = profile.fullName
+                                        )
+                                    }
+                                }
+                        is SessionResult.HasNoActiveSession -&gt; redirectToLogin()
+                    }
+                },
+                onError = {
+                    toast(&#34;Error trying to get session&#34;)
+                }
+            )
+```)
+---&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;integração-ios&#34;&gt;Integração iOS&lt;/h2&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;contato-1&#34;&gt;&lt;strong&gt;Contato&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;Se durante a integração encontrar algum problema ou ponto de melhoria entre em contato com a gente através da ferramenta de suporte.&lt;/p&gt;
+&lt;h5 id=&#34;instalação&#34;&gt;&lt;strong&gt;Instalação&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;h6 id=&#34;requisitos&#34;&gt;&lt;strong&gt;Requisitos&lt;/strong&gt;&lt;/h6&gt;
+&lt;ul&gt;
+&lt;li&gt;iOS 10.0&lt;/li&gt;
+&lt;li&gt;Xcode 11.7&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;h6 id=&#34;configuração&#34;&gt;&lt;strong&gt;Configuração&lt;/strong&gt;&lt;/h6&gt;
+&lt;p&gt;Antes de começar a usar o ContaStoneSDK é necessário seguir alguns procedimentos:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/stone-co/conta-stone-sdk-sample-ios/releases/tag/0.2.0&#34;&gt;Baixe o arquivo zip&lt;/a&gt; no link com os frameworks necessários.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Extraia a pasta Frameworks no diretório raiz do projeto.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;No target do projeto acesse a guia &lt;code&gt;General&lt;/code&gt; e em &lt;code&gt;Frameworks, Libraries, and Embedded Content&lt;/code&gt; adicione os frameworks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ContaStoneSDK.framework&lt;/li&gt;
+&lt;li&gt;CryptoSwift.framework&lt;/li&gt;
+&lt;li&gt;JOSESwift.framework&lt;/li&gt;
+&lt;li&gt;TinyConstraints.framework&lt;/li&gt;
+&lt;li&gt;XCoordinator.framework&lt;/li&gt;
+&lt;/ul&gt;
+ &lt;br&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Na guia &lt;code&gt;Build Settings&lt;/code&gt;, em &lt;code&gt;Build Options&lt;/code&gt;, selecione &lt;code&gt;NO&lt;/code&gt; para a configuração &lt;code&gt;Enable Bitcode&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Na guia &lt;code&gt;Build Settings&lt;/code&gt;, em &lt;code&gt;Runpath Search Paths&lt;/code&gt;, adicione a entrada &lt;code&gt;@executable_path/Frameworks/ContaStoneSDK.framework/Frameworks/&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Logo abaixo em &lt;code&gt;Framework Search Paths&lt;/code&gt;, adicione a entrada &lt;code&gt;$(PROJECT_DIR)/Frameworks/ContaStoneSDK.framework/Frameworks/&lt;/code&gt; no modo recursivo.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Em &lt;code&gt;Build Phases&lt;/code&gt; adicione um novo script chamado &amp;ldquo;Sign&amp;rdquo; (Em Build Phases, clique sinal de &amp;ldquo;mais&amp;rdquo; e selecione New Run Script Phase).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;pushd ${TARGET_BUILD_DIR}&lt;span style=&#34;color:#ff79c6&#34;&gt;/&lt;/span&gt;${PRODUCT_NAME}&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;app&lt;span style=&#34;color:#ff79c6&#34;&gt;/&lt;/span&gt;Frameworks&lt;span style=&#34;color:#ff79c6&#34;&gt;/&lt;/span&gt;ContaStoneSDK&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;framework&lt;span style=&#34;color:#ff79c6&#34;&gt;/&lt;/span&gt;Frameworks
+
+&lt;span style=&#34;color:#ff79c6&#34;&gt;for&lt;/span&gt; EACH &lt;span style=&#34;color:#ff79c6&#34;&gt;in&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*.&lt;/span&gt;framework; do
+	echo &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;-- signing ${EACH}&amp;#34;&lt;/span&gt;
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;/&lt;/span&gt;usr&lt;span style=&#34;color:#ff79c6&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;bin&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;/&lt;/span&gt;codesign &lt;span style=&#34;color:#ff79c6&#34;&gt;--&lt;/span&gt;force &lt;span style=&#34;color:#ff79c6&#34;&gt;--&lt;/span&gt;deep &lt;span style=&#34;color:#ff79c6&#34;&gt;--&lt;/span&gt;sign &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;${EXPANDED_CODE_SIGN_IDENTITY}&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;--&lt;/span&gt;entitlements &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;${TARGET_TEMP_DIR}/${PRODUCT_NAME}.app.xcent&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;--&lt;/span&gt;timestamp&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;none
+	$EACH
+done
+
+popd
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;Adicione dependências:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;//&lt;/span&gt; Cocoapods
+
+pod &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;Alamofire&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;4.8.2&amp;#39;&lt;/span&gt;
+pod &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;RxSwift&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;~&amp;gt; 5&amp;#39;&lt;/span&gt;
+pod &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;RxCocoa&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;~&amp;gt; 5&amp;#39;&lt;/span&gt;
+pod &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;lottie-ios&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;3.1.6&amp;#39;&lt;/span&gt;
+pod &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;AloeStackView&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;1.2.0&amp;#39;&lt;/span&gt;
+
+&lt;span style=&#34;color:#ff79c6&#34;&gt;//&lt;/span&gt; Carthage
+
+github &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Alamofire/Alamofire&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;4.8.2&amp;#34;&lt;/span&gt;
+github &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ReactiveX/RxSwift&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;5.1.1&amp;#34;&lt;/span&gt;
+github &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;airbnb/lottie-ios&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;3.1.6&amp;#34;&lt;/span&gt;
+github &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;airbnb/AloeStackView&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;v1.2.0&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;uso&#34;&gt;&lt;strong&gt;USO&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;h6 id=&#34;configurando-o-appdelegate&#34;&gt;&lt;strong&gt;Configurando o AppDelegate&lt;/strong&gt;&lt;/h6&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; UIKit
+&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; ContaStoneSDK
+
+@UIApplicationMain
+&lt;span style=&#34;color:#ff79c6&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;AppDelegate&lt;/span&gt;: UIResponder, UIApplicationDelegate {
+	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;LaunchOptionsKey: Any]?) &lt;span style=&#34;color:#ff79c6&#34;&gt;-&amp;gt;&lt;/span&gt; Bool {
+		ContaStone&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;configure(
+			&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;id&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;john.doe@openbank.com&amp;#34;&lt;/span&gt;,
+			scopes: [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;offline_access&amp;#34;&lt;/span&gt;],
+			environmentType: &lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;sandbox, &lt;span style=&#34;color:#ff79c6&#34;&gt;//&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;homol, &lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;sandbox, &lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;production
+			delegate: self
+		)
+
+		&lt;span style=&#34;color:#ff79c6&#34;&gt;return&lt;/span&gt; true
+	}
+}
+
+extension AppDelegate: ContaStoneDelegate {
+	func refreshApp() {}
+	func sessionRevoked() {}
+	func loggedOut() {}
+	func showHelpCenter() {}
+	func showChat() {}
+	func showFrequentlyAskedQuestions() {}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;autenticação&#34;&gt;&lt;strong&gt;Autenticação&lt;/strong&gt;&lt;/h6&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; UIKit
+&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; ContaStoneSDK
+
+&lt;span style=&#34;color:#ff79c6&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;ViewController&lt;/span&gt;: UIViewController {
+	func checkAuthenticationState() {
+		&lt;span style=&#34;color:#ff79c6&#34;&gt;if&lt;/span&gt; ContaStone&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;isAuthenticated {
+			ContaStone&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;currentAcount&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;name &lt;span style=&#34;color:#ff79c6&#34;&gt;//&lt;/span&gt; John Doe Inc
+		} &lt;span style=&#34;color:#ff79c6&#34;&gt;else&lt;/span&gt; {
+			ContaStone&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;login(checkKYC: true) { &lt;span style=&#34;color:#ff79c6&#34;&gt;/*&lt;/span&gt; callback &lt;span style=&#34;color:#ff79c6&#34;&gt;*/&lt;/span&gt; }
+		}
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;logout&#34;&gt;&lt;strong&gt;Logout&lt;/strong&gt;&lt;/h6&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; UIKit
+&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; ContaStoneSDK
+
+&lt;span style=&#34;color:#ff79c6&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;ViewController&lt;/span&gt;: UIViewController {
+	func logout() {
+		ContaStone&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;logout { &lt;span style=&#34;color:#ff79c6&#34;&gt;/*&lt;/span&gt; callback &lt;span style=&#34;color:#ff79c6&#34;&gt;*/&lt;/span&gt; }
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!---
+##### **Aprovador**
+
+```python
+	var approverCoordinator: ApproverCoordinator?
+
+	func showApprover() {
+        let coordiantor = ApproverCoordinator() { _ in
+            self.approverCoordinator = nil
+        }
+        present(coordiantor.rootViewController, animated: true, completion: nil)
+
+        approverCoordinator = coordiantor // Holds the instance
+	}
+```
+---&gt;
+&lt;h6 id=&#34;requisições&#34;&gt;&lt;strong&gt;Requisições&lt;/strong&gt;&lt;/h6&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;ViewController&lt;/span&gt;: UIViewController {
+	func fetchBalance() {
+	   let &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;id&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; ContaStone&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;currentAcount&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;id
+	   let endpoint &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; Endpoint&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;lt;&lt;/span&gt;BalanceResponse&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;gt;&lt;/span&gt;(method: &lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;get, path: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;/api/v1/accounts/\(id)/balance&amp;#34;&lt;/span&gt;)
+
+	   ContaStone&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;performRequest(endpoint) { result &lt;span style=&#34;color:#ff79c6&#34;&gt;in&lt;/span&gt;
+			switch result {
+			case &lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;success(let response):
+				&lt;span style=&#34;color:#ff79c6&#34;&gt;/*&lt;/span&gt; callback &lt;span style=&#34;color:#ff79c6&#34;&gt;*/&lt;/span&gt;
+
+			case &lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;failure(let error):
+				&lt;span style=&#34;color:#ff79c6&#34;&gt;/*&lt;/span&gt; callback &lt;span style=&#34;color:#ff79c6&#34;&gt;*/&lt;/span&gt;
+		   }
+	   }
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;h5 id=&#34;exemplo&#34;&gt;&lt;strong&gt;Exemplo&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;Antes de abrir o projeto de exemplo, é necessário executar o script de bootstrap.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;./bootstrap
+open Sample.xcworkspace
+&lt;/code&gt;&lt;/pre&gt;
       </description>
     </item>
     

@@ -144,7 +144,8 @@ content-type: application/json
 &lt;p&gt;Filtra contatos pelo código da conta fornecido.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;institution_code&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Filtra contatos pelo código da instituição fornecido.&lt;/p&gt;
-&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;pix_key&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;filtra-contatos-pela-chave-pix-fornecida&#34;&gt;Filtra contatos pela chave Pix fornecida.&lt;/h2&gt;
 &lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;200 ok
 content-type: application/json
@@ -154,9 +155,11 @@ content-type: application/json
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;bank_accounts&amp;#34;&lt;/span&gt;: [
       {
         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;35746698&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;PG&amp;#34;&lt;/span&gt;,
         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;00001&amp;#34;&lt;/span&gt;,
         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;1ede2f26-28cd-462b-a7ea-429960c8480b&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;197&amp;#34;&lt;/span&gt;
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;197&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;pix_key&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;
       }
     ],
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;email&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;contactemail@empresaxyz.com&amp;#34;&lt;/span&gt;,
@@ -169,9 +172,19 @@ content-type: application/json
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;bank_accounts&amp;#34;&lt;/span&gt;: [
       {
         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;883841975&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;PG&amp;#34;&lt;/span&gt;,
         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;0001&amp;#34;&lt;/span&gt;,
         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;5b332a1b-57ef-4398-bb9c-79011cc6c58e&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;197&amp;#34;&lt;/span&gt;
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;197&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;pix_key&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;
+      },
+      {
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;779351b1-4827-4498-9516-c7871254d514&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;pix_key&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;345b96ef-9c35-46bc-aab1-c38740c205e2&amp;#34;&lt;/span&gt;
       }
     ],
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;email&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;tyson@huber.com&amp;#34;&lt;/span&gt;,
@@ -221,15 +234,34 @@ content-type: application/json
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;bank_accounts&amp;#34;&lt;/span&gt;: [
     {
       &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;4567864&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;PG&amp;#34;&lt;/span&gt;,
       &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;1234&amp;#34;&lt;/span&gt;,
       &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;9145a75a-f86b-4cc5-bcfe-64b658c610b6&amp;#34;&lt;/span&gt;,
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;00000000&amp;#34;&lt;/span&gt;
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;00000000&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;pix_key&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;
     },
     {
       &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;106497993&amp;#34;&lt;/span&gt;,
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;PG&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;0001&amp;#34;&lt;/span&gt;,
       &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;f125f6ff-4f63-4735-92c4-f89754ed2826&amp;#34;&lt;/span&gt;,
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;16501555&amp;#34;&lt;/span&gt;
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;16501555&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution&amp;#34;&lt;/span&gt;: {
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;compe&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;197&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;ispb&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;16501555&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Stone Pagamentos S.A.&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;spi_participant&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;true&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;str_participant&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;true&lt;/span&gt;
+      },
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;pix_key&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;
+    },
+    {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;acc162c9-0850-478f-98cc-cb73b834941c&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;pix_key&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;dff85252-88ed-4ceb-8ced-4bdecd3f0d39&amp;#34;&lt;/span&gt;
     }
   ],
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;email&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
@@ -349,11 +381,17 @@ content-type: application/json
 &lt;p&gt;&lt;strong&gt;account_code&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Número da conta.&lt;/p&gt;
 &lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;account_type&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Tipo da conta bancária.&lt;/p&gt;
+&lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;branch_code&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Número da agência bancária.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;institution_code&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Número da instituição.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;pix_key&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Chave Pix do contato.&lt;/p&gt;
 &lt;br&gt;
 &lt;hr&gt;
 &lt;h4 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h4&gt;
@@ -368,9 +406,11 @@ content-type: application/json
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;4567864&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;PG&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;1234&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;9145a75a-f86b-4cc5-bcfe-64b658c610b6&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;00000000&amp;#34;&lt;/span&gt;
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;00000000&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;pix_key&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
@@ -404,11 +444,17 @@ content-type: application/json
 &lt;p&gt;&lt;strong&gt;account_code&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Número da conta bancária.&lt;/p&gt;
 &lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;account_type&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Tipo da conta bancária.&lt;/p&gt;
+&lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;branch_code&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Número da agência bancária.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;institution_code&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Número da instituição.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;pix_key&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Chave Pix do contato.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h4 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
@@ -424,7 +470,9 @@ content-type: application/json
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;e43e3003-c587-4cb8-ab37-b374fe0d157f&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;1234&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;197&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;4567864&amp;#34;&lt;/span&gt;
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;4567864&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;PG&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;pix_key&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>

@@ -257,6 +257,38 @@ authorization&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; Bearer eyJ
     </item>
     
     <item>
+      <title>Docs: Valores Percentuais</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/valores-percentuais/</link>
+      <pubDate>Fri, 25 Jun 2021 10:52:05 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/valores-percentuais/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;Alguns endpoints precisam receber ou retornar valores percentuais. Para evitar problemas de
+representação e de arredondamento, convencionamos de usar uma estrutura pra evitar
+strings e floats.&lt;/p&gt;
+&lt;p&gt;A estrutura tem o seguinte formato:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;coeficient&lt;/strong&gt;* &lt;code&gt;int32&lt;/code&gt;
+&lt;br&gt; Coeficiente do cálculo do percentual&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;exponent&lt;/strong&gt;* &lt;code&gt;int32&lt;/code&gt;
+&lt;br&gt; Expoente do cálculo do percentual&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Essa estrutura é usada com a fórmula&lt;/p&gt;
+&lt;script type=&#34;text/javascript&#34;
+  src=&#34;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;&gt;
+&lt;/script&gt;
+&lt;p&gt;$$percentage = coeficient*10^{exponent}$$&lt;/p&gt;
+&lt;p&gt;Por definição 100% = 100 * (1/100) = 1. De forma análoga, 70% pode ser representado como
+&lt;code&gt;coefficient = 70, exponent = -2&lt;/code&gt;, ou como &lt;code&gt;coefficient = 7, exponent = -1&lt;/code&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Valores Financeiros</title>
       <link>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/valores-financeiros/</link>
       <pubDate>Sun, 03 May 2020 18:32:57 -0300</pubDate>

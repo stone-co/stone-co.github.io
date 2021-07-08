@@ -14,42 +14,5 @@
       
     
     
-    <item>
-      <title>Docs: Overview</title>
-      <link>https://stone-co.github.io/docs/guias/aprovacao/overview/</link>
-      <pubDate>Mon, 28 Jun 2021 09:00:00 -0300</pubDate>
-      
-      <guid>https://stone-co.github.io/docs/guias/aprovacao/overview/</guid>
-      <description>
-        
-        
-        &lt;br&gt;
-&lt;p&gt;No Open Banking, uma plataforma poderá criar uma transação na conta do usuário, mas esta só será efetuada se houver a aprovação do usuário dono da conta. Esse procedimento assegura ao dono da conta que não haverá movimentação de seu dinheiro sem sua permissão, além de proteger a aplicação de eventuais erros, ataques ou bugs que iniciem transações não desejadas pelo usuário.&lt;/p&gt;
-&lt;p&gt;A Aprovação de uma Transação tem como objetivo garantir que toda movimentação financeira de saída de uma conta seja feita somente por um usuário devidamente autorizado. É um procedimento em que o usuário que já concedeu o consentimento é notificado da criação de uma transação e direcionado para uma página onde é possível visualizar todas as transações criadas pelo parceiro. Nessa página é possível aprovar ou rejeitar uma transação, possibilitando ou impedindo sua realização. É importante lembrar que apenas aplicativos que tenham obtido &lt;a href=&#34;https://stone-co.github.io/docs/guias/consentimento/overview/&#34;&gt;consentimento&lt;/a&gt; podem criar transações.&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Aprovando uma Transação</title>
-      <link>https://stone-co.github.io/docs/guias/aprovacao/aprovando-uma-transacao/</link>
-      <pubDate>Mon, 28 Jun 2021 09:00:00 -0300</pubDate>
-      
-      <guid>https://stone-co.github.io/docs/guias/aprovacao/aprovando-uma-transacao/</guid>
-      <description>
-        
-        
-        &lt;br&gt;
-&lt;p&gt;Caso uma transação tenha sido iniciada por uma plataforma terceira em uma conta Stone, oferecemos algumas formas ao usuário para que o mesmo possa avaliar e realizar a aprovação ou reprovação das transações. Verifique o melhor formato para seu negócio abaixo:&lt;/p&gt;
-&lt;h5 id=&#34;aplicativo-aprovador&#34;&gt;&lt;strong&gt;Aplicativo Aprovador&lt;/strong&gt;&lt;/h5&gt;
-&lt;p&gt;O Aprovador é um aplicativo utilizado pelo usuário para realizar a autorização de transações criadas pelo parceiro. Além disso, através do aplicativo é possível manter um histórico de movimentação de saída de uma conta. Nesse histórico é possível visualizar os valores movimentados, o destino das movimentações e o usuário que autorizou as transações. É possível também utilizá-lo para realizar aprovações em lote, ou seja, aprovar um grande número de transações pendentes ao mesmo tempo.
-Baixe agora o aplicativo na plataforma &lt;a href=&#34;https://apps.apple.com/br/app/aprovador-stone/id1440677386&#34;&gt;iOs&lt;/a&gt; ou &lt;a href=&#34;https://play.google.com/store/apps/details?id=br.com.stone.approver&amp;amp;hl=pt_BR&amp;amp;gl=US&#34;&gt;Android&lt;/a&gt;&lt;/p&gt;
-&lt;br&gt;
-&lt;h5 id=&#34;aplicativo-stone&#34;&gt;&lt;strong&gt;Aplicativo Stone&lt;/strong&gt;&lt;/h5&gt;
-&lt;p&gt;Além de aprovar transações pelo aplicativo Aprovador Stone, também é possível aprovar pelo aplicativo Stone, no menu “Aprovar transações”. Para baixar o aplicativo na plataforma iOS, &lt;a href=&#34;https://apps.apple.com/br/app/stone/id1438680035&#34;&gt;clique aqui&lt;/a&gt;. Tem um Android? Também temos um aplicativo para você &lt;a href=&#34;https://play.google.com/store/apps/details?id=co.stone.banking.mobile.flagship&amp;amp;hl=pt_BR&amp;amp;gl=US&#34;&gt;clicando aqui&lt;/a&gt;&lt;/p&gt;
-
-      </description>
-    </item>
-    
   </channel>
 </rss>
