@@ -327,7 +327,7 @@ Este request deverá ser realizado nas seguintes URLs (por ambiente):
 &lt;h2 id=&#34;abertura-de-conta&#34;&gt;Abertura de Conta&lt;/h2&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;envio-de-dados-cadastrais&#34;&gt;&lt;strong&gt;Envio de Dados Cadastrais&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;O processo de abertura de conta será iniciado quando o usuário preencher os dados básicos de cadastro para criação de sua identidade na Stone. A identidade é o perfil do usuário na Stone e será gerido sempre por nós. Os dados solicitados nesta etapa serão Nome Completo, CPF, CNPJ, Razão Social e E-mail.&lt;/p&gt;
+&lt;p&gt;O processo de abertura de conta será iniciado quando o usuário preencher os dados básicos de cadastro para criação de sua identidade na Stone. A identidade é o perfil do usuário na Stone e será gerida sempre por nós. Os dados solicitados nesta etapa serão Nome Completo, CPF, CNPJ, Razão Social e E-mail.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Atenção!&lt;/strong&gt;
 &lt;br&gt;Para contas do tipo Pessoa Jurídica, a abertura deverá ser feita obrigatoriamente por um sócio ou responsável legal. Dependendo do tipo de cadastro, poderemos solicitar ainda alguns documentos como comprovante de MEI, Registro em Junta Comercial, entre outros.&lt;/p&gt;
 &lt;p&gt;O recebimento dos dados iniciais pela Stone pode ser feito via aplicativo (&lt;a href=&#34;https://apps.apple.com/br/app/stone/id1438680035&#34;&gt;iOS&lt;/a&gt; e &lt;a href=&#34;https://play.google.com/store/apps/details?id=co.stone.banking.mobile.flagship&amp;amp;hl=pt_BR&amp;amp;gl=US&#34;&gt;Android&lt;/a&gt;) com o usuário dono da conta realizando o processo de preenchimento diretamente pelo app ou pode ser feito por API, caso você seja uma plataforma e queira oferecer o &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/criar-nova-conta-de-pagamento/&#34;&gt;processo de abertura de conta Stone&lt;/a&gt; em seu produto.
@@ -353,7 +353,11 @@ Para plataformas que queiram oferecer o processo de abertura de conta Stone de m
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;user_id&lt;/td&gt;
-&lt;td&gt;Identificador que se refere ao seu perfil na Stone contendo informações cadastrais como nome, sobrenome e CPF ou CNPJ.&lt;/td&gt;
+&lt;td&gt;Identificador que se refere à sua pessoa física (PF) na Stone contendo informações cadastrais como nome, sobrenome e CPF.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;organization_id&lt;/td&gt;
+&lt;td&gt;Identificador que se refere à sua pessoa jurídica (PJ) na Stone contendo informações cadastrais como faturamento mensal e CNPJ.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;account_id&lt;/td&gt;

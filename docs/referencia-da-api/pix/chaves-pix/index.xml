@@ -1,0 +1,258 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stone OpenBank – Chaves Pix</title>
+    <link>https://stone-co.github.io/docs/referencia-da-api/pix/chaves-pix/</link>
+    <description>Recent content in Chaves Pix on Stone OpenBank</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 15 Jul 2021 14:00:00 -0300</lastBuildDate>
+    
+	  <atom:link href="https://stone-co.github.io/docs/referencia-da-api/pix/chaves-pix/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Listar chaves Pix</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pix/chaves-pix/listar-chaves-pix/</link>
+      <pubDate>Thu, 15 Jul 2021 14:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/chaves-pix/listar-chaves-pix/</guid>
+      <description>
+        
+        
+        &lt;br&gt;
+&lt;p&gt;Para listar as chaves de uma conta, você deve utilizar o endpoint abaixo:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;GET /api/v1/pix/{{account_id}}/entries
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Chave de idempotência&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;authorization&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Bearer Token&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;User-Agent&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Nome da sua aplicacão&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;query-params&#34;&gt;&lt;strong&gt;QUERY PARAMS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Identificador da conta
+&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;RESPONSE&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;200 OK
+&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;Body&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cursor: {},
+&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;  &amp;#34;&lt;/span&gt;data&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;: [
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;    {
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;      &amp;#34;&lt;/span&gt;id&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;: d990cc41-e514-4343-a84c-80c677102b17,
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;      &amp;#34;&lt;/span&gt;key&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;: “+5510998765432”, 
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;      &amp;#34;&lt;/span&gt;key_type&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;: &amp;#34;&lt;/span&gt;phone&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;,
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;      &amp;#34;&lt;/span&gt;key_status&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;: &amp;#34;&lt;/span&gt;active&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;,
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;      &amp;#34;&lt;/span&gt;account_id&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;: &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;968&lt;/span&gt;cc&lt;span style=&#34;color:#bd93f9&#34;&gt;34&lt;/span&gt;d-d&lt;span style=&#34;color:#bd93f9&#34;&gt;827-448&lt;/span&gt;b-ac&lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;b-e&lt;span style=&#34;color:#bd93f9&#34;&gt;6e29836&lt;/span&gt;a&lt;span style=&#34;color:#bd93f9&#34;&gt;160&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;,
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;      &amp;#34;&lt;/span&gt;participant_ispb&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;: “1234567890”,
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;      &amp;#34;&lt;/span&gt;beneficiary_account&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;: {
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;        &amp;#34;&lt;/span&gt;branch_code&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;: “0001”,
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;        &amp;#34;&lt;/span&gt;account_code&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;: &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;00016583&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;,
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;        &amp;#34;&lt;/span&gt;account_type&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;: &amp;#34;&lt;/span&gt;CC&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;,
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;        &amp;#34;&lt;/span&gt;created_at&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;: &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;2019-11-18&lt;/span&gt;T&lt;span style=&#34;color:#bd93f9&#34;&gt;03&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;00&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;00&lt;/span&gt;Z&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;      },
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;      &amp;#34;&lt;/span&gt;beneficiary_entity&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;: {
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;        &amp;#34;&lt;/span&gt;name&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;:&amp;#34;&lt;/span&gt;Maria Clara Gomes&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;,
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;        &amp;#34;&lt;/span&gt;document_type&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;: &amp;#34;&lt;/span&gt;cpf&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;,
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;        &amp;#34;&lt;/span&gt;document&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;: “13152256685”
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;      }
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;    },
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;    {
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;      &amp;#34;&lt;/span&gt;id&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;: 8544718e-3c76-49ab-bc69-b367d2654a08,
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;      &amp;#34;&lt;/span&gt;key&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;: “lucas@stone.com.br”, 
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;      &amp;#34;&lt;/span&gt;key_type&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;: &amp;#34;&lt;/span&gt;email&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;,
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;      &amp;#34;&lt;/span&gt;key_status&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;: &amp;#34;&lt;/span&gt;active&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;,
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;      &amp;#34;&lt;/span&gt;account_id&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;: &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;968&lt;/span&gt;cc&lt;span style=&#34;color:#bd93f9&#34;&gt;34&lt;/span&gt;d-d&lt;span style=&#34;color:#bd93f9&#34;&gt;827-448&lt;/span&gt;b-ac&lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;b-e&lt;span style=&#34;color:#bd93f9&#34;&gt;6e29836&lt;/span&gt;a&lt;span style=&#34;color:#bd93f9&#34;&gt;160&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;,
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;      &amp;#34;&lt;/span&gt;participant_ispb&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;: “1234567890”,
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;      &amp;#34;&lt;/span&gt;beneficiary_account&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;: {
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;        &amp;#34;&lt;/span&gt;branch_code&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;: “0001”,
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;        &amp;#34;&lt;/span&gt;account_code&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;: &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;00016576&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;,
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;        &amp;#34;&lt;/span&gt;account_type&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;: &amp;#34;&lt;/span&gt;CC&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;,
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;        &amp;#34;&lt;/span&gt;created_at&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;: &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;2019-12-03&lt;/span&gt;T&lt;span style=&#34;color:#bd93f9&#34;&gt;03&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;00&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;00&lt;/span&gt;Z&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;      },
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;      &amp;#34;&lt;/span&gt;beneficiary_entity&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;: {
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;        &amp;#34;&lt;/span&gt;name&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;:&amp;#34;&lt;/span&gt;Lucas Costa&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;,
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;        &amp;#34;&lt;/span&gt;document_type&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;: &amp;#34;&lt;/span&gt;cpf&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;,
+&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;        &amp;#34;&lt;/span&gt;document&amp;#34;: “&lt;span style=&#34;color:#bd93f9&#34;&gt;31152256696&lt;/span&gt;”
+      }
+    }
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Excluir chave Pix</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pix/chaves-pix/excluir-uma-chave-pix/</link>
+      <pubDate>Thu, 15 Jul 2021 14:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/chaves-pix/excluir-uma-chave-pix/</guid>
+      <description>
+        
+        
+        &lt;br&gt;
+&lt;p&gt;Para deletar uma chave Pix você deve usar o endpoint abaixo:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;DELETE /api/v1/pix/{{account_id}}/entries/{{id}}
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Chave de idempotência&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;authorization&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Bearer Token&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;User-Agent&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Nome da sua aplicacão&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;query-params&#34;&gt;&lt;strong&gt;QUERY PARAMS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Identificador da conta&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;id&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Identificador da chave a ser deletada. Caso não saiba o &lt;code&gt;id&lt;/code&gt; da chave, liste as chaves da conta por esse &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/pix/chaves-pix/listar-chaves-pix/&#34;&gt;endpoint&lt;/a&gt; e pegue o &lt;code&gt;id&lt;/code&gt;.
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h5 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;Na requisição deve-se informar informar a razão pela qual deseja excluir aquela chave:&lt;br&gt;
+Exemplo: &amp;ldquo;reason&amp;rdquo;: &amp;ldquo;user_requested&amp;rdquo; - significa que foi um pedido da cliente final&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key_type&amp;#34;&lt;/span&gt;: “phone”,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;participant_ispb&amp;#34;&lt;/span&gt;: “&lt;span style=&#34;color:#bd93f9&#34;&gt;1234567890&lt;/span&gt;”,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;beneficiary_account&amp;#34;&lt;/span&gt;: {
+     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;: “&lt;span style=&#34;color:#bd93f9&#34;&gt;0001&lt;/span&gt;”,
+     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;00016583&amp;#34;&lt;/span&gt;,
+     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;CC&amp;#34;&lt;/span&gt;,
+     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;opened_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2019-11-18T03:00:00Z&amp;#34;&lt;/span&gt;
+  },
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user_requested&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;RESPONSE&lt;/strong&gt;&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;202 ACCEPTED
+content-type: application/json
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Body&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;{
+  &amp;#34;id&amp;#34;: “4b612bce-f964-11ea-adc1-0242ac120002”
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+&lt;h5 id=&#34;webhook-de-exclusão-de-uma-chave&#34;&gt;&lt;strong&gt;Webhook de exclusão de uma chave&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;Serão disparados webhooks quando o status da solicitação sofrer alterações, são eles:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;pix_entries_delete_requested&lt;/strong&gt; : requisição de exclusão feita e em andamento&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;pix_entries_deleted&lt;/strong&gt; : chave deletada&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;pix_entries_deletion_failed&lt;/strong&gt; : falha na exclusão da chave&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Veja &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/pix/#status-de-um-pix&#34;&gt;aqui&lt;/a&gt; os possíveis status para uma solicitação.&lt;/p&gt;
+&lt;p&gt;As seguintes informações virão no campo &lt;code&gt;target_data&lt;/code&gt; dos webhooks:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: “&lt;span style=&#34;color:#bd93f9&#34;&gt;4&lt;/span&gt;b&lt;span style=&#34;color:#bd93f9&#34;&gt;612&lt;/span&gt;bce-f&lt;span style=&#34;color:#bd93f9&#34;&gt;964-11&lt;/span&gt;ea-adc&lt;span style=&#34;color:#bd93f9&#34;&gt;1-0242&lt;/span&gt;ac&lt;span style=&#34;color:#bd93f9&#34;&gt;120002&lt;/span&gt;”
+  “key”: “+&lt;span style=&#34;color:#bd93f9&#34;&gt;5510998765432&lt;/span&gt;”,
+  “key_type”: &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;phone&amp;#34;&lt;/span&gt;
+  “key_status”: “deleted”,
+  “beneficiary_id”: “bad7ab7e-f95d-11ea-adc1-0242ac120002”,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: “&lt;span style=&#34;color:#bd93f9&#34;&gt;20200&lt;/span&gt;- &lt;span style=&#34;color:#bd93f9&#34;&gt;09-18&lt;/span&gt;T&lt;span style=&#34;color:#bd93f9&#34;&gt;03&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;00&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;00&lt;/span&gt;Z”,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;error_description&amp;#34;&lt;/span&gt;: “”,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: “accepted&amp;#34;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Detalhar chave Pix</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pix/chaves-pix/detalhar-uma-chave-pix/</link>
+      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/chaves-pix/detalhar-uma-chave-pix/</guid>
+      <description>
+        
+        
+        &lt;br&gt;
+Esse endpoint deve ser chamado para detalhar uma chave Pix. &lt;br&gt;&lt;br&gt;
+&lt;pre&gt;&lt;code&gt;GET /api/v1/pix/{{account_id}}/entries/{{id}}?participant_ispb=xxxx
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Chave de idempotência&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;authorization&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Bearer Token&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;User-Agent&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Nome da sua aplicacão&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;query-params&#34;&gt;&lt;strong&gt;QUERY PARAMS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Identificador da conta&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;id&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Identificador da chave a ser deletada. Caso não saiba o &lt;code&gt;id&lt;/code&gt; da chave, liste as chaves da conta por esse &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/pix/chaves-pix/listar-chaves-pix/&#34;&gt;endpoint&lt;/a&gt; e pegue o &lt;code&gt;id&lt;/code&gt;.
+&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Parâmetros (filtros) para a query:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;participant_ispb&amp;rdquo; *(obrigatório para participantes indiretos)&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;beneficiary_entity_name&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;beneficiary_entity_document_type&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;beneficiary_entity_document&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;beneficiary_account_branch_code&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;beneficiary_account_account_code&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;beneficiary_account_account_type&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;beneficiary_account_created_at&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;status&amp;rdquo;
+&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;RESPONSE&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;200 OK
+&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;Body&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: d&lt;span style=&#34;color:#bd93f9&#34;&gt;990&lt;/span&gt;cc&lt;span style=&#34;color:#bd93f9&#34;&gt;41&lt;/span&gt;-e&lt;span style=&#34;color:#bd93f9&#34;&gt;514-4343&lt;/span&gt;-a&lt;span style=&#34;color:#bd93f9&#34;&gt;84&lt;/span&gt;c&lt;span style=&#34;color:#bd93f9&#34;&gt;-80&lt;/span&gt;c&lt;span style=&#34;color:#bd93f9&#34;&gt;677102&lt;/span&gt;b&lt;span style=&#34;color:#bd93f9&#34;&gt;17&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;: “+&lt;span style=&#34;color:#bd93f9&#34;&gt;5510998765432&lt;/span&gt;”, 
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;phone&amp;#34;&lt;/span&gt;, 
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key_status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;active&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;968cc34d-d827-448b-ac1b-e6e29836a160&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;participant_ispb&amp;#34;&lt;/span&gt;: “&lt;span style=&#34;color:#bd93f9&#34;&gt;1234567890&lt;/span&gt;”,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;beneficiary_account&amp;#34;&lt;/span&gt;: {
+     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;: “&lt;span style=&#34;color:#bd93f9&#34;&gt;0001&lt;/span&gt;”,
+     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;00016583&amp;#34;&lt;/span&gt;,
+     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;CC&amp;#34;&lt;/span&gt;,
+     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2019-11-18T03:00:00Z&amp;#34;&lt;/span&gt;
+  },
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;beneficiary_entity&amp;#34;&lt;/span&gt;: {
+     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Maria Clara Gomes&amp;#34;&lt;/span&gt;,
+     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;,
+     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;: “&lt;span style=&#34;color:#bd93f9&#34;&gt;13152256685&lt;/span&gt;”
+  }, 
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;events&amp;#34;&lt;/span&gt;: [
+    {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;38963369-533&lt;/span&gt;c&lt;span style=&#34;color:#bd93f9&#34;&gt;-42&lt;/span&gt;aa-a&lt;span style=&#34;color:#bd93f9&#34;&gt;49&lt;/span&gt;e-b&lt;span style=&#34;color:#bd93f9&#34;&gt;5369&lt;/span&gt;ff&lt;span style=&#34;color:#bd93f9&#34;&gt;4&lt;/span&gt;bd&lt;span style=&#34;color:#bd93f9&#34;&gt;52&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;20200-09-18T03:00:00Z&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;created&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;from_status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;to_status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;active&amp;#34;&lt;/span&gt;
+    },
+    {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;7&lt;/span&gt;eb&lt;span style=&#34;color:#bd93f9&#34;&gt;6&lt;/span&gt;ee&lt;span style=&#34;color:#bd93f9&#34;&gt;15-1485-468&lt;/span&gt;a-ad&lt;span style=&#34;color:#bd93f9&#34;&gt;38-411320878815&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: “&lt;span style=&#34;color:#bd93f9&#34;&gt;20200-09-22&lt;/span&gt;T&lt;span style=&#34;color:#bd93f9&#34;&gt;03&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;00&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;00&lt;/span&gt;Z”,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;deleted&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;from_status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;active&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;to_status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;deleted&amp;#34;&lt;/span&gt;
+    }
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

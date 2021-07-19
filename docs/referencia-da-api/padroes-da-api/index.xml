@@ -4,7 +4,7 @@
     <link>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/</link>
     <description>Recent content in PADRÕES DA API on Stone OpenBank</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 13 May 2020 18:00:00 -0300</lastBuildDate>
+    <lastBuildDate>Mon, 12 Jul 2021 11:08:00 -0300</lastBuildDate>
     
 	  <atom:link href="https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,95 +13,6 @@
         
       
     
-    
-    <item>
-      <title>Docs: Overview</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/overview/</link>
-      <pubDate>Thu, 07 May 2020 18:06:16 -0300</pubDate>
-      
-      <guid>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/overview/</guid>
-      <description>
-        
-        
-        &lt;hr&gt;
-&lt;br&gt;
-&lt;p&gt;&lt;strong&gt;Sejam bem-vindos à seção de Referências da Stone OpenBank API.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Através da nossa API é possível ter funcionalidades de internet banking e de apps de banco no seu negócio!&lt;/p&gt;
-&lt;br&gt;
-&lt;h4 id=&#34;o-que-é-a-stone-openbank-api&#34;&gt;O que é a Stone OpenBank API&lt;/h4&gt;
-&lt;hr&gt;
-&lt;br&gt;
-&lt;p&gt;Aqui na Stone a gente acredita não apenas que o &lt;strong&gt;cliente&lt;/strong&gt; tem razão, mas que ele &lt;strong&gt;é a nossa razão&lt;/strong&gt;. Somos fiéis defensores da competição e acreditamos que isso melhora o mercado como um todo, o que, por sua vez, melhora a vida da nossa razão.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Foi com base nesse sentimento pró-competição que montamos a Stone OpenBank API: a primeira API de Open Banking plugada diretamente no STR.&lt;/strong&gt;
-A &lt;a href=&#34;https://stone-co.github.io/docs/guias/a-conta-stone/&#34;&gt;Conta Stone&lt;/a&gt; é a nossa oferta para clientes PJ e PF, tanto para aqueles que já pertencem a base da Stone Adquirente, como para aqueles que utilizam outras adquirentes e buscam uma nova forma de se relacionar com sua conta.&lt;/p&gt;
-&lt;p&gt;O Aplicativo da Conta Stone é mais um parceiro da Stone OpenBank API, usando exatamente os mesmos acessos e APIs descritos nesse documento. &amp;quot;Eat your own dogfood&amp;quot; aplicado na prática.&lt;/p&gt;
-&lt;p&gt;Assim como nós pudemos criar o nosso aplicativo de conta em cima dessa API, você pode fazer o mesmo ou integrar as funcionalidades de automação bancária no seu negócio.&lt;/p&gt;
-&lt;br&gt;
-&lt;h4 id=&#34;o-que-oferecemos&#34;&gt;O que oferecemos?&lt;/h4&gt;
-&lt;hr&gt;
-&lt;br&gt;
-&lt;p&gt;Com a API da Conta Stone você pode disponibilizar para os seus clientes:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Consulta de saldos e extratos;&lt;/li&gt;
-&lt;li&gt;Emissão de comprovantes;&lt;/li&gt;
-&lt;li&gt;Envio e recebimento de transferências tanto de outras Contas Stone como de outros bancos via TED;&lt;/li&gt;
-&lt;li&gt;Pagamento e emissão de boletos;&lt;/li&gt;
-&lt;li&gt;Pagamento de concessionárias e tributos;&lt;/li&gt;
-&lt;li&gt;Cadastro de contatos favorecidos para envio de transferências para outros bancos;&lt;/li&gt;
-&lt;li&gt;Folha de Pagamento;&lt;/li&gt;
-&lt;li&gt;Link de Pagamento (Em breve);&lt;/li&gt;
-&lt;li&gt;Pix (Em breve).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;br&gt;
-&lt;h4 id=&#34;como-funciona-a-integração&#34;&gt;Como funciona a integração?&lt;/h4&gt;
-&lt;hr&gt;
-&lt;br&gt;
-&lt;p&gt;Por enquanto, ainda não estamos realizando on-board de parceiros em auto-serviço. Por isso, todos os interessados em firmar parcerias devem entrar em contato com o nosso time de parcerias seguindo os seguintes passos:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Preencha nosso &lt;a href=&#34;https://app.pipefy.com/public/form/Qz4ptt_W/?origem_do_lead=Documenta%C3%A7%C3%A3o&#34;&gt;formulário&lt;/a&gt; para receber as informações necessárias para utilizar nossa API em Sandbox.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;A partir do preenchimento do formulário vamos registrar a sua Aplicação no nosso sistema e enviar as credenciais de acesso para o &lt;a href=&#34;https://stone-co.github.io/docs/guias/stone-openbank-api/ambientes-da-api/&#34;&gt;ambiente de Sandbox&lt;/a&gt;. Além disso, vamos também criar contas de pagamento em Sandbox para você e sua equipe poderem testar a integração.&lt;/p&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;Teste nossas APIS em Sandbox à vontade e, quando estiver pronto, informe ao time de parcerias da Stone através do e-mail &lt;a href=&#34;mailto:parcerias@openbank.stone.com.br&#34;&gt;parcerias@openbank.stone.com.br&lt;/a&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;O processo envolve algumas reuniões presenciais ou por vídeo para a gente entender o melhor &lt;a href=&#34;https://stone-co.github.io/docs/guias/a-conta-stone/modelos-de-parceria/&#34;&gt;modelo de parceria&lt;/a&gt; para o seu negócio.&lt;/p&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;Após tudo integrado, vem a &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/testando-a-api/&#34;&gt;homologação&lt;/a&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;A Stone, com a ajuda do parceiro, vai realizar testes na Aplicação ainda em Sandbox para garantir que tudo funciona conforme o esperado e que nenhum cliente vai ser prejudicado por bugs em Produção.&lt;/p&gt;
-&lt;p&gt;Todo o processo para realização do cadastro se encontra descrito detalhadamente &lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
-&lt;br&gt;
-&lt;h4 id=&#34;como-integrar-com-a-api&#34;&gt;Como integrar com a API&lt;/h4&gt;
-&lt;hr&gt;
-&lt;br&gt;
-&lt;p&gt;Todos os processos e requerimentos para a utilização de nossa API se encontram descritros detalhadamente em nossa &lt;a href=&#34;https://stone-co.github.io/docs/&#34;&gt;Documentação&lt;/a&gt;:&lt;/p&gt;
-&lt;h4 id=&#34;quickstartdocsguiasstone-openbank-apiquickstart&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/stone-openbank-api/quickstart/&#34;&gt;Quickstart&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;Faça a sua primeira movimentação financeira de teste seguindo esses três passos!&lt;/p&gt;
-&lt;h4 id=&#34;ambientes-da-apidocsguiasstone-openbank-apiambientes-da-api&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/stone-openbank-api/ambientes-da-api/&#34;&gt;Ambientes da API&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;Como funcionam nossos ambientes de Sandbox e Produção.&lt;/p&gt;
-&lt;h4 id=&#34;a-conta-stonedocsguiasa-conta-stone&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/a-conta-stone/&#34;&gt;A Conta Stone&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;Como funciona este novo produto da Stone, criado para devolver à cliente o controle de sua conta de pagamentos.&lt;/p&gt;
-&lt;h4 id=&#34;modelos-de-parceriadocsguiasa-conta-stonemodelos-de-parceria&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/a-conta-stone/modelos-de-parceria/&#34;&gt;Modelos de Parceria&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;Como funcionam os principais modelos de parceria que oferecemos para aplicações que desejam integrar com a nossa API.&lt;/p&gt;
-&lt;h4 id=&#34;aplicativosdocsguiasa-conta-stoneaplicativos&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/a-conta-stone/aplicativos/&#34;&gt;Aplicativos&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;O que são os aplicativos desenvolvidos pela Stone e por parceiros.&lt;/p&gt;
-&lt;h4 id=&#34;cadastro-da-aplicaçãodocsguiasintegracaocadastro-da-aplicacao&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/cadastro-da-aplicacao/&#34;&gt;Cadastro da Aplicação&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;Passo a passo para obter acesso e conseguir se autenticar em nossa API de &lt;a href=&#34;https://stone-co.github.io/docs/guias/stone-openbank-api/ambientes-da-api/#ambiente-de-sandbox&#34;&gt;Sandbox&lt;/a&gt;.&lt;/p&gt;
-&lt;h4 id=&#34;autenticaçãodocsguiasintegracaoautenticacao&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao/&#34;&gt;Autenticação&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;Aqui você encontra todos os detalhes sobre o processo de se autenticar na nossa API.&lt;/p&gt;
-&lt;h4 id=&#34;testando-a-apidocsguiasintegracaotestando-a-api&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/testando-a-api/&#34;&gt;Testando a API&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;Teste nossa API no ambiente de &lt;a href=&#34;https://stone-co.github.io/docs/guias/stone-openbank-api/ambientes-da-api/#ambiente-de-sandbox&#34;&gt;Sandbox &lt;/a&gt; para garantir que tudo funciona conforme o esperado e que nenhuma cliente vai ser prejudicada por bugs em Produção.&lt;/p&gt;
-&lt;h4 id=&#34;consentimentodocsguiasintegracaoconsentimento&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/consentimento/&#34;&gt;Consentimento&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;Descrição de todo o processo de como obter acesso às contas de pagamento de suas clientes.&lt;/p&gt;
-&lt;h4 id=&#34;aprovaçãodocsguiasintegracaoaprovacao&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/aprovacao/&#34;&gt;Aprovação&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;Como o dono da conta permite que uma transação criada pelo parceiro seja realizada.&lt;/p&gt;
-&lt;h4 id=&#34;webhooksdocsguiasintegracaowebhooks&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/webhooks/&#34;&gt;Webhooks&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;Como notificamos o sistema parceiro da ocorrência de eventos.&lt;/p&gt;
-&lt;h4 id=&#34;boas-práticasdocsguiasintegracaoboas-praticas&#34;&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/boas-praticas/&#34;&gt;Boas Práticas&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;Como armazenar dados e realizar operações em nossa API de forma segura.&lt;/p&gt;
-
-      </description>
-    </item>
     
     <item>
       <title>Docs: Boas Práticas</title>
@@ -113,21 +24,21 @@ A &lt;a href=&#34;https://stone-co.github.io/docs/guias/a-conta-stone/&#34;&gt;C
         
         
         &lt;hr&gt;
-&lt;h4 id=&#34;tokens-jwt&#34;&gt;&lt;strong&gt;Tokens JWT&lt;/strong&gt;&lt;/h4&gt;
+&lt;h2 id=&#34;tokens-jwt&#34;&gt;Tokens JWT&lt;/h2&gt;
 &lt;p&gt;Tokens JWT são dados sensíveis, assim como senhas ou dados de cartões de crédito. Por isso, é de extrema importância manusear e armazenar esses dados corretamente.&lt;/p&gt;
-&lt;h4 id=&#34;não-armazene-tokens-no-local-storage&#34;&gt;&lt;strong&gt;Não armazene tokens no &lt;em&gt;local storage&lt;/em&gt;&lt;/strong&gt;&lt;/h4&gt;
+&lt;h2 id=&#34;não-armazene-tokens-em-local-storage&#34;&gt;Não armazene tokens em &lt;em&gt;local storage&lt;/em&gt;&lt;/h2&gt;
 &lt;p&gt;O armazenamento local de um Browser não é um lugar seguro para se armazenar dados sensíveis. Dados armazenados no local storage podem:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Ser acessados via Javascript;&lt;/li&gt;
 &lt;li&gt;Ser vulneráveis a Cross-Site Scripting.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;caso-um-backend-esteja-disponível&#34;&gt;&lt;strong&gt;Caso um backend esteja disponível&lt;/strong&gt;&lt;/h4&gt;
+&lt;h2 id=&#34;caso-um-backend-esteja-disponível&#34;&gt;Caso um backend esteja disponível&lt;/h2&gt;
 &lt;p&gt;Se sua Aplicação tem um backend disponível, os tokens devem ser manuseados server-side.&lt;/p&gt;
-&lt;h4 id=&#34;caso-um-backend-não-esteja-disponível&#34;&gt;&lt;strong&gt;Caso um backend não esteja disponível&lt;/strong&gt;&lt;/h4&gt;
+&lt;h2 id=&#34;caso-um-backend-não-esteja-disponível&#34;&gt;Caso um backend não esteja disponível&lt;/h2&gt;
 &lt;p&gt;Se sua Aplicação é uma Single Page Application, a Aplicação deve requisitar os tokens e armazená-los em memória sem nenhuma persistência. Faça as chamadas de API usando os tokens armazenados em memória.&lt;/p&gt;
 &lt;p&gt;Para outros casos, informações sobre boas práticas com Tokens JWT estão disponíveis &lt;a href=&#34;https://auth0.com/docs/security/store-tokens&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
-&lt;h4 id=&#34;idempotência&#34;&gt;&lt;strong&gt;Idempotência&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;Nossos endpoints que envolvem operações financeiras suportam &lt;a href=&#34;https://pt.wikipedia.org/wiki/Idempot%C3%AAncia&#34;&gt;Idempotência&lt;/a&gt;. Existe a possibilidade de ocorrer operações duplicadas, como, por exemplo, com a queda de conexão 3G durante a realização de uma operação. Para evitar que a mesma operação ocorra mais de uma vez no nosso sistema, sempre envie o cabeçalho de Idempotência (x-stone-idempotency-key).&lt;/p&gt;
+&lt;h2 id=&#34;idempotência&#34;&gt;Idempotência&lt;/h2&gt;
+&lt;p&gt;Nossos endpoints que envolvem operações financeiras suportam &lt;a href=&#34;https://pt.wikipedia.org/wiki/Idempot%C3%AAncia&#34;&gt;Idempotência&lt;/a&gt;. Existe a possibilidade de ocorrer operações duplicadas, como, por exemplo, com a queda de conexão 3G durante a realização de uma operação. Para evitar que a mesma operação ocorra mais de uma vez no nosso sistema, sempre envie o cabeçalho de Idempotência (&lt;code&gt;x-stone-idempotency-key&lt;/code&gt;).&lt;/p&gt;
 
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
@@ -144,7 +55,7 @@ Se isso ocorrer em um período curto demais pode ocasionar uma resposta &lt;code
 &lt;li&gt;Uma chamada com a &lt;strong&gt;mesma chave de idempotência&lt;/strong&gt; e com o &lt;strong&gt;corpo da requisição diferente do original&lt;/strong&gt; retornará um erro de idempotência &lt;code&gt;HTTP 409&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Uma chamada com a &lt;strong&gt;chave de idempotênca maior que 72 caracteres&lt;/strong&gt; retornará um erro &lt;code&gt;HTTP 431&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;simulações-dry-run&#34;&gt;&lt;strong&gt;Simulações (dry-run)&lt;/strong&gt;&lt;/h4&gt;
+&lt;h2 id=&#34;simulações-dry-run&#34;&gt;&lt;strong&gt;Simulações (dry-run)&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;Nossos endpoints que envolvem operações financeiras suportam &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/&#34;&gt;Simulações (dry-run)&lt;/a&gt;, permitindo que o usuário visualize com antecedência o que vai acontecer nessa operação.&lt;/p&gt;
 &lt;p&gt;Em alguns casos, as Simulações permitem enriquecer os dados de uma operação, como, por exemplo o &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/simular-o-pagamento-de-um-documento/&#34;&gt;Pagamento de Boletos&lt;/a&gt;.&lt;/p&gt;
 
@@ -152,46 +63,9 @@ Se isso ocorrer em um período curto demais pode ocasionar uma resposta &lt;code
     </item>
     
     <item>
-      <title>Docs: Autenticação</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/autenticacao/</link>
-      <pubDate>Thu, 07 May 2020 18:06:16 -0300</pubDate>
-      
-      <guid>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/autenticacao/</guid>
-      <description>
-        
-        
-        &lt;hr&gt;
-&lt;br&gt;
-&lt;p&gt;A nossa API é RESTful, e todas suas respostas são em JSON, nos endpoint base, por ambiente:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Sandbox&lt;/em&gt;: &lt;a href=&#34;https://sandbox-api.openbank.stone.com.br&#34;&gt;https://sandbox-api.openbank.stone.com.br&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Produção&lt;/em&gt;: &lt;a href=&#34;https://api.openbank.stone.com.br&#34;&gt;https://api.openbank.stone.com.br&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Seguimos alguns padrões para alguns tipos de dados em toda a nossa API.
-A seguir, juntamos alguns desses padrões para simplificar a vida da desenvolvedora.&lt;/p&gt;
-&lt;br&gt;
-&lt;h3 id=&#34;realizando-chamadas-autenticadas&#34;&gt;Realizando Chamadas Autenticadas&lt;/h3&gt;
-&lt;hr&gt;
-&lt;br&gt;
-&lt;p&gt;A nossa API só aceita chamadas autenticadas, ou seja, chamadas cujo sujeito da ação conseguimos identificar.&lt;/p&gt;
-&lt;p&gt;Caso ainda não tenha realizado o procedimento para obter seu token de acesso, por favor siga o passo a passo descrito na página &lt;strong&gt;&lt;a href=&#34;https://stone-co.github.io/docs/guias/integracao/autenticacao/&#34;&gt;Autenticação&lt;/a&gt;&lt;/strong&gt; de nossos Guias.&lt;/p&gt;
-&lt;p&gt;Caso tenha em mãos seu token de acesso, já é possível realizar chamadas autenticadas.&lt;/p&gt;
-&lt;p&gt;Para isso, exigimos que nas &lt;a href=&#34;https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods&#34;&gt;requisições HTTP&lt;/a&gt; exista no cabeçalho um campo chamado &lt;code&gt;authorization&lt;/code&gt;, cujo valor será &amp;ldquo;Bearer&amp;rdquo; seguido do token de acesso.&lt;/p&gt;
-&lt;p&gt;Exemplo de cabeçalho de uma chamada autenticada:&lt;/p&gt;
-&lt;h4 id=&#34;header&#34;&gt;Header&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;&lt;span style=&#34;color:#50fa7b&#34;&gt;GET&lt;/span&gt; /api/v1/accounts &lt;span style=&#34;color:#ff79c6&#34;&gt;HTTP&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;1.1&lt;/span&gt;
-Host&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; sandbox-api.openbank.stone.com.br
-User-Agent&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; Nome da aplicação
-Accept&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; */*
-authorization&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-      </description>
-    </item>
-    
-    <item>
       <title>Docs: Data e Hora</title>
       <link>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/data-e-hora/</link>
-      <pubDate>Tue, 05 May 2020 18:32:12 -0300</pubDate>
+      <pubDate>Mon, 12 Jul 2021 11:20:05 -0300</pubDate>
       
       <guid>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/data-e-hora/</guid>
       <description>
@@ -221,7 +95,7 @@ authorization&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; Bearer eyJ
     <item>
       <title>Docs: Paginação</title>
       <link>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/paginacao/</link>
-      <pubDate>Mon, 04 May 2020 18:32:40 -0300</pubDate>
+      <pubDate>Mon, 12 Jul 2021 11:20:05 -0300</pubDate>
       
       <guid>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/paginacao/</guid>
       <description>
@@ -257,16 +131,15 @@ authorization&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; Bearer eyJ
     </item>
     
     <item>
-      <title>Docs: Valores Percentuais</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/valores-percentuais/</link>
-      <pubDate>Fri, 25 Jun 2021 10:52:05 -0300</pubDate>
+      <title>Docs: Valores</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/valores/</link>
+      <pubDate>Mon, 12 Jul 2021 11:20:05 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/valores-percentuais/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/valores/</guid>
       <description>
         
         
-        &lt;hr&gt;
-&lt;br&gt;
+        &lt;h2 id=&#34;valores-percentuais&#34;&gt;Valores Percentuais&lt;/h2&gt;
 &lt;p&gt;Alguns endpoints precisam receber ou retornar valores percentuais. Para evitar problemas de
 representação e de arredondamento, convencionamos de usar uma estrutura pra evitar
 strings e floats.&lt;/p&gt;
@@ -284,21 +157,8 @@ strings e floats.&lt;/p&gt;
 &lt;p&gt;$$percentage = coeficient*10^{exponent}$$&lt;/p&gt;
 &lt;p&gt;Por definição 100% = 100 * (1/100) = 1. De forma análoga, 70% pode ser representado como
 &lt;code&gt;coefficient = 70, exponent = -2&lt;/code&gt;, ou como &lt;code&gt;coefficient = 7, exponent = -1&lt;/code&gt;&lt;/p&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Valores Financeiros</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/valores-financeiros/</link>
-      <pubDate>Sun, 03 May 2020 18:32:57 -0300</pubDate>
-      
-      <guid>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/valores-financeiros/</guid>
-      <description>
-        
-        
-        &lt;hr&gt;
-&lt;br&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;valores-financeiros&#34;&gt;Valores Financeiros&lt;/h2&gt;
 &lt;p&gt;Todos os valores na API serão sempre inteiros e expressos em centavos de Reais.&lt;/p&gt;
 &lt;p&gt;Assim, o valor de um real (R$1,00) ficaria: &lt;code&gt;100&lt;/code&gt;.&lt;/p&gt;
 
@@ -308,14 +168,13 @@ strings e floats.&lt;/p&gt;
     <item>
       <title>Docs: Códigos De Resposta</title>
       <link>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/codigos-de-resposta/</link>
-      <pubDate>Sat, 02 May 2020 18:33:23 -0300</pubDate>
+      <pubDate>Mon, 12 Jul 2021 11:20:05 -0300</pubDate>
       
       <guid>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/codigos-de-resposta/</guid>
       <description>
         
         
-        &lt;hr&gt;
-&lt;br&gt;
+        &lt;br&gt;
 &lt;p&gt;Nossa API usa como retorno os &lt;a href=&#34;https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html&#34;&gt;códigos HTTP&lt;/a&gt; padrão para indicar tanto o sucesso de uma requisição, quanto para indicar falha. Pode-se utilizar a tabela abaixo como referência:&lt;/p&gt;
 &lt;br&gt;
 &lt;table&gt;
@@ -389,14 +248,13 @@ strings e floats.&lt;/p&gt;
     <item>
       <title>Docs: Mensagens De Erro</title>
       <link>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/mensagens-de-erro/</link>
-      <pubDate>Fri, 01 May 2020 18:34:12 -0300</pubDate>
+      <pubDate>Mon, 12 Jul 2021 11:20:05 -0300</pubDate>
       
       <guid>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/mensagens-de-erro/</guid>
       <description>
         
         
-        &lt;hr&gt;
-&lt;br&gt;
+        &lt;br&gt;
 &lt;p&gt;Nossos endpoints seguem um padrão de mensagens. Toda mensagem de erro, por exemplo, seguirá o modelo &amp;ldquo;srn:error:xxx&amp;quot; e um &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/codigos-de-resposta/&#34;&gt;código HTTP&lt;/a&gt; apropriado para a falha.&lt;/p&gt;
 &lt;p&gt;Exemplo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{

@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Stone OpenBank – PIX (Alpha)</title>
+    <title>Stone OpenBank – PIX (Beta)</title>
     <link>https://stone-co.github.io/docs/referencia-da-api/pix/</link>
-    <description>Recent content in PIX (Alpha) on Stone OpenBank</description>
+    <description>Recent content in PIX (Beta) on Stone OpenBank</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 31 Mar 2021 18:00:00 -0300</lastBuildDate>
     
@@ -40,6 +40,92 @@
 &lt;li&gt;Realiza request através do &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/pix/criar-pagamento-pendente/&#34;&gt;endpoint&lt;/a&gt; /api/v1/pix/outbound_pix_payments enviando parâmetros validos. Este irá retornar uma resposta com os dados do Pix.&lt;/li&gt;
 &lt;li&gt;Realiza request através do &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/pix/confirmar-pagamento-pendente/&#34;&gt;endpoint&lt;/a&gt; /api/v1/pix/outbound_pix_payments/{id}/actions/confirm informando o campo &lt;code&gt;id&lt;/code&gt; retornado pela resposta desse passo 2.&lt;br&gt;&amp;lt;br&lt;/li&gt;
 &lt;/ol&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Recebendo com Pix</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/</link>
+      <pubDate>Tue, 13 Jul 2021 20:03:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Chaves Pix</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pix/chaves-pix/</link>
+      <pubDate>Thu, 15 Jul 2021 14:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/chaves-pix/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;o-que-é-uma-chave-pix&#34;&gt;O que é uma Chave PIX&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;No arranjo do Pix os usuários, tanto pagadores quanto recebedores, precisam se cadastrar no DICT (Diretório de Identificadores de Contas Transacionais) para criar sua(s) chave(s) Pix.
+&lt;br&gt;&lt;br&gt;
+Esse cadastro é feito por meio de um PSP (Prestador do Serviço de Pagamento)  direto ou indireto do arranjo, assim toda vez que essa chave for usada o dinheiro será direcionado para a conta do recebedor nesse PSP.
+&lt;br&gt;&lt;br&gt;
+Essas chaves serão usadas pelos PSP diretos e indiretos na comunicação com os sistemas do Pix para o processamento das transações.
+&lt;br&gt;&lt;br&gt;
+Os PSPs diretos e indiretos por sua vez são cadastrados e homologados junto ao PIX e por isso possuem um cadastro diferente não tendo uma Chave Pix. Na API de Banking vamos identificar o PSP indireto em todos os requests por do &lt;code&gt;account_id&lt;/code&gt; e do  &lt;code&gt;participant_ispb&lt;/code&gt;.
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Atenção!&lt;/strong&gt;&lt;br&gt;Não é possível cadastrar a mesma chave em mais de uma instituição. &lt;br&gt;Se a cliente desejar transferir uma Chave Pix de uma instituição para outra, ela pode pedir a portabilidade dessa chave (com exceção da chave aleatória, que é intransferível) ou excluir a chave em uma instituição, e cadastrá-la na desejada.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;br&gt;&lt;/p&gt;
+&lt;h2 id=&#34;tipos-de-chave-pix&#34;&gt;Tipos de Chave PIX&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;Para fazer o cadastro dessa chave os usuários podem optar por 4 tipos diferentes:&lt;br&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Telefone celular&lt;/strong&gt; |  &lt;code&gt;phone&lt;/code&gt;: cada número de celular do usuário pode ser cadastrado uma única vez com uma única instituição.&lt;br&gt;Utilizamos o formato internacional: +5561912345678&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Documento&lt;/strong&gt; | &lt;code&gt;CPF&lt;/code&gt;, &lt;code&gt;CNPJ&lt;/code&gt;: só pode ser cadastrado uma única vez com uma única instituição.&lt;br&gt;Formato CPF: 12345678900 | Formato CNPJ: 00038166000105&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;E-mail&lt;/strong&gt; | &lt;code&gt;email&lt;/code&gt;: cada email do usuário pode ser cadastrado uma única vez com uma única instituição.&lt;br&gt;Formato: &lt;a href=&#34;mailto:fulano_da_silva.recebedor@example.com&#34;&gt;fulano_da_silva.recebedor@example.com&lt;/a&gt; | case sensitive&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Chave aleatória&lt;/strong&gt; | &lt;code&gt;random_key&lt;/code&gt;: é uma sequência alfa numérica aleatória gerada automaticamente pelo DICT mais utilizada no fluxo de QR Code. O usuário pode usar 1 chave aleatória por PSP seja indireto ou direto.&lt;br&gt;Formato: 123e4567-e12b-12d1-a456-426655440000 | case sensitive&lt;br&gt;
+&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Regras do BACEN&lt;/strong&gt;&lt;br&gt;
+Um usuário pessoa física poderá ter no máximo 5 Chaves Pix por conta, enquanto um usuário do tipo pessoa jurídica pode ter até 20 Chaves Pix por conta.Os dois devem respeitar os limites de cada tipo.
+&lt;br&gt;&lt;br&gt;
+O conjunto de chaves de um participante indireto é independente do conjunto de chaves do particpante direto que ele usa como fornecedor. Ou seja, no caso de um usuário que usa um PSP indireto, mas também é cliente do PSP direto que age como fornecedor do indireto, o usuário terá no mínimo duas chaves Pix, uma atrelada ao participante direto e outra atrelado ao participante indireto.
+&lt;br&gt; &lt;br&gt; &lt;br&gt;&lt;/p&gt;
+&lt;h2 id=&#34;status-de-uma-chave-pix&#34;&gt;Status de uma chave Pix&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h5 id=&#34;status-das-solicitações-criação-e-exclusão&#34;&gt;Status das solicitações (criação e exclusão)&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pending&lt;/code&gt;: criação solicitada.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;accepted&lt;/code&gt;: solicitação finalizada com sucesso.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rejected&lt;/code&gt;: solicitação rejeitada. Veja o campo &lt;code&gt;error_description&lt;/code&gt;para entender o motivo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;  
+&lt;h5 id=&#34;status-da-chave&#34;&gt;Status da chave&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;portability_pending&lt;/code&gt;: o processo de reivindicação de portabilidade está em andamento.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;claim_requested&lt;/code&gt;: o processo de reivindicação de posse está em andamento.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;active&lt;/code&gt;: chave ativa no DICT e válida para uso.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;deleted&lt;/code&gt;: chave excluída no DICT e inválida para uso.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt; 
+&lt;h5 id=&#34;status-da-reivindicação&#34;&gt;Status da reivindicação&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;open&lt;/code&gt;: aberta pelo reivindicador, mas ainda não recebida pelo doador.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;waiting_resolution&lt;/code&gt;: reivindicação já foi recebida pelo doador e está aguardando a resolução. Os critérios confirmação ou cancelamento da reivindicação seguem normas específicas a depender do tipo (posse ou portabilidade).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;confirmed&lt;/code&gt;: doador confirmou a reivindicação. Isso implica a remoção da chave do DICT e da base interna do PSP doador. Está aguardando o reivindicador encerrar o processo.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cancelled&lt;/code&gt;: doador ou reivindicador cancelou a reivindicação, mantendo o vínculo inalterado (conforme estava antes da reivindicação) tanto no DICT quanto na base interna do PSP.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;completed&lt;/code&gt;: tanto o DICT quanto o reivindicador atualizaram suas bases com o novo vínculo.
+&lt;br&gt; &lt;br&gt; &lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Para manusear as chaves, clique nos links abaixo:&lt;/p&gt;
 
       </description>
     </item>

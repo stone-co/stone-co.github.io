@@ -301,7 +301,7 @@ content-type: application/json
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;discount_value&lt;/td&gt;
-&lt;td&gt;Valor do desconto que está sendo aplicado ao boleto. Caso nenhum desconto esteja sendo aplicado vira null.&lt;/td&gt;
+&lt;td&gt;Valor do desconto que está sendo aplicado ao boleto. Caso nenhum desconto esteja sendo aplicado vira &lt;code&gt;null&lt;/code&gt;.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -326,12 +326,12 @@ content-type: application/json
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;fine_value&lt;/td&gt;
-&lt;td&gt;Valor da multa que está sendo aplicada ao boleto. Caso nenhuma multa esteja sendo aplicada vira null.&lt;/td&gt;
+&lt;td&gt;Valor da multa que está sendo aplicada ao boleto. Caso nenhuma multa esteja sendo aplicada vira &lt;code&gt;null&lt;/code&gt;.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;interest_value&lt;/td&gt;
-&lt;td&gt;Valor dos juros que estão sendo aplicados ao boleto. Caso não haja juros aplicados vira null.&lt;/td&gt;
+&lt;td&gt;Valor dos juros que estão sendo aplicados ao boleto. Caso não haja juros aplicados vira &lt;code&gt;null&lt;/code&gt;.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -428,6 +428,16 @@ content-type: application/json
 &lt;td&gt;unpayable_reason_description&lt;/td&gt;
 &lt;td&gt;Descrição do motivo de estar impagável.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;accepts_partial_payment&lt;/td&gt;
+&lt;td&gt;Indica se o boleto aceita pagamento parcial&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Boolean&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;number_of_partials&lt;/td&gt;
+&lt;td&gt;Indica quantas vezes o boleto pode ser pago, se o número for 99 significa que o número de vezes é ilimitado&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -665,7 +675,7 @@ content-type: application/json
         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;divergent_amount_auth_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;3&lt;/span&gt;,
         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;interest_value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;,
         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updatable_value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;min_value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;15000&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;min_value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;8000&lt;/span&gt;,
         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;payer_cpf_cnpj&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;11725907020&amp;#34;&lt;/span&gt;,
         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;payment_limit_date&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-27&amp;#34;&lt;/span&gt;,
         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;writable_line&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;19790000052530097937108880416287686330000015000&amp;#34;&lt;/span&gt;,
@@ -695,7 +705,9 @@ content-type: application/json
         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fine_date&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;max_value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;15000&lt;/span&gt;,
         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;expiration_date&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-27&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;recipient_cpf_cnpj&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;11725907020&amp;#34;&lt;/span&gt;
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;recipient_cpf_cnpj&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;11725907020&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;accepts_partial_payment&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;true&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;number_of_partials&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;2&lt;/span&gt;
     },
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;failed_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;failure_reason_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,

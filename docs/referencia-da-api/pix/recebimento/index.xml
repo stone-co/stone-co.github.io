@@ -1,0 +1,900 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stone OpenBank – Recebendo com Pix</title>
+    <link>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/</link>
+    <description>Recent content in Recebendo com Pix on Stone OpenBank</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 13 Jul 2021 20:03:00 -0300</lastBuildDate>
+    
+	  <atom:link href="https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Consultar Pix recebido por QRCode</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/consultar-pix-por-qrcode/</link>
+      <pubDate>Wed, 16 Jun 2021 15:17:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/consultar-pix-por-qrcode/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Através desse endpoint será possível consultar QRCodes com vencimento e valores monetários calculados. Segue padrões definidos pelo BACEN.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/pix/{{id}}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;h5 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;authorization&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Bearer token de autenticação.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;x-stone-account-id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Necessário para permissionamento.&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; ID da cobrança com vencimento.&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;query-params&#34;&gt;&lt;strong&gt;QUERY PARAMS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;dpp&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Data de pagamento pretendida.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;codMun&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Código IBGE do município.&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;200&lt;/span&gt; OK
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;calendario&amp;#34;&lt;/span&gt;: {
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;apresentacao&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-03-26T20:35:33Z&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;criacao&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-03-26T20:26:49Z&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;dataDeVencimento&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-03-27&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;validadeAposVencimento&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;15&lt;/span&gt;
+  },
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;chave&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;4e4bb64d-d17c-4c53-a51b-44f06e28be06&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;devedor&amp;#34;&lt;/span&gt;: {
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;nome&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Fulano da Silva&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;85553990335&amp;#34;&lt;/span&gt;
+  },
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;infoAdicionais&amp;#34;&lt;/span&gt;: [
+    {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;nome&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Mr. Due&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;valor&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Date Three&amp;#34;&lt;/span&gt;
+    }
+  ],
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;recebedor&amp;#34;&lt;/span&gt;: {
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cep&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;22250120&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cidade&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Rio de JaneiroA&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;91092573062&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;logradouro&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Rua Honório de BarrosoA, Número 3A, Bairro FlamengoA&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;nome&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Gilderoy Lockhart&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;nomeFantasia&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;uf&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;RJA&amp;#34;&lt;/span&gt;
+  },
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;revisao&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;solicitacaoPagador&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ATIVA&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;txid&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;a2f6db6e14844c55bc02a5c1a78b0eea&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;valor&amp;#34;&lt;/span&gt;: {
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;abatimento&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;1.00&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;final&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;19.00&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;original&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;20.00&amp;#34;&lt;/span&gt;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;400&lt;/span&gt; Bad Request
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://pix.bcb.gov.br/api/v2/error/PixConsultaInvalida&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Consulta Pix Inválida&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;400&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;detail&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Os parâmetros de consulta à lista de pix recebidos não respeitam o schema ou não fazem sentido semanticamente.&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;404&lt;/span&gt; Not found
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://pix.bcb.gov.br/api/v2/error/PixNaoEncontrado&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Não Encontrado&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;404&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;detail&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Entidade não encontrada.&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Criar Cobranças com Validade</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/criar-cobranca-com-vencimento/</link>
+      <pubDate>Wed, 16 Jun 2021 15:17:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/criar-cobranca-com-vencimento/</guid>
+      <description>
+        
+        
+        &lt;br&gt;
+Através desse endpoint será possível criar cobranças Pix com vencimento através de um QRCode ou Pix copia e cola.
+&lt;br&gt;
+&lt;br&gt;
+&lt;pre&gt;&lt;code&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/pix_payment_invoices_with_due_date
+&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;
+&lt;h5 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;authorization&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Bearer token de autenticação.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Chave de idempotência.&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;transaction_id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Validação: &amp;ldquo;^[a-zA-Z0-9]{26,35}$&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;additional_data&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt; &lt;br&gt;
+&lt;strong&gt;name&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt; &lt;br&gt;
+Tamanho: min 1 / max 50
+**value*** &lt;code&gt;string&lt;/code&gt; &lt;br&gt;
+Tamanho: min 1 / max 200&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;amount&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;customer&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;&lt;br&gt;
+&lt;strong&gt;document&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;&lt;br&gt;
+**name*** &lt;code&gt;string&lt;/code&gt; &lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;expiration_date&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Format: date&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;key&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;request_for_payer&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;payment&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;only_business_days&lt;/strong&gt; &lt;code&gt;boolean&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;fine&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
+&lt;strong&gt;type&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;br&gt;
+Valores aceitos: &lt;code&gt;fixed&lt;/code&gt;, &lt;code&gt;proportional&lt;/code&gt; &lt;br&gt;
+&lt;strong&gt;fixed_value&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;
+&lt;strong&gt;proportional_value&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt; &lt;br&gt;
+Representação de porcentagem, dada a seguinte fórmula: &lt;code&gt;coefficient * 10^exponent&lt;/code&gt;&lt;br&gt;
+&lt;strong&gt;coefficient&lt;/strong&gt;* &lt;code&gt;integer&lt;/code&gt;
+**exponent*** &lt;code&gt;integer&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;reduction&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
+&lt;strong&gt;type&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;br&gt;
+Valores aceitos: &lt;code&gt;fixed&lt;/code&gt;, &lt;code&gt;proportional&lt;/code&gt; &lt;br&gt;
+&lt;strong&gt;fixed_value&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;
+&lt;strong&gt;proportional_value&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt; &lt;br&gt;
+Representação de porcentagem, dada a seguinte fórmula: &lt;code&gt;coefficient * 10^exponent&lt;/code&gt;&lt;br&gt;
+&lt;strong&gt;coefficient&lt;/strong&gt;* &lt;code&gt;integer&lt;/code&gt;
+**exponent*** &lt;code&gt;integer&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;interest&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
+&lt;strong&gt;type&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;br&gt;
+Valores aceitos: &lt;code&gt;fixed&lt;/code&gt;, &lt;code&gt;proportional&lt;/code&gt; &lt;br&gt;
+&lt;strong&gt;period&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;br&gt;
+Valores aceitos: &lt;code&gt;day&lt;/code&gt;, &lt;code&gt;month&lt;/code&gt;, &lt;code&gt;year&lt;/code&gt; &lt;br&gt;
+&lt;strong&gt;fixed_value&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;
+&lt;strong&gt;proportional_value&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt; &lt;br&gt;
+Representação de porcentagem, dada a seguinte fórmula: &lt;code&gt;coefficient * 10^exponent&lt;/code&gt;&lt;br&gt;
+&lt;strong&gt;coefficient&lt;/strong&gt;* &lt;code&gt;integer&lt;/code&gt;
+**exponent*** &lt;code&gt;integer&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;discount&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
+&lt;strong&gt;type&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;br&gt;
+Valores aceitos: &lt;code&gt;fixed&lt;/code&gt;, &lt;code&gt;proportional&lt;/code&gt; &lt;br&gt;
+&lt;strong&gt;calculation_mode&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;br&gt;
+Valores aceitos: &lt;code&gt;date&lt;/code&gt;, &lt;code&gt;period&lt;/code&gt; &lt;br&gt;
+&lt;strong&gt;period_discount&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
+&lt;strong&gt;date_discounts&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
+&lt;strong&gt;date&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;strong&gt;fixed_value&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;
+&lt;strong&gt;proportional&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt; &lt;br&gt;
+Representação de porcentagem, dada a seguinte fórmula: &lt;code&gt;coefficient * 10^exponent&lt;/code&gt;&lt;br&gt;
+&lt;strong&gt;coefficient&lt;/strong&gt;* &lt;code&gt;integer&lt;/code&gt;
+**exponent*** &lt;code&gt;integer&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Schema:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: {
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;transaction_id&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;pattern&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;^[a-zA-Z0-9]{26,35}$&amp;#34;&lt;/span&gt;
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;format&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;uuid&amp;#34;&lt;/span&gt;
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;additional_data&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: [
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;array&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;null&amp;#34;&lt;/span&gt;
+      ],
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;maxItems&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;50&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;items&amp;#34;&lt;/span&gt;: {
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: [
+          &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;
+        ],
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;minLength&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;maxLength&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;50&lt;/span&gt;
+          },
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;: {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;minLength&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;maxLength&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;200&lt;/span&gt;
+          }
+        }
+      }
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;customer&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: [
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;
+      ],
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: {
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;: {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;
+        },
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;
+        }
+      }
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;expiration_date&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;format&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;request_for_payer&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: [
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;null&amp;#34;&lt;/span&gt;
+      ]
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;payment_limit_pediod_days&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;only_business_days&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;boolean&amp;#34;&lt;/span&gt;
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fine&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: {
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;enum&amp;#34;&lt;/span&gt;: [
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;fixed&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;proportional&amp;#34;&lt;/span&gt;
+          ]
+        },
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fixed_value&amp;#34;&lt;/span&gt;: {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: [
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;null&amp;#34;&lt;/span&gt;
+          ]
+        },
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;proportional_value&amp;#34;&lt;/span&gt;: {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Porcentagem&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: [
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;coefficient&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;exponent&amp;#34;&lt;/span&gt;
+          ],
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Representação de porcentagem, dada a seguinte fórmula: `coefficient * 10^exponent`&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;coefficient&amp;#34;&lt;/span&gt;: {
+              &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;
+            },
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;exponent&amp;#34;&lt;/span&gt;: {
+              &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;
+            }
+          }
+        }
+      }
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reduction&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: [
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;
+      ],
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: {
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;enum&amp;#34;&lt;/span&gt;: [
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;fixed&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;proportional&amp;#34;&lt;/span&gt;
+          ]
+        },
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fixed_value&amp;#34;&lt;/span&gt;: {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: [
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;null&amp;#34;&lt;/span&gt;
+          ]
+        },
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;proportional_value&amp;#34;&lt;/span&gt;: {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Porcentagem&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: [
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;coefficient&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;exponent&amp;#34;&lt;/span&gt;
+          ],
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Representação de porcentagem, dada a seguinte fórmula: `coefficient * 10^exponent`&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;coefficient&amp;#34;&lt;/span&gt;: {
+              &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;
+            },
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;exponent&amp;#34;&lt;/span&gt;: {
+              &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;
+            }
+          }
+        }
+      }
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;interest&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: [
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;period&amp;#34;&lt;/span&gt;
+      ],
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: {
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;enum&amp;#34;&lt;/span&gt;: [
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;fixed&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;proportional&amp;#34;&lt;/span&gt;
+          ]
+        },
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;period&amp;#34;&lt;/span&gt;: {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;enum&amp;#34;&lt;/span&gt;: [
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;day&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;month&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;year&amp;#34;&lt;/span&gt;
+          ]
+        },
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fixed_value&amp;#34;&lt;/span&gt;: {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: [
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;null&amp;#34;&lt;/span&gt;
+          ]
+        },
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;proportional_value&amp;#34;&lt;/span&gt;: {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Porcentagem&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: [
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;coefficient&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;exponent&amp;#34;&lt;/span&gt;
+          ],
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Representação de porcentagem, dada a seguinte fórmula: `coefficient * 10^exponent`&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;coefficient&amp;#34;&lt;/span&gt;: {
+              &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;
+            },
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;exponent&amp;#34;&lt;/span&gt;: {
+              &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;
+            }
+          }
+        }
+      }
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;discount&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: [
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;calculation_mode&amp;#34;&lt;/span&gt;
+      ],
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: {
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;enum&amp;#34;&lt;/span&gt;: [
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;fixed&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;proportional&amp;#34;&lt;/span&gt;
+          ]
+        },
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;calculation_mode&amp;#34;&lt;/span&gt;: {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;enum&amp;#34;&lt;/span&gt;: [
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;period&amp;#34;&lt;/span&gt;
+          ]
+        },
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;period_discount&amp;#34;&lt;/span&gt;: {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: [
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;null&amp;#34;&lt;/span&gt;
+          ]
+        },
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;date_discounts&amp;#34;&lt;/span&gt;: {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: [
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;null&amp;#34;&lt;/span&gt;
+          ],
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;: {
+              &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
+              &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;format&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;
+            },
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fixed_value&amp;#34;&lt;/span&gt;: {
+              &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: [
+                &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;null&amp;#34;&lt;/span&gt;
+              ]
+            },
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;proportional&amp;#34;&lt;/span&gt;: {
+              &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
+              &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Porcentagem&amp;#34;&lt;/span&gt;,
+              &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: [
+                &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;coefficient&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;exponent&amp;#34;&lt;/span&gt;
+              ],
+              &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Representação de porcentagem, dada a seguinte fórmula: `coefficient * 10^exponent`&amp;#34;&lt;/span&gt;,
+              &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: {
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;coefficient&amp;#34;&lt;/span&gt;: {
+                  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;
+                },
+                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;exponent&amp;#34;&lt;/span&gt;: {
+                  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: [
+    &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;transaction_id&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;customer&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;expiration_date&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;200 OK
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;477f8576-ca82-462b-be73-dc28cc6490c3&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;additional_data&amp;#34;&lt;/span&gt;: [
+    {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Mr. Due&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Date&amp;#34;&lt;/span&gt;
+    }
+  ],
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;555&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;beneficiary_address&amp;#34;&lt;/span&gt;: {
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;city&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Rio de JaneiroA&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;country&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;BRA&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;extra&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;A&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;neighborhood&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;FlamengoA&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;postal_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;22250120&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reference_point&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;state&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;RJA&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;street&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Rua Honório de BarrosoA&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;street_number&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;3A&amp;#34;&lt;/span&gt;
+  },
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;beneficiary_entity&amp;#34;&lt;/span&gt;: {
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;91092573062&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;legal_name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Gilderoy Lockhart&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;trade_name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;
+  },
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cancelled_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-03-19T14:43:55Z&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user:380f9968-8946-4f88-a781-be8b7efc1f90&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;customer&amp;#34;&lt;/span&gt;: {
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;85553990335&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Fulano da Silva&amp;#34;&lt;/span&gt;
+  },
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;discount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;expiration_date&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-03-19&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fine&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;b4bdc3df-795e-4d33-9851-15192fb7e216&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;inbound_pix_payments&amp;#34;&lt;/span&gt;: [],
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;interest&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;4e4bb64d-d17c-4c53-a51b-44f06e28be06&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;random_key&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;location&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;pix-h.stone.com.br/pix/v2/cobv/b4bdc3df-795e-4d33-9851-15192fb7e216&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;only_business_days&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;false&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;paid_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;payment_limit_period_days&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;30&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;qr_code_content&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;00020101021226890014br.gov.bcb.pix2567pix-h.stone.com.br/pix/v2/cobv/b4bdc3df-795e-4d33-9851-15192fb7e21652040000530398654045.555802BR5925Nome do CPF 581.360.533-96014RIO DE JANEIRO622905253f6a429254c34b3091847f85d63046EBC&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;qr_code_image&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfgAAAH4CAIAAAApSmgoAAA590lEQVR4nO2bMaIjSbIj//0vvauMGvWIpFnDPRlQyxswIB5Tmvm//3d1dXV19Wr9Xxvg6urq6srV/dBfXV1dvVz3Q391dXX1ct0P/dXV1dXLdT/0V1dXVy/X/dBfXV1dvVz3Q391dXX1ch0/9P+3RCk/dW/vluZSPHYvKpfawfb5dpennFSvaTyUT+qf+rR05H9tMfne3i3NpXjsXlQutYPt8+0uTzmpXtN4KJ/UP/Vp6cj/2mLyvb1bmkvx2L2oXGoH2+fbXZ5yUr2m8VA+qX/q09KR/7XF5Ht7tzSX4rF7UbnUDrbPt7s85aR6TeOhfFL/1KelI/9ri8n39m5pLsVj96JyqR1sn293ecpJ9ZrGQ/mk/qlPS0f+1xaT7+3d0lyKx+5F5VI72D7f7vKUk+o1jYfySf1Tn5aO/K8tJt/bu6W5FI/di8qldrB9vt3lKSfVaxoP5ZP6pz4tHflfW0y+t3dLcykeuxeVS+1g+3y7y1NOqtc0Hson9U99Wjry20NTiotRAw0Ttc&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reduction&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;request_for_payer&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;do something until today&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;request_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;f06fe0c17b96d26965b069c73b77153c&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ACTIVE&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;transaction_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;3f6a429254c34b3091847f85da88eb65&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-03-19T14:43:55Z&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;400 Bad Request
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;: [
+    {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;error&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;is invalid&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;path&amp;#34;&lt;/span&gt;: [
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;key_type&amp;#34;&lt;/span&gt;
+      ]
+    },
+    {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;error&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;is invalid&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;path&amp;#34;&lt;/span&gt;: [
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;
+      ]
+    }
+  ],
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:validation&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;401 Unauthorized
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:unauthorized&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;403 Forbidden
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:unauthenticated&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;409 Conflict
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:idempotency_conflict&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;422 Unprocessable
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;: [
+    {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;error&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;has already been taken&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;path&amp;#34;&lt;/span&gt;: [
+        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;transaction_id&amp;#34;&lt;/span&gt;
+      ]
+    }
+  ],
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:unprocessable_entity&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Listar Cobranças com Validade</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/listar-cobranca-com-validade/</link>
+      <pubDate>Wed, 16 Jun 2021 15:17:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/listar-cobranca-com-validade/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Através desse endpoint será possível listar as cobranças com validade por Pix.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/cobv
+&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;
+&lt;h5 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;authorization&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Bearer token de autenticação.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;x-stone-account-id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Necessário para permissionamento.&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;query-params&#34;&gt;&lt;strong&gt;QUERY PARAMS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;inicio&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Format: date-time&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;fim&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Format: date-time&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;cpf&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;cnpj&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;status&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Possíveis valores: ATIVA, CONCLUIDA, REMOVIDA_PELO_USUARIO_RECEBEDOR, REMOVIDA_PELO_PSP&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;paginacao[paginaAtual]&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;paginacao[itensPorPagina]&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Exemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: {
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;inicio&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;format&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;date-time&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;true&lt;/span&gt;
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fim&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;format&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;date-time&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;true&lt;/span&gt;
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cnpj&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Possíveis valores: ATIVA, CONCLUIDA, REMOVIDA_PELO_USUARIO_RECEBEDOR, REMOVIDA_PELO_PSP&amp;#34;&lt;/span&gt;
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;paginacao[itensPorPagina]&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;paginacao[paginaAtual]&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;
+    }
+  },
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: [
+    &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;inicio&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;fim&amp;#34;&lt;/span&gt;
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;200&lt;/span&gt; OK
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;    {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;calendario&amp;#34;&lt;/span&gt;: {
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;criacao&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-03-19T22:04:24.209571Z&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;dataDeVencimento&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-03-18&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;validadeAposVencimento&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;
+      },
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;chave&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;4e4bb64d-d17c-4c53-a51b-44p06e28be06&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;devedor&amp;#34;&lt;/span&gt;: {
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;nome&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Fulano da Silva&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;85553990335&amp;#34;&lt;/span&gt;
+      },
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;infoAdicionais&amp;#34;&lt;/span&gt;: [
+        {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;nome&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Mr. Due&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;valor&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Date Three&amp;#34;&lt;/span&gt;
+        }
+      ],
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;loc&amp;#34;&lt;/span&gt;: {
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;criacao&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-03-19T22:04:24.209571Z&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;5672cf6b-7021-4bce-b809-ed2e2d34e888&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;location&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;pix-h.stone.com.br/pix/v2/5672cf6b-7021-4bce-b809-ed2e2d34e888&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;tipoCob&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;cobv&amp;#34;&lt;/span&gt;
+      },
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;recebedor&amp;#34;&lt;/span&gt;: {
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cep&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;22250190&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cidade&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Rio de Janeiro&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;logradouro&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Rua Honório de BarrosoA, 3A, FlamengoA&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;nome&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Gilderoy Lockhart&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;uf&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;RJA&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;91092575062&amp;#34;&lt;/span&gt;
+      },
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;revisao&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;solicitacaoPagador&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;do something until today&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;REMOVIDA_PELO_USUARIO_RECEBEDOR&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;txid&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;6225a6024fd242e7b5d2c00a9dc62238&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;valor&amp;#34;&lt;/span&gt;: {
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;abatimento&amp;#34;&lt;/span&gt;: {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;modalidade&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;valorPerc&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;0.50&amp;#34;&lt;/span&gt;
+        },
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;desconto&amp;#34;&lt;/span&gt;: {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;modalidade&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;4&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;valorPerc&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;0.60&amp;#34;&lt;/span&gt;
+        },
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;juros&amp;#34;&lt;/span&gt;: {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;modalidade&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;5&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;valorPerc&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;0.50&amp;#34;&lt;/span&gt;
+        },
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;multa&amp;#34;&lt;/span&gt;: {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;modalidade&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;valorPerc&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;90.90&amp;#34;&lt;/span&gt;
+        },
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;original&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;5.55&amp;#34;&lt;/span&gt;
+      }
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Listar Pix recebidos</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/listar-recebimentos/</link>
+      <pubDate>Wed, 16 Jun 2021 15:17:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/listar-recebimentos/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Através desse endpoint será possível listar todos os Pix recebidos na conta. Esse endpoint segue os padrões definidos pelo Banco Central.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/pix
+&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;
+&lt;h5 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;authorization&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Bearer token de autenticação.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;x-stone-account-id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Necessário para permissionamento.&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;query-params&#34;&gt;&lt;strong&gt;QUERY PARAMS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;inicio&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Format: date-time&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;fim&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Format: date-time&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;txid&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;txidPresente&lt;/strong&gt; &lt;code&gt;boolean&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;devolucaoPresente&lt;/strong&gt; &lt;code&gt;boolean&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;cpf&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;cnpj&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;paginacao[paginaAtual]&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;paginacao[itensPorPagina]&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Exemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: {
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;inicio&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;format&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;date-time&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;true&lt;/span&gt;
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fim&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;format&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;date-time&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;true&lt;/span&gt;
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;txid&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;txIdPresente&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;boolean&amp;#34;&lt;/span&gt;
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;devolucaoPresente&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;boolean&amp;#34;&lt;/span&gt;
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cnpj&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;paginacao[paginaAtual]&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;paginacao[itensPorPagina]&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;
+    }
+  },
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: [
+    &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;inicio&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;fim&amp;#34;&lt;/span&gt;
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;200&lt;/span&gt; OK
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;parametros&amp;#34;&lt;/span&gt;: {
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;477f8576-ca82-462b-be73-dc28cc6490c3&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fim&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-02-15T23:55:00Z&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;inicio&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-02-01T19:06:59Z&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;paginacao&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;itensPorPagina&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;10&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;paginaAtual&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;quantidadeDePaginas&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;quantidadeTotalDeItens&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;
+    }
+  },
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;pix&amp;#34;&lt;/span&gt;: [
+    {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;devolucoes&amp;#34;&lt;/span&gt;: [
+        {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;horario&amp;#34;&lt;/span&gt;: {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;liquidacao&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-03-23T10:53:09.612326Z&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;solicitacao&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-03-23T10:53:09.060862Z&amp;#34;&lt;/span&gt;
+          },
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;maroto123&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;motivo&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Devolução solicitada pelo usuário recebedor do pagamento original&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;rtrId&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;D1650155520210323105348b6cffe3d3&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;DEVOLVIDO&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;valor&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;30.00&amp;#34;&lt;/span&gt;
+        },
+        {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;horario&amp;#34;&lt;/span&gt;: {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;liquidacao&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-03-23T11:15:23.876470Z&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;solicitacao&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-03-23T11:15:23.529061Z&amp;#34;&lt;/span&gt;
+          },
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;12maroto123&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;motivo&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Devolução solicitada pelo usuário recebedor do pagamento original&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;rtrId&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;D165015552021032311153d55484949a&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;DEVOLVIDO&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;valor&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;30.00&amp;#34;&lt;/span&gt;
+        },
+        {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;horario&amp;#34;&lt;/span&gt;: {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;liquidacao&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-03-23T23:29:43.140578Z&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;solicitacao&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-03-23T23:29:42.125167Z&amp;#34;&lt;/span&gt;
+          },
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;anyId588&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;motivo&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Devolução solicitada pelo usuário recebedor do pagamento original&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;rtrId&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;D16501555202103232329d08247741e6&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;DEVOLVIDO&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;valor&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;10.00&amp;#34;&lt;/span&gt;
+        },
+        {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;horario&amp;#34;&lt;/span&gt;: {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;liquidacao&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;solicitacao&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-03-30T21:06:42.619471Z&amp;#34;&lt;/span&gt;
+          },
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;anyId121&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;motivo&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Devolução solicitada pelo usuário recebedor do pagamento original&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;rtrId&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;D165015552021033021063ed204590ae&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;EM_PROCESSAMENTO&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;valor&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;0.01&amp;#34;&lt;/span&gt;
+        },
+        {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;horario&amp;#34;&lt;/span&gt;: {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;liquidacao&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-03-23T23:32:47.709407Z&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;solicitacao&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-03-23T23:32:47.352844Z&amp;#34;&lt;/span&gt;
+          },
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;anyId7&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;motivo&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Devolução solicitada pelo usuário recebedor do pagamento original&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;rtrId&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;D1650155520210323233273b0a425d19&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;DEVOLVIDO&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;valor&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;0.01&amp;#34;&lt;/span&gt;
+        },
+        {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;horario&amp;#34;&lt;/span&gt;: {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;liquidacao&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-03-23T23:34:11.078161Z&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;solicitacao&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-03-23T23:34:10.644294Z&amp;#34;&lt;/span&gt;
+          },
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;anyId135&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;motivo&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Devolução solicitada pelo usuário recebedor do pagamento original&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;rtrId&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;D16501555202103232334200fc5764e4&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;DEVOLVIDO&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;valor&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;0.01&amp;#34;&lt;/span&gt;
+        },
+        {
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;horario&amp;#34;&lt;/span&gt;: {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;liquidacao&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;solicitacao&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-04-01T21:17:34.282042Z&amp;#34;&lt;/span&gt;
+          },
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;anyId967&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;motivo&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Devolução solicitada pelo usuário recebedor do pagamento original&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;rtrId&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;D1650155520210401211705b9aea4f46&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;EM_PROCESSAMENTO&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;valor&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;0.01&amp;#34;&lt;/span&gt;
+        }
+      ],
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;endToEndId&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;E165015552021021523376414ac8f718&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;horario&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-02-15T23:41:17.870349Z&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;infoPagador&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;txid&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;valor&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;1300.00&amp;#34;&lt;/span&gt;
+    }
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;pre&gt;&lt;code&gt;400 Bad Request
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://pix.bcb.gov.br/api/v2/error/PixConsultaInvalida&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Consulta Pix Inválida&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;400&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;detail&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Os parâmetros de consulta à lista de pix recebidos não respeitam o schema ou não fazem sentido semanticamente.&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;pre&gt;&lt;code&gt;403 Forbidden
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;https://pix.bcb.gov.br/api/v2/error/AcessoNegado&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Acesso Negado&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;403&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;detail&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Requisição de participante autenticado que viola alguma regra de autorização.&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>
