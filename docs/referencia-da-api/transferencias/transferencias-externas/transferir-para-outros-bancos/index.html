@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23f74996dbafa0a80722a48af26624c4.json"
+  data-offline-search-index-json-src="/offline-search-index.6f44fa4430f85eb078c5607b958c0150.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23f74996dbafa0a80722a48af26624c4.json"
+  data-offline-search-index-json-src="/offline-search-index.6f44fa4430f85eb078c5607b958c0150.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -2608,6 +2608,31 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/pagamento/consultar-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultando um pagamento realizado</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixpagamentoconsultar-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/docs/referencia-da-api/pix/pagamento/buscar-dados-qrcode/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Buscar dados do QRCode</a>
   </li>
   <ul>
@@ -3233,8 +3258,8 @@
 <p>A data usada no campo <code>scheduled_to</code> deve obedecer a data limite retornada na <a href="/docs/referencia-da-api/agendamento/calendario-de-agendamento/">API de calendario de agendamento</a>. Caso contrário, será retornado um erro 422 na criação.</p>
 <br>
 <hr>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">POST https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers
-</code></pre></div><hr>
+<pre><code>POST https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers
+</code></pre><hr>
 <h4 id="body-params"><strong>BODY PARAMS</strong></h4>
 <hr>
 <br>
@@ -3296,7 +3321,7 @@
 <div class="pageinfo pageinfo-primary">
 <p><strong>Request Body</strong><br>
 O corpo da requisição deve conter todos os dados da transferência.<br>
-Observe que os &ldquo;0&quot;s que prefixam o <code>account_code</code> são removidos. Por exemplo, “00012345” é armazenado como “12345” e vai ser retornado assim nas APIs de consulta.<br>
+Observe que os &ldquo;0&quot;s que prefixam o <code>account_code</code> são removidos. Por exemplo, &ldquo;00012345&rdquo; é armazenado como &ldquo;12345&rdquo; e vai ser retornado assim nas APIs de consulta.<br>
 Essa transformação é aplicada pela API antes dos dados serem armazenados.</p>
 
 </div>
@@ -3306,11 +3331,11 @@ Essa transformação é aplicada pela API antes dos dados serem armazenados.</p>
 <div class="pageinfo pageinfo-primary">
 <p><strong>Tipos de conta ( target.account.account_type )</strong>
 <br>Através deste campo, é possível enviar o tipo de conta destino. Os valores aceitos são:
-<br>“CC” - Conta Corrente
-<br>“CD” - Conta de Depósito
-<br>“CG” - Conta garantida
-<br>“PG” - Conta de Pagamento
-<br>“PP” - Poupança
+<br>&ldquo;CC&rdquo; - Conta Corrente
+<br>&ldquo;CD&rdquo; - Conta de Depósito
+<br>&ldquo;CG&rdquo; - Conta garantida
+<br>&ldquo;PG&rdquo; - Conta de Pagamento
+<br>&ldquo;PP&rdquo; - Poupança
 <br><br>Este campo possui regras especiais para utilização:
 <br>Se o tipo de conta for PG, a agência (branch_code) é removida.
 <br>Se o tipo de conta for CC ou nulo, mas o número da conta (account_code) possuir mais de 13 dígitos, o tipo de conta é convertido para PG e a agência (branch_code) é removida.
@@ -3338,10 +3363,10 @@ Essa transformação é aplicada pela API antes dos dados serem armazenados.</p>
 </p>
 <br>
 <h5 id="response"><strong>Response</strong></h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#bd93f9">202</span> Accepted
+<pre><code>202 Accepted
 content-type: application/json
-</code></pre></div><p>Body</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+</code></pre><p>Body</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     <span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">100</span>,
     <span style="color:#ff79c6">&#34;approval_expired_at&#34;</span>: <span style="color:#ff79c6">null</span>,
     <span style="color:#ff79c6">&#34;approved_at&#34;</span>: <span style="color:#f1fa8c">&#34;2019-08-02T18:14:34Z&#34;</span>,
@@ -3390,6 +3415,8 @@ content-type: application/json
     
     
     <hr class="panel-line">
+        
+            
         
             
         

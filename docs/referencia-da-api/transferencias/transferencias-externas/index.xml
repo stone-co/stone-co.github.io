@@ -44,8 +44,8 @@
 &lt;p&gt;A data usada no campo &lt;code&gt;scheduled_to&lt;/code&gt; deve obedecer a data limite retornada na &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/agendamento/calendario-de-agendamento/&#34;&gt;API de calendario de agendamento&lt;/a&gt;. Caso contrário, será retornado um erro 422 na criação.&lt;/p&gt;
 &lt;br&gt;
 &lt;hr&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
 &lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;br&gt;
@@ -107,7 +107,7 @@
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Request Body&lt;/strong&gt;&lt;br&gt;
 O corpo da requisição deve conter todos os dados da transferência.&lt;br&gt;
-Observe que os &amp;ldquo;0&amp;quot;s que prefixam o &lt;code&gt;account_code&lt;/code&gt; são removidos. Por exemplo, “00012345” é armazenado como “12345” e vai ser retornado assim nas APIs de consulta.&lt;br&gt;
+Observe que os &amp;ldquo;0&amp;quot;s que prefixam o &lt;code&gt;account_code&lt;/code&gt; são removidos. Por exemplo, &amp;ldquo;00012345&amp;rdquo; é armazenado como &amp;ldquo;12345&amp;rdquo; e vai ser retornado assim nas APIs de consulta.&lt;br&gt;
 Essa transformação é aplicada pela API antes dos dados serem armazenados.&lt;/p&gt;
 
 &lt;/div&gt;
@@ -117,11 +117,11 @@ Essa transformação é aplicada pela API antes dos dados serem armazenados.&lt;
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Tipos de conta ( target.account.account_type )&lt;/strong&gt;
 &lt;br&gt;Através deste campo, é possível enviar o tipo de conta destino. Os valores aceitos são:
-&lt;br&gt;“CC” - Conta Corrente
-&lt;br&gt;“CD” - Conta de Depósito
-&lt;br&gt;“CG” - Conta garantida
-&lt;br&gt;“PG” - Conta de Pagamento
-&lt;br&gt;“PP” - Poupança
+&lt;br&gt;&amp;ldquo;CC&amp;rdquo; - Conta Corrente
+&lt;br&gt;&amp;ldquo;CD&amp;rdquo; - Conta de Depósito
+&lt;br&gt;&amp;ldquo;CG&amp;rdquo; - Conta garantida
+&lt;br&gt;&amp;ldquo;PG&amp;rdquo; - Conta de Pagamento
+&lt;br&gt;&amp;ldquo;PP&amp;rdquo; - Poupança
 &lt;br&gt;&lt;br&gt;Este campo possui regras especiais para utilização:
 &lt;br&gt;Se o tipo de conta for PG, a agência (branch_code) é removida.
 &lt;br&gt;Se o tipo de conta for CC ou nulo, mas o número da conta (account_code) possuir mais de 13 dígitos, o tipo de conta é convertido para PG e a agência (branch_code) é removida.
@@ -149,10 +149,10 @@ Essa transformação é aplicada pela API antes dos dados serem armazenados.&lt;
 &lt;/p&gt;
 &lt;br&gt;
 &lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;202&lt;/span&gt; Accepted
+&lt;pre&gt;&lt;code&gt;202 Accepted
 content-type: application/json
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;100&lt;/span&gt;,
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;approval_expired_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;approved_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2019-08-02T18:14:34Z&amp;#34;&lt;/span&gt;,
@@ -208,8 +208,8 @@ content-type: application/json
         
         &lt;hr&gt;
 &lt;br&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
 &lt;h4 id=&#34;query-params&#34;&gt;&lt;strong&gt;QUERY PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;br&gt;
@@ -229,10 +229,10 @@ content-type: application/json
 &lt;br&gt;Limite de itens retornados.&lt;/p&gt;
 &lt;br&gt;
 &lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;200&lt;/span&gt; OK
+&lt;pre&gt;&lt;code&gt;200 OK
 content-type: application/json
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cursor&amp;#34;&lt;/span&gt;: {
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;after&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;before&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
@@ -338,8 +338,8 @@ content-type: application/json
         
         &lt;hr&gt;
 &lt;br&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers/transfer_id
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers/transfer_id
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
 &lt;h4 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;br&gt;
@@ -347,10 +347,10 @@ content-type: application/json
 &lt;br&gt;Identificador da transferência externa.&lt;/p&gt;
 &lt;br&gt;
 &lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;200&lt;/span&gt; OK
+&lt;pre&gt;&lt;code&gt;200 OK
 content-type: application/json
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;100&lt;/span&gt;,
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;approval_expired_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;approved_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2019-08-02T18:14:34Z&amp;#34;&lt;/span&gt;,
@@ -406,8 +406,8 @@ content-type: application/json
         
         &lt;hr&gt;
 &lt;br&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers/id/cancel
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/external_transfers/id/cancel
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
 &lt;h4 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;br&gt;
@@ -415,8 +415,8 @@ content-type: application/json
 &lt;br&gt;Identificador da transferência externa.&lt;/p&gt;
 &lt;br&gt;
 &lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;204&lt;/span&gt; No Content
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;204 No Content
+&lt;/code&gt;&lt;/pre&gt;
       </description>
     </item>
     

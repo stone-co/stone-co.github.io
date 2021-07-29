@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23f74996dbafa0a80722a48af26624c4.json"
+  data-offline-search-index-json-src="/offline-search-index.6f44fa4430f85eb078c5607b958c0150.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23f74996dbafa0a80722a48af26624c4.json"
+  data-offline-search-index-json-src="/offline-search-index.6f44fa4430f85eb078c5607b958c0150.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -2608,6 +2608,31 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/pagamento/consultar-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultando um pagamento realizado</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixpagamentoconsultar-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/docs/referencia-da-api/pix/pagamento/buscar-dados-qrcode/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Buscar dados do QRCode</a>
   </li>
   <ul>
@@ -3208,8 +3233,8 @@
 <p>Deverá ser um request do tipo <code>PUT</code> com o endereço recebido no campo <code>url</code> do endpoint de <a href="/docs/referencia-da-api/kyc/consultar-url-para-foto/">Consultar URL para envio da foto</a>.</p>
 <br>
 <p>Exemplo:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">PUT https://storage.googleapis.com/sdb-inside-gateway-frontend-3727/dXNlcjo4YTZmMzYzZi05Mzg4LTRiMzEtOGY0ZC05Zjk2NTAyY2Q1NzA=/53acaa13-f74b-4884-9420-f05b0ca79d25/doc_cnh_front.jpg?Expires=1615042461&amp;GoogleAccessId=sdb-inside-gateway-c914%40inside-gateway-724c.iam.gserviceaccount.com&amp;Signature=L1kzM4t2dq4qjzJ9gP%2BM7N7o2UWlQ59TXYui7OyMBe107TvVvSLEqN%2B1VL4Y5pBK%2FKqKoJWXKGizT6PNC%2BP5aPRz9qR94m1oPG2lsNspjFLO%2BdrRhdMTx21ylHNLIOWy54vJ5A84WIAlnAIZvHU7%2B1a2%2BRn8Wd3b62djcOpndFEAYCJDQBBENLwY%2B0Qs0KbumICdVWNqfxwttaOj%2FDpzMqp0TrDfmx8xfL5FyIzyBn7BYwfmhJeWU2VFjWVztohj0wiOIPcHlK%2BUkgGNYQ8qXYMY5aWeO6A55%2FO20QErizp%2BX2Ad2YlfS5mOozXvjFPShR7%2FRBxkhAj%2BEFx9EyVy2A%3D%3D
-</code></pre></div><br>
+<pre><code>PUT https://storage.googleapis.com/sdb-inside-gateway-frontend-3727/dXNlcjo4YTZmMzYzZi05Mzg4LTRiMzEtOGY0ZC05Zjk2NTAyY2Q1NzA=/53acaa13-f74b-4884-9420-f05b0ca79d25/doc_cnh_front.jpg?Expires=1615042461&amp;GoogleAccessId=sdb-inside-gateway-c914%40inside-gateway-724c.iam.gserviceaccount.com&amp;Signature=L1kzM4t2dq4qjzJ9gP%2BM7N7o2UWlQ59TXYui7OyMBe107TvVvSLEqN%2B1VL4Y5pBK%2FKqKoJWXKGizT6PNC%2BP5aPRz9qR94m1oPG2lsNspjFLO%2BdrRhdMTx21ylHNLIOWy54vJ5A84WIAlnAIZvHU7%2B1a2%2BRn8Wd3b62djcOpndFEAYCJDQBBENLwY%2B0Qs0KbumICdVWNqfxwttaOj%2FDpzMqp0TrDfmx8xfL5FyIzyBn7BYwfmhJeWU2VFjWVztohj0wiOIPcHlK%2BUkgGNYQ8qXYMY5aWeO6A55%2FO20QErizp%2BX2Ad2YlfS5mOozXvjFPShR7%2FRBxkhAj%2BEFx9EyVy2A%3D%3D
+</code></pre><br>
 <h4 id="headers"><strong>HEADERS</strong></h4>
 <hr>
 <br>
@@ -3236,15 +3261,15 @@
 <br>
 <h4 id="response"><strong>Response</strong></h4>
 <hr>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#bd93f9">200</span> OK
-</code></pre></div><hr>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#bd93f9">400</span> Bad Request
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">&lt;?xml version=&#39;<span style="color:#bd93f9">1.0</span>&#39; encoding=&#39;UTF<span style="color:#bd93f9">-8</span>&#39;?&gt;
-&lt;Error&gt;
-&lt;Code&gt;ExpiredToken&lt;/Code&gt;
-&lt;Message&gt;The provided token has expired.&lt;/Message&gt;
-&lt;Details&gt;Request signature expired at: <span style="color:#bd93f9">2021-03-06</span>T<span style="color:#bd93f9">14</span>: <span style="color:#bd93f9">54</span>: <span style="color:#bd93f9">21</span>+<span style="color:#bd93f9">00</span>: <span style="color:#bd93f9">00</span>&lt;/Details&gt;
-&lt;/Error&gt;
+<pre><code>200 OK
+</code></pre><hr>
+<pre><code>400 Bad Request
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#ff79c6">&lt;?xml version=&#39;1.0&#39; encoding=&#39;UTF-8&#39;?&gt;</span>
+<span style="color:#ff79c6">&lt;Error&gt;</span>
+<span style="color:#ff79c6">&lt;Code&gt;</span>ExpiredToken<span style="color:#ff79c6">&lt;/Code&gt;</span>
+<span style="color:#ff79c6">&lt;Message&gt;</span>The provided token has expired.<span style="color:#ff79c6">&lt;/Message&gt;</span>
+<span style="color:#ff79c6">&lt;Details&gt;</span>Request signature expired at: 2021-03-06T14: 54: 21+00: 00<span style="color:#ff79c6">&lt;/Details&gt;</span>
+<span style="color:#ff79c6">&lt;/Error&gt;</span>
 </code></pre></div><br>
 <p>Próximo passo:</p>
 <h4 id="enviar-dados-do-usuáriodocsreferencia-da-apikycenviar-dados-do-usuario"><a href="/docs/referencia-da-api/kyc/enviar-dados-do-usuario/">Enviar dados do usuário</a>.</h4>
@@ -3256,6 +3281,8 @@
     
     
     <hr class="panel-line">
+        
+            
         
             
         

@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23f74996dbafa0a80722a48af26624c4.json"
+  data-offline-search-index-json-src="/offline-search-index.6f44fa4430f85eb078c5607b958c0150.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23f74996dbafa0a80722a48af26624c4.json"
+  data-offline-search-index-json-src="/offline-search-index.6f44fa4430f85eb078c5607b958c0150.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -2608,6 +2608,31 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/pagamento/consultar-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultando um pagamento realizado</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixpagamentoconsultar-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/docs/referencia-da-api/pix/pagamento/buscar-dados-qrcode/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Buscar dados do QRCode</a>
   </li>
   <ul>
@@ -3212,8 +3237,8 @@
 <li>Uma maior velocidade de resposta;</li>
 <li>Resiliência a falhas a partir de retentativas. Com isso conseguimos evitar que erros ocasionais como falhas de infraestrutura afete a nossa retenção de clientes no cadastro.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">POST https://sandbox-api.openbank.stone.com.br/api/v1/applications/{global_id}/signups
-</code></pre></div><br>
+<pre><code>POST https://sandbox-api.openbank.stone.com.br/api/v1/applications/{global_id}/signups
+</code></pre><br>
 <h4 id="request-parameters"><strong>Request Parameters</strong></h4>
 <hr>
 <br>
@@ -3223,7 +3248,7 @@
 <p><strong>global_id</strong>* <code>string</code><br>
 Identifica o tipo e o identificador de um recurso.<br>
 Para aplicações o global_id corresponde a &ldquo;application:CLIENT_ID&rdquo;, onde CLIENT_ID é o id da aplicação.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
    <span style="color:#ff79c6">&#34;global_id&#34;</span>: <span style="color:#f1fa8c">&#34;application:7fc3a55f-b6a3-4b92-a07a-4166bg392341&#34;</span>
 }
 </code></pre></div><br>
@@ -3233,7 +3258,7 @@ Para aplicações o global_id corresponde a &ldquo;application:CLIENT_ID&rdquo;,
 <p><strong>x-stone-idempotency-key</strong> <code>string</code></p>
 <p><strong>authorization</strong> <code>string</code><br>
 Para gerar o token <a href="/docs/guias/integracao/autenticacao">acesse aqui</a>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#ff79c6">&#34;x-stone-idempotency-key&#34;</span>: <span style="color:#f1fa8c">&#34;25478963571458&#34;</span>, 
   <span style="color:#ff79c6">&#34;authorization&#34;</span>: <span style="color:#f1fa8c">&#34;Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJhY2NvdW50cy1odWJpZEBvcGVuYmFuay5zdG9uZS5jb20uYnIiLCJuYmYiOjE2MTU0NzI9GjAsInNlc3Npb25fbWV0YWRhdGEiOnsiZW1wcmVzYVpXIjoxLCJjaGF2ZVpXIjoienciLCJwcm9kdWNhbyI6ZmFsc2V9LCJpc3MiOiJkODAzMDQ4ZC03MzA2LTQxNTYtYjNlMS1hNjlkMWNiZjQ3ODEiLCJyZWRpcmVjdF91cmkiOiJodHRwOi8vbG9jYWxob3N0Ojg1ODUvc3RvbmViYW5rL2NvbnNlbnRyZWRpcmVjdCIsInR5cGUiOiJjb25zZW50IiwiZXhwIjoxNjE1NDc5OTI5LCJpYWJ3OjE2MTU0NzI3MTksImp0aSI6Ijk0NTlmMjhhLTQ5NDEtNDA2Zi05YjExLWFmMjdhMWQ2MzEyMCJ9.SptDNxVKp5W_9B&#34;</span> 
 }
@@ -3244,15 +3269,15 @@ Para gerar o token <a href="/docs/guias/integracao/autenticacao">acesse aqui</a>
 <p>Consiste no envio dos dados do usuário e opcionalmente da organização que iremos solicitar o pedido de criação de conta de pagamento.</p>
 <p>Como esse endpoint trafega dados sensíveis, é necessário criptografar a requisição enviando um JWE (JSON Web Encryption), este corresponde a um JWT criptografado.</p>
 <p>O corpo da requisição terá o formato:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     <span style="color:#ff79c6">&#34;jwe&#34;</span>: <span style="color:#f1fa8c">&#34;jwe_body&#34;</span>
 }
 </code></pre></div><br>
 <p><strong>Como gerar o JWE:</strong></p>
 <br>
 <p>1- Requisite as chaves de criptografia:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">GET https://sandbox-api.openbank.stone.com.br/api/v1/discovery/keys
-</code></pre></div><p>2- Extraia da resposta a chave que tenha como chave valor &ldquo;use: enc&rdquo;, essa corresponde a chave para criptografar (enc/encrypt).</p>
+<pre><code>GET https://sandbox-api.openbank.stone.com.br/api/v1/discovery/keys
+</code></pre><p>2- Extraia da resposta a chave que tenha como chave valor &ldquo;use: enc&rdquo;, essa corresponde a chave para criptografar (enc/encrypt).</p>
 <p>3- Usar uma biblioteca de criptografia passando o payload (dados do usuário, veja abaixo no <a href="/docs/referencia-da-api/dados-da-conta/criar-nova-conta-de-pagamento/#schema">Schema</a> ), a chave pública encontrada no item 2.</p>
 <p>Segue um exemplo de como gerar um JWE em Python:</p>
 <br>
@@ -3297,7 +3322,7 @@ payload <span style="color:#ff79c6">=</span> json_encode({
 jwe <span style="color:#ff79c6">=</span> generate_jwe(payload)
 <span style="color:#ff79c6">print</span>(jwe)
 </code></pre></div><h5 id="exemplo-de-preenchimento-do-payload-com-envio-dos-dados-da-organização">Exemplo de preenchimento do payload com envio dos dados da organização:</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#ff79c6">&#34;user&#34;</span>: {
     <span style="color:#ff79c6">&#34;document&#34;</span>: <span style="color:#f1fa8c">&#34;52762077044&#34;</span>,
     <span style="color:#ff79c6">&#34;document_type&#34;</span>: <span style="color:#f1fa8c">&#34;cpf&#34;</span>,
@@ -3356,8 +3381,8 @@ jwe <span style="color:#ff79c6">=</span> generate_jwe(payload)
 <br>
 <h5 id="responses"><strong>Responses</strong></h5>
 <hr>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json"><span style="color:#bd93f9">202</span> Accepted
-</code></pre></div>
+<pre><code>202 Accepted
+</code></pre>
 
 <div class="pageinfo pageinfo-primary">
 <p><strong>Observação</strong></p>
@@ -3367,7 +3392,7 @@ jwe <span style="color:#ff79c6">=</span> generate_jwe(payload)
 
 <br>
 <h5 id="example">Example</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;9c6197d8-4b76-422c-ba81-11fb1ca97313&#34;</span>
 }
 </code></pre></div>
@@ -3378,6 +3403,8 @@ jwe <span style="color:#ff79c6">=</span> generate_jwe(payload)
     
     
     <hr class="panel-line">
+        
+            
         
             
         

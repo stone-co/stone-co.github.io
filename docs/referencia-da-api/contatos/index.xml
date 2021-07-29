@@ -77,8 +77,8 @@
       <description>
         
         
-        &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+        &lt;pre&gt;&lt;code&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
 &lt;h4 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
@@ -104,10 +104,10 @@
 &lt;br&gt;
 &lt;hr&gt;
 &lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;200 ok
+&lt;pre&gt;&lt;code&gt;200 ok
 content-type: application/json
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;bank_accounts&amp;#34;&lt;/span&gt;: [],
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;email&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;guilherme.email@stone.com.br&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;222f3745-24ed-4968-929f-a88c168ce582&amp;#34;&lt;/span&gt;,
@@ -128,8 +128,8 @@ content-type: application/json
       <description>
         
         
-        &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+        &lt;pre&gt;&lt;code&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
 &lt;h4 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
@@ -147,10 +147,10 @@ content-type: application/json
 &lt;p&gt;&lt;strong&gt;pix_key&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;filtra-contatos-pela-chave-pix-fornecida&#34;&gt;Filtra contatos pela chave Pix fornecida.&lt;/h2&gt;
 &lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;200 ok
+&lt;pre&gt;&lt;code&gt;200 ok
 content-type: application/json
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;[
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;[
   {
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;bank_accounts&amp;#34;&lt;/span&gt;: [
       {
@@ -215,8 +215,8 @@ content-type: application/json
       <description>
         
         
-        &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts/contact_id
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+        &lt;pre&gt;&lt;code&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts/contact_id
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
 &lt;h4 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
@@ -227,10 +227,10 @@ content-type: application/json
 &lt;br&gt;
 &lt;hr&gt;
 &lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;200 ok
+&lt;pre&gt;&lt;code&gt;200 ok
 content-type: application/json
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;bank_accounts&amp;#34;&lt;/span&gt;: [
     {
       &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;4567864&amp;#34;&lt;/span&gt;,
@@ -283,8 +283,8 @@ content-type: application/json
       <description>
         
         
-        &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts/contact_id
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+        &lt;pre&gt;&lt;code&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts/contact_id
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
 &lt;h4 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
@@ -315,10 +315,10 @@ content-type: application/json
 &lt;p&gt;Chave de idempotência.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;200 ok
+&lt;pre&gt;&lt;code&gt;200 ok
 content-type: application/json
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;bank_accounts&amp;#34;&lt;/span&gt;: [],
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;email&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;93305585-0576-4ca0-aeac-3a75f9cc3c18&amp;#34;&lt;/span&gt;,
@@ -339,8 +339,8 @@ content-type: application/json
       <description>
         
         
-        &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;DELETE https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts/contact_id
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+        &lt;pre&gt;&lt;code&gt;DELETE https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts/contact_id
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
 &lt;h4 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
@@ -351,8 +351,8 @@ content-type: application/json
 &lt;br&gt;
 &lt;hr&gt;
 &lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;200 OK 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;200 OK 
+&lt;/code&gt;&lt;/pre&gt;
       </description>
     </item>
     
@@ -365,8 +365,8 @@ content-type: application/json
       <description>
         
         
-        &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts/contact_id/bank_accounts
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+        &lt;pre&gt;&lt;code&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts/contact_id/bank_accounts
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
 &lt;h4 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
@@ -401,10 +401,10 @@ content-type: application/json
 &lt;br&gt;
 &lt;hr&gt;
 &lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;200 OK
+&lt;pre&gt;&lt;code&gt;200 OK
 content-type: application/json
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;4567864&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;PG&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;1234&amp;#34;&lt;/span&gt;,
@@ -425,8 +425,8 @@ content-type: application/json
       <description>
         
         
-        &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts/contact_id/bank_accounts/bank_account_id
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+        &lt;pre&gt;&lt;code&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts/contact_id/bank_accounts/bank_account_id
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
 &lt;h4 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
@@ -463,10 +463,10 @@ content-type: application/json
 &lt;br&gt;
 &lt;hr&gt;
 &lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;200 OK
+&lt;pre&gt;&lt;code&gt;200 OK
 content-type: application/json
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;e43e3003-c587-4cb8-ab37-b374fe0d157f&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;1234&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;197&amp;#34;&lt;/span&gt;,
@@ -487,8 +487,8 @@ content-type: application/json
       <description>
         
         
-        &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;DELETE https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts/contact_id/bank_accounts/bank_account_id
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+        &lt;pre&gt;&lt;code&gt;DELETE https://sandbox-api.openbank.stone.com.br/api/v1/accounts/account_id/contacts/contact_id/bank_accounts/bank_account_id
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
 &lt;h4 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
@@ -502,8 +502,8 @@ content-type: application/json
 &lt;br&gt;
 &lt;hr&gt;
 &lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-http&#34; data-lang=&#34;http&#34;&gt;200 OK
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;200 OK
+&lt;/code&gt;&lt;/pre&gt;
       </description>
     </item>
     

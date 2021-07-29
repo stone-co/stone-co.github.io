@@ -104,20 +104,20 @@ Se isso ocorrer em um período curto demais pode ocasionar uma resposta &lt;code
         &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;Nossas APIs usam um padrão de paginação por cursor. O retorno possui o seguinte formato:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
- cursor: {
-    after: &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;string | null&amp;#34;&lt;/span&gt;,
-    before: &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;string | null&amp;#34;&lt;/span&gt;,
-    limit: &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;number&amp;#34;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;{
+ cursor&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; {
+    after&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string | null&amp;#34;&lt;/span&gt;,
+    before&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string | null&amp;#34;&lt;/span&gt;,
+    limit&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;number&amp;#34;&lt;/span&gt;
  },
- data: array[object],
+ data&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; array[object],
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h4 id=&#34;como-funciona&#34;&gt;Como funciona:&lt;/h4&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;Deve-se informar o limite de items para a paginação, passando o parâmetro &lt;strong&gt;?limit=10&lt;/strong&gt;. Na resposta dessa query, será retornado as hashs referente ao cursor no momento da resposta, ex.:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
  cursor: {
  after: &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;ASsa987fqw&amp;#34;&lt;/span&gt;,
  before: &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;null&amp;#34;&lt;/span&gt;,
@@ -257,13 +257,13 @@ strings e floats.&lt;/p&gt;
         &lt;br&gt;
 &lt;p&gt;Nossos endpoints seguem um padrão de mensagens. Toda mensagem de erro, por exemplo, seguirá o modelo &amp;ldquo;srn:error:xxx&amp;quot; e um &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/codigos-de-resposta/&#34;&gt;código HTTP&lt;/a&gt; apropriado para a falha.&lt;/p&gt;
 &lt;p&gt;Exemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:target_account_not_found&amp;#34;&lt;/span&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;p&gt;Alguns endpoints têm uma resposta mais completa, entregando a mensagem de erro mencionada e mais detalhes.&lt;/p&gt;
 &lt;p&gt;Exemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;errors&amp;#34;&lt;/span&gt;: [
         {
             &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;error&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;is invalid&amp;#34;&lt;/span&gt;,

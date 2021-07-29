@@ -22,7 +22,7 @@
 <meta property="og:description" content="Escreva o Banco do futuro. Uma linha de código por vez." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://stone-co.github.io/docs/referencia-da-api/pix/pagamento/criar-pagamento-pendente/" />
-<meta property="og:updated_time" content="2021-04-01T18:00:00-03:00" /><meta property="og:site_name" content="Stone OpenBank" />
+<meta property="og:updated_time" content="2021-06-25T14:28:33-03:00" /><meta property="og:site_name" content="Stone OpenBank" />
 <meta itemprop="name" content="Criar um pagamento pendente">
 <meta itemprop="description" content="Escreva o Banco do futuro. Uma linha de código por vez.">
 <meta name="twitter:card" content="summary"/>
@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23f74996dbafa0a80722a48af26624c4.json"
+  data-offline-search-index-json-src="/offline-search-index.6f44fa4430f85eb078c5607b958c0150.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23f74996dbafa0a80722a48af26624c4.json"
+  data-offline-search-index-json-src="/offline-search-index.6f44fa4430f85eb078c5607b958c0150.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -2608,6 +2608,31 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/pagamento/consultar-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultando um pagamento realizado</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixpagamentoconsultar-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/docs/referencia-da-api/pix/pagamento/buscar-dados-qrcode/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Buscar dados do QRCode</a>
   </li>
   <ul>
@@ -3214,8 +3239,8 @@
 	
 	<hr>
 <br>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/outbound_pix_payments
-</code></pre></div><br>
+<pre><code>POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/outbound_pix_payments
+</code></pre><br>
 <p>Esse endpoint foi idealizado para criação de um Pix pendente de confirmação enviando os dados do destino ou uma chave Pix.</p>
 <p>Ou seja, com este endpoint é possível fazer um pix informando tanto o campo <code>key</code> como informando o campo <code>target</code>.</p>
 <br>
@@ -3243,7 +3268,7 @@
 <br>Chave de idempotência</p>
 <br>
 <p>Exemplo:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#ff79c6">&#34;authorization&#34;</span>: <span style="color:#f1fa8c">&#34;Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI4d3NUd3BhYTRJWUZIYWV5ZFRubnRoRC1UaVlCaU9kanNmOGx6RUlMR1hVIn0.eyJqdGkiOiJiODQ0NDc4OS01ODE5LTQ4MTUtYjc1NC04MDU5NmMyYTg4MGYiLCJleHAiOjE2MTY2OTk5MjQsIm5iZiI6MCwiaWF0IjoxNjE2Njk5MDI0LCJpc3MiOiJodHRwczovL3NhbmRib3gtYWNjb3VudHMub3BlbmJhbmsuc3RvbmUuY29tLmJyL2F1dGgvcmVhbG1zL3N0b25lX2JhbmsiLCJzdWIiOiJhYzE5MGRmYy00YTBjLTQ5ODUtYmQwNi03NWE5Zjc3NjU0MTMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiIwNjVlY2IwOC0yNDM5LTQwYzAtOGUxMy0yYjQzYzIxNzQzZTMiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiIwMjhlMjY3ZS0zMjYwLTQzNDMtODQ2ZS1hOTRkNzlmZTFjYWEiLCJhY3IiOiIxIiwic2NvcGUiOiJwYXltZW50YWNjb3VudDpwYXltZW50bGlua3M6d3JpdGUgcGF5bWVudGFjY291bnQ6Y29udGFjdDp3cml0ZSBlbnRpdHk6d3JpdGUgcGF5bWVudGFjY291bnQ6cmVhZCBwYXltZW50YWNjb3VudDp0cmFuc2ZlcnM6aW50ZXJuYWwgcGF5bWVudGFjY291bnQ6ZmVlczpyZWFkIHBheW1lbnRhY2NvdW50Omluc3RhbnRwYXltZW50IHBheW1lbnRhY2NvdW50OnBheW1lbnRzIHN0b25lX3N1YmplY3RfaWQgcGF5bWVudGFjY291bnQ6Y29udGFjdDpyZWFkIHNpZ251cDpwYXltZW50YWNjb3VudCBwYXltZW50YWNjb3VudDpib2xldG9pc3N1YW5jZSBwYXltZW50YWNjb3VudDpwYXltZW50bGlua3M6cmVhZCBwYXltZW50YWNjb3VudDpwYXlyb2xsczpyZWFkIHBheW1lbnRhY2NvdW50OnBheXJvbGxzOndyaXRlIHBheW1lbnRhY2NvdW50OnRyYW5zZmVyczpleHRlcm5hbCBlbnRpdHk6cmVhZCIsImNsaWVudElkIjoiMDY1ZWNiMDgtMjQzOS00MGMwLThlMTMtMmI0M2MyMTc0M2UzIiwiY2xpZW50SG9zdCI6IjEwLjEwLjEuMTQ5Iiwic3RvbmVfc3ViamVjdF9pZCI6ImFwcGxpY2F0aW9uOjA2NWVjYjA4LTI0MzktNDBjMC04ZTEzLTJiNDNjMjE3NDNlMyIsImNsaWVudEFkZHJlc3MiOiIxMC4xMC4xLjE0OSJ9.PlAhWLgC2W10H9emucF4obcJhwR92EogMNRIWUej4z-P-p3UaStYlaYd5Bfx4hl7da4ly62K1LEBI7LOqCFkbHMlnJfglp3dFS2M3iHZ571BNSmCff3wUiFy6zoHxFaKEUPy0V8e6mCQwFuapdIvDocA4Z4xYh049dWEwbJ2uevV3V_Q-RL3me8vykNTWGiT-dmyWvFN-XAq889_F1ZQskHsLz-ZtlrFw3XjitnLvEJbg9iyxVA7AuwnexBIQS4gU9QwMXcJjij9JowYbLu4ANUITXU01Jf5hxMYq1oSobOL3-RuGWJLoPOXkJyAbOm5hS15QgSuwp_qOU8VAEa3Yg&#34;</span>,
   <span style="color:#ff79c6">&#34;x-stone-idempotency-key&#34;</span>: <span style="color:#f1fa8c">&#34;24b53d84-a79d-11eb-bcbc-0242ac130002&#34;</span>
 }
@@ -3319,8 +3344,8 @@
 }
 </code></pre></div><br>
 <h5 id="responses"><strong>Responses</strong></h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">201 OK
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+<pre><code>201 OK
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#ff79c6">&#34;account_id&#34;</span>: <span style="color:#f1fa8c">&#34;477f8576-ca82-462b-be73-dc28cc6490c3&#34;</span>,
   <span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">39511</span>,
   <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2020-12-14T17:38:02Z&#34;</span>,
@@ -3371,7 +3396,47 @@
     }
   }
 }
-</code></pre></div>
+</code></pre></div><hr>
+<pre><code>400 Bad Request
+</code></pre><hr>
+<pre><code>422 Unprocessable Entity
+</code></pre><p>Body</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;srn:error:key_not_found&#34;</span>
+}
+</code></pre></div><p>Acontece quando a chave passada não está cadastrada no DICT.</p>
+<br>
+<p>Body</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;srn:error:target_account_not_found&#34;</span>
+}
+</code></pre></div><p>Acontece quando o alvo da transferência é uma conta interna, e essa conta interna não existe.
+Pagamentos para contas externas inexistentes podem ser criados mas falharão após a confirmação.</p>
+<br>
+<p>Body</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;srn:error:cannot_transfer_to_source_account&#34;</span>
+}
+</code></pre></div><p>Acontece quando o alvo da transferência é a conta que está enviando a transferência. Por que você está fazendo isso?</p>
+<br>
+<p>Body</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;srn:error:invoice_amount_differs&#34;</span>
+}
+</code></pre></div><p>Acontece quando a transferência está relacionada a uma cobrança criada por uma conta interna, e o valor enviado não corresponde ao valor informado pela cobrança.</p>
+<br>
+<p>Body</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;srn:error:invoice_expired&#34;</span>
+}
+</code></pre></div><p>Acontece quando a transferência está relacionada a uma cobrança criada por uma conta interna, e a cobrança expirou.</p>
+<br>
+<p>Body</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;srn:error:invoice_paid&#34;</span>
+}
+</code></pre></div><p>Acontece quando a transferência está relacionada a uma cobrança criada por uma conta interna, e a cobrança já foi paga.</p>
+
         <div class="section-index">
     
     
@@ -3620,6 +3685,8 @@
         
             
         
+            
+        
     
 </div>
 
@@ -3627,7 +3694,7 @@
 	
 	
 
-	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 01.04.2021
+	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 25.06.2021
 </div>
 </div>
 

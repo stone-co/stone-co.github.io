@@ -27,7 +27,7 @@
 &lt;p&gt;Veja as possíveis estruturas de cada transação que poderão imapactar o extrato.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h5 id=&#34;saldo-bloqueado&#34;&gt;Saldo bloqueado&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;balance_blocked&amp;#34;&lt;/span&gt;: {
       &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ad55491e-c3da-4111-98fb-d74f171a31be&amp;#34;&lt;/span&gt;,
       &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;-1000&lt;/span&gt;,
@@ -43,7 +43,7 @@
    }
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;saldo-desbloqueado&#34;&gt;Saldo desbloqueado&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;balance_unblocked&amp;#34;&lt;/span&gt;: {            
        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ad55491e-c1da-4311-98fb-d74f171a31be&amp;#34;&lt;/span&gt;,
        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;36900&lt;/span&gt;,
@@ -59,7 +59,7 @@
     }
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;transferência-interna&#34;&gt;Transferência interna&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;internal&amp;#34;&lt;/span&gt;: {
        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ad55491e-c1da-4111-38fb-d74f171a31be&amp;#34;&lt;/span&gt;,
          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;-18&lt;/span&gt;,
@@ -90,7 +90,7 @@
     }
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;transferência-externa&#34;&gt;Transferência externa&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;external&amp;#34;&lt;/span&gt;: {            
        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ad55391e-c1da-4111-98fb-d74f171a31be&amp;#34;&lt;/span&gt;,
          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;-3252&lt;/span&gt;,
@@ -127,7 +127,7 @@
     }
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;devolução-de-transferência-externa&#34;&gt;Devolução de transferência externa&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;external_refund&amp;#34;&lt;/span&gt;: {            
        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ad55491e-c1da-4131-98fb-d74f171a31be&amp;#34;&lt;/span&gt;,
          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;55&lt;/span&gt;,
@@ -161,7 +161,7 @@
     }
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;pagamento-instantâneo&#34;&gt;Pagamento instantâneo&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;instant_payment&amp;#34;&lt;/span&gt;: {
        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;-122&lt;/span&gt;,
          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;balance_after&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;1712342&lt;/span&gt;,
@@ -182,7 +182,7 @@
     }
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;liquidação-de-recebíveis-de-cartão&#34;&gt;Liquidação de recebíveis de cartão&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;card_payment&amp;#34;&lt;/span&gt;: {            
        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ad55491e-c1da-4113-98fb-d74f171a31be&amp;#34;&lt;/span&gt;,
          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;acquirer&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Stone&amp;#34;&lt;/span&gt;,
@@ -201,7 +201,7 @@
     }    
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;pagamento-de-boleto&#34;&gt;Pagamento de boleto&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;payment&amp;#34;&lt;/span&gt;: {
         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ad55491e-c1da-4111-98fb-d74f131a31be&amp;#34;&lt;/span&gt;,
          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;-10000&lt;/span&gt;,
@@ -249,7 +249,7 @@
     }
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;devolução-de-pagamento&#34;&gt;Devolução de pagamento&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;payment_refund&amp;#34;&lt;/span&gt;: {            
        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ad55491e-c1da-4111-98fb-d74f131a31be&amp;#34;&lt;/span&gt;,
          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;15050&lt;/span&gt;,
@@ -296,7 +296,7 @@
     }    
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;empréstimos&#34;&gt;Empréstimos&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;loan_payments&amp;#34;&lt;/span&gt;: {
        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;477f8576-ca82-432b-be73-dc28cc6490c3&amp;#34;&lt;/span&gt;,
        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_settlement_policy_retention&amp;#34;&lt;/span&gt;:{
@@ -345,7 +345,7 @@
     }
 } 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;folha-de-pagamento&#34;&gt;Folha de Pagamento&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;payroll&amp;#34;&lt;/span&gt;: {            
        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ad55491e-c1da-4111-93fb-d74f171a31be&amp;#34;&lt;/span&gt;,
          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;-100&lt;/span&gt;,
@@ -360,7 +360,7 @@
     }    
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;compra-feita-com-cartão-stone&#34;&gt;Compra feita com Cartão Stone&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{    
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{    
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;outbound_stone_prepaid_card_payment&amp;#34;&lt;/span&gt;: {            
        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ad55491e-c1da-4111-93fb-d74f171a31be&amp;#34;&lt;/span&gt;,
         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;acquirer_code&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;acquirer_code&amp;#34;&lt;/span&gt;,
@@ -401,7 +401,7 @@
     }    
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;devolução-de-compra-feita-com-cartão-stone&#34;&gt;Devolução de compra feita com Cartão Stone&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;outbound_stone_prepaid_card_payment_refund&amp;#34;&lt;/span&gt;: {
        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ad55491e-c1da-4111-93fb-d74f171a31be&amp;#34;&lt;/span&gt;,
         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;acquirer_code&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;acquirer_code&amp;#34;&lt;/span&gt;,
@@ -442,7 +442,7 @@
     }
 } 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;chargeback-de-uma-compra-feita-com-cartão-stone&#34;&gt;Chargeback de uma compra feita com Cartão Stone&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;outbound_stone_prepaid_card_payment_chargeback&amp;#34;&lt;/span&gt;: {            
         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ad55491e-c1da-4111-98fb-d34f171a31be&amp;#34;&lt;/span&gt;,
          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;acquirer_code&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;acquirer_code&amp;#34;&lt;/span&gt;,
@@ -491,7 +491,7 @@
     }    
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;saque-com-cartão-stone-feito-no-banco24horas&#34;&gt;Saque com Cartão Stone feito no Banco24Horas&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;outbound_stone_prepaid_card_withdrawal&amp;#34;&lt;/span&gt;: {
        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ad55491e-c1da-4131-98fb-d74f171a31be&amp;#34;&lt;/span&gt;,
          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;acquirer_code&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;acquirer_code&amp;#34;&lt;/span&gt;,
@@ -532,7 +532,7 @@
     }
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;devolução-de-saque-feito-no-banco24horas&#34;&gt;Devolução de Saque feito no Banco24Horas&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;outbound_stone_prepaid_card_withdrawal_refund&amp;#34;&lt;/span&gt;: {            
         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ad55491e-c1da-4111-38fb-d74f171a31be&amp;#34;&lt;/span&gt;,
          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;acquirer_code&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;acquirer_code&amp;#34;&lt;/span&gt;,
@@ -573,7 +573,7 @@
       }    
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;recebimento-de-salário&#34;&gt;Recebimento de salário&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;salary&amp;#34;&lt;/span&gt;: {
        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ad55391e-c1da-4111-98fb-d74f171a31be&amp;#34;&lt;/span&gt;,
          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;164&lt;/span&gt;,
@@ -600,28 +600,29 @@
     }
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;portabilidade-de-salário&#34;&gt;Portabilidade de salário&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;salary_portability&amp;#34;&lt;/span&gt;: {            
-       &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ad55431e-c1da-4111-98fb-d74f171a31be&amp;#34;&lt;/span&gt; 
-        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;10000&lt;/span&gt;,
+       &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ad55431e-c1da-4111-98fb-d74f171a31be&amp;#34;&lt;/span&gt;, 
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;10000&lt;/span&gt;,
         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;balance_after&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;5992000&lt;/span&gt;,
         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;balance_before&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;5982000&lt;/span&gt;,
         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;counter_party&amp;#34;&lt;/span&gt;: {
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account&amp;#34;&lt;/span&gt;:{
-               &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;473603&amp;#34;&lt;/span&gt;,
-               &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;,
-               &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;16501555&amp;#34;&lt;/span&gt;, 
-               &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution_name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ITAÚ UNIBANCO S.A.&amp;#34;&lt;/span&gt;
-         }
-        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2019-09-13T22:27:39Z&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account&amp;#34;&lt;/span&gt;: {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;473603&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;16501555&amp;#34;&lt;/span&gt;,
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution_name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ITAÚ UNIBANCO S.A.&amp;#34;&lt;/span&gt;
+          }
+        },
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2019-09-13T22:27:39Z&amp;#34;&lt;/span&gt;,
         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;fff5eb35-63bb-44a9-9640-128c97606710&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;operation&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;debit&amp;#34;&lt;/span&gt;
-        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;FINISHED&amp;#34;&lt;/span&gt;
-        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;salary_portability&amp;#34;&lt;/span&gt;
-      }    
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;operation&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;debit&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;FINISHED&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;salary_portability&amp;#34;&lt;/span&gt;
+      } 
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;devolução-de-salário-pela-intituição-de-portabilidade&#34;&gt;Devolução de salário pela intituição de portabilidade&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;salary_portability_refund&amp;#34;&lt;/span&gt;: {
        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;477f8576-ca83-462b-be73-dc28cc6490c3&amp;#34;&lt;/span&gt;,
         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;200&lt;/span&gt;,
@@ -645,7 +646,7 @@
     }
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;devolução-de-salário-pela-intituição-de-portabilidade-em-casos-de-cancelamento&#34;&gt;Devolução de salário pela intituição de portabilidade (Em casos de cancelamento)&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-JSON&#34; data-lang=&#34;JSON&#34;&gt;{
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;salary_portability_employer_refund&amp;#34;&lt;/span&gt;: {            
         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;-200&lt;/span&gt;,
          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;balance_after&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#bd93f9&#34;&gt;522283472&lt;/span&gt;,

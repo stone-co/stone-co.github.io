@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23f74996dbafa0a80722a48af26624c4.json"
+  data-offline-search-index-json-src="/offline-search-index.6f44fa4430f85eb078c5607b958c0150.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23f74996dbafa0a80722a48af26624c4.json"
+  data-offline-search-index-json-src="/offline-search-index.6f44fa4430f85eb078c5607b958c0150.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -2608,6 +2608,31 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/pagamento/consultar-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultando um pagamento realizado</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixpagamentoconsultar-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/docs/referencia-da-api/pix/pagamento/buscar-dados-qrcode/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Buscar dados do QRCode</a>
   </li>
   <ul>
@@ -3215,7 +3240,7 @@
 <ul>
 <li><code>status: 403</code></li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
 	<span style="color:#ff79c6">&#34;challenge&#34;</span>: {
 		<span style="color:#ff79c6">&#34;id&#34;</span>: id,
 		<span style="color:#ff79c6">&#34;required_types&#34;</span>: [<span style="color:#f1fa8c">&#34;pin&#34;</span>],
@@ -3229,8 +3254,9 @@
 <li>O próximo <em>request</em> deverá conter o <code>challenge_solution</code>.</li>
 </ol>
 <p>Pra montar o <code>challenge_solution</code> você deverá gerar um JWE, onde o valor descriptografado seja um json no seguinte formato:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json">{
-	<span style="color:#ff79c6">&#34;challenge_id&#34;</span>: challenge_id, <span style="color:#ff79c6">&#34;pin&#34;</span>: pin
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#ff79c6">&#34;challenge_id&#34;</span>: challenge_id,
+    <span style="color:#ff79c6">&#34;pin&#34;</span>: pin
 }
 </code></pre></div><p>O <code>challenge id</code> é o valor devolvido no request anterior e segunda chave do json deverá ser o tipo de <em>credencial</em> e seu valor correspondente.</p>
 <p>Para gerar o JWE você usará a chave com <code>&quot;use&quot;: &quot;enc&quot;</code> exposta em <code>api/v1/discovery/keys</code>. O <code>protected_header</code> desse JWE deverá ser algo como <code>{&quot;alg&quot;:&quot;RSA-OAEP&quot;,&quot;enc&quot;:&quot;A256GCM&quot;}</code>.</p>
@@ -3244,7 +3270,7 @@
 <p>Escrever o conteúdo a ser criptografado (payload).</p>
 </li>
 <li>
-<p>Buscar a chave pública da Stone, no endpoint /api/v1/discovery/keys, cujo campo “use” seja igual a “enc”;</p>
+<p>Buscar a chave pública da Stone, no endpoint /api/v1/discovery/keys, cujo campo &ldquo;use&rdquo; seja igual a &ldquo;enc&rdquo;;</p>
 </li>
 <li>
 <p>Usar uma biblioteca de criptografia passando o payload, a chave pública e o algoritmo utilizado, no caso, RSA-OAEP-256</p>
@@ -3295,6 +3321,8 @@
     
     
     <hr class="panel-line">
+        
+            
         
             
         

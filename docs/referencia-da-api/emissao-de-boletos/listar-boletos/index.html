@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23f74996dbafa0a80722a48af26624c4.json"
+  data-offline-search-index-json-src="/offline-search-index.6f44fa4430f85eb078c5607b958c0150.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23f74996dbafa0a80722a48af26624c4.json"
+  data-offline-search-index-json-src="/offline-search-index.6f44fa4430f85eb078c5607b958c0150.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -2608,6 +2608,31 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/pagamento/consultar-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultando um pagamento realizado</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixpagamentoconsultar-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/docs/referencia-da-api/pix/pagamento/buscar-dados-qrcode/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Buscar dados do QRCode</a>
   </li>
   <ul>
@@ -3204,8 +3229,8 @@
 	
 	<hr>
 <br>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http">GET https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
-</code></pre></div><br>
+<pre><code>GET https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices
+</code></pre><br>
 <h4 id="query-params"><strong>QUERY PARAMS</strong></h4>
 <hr>
 <br>
@@ -3293,10 +3318,10 @@ Formato &ldquo;YYYY-MM-DD&rdquo;.</p>
 <br> Código de barras traduzidos em números.</p>
 <br>
 <h4 id="response"><strong>Response</strong></h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#bd93f9">200</span> OK
+<pre><code>200 OK
 content-type: application/json
-</code></pre></div><h5 id="body">Body</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">
+</code></pre><h5 id="body">Body</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">
 {
     <span style="color:#ff79c6">&#34;cursor&#34;</span>: {
         <span style="color:#ff79c6">&#34;after&#34;</span>: <span style="color:#ff79c6">null</span>,
@@ -3314,7 +3339,7 @@ content-type: application/json
              <span style="color:#ff79c6">&#34;document&#34;</span>:<span style="color:#f1fa8c">&#34;98146856000174&#34;</span>,
              <span style="color:#ff79c6">&#34;document_type&#34;</span>:<span style="color:#f1fa8c">&#34;cnpj&#34;</span>,
              <span style="color:#ff79c6">&#34;legal_name&#34;</span>:<span style="color:#f1fa8c">&#34;Sr. Mirella&#34;</span>,
-             <span style="color:#ff79c6">&#34;trade_name&#34;</span>:NULL
+             <span style="color:#ff79c6">&#34;trade_name&#34;</span>:<span style="color:#ff79c6">null</span>
           },
           <span style="color:#ff79c6">&#34;created_at&#34;</span>:<span style="color:#f1fa8c">&#34;2020-03-10T15:03:34Z&#34;</span>,
           <span style="color:#ff79c6">&#34;created_by&#34;</span>:<span style="color:#f1fa8c">&#34;user:380f9969-8946-4f88-a781-be8b7efc1f90&#34;</span>,
@@ -3349,11 +3374,11 @@ content-type: application/json
              <span style="color:#ff79c6">&#34;document&#34;</span>:<span style="color:#f1fa8c">&#34;98146856000174&#34;</span>,
              <span style="color:#ff79c6">&#34;document_type&#34;</span>:<span style="color:#f1fa8c">&#34;cnpj&#34;</span>,
              <span style="color:#ff79c6">&#34;legal_name&#34;</span>:<span style="color:#f1fa8c">&#34;Sr. Mirella&#34;</span>,
-             <span style="color:#ff79c6">&#34;trade_name&#34;</span>:NULL
+             <span style="color:#ff79c6">&#34;trade_name&#34;</span>:<span style="color:#ff79c6">null</span>
           },
           <span style="color:#ff79c6">&#34;receiver&#34;</span>: <span style="color:#ff79c6">null</span>,
           <span style="color:#ff79c6">&#34;registered_at&#34;</span>:<span style="color:#f1fa8c">&#34;2020-03-10T15:03:34Z&#34;</span>,
-          <span style="color:#ff79c6">&#34;settled_at&#34;</span>:NULL,
+          <span style="color:#ff79c6">&#34;settled_at&#34;</span>:<span style="color:#ff79c6">null</span>,
           <span style="color:#ff79c6">&#34;status&#34;</span>:<span style="color:#f1fa8c">&#34;REGISTERED&#34;</span>,
           <span style="color:#ff79c6">&#34;writable_line&#34;</span>:<span style="color:#f1fa8c">&#34;19790000052020031015703344761550581910000002000&#34;</span>
        },
@@ -3367,7 +3392,7 @@ content-type: application/json
              <span style="color:#ff79c6">&#34;document&#34;</span>:<span style="color:#f1fa8c">&#34;98146856000174&#34;</span>,
              <span style="color:#ff79c6">&#34;document_type&#34;</span>:<span style="color:#f1fa8c">&#34;cnpj&#34;</span>,
              <span style="color:#ff79c6">&#34;legal_name&#34;</span>:<span style="color:#f1fa8c">&#34;Sr. Mirella&#34;</span>,
-             <span style="color:#ff79c6">&#34;trade_name&#34;</span>:NULL
+             <span style="color:#ff79c6">&#34;trade_name&#34;</span>:<span style="color:#ff79c6">null</span>
           },
           <span style="color:#ff79c6">&#34;created_at&#34;</span>:<span style="color:#f1fa8c">&#34;2020-03-10T15:03:34Z&#34;</span>,
           <span style="color:#ff79c6">&#34;created_by&#34;</span>:<span style="color:#f1fa8c">&#34;user:380f9969-8946-4f88-a781-be8b7efc1f90&#34;</span>,
@@ -3402,20 +3427,20 @@ content-type: application/json
              <span style="color:#ff79c6">&#34;document&#34;</span>:<span style="color:#f1fa8c">&#34;98146856000174&#34;</span>,
              <span style="color:#ff79c6">&#34;document_type&#34;</span>:<span style="color:#f1fa8c">&#34;cnpj&#34;</span>,
              <span style="color:#ff79c6">&#34;legal_name&#34;</span>:<span style="color:#f1fa8c">&#34;Sr. Mirella&#34;</span>,
-             <span style="color:#ff79c6">&#34;trade_name&#34;</span>:NULL
+             <span style="color:#ff79c6">&#34;trade_name&#34;</span>:<span style="color:#ff79c6">null</span>
           },
           <span style="color:#ff79c6">&#34;receiver&#34;</span>: <span style="color:#ff79c6">null</span>,
           <span style="color:#ff79c6">&#34;registered_at&#34;</span>:<span style="color:#f1fa8c">&#34;2020-03-10T15:03:34Z&#34;</span>,
-          <span style="color:#ff79c6">&#34;settled_at&#34;</span>:NULL,
+          <span style="color:#ff79c6">&#34;settled_at&#34;</span>:<span style="color:#ff79c6">null</span>,
           <span style="color:#ff79c6">&#34;status&#34;</span>:<span style="color:#f1fa8c">&#34;REGISTERED&#34;</span>,
           <span style="color:#ff79c6">&#34;writable_line&#34;</span>:<span style="color:#f1fa8c">&#34;19790000052020031015703344761550581910000002000&#34;</span>
        }
     ]
 }
 </code></pre></div><br>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON"><span style="color:#bd93f9">403</span> Forbidden
-</code></pre></div><h5 id="body-1">Body</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Json" data-lang="Json">{
+<pre><code>403 Forbidden
+</code></pre><h5 id="body-1">Body</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;object&#34;</span>,
   <span style="color:#ff79c6">&#34;properties&#34;</span>: {
     <span style="color:#ff79c6">&#34;type&#34;</span>: {
@@ -3434,6 +3459,8 @@ content-type: application/json
     
     
     <hr class="panel-line">
+        
+            
         
             
         

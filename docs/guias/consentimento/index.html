@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23f74996dbafa0a80722a48af26624c4.json"
+  data-offline-search-index-json-src="/offline-search-index.6f44fa4430f85eb078c5607b958c0150.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23f74996dbafa0a80722a48af26624c4.json"
+  data-offline-search-index-json-src="/offline-search-index.6f44fa4430f85eb078c5607b958c0150.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -2608,6 +2608,31 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/pagamento/consultar-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultando um pagamento realizado</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixpagamentoconsultar-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/docs/referencia-da-api/pix/pagamento/buscar-dados-qrcode/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Buscar dados do QRCode</a>
   </li>
   <ul>
@@ -3212,27 +3237,27 @@
 <h2 id="overview">Overview</h2>
 <hr>
 <br>
-<p>O <strong>Consentimento</strong> é um conceito fundamental no Open Banking, pois a partir da realização deste processo, um usuário poderá permitir o compartilhamento de suas informações entre diferentes instituições autorizadas pelo Banco Central e a movimentação de suas contas bancárias a partir de diferentes plataformas e não apenas pelo aplicativo ou site do banco, de forma segura, ágil e conveniente.</p>
-<p>Para instituições que desejem pedir consentimento a usuários da Conta Stone, basta gerar um link de consentimento em nossa API e enviar o mesmo para avaliação do usuário dono da conta.
+<p>O <strong>Consentimento</strong> é um conceito fundamental no Open Banking, pois a partir da realização desse processo, um usuário poderá permitir o compartilhamento de suas informações entre diferentes instituições autorizadas pelo Banco Central e a movimentação de suas contas bancárias a partir de diferentes plataformas e não apenas pelo aplicativo ou site do banco, de forma segura, ágil e conveniente.</p>
+<p>Para instituições que desejem pedir consentimento a usuários da Conta Stone, basta gerar um link de consentimento em nossa API e enviá-lo para avaliação do usuário dono da conta.
 <br>A partir da aprovação do usuário, a plataforma parceira terá acesso aos escopos solicitados.</p>
 <br>
 <h2 id="fluxo-de-consentimento">Fluxo de Consentimento</h2>
 <hr>
 <br>
 <p>A partir da abertura de conta realizada pelo usuário, uma plataforma poderá solicitar acesso ao compartilhamento de informações e iniciação de pagamentos na conta de um usuário. Para isso, deverá gerar um <strong>Link de Consentimento</strong> dentro do padrão estabelecido.</p>
-<p>Após gerar e enviar o Link ao usuário, poderão acontecer três situações, das quais o parceiro será notificado:</p>
+<p>Após gerar e enviar o link ao usuário, poderão acontecer três situações, das quais o parceiro será notificado:</p>
 <h6 id="usuário-acessa-o-link-e-dá-consentimento-ao-parceiro"><strong>Usuário acessa o link e dá consentimento ao parceiro</strong></h6>
-<p>Ao acessar o link, o usuário será direcionado para um página da Stone em que irá escolher a quais contas de pagamento ele deseja conceder acesso ao parceiro. Ele também poderá verificar a quais escopos o parceiro passará a ter acesso após dar consentimento. Uma vez dado o consentimento, o usuário deverá ser direcionado de volta a uma página do parceiro.</p>
+<p>Ao acessar o link, o usuário será direcionado para uma página da Stone em que irá escolher a quais contas de pagamento ele deseja conceder acesso ao parceiro. Ele também poderá verificar a quais escopos o parceiro passará a ter acesso após dar consentimento. Uma vez dado o consentimento, o usuário deverá ser direcionado de volta a uma página do parceiro.</p>
 <p>Veja abaixo um exemplo da tela de pedido de consentimento que será disponibilizada ao cliente:</p>
 <p><img src="solicitacao-de-consentimento.png" alt="solicitacao-consentimento"></p>
 <br>
 Veja abaixo um exemplo de permissão concedida:
 <p><img src="consentimento-aprovado.png" alt="consentimento-aprovado"></p>
-<p><br>Ao clicar no botão &ldquo;Ok, entendi&rdquo; o usuário será redirecionado para uma página da aplicação parceira, cujo endereço foi definido no <a href="/docs/guias/token-de-acesso/#cadastro-da-aplicação">Cadastro da Aplicação</a>.</p>
+<p><br>Ao clicar no botão &ldquo;Ok, entendi&rdquo;, o usuário será redirecionado para uma página da aplicação parceira, cujo endereço foi definido no <a href="/docs/guias/token-de-acesso/#cadastro-da-aplicação">Cadastro da Aplicação</a>.</p>
 <br>
 <h6 id="usuário-acessa-o-link-e-não-dá-consentimento-ao-parceiro"><strong>Usuário acessa o link e não dá consentimento ao parceiro</strong></h6>
 <br>
-<p>Pode acontecer também o caso em que o usuário rejeitar o consentimento solicitado. Neste caso, ele será redirecionado a uma página do parceiro. O parceiro, neste caso, não poderá acessar informações nem operar a conta do usuário.</p>
+<p>Pode acontecer também o caso em que o usuário rejeita o consentimento solicitado. Nesse caso, ele será redirecionado a uma página do parceiro. Consequentemente, o parceiro não poderá acessar informações nem operar a conta do usuário.</p>
 <p><strong>Atenção!</strong> <br>Em ambos os casos citados acima, faremos um redirecionamento para a URI cadastrada no token. Acrescentaremos na URI os seguintes campos:</p>
 <br>
 <table>
@@ -3245,7 +3270,7 @@ Veja abaixo um exemplo de permissão concedida:
 <tbody>
 <tr>
 <td>session_metadata</td>
-<td>Com os mesmos os valores de passados no token.</td>
+<td>Com os mesmos os valores passados no token.</td>
 </tr>
 <tr>
 <td>consent_result</td>
@@ -3258,27 +3283,27 @@ Veja abaixo um exemplo de permissão concedida:
 </tbody>
 </table>
 <br>
-<p>Quando o consent_result é <code>approved</code> é enviado também o webhook consent_requested com os dados do consentimento dado. Dessa forma, você poderá prover uma experiência fluída para ambos os casos, basta validar estes campos!</p>
+<p>Quando o consent_result for <code>approved</code>, será enviado também o webhook consent_requested com os dados do consentimento dado. Dessa forma, você poderá prover uma experiência fluida para ambos os casos, basta validar esses campos!</p>
 <br>
 <h6 id="usuário-ignora-o-link"><strong>Usuário ignora o link</strong></h6>
 <br>
-<p>O link de consentimento tem validade de 2 horas após a sua geração. Caso o usuário não acesse o mesmo dentro desse período, será necessário gerar um novo link e fazer um novo envio.</p>
+<p>O link de consentimento tem validade de 2 horas após a sua geração. Caso o usuário não acesse o link dentro desse período, será necessário gerar um novo link e fazer um novo envio.</p>
 <br>
 <h2 id="gerando-link-de-consentimento">Gerando Link de Consentimento</h2>
 <hr>
 <br>
-<p>Após cadastrar e autenticar a sua aplicação, você está apto a pedir consentimento aos seus clientes que tenham realizado a abertura de uma conta Stone. Ressaltamos que toda interação com o usuário neste processo será gerida por nossa plataforma.</p>
+<p>Após cadastrar e autenticar a sua aplicação, você estará apto a pedir consentimento aos seus clientes que tenham realizado a abertura de uma conta Stone. Ressaltamos que toda interação com o usuário nesse processo será gerida por nossa plataforma.</p>
 <p>Seguindo os parâmetros descritos abaixo, você deverá enviar o link ao usuário por meio da sua aplicação.
-<br>O link de consentimento deve ser enviado dentro da própria aplicação. Você pode, por exemplo, disponibilizar um botão em sua plataforma para que o usuário acesse o link. Este link não deve ser enviado ao usuário por e-mail sob hipótese alguma.</p>
+<br>O link de consentimento deve ser enviado dentro da própria aplicação. Você pode, por exemplo, disponibilizar um botão em sua plataforma para que o usuário acesse o link. Esse link não deve ser enviado ao usuário por e-mail sob hipótese alguma.</p>
 <br>
 <h5 id="parâmetros-do-link-de-consentimento"><strong>Parâmetros do link de consentimento</strong></h5>
 <p>O link de consentimento deverá conter três parâmetros:</p>
 <ul>
-<li>client_id: o ClientID recebido pelo desenvolvedor pós-cadastro;</li>
+<li>client_id: o ClientID recebido pelo desenvolvedor após o cadastro;</li>
 <li>type: no caso, será sempre o valor “consent”;</li>
 <li>jwt: será um token gerado localmente pelo desenvolvedor com a mesma chave privada e algoritmo que ele usa para se autenticar. Mais detalhes abaixo.</li>
 </ul>
-<p>Com estes parâmetros, basta gerar um link no seguinte formato (por ambiente), substituindo CLIENT_ID e JWT por seus respectivos valores:</p>
+<p>Com esses parâmetros, basta gerar um link no seguinte formato (por ambiente), substituindo CLIENT_ID e JWT por seus respectivos valores:</p>
 <table>
 <thead>
 <tr>
@@ -3303,14 +3328,14 @@ Veja abaixo um exemplo de permissão concedida:
 <h5 id="especificações-do-jwt-para-pedir-consentimento"><strong>Especificações do JWT para pedir consentimento</strong></h5>
 <br>
 <p><strong>Header</strong>
-<br>Observe que é preciso assinar o token JWT com a chave privada da aplicação e o algoritmo RS256, assim como é feito para o token de autenticação. Dessa forma, neste token também é preciso incluir um header com as informações sobre o algoritmo de criptografia utilizado, entre outros metadados, como um id da chave utilizada. Por exemplo:</p>
+<br>Observe que é preciso assinar o token JWT com a chave privada da aplicação e o algoritmo RS256, assim como é feito para o token de autenticação. Dessa forma, nesse token também é preciso incluir um header com as informações sobre o algoritmo de criptografia utilizado, entre outros metadados, como um ID da chave utilizada. Por exemplo:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#ff79c6">&#34;alg&#34;</span>: <span style="color:#f1fa8c">&#34;RS256&#34;</span>,
   <span style="color:#ff79c6">&#34;typ&#34;</span>: <span style="color:#f1fa8c">&#34;JWT&#34;</span>
 }
 </code></pre></div><br>
 <p><strong>Payload</strong>
-<br>O token deve conter os claims abaixo:</p>
+<br>O token deve conter as claims abaixo:</p>
 <table>
 <thead>
 <tr>
@@ -3332,12 +3357,12 @@ Veja abaixo um exemplo de permissão concedida:
 </tr>
 <tr>
 <td>redirect_uri</td>
-<td>A URI para redirecionamento após a ação do usuário. Esta URI foi informada previamente no cadastro da Aplicação Parceira. Caso seja enviada uma URI diferente, retornará erro.</td>
+<td>A URI para redirecionamento após a ação do usuário. Essa URI foi informada previamente no cadastro da Aplicação Parceira. Caso seja enviada uma URI diferente, retornará erro.</td>
 <td><em>String</em></td>
 </tr>
 <tr>
 <td>session_metadata</td>
-<td>Um objeto que contenha qualquer chave relevante para o parceiro identificar a sessão do usuário. Este valor estará presente na URI de redirecionamento e não pode ser nulo ou um mapa vazio.</td>
+<td>Um objeto que contenha qualquer chave relevante para o parceiro identificar a sessão do usuário. Esse valor estará presente na URI de redirecionamento e não pode ser nulo ou um mapa vazio.</td>
 <td><em>Objeto</em></td>
 </tr>
 <tr>
@@ -3362,7 +3387,7 @@ Veja abaixo um exemplo de permissão concedida:
 </tr>
 <tr>
 <td>nbf</td>
-<td>É o momento em que o token passa a ser válido. Na maioria dos casos terá o mesmo valor que iat (issued at) pois queremos que ele esteja válido logo a partir do momento de geração.</td>
+<td>É o momento em que o token passa a ser válido. Na maioria dos casos terá o mesmo valor que iat (issued at), pois queremos que ele esteja válido logo a partir do momento de geração.</td>
 <td><em>Int</em></td>
 </tr>
 <tr>
@@ -3373,7 +3398,7 @@ Veja abaixo um exemplo de permissão concedida:
 </tbody>
 </table>
 <br>
-<p>Segue um exemplo de como ficariam os claims preenchidos:</p>
+<p>Segue um exemplo de como ficariam as claims preenchidas:</p>
 <br>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;consent&#34;</span>,
@@ -3397,6 +3422,8 @@ Veja abaixo um exemplo de permissão concedida:
     
     
     <hr class="panel-line">
+        
+            
         
             
         

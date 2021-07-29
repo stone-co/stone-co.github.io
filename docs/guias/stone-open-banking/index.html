@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23f74996dbafa0a80722a48af26624c4.json"
+  data-offline-search-index-json-src="/offline-search-index.6f44fa4430f85eb078c5607b958c0150.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23f74996dbafa0a80722a48af26624c4.json"
+  data-offline-search-index-json-src="/offline-search-index.6f44fa4430f85eb078c5607b958c0150.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -2608,6 +2608,31 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/pagamento/consultar-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultando um pagamento realizado</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixpagamentoconsultar-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/docs/referencia-da-api/pix/pagamento/buscar-dados-qrcode/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Buscar dados do QRCode</a>
   </li>
   <ul>
@@ -3196,43 +3221,43 @@
 <h2 id="overview">Overview</h2>
 <hr>
 <br>
-<p><strong>Seja bem vindo à documentação de Open Banking da Stone!</strong>
+<p><strong>Seja bem-vindo à documentação de Open Banking da Stone!</strong>
 <br></p>
 <p>O Open Banking, ou sistema financeiro aberto, é a possibilidade de clientes de produtos e serviços financeiros permitirem o compartilhamento de suas informações entre diferentes instituições autorizadas pelo Banco Central e a movimentação de suas contas bancárias a partir de diferentes plataformas e não apenas pelo aplicativo ou site do banco, de forma segura, ágil e conveniente.</p>
 <p>Como na Stone somos fiéis defensores da competição e temos o cliente como nossa razão de existir, acreditamos na revolução proporcionada por esse sistema e construímos a primeira API de Open Banking plugada diretamente no coração do STR. Acreditamos que nosso produto poderá gerar novos modelos de negócios, dar maior controle e transparência, além de permitir automatizações e ganho de eficiência para as empresas.</p>
-<p>A partir da integração e uso da API Stone Open Banking, você poderá movimentar a sua própria conta Stone por meio de uma API RESTful  com todas as funcionalidades de cash in e cash out. Caso você tenha uma plataforma, você também poderá solicitar acesso a contas terceiras para disponibilizar funcionalidades financeiras e agregar ainda mais valor ao seu produto. É claro que para acessar e iniciar transações em contas terceiras, será preciso obter o Consentimento do usuário dono da conta, um conceito essencial para o bom funcionamento do Open Banking.</p>
-<p>Nesta documentação você pode explorar todos os produtos e funcionalidades que a nossa API oferece! Além disso, como todas as chamadas em nossa API deverão ser autenticadas para identificação  do sujeito de cada ação, vamos detalhar como funciona o acesso via token.
+<p>A partir da integração e do uso da API Stone Open Banking, você poderá movimentar a sua própria conta Stone por meio de uma API RESTful com todas as funcionalidades de cash-in e cash-out. Caso você tenha uma plataforma, também poderá solicitar acesso a contas terceiras para disponibilizar funcionalidades financeiras e agregar ainda mais valor ao seu produto. É claro que para acessar e iniciar transações em contas terceiras, será preciso obter o Consentimento do usuário dono da conta, um conceito essencial para o bom funcionamento do Open Banking.</p>
+<p>Nesta documentação, você pode explorar todos os produtos e funcionalidades que a nossa API oferece! Além disso, como todas as chamadas em nossa API deverão ser autenticadas para identificação do sujeito de cada ação, vamos detalhar como funciona o acesso via token.
 <br></p>
 <p>Para iniciar, confira um passo a passo da nossa integração abaixo aqui no <a href="/docs/guias/stone-open-banking/#quickstart">Quickstart</a>!</p>
 <br>
 <h2 id="quickstart">Quickstart</h2>
 <hr>
 <h5 id="contato-comercial">Contato Comercial</h5>
-<p>Para realizar chamadas em nossa API, primeiro precisamos que você preencha este <a href="https://app.pipefy.com/public/form/Qz4ptt_W/?origem_do_lead=Documenta%C3%A7%C3%A3o" target="_blank"> formulário </a>.</p>
+<p>Para realizar chamadas em nossa API, primeiro precisamos que você preencha este <a href="https://app.pipefy.com/public/form/Qz4ptt_W/?origem_do_lead=Documenta%C3%A7%C3%A3o" target="_blank">formulário</a>.</p>
 <p>Nosso time de parcerias entrará em contato em até 24 horas para entender seu modelo de negócio e te apresentar a proposta mais adequada.</p>
 <p>Você também receberá um contrato para formalização da parceria.</p>
-<p>Por enquanto, ainda não estamos realizando onboard de parceiros em autosserviço, mas queremos liberar isso em breve!
+<p>Por enquanto, ainda não estamos realizando onboarding de parceiros em autosserviço, mas queremos liberar isso em breve!
 <br>
 <br></p>
 <h5 id="testes-em-sandbox">Testes em Sandbox</h5>
-<p>Após contato com nosso time, você receberá o formulário para testes em  ambiente de Sandbox, que deverá ser preenchido contendo a sua <a href="/docs/guias/token-de-acesso/#gerar-chaves-de-acesso">Chave Pública</a>.
+<p>Após o contato com nosso time, você receberá o formulário para testes em ambiente de Sandbox, que deverá ser preenchido contendo a sua <a href="/docs/guias/token-de-acesso/#gerar-chaves-de-acesso">Chave Pública</a>.
 Quando recebermos essa chave, faremos o <a href="/docs/guias/token-de-acesso/#cadastro-da-aplicação">Cadastro da sua Aplicação</a> e te retornaremos um ClientID, o seu identificador único aqui na Stone.</p>
-<p>Com o ClientID em mãos, você já pode fazer o processo de <a href="/docs/guias/token-de-acesso/#autenticação">Autenticação</a>, que terá como resultado a liberação do seu Access Token, ou seu <a href="/docs/guias/token-de-acesso/#overview">Token de Acesso</a> e realizar as <a href="/docs/guias/token-de-acesso/#chamada-autenticada">chamadas autenticadas</a> em sandbox.</p>
+<p>Com o ClientID em mãos, você já pode fazer o processo de <a href="/docs/guias/token-de-acesso/#autenticação">Autenticação</a>, que terá como resultado a liberação do seu Access Token ou <a href="/docs/guias/token-de-acesso/#overview">Token de Acesso</a> e realizar as <a href="/docs/guias/token-de-acesso/#chamada-autenticada">chamadas autenticadas</a> em Sandbox.</p>
 <br>
 <p><strong>Pronto!</strong> Agora você já pode começar os testes e realizar ações em nossa API - em ambiente de Sandbox.
 <br>
 <br></p>
 <h5 id="homologação">Homologação</h5>
 <p>Assim que os testes em Sandbox forem finalizados, vamos te guiar no processo de Homologação.</p>
-<p>Esse processo consiste em executar todas as ações que a sua Aplicação tem permissão para fazer, numa sequência definida e com o acompanhamento e registro pela equipe da Stone.</p>
+<p>Esse processo consiste em executar todas as ações que a sua aplicação tem permissão para fazer, numa sequência definida e com o acompanhamento e registro pela equipe da Stone.</p>
 <p>O objetivo é garantir que tudo esteja funcionando como esperado e que você tenha acesso a todos os recursos necessários.
 <br>
 <br></p>
 <h5 id="produção">Produção</h5>
-<p>Finalmente, para integrar em Ambiente de Produção você vai nos enviar uma nova Chave Pública - iremos solicitar em um Formulário para Virada em Produção - para que a gente gere o seu ClientID de Produção. Você vai realizar as mesmas etapas que já fez para obtenção do Access Token em sandbox, que permitirá a realização de <a href="/docs/guias/token-de-acesso/#chamada-autenticada">Chamadas Autenticadas</a>.</p>
-<p>Caso você tenha uma plataforma, ERP ou outro sistema e deseje realizar ações em uma conta de outro usuário (um cliente seu, por exemplo), você deverá pedir o <a href="/docs/guias/consentimento/">Consentimento</a> do mesmo para realização das chamadas. Caso seja para sua própria conta, pode desconsiderar esse processo, mas lembre-se de que você precisará <a href="/docs/guias/conta-de-pagamento/#abertura-de-conta">abrir uma Conta Stone</a>.</p>
-<p><strong>Atenção!</strong> Ressaltamos que os dois ambientes disponíveis são completamente separados, ou seja, usuários criados em ambiente de Sandbox não existem em Produção, e vice-versa. Vale lembrar que os ambientes, em termos de funcionalidades, são exatamente iguais.</p>
-<p><strong>Importante!</strong> O acesso ao ambiente de Produção só será liberado após testes em Sandbox realizados e roteiro de Homologação validado.</p>
+<p>Finalmente, para integrar em ambiente de Produção, você vai nos enviar uma nova Chave Pública - iremos solicitar em um Formulário para Virada em Produção - para que a gente gere o seu ClientID de Produção. Você vai realizar as mesmas etapas que já fez para obtenção do Access Token em Sandbox, que permitirá a realização de <a href="/docs/guias/token-de-acesso/#chamada-autenticada">Chamadas Autenticadas</a>.</p>
+<p>Caso você tenha uma plataforma, ERP ou outro sistema e deseje realizar ações em uma conta de outro usuário (um cliente seu, por exemplo), você deverá pedir o <a href="/docs/guias/consentimento/">Consentimento</a> dele para realização das chamadas. Caso seja para sua própria conta, pode desconsiderar esse processo, mas lembre-se de que você precisará <a href="/docs/guias/conta-de-pagamento/#abertura-de-conta">abrir uma Conta Stone</a>.</p>
+<p><strong>Atenção!</strong> Ressaltamos que os dois ambientes disponíveis são completamente separados, ou seja, usuários criados em ambiente de Sandbox não existem em Produção e vice-versa. Vale lembrar que os ambientes, em termos de funcionalidades, são exatamente iguais.</p>
+<p><strong>Importante!</strong> O acesso ao ambiente de Produção só será liberado depois que os testes em Sandbox forem realizados e o roteiro de Homologação for validado.</p>
 <p>Confira abaixo as URLs para acesso aos ambientes:</p>
 <table>
 <thead>
@@ -3261,6 +3286,8 @@ Quando recebermos essa chave, faremos o <a href="/docs/guias/token-de-acesso/#ca
     
     
     <hr class="panel-line">
+        
+            
         
             
         

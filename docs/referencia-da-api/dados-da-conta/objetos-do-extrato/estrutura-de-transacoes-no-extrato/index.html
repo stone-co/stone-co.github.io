@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23f74996dbafa0a80722a48af26624c4.json"
+  data-offline-search-index-json-src="/offline-search-index.6f44fa4430f85eb078c5607b958c0150.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23f74996dbafa0a80722a48af26624c4.json"
+  data-offline-search-index-json-src="/offline-search-index.6f44fa4430f85eb078c5607b958c0150.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -2608,6 +2608,31 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/pagamento/consultar-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultando um pagamento realizado</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixpagamentoconsultar-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/docs/referencia-da-api/pix/pagamento/buscar-dados-qrcode/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Buscar dados do QRCode</a>
   </li>
   <ul>
@@ -3216,7 +3241,7 @@
 <p>Veja as possíveis estruturas de cada transação que poderão imapactar o extrato.</p>
 <hr>
 <h5 id="saldo-bloqueado">Saldo bloqueado</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
    <span style="color:#ff79c6">&#34;balance_blocked&#34;</span>: {
       <span style="color:#ff79c6">&#34;account_id&#34;</span>: <span style="color:#f1fa8c">&#34;ad55491e-c3da-4111-98fb-d74f171a31be&#34;</span>,
       <span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">-1000</span>,
@@ -3232,7 +3257,7 @@
    }
 }
 </code></pre></div><h5 id="saldo-desbloqueado">Saldo desbloqueado</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     <span style="color:#ff79c6">&#34;balance_unblocked&#34;</span>: {            
        <span style="color:#ff79c6">&#34;account_id&#34;</span>:<span style="color:#f1fa8c">&#34;ad55491e-c1da-4311-98fb-d74f171a31be&#34;</span>,
        <span style="color:#ff79c6">&#34;amount&#34;</span>:<span style="color:#bd93f9">36900</span>,
@@ -3248,7 +3273,7 @@
     }
 }
 </code></pre></div><h5 id="transferência-interna">Transferência interna</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     <span style="color:#ff79c6">&#34;internal&#34;</span>: {
        <span style="color:#ff79c6">&#34;account_id&#34;</span>:<span style="color:#f1fa8c">&#34;ad55491e-c1da-4111-38fb-d74f171a31be&#34;</span>,
          <span style="color:#ff79c6">&#34;amount&#34;</span>:<span style="color:#bd93f9">-18</span>,
@@ -3279,7 +3304,7 @@
     }
 }
 </code></pre></div><h5 id="transferência-externa">Transferência externa</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     <span style="color:#ff79c6">&#34;external&#34;</span>: {            
        <span style="color:#ff79c6">&#34;account_id&#34;</span>:<span style="color:#f1fa8c">&#34;ad55391e-c1da-4111-98fb-d74f171a31be&#34;</span>,
          <span style="color:#ff79c6">&#34;amount&#34;</span>:<span style="color:#bd93f9">-3252</span>,
@@ -3316,7 +3341,7 @@
     }
 }
 </code></pre></div><h5 id="devolução-de-transferência-externa">Devolução de transferência externa</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     <span style="color:#ff79c6">&#34;external_refund&#34;</span>: {            
        <span style="color:#ff79c6">&#34;account_id&#34;</span>:<span style="color:#f1fa8c">&#34;ad55491e-c1da-4131-98fb-d74f171a31be&#34;</span>,
          <span style="color:#ff79c6">&#34;amount&#34;</span>:<span style="color:#bd93f9">55</span>,
@@ -3350,7 +3375,7 @@
     }
 }
 </code></pre></div><h5 id="pagamento-instantâneo">Pagamento instantâneo</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     <span style="color:#ff79c6">&#34;instant_payment&#34;</span>: {
        <span style="color:#ff79c6">&#34;amount&#34;</span>:<span style="color:#bd93f9">-122</span>,
          <span style="color:#ff79c6">&#34;balance_after&#34;</span>:<span style="color:#bd93f9">1712342</span>,
@@ -3371,7 +3396,7 @@
     }
 }
 </code></pre></div><h5 id="liquidação-de-recebíveis-de-cartão">Liquidação de recebíveis de cartão</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     <span style="color:#ff79c6">&#34;card_payment&#34;</span>: {            
        <span style="color:#ff79c6">&#34;account_id&#34;</span>:<span style="color:#f1fa8c">&#34;ad55491e-c1da-4113-98fb-d74f171a31be&#34;</span>,
          <span style="color:#ff79c6">&#34;acquirer&#34;</span>:<span style="color:#f1fa8c">&#34;Stone&#34;</span>,
@@ -3390,7 +3415,7 @@
     }    
 }
 </code></pre></div><h5 id="pagamento-de-boleto">Pagamento de boleto</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     <span style="color:#ff79c6">&#34;payment&#34;</span>: {
         <span style="color:#ff79c6">&#34;account_id&#34;</span>:<span style="color:#f1fa8c">&#34;ad55491e-c1da-4111-98fb-d74f131a31be&#34;</span>,
          <span style="color:#ff79c6">&#34;amount&#34;</span>:<span style="color:#bd93f9">-10000</span>,
@@ -3438,7 +3463,7 @@
     }
 }
 </code></pre></div><h5 id="devolução-de-pagamento">Devolução de pagamento</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     <span style="color:#ff79c6">&#34;payment_refund&#34;</span>: {            
        <span style="color:#ff79c6">&#34;account_id&#34;</span>:<span style="color:#f1fa8c">&#34;ad55491e-c1da-4111-98fb-d74f131a31be&#34;</span>,
          <span style="color:#ff79c6">&#34;amount&#34;</span>:<span style="color:#bd93f9">15050</span>,
@@ -3485,7 +3510,7 @@
     }    
 }
 </code></pre></div><h5 id="empréstimos">Empréstimos</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     <span style="color:#ff79c6">&#34;loan_payments&#34;</span>: {
        <span style="color:#ff79c6">&#34;account_id&#34;</span>:<span style="color:#f1fa8c">&#34;477f8576-ca82-432b-be73-dc28cc6490c3&#34;</span>,
        <span style="color:#ff79c6">&#34;account_settlement_policy_retention&#34;</span>:{
@@ -3534,7 +3559,7 @@
     }
 } 
 </code></pre></div><h5 id="folha-de-pagamento">Folha de Pagamento</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     <span style="color:#ff79c6">&#34;payroll&#34;</span>: {            
        <span style="color:#ff79c6">&#34;account_id&#34;</span>:<span style="color:#f1fa8c">&#34;ad55491e-c1da-4111-93fb-d74f171a31be&#34;</span>,
          <span style="color:#ff79c6">&#34;amount&#34;</span>:<span style="color:#bd93f9">-100</span>,
@@ -3549,7 +3574,7 @@
     }    
 }
 </code></pre></div><h5 id="compra-feita-com-cartão-stone">Compra feita com Cartão Stone</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{    
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{    
     <span style="color:#ff79c6">&#34;outbound_stone_prepaid_card_payment&#34;</span>: {            
        <span style="color:#ff79c6">&#34;account_id&#34;</span>:<span style="color:#f1fa8c">&#34;ad55491e-c1da-4111-93fb-d74f171a31be&#34;</span>,
         <span style="color:#ff79c6">&#34;acquirer_code&#34;</span>:<span style="color:#f1fa8c">&#34;acquirer_code&#34;</span>,
@@ -3590,7 +3615,7 @@
     }    
 }
 </code></pre></div><h5 id="devolução-de-compra-feita-com-cartão-stone">Devolução de compra feita com Cartão Stone</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     <span style="color:#ff79c6">&#34;outbound_stone_prepaid_card_payment_refund&#34;</span>: {
        <span style="color:#ff79c6">&#34;account_id&#34;</span>:<span style="color:#f1fa8c">&#34;ad55491e-c1da-4111-93fb-d74f171a31be&#34;</span>,
         <span style="color:#ff79c6">&#34;acquirer_code&#34;</span>:<span style="color:#f1fa8c">&#34;acquirer_code&#34;</span>,
@@ -3631,7 +3656,7 @@
     }
 } 
 </code></pre></div><h5 id="chargeback-de-uma-compra-feita-com-cartão-stone">Chargeback de uma compra feita com Cartão Stone</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     <span style="color:#ff79c6">&#34;outbound_stone_prepaid_card_payment_chargeback&#34;</span>: {            
         <span style="color:#ff79c6">&#34;account_id&#34;</span>:<span style="color:#f1fa8c">&#34;ad55491e-c1da-4111-98fb-d34f171a31be&#34;</span>,
          <span style="color:#ff79c6">&#34;acquirer_code&#34;</span>:<span style="color:#f1fa8c">&#34;acquirer_code&#34;</span>,
@@ -3680,7 +3705,7 @@
     }    
 }
 </code></pre></div><h5 id="saque-com-cartão-stone-feito-no-banco24horas">Saque com Cartão Stone feito no Banco24Horas</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     <span style="color:#ff79c6">&#34;outbound_stone_prepaid_card_withdrawal&#34;</span>: {
        <span style="color:#ff79c6">&#34;account_id&#34;</span>:<span style="color:#f1fa8c">&#34;ad55491e-c1da-4131-98fb-d74f171a31be&#34;</span>,
          <span style="color:#ff79c6">&#34;acquirer_code&#34;</span>:<span style="color:#f1fa8c">&#34;acquirer_code&#34;</span>,
@@ -3721,7 +3746,7 @@
     }
 }
 </code></pre></div><h5 id="devolução-de-saque-feito-no-banco24horas">Devolução de Saque feito no Banco24Horas</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     <span style="color:#ff79c6">&#34;outbound_stone_prepaid_card_withdrawal_refund&#34;</span>: {            
         <span style="color:#ff79c6">&#34;account_id&#34;</span>:<span style="color:#f1fa8c">&#34;ad55491e-c1da-4111-38fb-d74f171a31be&#34;</span>,
          <span style="color:#ff79c6">&#34;acquirer_code&#34;</span>:<span style="color:#f1fa8c">&#34;acquirer_code&#34;</span>,
@@ -3762,7 +3787,7 @@
       }    
 }
 </code></pre></div><h5 id="recebimento-de-salário">Recebimento de salário</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     <span style="color:#ff79c6">&#34;salary&#34;</span>: {
        <span style="color:#ff79c6">&#34;account_id&#34;</span>:<span style="color:#f1fa8c">&#34;ad55391e-c1da-4111-98fb-d74f171a31be&#34;</span>,
          <span style="color:#ff79c6">&#34;amount&#34;</span>:<span style="color:#bd93f9">164</span>,
@@ -3789,28 +3814,29 @@
     }
 }
 </code></pre></div><h5 id="portabilidade-de-salário">Portabilidade de salário</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     <span style="color:#ff79c6">&#34;salary_portability&#34;</span>: {            
-       <span style="color:#ff79c6">&#34;account_id&#34;</span>:<span style="color:#f1fa8c">&#34;ad55431e-c1da-4111-98fb-d74f171a31be&#34;</span> 
-        <span style="color:#f1fa8c">&#34;amount&#34;</span>:<span style="color:#bd93f9">10000</span>,
+       <span style="color:#ff79c6">&#34;account_id&#34;</span>:<span style="color:#f1fa8c">&#34;ad55431e-c1da-4111-98fb-d74f171a31be&#34;</span>, 
+        <span style="color:#ff79c6">&#34;amount&#34;</span>:<span style="color:#bd93f9">10000</span>,
         <span style="color:#ff79c6">&#34;balance_after&#34;</span>:<span style="color:#bd93f9">5992000</span>,
         <span style="color:#ff79c6">&#34;balance_before&#34;</span>:<span style="color:#bd93f9">5982000</span>,
         <span style="color:#ff79c6">&#34;counter_party&#34;</span>: {
-            <span style="color:#ff79c6">&#34;account&#34;</span>:{
-               <span style="color:#ff79c6">&#34;account_code&#34;</span>:<span style="color:#f1fa8c">&#34;473603&#34;</span>,
-               <span style="color:#ff79c6">&#34;branch_code&#34;</span>:<span style="color:#f1fa8c">&#34;1&#34;</span>,
-               <span style="color:#ff79c6">&#34;institution&#34;</span>:<span style="color:#f1fa8c">&#34;16501555&#34;</span>, 
-               <span style="color:#ff79c6">&#34;institution_name&#34;</span>: <span style="color:#f1fa8c">&#34;ITAÚ UNIBANCO S.A.&#34;</span>
-         }
-        <span style="color:#f1fa8c">&#34;created_at&#34;</span>:<span style="color:#f1fa8c">&#34;2019-09-13T22:27:39Z&#34;</span>,
+          <span style="color:#ff79c6">&#34;account&#34;</span>: {
+            <span style="color:#ff79c6">&#34;account_code&#34;</span>: <span style="color:#f1fa8c">&#34;473603&#34;</span>,
+            <span style="color:#ff79c6">&#34;branch_code&#34;</span>: <span style="color:#f1fa8c">&#34;1&#34;</span>,
+            <span style="color:#ff79c6">&#34;institution&#34;</span>: <span style="color:#f1fa8c">&#34;16501555&#34;</span>,
+            <span style="color:#ff79c6">&#34;institution_name&#34;</span>: <span style="color:#f1fa8c">&#34;ITAÚ UNIBANCO S.A.&#34;</span>
+          }
+        },
+        <span style="color:#ff79c6">&#34;created_at&#34;</span>:<span style="color:#f1fa8c">&#34;2019-09-13T22:27:39Z&#34;</span>,
         <span style="color:#ff79c6">&#34;id&#34;</span>:<span style="color:#f1fa8c">&#34;fff5eb35-63bb-44a9-9640-128c97606710&#34;</span>,
-        <span style="color:#ff79c6">&#34;operation&#34;</span>: <span style="color:#f1fa8c">&#34;debit&#34;</span>
-        <span style="color:#f1fa8c">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;FINISHED&#34;</span>
-        <span style="color:#f1fa8c">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;salary_portability&#34;</span>
-      }    
+        <span style="color:#ff79c6">&#34;operation&#34;</span>: <span style="color:#f1fa8c">&#34;debit&#34;</span>,
+        <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;FINISHED&#34;</span>,
+        <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;salary_portability&#34;</span>
+      } 
 }
 </code></pre></div><h5 id="devolução-de-salário-pela-intituição-de-portabilidade">Devolução de salário pela intituição de portabilidade</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     <span style="color:#ff79c6">&#34;salary_portability_refund&#34;</span>: {
        <span style="color:#ff79c6">&#34;account_id&#34;</span>:<span style="color:#f1fa8c">&#34;477f8576-ca83-462b-be73-dc28cc6490c3&#34;</span>,
         <span style="color:#ff79c6">&#34;amount&#34;</span>:<span style="color:#bd93f9">200</span>,
@@ -3834,7 +3860,7 @@
     }
 }
 </code></pre></div><h5 id="devolução-de-salário-pela-intituição-de-portabilidade-em-casos-de-cancelamento">Devolução de salário pela intituição de portabilidade (Em casos de cancelamento)</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     <span style="color:#ff79c6">&#34;salary_portability_employer_refund&#34;</span>: {            
         <span style="color:#ff79c6">&#34;amount&#34;</span>:<span style="color:#bd93f9">-200</span>,
          <span style="color:#ff79c6">&#34;balance_after&#34;</span>:<span style="color:#bd93f9">522283472</span>,
@@ -3861,6 +3887,8 @@
     
     
     <hr class="panel-line">
+        
+            
         
             
         

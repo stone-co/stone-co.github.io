@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23f74996dbafa0a80722a48af26624c4.json"
+  data-offline-search-index-json-src="/offline-search-index.6f44fa4430f85eb078c5607b958c0150.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.23f74996dbafa0a80722a48af26624c4.json"
+  data-offline-search-index-json-src="/offline-search-index.6f44fa4430f85eb078c5607b958c0150.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -2608,6 +2608,31 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/pagamento/consultar-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultando um pagamento realizado</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixpagamentoconsultar-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/docs/referencia-da-api/pix/pagamento/buscar-dados-qrcode/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Buscar dados do QRCode</a>
   </li>
   <ul>
@@ -3216,18 +3241,18 @@
 <h2 id="overview">Overview</h2>
 <hr>
 <br>
-<p>A ocorrência de certos eventos pode ser importante em diversos fluxos na integração de uma aplicação com a API Stone Open Banking. Por isso, utilizamos webhooks para notificar as aplicações integradas da ocorrência destes eventos.</p>
+<p>A ocorrência de certos eventos pode ser importante em diversos fluxos na integração de uma aplicação com a API Stone Open Banking. Por isso, utilizamos webhooks para notificar as aplicações integradas da ocorrência desses eventos.</p>
 <p>Para sua utilização, é preciso que a aplicação tenha cadastrado no <a href="/docs/guias/stone-open-banking/#testes-em-sandbox">formulário</a> a URI para a qual enviaremos um POST com os dados do evento. A aplicação deverá estar preparada para lidar com cada evento de forma adequada.</p>
 <p>Ao enviar um webhook, esperamos receber uma resposta do range 200 que indica o sucesso no recebimento dessa notificação por parte da sua aplicação. Caso a resposta seja um código diferente do range 200, encaramos como falha no recebimento do webhook e repetimos o envio até receber um sucesso ou batermos o número máximo de 50 tentativas no envio de um evento.
 Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um padrão de horários de tentativas.</p>
 <p>A aplicação irá receber webhooks dos eventos que acontecerem na(s) conta(s) sobre as quais ela opera dado o escopo de funcionalidades disponíveis na sua aplicação e também recebem os eventos relacionados às contas sobre as quais foi dado consentimento.
-<br>Vale lembrar que os webhooks serão enviados independente se o evento for via API ou via APP.</p>
+<br>Vale lembrar que os webhooks serão enviados independente se o evento for via API ou via app.</p>
 <br>
 
 
 <div class="pageinfo pageinfo-primary">
 <p><strong>Virada em Produção</strong></p>
-<p>É imprescindível que a aplicação esteja recebendo e tratando de forma adequada todos os tipos de webhook referente as funcionalidades que implementou.</p>
+<p>É imprescindível que a aplicação esteja recebendo e tratando de forma adequada todos os tipos de webhook referentes às funcionalidades que implementou.</p>
 
 </div>
 
@@ -3259,7 +3284,7 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 </tr>
 <tr>
 <td style="text-align:left"><a href="barcode_payment_invoice_settled.json">barcode_payment_invoice_settled</a></td>
-<td style="text-align:left">Representa que pagamento do boleto foi confirmado.</td>
+<td style="text-align:left">Representa que o pagamento do boleto foi confirmado.</td>
 </tr>
 <tr>
 <td style="text-align:left"><a href="barcode_payment_invoice_expired.json">barcode_payment_invoice_expired</a></td>
@@ -3284,7 +3309,7 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 <tbody>
 <tr>
 <td>cash_in_payment_refund</td>
-<td>Representa o reembolso de um pagamento mal sucedido.</td>
+<td>Representa o reembolso de um pagamento malsucedido.</td>
 </tr>
 <tr>
 <td>cash_out_payment</td>
@@ -3398,7 +3423,7 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 </tr>
 <tr>
 <td>cash_in_external_transfer_refund</td>
-<td>Representa o reembolso de uma transferência externa mal sucedida.</td>
+<td>Representa o reembolso de uma transferência externa malsucedida.</td>
 </tr>
 <tr>
 <td>cash_out_external_transfer</td>
@@ -3487,7 +3512,7 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 </tr>
 <tr>
 <td><a href="pix_json/pix.entries.claims.automatically_cancelled.json">pix_entries_claims_automatically_cancelled</a></td>
-<td>Representa cancelamento automático da da solicitação de portabilidade, por falta de resposta da cliente nos 7 dias de prazo.</td>
+<td>Representa cancelamento automático da solicitação de portabilidade, por falta de resposta da cliente nos 7 dias de prazo.</td>
 </tr>
 <tr>
 <td><a href="pix_json/pix_payment_invoice.json">pix_payment_invoice</a></td>
@@ -3515,7 +3540,7 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 </tr>
 <tr>
 <td><a href="pix_json/pix_inbound_payment_received.json">pix_inbound_payment_received</a></td>
-<td>Representa o recebimento de um cash-in de Pix, podendo estar associada a um QR Code estatático, dinâmico imediato ou dinâmico com vencimento. Essa associação será representada pela presença de um dos seguintes atributos dentro do target_data: <br>- <code>pix_payment_invoice</code> : Invoice dinâmica imediata; <br>- <code>pix_payment_static_invoice</code> : Invoice estática; <br>- <code>pix_payment_invoice_with_due_date</code> : Invoice dinâmica com vencimento, multa, juros, desconto e abatimento.</td>
+<td>Representa o recebimento de um cash-in de Pix, podendo estar associado a um QR Code estatático, dinâmico imediato ou dinâmico com vencimento. Essa associação será representada pela presença de um dos seguintes atributos dentro do target_data: <br>- <code>pix_payment_invoice</code>: Invoice dinâmica imediata; <br>- <code>pix_payment_static_invoice</code>: Invoice estática; <br>- <code>pix_payment_invoice_with_due_date</code>: Invoice dinâmica com vencimento, multa, juros, desconto e abatimento.</td>
 </tr>
 <tr>
 <td><a href="pix_json/pix_refund_payment.json">pix_refund_payment</a></td>
@@ -3531,7 +3556,7 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 </tr>
 <tr>
 <td><a href="pix_json/pix.inbound_payment.refund.money_reserved.json">pix_inbound_payment_refund_money_reserved</a></td>
-<td>Representa a reserva de dinheiro (impacto no saldo da cliente) após à criação com sucesso de uma devolução (cash-out) de um cash-in de Pix.</td>
+<td>Representa a reserva de dinheiro (impacto no saldo da cliente) após a criação com sucesso de uma devolução (cash-out) de um cash-in de Pix.</td>
 </tr>
 <tr>
 <td><a href="pix_json/pix.inbound_payment.refund.settled.json">pix_inbound_payment_refund_settled</a></td>
@@ -3547,7 +3572,7 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 </tr>
 <tr>
 <td>pix_outbound_payment_money_reserved</td>
-<td>Representa a reserva de dinheiro (impacto no saldo da cliente) após à criação com sucesso de um cash-out de Pix.</td>
+<td>Representa a reserva de dinheiro (impacto no saldo da cliente) após a criação com sucesso de um cash-out de Pix.</td>
 </tr>
 <tr>
 <td>pix_outbound_payment_failed</td>
@@ -3601,7 +3626,7 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 </tr>
 <tr>
 <td><a href="A3.json">sign_up_resource_details_updated</a></td>
-<td>Representa o envio de diversos webhooks de acordo com a evolução da abertura de conta. Ex: <code>account_created</code>, <code>user_email_verified</code>, &hellip;.</td>
+<td>Representa o envio de diversos webhooks de acordo com a evolução da abertura de conta. Exemplo: <code>account_created</code>, <code>user_email_verified</code>, &hellip;.</td>
 </tr>
 </tbody>
 </table>
@@ -3618,7 +3643,7 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 <tbody>
 <tr>
 <td><a href="lp_order_created.json">order_created</a></td>
-<td>Representa a criação do link de pagamento. <br>Também é enviado um <a href="lp_order_created_status_pending.json">segundo webhook</a> deste tipo que representa que o pagador executou o pagamento. <br>Neste caso, o campo <code>status</code> do webhook terá seu valor alterado para <code>pending</code>.</td>
+<td>Representa a criação do link de pagamento. <br>Também é enviado um <a href="lp_order_created_status_pending.json">segundo webhook</a> desse tipo que representa que o pagador executou o pagamento. <br>Nesse caso, o campo <code>status</code> do webhook terá seu valor alterado para <code>pending</code>.</td>
 </tr>
 <tr>
 <td><a href="lp_order_paid.json">order_paid</a></td>
@@ -3633,9 +3658,9 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 <br>
 <h2 id="estrutura-do-header-das-notificações">Estrutura do header das notificações</h2>
 <hr>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">x-stone-webhook-event-id: <span style="color:#f1fa8c">&#34;930bbd6d-0c7a-4fe4-8b50-4b82a20cb847&#34;</span>
-x-stone-webhook-event-type: <span style="color:#f1fa8c">&#34;cash_out_internal_transfer&#34;</span>
-</code></pre></div><p>A idempotência de webhooks deverá ser validada no campo &lsquo;x-stone-webhook-event-id&rsquo; disponível no header.</p>
+<pre><code>x-stone-webhook-event-id: &quot;930bbd6d-0c7a-4fe4-8b50-4b82a20cb847&quot;
+x-stone-webhook-event-type: &quot;cash_out_internal_transfer&quot;
+</code></pre><p>A idempotência de webhooks deverá ser validada no campo &lsquo;x-stone-webhook-event-id&rsquo; disponível no header.</p>
 <br>
 <h2 id="estrutura-do-payload-das-notificações">Estrutura do payload das notificações</h2>
 <hr>
@@ -3670,7 +3695,7 @@ x-stone-webhook-event-type: <span style="color:#f1fa8c">&#34;cash_out_internal_t
 </tr>
 <tr>
 <td>target_data</td>
-<td>Objeto com as informações detalhadas do recurso que gerou o evento. Apesar de ter campo variáveis sempre conterá o campo account_id.</td>
+<td>Objeto com as informações detalhadas do recurso que gerou o evento. Apesar de ter campos variáveis, sempre conterá o campo account_id.</td>
 </tr>
 <tr>
 <td>target_detail_uri</td>
@@ -3695,13 +3720,13 @@ x-stone-webhook-event-type: <span style="color:#f1fa8c">&#34;cash_out_internal_t
 
 <div class="pageinfo pageinfo-primary">
 <p><strong>Inclusão de campos</strong></p>
-<p>A implementação não deve ser strict no parser do payload. Ao longo do tempo os payloads podem sofrer a inclusão de campos.</p>
+<p>A implementação não deve ser strict no parser do payload. Ao longo do tempo, os payloads podem sofrer a inclusão de campos.</p>
 
 </div>
 
 <br>
 <p>Exemplo:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
    <span style="color:#ff79c6">&#34;env&#34;</span>:<span style="color:#f1fa8c">&#34;sandbox&#34;</span>,
    <span style="color:#ff79c6">&#34;event_type&#34;</span>:<span style="color:#f1fa8c">&#34;cash_in_internal_transfer&#34;</span>,
    <span style="color:#ff79c6">&#34;event_happened_at&#34;</span>:<span style="color:#f1fa8c">&#34;2020-05-13T14:58:15Z&#34;</span>,
@@ -3752,7 +3777,7 @@ x-stone-webhook-event-type: <span style="color:#f1fa8c">&#34;cash_out_internal_t
 <br>
 <h5 id="como-eu-posso-abrir-de-forma-segura-o-conteúdo-de-um-webhook"><strong>Como eu posso abrir de forma segura o conteúdo de um webhook?</strong></h5>
 <br>
-<p>Para poder visualizar o conteúdo de um webhook é necessário fazer o caminho inverso:</p>
+<p>Para poder visualizar o conteúdo de um webhook, é necessário fazer o caminho inverso:</p>
 <ol>
 <li><strong>Decifrar o conteúdo do webhook</strong> usando sua chave privada. O resultado é um token JWT assinado com a nossa chave;</li>
 <li><strong>Verificar a assinatura do token</strong> com a nossa chave pública.</li>
@@ -3761,12 +3786,12 @@ x-stone-webhook-event-type: <span style="color:#f1fa8c">&#34;cash_out_internal_t
 <h5 id="1---decifrar-o-conteúdo-do-webhook"><strong>1 - Decifrar o conteúdo do webhook</strong></h5>
 <hr>
 <br>
-<p>O webhook irá chegar com um payload parecido com esse:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
+<p>O webhook irá chegar com um payload parecido com este:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#ff79c6">&#34;encrypted_body&#34;</span>: <span style="color:#f1fa8c">&#34;xxxxxxxxxxxxxx conteúdo cifrado&#34;</span>
 }
 </code></pre></div><p>O valor do campo &ldquo;encrypted_body&rdquo; é um token no formato JWE (JSON Web Encryption) compacto. Esse formato é um padrão e várias linguagens possuem bibliotecas prontas para ele.</p>
-<p>O algoritmo utilizado é: <strong>RSA-OAEP-256</strong> com <strong>A256GCM</strong>. Para decifrar o conteúdo é necessário uma biblioteca que suporte estes algoritmos como:</p>
+<p>O algoritmo utilizado é: <strong>RSA-OAEP-256</strong> com <strong>A256GCM</strong>. Para decifrar o conteúdo, é necessária uma biblioteca que suporte esses algoritmos como:</p>
 <ul>
 <li><a href="https://github.com/square/js-jose">JavaScript</a></li>
 <li><a href="https://bitbucket.org/b_c/jose4j/wiki/Home">Java</a></li>
@@ -3802,83 +3827,84 @@ subprocess<span style="color:#ff79c6">.</span>run(<span style="color:#f1fa8c">&#
 <h5 id="2---verificar-a-assinatura-do-token"><strong>2 - Verificar a assinatura do token</strong></h5>
 <hr>
 <br>
-<p>Até este momento deciframos apenas um conteúdo que pode ser gerado por qualquer um que tenha acesso a chave pública da aplicação.</p>
+<p>Até este momento, deciframos apenas um conteúdo que pode ser gerado por qualquer um que tenha acesso à chave pública da aplicação.</p>
 <p>Nós utilizamos a assinatura do conteúdo em token JWS (JSON Web Signing) compacto como uma outra camada de verificação de segurança no conteúdo do webhook.</p>
 <p>Esse token possui em seus &ldquo;claims&rdquo; (alegações) o conteúdo do webhook. Para garantir que ele foi gerado pela Stone, você deve validar a assinatura dele consultando nossas chaves públicas de assinatura.</p>
 <p>As chaves públicas da Stone estão publicadas <a href="https://sandbox-api.openbank.stone.com.br/api/v1/discovery/keys">aqui</a>.</p>
-<p>Repare que cada chave possui um <em>kid</em> (key ID) e um <em>use</em> (sig ou enc). O token JWS possui um header que diz qual é o id da chave usada para assiná-lo. Assim, é necessário, em primeiro lugar, garantir que o token foi assinado com uma chave que está publicada pela Stone.</p>
-<p>Para não ter que buscar a nossa chave pública a cada validação de assinatura, você pode salvar nossa chave do seu lado (por exemplo, através de um cache), de forma que caso aconteça algum erro na validação você volte a consultar o nosso serviço para buscar a chave pública mais atual. Assim você desonera  sua aplicação sem perder a resiliência a mudanças de chave do nosso lado.</p>
+<p>Repare que cada chave possui um <em>kid</em> (key ID) e um <em>use</em> (sig ou enc). O token JWS possui um header que diz qual é o ID da chave usada para assiná-lo. Assim, é necessário, em primeiro lugar, garantir que o token foi assinado com uma chave que está publicada pela Stone.</p>
+<p>Para não ter que buscar a nossa chave pública a cada validação de assinatura, você pode salvar nossa chave do seu lado (por exemplo, através de um cache), de forma que, caso aconteça algum erro na validação, você volte a consultar o nosso serviço para buscar a chave pública mais atual. Assim você desonera  sua aplicação sem perder a resiliência a mudanças de chave do nosso lado.</p>
 <p>Veja <a href="https://hexdocs.pm/joken_jwks/JokenJwks.DefaultStrategyTemplate.html#content">aqui</a> as melhores práticas para fazer essa implementação.</p>
 <p>O algoritmo que usamos será <em>sempre RS256</em>. Há uma lista de bibliotecas que tratam de assinatura de token em <a href="https://jwt.io/">jwt.io</a>.</p>
 <br>
 <h5 id="segurança"><strong>Segurança</strong></h5>
 <br>
 <p>É importante seguir os dois passos aqui: tanto decifrar quanto verificar a assinatura. Isso irá garantir que não apenas geramos algo que não pode ser lido por alguém que <em>não possui</em> a chave pública quanto que nosso conteúdo foi assinado pela Stone.</p>
-<p>Também aconselhamos cuidado na configuração do cliente que irá consultar as nossas chaves. Certifique-se que ele não está vulnerável a servidores intermediários propositalmente mal configurados. Um exemplo comum é um servidor configurado para protocolos conhecidamente falhos.</p>
-<p>Sempre que em dúvida, consulte nossa API com os IDs dos dados no conteúdo do webhook.</p>
+<p>Também aconselhamos cuidado na configuração do cliente que irá consultar as nossas chaves. Certifique-se de que ele não está vulnerável a servidores intermediários propositalmente mal configurados. Um exemplo comum é um servidor configurado para protocolos conhecidamente falhos.</p>
+<p>Sempre que estiver em dúvida, consulte nossa API com os IDs dos dados no conteúdo do webhook.</p>
 <p>Mais informações sobre JavaScript Object Signing and Encryption, como JWTs, JWEs, JWSs, <a href="https://www.ca.com/pt/blog-latam/os-beneficios-de-jwtjwsjwe-no-designs-de-apis.html">aqui</a>.</p>
 <br>
 <h3 id="webhooks-idempotentes"><strong>Webhooks idempotentes</strong></h3>
 <br>
 <p>No geral um evento, quando recepcionado com sucesso, é enviado apenas uma vez pela Stone, mas é possível que em algum cenário extraordinário um webhook acabe sendo enviado mais de uma vez e por isso desenvolvemos uma lógica de idempotência de eventos.</p>
 <p>Todo webhook gerado pela Stone leva consigo uma chave de idempotência enviada no campo <code>x-stone-webhook-event-id</code> do header.</p>
-<p>É importante que essa chave seja sempre salva pela sua aplicação e que a cada novo evento você verifique a idempotência desse evento evitando processar duas vezes um mesmo evento.</p>
+<p>É importante que essa chave seja sempre salva pela sua aplicação e que a cada novo evento você verifique a idempotência desse evento, evitando processar duas vezes um mesmo evento.</p>
 <br>
 <h2 id="endpoint-para-verificar-webhooks-enviados">Endpoint para verificar webhooks enviados</h2>
 <hr>
 <br>
 <p>Caso tenha dificuldade para identificar algum webhook enviado pela Stone na URI indicada para receber webhooks, disponibilizamos um endpoint que traz todos os webhooks já enviados para a sua aplicação.</p>
-<p>Para acessar, basta fazer o comando abaixo, lembrando que no <em>header</em> deve ser enviado o Bearer token no campo <code>authorization</code> e o client_id é o id da sua aplicação, passado pelo time de integração.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">GET https://sandbox-api.openbank.stone.com.br/api/v1/applications/application:{{client_id}}/webhooks
-</code></pre></div><p><strong>Exemplo de Response</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">    {
-        <span style="color:#ff79c6">&#34;client_id&#34;</span>: <span style="color:#f1fa8c">&#34;application:de4d224b-3f79-4b4d-8ff5-c1bc475830e5&#34;</span>,
-        <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-06-02T19:40:24Z&#34;</span>,
-        <span style="color:#ff79c6">&#34;data&#34;</span>: {
-            <span style="color:#ff79c6">&#34;env&#34;</span>: <span style="color:#f1fa8c">&#34;sandbox&#34;</span>,
-            <span style="color:#ff79c6">&#34;event_happened_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-06-02T19:40:23Z&#34;</span>,
-            <span style="color:#ff79c6">&#34;event_notified_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-06-02T19:40:24Z&#34;</span>,
-            <span style="color:#ff79c6">&#34;event_type&#34;</span>: <span style="color:#f1fa8c">&#34;cash_out_internal_transfer_finished&#34;</span>,
-            <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;7919b78a-630e-4ad4-bb12-91eec729175d&#34;</span>,
-            <span style="color:#ff79c6">&#34;target_data&#34;</span>: {
-                <span style="color:#ff79c6">&#34;account_id&#34;</span>: <span style="color:#f1fa8c">&#34;6745bdf0-7647-40cd-8666-d78bb15fbd38&#34;</span>,
-                <span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">4000</span>,
-                <span style="color:#ff79c6">&#34;approval_expired_at&#34;</span>: <span style="color:#ff79c6">null</span>,
-                <span style="color:#ff79c6">&#34;approved_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-06-02T19:40:23Z&#34;</span>,
-                <span style="color:#ff79c6">&#34;approved_by&#34;</span>: <span style="color:#f1fa8c">&#34;user:24017c13-1f9d-44e4-b4af-007f695cece3&#34;</span>,
-                <span style="color:#ff79c6">&#34;batch_id&#34;</span>: <span style="color:#ff79c6">null</span>,
-                <span style="color:#ff79c6">&#34;cancelled_at&#34;</span>: <span style="color:#ff79c6">null</span>,
-                <span style="color:#ff79c6">&#34;cancelled_by&#34;</span>: <span style="color:#ff79c6">null</span>,
-                <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-06-02T19:40:23Z&#34;</span>,
-                <span style="color:#ff79c6">&#34;created_by&#34;</span>: <span style="color:#f1fa8c">&#34;user:24017c13-1f9d-44e4-b4af-007f695cece3&#34;</span>,
-                <span style="color:#ff79c6">&#34;description&#34;</span>: <span style="color:#f1fa8c">&#34;&#34;</span>,
-                <span style="color:#ff79c6">&#34;failed_at&#34;</span>: <span style="color:#ff79c6">null</span>,
-                <span style="color:#ff79c6">&#34;failure_reason_code&#34;</span>: <span style="color:#ff79c6">null</span>,
-                <span style="color:#ff79c6">&#34;failure_reason_description&#34;</span>: <span style="color:#ff79c6">null</span>,
-                <span style="color:#ff79c6">&#34;fee&#34;</span>: <span style="color:#bd93f9">0</span>,
-                <span style="color:#ff79c6">&#34;finished_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-06-02T19:40:23Z&#34;</span>,
-                <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;7919b78a-630e-4ad4-bb12-91eec729175d&#34;</span>,
-                <span style="color:#ff79c6">&#34;rejected_at&#34;</span>: <span style="color:#ff79c6">null</span>,
-                <span style="color:#ff79c6">&#34;rejected_by&#34;</span>: <span style="color:#ff79c6">null</span>,
-                <span style="color:#ff79c6">&#34;scheduled_to&#34;</span>: <span style="color:#ff79c6">null</span>,
-                <span style="color:#ff79c6">&#34;settled_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-06-02T19:40:23Z&#34;</span>,
-                <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;FINISHED&#34;</span>,
-                <span style="color:#ff79c6">&#34;target&#34;</span>: {
-                    <span style="color:#ff79c6">&#34;account&#34;</span>: {
-                        <span style="color:#ff79c6">&#34;account_code&#34;</span>: <span style="color:#f1fa8c">&#34;55382931&#34;</span>
-                    },
-                    <span style="color:#ff79c6">&#34;entity&#34;</span>: {
-                        <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;&#34;</span>
-                    }
-                },
-                <span style="color:#ff79c6">&#34;target_account_code&#34;</span>: <span style="color:#f1fa8c">&#34;55382931&#34;</span>,
-                <span style="color:#ff79c6">&#34;target_account_owner_name&#34;</span>: <span style="color:#f1fa8c">&#34;&#34;</span>
-            },
-            <span style="color:#ff79c6">&#34;target_detail_uri&#34;</span>: <span style="color:#f1fa8c">&#34;https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers/7919b78a-630e-4ad4-bb12-91eec729175d&#34;</span>,
-            <span style="color:#ff79c6">&#34;target_id&#34;</span>: <span style="color:#f1fa8c">&#34;7919b78a-630e-4ad4-bb12-91eec729175d&#34;</span>,
-            <span style="color:#ff79c6">&#34;target_statement_uri&#34;</span>: <span style="color:#ff79c6">null</span>,
-            <span style="color:#ff79c6">&#34;target_type&#34;</span>: <span style="color:#f1fa8c">&#34;internal_transfer_finished&#34;</span>
+<p>Para acessar, basta fazer o comando abaixo, lembrando que no <em>header</em> deve ser enviado o Bearer token no campo <code>authorization</code> e que o client_id é o id da sua aplicação, passado pelo time de integração.</p>
+<pre><code>GET https://sandbox-api.openbank.stone.com.br/api/v1/applications/application:{{client_id}}/webhooks
+</code></pre><p><strong>Exemplo de Response</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#ff79c6">&#34;client_id&#34;</span>: <span style="color:#f1fa8c">&#34;application:de4d224b-3f79-4b4d-8ff5-c1bc475830e5&#34;</span>,
+  <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-06-02T19:40:24Z&#34;</span>,
+  <span style="color:#ff79c6">&#34;data&#34;</span>: {
+    <span style="color:#ff79c6">&#34;env&#34;</span>: <span style="color:#f1fa8c">&#34;sandbox&#34;</span>,
+    <span style="color:#ff79c6">&#34;event_happened_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-06-02T19:40:23Z&#34;</span>,
+    <span style="color:#ff79c6">&#34;event_notified_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-06-02T19:40:24Z&#34;</span>,
+    <span style="color:#ff79c6">&#34;event_type&#34;</span>: <span style="color:#f1fa8c">&#34;cash_out_internal_transfer_finished&#34;</span>,
+    <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;7919b78a-630e-4ad4-bb12-91eec729175d&#34;</span>,
+    <span style="color:#ff79c6">&#34;target_data&#34;</span>: {
+      <span style="color:#ff79c6">&#34;account_id&#34;</span>: <span style="color:#f1fa8c">&#34;6745bdf0-7647-40cd-8666-d78bb15fbd38&#34;</span>,
+      <span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">4000</span>,
+      <span style="color:#ff79c6">&#34;approval_expired_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+      <span style="color:#ff79c6">&#34;approved_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-06-02T19:40:23Z&#34;</span>,
+      <span style="color:#ff79c6">&#34;approved_by&#34;</span>: <span style="color:#f1fa8c">&#34;user:24017c13-1f9d-44e4-b4af-007f695cece3&#34;</span>,
+      <span style="color:#ff79c6">&#34;batch_id&#34;</span>: <span style="color:#ff79c6">null</span>,
+      <span style="color:#ff79c6">&#34;cancelled_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+      <span style="color:#ff79c6">&#34;cancelled_by&#34;</span>: <span style="color:#ff79c6">null</span>,
+      <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-06-02T19:40:23Z&#34;</span>,
+      <span style="color:#ff79c6">&#34;created_by&#34;</span>: <span style="color:#f1fa8c">&#34;user:24017c13-1f9d-44e4-b4af-007f695cece3&#34;</span>,
+      <span style="color:#ff79c6">&#34;description&#34;</span>: <span style="color:#f1fa8c">&#34;&#34;</span>,
+      <span style="color:#ff79c6">&#34;failed_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+      <span style="color:#ff79c6">&#34;failure_reason_code&#34;</span>: <span style="color:#ff79c6">null</span>,
+      <span style="color:#ff79c6">&#34;failure_reason_description&#34;</span>: <span style="color:#ff79c6">null</span>,
+      <span style="color:#ff79c6">&#34;fee&#34;</span>: <span style="color:#bd93f9">0</span>,
+      <span style="color:#ff79c6">&#34;finished_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-06-02T19:40:23Z&#34;</span>,
+      <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;7919b78a-630e-4ad4-bb12-91eec729175d&#34;</span>,
+      <span style="color:#ff79c6">&#34;rejected_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+      <span style="color:#ff79c6">&#34;rejected_by&#34;</span>: <span style="color:#ff79c6">null</span>,
+      <span style="color:#ff79c6">&#34;scheduled_to&#34;</span>: <span style="color:#ff79c6">null</span>,
+      <span style="color:#ff79c6">&#34;settled_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-06-02T19:40:23Z&#34;</span>,
+      <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;FINISHED&#34;</span>,
+      <span style="color:#ff79c6">&#34;target&#34;</span>: {
+        <span style="color:#ff79c6">&#34;account&#34;</span>: {
+          <span style="color:#ff79c6">&#34;account_code&#34;</span>: <span style="color:#f1fa8c">&#34;55382931&#34;</span>
+        },
+        <span style="color:#ff79c6">&#34;entity&#34;</span>: {
+          <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;&#34;</span>
         }
+      },
+      <span style="color:#ff79c6">&#34;target_account_code&#34;</span>: <span style="color:#f1fa8c">&#34;55382931&#34;</span>,
+      <span style="color:#ff79c6">&#34;target_account_owner_name&#34;</span>: <span style="color:#f1fa8c">&#34;&#34;</span>
+    },
+    <span style="color:#ff79c6">&#34;target_detail_uri&#34;</span>: <span style="color:#f1fa8c">&#34;https://sandbox-api.openbank.stone.com.br/api/v1/internal_transfers/7919b78a-630e-4ad4-bb12-91eec729175d&#34;</span>,
+    <span style="color:#ff79c6">&#34;target_id&#34;</span>: <span style="color:#f1fa8c">&#34;7919b78a-630e-4ad4-bb12-91eec729175d&#34;</span>,
+    <span style="color:#ff79c6">&#34;target_statement_uri&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;target_type&#34;</span>: <span style="color:#f1fa8c">&#34;internal_transfer_finished&#34;</span>
+  }
+}
 </code></pre></div>
         <div class="section-index">
     
@@ -3887,6 +3913,8 @@ subprocess<span style="color:#ff79c6">.</span>run(<span style="color:#f1fa8c">&#
     
     
     <hr class="panel-line">
+        
+            
         
             
         
