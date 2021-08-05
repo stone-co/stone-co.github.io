@@ -635,7 +635,7 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
 &lt;tr&gt;
 &lt;td&gt;Desconto&lt;br&gt; &lt;em&gt;(discount)&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;Não suporta&lt;/td&gt;
-&lt;td&gt;Não suporta&lt;/td&gt;
+&lt;td&gt;Desconto deve ser maior que 0% e até 90%.&lt;br&gt;O desconto se aplica caso o pagameto seja feito até a data informada. A data informada deve ser menor do que a data de vencimento do boleto e maior que sua data de emissão.&lt;br&gt;Campo não obrigatório, só preencher se for aplicar desconto.&lt;/td&gt;
 &lt;td&gt;Desconto deve ser maior que 0% e até 90%.&lt;br&gt;O desconto se aplica caso o pagameto seja feito até a data informada. A data informada deve ser menor do que a data de vencimento do boleto e maior que sua data de emissão.&lt;br&gt;Campo não obrigatório, só preencher se for aplicar desconto.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;

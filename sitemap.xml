@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://stone-co.github.io/docs/guias/stone-open-banking/</loc>
+    <lastmod>2021-08-05T15:40:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/pix/chaves-pix/listar-chaves-pix/</loc>
     <lastmod>2021-07-15T14:00:00-03:00</lastmod>
   </url>
@@ -18,13 +23,13 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/guias/stone-open-banking/</loc>
-    <lastmod>2021-06-28T09:00:00-03:00</lastmod>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/pagamento/consultar-pagamento/</loc>
+    <lastmod>2021-06-25T14:28:33-03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/pagamento/consultar-pagamento/</loc>
-    <lastmod>2021-06-25T14:28:33-03:00</lastmod>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/consultar-pix-por-qrcode/</loc>
+    <lastmod>2021-06-16T15:17:00-03:00</lastmod>
   </url>
   
   <url>
@@ -116,6 +121,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/criar-cobranca-com-vencimento/</loc>
+    <lastmod>2021-06-16T15:17:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/pix/pagamento/criar-pagamento-pendente/</loc>
     <lastmod>2021-06-25T14:28:33-03:00</lastmod>
   </url>
@@ -151,11 +161,6 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/verificar-status-de-uma-entidade/</loc>
-    <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/pagamentos/o-objeto-pagamento/</loc>
     <lastmod>2020-04-28T15:16:04+00:00</lastmod>
   </url>
@@ -181,6 +186,11 @@
   
   <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/transferencias/o-objeto-transferencia/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/criar-qrcode-estatico/</loc>
+    <lastmod>2021-08-04T15:19:30-03:00</lastmod>
   </url>
   
   <url>
@@ -268,6 +278,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/atualizar-qrcode-estatico/</loc>
+    <lastmod>2021-08-04T15:19:30-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/valores/</loc>
     <lastmod>2021-07-12T11:20:05-03:00</lastmod>
   </url>
@@ -278,22 +293,7 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/consultar-pix-por-qrcode/</loc>
-    <lastmod>2021-06-16T15:17:00-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/criar-cobranca-com-vencimento/</loc>
-    <lastmod>2021-06-16T15:17:00-03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/listar-cobranca-com-validade/</loc>
-    <lastmod>2021-06-16T15:17:00-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/listar-recebimentos/</loc>
     <lastmod>2021-06-16T15:17:00-03:00</lastmod>
   </url>
   
@@ -352,6 +352,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/detalhar-qrcode-estatico/</loc>
+    <lastmod>2021-08-04T15:19:30-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/codigos-de-resposta/</loc>
     <lastmod>2021-07-12T11:20:05-03:00</lastmod>
   </url>
@@ -359,6 +364,11 @@
   <url>
     <loc>https://stone-co.github.io/docs/guias/aprovacao/</loc>
     <lastmod>2021-06-28T09:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/listar-recebimentos/</loc>
+    <lastmod>2021-06-16T15:17:00-03:00</lastmod>
   </url>
   
   <url>
@@ -585,7 +595,7 @@
   
   <url>
     <loc>https://stone-co.github.io/</loc>
-    <lastmod>2021-07-15T14:00:00-03:00</lastmod>
+    <lastmod>2021-08-05T15:40:00-03:00</lastmod>
   </url>
   
   <url>
