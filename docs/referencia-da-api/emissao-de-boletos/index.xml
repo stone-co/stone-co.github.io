@@ -743,10 +743,10 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;discounts&lt;/strong&gt; &lt;code&gt;array_of_objects&lt;/code&gt;
 &lt;br&gt;&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;     &lt;strong&gt;date&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
-&lt;br&gt;     Data até a qual o desconto deve ser aplicado. Formato ISO8601 &lt;code&gt;&amp;quot;YYYY-MM-DD&amp;quot;&lt;/code&gt;. Só é aceito no tipo de cobrança.
+&lt;br&gt;     Data até a qual o desconto deve ser aplicado. Formato ISO8601 &lt;code&gt;&amp;quot;YYYY-MM-DD&amp;quot;&lt;/code&gt;. É aceito nos tipos de proposta e cobrança.
 &lt;br&gt;
 &lt;br&gt;     &lt;strong&gt;value&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
-&lt;br&gt;     Valor percentual (%) do desconto que será aplicado ao boleto. O valor do deve ser maior que 0.0 e até 90.0. Formato decimal. Ex: &amp;ldquo;20.0&amp;rdquo;. Só é aceito no tipo de cobrança.&lt;/p&gt;
+&lt;br&gt;     Valor percentual (%) do desconto que será aplicado ao boleto. O valor do deve ser maior que 0.0 e até 90.0. Formato decimal. Ex: &amp;ldquo;20.0&amp;rdquo;. É aceito nos tipos de proposta e cobrança.&lt;/p&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;&lt;strong&gt;fine&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
