@@ -22,7 +22,7 @@
 <meta property="og:description" content="Escreva o Banco do futuro. Uma linha de código por vez." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/estrutura-de-transacoes-no-extrato/" />
-<meta property="og:updated_time" content="2021-02-19T13:14:16+00:00" /><meta property="og:site_name" content="Stone OpenBank" />
+<meta property="og:updated_time" content="2021-08-26T10:28:16+00:00" /><meta property="og:site_name" content="Stone OpenBank" />
 <meta itemprop="name" content="Estrutura de Transações no Extrato">
 <meta itemprop="description" content="Escreva o Banco do futuro. Uma linha de código por vez.">
 <meta name="twitter:card" content="summary"/>
@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.7af2abd7f0452115ba63dbb43949169a.json"
+  data-offline-search-index-json-src="/offline-search-index.cf49807c2535ebf62090539cb5ce01aa.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.7af2abd7f0452115ba63dbb43949169a.json"
+  data-offline-search-index-json-src="/offline-search-index.cf49807c2535ebf62090539cb5ce01aa.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -1407,35 +1407,10 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/pagamentos/o-que-e-um-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O Que É Um Pagamento</a>
+    <a  href="/docs/referencia-da-api/pagamentos/overview/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Overview</a>
   </li>
   <ul>
-    <li class="collapse " id="docsreferencia-da-apipagamentoso-que-e-um-pagamento">
-      
-      
-      
-    </li>
-  </ul>
-</ul>
-
-        
-      
-      
-      
-        
-          
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/pagamentos/o-objeto-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O  Objeto Pagamento</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsreferencia-da-apipagamentoso-objeto-pagamento">
+    <li class="collapse " id="docsreferencia-da-apipagamentosoverview">
       
       
       
@@ -1652,6 +1627,31 @@
   <ul>
     <li class="collapse " id="docsreferencia-da-apicomprovantes">
       
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/comprovantes/como-emitir-um-comprovante-pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Emitir Um Comprovante Pix</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apicomprovantescomo-emitir-um-comprovante-pix">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
       
       
       
@@ -2662,6 +2662,31 @@
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipixpagamentoconfirmar-pagamento-pendente">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/pagamento/detalhar-pix-enviado/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Detalhar um Pix realizado</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixpagamentodetalhar-pix-enviado">
       
       
       
@@ -3929,6 +3954,40 @@
          <span style="color:#ff79c6">&#34;type&#34;</span>:<span style="color:#f1fa8c">&#34;salary_portability_employer_refund&#34;</span>
     }    
 }
+</code></pre></div><h5 id="envio-de-um-pix">Envio de um Pix</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+   <span style="color:#ff79c6">&#34;account_id&#34;</span>: <span style="color:#f1fa8c">&#34;7e785e98-c859-46c6-9dc7-37ea522ceadf&#34;</span>,
+   <span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">-1000</span>,
+   <span style="color:#ff79c6">&#34;balance_after&#34;</span>: <span style="color:#bd93f9">47188</span>,
+   <span style="color:#ff79c6">&#34;balance_before&#34;</span>: <span style="color:#bd93f9">48188</span>,
+   <span style="color:#ff79c6">&#34;counterparty_agent&#34;</span>: {
+      <span style="color:#ff79c6">&#34;entity&#34;</span>: {
+         <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;Gabriela Abreu&#34;</span>,
+         <span style="color:#ff79c6">&#34;document&#34;</span>: <span style="color:#f1fa8c">&#34;12409265707&#34;</span>,
+         <span style="color:#ff79c6">&#34;document_type&#34;</span>: <span style="color:#f1fa8c">&#34;cpf&#34;</span>
+      },
+      <span style="color:#ff79c6">&#34;institution&#34;</span>: {
+         <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;BANCO SANTANDER (BRASIL) S.A.&#34;</span>,
+         <span style="color:#ff79c6">&#34;compe&#34;</span>: <span style="color:#f1fa8c">&#34;033&#34;</span>,
+         <span style="color:#ff79c6">&#34;ispb&#34;</span>: <span style="color:#f1fa8c">&#34;90400888&#34;</span>
+      },
+      <span style="color:#ff79c6">&#34;account&#34;</span>: {
+         <span style="color:#ff79c6">&#34;account_type&#34;</span>: <span style="color:#f1fa8c">&#34;CC&#34;</span>,
+         <span style="color:#ff79c6">&#34;branch_code&#34;</span>: <span style="color:#f1fa8c">&#34;4208&#34;</span>,
+         <span style="color:#ff79c6">&#34;account_code&#34;</span>: <span style="color:#f1fa8c">&#34;10022294&#34;</span>
+      }
+   },
+   <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-08-25T13:23:49Z&#34;</span>,
+   <span style="color:#ff79c6">&#34;fee_amount&#34;</span>: <span style="color:#bd93f9">0</span>,
+   <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;7a076c8a-2522-4603-b36e-7bd90fc85389&#34;</span>,
+   <span style="color:#ff79c6">&#34;operation&#34;</span>: <span style="color:#f1fa8c">&#34;debit&#34;</span>,
+   <span style="color:#ff79c6">&#34;operation_amount&#34;</span>: <span style="color:#bd93f9">1000</span>,
+   <span style="color:#ff79c6">&#34;operation_id&#34;</span>: <span style="color:#f1fa8c">&#34;b5c2354c-91a0-4837-bb15-7f88fcd9d4c5&#34;</span>,
+   <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;FINISHED&#34;</span>,
+   <span style="color:#ff79c6">&#34;subtitle&#34;</span>: <span style="color:#f1fa8c">&#34;Pix&#34;</span>,
+   <span style="color:#ff79c6">&#34;title&#34;</span>: <span style="color:#f1fa8c">&#34;Gabriela Abreu&#34;</span>,
+   <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;outbound_pix_payment&#34;</span>
+}
 </code></pre></div>
         <div class="section-index">
     
@@ -4184,6 +4243,8 @@
         
             
         
+            
+        
     
 </div>
 
@@ -4191,7 +4252,7 @@
 	
 	
 
-	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 19.02.2021
+	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 26.08.2021
 </div>
 </div>
 

@@ -15,18 +15,18 @@
     
     
     <item>
-      <title>Docs: O Que É Um Pagamento</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/pagamentos/o-que-e-um-pagamento/</link>
-      <pubDate>Thu, 02 May 2019 21:01:36 +0000</pubDate>
+      <title>Docs: Overview</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pagamentos/overview/</link>
+      <pubDate>Thu, 26 Aug 2021 12:18:04 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/pagamentos/o-que-e-um-pagamento/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pagamentos/overview/</guid>
       <description>
         
         
         &lt;hr&gt;
+&lt;h2 id=&#34;o-que-é-um-pagamento&#34;&gt;O que é um Pagamento&lt;/h2&gt;
 &lt;br&gt;
 &lt;h3 id=&#34;conceito&#34;&gt;Conceito&lt;/h3&gt;
-&lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;Oferecemos uma API de Pagamentos, através da qual é possível efetuar o pagamento de contas com código de barras como, por exemplo, boletos, contas de luz, água, gás, IPTU, IPVA, entre outras.&lt;/p&gt;
 &lt;p&gt;Nossa API suporta pagamentos de todos os boletos CIP e um grande número de concessionárias/tributos. A janela de pagamentos de concessionárias pode variar de acordo com a empresa emissora. Pagamentos processados após o horário limite imposto pelo emissor serão acolhidos no dia útil seguinte.&lt;/p&gt;
@@ -47,7 +47,7 @@
 &lt;br&gt;
 &lt;p&gt;Segue abaixo os estados possíveis de um &lt;strong&gt;pagamento&lt;/strong&gt;:&lt;/p&gt;
 &lt;br&gt;
-&lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/docs/referencia-da-api/pagamentos/o-que-e-um-pagamento/estados_pagamento.png&#34; alt=&#34;Imagem 1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./estados_pagamento.png&#34; alt=&#34;Imagem 1&#34;&gt;&lt;/p&gt;
 &lt;br&gt;
 &lt;h3 id=&#34;falhas-em-pagamentos&#34;&gt;Falhas em Pagamentos&lt;/h3&gt;
 &lt;hr&gt;
@@ -153,22 +153,9 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;hr&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: O  Objeto Pagamento</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/pagamentos/o-objeto-pagamento/</link>
-      <pubDate>Tue, 04 Jun 2019 19:16:40 +0000</pubDate>
-      
-      <guid>https://stone-co.github.io/docs/referencia-da-api/pagamentos/o-objeto-pagamento/</guid>
-      <description>
-        
-        
-        &lt;hr&gt;
-&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;o-objeto-pagamento&#34;&gt;O Objeto Pagamento&lt;/h2&gt;
+&lt;p&gt;Aqui listamos quais são os campos que usamos para realizar um pagamento.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -290,6 +277,10 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;br&gt;
+&lt;h2 id=&#34;webhooks&#34;&gt;Webhooks&lt;/h2&gt;
+&lt;p&gt;Para visualizar as notificações enviadas a cada etapa de um pagamento de boleto, tributo ou concessionária, basta acessar &lt;a href=&#34;https://stone-co.github.io/docs/guias/webhooks/#pagamento-de-boleto&#34;&gt;aqui&lt;/a&gt;&lt;/p&gt;
+&lt;br&gt;
 
       </description>
     </item>

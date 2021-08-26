@@ -512,18 +512,23 @@ Específico  para cobranças advindas de mensalidades escolares.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;br&gt;
+&lt;h3 id=&#34;webhooks&#34;&gt;Webhooks&lt;/h3&gt;
+&lt;p&gt;Para visualizar as notificações enviadas a cada etapa de uma emissão de boleto, basta acessar &lt;a href=&#34;https://stone-co.github.io/docs/guias/webhooks/#emissão-de-boleto&#34;&gt;aqui&lt;/a&gt;&lt;/p&gt;
 &lt;br&gt;
-&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/regras-de-negocio&#34;&gt;Regras de Negócio&lt;/a&gt;&lt;/p&gt;
 &lt;br&gt;
-&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/emitir-boleto&#34;&gt;Emitir Boleto&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Próximos tópicos referente à Emissão de Boletos:&lt;/p&gt;
 &lt;br&gt;
-&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/listar-boletos&#34;&gt;Listar Boletos&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/regras-de-negocio/&#34;&gt;Regras de Negócio&lt;/a&gt;&lt;/p&gt;
 &lt;br&gt;
-&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/retornar-um-boleto&#34;&gt;Retornar um Boleto&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/emitir-boleto/&#34;&gt;Emitir Boleto&lt;/a&gt;&lt;/p&gt;
 &lt;br&gt;
-&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/gerar-boleto-pdf&#34;&gt;Gerar PDF Boleto&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/listar-boletos/&#34;&gt;Listar Boletos&lt;/a&gt;&lt;/p&gt;
 &lt;br&gt;
-&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/cancelar-boleto&#34;&gt;Cancelar um Boleto&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/retornar-um-boleto/&#34;&gt;Retornar um Boleto&lt;/a&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/gerar-boleto-pdf/&#34;&gt;Gerar PDF Boleto&lt;/a&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/cancelar-boleto/&#34;&gt;Cancelar um Boleto&lt;/a&gt;&lt;/p&gt;
 
       </description>
     </item>

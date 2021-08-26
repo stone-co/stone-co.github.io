@@ -15,6 +15,42 @@
     
     
     <item>
+      <title>Docs: Emitir Um Comprovante Pix</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/comprovantes/como-emitir-um-comprovante-pix/</link>
+      <pubDate>Mon, 23 Aug 2021 18:34:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/comprovantes/como-emitir-um-comprovante-pix/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Comprovantes informam sobre uma transação em detalhes, como fonte, destinatário e estado.&lt;/p&gt;
+&lt;p&gt;Nesse endpoint, vamos gerar comprovantes de Pix enviados e que estejam em estados de sucesso, como finalizado e agendado.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/exports/receipts
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;resource_type&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Allowed values: &lt;code&gt;pix_payment&lt;/code&gt;, &lt;code&gt;outbound_pix_payment&lt;/code&gt;, &lt;code&gt;refund_for_pix_payment&lt;/code&gt;, &lt;code&gt;refund_for_outbound_pix_payment&lt;/code&gt; e &lt;code&gt;refund_reversal_for_pix_payment&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;resource_id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Format: &lt;code&gt;UUID&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;authorization&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Bearer token&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;200 OK
+content-type: application/pdf
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Retorna o PDF do comprovante&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Como Emitir Um Comprovante</title>
       <link>https://stone-co.github.io/docs/referencia-da-api/comprovantes/como-emitir-um-comprovante/</link>
       <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>

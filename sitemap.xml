@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pagamentos/overview/</loc>
+    <lastmod>2021-08-26T12:18:04+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/guias/stone-open-banking/</loc>
     <lastmod>2021-08-05T15:40:00-03:00</lastmod>
   </url>
@@ -54,7 +59,7 @@
   
   <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/estrutura-de-transacoes-no-extrato/</loc>
-    <lastmod>2021-02-19T13:14:16+00:00</lastmod>
+    <lastmod>2021-08-26T10:28:16+00:00</lastmod>
   </url>
   
   <url>
@@ -74,7 +79,7 @@
   
   <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/overview-emissao-de-boletos/</loc>
-    <lastmod>2020-12-23T13:10:22+00:00</lastmod>
+    <lastmod>2021-08-26T11:48:22+00:00</lastmod>
   </url>
   
   <url>
@@ -85,11 +90,6 @@
   <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/padroes-da-api/boas-praticas/</loc>
     <lastmod>2020-06-02T17:07:48+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pagamentos/o-que-e-um-pagamento/</loc>
-    <lastmod>2021-02-01T22:02:27+00:00</lastmod>
   </url>
   
   <url>
@@ -158,11 +158,6 @@
   <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-dados-do-pedido-da-conta-de-pagamento/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pagamentos/o-objeto-pagamento/</loc>
-    <lastmod>2020-04-28T15:16:04+00:00</lastmod>
   </url>
   
   <url>
@@ -245,7 +240,7 @@
   
   <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/objetos-simulacao-de-pagamento/</loc>
-    <lastmod>2020-05-01T01:03:24+00:00</lastmod>
+    <lastmod>2021-08-26T12:35:24+00:00</lastmod>
   </url>
   
   <url>
@@ -352,6 +347,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/pagamento/detalhar-pix-enviado/</loc>
+    <lastmod>2021-08-26T10:19:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/detalhar-qrcode-estatico/</loc>
     <lastmod>2021-08-04T15:19:30-03:00</lastmod>
   </url>
@@ -413,7 +413,7 @@
   
   <url>
     <loc>https://stone-co.github.io/docs/guias/webhooks/</loc>
-    <lastmod>2021-06-28T09:00:00-03:00</lastmod>
+    <lastmod>2021-08-26T11:00:00-03:00</lastmod>
   </url>
   
   <url>
@@ -595,7 +595,12 @@
   
   <url>
     <loc>https://stone-co.github.io/</loc>
-    <lastmod>2021-08-05T15:40:00-03:00</lastmod>
+    <lastmod>2021-08-26T11:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/comprovantes/como-emitir-um-comprovante-pix/</loc>
+    <lastmod>2021-08-23T18:34:00-03:00</lastmod>
   </url>
   
   <url>

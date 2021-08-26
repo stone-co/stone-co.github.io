@@ -22,7 +22,7 @@
 <meta property="og:description" content="Escreva o Banco do futuro. Uma linha de código por vez." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://stone-co.github.io/docs/guias/webhooks/" />
-<meta property="og:updated_time" content="2021-06-28T09:00:00-03:00" /><meta property="og:site_name" content="Stone OpenBank" />
+<meta property="og:updated_time" content="2021-08-26T11:00:00-03:00" /><meta property="og:site_name" content="Stone OpenBank" />
 <meta itemprop="name" content="WEBHOOKS">
 <meta itemprop="description" content="Escreva o Banco do futuro. Uma linha de código por vez.">
 <meta name="twitter:card" content="summary"/>
@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.7af2abd7f0452115ba63dbb43949169a.json"
+  data-offline-search-index-json-src="/offline-search-index.cf49807c2535ebf62090539cb5ce01aa.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.7af2abd7f0452115ba63dbb43949169a.json"
+  data-offline-search-index-json-src="/offline-search-index.cf49807c2535ebf62090539cb5ce01aa.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -1407,35 +1407,10 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/pagamentos/o-que-e-um-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O Que É Um Pagamento</a>
+    <a  href="/docs/referencia-da-api/pagamentos/overview/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Overview</a>
   </li>
   <ul>
-    <li class="collapse " id="docsreferencia-da-apipagamentoso-que-e-um-pagamento">
-      
-      
-      
-    </li>
-  </ul>
-</ul>
-
-        
-      
-      
-      
-        
-          
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/pagamentos/o-objeto-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O  Objeto Pagamento</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsreferencia-da-apipagamentoso-objeto-pagamento">
+    <li class="collapse " id="docsreferencia-da-apipagamentosoverview">
       
       
       
@@ -1652,6 +1627,31 @@
   <ul>
     <li class="collapse " id="docsreferencia-da-apicomprovantes">
       
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/comprovantes/como-emitir-um-comprovante-pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Emitir Um Comprovante Pix</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apicomprovantescomo-emitir-um-comprovante-pix">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
       
       
       
@@ -2672,6 +2672,31 @@
         
       
       
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/pagamento/detalhar-pix-enviado/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Detalhar um Pix realizado</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixpagamentodetalhar-pix-enviado">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
     </li>
   </ul>
 </ul>
@@ -3344,10 +3369,14 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 <td style="text-align:left"><a href="cash_in_barcode_payment.json">cash_in_barcode_payment</a></td>
 <td style="text-align:left">Representa a entrada do valor do boleto na conta do beneficiário.</td>
 </tr>
+<tr>
+<td style="text-align:left"><a href="inbound_barcode_payment_refunded.json">inbound_barcode_payment_refunded</a></td>
+<td style="text-align:left">Representa que o pagamento do boleto foi devolvido.</td>
+</tr>
 </tbody>
 </table>
 <br>
-<h5 id="pagamento-de-boleto"><strong>Pagamento de Boleto:</strong></h5>
+<h5 id="pagamento-de-boletos-contas-e-tributos"><strong>Pagamento de Boletos, Contas e Tributos:</strong></h5>
 <br>
 <table>
 <thead>
@@ -3362,7 +3391,7 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 <td>Representa o reembolso de um pagamento malsucedido.</td>
 </tr>
 <tr>
-<td>cash_out_payment</td>
+<td><a href="cash_out_payment.json">cash_out_payment</a></td>
 <td>Representa a criação de um pagamento.</td>
 </tr>
 <tr>
@@ -3378,11 +3407,11 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 <td>Representa a falha no agendamento de um pagamento.</td>
 </tr>
 <tr>
-<td>cash_out_payment_approved</td>
+<td><a href="cash_out_payment_approved.json">cash_out_payment_approved</a></td>
 <td>Representa a aprovação de um pagamento.</td>
 </tr>
 <tr>
-<td>cash_out_payment_execution_started</td>
+<td><a href="cash_out_payment_execution_started.json">cash_out_payment_execution_started</a></td>
 <td>Representa o início da execução de um pagamento.</td>
 </tr>
 <tr>
@@ -3394,7 +3423,7 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 <td>Representa a rejeição de um pagamento.</td>
 </tr>
 <tr>
-<td>cash_out_payment_finished</td>
+<td><a href="cash_out_payment_finished.json">cash_out_payment_finished</a></td>
 <td>Representa a finalização de um pagamento.</td>
 </tr>
 <tr>
@@ -3529,99 +3558,99 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 </thead>
 <tbody>
 <tr>
-<td><a href="pix_json/pix.entries.key_created.json">pix_entries_key_created</a></td>
+<td><a href="pix_entries_key_created.json">pix_entries_key_created</a></td>
 <td>Representa a criação de uma chave Pix.</td>
 </tr>
 <tr>
-<td><a href="pix_json/pix.entries.deleted.json">pix_entries_deleted</a></td>
+<td><a href="pix.entries.deleted.json">pix_entries_deleted</a></td>
 <td>Representa a deleção de uma chave Pix.</td>
 </tr>
 <tr>
-<td><a href="pix_json/pix.entries.failed.json">pix_entries_failed</a></td>
+<td><a href="pix.entries.failed.json">pix_entries_failed</a></td>
 <td>Representa a falha na criação de uma chave Pix.</td>
 </tr>
 <tr>
-<td><a href="pix_json/pix.entries.claims.waiting_resolution.json">pix_entries_claims_waiting_resolution</a></td>
+<td><a href="pix.entries.claims.waiting_resolution.json">pix_entries_claims_waiting_resolution</a></td>
 <td>Representa que estamos aguardando a resposta da cliente sobre a claim (confirmação ou cancelamento).</td>
 </tr>
 <tr>
-<td><a href="pix_json/pix.entries.claims.confirmed.json">pix_entries_claims_confirmed</a></td>
+<td><a href="pix.entries.claims.confirmed.json">pix_entries_claims_confirmed</a></td>
 <td>Representa que a cliente confirmou a claim, passando a chave para outra instituição.</td>
 </tr>
 <tr>
-<td><a href="pix_json/pix.entries.claims.automatically_confirmed_waiting_resolution.json">pix_entries_claims_automatically_confirmed_waiting_resolution</a></td>
+<td><a href="pix.entries.claims.automatically_confirmed_waiting_resolution.json">pix_entries_claims_automatically_confirmed_waiting_resolution</a></td>
 <td>Representa que a reivindicação de posse foi automaticamente confirmada porque a cliente não respondeu no prazo de 7 dias corridos.</td>
 </tr>
 <tr>
-<td><a href="pix_json/pix.entries.claims.automatically_confirmed.json">pix_entries_claims_automatically_confirmed</a></td>
+<td><a href="pix.entries.claims.automatically_confirmed.json">pix_entries_claims_automatically_confirmed</a></td>
 <td>Representa que foi realizada a confirmação da reivindicação de posse automaticamente, porque a cliente não respondeu dentro dos 14 dias de prazo. Aqui a reivindicação não pode ser mais cancelada.</td>
 </tr>
 <tr>
-<td><a href="pix_json/pix.entries.claims.cancelled.json">pix_entries_claims_cancelled</a></td>
+<td><a href="pix.entries.claims.cancelled.json">pix_entries_claims_cancelled</a></td>
 <td>Representa cancelamento da solicitação da claim por parte da cliente, mantendo a chave cadastrada na conta original.</td>
 </tr>
 <tr>
-<td><a href="pix_json/pix.entries.claims.automatically_cancelled.json">pix_entries_claims_automatically_cancelled</a></td>
+<td><a href="pix.entries.claims.automatically_cancelled.json">pix_entries_claims_automatically_cancelled</a></td>
 <td>Representa cancelamento automático da solicitação de portabilidade, por falta de resposta da cliente nos 7 dias de prazo.</td>
 </tr>
 <tr>
-<td><a href="pix_json/pix_payment_invoice.json">pix_payment_invoice</a></td>
+<td><a href="pix_payment_invoice.json">pix_payment_invoice</a></td>
 <td>Representa um QR Code dinâmico imediato.</td>
 </tr>
 <tr>
-<td><a href="pix_json/pix_payment_invoice_with_due_date.json">pix_payment_invoice_with_due_date</a></td>
+<td><a href="pix_payment_invoice_with_due_date.json">pix_payment_invoice_with_due_date</a></td>
 <td>Representa um QR Code dinâmico com vencimento, multa, juros, desconto e abatimento.</td>
 </tr>
 <tr>
-<td><a href="pix_json/pix_invoice_payment_created.json">pix_invoice_payment_created</a></td>
+<td><a href="pix_invoice_payment_created.json">pix_invoice_payment_created</a></td>
 <td>Representa a criação de um QR Code dinâmico.</td>
 </tr>
 <tr>
-<td><a href="pix_json/pix_invoice_payment_cancelled.json">pix_invoice_payment_cancelled</a></td>
+<td><a href="pix_invoice_payment_cancelled.json">pix_invoice_payment_cancelled</a></td>
 <td>Representa o cancelamento de um QR Code dinâmico.</td>
 </tr>
 <tr>
-<td><a href="pix_json/pix_invoice_payment_paid.json">pix_invoice_payment_paid</a></td>
+<td><a href="pix_invoice_payment_paid.json">pix_invoice_payment_paid</a></td>
 <td>Representa o pagamento com sucesso de um QR Code dinâmico.</td>
 </tr>
 <tr>
-<td><a href="pix_json/inbound_pix_payment.json">inbound_pix_payment</a></td>
+<td><a href="inbound_pix_payment.json">inbound_pix_payment</a></td>
 <td>Representa um cash-in de Pix.</td>
 </tr>
 <tr>
-<td><a href="pix_json/pix_inbound_payment_received.json">pix_inbound_payment_received</a></td>
+<td><a href="pix_inbound_payment_received.json">pix_inbound_payment_received</a></td>
 <td>Representa o recebimento de um cash-in de Pix, podendo estar associado a um QR Code estatático, dinâmico imediato ou dinâmico com vencimento. Essa associação será representada pela presença de um dos seguintes atributos dentro do target_data: <br>- <code>pix_payment_invoice</code>: Invoice dinâmica imediata; <br>- <code>pix_payment_static_invoice</code>: Invoice estática; <br>- <code>pix_payment_invoice_with_due_date</code>: Invoice dinâmica com vencimento, multa, juros, desconto e abatimento.</td>
 </tr>
 <tr>
-<td><a href="pix_json/pix_refund_payment.json">pix_refund_payment</a></td>
+<td><a href="pix_refund_payment.json">pix_refund_payment</a></td>
 <td>Representa uma devolução (cash-out) associada a um inbound payment (cash-in).</td>
 </tr>
 <tr>
-<td><a href="pix_json/pix.inbound_payment.refund.created.json">pix_inbound_payment_refund_created</a></td>
+<td><a href="pix.inbound_payment.refund.created.json">pix_inbound_payment_refund_created</a></td>
 <td>Representa a criação de uma devolução associada a uma transação Pix. Lembrando que estamos falando da devolução (cash-out) de um cash-in.</td>
 </tr>
 <tr>
-<td><a href="pix_json/pix.inbound_payment.refund.failed.json">pix_inbound_payment_refund_failed</a></td>
+<td><a href="pix.inbound_payment.refund.failed.json">pix_inbound_payment_refund_failed</a></td>
 <td>Representa que houve falha na criação da devolução (cash-out) de um cash-in de Pix.</td>
 </tr>
 <tr>
-<td><a href="pix_json/pix.inbound_payment.refund.money_reserved.json">pix_inbound_payment_refund_money_reserved</a></td>
+<td><a href="pix.inbound_payment.refund.money_reserved.json">pix_inbound_payment_refund_money_reserved</a></td>
 <td>Representa a reserva de dinheiro (impacto no saldo da cliente) após a criação com sucesso de uma devolução (cash-out) de um cash-in de Pix.</td>
 </tr>
 <tr>
-<td><a href="pix_json/pix.inbound_payment.refund.settled.json">pix_inbound_payment_refund_settled</a></td>
+<td><a href="pix.inbound_payment.refund.settled.json">pix_inbound_payment_refund_settled</a></td>
 <td>Representa que a devolução (cash-out) de um cash-in de Pix foi realizada com sucesso.</td>
 </tr>
 <tr>
-<td><a href="pix_json/pix.inbound_payment.refund.reversed.json">pix_inbound_payment_refund_reversed</a></td>
+<td><a href="pix.inbound_payment.refund.reversed.json">pix_inbound_payment_refund_reversed</a></td>
 <td>Representa que a devolução (cash-out) de um cash-in de Pix foi rejeitada.</td>
 </tr>
 <tr>
-<td>pix_outbound_payment_created</td>
+<td><a href="pix_outbound_payment_created.json">pix_outbound_payment_created</a></td>
 <td>Representa a criação de um cash-out de Pix.</td>
 </tr>
 <tr>
-<td>pix_outbound_payment_money_reserved</td>
+<td><a href="pix_outbound_payment_money_reserved.json">pix_outbound_payment_money_reserved</a></td>
 <td>Representa a reserva de dinheiro (impacto no saldo da cliente) após a criação com sucesso de um cash-out de Pix.</td>
 </tr>
 <tr>
@@ -4210,6 +4239,8 @@ subprocess<span style="color:#ff79c6">.</span>run(<span style="color:#f1fa8c">&#
         
             
         
+            
+        
     
 </div>
 
@@ -4217,7 +4248,7 @@ subprocess<span style="color:#ff79c6">.</span>run(<span style="color:#f1fa8c">&#
 	
 	
 
-	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 28.06.2021
+	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 26.08.2021
 </div>
 </div>
 

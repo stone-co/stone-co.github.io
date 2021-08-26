@@ -665,6 +665,40 @@
          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;salary_portability_employer_refund&amp;#34;&lt;/span&gt;
     }    
 }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;envio-de-um-pix&#34;&gt;Envio de um Pix&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;7e785e98-c859-46c6-9dc7-37ea522ceadf&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;-1000&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;balance_after&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;47188&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;balance_before&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;48188&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;counterparty_agent&amp;#34;&lt;/span&gt;: {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;entity&amp;#34;&lt;/span&gt;: {
+         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Gabriela Abreu&amp;#34;&lt;/span&gt;,
+         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;12409265707&amp;#34;&lt;/span&gt;,
+         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;
+      },
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;institution&amp;#34;&lt;/span&gt;: {
+         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;BANCO SANTANDER (BRASIL) S.A.&amp;#34;&lt;/span&gt;,
+         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;compe&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;033&amp;#34;&lt;/span&gt;,
+         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;ispb&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;90400888&amp;#34;&lt;/span&gt;
+      },
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account&amp;#34;&lt;/span&gt;: {
+         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;CC&amp;#34;&lt;/span&gt;,
+         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;4208&amp;#34;&lt;/span&gt;,
+         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;10022294&amp;#34;&lt;/span&gt;
+      }
+   },
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-08-25T13:23:49Z&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fee_amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;7a076c8a-2522-4603-b36e-7bd90fc85389&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;operation&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;debit&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;operation_amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;1000&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;operation_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;b5c2354c-91a0-4837-bb15-7f88fcd9d4c5&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;FINISHED&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;subtitle&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Pix&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Gabriela Abreu&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;outbound_pix_payment&amp;#34;&lt;/span&gt;
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>
     </item>
