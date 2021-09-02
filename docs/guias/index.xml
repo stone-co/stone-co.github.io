@@ -1350,196 +1350,178 @@ subprocess&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;run(&lt;span s
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Também é preciso adicionar o Jetpack, pois usamos algumas libs que estão disponíveis nesse repositório.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;maven { url &amp;#39;https:&lt;span style=&#34;color:#6272a4&#34;&gt;//jitpack.io&amp;#39; }
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Importe a dependência da Conta Stone SDK.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;implementation &amp;#39;co.stone:conta:${latest_version}&amp;#39;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;implementation &amp;#39;co.stone:stone-android:${latest_version}&amp;#39;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A Conta Stone SDK utiliza o Firebase para implementar alguns de seus serviços, logo é necessário ter um projeto no Firebase e integrá-lo no seu app. Para mais informações sobre como adicionar o Firebase ao seu projeto, acesse este &lt;a href=&#34;https://firebase.google.com/docs/android/setup&#34;&gt;link&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Sincronize o projeto e pronto, já é possível utilizar a Conta Stone SDK!&lt;/p&gt;
 &lt;br&gt;
 &lt;h5 id=&#34;inicializando-a-sdk&#34;&gt;&lt;strong&gt;Inicializando a SDK&lt;/strong&gt;&lt;/h5&gt;
 &lt;hr&gt;
-&lt;p&gt;Uma vez que a dependência foi importada, o passo seguinte da integração é inicializar a SDK no seu app. Para isso é necessário especificar os parâmetros abaixo.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;val&lt;/span&gt; environment = Environment.Sandbox
+&lt;p&gt;Uma vez que a dependência foi importada, o passo seguinte da integração é inicializar a SDK no seu &lt;code&gt;Application&lt;/code&gt;. Para isso é necessário especificar os parâmetros abaixo.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;App&lt;/span&gt; : Application() {
 
- ContaStone.initialize(
-            application = application,
-            environment = environment,
-            appInfo = AppInfo(
-                name = &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Conta Stone Sample App&amp;#34;&lt;/span&gt;,
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;val&lt;/span&gt; environment = Environment.SANDBOX
+
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;val&lt;/span&gt; stoneSdk &lt;span style=&#34;color:#ff79c6&#34;&gt;by&lt;/span&gt; lazy {
+        Stone.init(
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;this&lt;/span&gt;,
+            environment,
+            AppInfo(
+                name = &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;YOUR_APP_NAME&amp;#34;&lt;/span&gt;,
+                version = BuildConfig.VERSION_NAME,
+                buildId = &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;NA&amp;#34;&lt;/span&gt;,
                 applicationId = BuildConfig.APPLICATION_ID,
-                buildId = BuildConfig.BUILD_TYPE,
-                version = BuildConfig.VERSION_NAME
+                themeId = R.style.YOUR_APP_THEME
             ),
-            authFlowUIConfig = AuthFlowUIConfig(themeId = R.style.Theme_ContaStoneSdkSample),
-            clientId = &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;myapp@example.com.br&amp;#34;&lt;/span&gt;,
-            deepLinkUris = DeepLinkUris(
+            AuthInfo(
+                clientId = &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;YOUR_CLIENT_ID&amp;#34;&lt;/span&gt;,
+                tokenMasterKeyUri = URI(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;android-keystore://cssdk-sample-token-key&amp;#34;&lt;/span&gt;),
+                httpClientConfig = HttpClientConfig()
+            ),
+            DeepLinkUris(
                 uriLogout = &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sample://uri.logout&amp;#34;&lt;/span&gt;,
                 uriChat = &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sample://uri.chat&amp;#34;&lt;/span&gt;,
-                uriDashboard = &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sample//uri.dashboard&amp;#34;&lt;/span&gt;,
                 uriHelp = &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sample://uri.help&amp;#34;&lt;/span&gt;,
                 uriKyc = &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sample://uri.kyc&amp;#34;&lt;/span&gt;,
-                uriUpdateApp = &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sample://uri.update.app&amp;#34;&lt;/span&gt;
-            ),
-            httpClientConfig = HttpClientConfig(),
-            logger = InternalLogger(),
-            tokenKeyMasterUri =  URI(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;android-keystore://stone-mobile&amp;#34;&lt;/span&gt;)
+                uriUpdateApp = &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sample://uri.forceupdate&amp;#34;&lt;/span&gt;,
+                uriDashboard = &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sample://uri.dashboard&amp;#34;&lt;/span&gt;
+            )
         )
+    }
+
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;override&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;fun&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;attachBaseContext&lt;/span&gt;(base: Context) {
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;super&lt;/span&gt;.attachBaseContext(base)
+        StoneContext.setContext(base)
+    }
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;application&lt;/code&gt;: Trata-se da instância do Application do seu app.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;application&lt;/code&gt;: Trata-se da instância do &lt;code&gt;Application&lt;/code&gt; do seu app;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;environment&lt;/code&gt;: Existem 3 ambientes para os quais a SDK pode apontar: &lt;code&gt;Homolog&lt;/code&gt;, &lt;code&gt;Sandbox&lt;/code&gt; e &lt;code&gt;Production&lt;/code&gt;. Para fins de teste, use o &lt;code&gt;Environment.Sandbox&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;environment&lt;/code&gt;: Existem 3 ambientes para os quais a SDK pode apontar: &lt;code&gt;HOMOLOGUE&lt;/code&gt;, &lt;code&gt;SANDBOX&lt;/code&gt; e &lt;code&gt;PRODUCTION&lt;/code&gt;. Para fins de teste, use o &lt;code&gt;Environment.SANDBOX&lt;/code&gt;;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;appInfo&lt;/code&gt;: Informações referentes ao app como nome, versão e buildId.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;appInfo&lt;/code&gt;: Informações referentes ao app como nome, versão e buildId;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;client_id&lt;/code&gt;: Identificador fornecido pelo time de suporte OpenBank.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;authInfo&lt;/code&gt;: Informações referentes a autenticação como clientId (fornecido pelo time de suporte OpenBank), configuração do &lt;code&gt;OkHttp&lt;/code&gt; e URI para a chave mestra no formato &lt;code&gt;android-keystore://&lt;/code&gt; (será utilizada para acessar o Keystore do Android e salvar o token do usuário de forma segura);&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;authFlowUIConfig&lt;/code&gt;: Com esta configuração, é possível passar o tema da sua aplicação para a SDK, assim as cores principais do estilo do seu app serão aplicadas nas telas internas da SDK.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;deepLinkUris&lt;/code&gt;: URIs usadas para fazer a navegação para Activities externas à SDK. Exemplo: a &lt;code&gt;uriLogout&lt;/code&gt; se refere à Activity para a qual o usuário deve ser redirecionado depois que ele for deslogado do app. Essa navegação é feita por deeplink;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;httpClientConfig&lt;/code&gt;: Trata-se de configurações HTTP customizadas do cliente, como &lt;code&gt;interceptors&lt;/code&gt;, &lt;code&gt;connectionTimeoutMs&lt;/code&gt;, &lt;code&gt;readTimeoutMs&lt;/code&gt;, &lt;code&gt;writeTimeoutMs&lt;/code&gt; e &lt;code&gt;networkInterceptors&lt;/code&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;tokenKeyMasterUri&lt;/code&gt;: Uma URI para a chave mestra no formato &lt;code&gt;android-keystore://&lt;/code&gt;. Essa chave será utilizada para acessar o Keystore do Android e salvar o token do usuário de forma segura.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;deepLinkUris&lt;/code&gt;: URIs usadas para fazer a navegação para Activities externas à SDK. Exemplo: a &lt;code&gt;uriLogout&lt;/code&gt; se refere à Activity para a qual o usuário deve ser redirecionado depois que ele for deslogado do app. Essa navegação é feita por deeplink.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;StoneContext.setContext()&lt;/code&gt;: Precisamos ter acesso ao &lt;code&gt;Context&lt;/code&gt; da aplicação para realizar algumas operações internas relacionadas ao ciclo de vida do app.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;br&gt;
 &lt;h5 id=&#34;iniciando-fluxo-de-autenticação-e-verificação-de-kyc&#34;&gt;&lt;strong&gt;Iniciando fluxo de Autenticação e verificação de KYC&lt;/strong&gt;&lt;/h5&gt;
 &lt;hr&gt;
 &lt;p&gt;Para iniciar o fluxo de autenticação e verificação de KYC, é necessário chamar o método abaixo.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;contaStoneSdk.startAuthAndVerificationFlowForResult(
-            context = &lt;span style=&#34;color:#ff79c6&#34;&gt;this&lt;/span&gt;,
-            params = VerificationParams(
-                launchMode = VerificationLaunchMode.StartingApp,
-                authMode = AuthFlowMode.RegisteredUser
-            ),
-            requestCode = LOGIN_RC
-        )
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;O atributo &lt;code&gt;params&lt;/code&gt; recebe dois argumentos: o modo de inicialização, o qual define como o fluxo deve ser iniciado, e o &lt;code&gt;authMode&lt;/code&gt;, que neste caso sempre vai ser &lt;code&gt;AuthFlowMode.RegisteredUser&lt;/code&gt;. O modo de inicialização pode ser:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;StartingApp&lt;/code&gt; - Inicia todo o fluxo de autenticação e check de KYC.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;AccountSelectionRequest&lt;/code&gt; - Exibe a tela de troca de conta e lida com a escolha do usuário nos casos em que o usuário em questão possui mais de uma conta de pagamento.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;PushNotificationReceived&lt;/code&gt; - Deve ser iniciado ao receber uma notificação push referente ao processo de abertura de conta.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;NewAccountCreated&lt;/code&gt; - Deve ser chamado após a criação de uma nova conta de pagamento para que seja verificado se essa conta não possui nenhuma pendência em seu cadastro.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Esse método inicia a Activity principal da SDK e executa os fluxos internos de autenticação e verificação de KYC. Quando o processo é finalizado, a Conta Stone SDK retorna um &lt;code&gt;Result&lt;/code&gt; através do &lt;code&gt;onActivityResult&lt;/code&gt; da Activity que deve ser tratado pelo app.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;stoneSdk.session
+	.verify(activity = &lt;span style=&#34;color:#ff79c6&#34;&gt;this&lt;/span&gt;, params = SessionVerificationParams(Full))
+	.runAsync(
+		onSuccess = { result -&amp;gt; &lt;span style=&#34;color:#6272a4&#34;&gt;/* HANDLE RESULT */&lt;/span&gt; },
+		onFailure = { error -&amp;gt; &lt;span style=&#34;color:#6272a4&#34;&gt;/* HANDLE ERROR */&lt;/span&gt; }
+	)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esse método inicia a Activity principal da SDK e executa os fluxos internos de autenticação e verificação de KYC. Quando o processo é finalizado, a Conta Stone SDK retorna um &lt;code&gt;FlowResult&lt;/code&gt; que deve ser tratado pelo app.&lt;/p&gt;
 &lt;br&gt;
 &lt;h5 id=&#34;lidando-com-o-resultado-da-sdk&#34;&gt;&lt;strong&gt;Lidando com o resultado da SDK&lt;/strong&gt;&lt;/h5&gt;
 &lt;hr&gt;
 &lt;p&gt;Ao finalizar o fluxo de autenticação e verificação, a SDK emite um resultado para o app informando o desfecho do fluxo. Segue abaixo um exemplo de como tratar o resultado emitido pela Conta Stone SDK e o que cada um significa.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;override&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;fun&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;onActivityResult&lt;/span&gt;(requestCode: Int, resultCode: Int, &lt;span style=&#34;color:#ff79c6&#34;&gt;data&lt;/span&gt;: Intent?) {
-         &lt;span style=&#34;color:#ff79c6&#34;&gt;super&lt;/span&gt;.onActivityResult(requestCode, resultCode, &lt;span style=&#34;color:#ff79c6&#34;&gt;data&lt;/span&gt;)
-         &lt;span style=&#34;color:#ff79c6&#34;&gt;if&lt;/span&gt; (requestCode == LOGIN_RC) {
-             &lt;span style=&#34;color:#ff79c6&#34;&gt;val&lt;/span&gt; result = contaStoneSdk.parseAuthAndVerificationResult(&lt;span style=&#34;color:#ff79c6&#34;&gt;data&lt;/span&gt;)
- 
-             &lt;span style=&#34;color:#ff79c6&#34;&gt;when&lt;/span&gt; (result) {
-                 &lt;span style=&#34;color:#ff79c6&#34;&gt;is&lt;/span&gt; AuthAndVerificationResult.Ok -&amp;gt; toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;User is authenticated&amp;#34;&lt;/span&gt;)
-                 &lt;span style=&#34;color:#ff79c6&#34;&gt;is&lt;/span&gt; AuthAndVerificationResult.MissingData -&amp;gt; toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Some information is missing&amp;#34;&lt;/span&gt;)
-                 &lt;span style=&#34;color:#ff79c6&#34;&gt;is&lt;/span&gt; AuthAndVerificationResult.UserCancelled -&amp;gt; toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;User cancelled flow&amp;#34;&lt;/span&gt;)
-                 &lt;span style=&#34;color:#ff79c6&#34;&gt;is&lt;/span&gt; AuthAndVerificationResult.Error -&amp;gt; toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Error during login ${result.error}&amp;#34;&lt;/span&gt;)
-                 &lt;span style=&#34;color:#ff79c6&#34;&gt;is&lt;/span&gt; AuthAndVerificationResult.UserLoggedOut -&amp;gt; toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;User requests logout&amp;#34;&lt;/span&gt;)
-                 &lt;span style=&#34;color:#ff79c6&#34;&gt;is&lt;/span&gt; AuthAndVerificationResult.BlockedUser -&amp;gt; toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;User is blocked&amp;#34;&lt;/span&gt;)
-             }
-         }
-     }
-    }
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;when&lt;/span&gt; (result) {
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;is&lt;/span&gt; FlowResult.Completed -&amp;gt; handleSuccess()
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;is&lt;/span&gt; FlowResult.Cancelled -&amp;gt; handleCancellation()
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;is&lt;/span&gt; FlowResult.Failed -&amp;gt; handleError()
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h5 id=&#34;como-fazer-logout&#34;&gt;&lt;strong&gt;Como fazer logout&lt;/strong&gt;&lt;/h5&gt;
 &lt;hr&gt;
 &lt;p&gt;Para deslogar o usuário, podemos fazer uma chamada para o método de logout seguindo o exemplo abaixo.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;contaStoneSdk.logout {
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;if&lt;/span&gt; (it != &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;) {
-                toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Error on logout. Try again!&amp;#34;&lt;/span&gt;)
-            } &lt;span style=&#34;color:#ff79c6&#34;&gt;else&lt;/span&gt; toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;User successfully logged out&amp;#34;&lt;/span&gt;)
-        }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Quando a exception é nula, o logout ocorreu com sucesso, quando não, algum erro ocorreu durante o fluxo.&lt;/p&gt;
-&lt;br&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;stoneSdk.auth
+	.logout()
+	.runAsync(
+		onSuccess = { &lt;span style=&#34;color:#6272a4&#34;&gt;/* HANDLE SUCCESS */&lt;/span&gt; },
+		onFailure = { error -&amp;gt; &lt;span style=&#34;color:#6272a4&#34;&gt;/* HANDLE ERROR */&lt;/span&gt; }
+	)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h5 id=&#34;obtendo-o-client-autenticado&#34;&gt;&lt;strong&gt;Obtendo o Client autenticado&lt;/strong&gt;&lt;/h5&gt;
 &lt;hr&gt;
-&lt;p&gt;A authSDK é responsável por todo o processo de autenticação, incluindo a adição do token no header das chamadas para a API do Stone Openbank. Para isso a SDK fornece um &lt;code&gt;OkHttpClient&lt;/code&gt; configurado que pode ser utilizado nas chamadas HTTP do seu app. Esse client possui &lt;a href=&#34;https://owasp.org/www-community/controls/Certificate_and_Public_Key_Pinning&#34;&gt;certificate pinning&lt;/a&gt; com os certificados da API do Stone OpenBank e é possível acessá-lo chamando o método &lt;code&gt;contaStone.auth().client()&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;fun&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;performAuthenticatedRequest&lt;/span&gt;() {
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;val&lt;/span&gt; httpService = HttpService.BankingGatewaySandbox
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;val&lt;/span&gt; client = contaStoneSdk.auth().getOkHttpClient(httpService)
+&lt;p&gt;A authSDK é responsável por todo o processo de autenticação, incluindo a adição do token no header das chamadas para a API do Stone Openbank. Para isso a SDK fornece um &lt;code&gt;OkHttpClient&lt;/code&gt; configurado que pode ser utilizado nas chamadas HTTP do seu app. Esse client possui &lt;a href=&#34;https://owasp.org/www-community/controls/Certificate_and_Public_Key_Pinning&#34;&gt;certificate pinning&lt;/a&gt; com os certificados da API do Stone OpenBank e é possível acessá-lo chamando o método &lt;code&gt;stoneSdk.auth.getOkHttpClient()&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;suspend&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;fun&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;getInstitutions&lt;/span&gt;(): List&amp;lt;Institution&amp;gt; {
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;val&lt;/span&gt; httpService = HttpService.BankingGatewaySandbox
 
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;val&lt;/span&gt; request = Request.Builder()
-            .url(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;${httpService.url}/api/v1/institutions&amp;#34;&lt;/span&gt;)
-            .&lt;span style=&#34;color:#ff79c6&#34;&gt;get&lt;/span&gt;()
-            .build()
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;val&lt;/span&gt; client = stoneSdk.auth.getOkHttpClient().run()
 
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;val&lt;/span&gt; callback = &lt;span style=&#34;color:#ff79c6&#34;&gt;object&lt;/span&gt; : &lt;span style=&#34;color:#50fa7b&#34;&gt;Callback&lt;/span&gt; {
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;override&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;fun&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;onFailure&lt;/span&gt;(call: Call, e: IOException) {
-                runOnMainThread {
-                    toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Error fetching institutions $e&amp;#34;&lt;/span&gt;)
-                }
-            }
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;val&lt;/span&gt; request = Request.Builder()
+		.url(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;${httpService.url}/api/v1/institutions&amp;#34;&lt;/span&gt;)
+		.&lt;span style=&#34;color:#ff79c6&#34;&gt;get&lt;/span&gt;()
+		.build()
 
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;override&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;fun&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;onResponse&lt;/span&gt;(call: Call, response: Response) {
-                runOnMainThread {
-                    toast(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Request executed successfully&amp;#34;&lt;/span&gt;)
-                }
-            }
-        }
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;val&lt;/span&gt; response = client.newCall(request).execute()
 
-        client.newCall(request).enqueue(callback)
-    }
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;return&lt;/span&gt; InstitutionMapper.toDomain(response)
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;!---
 ##### **Como inicializar o Aprovador**
 ---
-
-Para conseguir iniciar o aprovador é necessário fazer a chamada conforme o exemplo abaixo:
+Para iniciar o aprovador é necessário fazer a chamada conforme o exemplo abaixo:
 
 ```kotlin
-contaStoneSdk.startApproverForResult(
-                        source = this,
-                        requestCode = APPROVER_RQ,
-                        params = ApproverParams(loggedAccount, ApproverLaunchMode.SDKLaunchMode)
-                    )
+stoneSdk.approver
+	.manageApprovals(activity = this, params = ManageApprovalsParams(approverAccountInfo))
+	.runAsync(
+		onSuccess = { result -&gt; /* HANDLE RESULT */ },
+		onFailure = { error -&gt; /* HANDLE ERROR */ }
+	)
 ```
 
-Para recuperar o `loggedAccount` a Conta Stone SDK disponibiliza a sessão do usuário logado com todas as informações que o `LoggedAccount` precisa:
+Para recuperar o `approverAccountInfo` a Conta Stone SDK disponibiliza a sessão do usuário logado com todas as informações que o `ApproverAccountInfo` precisa:
 
 ```kotlin
-contaStoneSdk.getSession(
-                onComplete = { result -&gt;
-                    when (result) {
-                        is SessionResult.Success -&gt; {
-                                currentAccount?.paymentAccount?.let {
-                                        LoggedAccountInfo(
-                                            id = it.id,
-                                            accountNumber = it.accountCode,
-                                            accountOwner = currentAccount?.owner?.name.orEmpty(),
-                                            accountOwnerDocument = currentAccount?.owner?.document.orEmpty(),
-                                            bankName = &#34;Stone Pagamentos S.A&#34;,
-                                            bankNumber = &#34;197&#34;,
-                                            branchNumber = &#34;0001&#34;,
-                                            userLoggedName = profile.fullName
-                                        )
-                                    }
-                                }
-                        is SessionResult.HasNoActiveSession -&gt; redirectToLogin()
-                    }
-                },
-                onError = {
-                    toast(&#34;Error trying to get session&#34;)
-                }
+stoneSdk.session
+	.getSession()
+	.runAsync(
+		onSuccess = { session -&gt; 
+			val currentaccount = session.currentAccountOrThrow
+
+			val approverAccountInfo = ApproverAccountInfo(
+                userId = session.user.id,
+                userName = session.user.name,
+                accountOwner = currentaccount.owner.name,
+                accountOwnerDocument = currentaccount.owner.document,
+                accountNumber = currentaccount.payment.accountCode,
+                bankName = StoneOpenBank.institutionName,
+                bankNumber = StoneOpenBank.institutionCode,
+                branchNumber = StoneOpenBank.agencyCode
             )
-```)
+ 		},
+		onFailure = { error -&gt; /* HANDLE ERROR */ }
+	)
+```
 ---&gt;
-&lt;br&gt;
+&lt;h5 id=&#34;integração-com-coroutines-e-rxjava&#34;&gt;&lt;strong&gt;Integração com Coroutines e RxJava&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;A API pública da Conta Stone SDK retorna sempre um &lt;code&gt;Runnable&amp;lt;T&amp;gt;&lt;/code&gt;, com ele é possível escolher de qual forma deseja executar a operação:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;runAsync()&lt;/code&gt;: utiliza callbacks (útil se você estiver utilizando Java)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;run()&lt;/code&gt; e &lt;code&gt;runCatching()&lt;/code&gt;: são &lt;code&gt;suspend fun&lt;/code&gt;, devem ser chamadas dentro de um Coroutine Scope (recomendado para quem utiliza Kotlin)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;asFlow()&lt;/code&gt;: retorna um &lt;code&gt;Flow&lt;/code&gt; do Coroutines&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;asSingle()&lt;/code&gt;, &lt;code&gt;asObservable()&lt;/code&gt;, &lt;code&gt;asCompletable()&lt;/code&gt; e &lt;code&gt;asFlowable()&lt;/code&gt;: integração com RxJava&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Exemplo com Coroutines:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;viewModelScope.launch {
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;val&lt;/span&gt; session = stoneSdk.session.getSession().run()
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Exemplo com RxJava:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;stoneSdk.session
+	.getSession()
+	.asSingle()
+	.subscribeBy(
+		onSuccess = { session -&amp;gt; ... },
+		onError = { error -&amp;gt; ... } 
+	)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h2 id=&#34;integração-ios&#34;&gt;Integração iOS&lt;/h2&gt;
 &lt;hr&gt;
 &lt;br&gt;
