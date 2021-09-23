@@ -108,11 +108,240 @@
     </item>
     
     <item>
-      <title>Docs: Criar Cobranças com Validade</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/criar-cobranca-com-vencimento/</link>
+      <title>Docs: Criar QRCode Estático</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/criar-qrcode-estatico/</link>
+      <pubDate>Wed, 04 Aug 2021 15:19:30 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/criar-qrcode-estatico/</guid>
+      <description>
+        
+        
+        &lt;br&gt;
+Através desse endpoint será possível criar um QRCode Pix estático.
+&lt;br&gt;
+&lt;br&gt;
+&lt;pre&gt;&lt;code&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/pix_payment_static_invoices
+&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;
+&lt;h5 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;authorization&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Bearer token de autenticação.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Chave de idempotência.&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;transaction_id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Validação: &amp;ldquo;^[a-zA-Z0-9]{26,35}$&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;additional_information&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;amount&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;key&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;201 OK
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;uuid&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;uuid&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;participant_ispb&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;transaction_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;integer&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;additional_information&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,  
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;request_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;datetime_iso8601&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;datetime_iso8601&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;last_updated_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;qr_code_content&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;qr_code_image&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Atualizar QRCode Estático</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/atualizar-qrcode-estatico/</link>
+      <pubDate>Wed, 04 Aug 2021 15:19:30 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/atualizar-qrcode-estatico/</guid>
+      <description>
+        
+        
+        &lt;br&gt;
+Através desse endpoint será possível adicionar informações no QRCode estático criado.
+&lt;br&gt;
+&lt;br&gt;
+&lt;pre&gt;&lt;code&gt;PATCH https://sandbox-api.openbank.stone.com.br/api/v1/pix_payment_static_invoices/{{id}}
+&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;
+&lt;h5 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;authorization&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Bearer token de autenticação.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Chave de idempotência.&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;patch-params&#34;&gt;&lt;strong&gt;PATCH PARAMS&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;id&lt;/strong&gt; &lt;code&gt;uuid&lt;/code&gt;
+&lt;br&gt; Identificador do QRCode criado&lt;/p&gt;
+&lt;h5 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;additional_information&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;200 OK
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;uuid&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;uuid&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;participant_ispb&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;transaction_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;integer&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;additional_information&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,  
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;request_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;datetime_iso8601&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;datetime_iso8601&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;last_updated_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;qr_code_content&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;qr_code_image&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Detalhar QRCode Estático</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/detalhar-qrcode-estatico/</link>
+      <pubDate>Wed, 04 Aug 2021 15:19:30 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/detalhar-qrcode-estatico/</guid>
+      <description>
+        
+        
+        &lt;br&gt;
+Através desse endpoint será possível detalhar um QRCode estático criado.
+&lt;br&gt;
+&lt;br&gt;
+&lt;pre&gt;&lt;code&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/pix_payment_static_invoices/{{id}}
+&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;
+&lt;h5 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;authorization&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Bearer token de autenticação.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Chave de idempotência.&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;200 OK
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;uuid&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;uuid&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;participant_ispb&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;transaction_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;integer&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;additional_information&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,  
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;request_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;datetime_iso8601&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;datetime_iso8601&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;last_updated_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;qr_code_content&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;qr_code_image&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Criar QRCode Dinâmico</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/criar-qrcode-dinamico/</link>
+      <pubDate>Sun, 19 Sep 2021 08:55:30 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/criar-qrcode-dinamico/</guid>
+      <description>
+        
+        
+        &lt;br&gt;
+Através desse endpoint será possível criar um QRCode Pix dinâmico.
+&lt;br&gt;
+&lt;br&gt;
+&lt;pre&gt;&lt;code&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/pix_payment_invoices
+&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;
+&lt;h5 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;authorization&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Bearer token de autenticação.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Chave de idempotência.&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;amount&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;key&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;transaction_id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Validação: &amp;ldquo;^[a-zA-Z0-9]{26,35}$&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;customer&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;     &lt;strong&gt;name&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;     &lt;strong&gt;document&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;request_for_payer&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Descrição opcional do QRCode.&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;Exemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;100&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;7e785e98-c859-46c6-9dc7-37ea522ceadf&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;92961229022&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;transaction_id&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;1234567898745236521478edrfth4r&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;customer&amp;#34;&lt;/span&gt;: {
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Maria&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;12409265606&amp;#34;&lt;/span&gt;
+    },
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;request_for_payer&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Pague&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;201 OK
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;uuid&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;uuid&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;participant_ispb&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;transaction_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;integer&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;additional_information&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,  
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;request_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;datetime_iso8601&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;datetime_iso8601&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;last_updated_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;qr_code_content&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;qr_code_image&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Criar QRCode Dinâmico com Validade</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/criar-qrcode-dinamico-com-vencimento/</link>
       <pubDate>Wed, 16 Jun 2021 15:17:00 -0300</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/criar-cobranca-com-vencimento/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/criar-qrcode-dinamico-com-vencimento/</guid>
       <description>
         
         
@@ -132,329 +361,109 @@ Através desse endpoint será possível criar cobranças Pix com vencimento atra
 &lt;h5 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h5&gt;
 &lt;hr&gt;
 &lt;br&gt;
-&lt;p&gt;&lt;strong&gt;transaction_id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
-&lt;br&gt;Validação: &amp;ldquo;^[a-zA-Z0-9]{26,35}$&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;additional_data&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt; &lt;br&gt;
-&lt;strong&gt;name&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt; &lt;br&gt;
-Tamanho: min 1 / max 50
-**value*** &lt;code&gt;string&lt;/code&gt; &lt;br&gt;
-Tamanho: min 1 / max 200&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Identificador da conta que irá receber o valor pago.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;additional_data&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;    &lt;strong&gt;name&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;    Tamanho: min 1 / max 50
+&lt;br&gt;    &lt;strong&gt;value&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;    Tamanho: min 1 / max 200&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;amount&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;customer&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;&lt;br&gt;
-&lt;strong&gt;document&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;&lt;br&gt;
-**name*** &lt;code&gt;string&lt;/code&gt; &lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;customer&lt;/strong&gt;* &lt;code&gt;object&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;    &lt;strong&gt;document&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;    &lt;strong&gt;name&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;discount&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;    &lt;strong&gt;type&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;    Valores aceitos: &lt;code&gt;fixed&lt;/code&gt;, &lt;code&gt;proportional&lt;/code&gt;
+&lt;br&gt;    &lt;strong&gt;calculation_mode&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;    Valores aceitos: &lt;code&gt;date&lt;/code&gt;, &lt;code&gt;period&lt;/code&gt;
+&lt;br&gt;    &lt;strong&gt;period_discount&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
+&lt;br&gt;        &lt;strong&gt;fixed_value&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;
+&lt;br&gt;        Se type:fixed.
+&lt;br&gt;        &lt;strong&gt;proportional&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
+&lt;br&gt;        Se type:proportional. Representação de porcentagem, dada a seguinte fórmula: &lt;code&gt;coefficient * 10^exponent&lt;/code&gt;
+&lt;br&gt;            &lt;strong&gt;coefficient&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;
+&lt;br&gt;            &lt;strong&gt;exponent&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;expiration_date&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
 &lt;br&gt;Format: date&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;fine&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;    &lt;strong&gt;type&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;    Valores aceitos: &lt;code&gt;fixed&lt;/code&gt;, &lt;code&gt;proportional&lt;/code&gt;
+&lt;br&gt;    &lt;strong&gt;fixed_value&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;
+&lt;br&gt;    Se type:fixed.
+&lt;br&gt;    &lt;strong&gt;proportional_value&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
+&lt;br&gt;    Se type:proportional. Representação de porcentagem, dada a seguinte fórmula: &lt;code&gt;coefficient * 10^exponent&lt;/code&gt;
+&lt;br&gt;        &lt;strong&gt;coefficient&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;
+&lt;br&gt;        &lt;strong&gt;exponent&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;interest&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;    &lt;strong&gt;type&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;    Valores aceitos: &lt;code&gt;fixed&lt;/code&gt;, &lt;code&gt;proportional&lt;/code&gt;
+&lt;br&gt;    &lt;strong&gt;period&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;    Valores aceitos: &lt;code&gt;day&lt;/code&gt;, &lt;code&gt;month&lt;/code&gt;, &lt;code&gt;year&lt;/code&gt;
+&lt;br&gt;    &lt;strong&gt;fixed_value&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;
+&lt;br&gt;    Se type:fixed.
+&lt;br&gt;    &lt;strong&gt;proportional_value&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
+&lt;br&gt;    Se type:proportional. Representação de porcentagem, dada a seguinte fórmula: &lt;code&gt;coefficient * 10^exponent&lt;/code&gt;
+&lt;br&gt;        &lt;strong&gt;coefficient&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;
+&lt;br&gt;        &lt;strong&gt;exponent&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;key&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;request_for_payer&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;payment&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;only_business_days&lt;/strong&gt; &lt;code&gt;boolean&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;fine&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
-&lt;strong&gt;type&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;br&gt;
-Valores aceitos: &lt;code&gt;fixed&lt;/code&gt;, &lt;code&gt;proportional&lt;/code&gt; &lt;br&gt;
-&lt;strong&gt;fixed_value&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;
-&lt;strong&gt;proportional_value&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt; &lt;br&gt;
-Representação de porcentagem, dada a seguinte fórmula: &lt;code&gt;coefficient * 10^exponent&lt;/code&gt;&lt;br&gt;
-&lt;strong&gt;coefficient&lt;/strong&gt;* &lt;code&gt;integer&lt;/code&gt;
-**exponent*** &lt;code&gt;integer&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;reduction&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
-&lt;strong&gt;type&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;br&gt;
-Valores aceitos: &lt;code&gt;fixed&lt;/code&gt;, &lt;code&gt;proportional&lt;/code&gt; &lt;br&gt;
-&lt;strong&gt;fixed_value&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;
-&lt;strong&gt;proportional_value&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt; &lt;br&gt;
-Representação de porcentagem, dada a seguinte fórmula: &lt;code&gt;coefficient * 10^exponent&lt;/code&gt;&lt;br&gt;
-&lt;strong&gt;coefficient&lt;/strong&gt;* &lt;code&gt;integer&lt;/code&gt;
-**exponent*** &lt;code&gt;integer&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;interest&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
-&lt;strong&gt;type&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;br&gt;
-Valores aceitos: &lt;code&gt;fixed&lt;/code&gt;, &lt;code&gt;proportional&lt;/code&gt; &lt;br&gt;
-&lt;strong&gt;period&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;br&gt;
-Valores aceitos: &lt;code&gt;day&lt;/code&gt;, &lt;code&gt;month&lt;/code&gt;, &lt;code&gt;year&lt;/code&gt; &lt;br&gt;
-&lt;strong&gt;fixed_value&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;
-&lt;strong&gt;proportional_value&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt; &lt;br&gt;
-Representação de porcentagem, dada a seguinte fórmula: &lt;code&gt;coefficient * 10^exponent&lt;/code&gt;&lt;br&gt;
-&lt;strong&gt;coefficient&lt;/strong&gt;* &lt;code&gt;integer&lt;/code&gt;
-**exponent*** &lt;code&gt;integer&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;discount&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
-&lt;strong&gt;type&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;br&gt;
-Valores aceitos: &lt;code&gt;fixed&lt;/code&gt;, &lt;code&gt;proportional&lt;/code&gt; &lt;br&gt;
-&lt;strong&gt;calculation_mode&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;br&gt;
-Valores aceitos: &lt;code&gt;date&lt;/code&gt;, &lt;code&gt;period&lt;/code&gt; &lt;br&gt;
-&lt;strong&gt;period_discount&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
-&lt;strong&gt;date_discounts&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
-&lt;strong&gt;date&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
-&lt;strong&gt;fixed_value&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;
-&lt;strong&gt;proportional&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt; &lt;br&gt;
-Representação de porcentagem, dada a seguinte fórmula: &lt;code&gt;coefficient * 10^exponent&lt;/code&gt;&lt;br&gt;
-&lt;strong&gt;coefficient&lt;/strong&gt;* &lt;code&gt;integer&lt;/code&gt;
-**exponent*** &lt;code&gt;integer&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Schema:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;only_business_days&lt;/strong&gt; &lt;code&gt;boolean&lt;/code&gt;
+&lt;br&gt;Aceia true or false para pagamento somente em dias úteis&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;payment_limit_period_days&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;
+&lt;br&gt;Informa por quanto tempo o QRCode estará válido.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;reduction&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;    &lt;strong&gt;type&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;    Valores aceitos: &lt;code&gt;fixed&lt;/code&gt;, &lt;code&gt;proportional&lt;/code&gt;
+&lt;br&gt;    &lt;strong&gt;fixed_value&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;
+&lt;br&gt;    Se type:fixed.
+&lt;br&gt;    &lt;strong&gt;proportional_value&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
+&lt;br&gt;    Se type:proportional. Representação de porcentagem, dada a seguinte fórmula: &lt;code&gt;coefficient * 10^exponent&lt;/code&gt;
+&lt;br&gt;        &lt;strong&gt;coefficient&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;
+&lt;br&gt;        &lt;strong&gt;exponent&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;request_for_payer&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Descrição opcional do QRCode.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;transaction_id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Validação: &amp;ldquo;^[a-zA-Z0-9]{26,35}$&amp;rdquo;&lt;/p&gt;
+&lt;br&gt;
+Exemplo:
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: {
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;transaction_id&amp;#34;&lt;/span&gt;: {
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;pattern&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;^[a-zA-Z0-9]{26,35}$&amp;#34;&lt;/span&gt;
-    },
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: {
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;format&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;uuid&amp;#34;&lt;/span&gt;
-    },
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;additional_data&amp;#34;&lt;/span&gt;: {
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: [
-        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;array&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;null&amp;#34;&lt;/span&gt;
-      ],
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;maxItems&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;50&lt;/span&gt;,
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;items&amp;#34;&lt;/span&gt;: {
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: [
-          &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;,
-          &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;
-        ],
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: {
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: {
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;minLength&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;,
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;maxLength&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;50&lt;/span&gt;
-          },
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;: {
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;minLength&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;,
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;maxLength&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;200&lt;/span&gt;
-          }
-        }
-      }
-    },
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: {
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;
-    },
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;customer&amp;#34;&lt;/span&gt;: {
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: [
-        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;
-      ],
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: {
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;: {
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;
-        },
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: {
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;
-        }
-      }
-    },
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;expiration_date&amp;#34;&lt;/span&gt;: {
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;format&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;
-    },
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;: {
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;
-    },
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;request_for_payer&amp;#34;&lt;/span&gt;: {
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: [
-        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;null&amp;#34;&lt;/span&gt;
-      ]
-    },
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;payment_limit_pediod_days&amp;#34;&lt;/span&gt;: {
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;
-    },
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;only_business_days&amp;#34;&lt;/span&gt;: {
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;boolean&amp;#34;&lt;/span&gt;
-    },
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fine&amp;#34;&lt;/span&gt;: {
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: {
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: {
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;enum&amp;#34;&lt;/span&gt;: [
-            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;fixed&amp;#34;&lt;/span&gt;,
-            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;proportional&amp;#34;&lt;/span&gt;
-          ]
-        },
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fixed_value&amp;#34;&lt;/span&gt;: {
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: [
-            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;,
-            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;null&amp;#34;&lt;/span&gt;
-          ]
-        },
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;proportional_value&amp;#34;&lt;/span&gt;: {
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Porcentagem&amp;#34;&lt;/span&gt;,
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: [
-            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;coefficient&amp;#34;&lt;/span&gt;,
-            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;exponent&amp;#34;&lt;/span&gt;
-          ],
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Representação de porcentagem, dada a seguinte fórmula: `coefficient * 10^exponent`&amp;#34;&lt;/span&gt;,
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: {
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;coefficient&amp;#34;&lt;/span&gt;: {
-              &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;
-            },
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;exponent&amp;#34;&lt;/span&gt;: {
-              &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;
-            }
-          }
-        }
-      }
-    },
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reduction&amp;#34;&lt;/span&gt;: {
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: [
-        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;
-      ],
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: {
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: {
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;enum&amp;#34;&lt;/span&gt;: [
-            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;fixed&amp;#34;&lt;/span&gt;,
-            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;proportional&amp;#34;&lt;/span&gt;
-          ]
-        },
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fixed_value&amp;#34;&lt;/span&gt;: {
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: [
-            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;,
-            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;null&amp;#34;&lt;/span&gt;
-          ]
-        },
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;proportional_value&amp;#34;&lt;/span&gt;: {
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Porcentagem&amp;#34;&lt;/span&gt;,
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: [
-            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;coefficient&amp;#34;&lt;/span&gt;,
-            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;exponent&amp;#34;&lt;/span&gt;
-          ],
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Representação de porcentagem, dada a seguinte fórmula: `coefficient * 10^exponent`&amp;#34;&lt;/span&gt;,
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: {
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;coefficient&amp;#34;&lt;/span&gt;: {
-              &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;
-            },
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;exponent&amp;#34;&lt;/span&gt;: {
-              &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;
-            }
-          }
-        }
-      }
-    },
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;interest&amp;#34;&lt;/span&gt;: {
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: [
-        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;period&amp;#34;&lt;/span&gt;
-      ],
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: {
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: {
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;enum&amp;#34;&lt;/span&gt;: [
-            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;fixed&amp;#34;&lt;/span&gt;,
-            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;proportional&amp;#34;&lt;/span&gt;
-          ]
-        },
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;period&amp;#34;&lt;/span&gt;: {
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;enum&amp;#34;&lt;/span&gt;: [
-            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;day&amp;#34;&lt;/span&gt;,
-            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;month&amp;#34;&lt;/span&gt;,
-            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;year&amp;#34;&lt;/span&gt;
-          ]
-        },
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fixed_value&amp;#34;&lt;/span&gt;: {
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: [
-            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;,
-            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;null&amp;#34;&lt;/span&gt;
-          ]
-        },
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;proportional_value&amp;#34;&lt;/span&gt;: {
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Porcentagem&amp;#34;&lt;/span&gt;,
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: [
-            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;coefficient&amp;#34;&lt;/span&gt;,
-            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;exponent&amp;#34;&lt;/span&gt;
-          ],
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Representação de porcentagem, dada a seguinte fórmula: `coefficient * 10^exponent`&amp;#34;&lt;/span&gt;,
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: {
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;coefficient&amp;#34;&lt;/span&gt;: {
-              &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;
-            },
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;exponent&amp;#34;&lt;/span&gt;: {
-              &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;
-            }
-          }
-        }
-      }
-    },
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;discount&amp;#34;&lt;/span&gt;: {
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: [
-        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;calculation_mode&amp;#34;&lt;/span&gt;
-      ],
-      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: {
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: {
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;enum&amp;#34;&lt;/span&gt;: [
-            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;fixed&amp;#34;&lt;/span&gt;,
-            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;proportional&amp;#34;&lt;/span&gt;
-          ]
-        },
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;calculation_mode&amp;#34;&lt;/span&gt;: {
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;enum&amp;#34;&lt;/span&gt;: [
-            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;,
-            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;period&amp;#34;&lt;/span&gt;
-          ]
-        },
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;period_discount&amp;#34;&lt;/span&gt;: {
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: [
-            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
-            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;null&amp;#34;&lt;/span&gt;
-          ]
-        },
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;date_discounts&amp;#34;&lt;/span&gt;: {
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: [
-            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
-            &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;null&amp;#34;&lt;/span&gt;
-          ],
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: {
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;: {
-              &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,
-              &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;format&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;
-            },
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fixed_value&amp;#34;&lt;/span&gt;: {
-              &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: [
-                &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;,
-                &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;null&amp;#34;&lt;/span&gt;
-              ]
-            },
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;proportional&amp;#34;&lt;/span&gt;: {
-              &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
-              &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Porcentagem&amp;#34;&lt;/span&gt;,
-              &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: [
-                &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;coefficient&amp;#34;&lt;/span&gt;,
-                &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;exponent&amp;#34;&lt;/span&gt;
-              ],
-              &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Representação de porcentagem, dada a seguinte fórmula: `coefficient * 10^exponent`&amp;#34;&lt;/span&gt;,
-              &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: {
-                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;coefficient&amp;#34;&lt;/span&gt;: {
-                  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;
-                },
-                &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;exponent&amp;#34;&lt;/span&gt;: {
-                  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;integer&amp;#34;&lt;/span&gt;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  },
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: [
-    &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;transaction_id&amp;#34;&lt;/span&gt;,
-    &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;customer&amp;#34;&lt;/span&gt;,
-    &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;expiration_date&amp;#34;&lt;/span&gt;,
-    &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;
-  ]
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;{{account_id}}&amp;#34;&lt;/span&gt;,
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;additional_data&amp;#34;&lt;/span&gt;: [{
+		&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Título&amp;#34;&lt;/span&gt;,
+		&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Descrição&amp;#34;&lt;/span&gt;
+	}],
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;15&lt;/span&gt;,
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;customer&amp;#34;&lt;/span&gt;: {
+		&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;14423692724&amp;#34;&lt;/span&gt;,
+		&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;,
+		&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;John Doe&amp;#34;&lt;/span&gt;
+	},
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;discount&amp;#34;&lt;/span&gt;: {
+		&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;calculation_mode&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;period&amp;#34;&lt;/span&gt;,
+		&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;period_discount&amp;#34;&lt;/span&gt;: {
+			&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fixed_value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;60&lt;/span&gt;
+		},
+		&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;fixed&amp;#34;&lt;/span&gt;
+	},
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;expiration_date&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-06-15&amp;#34;&lt;/span&gt;,
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fine&amp;#34;&lt;/span&gt;: {
+		&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fixed_value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;100&lt;/span&gt;,
+		&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;fixed&amp;#34;&lt;/span&gt;
+	},
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;interest&amp;#34;&lt;/span&gt;: {
+		&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fixed_value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;50&lt;/span&gt;,
+		&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;period&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;day&amp;#34;&lt;/span&gt;,
+		&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;fixed&amp;#34;&lt;/span&gt;
+	},
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;4e4bb64d-d17c-4c53-a51b-44f06e28be06&amp;#34;&lt;/span&gt;,
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;only_business_days&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;false&lt;/span&gt;,
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;payment_limit_period_days&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;15&lt;/span&gt;,
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reduction&amp;#34;&lt;/span&gt;: {
+		&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fixed_value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;100&lt;/span&gt;,
+		&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;fixed&amp;#34;&lt;/span&gt;
+	},
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;request_for_payer&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;do something&amp;#34;&lt;/span&gt;,
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;transaction_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2b99dae0492c425c969e7768a91b2f3d&amp;#34;&lt;/span&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
@@ -567,117 +576,7 @@ Representação de porcentagem, dada a seguinte fórmula: &lt;code&gt;coefficien
     </item>
     
     <item>
-      <title>Docs: Criar QRCode Estático</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/criar-qrcode-estatico/</link>
-      <pubDate>Wed, 04 Aug 2021 15:19:30 -0300</pubDate>
-      
-      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/criar-qrcode-estatico/</guid>
-      <description>
-        
-        
-        &lt;br&gt;
-Através desse endpoint será possível criar um QRCode Pix estático.
-&lt;br&gt;
-&lt;br&gt;
-&lt;pre&gt;&lt;code&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/pix_payment_static_invoices
-&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;
-&lt;h5 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h5&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;authorization&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
-&lt;br&gt; Bearer token de autenticação.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
-&lt;br&gt; Chave de idempotência.&lt;/p&gt;
-&lt;br&gt;
-&lt;h5 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h5&gt;
-&lt;hr&gt;
-&lt;br&gt;
-&lt;p&gt;&lt;strong&gt;transaction_id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
-&lt;br&gt;Validação: &amp;ldquo;^[a-zA-Z0-9]{26,35}$&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;additional_information&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;amount&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;key&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
-&lt;br&gt;
-&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
-&lt;hr&gt;
-&lt;pre&gt;&lt;code&gt;201 OK
-&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;uuid&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;uuid&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;participant_ispb&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;transaction_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;integer&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;additional_information&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,  
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;request_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;datetime_iso8601&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;datetime_iso8601&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;last_updated_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;qr_code_content&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;qr_code_image&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Atualizar QRCode Estático</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/atualizar-qrcode-estatico/</link>
-      <pubDate>Wed, 04 Aug 2021 15:19:30 -0300</pubDate>
-      
-      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/atualizar-qrcode-estatico/</guid>
-      <description>
-        
-        
-        &lt;br&gt;
-Através desse endpoint será possível adicionar informações no QRCode estático criado.
-&lt;br&gt;
-&lt;br&gt;
-&lt;pre&gt;&lt;code&gt;PATCH https://sandbox-api.openbank.stone.com.br/api/v1/pix_payment_static_invoices/{{id}}
-&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;
-&lt;h5 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h5&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;authorization&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
-&lt;br&gt; Bearer token de autenticação.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
-&lt;br&gt; Chave de idempotência.&lt;/p&gt;
-&lt;br&gt;
-&lt;h5 id=&#34;patch-params&#34;&gt;&lt;strong&gt;PATCH PARAMS&lt;/strong&gt;&lt;/h5&gt;
-&lt;p&gt;&lt;strong&gt;id&lt;/strong&gt; &lt;code&gt;uuid&lt;/code&gt;
-&lt;br&gt; Identificador do QRCode criado&lt;/p&gt;
-&lt;h5 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h5&gt;
-&lt;hr&gt;
-&lt;br&gt;
-&lt;p&gt;&lt;strong&gt;additional_information&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
-&lt;br&gt;
-&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
-&lt;hr&gt;
-&lt;pre&gt;&lt;code&gt;200 OK
-&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;uuid&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;uuid&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;participant_ispb&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;transaction_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;integer&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;additional_information&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,  
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;request_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;datetime_iso8601&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;datetime_iso8601&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;last_updated_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;qr_code_content&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;qr_code_image&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Listar Cobranças com Validade</title>
+      <title>Docs: Listar QRCode Dinâmico com Validade</title>
       <link>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/listar-cobranca-com-validade/</link>
       <pubDate>Wed, 16 Jun 2021 15:17:00 -0300</pubDate>
       
@@ -804,53 +703,6 @@ Através desse endpoint será possível adicionar informações no QRCode estát
       }
     }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Detalhar QRCode Estático</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/detalhar-qrcode-estatico/</link>
-      <pubDate>Wed, 04 Aug 2021 15:19:30 -0300</pubDate>
-      
-      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/detalhar-qrcode-estatico/</guid>
-      <description>
-        
-        
-        &lt;br&gt;
-Através desse endpoint será possível detalhar um QRCode estático criado.
-&lt;br&gt;
-&lt;br&gt;
-&lt;pre&gt;&lt;code&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/pix_payment_static_invoices/{{id}}
-&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;
-&lt;h5 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h5&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;authorization&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
-&lt;br&gt; Bearer token de autenticação.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
-&lt;br&gt; Chave de idempotência.&lt;/p&gt;
-&lt;br&gt;
-&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
-&lt;hr&gt;
-&lt;pre&gt;&lt;code&gt;200 OK
-&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;uuid&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;uuid&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;participant_ispb&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;transaction_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;integer&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;additional_information&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,  
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;request_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;datetime_iso8601&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;datetime_iso8601&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;last_updated_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;qr_code_content&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;qr_code_image&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;lt;string&amp;gt;&amp;#34;&lt;/span&gt;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-
       </description>
     </item>
     

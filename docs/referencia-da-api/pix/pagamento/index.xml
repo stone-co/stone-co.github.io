@@ -438,7 +438,7 @@ Pagamentos para contas externas inexistentes podem ser criados mas falharão ap�
     <item>
       <title>Docs: Confirmar um pagamento pendente</title>
       <link>https://stone-co.github.io/docs/referencia-da-api/pix/pagamento/confirmar-pagamento-pendente/</link>
-      <pubDate>Fri, 25 Jun 2021 14:28:33 -0300</pubDate>
+      <pubDate>Mon, 20 Sep 2021 15:45:21 -0300</pubDate>
       
       <guid>https://stone-co.github.io/docs/referencia-da-api/pix/pagamento/confirmar-pagamento-pendente/</guid>
       <description>
@@ -448,7 +448,8 @@ Pagamentos para contas externas inexistentes podem ser criados mas falharão ap�
 &lt;br&gt;
 &lt;pre&gt;&lt;code&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/outbound_pix_payments/{id}/actions/confirm
 &lt;/code&gt;&lt;/pre&gt;&lt;br&gt;
-&lt;p&gt;Na confirmação, o body pode conter opcionalmente os campos &lt;code&gt;amount&lt;/code&gt; e &lt;code&gt;description&lt;/code&gt;, caso eles não tenham sido preenchidos na criação.&lt;/p&gt;
+&lt;p&gt;Na confirmação, o body pode conter opcionalmente os campos &lt;code&gt;amount&lt;/code&gt; e &lt;code&gt;description&lt;/code&gt;, caso eles não tenham sido preenchidos na criação.
+Além disso, também é possível adicionar o contato do pagamento realizado à lista de contatos da conta. Para isso, basta enviar a flag &lt;code&gt;add_target_to_contacts&lt;/code&gt; com o valor &lt;code&gt;true&lt;/code&gt;. Lembrando que este campo também é opcional.&lt;/p&gt;
 &lt;br&gt;
 
 
@@ -488,11 +489,14 @@ Pagamentos para contas externas inexistentes podem ser criados mas falharão ap�
 &lt;br&gt;Valor a ser transferido&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;description&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
 &lt;br&gt;Descrição do pagamento&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;add_target_to_contacts&lt;/strong&gt; &lt;code&gt;boolean&lt;/code&gt;
+&lt;br&gt;Flag para adicionar um contato&lt;/p&gt;
 &lt;br&gt;
 &lt;p&gt;Body:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;39511&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;some description&amp;#34;&lt;/span&gt;
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;some description&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;add_target_to_contacts&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;true&lt;/span&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;h5 id=&#34;responses&#34;&gt;&lt;strong&gt;Responses&lt;/strong&gt;&lt;/h5&gt;
