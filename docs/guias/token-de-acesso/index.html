@@ -3503,7 +3503,7 @@ Abaixo você encontrará um exemplo de header.</p>
   <span style="color:#ff79c6">&#34;content-type&#34;</span>: <span style="color:#f1fa8c">&#34;application/x-www-form-urlencoded&#34;</span>
 }
 </code></pre></div><br>
-<p><strong>Payload</strong> <br>É um objeto JSON que trará as informações que usaremos para verificar a autenticidade da chamada e retornar o Token de Acesso. É necessário enviar o campo <code>ClientID</code>, o campo <code>grant_type</code>, que será um campo de valor fixo (<strong>client_credentials</strong>), o campo <code>client_assertion</code>, que será o token gerado localmente citado acima, e por último o campo <code>client_assertion_type</code>, que também terá seu valor fixo (<strong>urn:ietf:params:oauth:client-assertion-type:jwt-bearer</strong>), fechando o fluxo de client credentials para o servidor.</p>
+<p><strong>Payload</strong> <br>É um objeto JSON que trará as informações que usaremos para verificar a autenticidade da chamada e retornar o Token de Acesso. É necessário enviar o campo <code>client_id</code>, o campo <code>grant_type</code>, que será um campo de valor fixo (<strong>client_credentials</strong>), o campo <code>client_assertion</code>, que será o token gerado localmente citado acima, e por último o campo <code>client_assertion_type</code>, que também terá seu valor fixo (<strong>urn:ietf:params:oauth:client-assertion-type:jwt-bearer</strong>), fechando o fluxo de client credentials para o servidor.</p>
 <br>
 Esse request deverá ser realizado nas seguintes URLs (por ambiente):
 <br><br>
