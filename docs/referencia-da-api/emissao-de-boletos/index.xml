@@ -663,7 +663,7 @@ Importante ressaltar que pode haver restrição de habilitação de um determina
 
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
 &lt;p&gt;&lt;strong&gt;Atenção&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Desconto em boleto não é valido para pagamentos realizados no final de semana.&lt;/p&gt;
+&lt;p&gt;Quando a data limite de pagamento com desconto cai em um dia não útil, como em um fim de semana, o desconto ainda será válido para pagamentos no próximo dia útil.&lt;/p&gt;
 
 &lt;/div&gt;
 
@@ -697,11 +697,9 @@ Importante ressaltar que pode haver restrição de habilitação de um determina
 &lt;/ul&gt;
 &lt;br&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Liquidação de Boletos&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Para boletos emitidos e pagos na Stone terão a sua liquidação efetuada no mesmo dia. Boletos emitidos na Stone e pagos em outras instituições, serão liquidados em até D+2 dias úteis.&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Liquidação de Boletos&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Boletos emitidos e pagos na Stone terão a sua liquidação efetuada no mesmo dia. Já boletos emitidos na Stone e pagos em outras instituições, serão liquidados pela &lt;a href=&#34;https://www.cip-bancos.org.br/SitePages/Home.aspx&#34; target=&#34;_blank&#34;&gt;CIP (Câmara Interbancária de Pagamentos)&lt;/a&gt; em até D+2 dias úteis e o crédito na conta do cliente ocorrerá no mesmo dia do recebimento da liquidação.&lt;/p&gt;
 &lt;br&gt;
 
 

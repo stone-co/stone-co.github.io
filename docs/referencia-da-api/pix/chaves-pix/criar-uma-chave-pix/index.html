@@ -22,7 +22,7 @@
 <meta property="og:description" content="Escreva o Banco do futuro. Uma linha de código por vez." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://stone-co.github.io/docs/referencia-da-api/pix/chaves-pix/criar-uma-chave-pix/" />
-<meta property="og:updated_time" content="2021-08-12T19:00:00-03:00" /><meta property="og:site_name" content="Stone OpenBank" />
+<meta property="og:updated_time" content="2021-10-14T09:26:00-03:00" /><meta property="og:site_name" content="Stone OpenBank" />
 <meta itemprop="name" content="Criar chaves Pix">
 <meta itemprop="description" content="Escreva o Banco do futuro. Uma linha de código por vez.">
 <meta name="twitter:card" content="summary"/>
@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.36f3bbb5becf8e108471851d55d4cfe6.json"
+  data-offline-search-index-json-src="/offline-search-index.17539178b2e809724acdef3b2420c873.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.36f3bbb5becf8e108471851d55d4cfe6.json"
+  data-offline-search-index-json-src="/offline-search-index.17539178b2e809724acdef3b2420c873.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -3379,25 +3379,32 @@
 <p><strong>account_id</strong> <code>string</code>
 <br> Identificador da conta
 <br> <br></p>
+<br>
 <h5 id="body-params"><strong>BODY PARAMS</strong></h5>
+<hr>
+<br>
+<p><strong>- Para criar uma chave aleatória</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#ff79c6">&#34;key&#34;</span>: <span style="color:#f1fa8c">&#34;+5510998765432&#34;</span>, 
-  <span style="color:#ff79c6">&#34;key_type&#34;</span>: <span style="color:#f1fa8c">&#34;phone&#34;</span>, 
-  <span style="color:#ff79c6">&#34;participant_ispb&#34;</span>: <span style="color:#f1fa8c">&#34;1234567890&#34;</span>,
-  <span style="color:#ff79c6">&#34;beneficiary_account&#34;</span>: {
-     <span style="color:#ff79c6">&#34;branch_code&#34;</span>: <span style="color:#f1fa8c">&#34;0001&#34;</span>,
-     <span style="color:#ff79c6">&#34;account_code&#34;</span>: <span style="color:#f1fa8c">&#34;00016583&#34;</span>,
-     <span style="color:#ff79c6">&#34;account_type&#34;</span>: <span style="color:#f1fa8c">&#34;CC&#34;</span>,
-     <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2019-11-18T03:00:00Z&#34;</span>
-  },
-  <span style="color:#ff79c6">&#34;beneficiary_entity&#34;</span>: {
-     <span style="color:#ff79c6">&#34;name&#34;</span>:<span style="color:#f1fa8c">&#34;Maria Clara Gomes&#34;</span>,
-     <span style="color:#ff79c6">&#34;document_type&#34;</span>: <span style="color:#f1fa8c">&#34;cpf&#34;</span>,
-     <span style="color:#ff79c6">&#34;document&#34;</span>: <span style="color:#f1fa8c">&#34;13152256685&#34;</span>
-  }
+    <span style="color:#ff79c6">&#34;key&#34;</span>: <span style="color:#f1fa8c">&#34;&#34;</span>,
+    <span style="color:#ff79c6">&#34;key_type&#34;</span>: <span style="color:#f1fa8c">&#34;random_key&#34;</span>,
+    <span style="color:#ff79c6">&#34;participant_ispb&#34;</span>: <span style="color:#f1fa8c">&#34;16501555&#34;</span>
+}
+</code></pre></div><p><br> <br></p>
+<p><strong>- Para criar uma chave de documento</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#ff79c6">&#34;key&#34;</span>: <span style="color:#f1fa8c">&#34;número-do-documento&#34;</span>,
+    <span style="color:#ff79c6">&#34;key_type&#34;</span>: <span style="color:#f1fa8c">&#34;cpf-ou-cnpj&#34;</span>,
+    <span style="color:#ff79c6">&#34;participant_ispb&#34;</span>: <span style="color:#f1fa8c">&#34;16501555&#34;</span>
+}
+</code></pre></div><p>Ex:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#ff79c6">&#34;key&#34;</span>: <span style="color:#f1fa8c">&#34;12409265707&#34;</span>,
+    <span style="color:#ff79c6">&#34;key_type&#34;</span>: <span style="color:#f1fa8c">&#34;cpf&#34;</span>,
+    <span style="color:#ff79c6">&#34;participant_ispb&#34;</span>: <span style="color:#f1fa8c">&#34;16501555&#34;</span>
 }
 </code></pre></div><p><br> <br></p>
 <h5 id="response"><strong>Response</strong></h5>
+<hr>
 <pre><code>202 ACCEPTED
 content-type: application/json
 </code></pre><p>Body</p>
@@ -3682,7 +3689,7 @@ content-type: application/json
 	
 	
 
-	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 12.08.2021
+	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 14.10.2021
 </div>
 </div>
 
