@@ -108,7 +108,7 @@ Para realizar chamadas na API Stone Open Banking, será necessário ter em mãos
 O JWT é um padrão (RFC-7519) de mercado que define como transmitir e armazenar objetos JSON de forma compacta e segura entre diferentes aplicações. Os dados nele contidos podem ser validados a qualquer momento, pois o token é assinado digitalmente.
 &lt;br&gt;
 &lt;br&gt;
-Para receber esse Token de Acesso, será necessário que você gere um JWT local, com suas partes em base64 já decodificadas e que deverá ser formado por três seções:
+Para receber esse Token de Acesso, será necessário que você gere um JWT local, com suas partes em base64 já codificadas e que deverá ser formado por três seções:
 
 
 &lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
@@ -363,7 +363,7 @@ Esse request deverá ser realizado nas seguintes URLs (por ambiente):
 Para plataformas que queiram oferecer o processo de abertura de conta Stone de maneira integrada, o envio das informações iniciais poderá ser feito usando nossa API. Já para recebimento dos dados de KYC, será necessário o uso da nossa SDK - detalhada na &lt;a href=&#34;https://stone-co.github.io/docs/guias/sdk/&#34;&gt;seção exclusiva&lt;/a&gt; sobre suas funcionalidades e usos.&lt;/p&gt;
 &lt;br&gt;
 &lt;h3 id=&#34;identificador&#34;&gt;&lt;strong&gt;Identificador&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;Em nossa modelagem de conta de pagamento, utilizamos dois conceitos para refletir as etapas mencionadas acima:&lt;/p&gt;
+&lt;p&gt;Em nossa modelagem de conta de pagamento, utilizamos três conceitos para refletir as etapas mencionadas acima:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -667,8 +667,12 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 &lt;td style=&#34;text-align:left&#34;&gt;Representa que o pagamento do boleto foi acolhido em alguma instituição.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;inbound_barcode_payment_validated.json&#34;&gt;inbound_barcode_payment_validated&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Representa que o pagamento do boleto emitido foi aceito na instituição.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;barcode_payment_invoice_settled.json&#34;&gt;barcode_payment_invoice_settled&lt;/a&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Representa que o pagamento do boleto foi confirmado.&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Representa que o pagamento do boleto foi confirmado e liquidado.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;barcode_payment_invoice_expired.json&#34;&gt;barcode_payment_invoice_expired&lt;/a&gt;&lt;/td&gt;
@@ -1067,7 +1071,7 @@ x-stone-webhook-event-type: &amp;quot;cash_out_internal_transfer&amp;quot;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;event_type&lt;/td&gt;
-&lt;td&gt;Especifica qual tipo de evento disparou a notificação. Veja os valores possíveis &lt;a href=&#34;#os-eventos-que-geram-notifica%C3%A7%C3%B5es-s%C3%A3o&#34;&gt;aqui&lt;/a&gt;.&lt;/td&gt;
+&lt;td&gt;Especifica qual tipo de evento disparou a notificação. Veja os valores possíveis &lt;a href=&#34;#eventos-que-geram-notifica%C3%A7%C3%B5es&#34;&gt;aqui&lt;/a&gt;.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;id&lt;/td&gt;
@@ -1229,7 +1233,7 @@ subprocess&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;run(&lt;span s
 &lt;p&gt;É importante seguir os dois passos aqui: tanto decifrar quanto verificar a assinatura. Isso irá garantir que não apenas geramos algo que não pode ser lido por alguém que &lt;em&gt;não possui&lt;/em&gt; a chave pública quanto que nosso conteúdo foi assinado pela Stone.&lt;/p&gt;
 &lt;p&gt;Também aconselhamos cuidado na configuração do cliente que irá consultar as nossas chaves. Certifique-se de que ele não está vulnerável a servidores intermediários propositalmente mal configurados. Um exemplo comum é um servidor configurado para protocolos conhecidamente falhos.&lt;/p&gt;
 &lt;p&gt;Sempre que estiver em dúvida, consulte nossa API com os IDs dos dados no conteúdo do webhook.&lt;/p&gt;
-&lt;p&gt;Mais informações sobre JavaScript Object Signing and Encryption, como JWTs, JWEs, JWSs, &lt;a href=&#34;https://www.ca.com/pt/blog-latam/os-beneficios-de-jwtjwsjwe-no-designs-de-apis.html&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Mais informações sobre JavaScript Object Signing and Encryption, como JWTs, JWEs, JWSs, &lt;a href=&#34;https://auth0.com/resources/ebooks/jwt-handbook&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
 &lt;br&gt;
 &lt;h3 id=&#34;webhooks-idempotentes&#34;&gt;&lt;strong&gt;Webhooks idempotentes&lt;/strong&gt;&lt;/h3&gt;
 &lt;br&gt;

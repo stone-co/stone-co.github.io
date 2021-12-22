@@ -371,6 +371,36 @@
     </item>
     
     <item>
+      <title>Docs: Exibir Limites De Valores Para Emissão De Pagamento</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pagamentos/exibir-limites-de-valores-para-emissao-de-pagamento/</link>
+      <pubDate>Thu, 09 Dec 2021 18:21:13 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pagamentos/exibir-limites-de-valores-para-emissao-de-pagamento/</guid>
+      <description>
+        
+        
+        &lt;pre&gt;&lt;code&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/barcode_payment_invoices/limits/:account_id
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h4 id=&#34;query-params&#34;&gt;&lt;strong&gt;QUERY PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Identificador da conta.&lt;/p&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;200&lt;/span&gt; OK
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;477f8576-ca82-462b-be73-dc28cc6490c3&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;maximum_amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;2000000&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;minimum_amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;2000&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Listar Pagamentos</title>
       <link>https://stone-co.github.io/docs/referencia-da-api/pagamentos/listar-pagamentos/</link>
       <pubDate>Mon, 01 Apr 2019 19:38:57 +0000</pubDate>

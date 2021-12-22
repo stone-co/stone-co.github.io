@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.17539178b2e809724acdef3b2420c873.json"
+  data-offline-search-index-json-src="/offline-search-index.83d315798b7bf018d0d5b535e0fc1add.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.17539178b2e809724acdef3b2420c873.json"
+  data-offline-search-index-json-src="/offline-search-index.83d315798b7bf018d0d5b535e0fc1add.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -1436,6 +1436,31 @@
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipagamentoscriar-um-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pagamentos/exibir-limites-de-valores-para-emissao-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Exibir Limites De Valores Para Emissão De Pagamento</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipagamentosexibir-limites-de-valores-para-emissao-de-pagamento">
       
       
       
@@ -3408,8 +3433,12 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 <td style="text-align:left">Representa que o pagamento do boleto foi acolhido em alguma instituição.</td>
 </tr>
 <tr>
+<td style="text-align:left"><a href="inbound_barcode_payment_validated.json">inbound_barcode_payment_validated</a></td>
+<td style="text-align:left">Representa que o pagamento do boleto emitido foi aceito na instituição.</td>
+</tr>
+<tr>
 <td style="text-align:left"><a href="barcode_payment_invoice_settled.json">barcode_payment_invoice_settled</a></td>
-<td style="text-align:left">Representa que o pagamento do boleto foi confirmado.</td>
+<td style="text-align:left">Representa que o pagamento do boleto foi confirmado e liquidado.</td>
 </tr>
 <tr>
 <td style="text-align:left"><a href="barcode_payment_invoice_expired.json">barcode_payment_invoice_expired</a></td>
@@ -3808,7 +3837,7 @@ x-stone-webhook-event-type: &quot;cash_out_internal_transfer&quot;
 </tr>
 <tr>
 <td>event_type</td>
-<td>Especifica qual tipo de evento disparou a notificação. Veja os valores possíveis <a href="#os-eventos-que-geram-notifica%C3%A7%C3%B5es-s%C3%A3o">aqui</a>.</td>
+<td>Especifica qual tipo de evento disparou a notificação. Veja os valores possíveis <a href="#eventos-que-geram-notifica%C3%A7%C3%B5es">aqui</a>.</td>
 </tr>
 <tr>
 <td>id</td>
@@ -3970,7 +3999,7 @@ subprocess<span style="color:#ff79c6">.</span>run(<span style="color:#f1fa8c">&#
 <p>É importante seguir os dois passos aqui: tanto decifrar quanto verificar a assinatura. Isso irá garantir que não apenas geramos algo que não pode ser lido por alguém que <em>não possui</em> a chave pública quanto que nosso conteúdo foi assinado pela Stone.</p>
 <p>Também aconselhamos cuidado na configuração do cliente que irá consultar as nossas chaves. Certifique-se de que ele não está vulnerável a servidores intermediários propositalmente mal configurados. Um exemplo comum é um servidor configurado para protocolos conhecidamente falhos.</p>
 <p>Sempre que estiver em dúvida, consulte nossa API com os IDs dos dados no conteúdo do webhook.</p>
-<p>Mais informações sobre JavaScript Object Signing and Encryption, como JWTs, JWEs, JWSs, <a href="https://www.ca.com/pt/blog-latam/os-beneficios-de-jwtjwsjwe-no-designs-de-apis.html">aqui</a>.</p>
+<p>Mais informações sobre JavaScript Object Signing and Encryption, como JWTs, JWEs, JWSs, <a href="https://auth0.com/resources/ebooks/jwt-handbook">aqui</a>.</p>
 <br>
 <h3 id="webhooks-idempotentes"><strong>Webhooks idempotentes</strong></h3>
 <br>
@@ -4042,6 +4071,8 @@ subprocess<span style="color:#ff79c6">.</span>run(<span style="color:#f1fa8c">&#
     
     
     <hr class="panel-line">
+        
+            
         
             
         
