@@ -15,7 +15,7 @@
     
     
     <item>
-      <title>Docs: STONE OPEN BANKING</title>
+      <title>Docs: STONE BANKING API</title>
       <link>https://stone-co.github.io/docs/guias/stone-open-banking/</link>
       <pubDate>Thu, 05 Aug 2021 15:40:00 -0300</pubDate>
       
@@ -27,11 +27,11 @@
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 &lt;hr&gt;
 &lt;br&gt;
-&lt;p&gt;&lt;strong&gt;Seja bem-vindo à documentação de Open Banking da Stone!&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;Seja bem-vindo à documentação da API de Banking da Stone!&lt;/strong&gt;
 &lt;br&gt;&lt;/p&gt;
 &lt;p&gt;Segundo o Banco Central, o Open Banking / Open Finance, ou sistema financeiro aberto, é a possibilidade de clientes de produtos e serviços financeiros permitirem o compartilhamento de suas informações entre diferentes instituições autorizadas pelo Banco Central e a movimentação de suas contas bancárias a partir de diferentes plataformas e não apenas pelo aplicativo ou site do banco, de forma segura, ágil e conveniente.&lt;/p&gt;
-&lt;p&gt;Como na Stone somos fiéis defensores da competição e temos o cliente como nossa razão de existir, acreditamos na revolução proporcionada por esse sistema e construímos a primeira API de Open Banking plugada diretamente no coração do STR. Acreditamos que nosso produto poderá gerar novos modelos de negócios, dar maior controle e transparência, além de permitir automatizações e ganho de eficiência para as empresas.&lt;/p&gt;
-&lt;p&gt;A partir da integração e do uso da API Stone Open Banking, você poderá movimentar a sua própria conta Stone por meio de uma API RESTful com todas as funcionalidades de cash-in e cash-out. Caso você tenha uma plataforma, também poderá solicitar acesso a contas terceiras para disponibilizar funcionalidades financeiras e agregar ainda mais valor ao seu produto. É claro que para acessar e iniciar transações em contas terceiras, será preciso obter o Consentimento do usuário dono da conta, um conceito essencial para o bom funcionamento do Open Banking.&lt;/p&gt;
+&lt;p&gt;Como na Stone somos fiéis defensores da competição e temos o cliente como nossa razão de existir, acreditamos na revolução proporcionada por esse sistema e construímos a primeira API de Banking plugada diretamente no coração do STR. Acreditamos que nosso produto poderá gerar novos modelos de negócios, dar maior controle e transparência, além de permitir automatizações e ganho de eficiência para as empresas.&lt;/p&gt;
+&lt;p&gt;A partir da integração e do uso da Stone Banking API, você poderá movimentar a sua própria conta Stone por meio de uma API RESTful com todas as funcionalidades de cash-in e cash-out. Caso você tenha uma plataforma, também poderá solicitar acesso a contas terceiras para disponibilizar funcionalidades financeiras e agregar ainda mais valor ao seu produto. É claro que para acessar e iniciar transações em contas terceiras, será preciso obter o Consentimento do usuário dono da conta.&lt;/p&gt;
 &lt;p&gt;Nesta documentação, você pode explorar todos os produtos e funcionalidades que a nossa API oferece! Além disso, como todas as chamadas em nossa API deverão ser autenticadas para identificação do sujeito de cada ação, vamos detalhar como funciona o acesso via token.
 &lt;br&gt;&lt;/p&gt;
 &lt;p&gt;Para iniciar, confira um passo a passo da nossa integração abaixo aqui no &lt;a href=&#34;https://stone-co.github.io/docs/guias/stone-open-banking/#quickstart&#34;&gt;Quickstart&lt;/a&gt;!&lt;/p&gt;
@@ -101,7 +101,7 @@ Quando recebermos essa chave, faremos o &lt;a href=&#34;https://stone-co.github.
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 &lt;hr&gt;
 &lt;br&gt;
-Para realizar chamadas na API Stone Open Banking, será necessário ter em mãos um Token de Acesso ou Access Token. 
+Para realizar chamadas na Stone Banking API, será necessário ter em mãos um Token de Acesso ou Access Token. 
 &lt;br&gt;O Token de Acesso gerado será no formato JWT e funcionará como uma chave de acesso para todas as requisições na API. 
 &lt;br&gt;
 &lt;br&gt;
@@ -595,7 +595,7 @@ Veja abaixo um exemplo de permissão concedida:
         
         &lt;br&gt;
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-&lt;p&gt;No Open Banking, uma plataforma poderá criar uma transação na conta do usuário, mas esta só será efetuada se houver a aprovação do usuário dono da conta. Esse procedimento assegura ao dono da conta que não haverá movimentação de seu dinheiro sem sua permissão, além de proteger a aplicação de eventuais erros, ataques ou bugs que iniciem transações não desejadas pelo usuário.&lt;/p&gt;
+&lt;p&gt;Na Stone Banking API, uma plataforma poderá criar uma transação na conta do usuário, mas esta só será efetuada se houver a aprovação do usuário dono da conta. Esse procedimento assegura ao dono da conta que não haverá movimentação de seu dinheiro sem sua permissão, além de proteger a aplicação de eventuais erros, ataques ou bugs que iniciem transações não desejadas pelo usuário.&lt;/p&gt;
 &lt;p&gt;A aprovação de uma transação tem como objetivo garantir que toda movimentação financeira de saída de uma conta seja feita somente por um usuário devidamente autorizado. É um procedimento em que o usuário que já concedeu o consentimento é notificado da criação de uma transação e direcionado para uma página onde é possível visualizar todas as transações criadas pelo parceiro. Nessa página é possível aprovar ou rejeitar uma transação, possibilitando ou impedindo sua realização. É importante lembrar que apenas aplicativos que tenham obtido &lt;a href=&#34;https://stone-co.github.io/docs/guias/consentimento/&#34;&gt;consentimento&lt;/a&gt; podem criar transações.&lt;/p&gt;
 &lt;br&gt;
 &lt;h2 id=&#34;aprovando-uma-transação&#34;&gt;Aprovando uma transação&lt;/h2&gt;
@@ -625,7 +625,7 @@ Baixe agora o aplicativo na plataforma &lt;a href=&#34;https://apps.apple.com/br
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 &lt;hr&gt;
 &lt;br&gt;
-&lt;p&gt;A ocorrência de certos eventos pode ser importante em diversos fluxos na integração de uma aplicação com a API Stone Open Banking. Por isso, utilizamos webhooks para notificar as aplicações integradas da ocorrência desses eventos.&lt;/p&gt;
+&lt;p&gt;A ocorrência de certos eventos pode ser importante em diversos fluxos na integração de uma aplicação com a Stone Banking API. Por isso, utilizamos webhooks para notificar as aplicações integradas da ocorrência desses eventos.&lt;/p&gt;
 &lt;p&gt;Para sua utilização, é preciso que a aplicação tenha cadastrado no &lt;a href=&#34;https://stone-co.github.io/docs/guias/stone-open-banking/#testes-em-sandbox&#34;&gt;formulário&lt;/a&gt; a URI para a qual enviaremos um POST com os dados do evento. A aplicação deverá estar preparada para lidar com cada evento de forma adequada.&lt;/p&gt;
 &lt;p&gt;Ao enviar um webhook, esperamos receber uma resposta do range 200 que indica o sucesso no recebimento dessa notificação por parte da sua aplicação. Caso a resposta seja um código diferente do range 200, encaramos como falha no recebimento do webhook e repetimos o envio até receber um sucesso ou batermos o número máximo de 50 tentativas no envio de um evento.
 Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um padrão de horários de tentativas.&lt;/p&gt;

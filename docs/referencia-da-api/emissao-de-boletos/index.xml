@@ -569,7 +569,7 @@ Importante ressaltar que pode haver restrição de habilitação de um determina
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Baixa solicitada&lt;/td&gt;
-&lt;td&gt;Quando o amissor solicita a baixa de um boleto que ainda não foi pago e não chegou a data limite.&lt;/td&gt;
+&lt;td&gt;Quando o emissor solicita a baixa de um boleto que ainda não foi pago e não chegou a data limite.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Data de vencimento&lt;/td&gt;
@@ -603,9 +603,9 @@ Importante ressaltar que pode haver restrição de habilitação de um determina
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Data limite&lt;br&gt;&lt;em&gt;(limit_date)&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;Sempre deve ser igual a data de vencimento, podendo ser até 365 dias após a data de emissão. &lt;br&gt;Caso seja um dia não útil o pagamento poderá ser feito até o próximo dia útil.&lt;br&gt;Caso seja informada alguma data diferente da vencimento retornará erro. Caso não seja informada será configurada automaticamente a data de vencimento. Os boletos que forem pagos após a data limite serão devolvidos.&lt;/td&gt;
-&lt;td&gt;Deve ser igual a data de vencimento.&lt;br&gt;&lt;br&gt;Caso não seja informada será configurada automaticamente a data de vencimento. Os boletos que forem pagos após a data limite serão devolvidos.&lt;/td&gt;
-&lt;td&gt;Deve ser igual ou maior a data de vencimento.&lt;br&gt;&lt;br&gt;Caso não seja informada será configurada automaticamente a data de vencimento.&lt;/td&gt;
+&lt;td&gt;Sempre deve ser igual a data de vencimento, podendo ser até 365 dias após a data de emissão. &lt;br&gt;Caso seja um dia não útil, o pagamento poderá ser feito até o próximo dia útil.&lt;br&gt;Ao informar alguma data diferente da data de vencimento, retornará um erro. E se não for informada, será configurada automaticamente a data de vencimento. Os boletos que forem pagos após a data limite serão devolvidos.&lt;/td&gt;
+&lt;td&gt;Deve ser igual a data de vencimento, podendo ser até 365 dias após a data de emissão.&lt;br&gt;&lt;br&gt;Caso seja um dia não útil, o pagamento poderá ser feito até o próximo dia útil. Se não for informada, será configurada automaticamente a data de vencimento. Os boletos que forem pagos após a data limite serão devolvidos.&lt;/td&gt;
+&lt;td&gt;Deve ser igual ou maior a data de vencimento, podendo ser até 365 dias após a data de emissão.&lt;br&gt;&lt;br&gt;Caso seja um dia não útil, o pagamento poderá ser feito até o próximo dia útil. Se não for informada, será configurada automaticamente a data de vencimento. Os boletos que forem pagos após a data limite serão devolvidos.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Pagamento&lt;/td&gt;
@@ -629,7 +629,7 @@ Importante ressaltar que pode haver restrição de habilitação de um determina
 &lt;td&gt;Juros&lt;br&gt; &lt;em&gt;(interest)&lt;/em&gt;&lt;/td&gt;
 &lt;td&gt;Não suporta&lt;/td&gt;
 &lt;td&gt;Não suporta&lt;/td&gt;
-&lt;td&gt;Juros deve ser maior que 0% e até 1% ao mês.&lt;br&gt;O valor é aplicado por dia levando em conta o valor proporcional dado o juros mensal. Ex: 1% ao mês, seria 0,033% ao dia.&lt;br&gt;O juros passam a contar a partir da data informada. Essa data tem que ser maior que o vencimento e menor que data limite. Caso nenhuma data seja informada serão aplicados a patir do dia seguinte ao vencimento.&lt;br&gt;Nos casos em que a data de vencimento cai em um dia não últil ela é automaticamente estendida para o próximo dia útil e os juros só passam a ser aplicados depois dessa data.&lt;br&gt;Campo não obrigatório, só preencher se for aplicar juros.&lt;/td&gt;
+&lt;td&gt;O juro deve ser maior que 0% e até 1% ao mês.&lt;br&gt;O valor é aplicado por dia, levando em conta o valor proporcional, dado o juro mensal. Ex: 1% ao mês, seria 0,033% ao dia.&lt;br&gt;Os juros passam a contar a partir da data informada. Essa data tem que ser maior que o vencimento e menor que a data limite. Caso nenhuma data seja informada serão aplicados a partir do dia útil seguinte ao vencimento.&lt;br&gt;Nos casos em que a data de vencimento cai em um dia não útil, ela é automaticamente estendida para o próximo dia útil e os juros só passam a ser aplicados depois dessa data.&lt;br&gt;Campo não obrigatório, só preencher se for aplicar juros.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Multa&lt;br&gt; &lt;em&gt;(fine)&lt;/em&gt;&lt;/td&gt;
@@ -749,7 +749,7 @@ Importante ressaltar que pode haver restrição de habilitação de um determina
 &lt;br&gt;     Data até a qual o desconto deve ser aplicado. Formato ISO8601 &lt;code&gt;&amp;quot;YYYY-MM-DD&amp;quot;&lt;/code&gt;. É aceito nos tipos de proposta e cobrança.
 &lt;br&gt;
 &lt;br&gt;     &lt;strong&gt;value&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
-&lt;br&gt;     Valor percentual (%) do desconto que será aplicado ao boleto. O valor do deve ser maior que 0.0 e até 90.0. Formato decimal. Ex: &amp;ldquo;20.0&amp;rdquo;. É aceito nos tipos de proposta e cobrança.&lt;/p&gt;
+&lt;br&gt;     Valor percentual (%) do desconto que será aplicado ao boleto. O valor deve ser maior que 0.0 e até 90.0. Formato decimal. Ex: &amp;ldquo;20.0&amp;rdquo;. É aceito nos tipos de proposta e cobrança.&lt;/p&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;&lt;strong&gt;fine&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
@@ -777,6 +777,34 @@ Importante ressaltar que pode haver restrição de habilitação de um determina
 &lt;br&gt;
 &lt;br&gt;     &lt;strong&gt;document&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
 &lt;br&gt;     Número do documento do sacador avalista.&lt;/p&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;address&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;     &lt;strong&gt;city&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
+&lt;br&gt;     Cidade do beneficiário do boleto.
+&lt;br&gt;
+&lt;br&gt;     &lt;strong&gt;country&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
+&lt;br&gt;     País do beneficiário do boleto.
+&lt;br&gt;
+&lt;br&gt;     &lt;strong&gt;extra&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;     Complemento do endereço do beneficiário do boleto.
+&lt;br&gt;
+&lt;br&gt;     &lt;strong&gt;neighborhood&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
+&lt;br&gt;     Bairro do beneficiário do boleto.
+&lt;br&gt;
+&lt;br&gt;     &lt;strong&gt;postal_code&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
+&lt;br&gt;     CEP do beneficiário do boleto.
+&lt;br&gt;
+&lt;br&gt;     &lt;strong&gt;state&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
+&lt;br&gt;     UF do beneficiário do boleto.
+&lt;br&gt;
+&lt;br&gt;     &lt;strong&gt;street&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
+&lt;br&gt;     Logradouro do beneficiário do boleto.
+&lt;br&gt;
+&lt;br&gt;     &lt;strong&gt;street_number&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;     Número do logradouro do beneficiário do boleto.
+&lt;br&gt;&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;h4 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
@@ -804,6 +832,16 @@ content-type: application/json
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;barcode&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;19797845600000021000000063139072468215929006&amp;#34;&lt;/span&gt;,
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;beneficiary&amp;#34;&lt;/span&gt;: {
       &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;1085737&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;address&amp;#34;&lt;/span&gt;: {
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;city&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Rio de Janeiro&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;country&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Brazil&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;extra&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;neighborhood&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Centro&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;postal_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;20021-290&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;state&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;RJ&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;street&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Rua do Passeio&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;street_number&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;
+      },
       &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;,
       &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;39809096038&amp;#34;&lt;/span&gt;,
       &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;,

@@ -25,16 +25,16 @@
         
         &lt;br&gt;
 &lt;br&gt;
-&lt;p&gt;&lt;strong&gt;Sejam bem-vindos à seção de Referências da Stone OpenBank API.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sejam bem-vindos à seção de Referências da API de Banking da Stone.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Através da nossa API é possível ter funcionalidades de internet banking e de apps de banco no seu negócio!&lt;/p&gt;
 &lt;br&gt;
-&lt;h2 id=&#34;o-que-é-a-stone-openbank-api&#34;&gt;O que é a Stone OpenBank API&lt;/h2&gt;
+&lt;h2 id=&#34;o-que-é-a-stone-banking-api&#34;&gt;O que é a Stone Banking API&lt;/h2&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;Aqui na Stone a gente acredita não apenas que o &lt;strong&gt;cliente&lt;/strong&gt; tem razão, mas que ele &lt;strong&gt;é a nossa razão&lt;/strong&gt;. Somos fiéis defensores da competição e acreditamos que isso melhora o mercado como um todo, o que, por sua vez, melhora a vida da nossa razão.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Foi com base nesse sentimento pró-competição que montamos a Stone OpenBank API: a primeira API de Open Banking plugada diretamente no STR.&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;Foi com base nesse sentimento pró-competição que montamos a Stone Banking API: a primeira API de Banking plugada diretamente no STR.&lt;/strong&gt;
 A &lt;a href=&#34;https://stone-co.github.io/docs/guias/conta-de-pagamento/&#34;&gt;Conta Stone&lt;/a&gt; é a nossa oferta para clientes PJ e PF, tanto para aqueles que já pertencem a base da Stone Adquirente, como para aqueles que utilizam outras adquirentes e buscam uma nova forma de se relacionar com sua conta.&lt;/p&gt;
-&lt;p&gt;O Aplicativo da Conta Stone é mais um parceiro da Stone OpenBank API, usando exatamente os mesmos acessos e APIs descritos nesse documento. &amp;quot;Eat your own dogfood&amp;quot; aplicado na prática.&lt;/p&gt;
+&lt;p&gt;O Aplicativo da Conta Stone é mais um parceiro da Stone Banking API, usando exatamente os mesmos acessos e APIs descritos nesse documento. &amp;quot;Eat your own dogfood&amp;quot; aplicado na prática.&lt;/p&gt;
 &lt;p&gt;Assim como nós pudemos criar o nosso aplicativo de conta em cima dessa API, você pode fazer o mesmo ou integrar as funcionalidades de automação bancária no seu negócio.&lt;/p&gt;
 &lt;br&gt;
 &lt;h2 id=&#34;o-que-oferecemos&#34;&gt;O que oferecemos?&lt;/h2&gt;
@@ -236,6 +236,19 @@ A &lt;a href=&#34;https://stone-co.github.io/docs/guias/conta-de-pagamento/&#34;
       <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
       
       <guid>https://stone-co.github.io/docs/referencia-da-api/link-de-pagamentos/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: OPERAÇÕES</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/operacoes/</link>
+      <pubDate>Thu, 13 Jan 2022 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/operacoes/</guid>
       <description>
         
         
