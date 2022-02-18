@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Stone OpenBank – PIX (Beta)</title>
+    <title>Stone OpenBank – PIX</title>
     <link>https://stone-co.github.io/docs/referencia-da-api/pix/</link>
-    <description>Recent content in PIX (Beta) on Stone OpenBank</description>
+    <description>Recent content in PIX on Stone OpenBank</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 31 Mar 2021 18:00:00 -0300</lastBuildDate>
     
@@ -38,7 +38,7 @@
 &lt;ol&gt;
 &lt;li&gt;Realiza request através do &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/pix/pagamento/buscar-dados-qrcode/&#34;&gt;endpoint&lt;/a&gt; /api/v1/outbound_pix_payments/brcode informando o QRCode através do campo &lt;code&gt;brcode&lt;/code&gt;. Este irá retornar uma reposta com os dados do QRCode.&lt;/li&gt;
 &lt;li&gt;Realiza request através do &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/pix/pagamento/criar-pagamento-pendente/&#34;&gt;endpoint&lt;/a&gt; /api/v1/pix/outbound_pix_payments enviando parâmetros validos. Este irá retornar uma resposta com os dados do Pix.&lt;/li&gt;
-&lt;li&gt;Realiza request através do &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/pix/pagamento/confirmar-pagamento-pendente/&#34;&gt;endpoint&lt;/a&gt; /api/v1/pix/outbound_pix_payments/{id}/actions/confirm informando o campo &lt;code&gt;id&lt;/code&gt; retornado pela resposta desse passo 2.&lt;br&gt;&amp;lt;br&lt;/li&gt;
+&lt;li&gt;Realiza request através do &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/pix/pagamento/confirmar-pagamento-pendente/&#34;&gt;endpoint&lt;/a&gt; /api/v1/pix/outbound_pix_payments/{id}/actions/confirm informando o campo &lt;code&gt;id&lt;/code&gt; retornado pela resposta desse passo 2.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
       </description>
@@ -54,6 +54,198 @@
         
         
         
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Relato de Infração</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pix/relato-infracao/</link>
+      <pubDate>Fri, 11 Feb 2022 14:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/relato-infracao/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;o-que-é-um-relato-de-infração&#34;&gt;O que é um Relato de Infração&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;Um Relato de Infração serve para reportar uma transação sob suspeita de fraude. Pode ser feita tanto pelo participante debitado quanto pelo creditado na transação.
+&lt;br&gt;&lt;br&gt;
+Os relatos tem três motivos (type) que é de preenchimento obrigatório. São eles, fraude (fraud), associada a uma solicitação de devolução (refund_request) e para fluxo de cancelamento de devolução (refund_cancelled). Depois de criado, o relato deve ser reconhecido pela outra parte da transação e, após análise, deve fechar a análise como aceito (accepted) ou rejeitado (rejected).
+&lt;br&gt;&lt;br&gt;
+O criador do relato pode cancelá-lo a qualquer momento, mesmo depois de fechado.
+&lt;br&gt;&lt;br&gt;
+Relatos de infração são criados a partir do identificador da transação realizada no SPI (end_to_end_id ou refund_id). O prazo máximo para relatar infração em uma transação é de 80 dias após a data da transação questionada. A resolução do relato com desfecho de ac (AGREED) ou discordando (DISAGREED) da infração deve ser no prazo máximo de 7 dias corridos da data de sua abertura.
+&lt;br&gt;&lt;br&gt;
+Cada participante deve realizar polling periódico na lista de relatos para verificar se existem novos relatos em que é parte. O recebimento do relato não implica em concordância.
+&lt;br&gt;&lt;br&gt;
+Os níveis de serviço exigidos para as operações com relatos de infração estão definidos no Manual de Tempos do Pix. Os relatos por motivo de fraude são contabilizados e retornados ao consultar vínculo.
+&lt;br&gt;&lt;br&gt;
+Se for cancelado, o relato deixa de ser contabilizado em REPORTED_FRAUDS durante a consulta de vínculos.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Atenção!&lt;/strong&gt;&lt;br&gt;As interações descritas aqui irão servir apenas para participantes indiretos. &lt;br&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;br&gt;&lt;/p&gt;
+&lt;h2 id=&#34;campos-do-relato-de-infração&#34;&gt;Campos do Relato de Infração&lt;/h2&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Campo&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Regra de negócio&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;id&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;Identificador do registro no domínio Stone.&lt;/td&gt;
+&lt;td&gt;Obrigatório.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;end_to_end_id&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;Identificador ponta a ponta do pagamento que está sendo relatado uma infração.&lt;/td&gt;
+&lt;td&gt;Ou end_to_end_id ou refund_id deve estar preenchido.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;refund_id&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;Identificador ponta a ponta da devolução que está sendo relatado uma infração.&lt;/td&gt;
+&lt;td&gt;Ou end_to_end_id ou refund_id deve estar preenchido.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;infraction_id&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;Identificador do relato de infração.&lt;/td&gt;
+&lt;td&gt;Obrigatório.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;account_id&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;Identificador da Conta Stone associada ao pagamento/devolução.&lt;/td&gt;
+&lt;td&gt;Obrigatório.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;request_id&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;Identificador da requisição de criação de relato de infração.&lt;/td&gt;
+&lt;td&gt;Obrigatório.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;direction&lt;/td&gt;
+&lt;td&gt;Enum&lt;/td&gt;
+&lt;td&gt;Indica se o relato foi enviado ou recebido.&lt;/td&gt;
+&lt;td&gt;Obrigatório. Possíveis valores são: &lt;code&gt;inbound&lt;/code&gt;, &lt;code&gt;outbound&lt;/code&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;type&lt;/td&gt;
+&lt;td&gt;Enum&lt;/td&gt;
+&lt;td&gt;Indica o tipo de relato de infração.&lt;/td&gt;
+&lt;td&gt;Obrigatório. Possíveis valores são: &lt;code&gt;fraud&lt;/code&gt;, &lt;code&gt;request_refund&lt;/code&gt;, &lt;code&gt;refund_cancelled&lt;/code&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;report_details&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;Detalhes do relato de infração.&lt;/td&gt;
+&lt;td&gt;Opcional. Pode ter até 2000 caracteres&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;reported_by&lt;/td&gt;
+&lt;td&gt;Enum&lt;/td&gt;
+&lt;td&gt;Indica por quem for reportado.&lt;/td&gt;
+&lt;td&gt;Obrigatório. Possíveis valores são: &lt;code&gt;debited_participant&lt;/code&gt;, &lt;code&gt;credited_participant&lt;/code&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;status&lt;/td&gt;
+&lt;td&gt;Enum&lt;/td&gt;
+&lt;td&gt;Situação do relato de infração.&lt;/td&gt;
+&lt;td&gt;Obrigatório. Possíveis valores são: &lt;code&gt;pending&lt;/code&gt;, &lt;code&gt;accepted&lt;/code&gt;, &lt;code&gt;rejected&lt;/code&gt;, &lt;code&gt;cancelled&lt;/code&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;debited_participant&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;ISPB do participante debitado no pagamento/transação.&lt;/td&gt;
+&lt;td&gt;Obrigatório.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;credited_participant&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;ISPB do participante creditado no pagamento/transação.&lt;/td&gt;
+&lt;td&gt;Obrigatório.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;created_at&lt;/td&gt;
+&lt;td&gt;Datetime&lt;/td&gt;
+&lt;td&gt;Data de quando o relato foi criado&lt;/td&gt;
+&lt;td&gt;Obrigatório.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;expires_at&lt;/td&gt;
+&lt;td&gt;Datetime&lt;/td&gt;
+&lt;td&gt;Data limite que o relato de infração pode ser fechado.&lt;/td&gt;
+&lt;td&gt;Obrigatório.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;analysis_result&lt;/td&gt;
+&lt;td&gt;Enum&lt;/td&gt;
+&lt;td&gt;Resultado da análise do relato de infração.&lt;/td&gt;
+&lt;td&gt;Opcional. Possíveis valores são: &lt;code&gt;accepted&lt;/code&gt;, &lt;code&gt;rejected&lt;/code&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;analysis_details&lt;/td&gt;
+&lt;td&gt;String&lt;/td&gt;
+&lt;td&gt;Detalhes da análise do relato de infração.&lt;/td&gt;
+&lt;td&gt;Opcional.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;accepted_at&lt;/td&gt;
+&lt;td&gt;Datetime&lt;/td&gt;
+&lt;td&gt;Data de quando o relato de infração foi aceito.&lt;/td&gt;
+&lt;td&gt;Opcional.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;rejected_at&lt;/td&gt;
+&lt;td&gt;Datetime&lt;/td&gt;
+&lt;td&gt;Data de quando o relato de infração foi rejeitado.&lt;/td&gt;
+&lt;td&gt;Opcional.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cancelled_at&lt;/td&gt;
+&lt;td&gt;Datetime&lt;/td&gt;
+&lt;td&gt;Data de quando o relato de infração foi cancelado.&lt;/td&gt;
+&lt;td&gt;Opcional.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;transaction_type&lt;/td&gt;
+&lt;td&gt;Enum&lt;/td&gt;
+&lt;td&gt;Se o pagamento/devolução associado ao relato de infração foi interna ou externa (SPI)&lt;/td&gt;
+&lt;td&gt;Opcional. Possíveis valores são: &lt;code&gt;spi&lt;/code&gt;, &lt;code&gt;internal&lt;/code&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;transaction_result&lt;/td&gt;
+&lt;td&gt;Enum&lt;/td&gt;
+&lt;td&gt;Se o pagamento/devolução associado ao relato de infração foi liquidada ou rejeitada por uma das partes&lt;/td&gt;
+&lt;td&gt;Opcional. Possíveis valores são: &lt;code&gt;settled&lt;/code&gt;, &lt;code&gt;rejected_payee&lt;/code&gt;, &lt;code&gt;rejected_payer&lt;/code&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h5 id=&#34;status-dos-relatos-de-infrações&#34;&gt;Status dos Relatos de Infrações&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pending&lt;/code&gt;: aguardando fechamento.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;accepted&lt;/code&gt;: relato de infração aceito.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rejected&lt;/code&gt;: relato de infração rejeitado.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cancelled&lt;/code&gt;: relato de infração cancelado.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;  
+&lt;p&gt;Para detalhes técnicos dos relatos de infrações, clique em um dos links abaixo:&lt;/p&gt;
+
       </description>
     </item>
     

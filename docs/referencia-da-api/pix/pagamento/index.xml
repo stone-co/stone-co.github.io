@@ -108,7 +108,7 @@ Esse endpoint existe para buscar os dados de um pix.
 &lt;/ul&gt;
 &lt;br&gt;
 &lt;pre&gt;&lt;code&gt;400 Bad Request
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Acontece quando o id enviado não se conforma ao padrão UUID.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Acontece quando o id enviado não está em conformidade com o padrão UUID.&lt;/p&gt;
 
       </description>
     </item>
@@ -249,6 +249,8 @@ Para QRCode do tipo dinâmico com multa, juros, desconto é necessário informar
 &lt;li&gt;A ausência do campo &lt;code&gt;key&lt;/code&gt;, que seria o envio de um Pix pela Chave Pix torna o campo &lt;code&gt;target&lt;/code&gt;, que é o campo com os dados bancários do destino, &lt;strong&gt;obrigatório&lt;/strong&gt;.&lt;br&gt;&lt;/li&gt;
 &lt;li&gt;É possivel criar um Pix somente informando o campo &lt;code&gt;account_id&lt;/code&gt; sem precisar informar o campo &lt;code&gt;source&lt;/code&gt;.&lt;br&gt;&lt;/li&gt;
 &lt;li&gt;Após a criação do Pix através desse endpoint é necessário confirmar o mesmo através do &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/pix/confirmar-pagamento-pendente/&#34;&gt;endpoint&lt;/a&gt; &lt;code&gt;/api/v1/pix/outbound_pix_payments/{id}/actions/confirm&lt;/code&gt;. Caso o Pix não seja confirmado, ele permanece no status de &lt;code&gt;CREATED&lt;/code&gt; até ser confirmado.&lt;/li&gt;
+&lt;li&gt;No caso de criação de um Pix utilizando a chave, os dados da &lt;code&gt;account&lt;/code&gt; do &lt;code&gt;target&lt;/code&gt; não serão retornados na resposta. Além disso, o campo do &lt;code&gt;document&lt;/code&gt; do &lt;code&gt;target&lt;/code&gt; será mascarado caso seja do tipo &amp;ldquo;cpf&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Para criar um agendamento de Pix, basta enviar o campo &lt;code&gt;scheduled_to&lt;/code&gt; com uma data superior ao dia atual.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;/div&gt;
@@ -287,6 +289,9 @@ Para QRCode do tipo dinâmico com multa, juros, desconto é necessário informar
 &lt;br&gt;Chave identificadora da contraparte
 &lt;br&gt;Tamanho mínimo: 0
 &lt;br&gt;Tamanho máximo: 77&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;scheduled_to&lt;/strong&gt; &lt;code&gt;date&lt;/code&gt;
+&lt;br&gt;Data do agendamento
+&lt;br&gt;Formato: YYYY-MM-DD&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;source&lt;/strong&gt; &lt;br&gt;Dados do pagador
 &lt;br&gt;    &lt;strong&gt;entity&lt;/strong&gt;
 &lt;br&gt;          &lt;strong&gt;document&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
@@ -357,6 +362,7 @@ Para QRCode do tipo dinâmico com multa, juros, desconto é necessário informar
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;refunded_amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;request_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;1017dbdd97871b98eeaf1c650a20aa15&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;settled_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;scheduled_to&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;source&amp;#34;&lt;/span&gt;: {
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account&amp;#34;&lt;/span&gt;: {
       &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;34&amp;#34;&lt;/span&gt;,
@@ -558,6 +564,7 @@ Esse endpoint existe para detalhar os dados de um Pix enviado.
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;refunded_amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;,
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;request_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;661c820e7d3a6bc9f9a1c8c8be62559f&amp;#34;&lt;/span&gt;,
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;settled_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;scheduled_to&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;source&amp;#34;&lt;/span&gt;: {
         &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account&amp;#34;&lt;/span&gt;: {
             &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;88266374&amp;#34;&lt;/span&gt;,
@@ -601,10 +608,12 @@ Esse endpoint existe para detalhar os dados de um Pix enviado.
 &lt;li&gt;&lt;code&gt;MONEY_RESERVED&lt;/code&gt;: O pagamento foi aprovado, o dinheiro saiu da conta mas ainda não foi concluído.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;REFUNDED&lt;/code&gt;: O pagamento foi rejeitado pelo outro banco.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;SETTLED&lt;/code&gt;: O pagamento foi concluído com sucesso.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;SCHEDULED&lt;/code&gt;: O pagamento foi agendado com sucesso.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CANCELLED&lt;/code&gt;: O pagamento agendado foi cancelado.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;br&gt;
 &lt;pre&gt;&lt;code&gt;400 Bad Request
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Acontece quando o &lt;code&gt;id&lt;/code&gt; enviado não se conforma ao padrão UUID.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Acontece quando o &lt;code&gt;id&lt;/code&gt; enviado não está em conformidade com o padrão UUID.&lt;/p&gt;
 
       </description>
     </item>

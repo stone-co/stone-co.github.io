@@ -257,7 +257,7 @@ A &lt;a href=&#34;https://stone-co.github.io/docs/guias/conta-de-pagamento/&#34;
     </item>
     
     <item>
-      <title>Docs: PIX (Beta)</title>
+      <title>Docs: PIX</title>
       <link>https://stone-co.github.io/docs/referencia-da-api/pix/</link>
       <pubDate>Wed, 31 Mar 2021 18:00:00 -0300</pubDate>
       
@@ -266,15 +266,6 @@ A &lt;a href=&#34;https://stone-co.github.io/docs/guias/conta-de-pagamento/&#34;
         
         
         &lt;hr&gt;
-&lt;br&gt;
-
-
-&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;A integração com o Pix ainda está em Alpha, o que significa que temos um grupo pequeno de parceiros testando a funcionalidade para que possamos fazer ajustes e então liberar para todos os parceiros.&lt;/p&gt;
-
-&lt;/div&gt;
-
-&lt;br&gt;
 &lt;h2 id=&#34;o-que-é-o-pix&#34;&gt;O que é o Pix?&lt;/h2&gt;
 &lt;hr&gt;
 &lt;br&gt;
@@ -305,7 +296,7 @@ A &lt;a href=&#34;https://stone-co.github.io/docs/guias/conta-de-pagamento/&#34;
 &lt;h2 id=&#34;status-de-um-pix&#34;&gt;Status de um Pix&lt;/h2&gt;
 &lt;hr&gt;
 &lt;br&gt;
-&lt;p&gt;Os status possiveis são: &lt;code&gt;CREATED&lt;/code&gt;, &lt;code&gt;CONFIRMED&lt;/code&gt;, &lt;code&gt;FAILED&lt;/code&gt;, &lt;code&gt;MONEY_RESERVED&lt;/code&gt;, &lt;code&gt;REFUNDED&lt;/code&gt; e &lt;code&gt;SETTLED&lt;/code&gt;. A partir do momento que um Pix é criado, ele &lt;strong&gt;nunca expira&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Os status possiveis são: &lt;code&gt;CREATED&lt;/code&gt;, &lt;code&gt;CONFIRMED&lt;/code&gt;, &lt;code&gt;FAILED&lt;/code&gt;, &lt;code&gt;MONEY_RESERVED&lt;/code&gt;, &lt;code&gt;REFUNDED&lt;/code&gt;, &lt;code&gt;SETTLED&lt;/code&gt;, &lt;code&gt;SCHEDULED&lt;/code&gt; e &lt;code&gt;CANCELLED&lt;/code&gt;. A partir do momento que um Pix é criado, ele &lt;strong&gt;nunca expira&lt;/strong&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;CREATED&lt;/code&gt; -  Significa que o Pix foi criado e está aguardando confirmação.&lt;/p&gt;
@@ -318,6 +309,12 @@ A &lt;a href=&#34;https://stone-co.github.io/docs/guias/conta-de-pagamento/&#34;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;SETTLED&lt;/code&gt; - Significa que o Pix que estava com o estado de &lt;code&gt;MONEY_RESERVED&lt;/code&gt;, foi finalizado e liquidamos o dinheiro reservado na conta gráfica da operação.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;SCHEDULED&lt;/code&gt; - Significa que o Pix está agendado.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;CANCELLED&lt;/code&gt; - Significa que um Pix que foi agendado foi cancelado, encerrando a operação.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;REFUNDED&lt;/code&gt; - Significa que o Pix que estava com o estado de &lt;code&gt;MONEY_RESERVED&lt;/code&gt;, foi rejeitado ou devolvido.&lt;/p&gt;
@@ -346,7 +343,7 @@ A &lt;a href=&#34;https://stone-co.github.io/docs/guias/conta-de-pagamento/&#34;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;key_Type&lt;/td&gt;
+&lt;td&gt;key_type&lt;/td&gt;
 &lt;td&gt;String&lt;/td&gt;
 &lt;td&gt;Indica o tipo de chave que será criada.&lt;br&gt;Valores possíveis: &lt;code&gt;CNPJ&lt;/code&gt;, &lt;code&gt;CPF&lt;/code&gt;, &lt;code&gt;phone&lt;/code&gt;, &lt;code&gt;email&lt;/code&gt; e &lt;code&gt;random_key&lt;/code&gt;.&lt;/td&gt;
 &lt;td&gt;Obrigatório&lt;/td&gt;

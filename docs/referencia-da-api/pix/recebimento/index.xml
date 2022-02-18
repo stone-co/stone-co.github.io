@@ -576,6 +576,66 @@ Exemplo:
     </item>
     
     <item>
+      <title>Docs: Cancelar QRCode Dinâmico</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/cancelar-qrcode-dinamico/</link>
+      <pubDate>Fri, 18 Feb 2022 14:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/cancelar-qrcode-dinamico/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Através desse endpoint será possível cancelar as cobranças por Pix.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;DELETE https://sandbox-api.openbank.stone.com.br/api/v1/pix_payment_invoices/{{id}}
+&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;
+&lt;h5 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;authorization&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Bearer token de autenticação.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;x-stone-account-id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Necessário para permissionamento.&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;id&lt;/strong&gt; &lt;code&gt;uuid&lt;/code&gt;
+&lt;br&gt; Identificador do QRCode criado&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;204 OK
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Cancelar QRCode Dinâmico com data de vencimento</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/cancelar-qrcode-dinamico-com-vencimento/</link>
+      <pubDate>Fri, 18 Feb 2022 14:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/cancelar-qrcode-dinamico-com-vencimento/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Através desse endpoint será possível cancelar as cobranças por Pix com data de vencimento.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;DELETE https://sandbox-api.openbank.stone.com.br/api/v1/pix_payment_invoices_with_due_date/{{id}}
+&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;
+&lt;h5 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;authorization&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Bearer token de autenticação.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;x-stone-account-id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Necessário para permissionamento.&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;id&lt;/strong&gt; &lt;code&gt;uuid&lt;/code&gt;
+&lt;br&gt; Identificador do QRCode com data de vencimento&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;204 OK
+&lt;/code&gt;&lt;/pre&gt;
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Listar QRCode Dinâmico com Validade</title>
       <link>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/listar-cobranca-com-validade/</link>
       <pubDate>Wed, 16 Jun 2021 15:17:00 -0300</pubDate>

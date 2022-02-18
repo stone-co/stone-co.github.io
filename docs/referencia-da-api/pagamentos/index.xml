@@ -333,6 +333,16 @@
 &lt;p&gt;O valor a ser pago, caso o boleto possa ser pago com um valor divergente ao valor total.
 &lt;br&gt;Para consultar o valor a ser pago, sugerimos que realize uma simulação de pagamento &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/simular-o-pagamento-de-um-documento/&#34;&gt;aqui&lt;/a&gt; e verifique o valor mínimo e máximo aceito para o pagamento em questão.
 &lt;br&gt;Caso não tenha alteração do valor total do pagamento, basta não enviar o campo &lt;code&gt;amount&lt;/code&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;effective_payer&lt;/strong&gt;
+&lt;br&gt;Dados do pagador do boleto&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;    &lt;strong&gt;legal_name&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;    Nome do pagador
+&lt;br&gt;    Tamanho máximo: 80&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;    &lt;strong&gt;document&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;    Número do documento&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;    &lt;strong&gt;document_type&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;    CPF ou CNPJ&lt;/p&gt;
 &lt;h4 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 &lt;br&gt;

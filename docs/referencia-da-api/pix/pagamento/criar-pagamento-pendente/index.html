@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.85831473b70896367fd81b17c8e0ba8c.json"
+  data-offline-search-index-json-src="/offline-search-index.385b341bdcb7e11387ee5a99600b98ec.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.85831473b70896367fd81b17c8e0ba8c.json"
+  data-offline-search-index-json-src="/offline-search-index.385b341bdcb7e11387ee5a99600b98ec.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -2697,7 +2697,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/pix/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">PIX (Beta)</a>
+    <a  href="/docs/referencia-da-api/pix/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">PIX</a>
   </li>
   <ul>
     <li class="collapse show" id="docsreferencia-da-apipix">
@@ -3033,6 +3033,56 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/recebimento/cancelar-qrcode-dinamico/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cancelar QRCode Dinâmico</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixrecebimentocancelar-qrcode-dinamico">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/recebimento/cancelar-qrcode-dinamico-com-vencimento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cancelar QRCode Dinâmico com data de vencimento</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixrecebimentocancelar-qrcode-dinamico-com-vencimento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/docs/referencia-da-api/pix/recebimento/listar-cobranca-com-validade/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar QRCode Dinâmico com Validade</a>
   </li>
   <ul>
@@ -3062,6 +3112,56 @@
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipixrecebimentolistar-recebimentos">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/relato-infracao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Relato de Infração</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixrelato-infracao">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/relato-infracao/listar-relatos-infracoes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Relatos de Infrações recebidos</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixrelato-infracaolistar-relatos-infracoes">
       
       
       
@@ -3461,7 +3561,7 @@
 
 
 <li class="breadcrumb-item" >
-	<a href="https://stone-co.github.io/docs/referencia-da-api/pix/">PIX (Beta)</a>
+	<a href="https://stone-co.github.io/docs/referencia-da-api/pix/">PIX</a>
 </li>
 
 
@@ -3504,6 +3604,8 @@
 <li>A ausência do campo <code>key</code>, que seria o envio de um Pix pela Chave Pix torna o campo <code>target</code>, que é o campo com os dados bancários do destino, <strong>obrigatório</strong>.<br></li>
 <li>É possivel criar um Pix somente informando o campo <code>account_id</code> sem precisar informar o campo <code>source</code>.<br></li>
 <li>Após a criação do Pix através desse endpoint é necessário confirmar o mesmo através do <a href="/docs/referencia-da-api/pix/confirmar-pagamento-pendente/">endpoint</a> <code>/api/v1/pix/outbound_pix_payments/{id}/actions/confirm</code>. Caso o Pix não seja confirmado, ele permanece no status de <code>CREATED</code> até ser confirmado.</li>
+<li>No caso de criação de um Pix utilizando a chave, os dados da <code>account</code> do <code>target</code> não serão retornados na resposta. Além disso, o campo do <code>document</code> do <code>target</code> será mascarado caso seja do tipo &ldquo;cpf&rdquo;.</li>
+<li>Para criar um agendamento de Pix, basta enviar o campo <code>scheduled_to</code> com uma data superior ao dia atual.</li>
 </ul>
 
 </div>
@@ -3542,6 +3644,9 @@
 <br>Chave identificadora da contraparte
 <br>Tamanho mínimo: 0
 <br>Tamanho máximo: 77</p>
+<p><strong>scheduled_to</strong> <code>date</code>
+<br>Data do agendamento
+<br>Formato: YYYY-MM-DD</p>
 <p><strong>source</strong> <br>Dados do pagador
 <br>    <strong>entity</strong>
 <br>          <strong>document</strong> <code>string</code>
@@ -3612,6 +3717,7 @@
   <span style="color:#ff79c6">&#34;refunded_amount&#34;</span>: <span style="color:#bd93f9">0</span>,
   <span style="color:#ff79c6">&#34;request_id&#34;</span>: <span style="color:#f1fa8c">&#34;1017dbdd97871b98eeaf1c650a20aa15&#34;</span>,
   <span style="color:#ff79c6">&#34;settled_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;scheduled_to&#34;</span>: <span style="color:#ff79c6">null</span>,
   <span style="color:#ff79c6">&#34;source&#34;</span>: {
     <span style="color:#ff79c6">&#34;account&#34;</span>: {
       <span style="color:#ff79c6">&#34;account_code&#34;</span>: <span style="color:#f1fa8c">&#34;34&#34;</span>,
@@ -3694,6 +3800,14 @@ Pagamentos para contas externas inexistentes podem ser criados mas falharão ap�
     
     
     <hr class="panel-line">
+        
+            
+        
+            
+        
+            
+        
+            
         
             
         

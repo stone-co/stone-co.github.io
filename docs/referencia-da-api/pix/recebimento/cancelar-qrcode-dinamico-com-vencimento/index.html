@@ -1,0 +1,3942 @@
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.75.1" /><link rel="alternate" type="application/rss&#43;xml" href="https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/cancelar-qrcode-dinamico-com-vencimento/index.xml">
+<META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-icon-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-icon-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-icon-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-icon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-icon-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-icon-192x192.png" sizes="192x192">
+
+<title>Cancelar QRCode Dinâmico com data de vencimento | Stone OpenBank</title><meta property="og:title" content="Cancelar QRCode Dinâmico com data de vencimento" />
+<meta property="og:description" content="Escreva o Banco do futuro. Uma linha de código por vez." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/cancelar-qrcode-dinamico-com-vencimento/" />
+<meta property="og:updated_time" content="2022-02-18T14:08:00-03:00" /><meta property="og:site_name" content="Stone OpenBank" />
+<meta itemprop="name" content="Cancelar QRCode Dinâmico com data de vencimento">
+<meta itemprop="description" content="Escreva o Banco do futuro. Uma linha de código por vez.">
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Cancelar QRCode Dinâmico com data de vencimento"/>
+<meta name="twitter:description" content="Escreva o Banco do futuro. Uma linha de código por vez."/>
+
+
+
+
+
+
+
+<link rel="preload" href="/scss/main.min.72c9fa56a5c7f9a07cbd4566ec6270822241586b23ffe7b6dd1f291f6edfc2fc.css" as="style">
+<link href="/scss/main.min.72c9fa56a5c7f9a07cbd4566ec6270822241586b23ffe7b6dd1f291f6edfc2fc.css" rel="stylesheet" integrity="">
+
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+
+<script
+  src="https://unpkg.com/lunr@2.3.8/lunr.min.js"
+  integrity="sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY"
+  crossorigin="anonymous"></script>
+
+
+
+
+  </head>
+  <body class="td-section">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1155.61 219.27"><defs><style>.cls-1{fill:#fff}</style></defs><title>logo_stonebankingapi</title><path class="cls-1" d="M1163 225.88H7.39V6.61H1163zM16.63 215.73H1153.76v-199H16.63z" transform="translate(-7.39 -6.61)"/><path class="cls-1" d="M1073.38 126.54c0 23.25-14 34.5-31.72 34.5a39.54 39.54.0 01-14.15-2.4c.13 9.6.13 19.08.25 28.55h-12.38c.13-11.25.25-22.49.25-33.61V120.73c0-7.33-.13-16.56-.25-24.9h12.38v6.7a26.09 26.09.0 0119.08-8.08c15.54.0 26.53 11.12 26.53 32.09m-12.76.88c0-16-7.83-22.74-18.7-22.74a25.48 25.48.0 00-14.27 4.42c0 10.73-.13 21.6-.13 32.35v7.83a38.7 38.7.0 0012.39 2.27c12.76.0 20.72-7.83 20.72-24.14" transform="translate(-7.39 -6.61)"/><path class="cls-1" d="M1007.88 158a17.46 17.46.0 01-9.6 2.52c-7.71.0-10.62-3.78-11.5-8.08a28.43 28.43.0 01-20.47 8.35c-10.49.0-18.19-5.94-18.19-17.19.0-12.38 9.22-17.31 23.75-19.59l14.66-2.27v-3.16c0-9.22-3.54-13.77-14.91-13.77a45 45 0 00-18.95 4.42l-1.9-10.11a60.74 60.74.0 0123.13-4.55c19.71.0 24.51 9.48 24.51 20.72.0 13.53-.25 25.53-.25 28.93.0 4 1 6.45 4.55 6.45a13.62 13.62.0 004.93-1zm-36.77-6.7c4.55.0 10-1.64 15.29-4.93.13-4 .13-10.62.13-16.55l-14.15 2.27c-8.72 1.52-12.26 4.43-12.26 10.24.0 6.19 4.06 9 11 9" transform="translate(-7.39 -6.61)"/><path class="cls-1" d="M1081.4 77.38c0-4.81 3.79-7.46 8.47-7.46s8.46 2.65 8.46 7.46-3.79 7.58-8.46 7.58-8.47-2.66-8.47-7.58m2.4 83.27c.38-21.23.38-42.58.0-63.81h12.38c-.25 21.24-.25 42.59.0 63.81z" transform="translate(-7.39 -6.61)"/><path class="cls-1" d="M494.75 126.22c0 21.35-12.89 35-34.88 35-7.71.0-16.93-1.77-22-4.81.12-8.21.25-16.55.25-25V95.13c0-8.34-.13-16.56-.25-24.89h12.38c-.12 10.24-.12 20.34-.12 30.58 4.17-3.66 9.85-6.07 17.43-6.07 14.91.0 27.17 9.48 27.17 31.47m-12.38 1.26c0-15.8-7.84-23.51-19.59-23.51a28.68 28.68.0 00-12.63 2.91c-.13 14.41.0 28.93.12 43.34a33.33 33.33.0 0010.1 1.77c14 0 22-9 22-24.51" transform="translate(-7.39 -6.61)"/><path class="cls-1" d="M566.88 158.19a17.46 17.46.0 01-9.6 2.52c-7.71.0-10.62-3.78-11.5-8.08A28.43 28.43.0 01525.31 161c-10.49.0-18.19-5.94-18.19-17.19.0-12.38 9.22-17.31 23.75-19.59l14.66-2.27v-3.16c0-9.22-3.54-13.77-14.91-13.77a45 45 0 00-18.95 4.42l-1.9-10.11a60.74 60.74.0 0123.13-4.55c19.71.0 24.51 9.48 24.51 20.72.0 13.53-.25 25.53-.25 28.93.0 4 1 6.45 4.55 6.45a13.62 13.62.0 004.93-1zm-36.77-6.7c4.55.0 10-1.64 15.29-4.93.13-4 .13-10.62.13-16.55l-14.15 2.27c-8.72 1.52-12.26 4.43-12.26 10.24.0 6.19 4.06 9 11 9" transform="translate(-7.39 -6.61)"/><path class="cls-1" d="M621.59 159.83c.25-7.2.25-14.53.25-21.86V119.14c0-10.23-5.68-14.15-14.4-14.15A24.55 24.55.0 00591.89 110c-.25 12.64-.13 31.22.13 49.78H579.64c.13-5.94.25-12 .25-18.19V112.06c-.12-5.18-.12-10.61-.25-16h12.25l-.13 7.83A28 28 0 01613 94.63c13 0 21 7.58 21 22.75v20.47c0 6.56.0 17.69.13 22z" transform="translate(-7.39 -6.61)"/><path class="cls-1" d="M668 70.24c-.38 26.79-.38 62.68.0 89.59H655.83c.38-26.91.38-62.79.0-89.59zm44.48 88.83-14.91.88c-9.6-10.73-19.08-21.48-28.81-32.22 9.34-10.61 18.7-21.1 27.93-31.72l14.53 1.14-28 29.57c9.73 10.74 19.58 21.48 29.31 32.35" transform="translate(-7.39 -6.61)"/><path class="cls-1" d="M723.4 76.56c0-4.81 3.79-7.46 8.47-7.46s8.46 2.65 8.46 7.46-3.79 7.58-8.46 7.58-8.47-2.66-8.47-7.58m2.4 83.27c.38-21.23.38-42.58.0-63.81h12.38c-.25 21.24-.25 42.59.0 63.81z" transform="translate(-7.39 -6.61)"/><path class="cls-1" d="M802.63 159.83c.25-7.2.25-14.53.25-21.86V119.14c0-10.23-5.69-14.15-14.4-14.15A24.55 24.55.0 00772.93 110c-.25 12.64-.13 31.22.13 49.78H760.68c.13-5.94.25-12 .25-18.19V112.06c-.12-5.18-.12-10.61-.25-16h12.25l-.13 7.83A28 28 0 01794 94.63c13 0 21 7.58 21 22.75v20.47c0 6.56.0 17.69.13 22z" transform="translate(-7.39 -6.61)"/><path class="cls-1" d="M892.84 166.78c0 13.65-14.66 21.23-32.35 21.23-13.53.0-30.2-4.29-30.2-17.43.0-9.1 6.45-13.64 15.79-16.3a9.06 9.06.0 01-4.8-8.21c0-4.67 2.91-8.21 7.46-10.24-9.23-2.65-15.67-9.35-15.67-19.2.0-13.15 11.12-21.49 27.68-21.49 5.05.0 10.23.76 22.11.76h9.22l-.75 9.35h-.76c-5.94.0-7.71-.25-11.88-.5v.38c3 2.4 5.18 6.44 5.18 11.88.0 11.5-10.48 20.22-25.39 20.22h-.76c-4.42 1.26-6.32 3-6.32 5.43.0 4.17 7 5.18 15.41 6.45 12 1.89 26 4.17 26 17.68m-12.65.88c0-7-8.21-8-18.19-9.47-2.4-.38-4.8-.63-7.08-1.14-7.45 2.77-12 5.94-12 11.5.0 7.58 37.28 6.32 37.28-.89m-22.11-38.91c7.2.0 13.77-4.93 13.77-12.77.0-7.32-5.3-12.13-13.14-12.13s-13.52 4.81-13.52 12.64c0 8.34 6.19 12.26 12.89 12.26" transform="translate(-7.39 -6.61)"/><path class="cls-1" d="M250.21 156.42h13.42a1 1 0 001-.94V118.42c0-10.51 5.16-16 14.07-16s14 5.53 14 16v37.06a1 1 0 001 .94h13.42a1 1 0 001-.94v-37c0-15.86-8.82-29.74-29.46-29.74s-29.55 13.89-29.55 29.74v37a1 1 0 001 .94" transform="translate(-7.39 -6.61)"/><path class="cls-1" d="M157.89 157.26c4.88.0 8.07-.56 9.48-1.13a1.2 1.2.0 00.75-1V144c0-.66-.29-1-1.13-1-.66.0-2.53.38-4 .38-5.82.0-8.35-2.16-8.35-7.22V104.91H167a1 1 0 001-1V91.77a1 1 0 00-1-1H154.14V80.23c0-1.13-.47-1.6-1.31-1.6H140.16c-1 0-1.5.47-1.5 1.6v57.51c0 14 7.79 19.52 19.23 19.52" transform="translate(-7.39 -6.61)"/><path class="cls-1" d="M104 158c15.11.0 25.89-9.29 25.89-21.39.0-13.61-9-17.54-21.29-20.17l-6.1-1.31c-4.6-1-7.13-3.19-7.13-6.85.0-4.69 4.69-7.22 11.16-7.22 9.1.0 15.29 4.13 16.23 4.13a1.45 1.45.0 001.22-.84l2.44-9.1c.47-1.22.38-1.5-.47-2-5.44-2.81-11.26-4.41-19.51-4.41-15.3.0-25.9 8.82-25.9 20.55.0 11.07 8.54 17.17 20.74 19.79l6.19 1.31c5 1 7.78 3 7.78 7.22s-3.38 8.07-11.35 8.07c-11.26.0-19-4.5-20.17-4.5-.75.0-1 .38-1.31 1.59l-1.59 7.6c-.47 1.59.0 2.63 1 3.1C85.74 155.76 96.25 158 104 158" transform="translate(-7.39 -6.61)"/><path class="cls-1" d="M206.4 145c-9.85.0-18.86-7.41-18.86-21.39s9-21.2 18.86-21.2 18.77 7.22 18.77 21.2S216.34 145 206.4 145m0 13.51c19.7.0 34.06-14.73 34.06-34.9S226.1 88.77 206.4 88.77s-34.06 14.64-34.06 34.81 14.45 34.9 34.06 34.9" transform="translate(-7.39 -6.61)"/><path class="cls-1" d="M349.81 158.48c14.17.0 23.36-5.63 27.4-12.39.84-1.41 1.13-1.88 1.13-2.25s-.19-.66-1-1.41l-5.91-5.16c-1.41-1.22-1.88-1.59-2.35-1.59s-.75.28-1.13.75A20.33 20.33.0 01350.65 145c-11.17.0-18-8.82-18-22.61.0-10.88 5.82-20.55 17.17-20.55s16.89 8.64 15.86 17.27l4.32-2.72H328.79v11.54h46.82c4.88.0 5.63-1.41 5.63-5.07.0-20.74-11.91-34.06-30.87-34.06-17.82.0-33.21 13.7-33.21 34.52.0 22.24 15.76 35.18 32.65 35.18" transform="translate(-7.39 -6.61)"/></svg></span><span class="text-hide">Stone OpenBank</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/docs/guias/" ><span>Guias</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link active" href="/docs/referencia-da-api/" ><span class="active">Referência da API</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block">
+
+
+
+<input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; Procurar…"
+  aria-label="Procurar…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="/offline-search-index.385b341bdcb7e11387ee5a99600b98ec.json"
+  data-offline-search-base-href="/"
+  data-offline-search-max-results="10"
+>
+
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+
+
+
+
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+
+
+
+<input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; Procurar…"
+  aria-label="Procurar…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="/offline-search-index.385b341bdcb7e11387ee5a99600b98ec.json"
+  data-offline-search-base-href="/"
+  data-offline-search-max-results="10"
+>
+
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  
+  <nav class="collapse td-sidebar-nav" id="td-section-nav">
+    
+    
+    
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Stone Banking API</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="docs">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/guias/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Guias</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsguias">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/guias/stone-open-banking/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">STONE BANKING API</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsguiasstone-open-banking">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/guias/token-de-acesso/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">TOKEN DE ACESSO</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsguiastoken-de-acesso">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/guias/conta-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">CONTA DE PAGAMENTO</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsguiasconta-de-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/guias/consentimento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">CONSENTIMENTO</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsguiasconsentimento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/guias/aprovacao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">APROVAÇÃO</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsguiasaprovacao">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/guias/webhooks/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">WEBHOOKS</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsguiaswebhooks">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/guias/sdk/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">SDK</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsguiassdk">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Referência da API</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="docsreferencia-da-api">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/padroes-da-api/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">PADRÕES DA API</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipadroes-da-api">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/padroes-da-api/boas-praticas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Boas Práticas</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipadroes-da-apiboas-praticas">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/padroes-da-api/data-e-hora/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Data e Hora</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipadroes-da-apidata-e-hora">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/padroes-da-api/paginacao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Paginação</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipadroes-da-apipaginacao">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/padroes-da-api/valores/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Valores</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipadroes-da-apivalores">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/padroes-da-api/codigos-de-resposta/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Códigos De Resposta</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipadroes-da-apicodigos-de-resposta">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/padroes-da-api/mensagens-de-erro/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Mensagens De Erro</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipadroes-da-apimensagens-de-erro">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/dados-da-conta/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">DADOS DA CONTA</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apidados-da-conta">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/dados-da-conta/criar-nova-conta-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar Novo Pedido de Conta de Pagamento</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apidados-da-contacriar-nova-conta-de-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/dados-da-conta/consultar-dados-do-pedido-da-conta-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Dados do Pedido da Conta de Pagamento</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apidados-da-contaconsultar-dados-do-pedido-da-conta-de-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/dados-da-conta/overview-dados-da-conta/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O Que é Uma Conta</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apidados-da-contaoverview-dados-da-conta">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/dados-da-conta/consultar-dados-da-conta/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Dados da Conta</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apidados-da-contaconsultar-dados-da-conta">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/dados-da-conta/consultar-todas-as-contas-as-quais-o-usuario-tem-acesso/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Todas Contas às Quais Se Tem Acesso</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apidados-da-contaconsultar-todas-as-contas-as-quais-o-usuario-tem-acesso">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/dados-da-conta/o-objeto-saldo/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O Objeto Saldo</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apidados-da-contao-objeto-saldo">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/dados-da-conta/consultar-o-saldo/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar o Saldo</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apidados-da-contaconsultar-o-saldo">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Objetos do Extrato</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apidados-da-contaobjetos-do-extrato">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/dados-da-conta/objetos-do-extrato/estrutura-de-transacoes-no-extrato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Estrutura de Transações no Extrato</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apidados-da-contaobjetos-do-extratoestrutura-de-transacoes-no-extrato">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/dados-da-conta/consultar-extrato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Extrato</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apidados-da-contaconsultar-extrato">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/dados-da-conta/consultar-uma-entrada-no-extrato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Uma Entrada no Extrato</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apidados-da-contaconsultar-uma-entrada-no-extrato">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/dados-da-conta/o-objeto-taxa/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O Objeto Taxas</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apidados-da-contao-objeto-taxa">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/dados-da-conta/consultar-taxas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Taxas</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apidados-da-contaconsultar-taxas">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/dados-da-conta/consultar-todas-as-taxas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Todas as Taxas</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apidados-da-contaconsultar-todas-as-taxas">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/simulacoes-dry-run/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">SIMULAÇÕES (DRY-RUN)</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apisimulacoes-dry-run">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/simulacoes-dry-run/simular-uma-transferencia-interna/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Simular uma Transferência Interna</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apisimulacoes-dry-runsimular-uma-transferencia-interna">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/simulacoes-dry-run/simular-uma-transferencia-externa/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Simular uma Transferência Externa</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apisimulacoes-dry-runsimular-uma-transferencia-externa">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/simulacoes-dry-run/objetos-simulacao-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Objetos da Simulação de Pagamento</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apisimulacoes-dry-runobjetos-simulacao-de-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/simulacoes-dry-run/simular-o-pagamento-de-um-documento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Simular o Pagamento de Um Documento</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apisimulacoes-dry-runsimular-o-pagamento-de-um-documento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/transferencias/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">TRANSFERÊNCIAS</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apitransferencias">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/transferencias/o-que-e-uma-transferencia/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O Que É Uma Transferência</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apitransferenciaso-que-e-uma-transferencia">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/transferencias/o-objeto-transferencia/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O Objeto Transferência</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apitransferenciaso-objeto-transferencia">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/transferencias/transferencias-internas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Transferências Internas</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apitransferenciastransferencias-internas">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/transferencias/transferencias-internas/transferir-para-contas-stone/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Transferir para Contas Stone</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apitransferenciastransferencias-internastransferir-para-contas-stone">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/transferencias/transferencias-internas/listar-transferencias-internas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Transferências Internas</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apitransferenciastransferencias-internaslistar-transferencias-internas">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/transferencias/transferencias-internas/retornando-uma-transferencia-interna/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Retornando uma Transferência Interna</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apitransferenciastransferencias-internasretornando-uma-transferencia-interna">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/transferencias/transferencias-internas/cancelamento-de-uma-transferencia-interna-agendada/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cancelamento de Uma Transferência Interna Agendada</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apitransferenciastransferencias-internascancelamento-de-uma-transferencia-interna-agendada">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/transferencias/transferencias-externas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Transferências Externas</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apitransferenciastransferencias-externas">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/transferencias/transferencias-externas/transferir-para-outros-bancos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Transferir para Outros Bancos</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apitransferenciastransferencias-externastransferir-para-outros-bancos">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/transferencias/transferencias-externas/listar-transferencias-externas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Transferências Externas</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apitransferenciastransferencias-externaslistar-transferencias-externas">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/transferencias/transferencias-externas/retornar-uma-transferencia-externa/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Retornar Uma Transferência Externa</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apitransferenciastransferencias-externasretornar-uma-transferencia-externa">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/transferencias/transferencias-externas/cancelamento-de-uma-transferencia-externa-agendada/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cancelamento de Uma Transferência Externa Agendada</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apitransferenciastransferencias-externascancelamento-de-uma-transferencia-externa-agendada">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pagamentos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">PAGAMENTOS</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipagamentos">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pagamentos/overview/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Overview</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipagamentosoverview">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pagamentos/criar-um-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar Um Pagamento</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipagamentoscriar-um-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pagamentos/exibir-limites-de-valores-para-emissao-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Exibir Limites De Valores Para Emissão De Pagamento</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipagamentosexibir-limites-de-valores-para-emissao-de-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pagamentos/listar-pagamentos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Pagamentos</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipagamentoslistar-pagamentos">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pagamentos/retornar-um-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Retornar Um Pagamento</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipagamentosretornar-um-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pagamentos/cancelamento-de-um-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cancelamento de um Pagamento Agendado</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipagamentoscancelamento-de-um-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+          
+          <a class="td-sidebar-link td-sidebar-link__page " id="m-docsreferencia-da-apipagamentosconsideracoes_importantesconsiderac3a7c3b5es-importantes" href="/docs/referencia-da-api/pagamentos/consideracoes_importantes/considera%C3%A7%C3%B5es-importantes/">Considerações Importantes</a>
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/agendamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">AGENDAMENTO</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apiagendamento">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/agendamento/operacoes-agendadas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Operações Agendadas</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apiagendamentooperacoes-agendadas">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/agendamento/calendario-de-agendamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Calendário de Agendamento</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apiagendamentocalendario-de-agendamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/comprovantes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">COMPROVANTES</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apicomprovantes">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/comprovantes/como-emitir-um-comprovante-pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Emitir Um Comprovante Pix</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apicomprovantescomo-emitir-um-comprovante-pix">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/comprovantes/como-emitir-um-comprovante/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Como Emitir Um Comprovante</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apicomprovantescomo-emitir-um-comprovante">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/instituicoes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">INSTITUIÇÕES</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apiinstituicoes">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/instituicoes/overview-instituicao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Overview Instituições</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apiinstituicoesoverview-instituicao">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/instituicoes/listar-instituicoes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Instituições</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apiinstituicoeslistar-instituicoes">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/instituicoes/retornar-uma-instituicao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Retornar Uma Instituição</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apiinstituicoesretornar-uma-instituicao">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/contatos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">CONTATOS</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apicontatos">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/contatos/o-objeto-contato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O Objeto Contato</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apicontatoso-objeto-contato">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/contatos/criar-um-contato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar Um Contato</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apicontatoscriar-um-contato">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/contatos/listar-contatos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Contatos</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apicontatoslistar-contatos">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/contatos/retornar-um-contato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Retornar Um Contato</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apicontatosretornar-um-contato">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/contatos/atualizar-contato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Atualizar Contato</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apicontatosatualizar-contato">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/contatos/excluir-um-contato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Excluir Um Contato</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apicontatosexcluir-um-contato">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/contatos/adicionar-conta-bancaria-a-um-contato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Adicionar Conta Bancária a Um Contato</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apicontatosadicionar-conta-bancaria-a-um-contato">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/contatos/atualizar-conta-bancaria-de-um-contato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Atualizar Conta Bancária de Um Contato</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apicontatosatualizar-conta-bancaria-de-um-contato">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/contatos/excluir-conta-bancaria-de-um-contato/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Excluir Conta Bancária de Um Contato</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apicontatosexcluir-conta-bancaria-de-um-contato">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/emissao-de-boletos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">BOLETOS</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apiemissao-de-boletos">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/emissao-de-boletos/overview-emissao-de-boletos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Overview </a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apiemissao-de-boletosoverview-emissao-de-boletos">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/emissao-de-boletos/regras-de-negocio/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Regras de negócio</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apiemissao-de-boletosregras-de-negocio">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/emissao-de-boletos/emitir-boleto/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Emitir Boleto</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apiemissao-de-boletosemitir-boleto">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/emissao-de-boletos/listar-boletos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Boletos</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apiemissao-de-boletoslistar-boletos">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/emissao-de-boletos/retornar-um-boleto/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Retornar Um Boleto</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apiemissao-de-boletosretornar-um-boleto">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/emissao-de-boletos/gerar-boleto-pdf/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Gerar PDF Boleto</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apiemissao-de-boletosgerar-boleto-pdf">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/emissao-de-boletos/cancelar-boleto/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cancelar um boleto</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apiemissao-de-boletoscancelar-boleto">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/kyc/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">KYC (Alpha)</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apikyc">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/kyc/buscar-informacoes-pendentes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Buscar informações pendentes</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apikycbuscar-informacoes-pendentes">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/kyc/consultar-url-para-foto/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar URL para envio da foto</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apikycconsultar-url-para-foto">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/kyc/enviar-fotos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Enviar fotos do usuário</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apikycenviar-fotos">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/kyc/enviar-dados-do-usuario/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Enviar dados do usuário</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apikycenviar-dados-do-usuario">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/link-de-pagamentos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">LINK DE PAGAMENTO</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apilink-de-pagamentos">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/link-de-pagamentos/o-que-e-um-link-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">O Que É Um Link De Pagamento</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apilink-de-pagamentoso-que-e-um-link-de-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/link-de-pagamentos/configuracoes-da-conta-para-um-link-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Configurações da conta para um Link de Pagamento</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apilink-de-pagamentosconfiguracoes-da-conta-para-um-link-de-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/link-de-pagamentos/criar-link-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar Link de Pagamento</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apilink-de-pagamentoscriar-link-de-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/link-de-pagamentos/listar-links-de-pagamento-da-conta/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Links de Pagamentos da Conta</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apilink-de-pagamentoslistar-links-de-pagamento-da-conta">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/link-de-pagamentos/detalhes-de-um-link-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Detalhes de um Link de Pagamento</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apilink-de-pagamentosdetalhes-de-um-link-de-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/link-de-pagamentos/cancelar-link-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cancelar um Link de Pagamento</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apilink-de-pagamentoscancelar-link-de-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/operacoes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Operações</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apioperacoes">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/operacoes/aprovar-operacoes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Aprovar Operações em Lote</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apioperacoesaprovar-operacoes">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/operacoes/cancelar-operacoes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cancelar Operações em Lote</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apioperacoescancelar-operacoes">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/operacoes/detalhes-operacoes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Detalhe de Operações</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apioperacoesdetalhes-operacoes">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/operacoes/lista-de-operacoes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Operações</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apioperacoeslista-de-operacoes">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">PIX</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="docsreferencia-da-apipix">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Pagando com Pix</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixpagamento">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/pagamento/consultar-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultando um pagamento realizado</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixpagamentoconsultar-pagamento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/pagamento/buscar-dados-qrcode/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Buscar dados do QRCode</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixpagamentobuscar-dados-qrcode">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/pagamento/criar-pagamento-pendente/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar um pagamento pendente</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixpagamentocriar-pagamento-pendente">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/pagamento/confirmar-pagamento-pendente/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Confirmar um pagamento pendente</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixpagamentoconfirmar-pagamento-pendente">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/pagamento/detalhar-pix-enviado/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Detalhar um Pix realizado</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixpagamentodetalhar-pix-enviado">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/recebimento/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Recebendo com Pix</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="docsreferencia-da-apipixrecebimento">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/recebimento/consultar-pix-por-qrcode/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Consultar Pix recebido por QRCode</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixrecebimentoconsultar-pix-por-qrcode">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/recebimento/criar-qrcode-estatico/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar QRCode Estático</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixrecebimentocriar-qrcode-estatico">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/recebimento/atualizar-qrcode-estatico/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Atualizar QRCode Estático</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixrecebimentoatualizar-qrcode-estatico">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/recebimento/detalhar-qrcode-estatico/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Detalhar QRCode Estático</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixrecebimentodetalhar-qrcode-estatico">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/recebimento/criar-qrcode-dinamico/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar QRCode Dinâmico</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixrecebimentocriar-qrcode-dinamico">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/recebimento/criar-qrcode-dinamico-com-vencimento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar QRCode Dinâmico com Validade</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixrecebimentocriar-qrcode-dinamico-com-vencimento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/recebimento/cancelar-qrcode-dinamico/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cancelar QRCode Dinâmico</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixrecebimentocancelar-qrcode-dinamico">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/recebimento/cancelar-qrcode-dinamico-com-vencimento/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Cancelar QRCode Dinâmico com data de vencimento</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="docsreferencia-da-apipixrecebimentocancelar-qrcode-dinamico-com-vencimento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/recebimento/listar-cobranca-com-validade/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar QRCode Dinâmico com Validade</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixrecebimentolistar-cobranca-com-validade">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/recebimento/listar-recebimentos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Pix recebidos</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixrecebimentolistar-recebimentos">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/relato-infracao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Relato de Infração</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixrelato-infracao">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/relato-infracao/listar-relatos-infracoes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Relatos de Infrações recebidos</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixrelato-infracaolistar-relatos-infracoes">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/chaves-pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Chaves Pix</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixchaves-pix">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/chaves-pix/listar-chaves-pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar chaves Pix</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixchaves-pixlistar-chaves-pix">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/chaves-pix/criar-uma-chave-pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar chaves Pix</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixchaves-pixcriar-uma-chave-pix">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/chaves-pix/excluir-uma-chave-pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Excluir chave Pix</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixchaves-pixexcluir-uma-chave-pix">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/chaves-pix/detalhar-uma-chave-pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Detalhar chave Pix</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixchaves-pixdetalhar-uma-chave-pix">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/recargas/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">RECARGAS</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apirecargas">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/recargas/overview/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Overview</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apirecargasoverview">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/recargas/recarga-de-celular/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Recarga para Celular</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apirecargasrecarga-de-celular">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/recargas/recarga-de-jogos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Recarga para Jogos</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apirecargasrecarga-de-jogos">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/recargas/recarga-de-conteudo-digital/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Recarga para Conteúdo Digital</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apirecargasrecarga-de-conteudo-digital">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/recargas/recarga-de-tv-por-assinatura/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Recarga para TV por Assinatura</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apirecargasrecarga-de-tv-por-assinatura">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/recargas/fluxo-challenge/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Fluxo de autorização de challenge</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apirecargasfluxo-challenge">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+  </nav>
+</div>
+
+
+
+
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+            
+  
+  
+  
+  
+  
+  <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+  
+  
+  </div>
+
+
+
+
+
+
+
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+	<ol class="breadcrumb spb-1">
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="https://stone-co.github.io/docs/">Stone Banking API</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="https://stone-co.github.io/docs/referencia-da-api/">Referência da API</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="https://stone-co.github.io/docs/referencia-da-api/pix/">PIX</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/">Recebendo com Pix</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/cancelar-qrcode-dinamico-com-vencimento/">Cancelar QRCode Dinâmico com data de vencimento</a>
+</li>
+
+	</ol>
+</nav	>
+
+            
+<div class="td-content">
+	<div class="entry-title">
+		<h1>Cancelar QRCode Dinâmico com data de vencimento</h1>
+        </div>
+	
+	<p>Através desse endpoint será possível cancelar as cobranças por Pix com data de vencimento.</p>
+<pre><code>DELETE https://sandbox-api.openbank.stone.com.br/api/v1/pix_payment_invoices_with_due_date/{{id}}
+</code></pre><br>
+<h5 id="headers"><strong>HEADERS</strong></h5>
+<hr>
+<p><strong>authorization</strong>* <code>string</code>
+<br> Bearer token de autenticação.</p>
+<p><strong>x-stone-account-id</strong>* <code>string</code>
+<br> Necessário para permissionamento.</p>
+<br>
+<h5 id="path-params"><strong>PATH PARAMS</strong></h5>
+<p><strong>id</strong> <code>uuid</code>
+<br> Identificador do QRCode com data de vencimento</p>
+<br>
+<h5 id="response"><strong>Response</strong></h5>
+<hr>
+<pre><code>204 OK
+</code></pre>
+        <div class="section-index">
+    
+    
+    
+    
+    
+    <hr class="panel-line">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    
+</div>
+
+	
+	
+	
+
+	<div class="text-muted mt-5 pt-3 border-top">Última modificação: 18.02.2022
+</div>
+</div>
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-4 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2022 Stone Todos os direitos reservados</small>
+        
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.f820bfc507c3ebefe17f8881ec4ee10013f3b89ad9555a50acf9bb1771e6823f.js" integrity="sha256-&#43;CC/xQfD6&#43;/hf4iB7E7hABPzuJrZVVpQrPm7F3Hmgj8=" crossorigin="anonymous"></script>
+
+
+
+
+  </body>
+</html>

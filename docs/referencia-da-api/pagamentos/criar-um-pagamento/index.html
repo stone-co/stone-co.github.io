@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.85831473b70896367fd81b17c8e0ba8c.json"
+  data-offline-search-index-json-src="/offline-search-index.385b341bdcb7e11387ee5a99600b98ec.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.85831473b70896367fd81b17c8e0ba8c.json"
+  data-offline-search-index-json-src="/offline-search-index.385b341bdcb7e11387ee5a99600b98ec.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -2697,7 +2697,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">PIX (Beta)</a>
+    <a  href="/docs/referencia-da-api/pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">PIX</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipix">
@@ -3033,6 +3033,56 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/recebimento/cancelar-qrcode-dinamico/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cancelar QRCode Dinâmico</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixrecebimentocancelar-qrcode-dinamico">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/recebimento/cancelar-qrcode-dinamico-com-vencimento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Cancelar QRCode Dinâmico com data de vencimento</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixrecebimentocancelar-qrcode-dinamico-com-vencimento">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/docs/referencia-da-api/pix/recebimento/listar-cobranca-com-validade/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar QRCode Dinâmico com Validade</a>
   </li>
   <ul>
@@ -3062,6 +3112,56 @@
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipixrecebimentolistar-recebimentos">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/relato-infracao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Relato de Infração</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixrelato-infracao">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/relato-infracao/listar-relatos-infracoes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Relatos de Infrações recebidos</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixrelato-infracaolistar-relatos-infracoes">
       
       
       
@@ -3516,6 +3616,16 @@
 <p>O valor a ser pago, caso o boleto possa ser pago com um valor divergente ao valor total.
 <br>Para consultar o valor a ser pago, sugerimos que realize uma simulação de pagamento <a href="/docs/referencia-da-api/simulacoes-dry-run/simular-o-pagamento-de-um-documento/">aqui</a> e verifique o valor mínimo e máximo aceito para o pagamento em questão.
 <br>Caso não tenha alteração do valor total do pagamento, basta não enviar o campo <code>amount</code>.</p>
+<hr>
+<p><strong>effective_payer</strong>
+<br>Dados do pagador do boleto</p>
+<p><br>    <strong>legal_name</strong>* <code>string</code>
+<br>    Nome do pagador
+<br>    Tamanho máximo: 80</p>
+<p><br>    <strong>document</strong>* <code>string</code>
+<br>    Número do documento</p>
+<p><br>    <strong>document_type</strong>* <code>string</code>
+<br>    CPF ou CNPJ</p>
 <h4 id="headers"><strong>HEADERS</strong></h4>
 <hr>
 <br>
@@ -3557,6 +3667,14 @@
     
     
     <hr class="panel-line">
+        
+            
+        
+            
+        
+            
+        
+            
         
             
         

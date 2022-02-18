@@ -199,6 +199,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/relato-infracao/</loc>
+    <lastmod>2022-02-11T14:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/operacoes/detalhes-operacoes/</loc>
     <lastmod>2022-01-13T18:00:00+00:00</lastmod>
   </url>
@@ -516,6 +521,16 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/cancelar-qrcode-dinamico/</loc>
+    <lastmod>2022-02-18T14:08:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/cancelar-qrcode-dinamico-com-vencimento/</loc>
+    <lastmod>2022-02-18T14:08:00-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/listar-cobranca-com-validade/</loc>
     <lastmod>2021-09-19T09:08:00-03:00</lastmod>
   </url>
@@ -543,6 +558,11 @@
   <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/dados-da-conta/consultar-extrato/</loc>
     <lastmod>2020-04-20T20:28:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/relato-infracao/listar-relatos-infracoes/</loc>
+    <lastmod>2022-02-11T09:09:00-03:00</lastmod>
   </url>
   
   <url>
@@ -630,7 +650,7 @@
   
   <url>
     <loc>https://stone-co.github.io/</loc>
-    <lastmod>2022-01-21T11:00:00-03:00</lastmod>
+    <lastmod>2022-02-18T14:08:00-03:00</lastmod>
   </url>
   
   <url>
