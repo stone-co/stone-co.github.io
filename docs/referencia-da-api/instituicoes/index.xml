@@ -71,7 +71,7 @@
 &lt;br&gt; Pode ser &amp;ldquo;spi&amp;rdquo;, &amp;ldquo;str&amp;rdquo;, ou &amp;ldquo;all&amp;rdquo;. O default se nada for passado é &amp;ldquo;str&amp;rdquo;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&amp;ldquo;str&amp;rdquo; - Retornamos as instituições participantes do STR. Útil para operaçõs de TED&lt;/li&gt;
-&lt;li&gt;&amp;ldquo;spi&amp;rdquo; - Retornamos as instituições participantes do SPI. Útil para operaçõs de PIX&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;spi&amp;rdquo; - Retornamos as instituições participantes do SPI. Útil para operaçõs de Pix&lt;/li&gt;
 &lt;li&gt;&amp;ldquo;all&amp;rdquo; - Retornamos todas as instituições&lt;/li&gt;
 &lt;/ul&gt;
 &lt;br&gt;

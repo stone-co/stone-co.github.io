@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.385b341bdcb7e11387ee5a99600b98ec.json"
+  data-offline-search-index-json-src="/offline-search-index.3cb1961414ed8856781ffd5788886db7.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.385b341bdcb7e11387ee5a99600b98ec.json"
+  data-offline-search-index-json-src="/offline-search-index.3cb1961414ed8856781ffd5788886db7.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -2572,7 +2572,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/operacoes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Operações</a>
+    <a  href="/docs/referencia-da-api/operacoes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">OPERAÇÕES</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apioperacoes">
@@ -2697,7 +2697,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/pix/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">PIX</a>
+    <a  href="/docs/referencia-da-api/pix/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Pix</a>
   </li>
   <ul>
     <li class="collapse show" id="docsreferencia-da-apipix">
@@ -3158,6 +3158,31 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/relato-infracao/fechar-relato-infracao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Fechar Relato de Infração</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixrelato-infracaofechar-relato-infracao">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/docs/referencia-da-api/pix/relato-infracao/listar-relatos-infracoes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Relatos de Infrações recebidos</a>
   </li>
   <ul>
@@ -3212,6 +3237,31 @@
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipixchaves-pixlistar-chaves-pix">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/chaves-pix/atualizar-uma-chave-pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Atualizar chaves Pix (Beta)</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixchaves-pixatualizar-uma-chave-pix">
       
       
       
@@ -3561,7 +3611,7 @@
 
 
 <li class="breadcrumb-item" >
-	<a href="https://stone-co.github.io/docs/referencia-da-api/pix/">PIX</a>
+	<a href="https://stone-co.github.io/docs/referencia-da-api/pix/">Pix</a>
 </li>
 
 
@@ -3589,7 +3639,7 @@
 	
 	<br>
 Esse endpoint deve ser chamado para detalhar uma chave Pix. <br><br>
-<pre><code>GET /api/v1/pix/{{account_id}}/entries/{{id}}?participant_ispb=xxxx
+<pre><code>GET /api/v1/pix/{{account_id}}/entries/{{id}}
 </code></pre><h5 id="headers"><strong>HEADERS</strong></h5>
 <hr>
 <p><strong>x-stone-idempotency-key</strong> <code>string</code>
@@ -3599,40 +3649,27 @@ Esse endpoint deve ser chamado para detalhar uma chave Pix. <br><br>
 <p><strong>User-Agent</strong> <code>string</code>
 <br>Nome da sua aplicacão</p>
 <br>
-<h5 id="query-params"><strong>QUERY PARAMS</strong></h5>
+<h5 id="path-params"><strong>PATH PARAMS</strong></h5>
 <hr>
 <p><strong>account_id</strong> <code>string</code>
 <br> Identificador da conta</p>
 <p><strong>id</strong> <code>string</code>
 <br> Identificador da chave a ser deletada. Caso não saiba o <code>id</code> da chave, liste as chaves da conta por esse <a href="/docs/referencia-da-api/pix/chaves-pix/listar-chaves-pix/">endpoint</a> e pegue o <code>id</code>.
 <br><br></p>
-<p>Parâmetros (filtros) para a query:</p>
-<ul>
-<li>&ldquo;participant_ispb&rdquo; *(obrigatório para participantes indiretos)</li>
-<li>&ldquo;beneficiary_entity_name&rdquo;</li>
-<li>&ldquo;beneficiary_entity_document_type&rdquo;</li>
-<li>&ldquo;beneficiary_entity_document&rdquo;</li>
-<li>&ldquo;beneficiary_account_branch_code&rdquo;</li>
-<li>&ldquo;beneficiary_account_account_code&rdquo;</li>
-<li>&ldquo;beneficiary_account_account_type&rdquo;</li>
-<li>&ldquo;beneficiary_account_created_at&rdquo;</li>
-<li>&ldquo;status&rdquo;
-<br><br></li>
-</ul>
 <h5 id="response"><strong>RESPONSE</strong></h5>
 <hr>
 <pre><code>200 OK
 </code></pre><br>
 <p><strong>Body</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#ff79c6">&#34;id&#34;</span>: d<span style="color:#bd93f9">990</span>cc<span style="color:#bd93f9">41</span>-e<span style="color:#bd93f9">514-4343</span>-a<span style="color:#bd93f9">84</span>c<span style="color:#bd93f9">-80</span>c<span style="color:#bd93f9">677102</span>b<span style="color:#bd93f9">17</span>,
-  <span style="color:#ff79c6">&#34;key&#34;</span>: “+<span style="color:#bd93f9">5510998765432</span>”, 
+  <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;d990cc41-e514-4343-a84c-80c677102b17&#34;</span>,
+  <span style="color:#ff79c6">&#34;key&#34;</span>: <span style="color:#f1fa8c">&#34;+5510998765432&#34;</span>, 
   <span style="color:#ff79c6">&#34;key_type&#34;</span>: <span style="color:#f1fa8c">&#34;phone&#34;</span>, 
   <span style="color:#ff79c6">&#34;key_status&#34;</span>: <span style="color:#f1fa8c">&#34;active&#34;</span>,
   <span style="color:#ff79c6">&#34;account_id&#34;</span>: <span style="color:#f1fa8c">&#34;968cc34d-d827-448b-ac1b-e6e29836a160&#34;</span>,
-  <span style="color:#ff79c6">&#34;participant_ispb&#34;</span>: “<span style="color:#bd93f9">1234567890</span>”,
+  <span style="color:#ff79c6">&#34;participant_ispb&#34;</span>: <span style="color:#f1fa8c">&#34;1234567890&#34;</span>,
   <span style="color:#ff79c6">&#34;beneficiary_account&#34;</span>: {
-     <span style="color:#ff79c6">&#34;branch_code&#34;</span>: “<span style="color:#bd93f9">0001</span>”,
+     <span style="color:#ff79c6">&#34;branch_code&#34;</span>: <span style="color:#f1fa8c">&#34;0001&#34;</span>,
      <span style="color:#ff79c6">&#34;account_code&#34;</span>: <span style="color:#f1fa8c">&#34;00016583&#34;</span>,
      <span style="color:#ff79c6">&#34;account_type&#34;</span>: <span style="color:#f1fa8c">&#34;CC&#34;</span>,
      <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2019-11-18T03:00:00Z&#34;</span>
@@ -3640,19 +3677,19 @@ Esse endpoint deve ser chamado para detalhar uma chave Pix. <br><br>
   <span style="color:#ff79c6">&#34;beneficiary_entity&#34;</span>: {
      <span style="color:#ff79c6">&#34;name&#34;</span>:<span style="color:#f1fa8c">&#34;Maria Clara Gomes&#34;</span>,
      <span style="color:#ff79c6">&#34;document_type&#34;</span>: <span style="color:#f1fa8c">&#34;cpf&#34;</span>,
-     <span style="color:#ff79c6">&#34;document&#34;</span>: “<span style="color:#bd93f9">13152256685</span>”
+     <span style="color:#ff79c6">&#34;document&#34;</span>: <span style="color:#f1fa8c">&#34;13152256685&#34;</span>
   }, 
   <span style="color:#ff79c6">&#34;events&#34;</span>: [
     {
-      <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#bd93f9">38963369-533</span>c<span style="color:#bd93f9">-42</span>aa-a<span style="color:#bd93f9">49</span>e-b<span style="color:#bd93f9">5369</span>ff<span style="color:#bd93f9">4</span>bd<span style="color:#bd93f9">52</span>,
+      <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;38963369-533c-42aa-a49e-b5369ff4bd52&#34;</span>,
       <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;20200-09-18T03:00:00Z&#34;</span>,
       <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;created&#34;</span>,
       <span style="color:#ff79c6">&#34;from_status&#34;</span>: <span style="color:#ff79c6">null</span>,
       <span style="color:#ff79c6">&#34;to_status&#34;</span>: <span style="color:#f1fa8c">&#34;active&#34;</span>
     },
     {
-      <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#bd93f9">7</span>eb<span style="color:#bd93f9">6</span>ee<span style="color:#bd93f9">15-1485-468</span>a-ad<span style="color:#bd93f9">38-411320878815</span>,
-      <span style="color:#ff79c6">&#34;created_at&#34;</span>: “<span style="color:#bd93f9">20200-09-22</span>T<span style="color:#bd93f9">03</span>:<span style="color:#bd93f9">00</span>:<span style="color:#bd93f9">00</span>Z”,
+      <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;7eb6ee15-1485-468a-ad38-411320878815&#34;</span>,
+      <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;20200-09-22T03:00:00Z&#34;</span>,
       <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;deleted&#34;</span>,
       <span style="color:#ff79c6">&#34;from_status&#34;</span>: <span style="color:#f1fa8c">&#34;active&#34;</span>,
       <span style="color:#ff79c6">&#34;to_status&#34;</span>: <span style="color:#f1fa8c">&#34;deleted&#34;</span>
@@ -3667,6 +3704,10 @@ Esse endpoint deve ser chamado para detalhar uma chave Pix. <br><br>
     
     
     <hr class="panel-line">
+        
+            
+        
+            
         
             
         

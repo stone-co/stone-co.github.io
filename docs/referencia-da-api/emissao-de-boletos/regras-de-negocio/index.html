@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.385b341bdcb7e11387ee5a99600b98ec.json"
+  data-offline-search-index-json-src="/offline-search-index.3cb1961414ed8856781ffd5788886db7.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.385b341bdcb7e11387ee5a99600b98ec.json"
+  data-offline-search-index-json-src="/offline-search-index.3cb1961414ed8856781ffd5788886db7.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -2572,7 +2572,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/operacoes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Operações</a>
+    <a  href="/docs/referencia-da-api/operacoes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">OPERAÇÕES</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apioperacoes">
@@ -2697,7 +2697,7 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">PIX</a>
+    <a  href="/docs/referencia-da-api/pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Pix</a>
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipix">
@@ -3158,6 +3158,31 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/relato-infracao/fechar-relato-infracao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Fechar Relato de Infração</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixrelato-infracaofechar-relato-infracao">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/docs/referencia-da-api/pix/relato-infracao/listar-relatos-infracoes/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Relatos de Infrações recebidos</a>
   </li>
   <ul>
@@ -3212,6 +3237,31 @@
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipixchaves-pixlistar-chaves-pix">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/chaves-pix/atualizar-uma-chave-pix/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Atualizar chaves Pix (Beta)</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixchaves-pixatualizar-uma-chave-pix">
       
       
       
@@ -3579,7 +3629,7 @@
 	
 	<hr>
 <br>
-<h4 id="válidas-para-todos-os-tipos-de-boleto">Válidas para todos os tipos de boleto</h4>
+<h4 id="válidas-para-os-boletos">Válidas para os boletos</h4>
 <hr>
 <br>
 <table>
@@ -3608,7 +3658,7 @@
 </tr>
 <tr>
 <td>Data de vencimento</td>
-<td>Precisa ser igual ou maior que o dia atual e igual ou menor do que a limit_date. Caso seja um dia não útil o pagamento poderá ser feito até o próximo dia útil.</td>
+<td>Precisa ser igual ou maior que o dia atual e igual ao limit_data (boleto de proposta) e menor que ao limit_date (boleto de cobrança). Caso seja um dia não útil o pagamento poderá ser feito até o próximo dia útil.</td>
 </tr>
 <tr>
 <td>Formato / Layout</td>
@@ -3626,7 +3676,7 @@
 <th>Regras</th>
 <th>Depósito</th>
 <th>Proposta</th>
-<th>Cobrança <em>(todos os tipos)</em></th>
+<th>Cobrança</th>
 </tr>
 </thead>
 <tbody>
@@ -3638,9 +3688,9 @@
 </tr>
 <tr>
 <td>Data limite<br><em>(limit_date)</em></td>
-<td>Sempre deve ser igual a data de vencimento, podendo ser até 365 dias após a data de emissão. <br>Caso seja um dia não útil, o pagamento poderá ser feito até o próximo dia útil.<br>Ao informar alguma data diferente da data de vencimento, retornará um erro. E se não for informada, será configurada automaticamente a data de vencimento. Os boletos que forem pagos após a data limite serão devolvidos.</td>
-<td>Deve ser igual a data de vencimento, podendo ser até 365 dias após a data de emissão.<br><br>Caso seja um dia não útil, o pagamento poderá ser feito até o próximo dia útil. Se não for informada, será configurada automaticamente a data de vencimento. Os boletos que forem pagos após a data limite serão devolvidos.</td>
-<td>Deve ser igual ou maior a data de vencimento, podendo ser até 365 dias após a data de emissão.<br><br>Caso seja um dia não útil, o pagamento poderá ser feito até o próximo dia útil. Se não for informada, será configurada automaticamente a data de vencimento. Os boletos que forem pagos após a data limite serão devolvidos.</td>
+<td>Sempre deve ser igual a data de vencimento, podendo ser até 365 dias após a data de emissão. <br>Caso seja um dia não útil, o pagamento poderá ser feito até o próximo dia útil.<br>Ao informar alguma data diferente da data de vencimento, retornará um erro. E se não for informada, será configurada automaticamente igual à data de vencimento. Os boletos que forem pagos após a data limite serão devolvidos.</td>
+<td>Deve ser igual a data de vencimento, podendo ser até 365 dias após a data de emissão.<br><br>Caso seja um dia não útil, o pagamento poderá ser feito até o próximo dia útil. Se não for informada, será configurada automaticamente igual à data de vencimento. Os boletos que forem pagos após a data limite serão devolvidos.</td>
+<td>Deve ser maior que a data de vencimento, podendo ser até 365 dias após a data de emissão.<br><br>Caso seja um dia não útil, o pagamento poderá ser feito até o próximo dia útil. Os boletos que forem pagos após a data limite serão devolvidos.</td>
 </tr>
 <tr>
 <td>Pagamento</td>
@@ -3710,6 +3760,10 @@
     
     
     <hr class="panel-line">
+        
+            
+        
+            
         
             
         

@@ -66,7 +66,7 @@ Importante ressaltar que pode haver restrição de habilitação de um determina
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;Segue abaixo os status possíveis de um &lt;strong&gt;boleto gerado&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/overview-emissao-de-boletos/status.png&#34; alt=&#34;status_boleto&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;status_2.jpg&#34; alt=&#34;status_boleto&#34;&gt;&lt;/p&gt;
 &lt;br&gt;
 &lt;h4 id=&#34;glossário&#34;&gt;Glossário&lt;/h4&gt;
 &lt;hr&gt;
@@ -544,7 +544,7 @@ Importante ressaltar que pode haver restrição de habilitação de um determina
         
         &lt;hr&gt;
 &lt;br&gt;
-&lt;h4 id=&#34;válidas-para-todos-os-tipos-de-boleto&#34;&gt;Válidas para todos os tipos de boleto&lt;/h4&gt;
+&lt;h4 id=&#34;válidas-para-os-boletos&#34;&gt;Válidas para os boletos&lt;/h4&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;table&gt;
@@ -573,7 +573,7 @@ Importante ressaltar que pode haver restrição de habilitação de um determina
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Data de vencimento&lt;/td&gt;
-&lt;td&gt;Precisa ser igual ou maior que o dia atual e igual ou menor do que a limit_date. Caso seja um dia não útil o pagamento poderá ser feito até o próximo dia útil.&lt;/td&gt;
+&lt;td&gt;Precisa ser igual ou maior que o dia atual e igual ao limit_data (boleto de proposta) e menor que ao limit_date (boleto de cobrança). Caso seja um dia não útil o pagamento poderá ser feito até o próximo dia útil.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Formato / Layout&lt;/td&gt;
@@ -591,7 +591,7 @@ Importante ressaltar que pode haver restrição de habilitação de um determina
 &lt;th&gt;Regras&lt;/th&gt;
 &lt;th&gt;Depósito&lt;/th&gt;
 &lt;th&gt;Proposta&lt;/th&gt;
-&lt;th&gt;Cobrança &lt;em&gt;(todos os tipos)&lt;/em&gt;&lt;/th&gt;
+&lt;th&gt;Cobrança&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -603,9 +603,9 @@ Importante ressaltar que pode haver restrição de habilitação de um determina
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Data limite&lt;br&gt;&lt;em&gt;(limit_date)&lt;/em&gt;&lt;/td&gt;
-&lt;td&gt;Sempre deve ser igual a data de vencimento, podendo ser até 365 dias após a data de emissão. &lt;br&gt;Caso seja um dia não útil, o pagamento poderá ser feito até o próximo dia útil.&lt;br&gt;Ao informar alguma data diferente da data de vencimento, retornará um erro. E se não for informada, será configurada automaticamente a data de vencimento. Os boletos que forem pagos após a data limite serão devolvidos.&lt;/td&gt;
-&lt;td&gt;Deve ser igual a data de vencimento, podendo ser até 365 dias após a data de emissão.&lt;br&gt;&lt;br&gt;Caso seja um dia não útil, o pagamento poderá ser feito até o próximo dia útil. Se não for informada, será configurada automaticamente a data de vencimento. Os boletos que forem pagos após a data limite serão devolvidos.&lt;/td&gt;
-&lt;td&gt;Deve ser igual ou maior a data de vencimento, podendo ser até 365 dias após a data de emissão.&lt;br&gt;&lt;br&gt;Caso seja um dia não útil, o pagamento poderá ser feito até o próximo dia útil. Se não for informada, será configurada automaticamente a data de vencimento. Os boletos que forem pagos após a data limite serão devolvidos.&lt;/td&gt;
+&lt;td&gt;Sempre deve ser igual a data de vencimento, podendo ser até 365 dias após a data de emissão. &lt;br&gt;Caso seja um dia não útil, o pagamento poderá ser feito até o próximo dia útil.&lt;br&gt;Ao informar alguma data diferente da data de vencimento, retornará um erro. E se não for informada, será configurada automaticamente igual à data de vencimento. Os boletos que forem pagos após a data limite serão devolvidos.&lt;/td&gt;
+&lt;td&gt;Deve ser igual a data de vencimento, podendo ser até 365 dias após a data de emissão.&lt;br&gt;&lt;br&gt;Caso seja um dia não útil, o pagamento poderá ser feito até o próximo dia útil. Se não for informada, será configurada automaticamente igual à data de vencimento. Os boletos que forem pagos após a data limite serão devolvidos.&lt;/td&gt;
+&lt;td&gt;Deve ser maior que a data de vencimento, podendo ser até 365 dias após a data de emissão.&lt;br&gt;&lt;br&gt;Caso seja um dia não útil, o pagamento poderá ser feito até o próximo dia útil. Os boletos que forem pagos após a data limite serão devolvidos.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Pagamento&lt;/td&gt;
@@ -724,7 +724,7 @@ Importante ressaltar que pode haver restrição de habilitação de um determina
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;&lt;strong&gt;limit_date&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
-&lt;br&gt;Data limite para pagamento do boleto bancário. Deve ser igual à data de vencimento para boletos de depósito e proposta. Para boletos de cobrança, deve ser igual ou maior que a data de vencimento. Se não informada, será usada a &lt;code&gt;expiration_date&lt;/code&gt;. Os boletos que forem pagos após a data limite serão devolvidos.&lt;/p&gt;
+&lt;br&gt;Data limite para pagamento do boleto bancário. Deve ser igual à data de vencimento para boletos de depósito e proposta. Para boletos de cobrança, deve ser maior que a data de vencimento. Se não informada, será usada a expiration_date, nos boletos de depósito e de proposta. Os boletos que forem pagos após a data limite serão devolvidos.&lt;/p&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;&lt;strong&gt;invoice_type&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
@@ -736,6 +736,8 @@ Importante ressaltar que pode haver restrição de habilitação de um determina
 &lt;br&gt;     &lt;strong&gt;document&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
 &lt;br&gt;     Número do documento do pagador sem pontos. Não é obrigatório no tipo &lt;code&gt;deposit&lt;/code&gt;.
 &lt;br&gt;
+&lt;br&gt;     &lt;strong&gt;document_type&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(opcional)&lt;/em&gt;
+&lt;br&gt;
 &lt;br&gt;     &lt;strong&gt;legal_name&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
 &lt;br&gt;     É o nome que identifica o pagador para fins legais, administrativos e outros fins oficiais. Não é obrigatório no tipo &lt;code&gt;deposit&lt;/code&gt;.
 &lt;br&gt;
@@ -746,7 +748,7 @@ Importante ressaltar que pode haver restrição de habilitação de um determina
 &lt;p&gt;&lt;strong&gt;discounts&lt;/strong&gt; &lt;code&gt;array_of_objects&lt;/code&gt;
 &lt;br&gt;&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;     &lt;strong&gt;date&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
-&lt;br&gt;     Data até a qual o desconto deve ser aplicado. Formato ISO8601 &lt;code&gt;&amp;quot;YYYY-MM-DD&amp;quot;&lt;/code&gt;. É aceito nos tipos de proposta e cobrança.
+&lt;br&gt;     Data até a qual o desconto deve ser aplicado. Formato ISO8601 &lt;code&gt;&amp;quot;YYYY-MM-DD&amp;quot;&lt;/code&gt;. É aceito nos boletos de proposta e de cobrança.
 &lt;br&gt;
 &lt;br&gt;     &lt;strong&gt;value&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
 &lt;br&gt;     Valor percentual (%) do desconto que será aplicado ao boleto. O valor deve ser maior que 0.0 e até 90.0. Formato decimal. Ex: &amp;ldquo;20.0&amp;rdquo;. É aceito nos tipos de proposta e cobrança.&lt;/p&gt;
@@ -755,19 +757,19 @@ Importante ressaltar que pode haver restrição de habilitação de um determina
 &lt;p&gt;&lt;strong&gt;fine&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
 &lt;br&gt;&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;     &lt;strong&gt;date&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
-&lt;br&gt;     Data que define o dia a partir do qual a multa deve ser aplicada ao boleto. Caso não seja infromada será consiederada a data de validdade. Só é aceito no tipo de cobrança.
+&lt;br&gt;     Data que define o dia a partir do qual a multa deve ser aplicada ao boleto. Caso não seja infromada será consiederada a data de validdade. Só é aceito no boleto de cobrança.
 &lt;br&gt;
 &lt;br&gt;     &lt;strong&gt;value&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
-&lt;br&gt;     Valor percentual (%) da multa que será aplicada ao boleto. O valor do deve ser maior que 0.0 e até 2.0. Formato decimal. Ex: &amp;ldquo;2.0&amp;rdquo;. Só é aceito no tipo de cobrança.&lt;/p&gt;
+&lt;br&gt;     Valor percentual (%) da multa que será aplicada ao boleto. O valor do deve ser maior que 0.0 e até 2.0. Formato decimal. Ex: &amp;ldquo;2.0&amp;rdquo;. Só é aceito no boleto de cobrança.&lt;/p&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;&lt;strong&gt;interest&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
 &lt;br&gt;&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;     &lt;strong&gt;date&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
-&lt;br&gt;     Data que define o dia a partir do qual os juros passam a ser aplicados ao boleto. Só é aceito no tipo de cobrança.
+&lt;br&gt;     Data que define o dia a partir do qual os juros passam a ser aplicados ao boleto. Só é aceito no boleto de cobrança.
 &lt;br&gt;
 &lt;br&gt;     &lt;strong&gt;value&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
-&lt;br&gt;     Valor parcentual (%) dos juros que será aplicado ao boleto por mês. O valor do deve ser maior que 0.0 e até 1.0. Formato decimal. Ex: &amp;ldquo;1.0&amp;rdquo;. Só é aceito no tipo de cobrança.&lt;/p&gt;
+&lt;br&gt;     Valor parcentual (%) dos juros que será aplicado ao boleto por mês. O valor do deve ser maior que 0.0 e até 1.0. Formato decimal. Ex: &amp;ldquo;1.0&amp;rdquo;. Só é aceito no boleto de cobrança.&lt;/p&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;&lt;strong&gt;receiver&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;

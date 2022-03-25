@@ -38,8 +38,7 @@
 &lt;hr&gt;
 &lt;h5 id=&#34;contato-comercial&#34;&gt;Contato Comercial&lt;/h5&gt;
 &lt;p&gt;Para realizar chamadas em nossa API, primeiro precisamos que você preencha este &lt;a href=&#34;https://app.pipefy.com/public/form/Qz4ptt_W/?origem_do_lead=Documenta%C3%A7%C3%A3o&#34; target=&#34;_blank&#34;&gt;formulário&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Nosso time de parcerias entrará em contato em até 24 horas para entender seu modelo de negócio e te apresentar a proposta mais adequada.&lt;/p&gt;
-&lt;p&gt;Você também receberá um contrato para formalização da parceria.&lt;/p&gt;
+&lt;p&gt;Assim que possível o nosso time de parcerias entrará em contato.&lt;/p&gt;
 &lt;p&gt;Por enquanto, ainda não estamos realizando onboarding de parceiros em autosserviço, mas queremos liberar isso em breve!
 &lt;br&gt;
 &lt;br&gt;&lt;/p&gt;
@@ -598,13 +597,10 @@ Veja abaixo um exemplo de permissão concedida:
 &lt;br&gt;
 &lt;h2 id=&#34;aprovando-uma-transação&#34;&gt;Aprovando uma transação&lt;/h2&gt;
 &lt;br&gt;
-&lt;p&gt;Caso uma transação tenha sido iniciada por uma plataforma terceira em uma conta Stone, oferecemos algumas formas para o usuário avaliar e realizar a aprovação ou reprovação das transações. Verifique o melhor formato para seu negócio abaixo:&lt;/p&gt;
-&lt;h5 id=&#34;aplicativo-aprovador&#34;&gt;&lt;strong&gt;Aplicativo Aprovador&lt;/strong&gt;&lt;/h5&gt;
-&lt;p&gt;O Aprovador é um aplicativo utilizado pelo usuário para realizar a autorização de transações criadas pelo parceiro. Além disso, através do aplicativo é possível manter um histórico de movimentação de saída de uma conta. Nesse histórico é possível visualizar os valores movimentados, o destino das movimentações e o usuário que autorizou as transações. É possível também utilizá-lo para realizar aprovações em lote, ou seja, aprovar um grande número de transações pendentes ao mesmo tempo.
-Baixe agora o aplicativo na plataforma &lt;a href=&#34;https://apps.apple.com/br/app/aprovador-stone/id1440677386&#34;&gt;iOS&lt;/a&gt; ou &lt;a href=&#34;https://play.google.com/store/apps/details?id=br.com.stone.approver&amp;amp;hl=pt_BR&amp;amp;gl=US&#34;&gt;Android&lt;/a&gt;&lt;/p&gt;
-&lt;br&gt;
+&lt;p&gt;Caso uma transação tenha sido iniciada por uma plataforma terceira em uma conta Stone, é possível aprovar por meio do aplicativo Stone.
+&lt;br&gt;&lt;/p&gt;
 &lt;h5 id=&#34;aplicativo-stone&#34;&gt;&lt;strong&gt;Aplicativo Stone&lt;/strong&gt;&lt;/h5&gt;
-&lt;p&gt;Além de aprovar transações pelo aplicativo Aprovador Stone, também é possível aprovar pelo aplicativo Stone, no menu “Aprovar transações”. Para baixar o aplicativo na plataforma iOS, &lt;a href=&#34;https://apps.apple.com/br/app/stone/id1438680035&#34;&gt;clique aqui&lt;/a&gt;. Tem um Android? Também temos um aplicativo para você &lt;a href=&#34;https://play.google.com/store/apps/details?id=co.stone.banking.mobile.flagship&amp;amp;hl=pt_BR&amp;amp;gl=US&#34;&gt;clicando aqui&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;No aplicativo da Stone é possível aprovar uma transação, no menu “Aprovar transações”. Para baixar o aplicativo na plataforma iOS, &lt;a href=&#34;https://apps.apple.com/br/app/stone/id1438680035&#34;&gt;clique aqui&lt;/a&gt;. Tem um Android? Também temos um aplicativo para você &lt;a href=&#34;https://play.google.com/store/apps/details?id=co.stone.banking.mobile.flagship&amp;amp;hl=pt_BR&amp;amp;gl=US&#34;&gt;clicando aqui&lt;/a&gt;&lt;/p&gt;
 
       </description>
     </item>
@@ -675,6 +671,10 @@ Essas tentativas são realizadas ao longo do dia, de forma assíncrona, sem um p
 &lt;tr&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;barcode_payment_invoice_expired.json&#34;&gt;barcode_payment_invoice_expired&lt;/a&gt;&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;Representa que o boleto está expirado.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;barcode_payment_invoice_cancelled.json&#34;&gt;barcode_payment_invoice_cancelled&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Representa que o boleto está cancelado.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;&lt;a href=&#34;cash_in_barcode_payment.json&#34;&gt;cash_in_barcode_payment&lt;/a&gt;&lt;/td&gt;

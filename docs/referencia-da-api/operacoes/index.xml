@@ -25,7 +25,7 @@
         
         &lt;br&gt;
 &lt;p&gt;Este endpoint realiza a aprovação em lote de operações pendentes para uma conta.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/account/{account_id}/operations/actions/approve
+&lt;pre&gt;&lt;code&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/accounts/{account_id}/operations/actions/approve
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Existem 2 ações possíveis nessa API:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;approve_only&lt;/strong&gt;: aprova apenas as operações passadas no campo &lt;strong&gt;operations&lt;/strong&gt;&lt;/li&gt;
@@ -71,7 +71,7 @@
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;operations&amp;#34;&lt;/span&gt;: [{
       &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;b14bd4ba-4476-43ef-baf6-58c8524830b3/&amp;#34;&lt;/span&gt;,
       &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;pix_payment&amp;#34;&lt;/span&gt;
-  }]   
+  }]
 }
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
@@ -99,7 +99,7 @@ content-type: application/json
         
         &lt;br&gt;
 &lt;p&gt;Este endpoint realiza o cancelamento em lote operações pendentes de aprovação e/ou operações agendadas para uma conta.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/account/{account_id}/operations/actions/cancel
+&lt;pre&gt;&lt;code&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/accounts/{account_id}/operations/actions/cancel
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Existem 2 ações possíveis nessa API:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;cancel_only&lt;/strong&gt;: cancela apenas as operações passadas no campo &lt;strong&gt;operations&lt;/strong&gt;&lt;/li&gt;
@@ -111,7 +111,7 @@ content-type: application/json
 &lt;li&gt;&lt;code&gt;external_transfer&lt;/code&gt; (TED)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;internal_transfer&lt;/code&gt; (Pagamento Interno)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;barcode_payment&lt;/code&gt; (Pagamento de Boleto)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;pix_payment&lt;/code&gt; (Pix)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pix_payment&lt;/code&gt; (Pix)(Beta)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;refund_for_pix_payment&lt;/code&gt; (Devolução de um Pix)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;br&gt;
@@ -145,7 +145,7 @@ content-type: application/json
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;operations&amp;#34;&lt;/span&gt;: [{
       &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;b14bd4ba-4476-43ef-baf6-58c8524830b3/&amp;#34;&lt;/span&gt;,
       &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;pix_payment&amp;#34;&lt;/span&gt;
-  }]   
+  }]
 }
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;

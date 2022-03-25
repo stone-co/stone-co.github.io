@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Stone OpenBank – PIX</title>
+    <title>Stone OpenBank – Pix</title>
     <link>https://stone-co.github.io/docs/referencia-da-api/pix/</link>
-    <description>Recent content in PIX on Stone OpenBank</description>
+    <description>Recent content in Pix on Stone OpenBank</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 31 Mar 2021 18:00:00 -0300</lastBuildDate>
     
@@ -58,7 +58,7 @@
     </item>
     
     <item>
-      <title>Docs: Relato de Infração</title>
+      <title>Docs: Relato de Infração (Beta)</title>
       <link>https://stone-co.github.io/docs/referencia-da-api/pix/relato-infracao/</link>
       <pubDate>Fri, 11 Feb 2022 14:00:00 -0300</pubDate>
       
@@ -258,7 +258,7 @@ Se for cancelado, o relato deixa de ser contabilizado em REPORTED_FRAUDS durante
       <description>
         
         
-        &lt;h2 id=&#34;o-que-é-uma-chave-pix&#34;&gt;O que é uma Chave PIX&lt;/h2&gt;
+        &lt;h2 id=&#34;o-que-é-uma-chave-pix&#34;&gt;O que é uma Chave Pix&lt;/h2&gt;
 &lt;hr&gt;
 &lt;p&gt;No arranjo do Pix os usuários, tanto pagadores quanto recebedores, precisam se cadastrar no DICT (Diretório de Identificadores de Contas Transacionais) para criar sua(s) chave(s) Pix.
 &lt;br&gt;&lt;br&gt;
@@ -266,7 +266,7 @@ Esse cadastro é feito por meio de um PSP (Prestador do Serviço de Pagamento)  
 &lt;br&gt;&lt;br&gt;
 Essas chaves serão usadas pelos PSP diretos e indiretos na comunicação com os sistemas do Pix para o processamento das transações.
 &lt;br&gt;&lt;br&gt;
-Os PSPs diretos e indiretos por sua vez são cadastrados e homologados junto ao PIX e por isso possuem um cadastro diferente não tendo uma Chave Pix. Na API de Banking vamos identificar o PSP indireto em todos os requests por do &lt;code&gt;account_id&lt;/code&gt; e do  &lt;code&gt;participant_ispb&lt;/code&gt;.
+Os PSPs diretos e indiretos por sua vez são cadastrados e homologados junto ao Pix e por isso possuem um cadastro diferente não tendo uma Chave Pix. Na API de Banking vamos identificar o PSP indireto em todos os requests por do &lt;code&gt;account_id&lt;/code&gt; e do  &lt;code&gt;participant_ispb&lt;/code&gt;.
 &lt;br&gt;&lt;/p&gt;
 &lt;p&gt;
 
@@ -276,7 +276,7 @@ Os PSPs diretos e indiretos por sua vez são cadastrados e homologados junto ao 
 &lt;/div&gt;
 
 &lt;br&gt;&lt;/p&gt;
-&lt;h2 id=&#34;tipos-de-chave-pix&#34;&gt;Tipos de Chave PIX&lt;/h2&gt;
+&lt;h2 id=&#34;tipos-de-chave-pix&#34;&gt;Tipos de Chave Pix&lt;/h2&gt;
 &lt;hr&gt;
 &lt;p&gt;Para fazer o cadastro dessa chave os usuários podem optar por 4 tipos diferentes:&lt;br&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -299,7 +299,7 @@ O conjunto de chaves de um participante indireto é independente do conjunto de 
 &lt;li&gt;&lt;code&gt;accepted&lt;/code&gt;: solicitação finalizada com sucesso.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;rejected&lt;/code&gt;: solicitação rejeitada. Veja o campo &lt;code&gt;error_description&lt;/code&gt;para entender o motivo.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;br&gt;  
+&lt;br&gt;
 &lt;h5 id=&#34;status-da-chave&#34;&gt;Status da chave&lt;/h5&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;portability_pending&lt;/code&gt;: o processo de reivindicação de portabilidade está em andamento.&lt;/li&gt;
@@ -307,7 +307,7 @@ O conjunto de chaves de um participante indireto é independente do conjunto de 
 &lt;li&gt;&lt;code&gt;active&lt;/code&gt;: chave ativa no DICT e válida para uso.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;deleted&lt;/code&gt;: chave excluída no DICT e inválida para uso.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;br&gt; 
+&lt;br&gt;
 &lt;h5 id=&#34;status-da-reivindicação&#34;&gt;Status da reivindicação&lt;/h5&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;open&lt;/code&gt;: aberta pelo reivindicador, mas ainda não recebida pelo doador.&lt;/li&gt;
