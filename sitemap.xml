@@ -106,16 +106,6 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/operacoes/aprovar-operacoes/</loc>
-    <lastmod>2022-01-13T18:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/operacoes/cancelar-operacoes/</loc>
-    <lastmod>2022-01-13T18:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/pix/chaves-pix/atualizar-uma-chave-pix/</loc>
     <lastmod>2021-10-14T09:26:00-03:00</lastmod>
   </url>
@@ -209,16 +199,6 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/operacoes/detalhes-operacoes/</loc>
-    <lastmod>2022-01-13T18:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/operacoes/lista-de-operacoes/</loc>
-    <lastmod>2022-01-13T18:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/pix/pagamento/confirmar-pagamento-pendente/</loc>
     <lastmod>2021-09-20T15:45:21-03:00</lastmod>
   </url>
@@ -300,6 +280,11 @@
   
   <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/kyc/enviar-fotos/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/exibir-limites-de-valores-para-emissao-de-pagamento/</loc>
+    <lastmod>2022-03-25T18:21:13-03:00</lastmod>
   </url>
   
   <url>
@@ -644,11 +629,6 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/operacoes/</loc>
-    <lastmod>2022-01-13T18:00:00-03:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/pix/</loc>
     <lastmod>2021-03-31T18:00:00-03:00</lastmod>
   </url>
@@ -660,7 +640,7 @@
   
   <url>
     <loc>https://stone-co.github.io/</loc>
-    <lastmod>2022-03-08T15:20:00-03:00</lastmod>
+    <lastmod>2022-03-25T18:21:13-03:00</lastmod>
   </url>
   
   <url>
