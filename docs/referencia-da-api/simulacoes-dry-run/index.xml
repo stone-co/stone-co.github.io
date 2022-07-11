@@ -215,77 +215,137 @@ content-type: application/json
     </item>
     
     <item>
-      <title>Docs: Objetos da Simulação de Pagamento</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/objetos-simulacao-de-pagamento/</link>
-      <pubDate>Tue, 14 Apr 2020 14:26:24 +0000</pubDate>
+      <title>Docs: Simular o Pagamento de Um Documento</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/simular-o-pagamento-de-um-documento/</link>
+      <pubDate>Mon, 01 Apr 2019 20:21:16 +0000</pubDate>
       
-      <guid>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/objetos-simulacao-de-pagamento/</guid>
+      <guid>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/simular-o-pagamento-de-um-documento/</guid>
       <description>
         
         
-        &lt;hr&gt;
-&lt;br&gt;
-&lt;p&gt;O Dry Run de pagamentos retorna, além do &lt;a href=&#34;https://stone-co.github.io/docs/referencia-da-api/pagamentos/overview/#o-objeto-pagamento&#34;&gt;Objeto Pagamento&lt;/a&gt; em si, os Objetos &lt;a href=&#34;#objeto-barcode-details&#34;&gt;Barcode Details&lt;/a&gt; e &lt;a href=&#34;#objeto-details&#34;&gt;Details&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Como complemento, descrevemos os possíveis resultados para o campo &lt;a href=&#34;#document_payment_type&#34;&gt;document_payment_type&lt;/a&gt;.&lt;/p&gt;
-&lt;br&gt;
-&lt;h3 id=&#34;objeto-barcode-details&#34;&gt;Objeto Barcode Details&lt;/h3&gt;
+        &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/payments
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
-&lt;br&gt;
-&lt;p&gt;O Objeto Barcode Details é composto por meio da extração das informações contidas no código de barras informado, dispondo-as nos seguintes campos:&lt;/p&gt;
-&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;Authorization&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Bearer token de autenticação&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Chave de idempotência&lt;/p&gt;
+&lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;barcode&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Código de barras do documento.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Identificador da conta pagadora&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;scheduled_to&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Data de agendamento para o pagamento&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;amount&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Valor do pagamento&lt;/p&gt;
+&lt;h5 id=&#34;result-params&#34;&gt;&lt;strong&gt;RESULT PARAMS&lt;/strong&gt;&lt;/h5&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;Chave&lt;/th&gt;
 &lt;th&gt;Descrição&lt;/th&gt;
 &lt;th&gt;Tipo&lt;/th&gt;
+&lt;th&gt;Regra de Negócio&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;account_id&lt;/td&gt;
+&lt;td&gt;Identificador da conta pagadora&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Obrigatório&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;amount&lt;/td&gt;
+&lt;td&gt;Valor do pagamento&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Obrigatório&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;barcode&lt;/td&gt;
+&lt;td&gt;Código de barras do pagamento&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Obrigatório&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;barcode_details&lt;/td&gt;
+&lt;td&gt;Informações extraídas do código de barras&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;#barcodedetails&#34;&gt;Detalhes do objeto&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;details&lt;/td&gt;
+&lt;td&gt;Informações acerca do status do pagamento de acordo com a sua fonte emissora&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Object&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;#details&#34;&gt;Detalhes do objeto&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;payment_being_processed?&lt;/td&gt;
+&lt;td&gt;Indica se a Stone já recebeu uma solicitação de pagamento deste documento e ainda está processando a solicitação. Em caso de “true” não deve ser feito novo pagamento.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;Boolean&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Obrigatório&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h6 id=&#34;barcodedetails&#34;&gt;BarcodeDetails&lt;/h6&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Chave&lt;/th&gt;
+&lt;th&gt;Descrição&lt;/th&gt;
+&lt;th&gt;Tipo&lt;/th&gt;
+&lt;th&gt;Regra de negócio&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;bank_code&lt;/td&gt;
-&lt;td&gt;Código numérico da instituição que emitiu o documento.&lt;/td&gt;
+&lt;td&gt;Código numérico da instituição que emitiu o documento&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Obrigatório para boletos bancários, opcional para pagamentos de concessionária&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;bank_name&lt;/td&gt;
-&lt;td&gt;Nome da instituição que emitiu o documento.&lt;/td&gt;
+&lt;td&gt;Nome da instituição que emitiu o documento&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Obrigatório para boletos bancários, opcional para pagamentos de concessionária&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;barcode&lt;/td&gt;
-&lt;td&gt;Código de barras.&lt;/td&gt;
+&lt;td&gt;Código de barras do documento&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Obrigatório&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;expiration_date&lt;/td&gt;
-&lt;td&gt;Data de vencimento.&lt;/td&gt;
+&lt;td&gt;Data de vencimento do documento&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Opcional&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;face_value&lt;/td&gt;
-&lt;td&gt;Valor com o qual o documento foi criado e que consta do código de barras.&lt;/td&gt;
+&lt;td&gt;Valor com o qual o documento foi criado e que consta no código de barras&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Obrigatório&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;writable_line&lt;/td&gt;
-&lt;td&gt;Código numérico que acompanha o código de barras.&lt;/td&gt;
+&lt;td&gt;Código numérico que acompanha o código de barras&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Obrigatório&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;br&gt;
-&lt;h3 id=&#34;objeto-details&#34;&gt;Objeto Details&lt;/h3&gt;
-&lt;hr&gt;
-&lt;br&gt;
-&lt;p&gt;O Objeto Details traz informações do status atual desse documento segundo sua fonte emissora, como juros, multas, horário limite de pagamento, entre outras. Veja todas as informações retornadas abaixo.&lt;/p&gt;
-&lt;br&gt;
+&lt;h6 id=&#34;details&#34;&gt;Details&lt;/h6&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;Chave&lt;/th&gt;
 &lt;th&gt;Descrição&lt;/th&gt;
 &lt;th&gt;Tipo&lt;/th&gt;
+&lt;th&gt;Regra de Negócio&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -293,159 +353,168 @@ content-type: application/json
 &lt;td&gt;bank_name&lt;/td&gt;
 &lt;td&gt;Nome da instituição que emitiu o documento.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Opcional&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;barcode&lt;/td&gt;
 &lt;td&gt;Código de barras.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Obrigatório&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;discount_value&lt;/td&gt;
-&lt;td&gt;Valor do desconto que está sendo aplicado ao boleto. Caso nenhum desconto esteja sendo aplicado vira &lt;code&gt;null&lt;/code&gt;.&lt;/td&gt;
+&lt;td&gt;Valor do desconto que está sendo aplicado ao boleto.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;null&lt;/code&gt; caso não haja disconto sendo aplicado&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;document_payment_type&lt;/td&gt;
 &lt;td&gt;Informa o código referente a título.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;#document_payment_type&#34;&gt;Possíveis valores&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;document_type&lt;/td&gt;
-&lt;td&gt;Informa o tipo de documento. Valores possíveis são: boleto e concessionaria.&lt;/td&gt;
+&lt;td&gt;Informa o tipo de documento.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;&amp;quot;boleto&amp;quot;&lt;/code&gt; ou &lt;code&gt;&amp;quot;concessionaria&amp;quot;&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;expiration_date&lt;/td&gt;
 &lt;td&gt;Data de vencimento&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Opcional&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;face_value&lt;/td&gt;
 &lt;td&gt;Valor com o qual o documento foi criado e que consta do código de barras.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Opcional&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;fine_value&lt;/td&gt;
-&lt;td&gt;Valor da multa que está sendo aplicada ao boleto. Caso nenhuma multa esteja sendo aplicada vira &lt;code&gt;null&lt;/code&gt;.&lt;/td&gt;
+&lt;td&gt;Valor da multa que está sendo aplicada ao boleto.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;null&lt;/code&gt; caso nenhuma multa esteja sendo aplicada&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;interest_value&lt;/td&gt;
-&lt;td&gt;Valor dos juros que estão sendo aplicados ao boleto. Caso não haja juros aplicados vira &lt;code&gt;null&lt;/code&gt;.&lt;/td&gt;
+&lt;td&gt;Valor dos juros que estão sendo aplicados ao boleto.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;null&lt;/code&gt; caso não hajam juros sendo aplicados&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;max_value&lt;/td&gt;
 &lt;td&gt;Valor máximo que será aceito no pagamento deste documento.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Opcional&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;min_value&lt;/td&gt;
 &lt;td&gt;Valor mínimo que será aceito no pagamento deste documento.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Opcional&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;payer_cpf_cnpj&lt;/td&gt;
 &lt;td&gt;Número do documento do pagador sem pontos.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Opcional&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;payer_legal_name&lt;/td&gt;
 &lt;td&gt;É o nome que identifica o pagador para fins legais, administrativos e outros fins oficiais.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Opcional&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;payer_trade_name&lt;/td&gt;
 &lt;td&gt;Nome fantasia do pagador.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;payment_end_time&lt;/td&gt;
-&lt;td&gt;Horário até o qual o pagamento é possível em um dia útil. Respeita o payment_limit_date. Formato hh:mm:ss.&lt;/td&gt;
-&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Opcional&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;payment_limit_date&lt;/td&gt;
-&lt;td&gt;Data limite para pagamento do documento. Formato ISO8601 &amp;ldquo;YYYY-MM-DD&amp;rdquo;.&lt;/td&gt;
+&lt;td&gt;Data limite para pagamento do documento.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Opcional. Formato ISO8601 &lt;code&gt;YYYY-MM-DD&lt;/code&gt;.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;payment_start_time&lt;/td&gt;
-&lt;td&gt;Horário a partir do qual o pagamento é possível em um dia útil. Respeita o payment_limit_date. Formato hh:mm:ss.&lt;/td&gt;
+&lt;td&gt;Horário a partir do qual o pagamento é possível em um dia útil.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Respeita o &lt;code&gt;payment_limit_date&lt;/code&gt;. Formato &lt;code&gt;hh:mm:ss&lt;/code&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;payment_end_time&lt;/td&gt;
+&lt;td&gt;Horário até o qual o pagamento é possível em um dia útil.&lt;/td&gt;
+&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Respeita o &lt;code&gt;payment_limit_date&lt;/code&gt;. Formato &lt;code&gt;hh:mm:ss&lt;/code&gt;.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;recipient_cpf_cnpj&lt;/td&gt;
 &lt;td&gt;Número do documento do beneficiário sem pontos.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Opcional&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;recipient_name&lt;/td&gt;
 &lt;td&gt;Nome do beneficiário.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Opcional&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;settlement_date&lt;/td&gt;
-&lt;td&gt;Data em que o dinheiro do pagamento do boleto é depositado na conta do beneficiário. Formato ISO8601 &amp;ldquo;YYYY-MM-DDThh:mm:ssZ&amp;rdquo;. Caso o boleto ainda não tenha sido pago voltará &lt;code&gt;null&lt;/code&gt;.&lt;/td&gt;
+&lt;td&gt;Data em que o dinheiro do pagamento do boleto é depositado na conta do beneficiário.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Formato ISO8601 &lt;code&gt;YYYY-MM-DDThh:mm:ssZ&lt;/code&gt;. Caso o boleto ainda não tenha sido pago o valor será &lt;code&gt;null&lt;/code&gt;.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;status&lt;/td&gt;
-&lt;td&gt;Status atual do documento na sua instituição emissora. Valores possíveis: payable, paid ou unpayable.&lt;/td&gt;
+&lt;td&gt;Status atual do documento na sua instituição emissora.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;&amp;quot;payable&amp;quot;&lt;/code&gt; para documentos que podem ser pagos, &lt;code&gt;&amp;quot;paid&amp;quot;&lt;/code&gt; para documentos já pagos e que não aceitam mais pagamentos, e &lt;code&gt;&amp;quot;unpayable&amp;quot;&lt;/code&gt; para documentos que não podem ser pagos.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;total_added_value&lt;/td&gt;
 &lt;td&gt;Total que foi adicionado ao valor original do documento decorrente de juros e multas.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Opcional. Caso seja boleto bancário, o valor será &lt;code&gt;null&lt;/code&gt;.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;total_discounted_value&lt;/td&gt;
 &lt;td&gt;Total que foi abatido do valor originial do documento decorrente de descontos.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Opcional. Caso seja boleto bancário, o valor será &lt;code&gt;null&lt;/code&gt;.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;updatable_value&lt;/td&gt;
-&lt;td&gt;Indica se é permitido alterar o valor do documento. Só disponível para document_type com valor concessionaria.&lt;/td&gt;
+&lt;td&gt;Indica se é permitido alterar o valor do documento.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Boolean&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Opcional. Caso seja boleto bancário, o valor será &lt;code&gt;null&lt;/code&gt;.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;value&lt;/td&gt;
 &lt;td&gt;Valor atualizado já com descontos, multas e juros que se aplicam.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Opcional&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;writable_line&lt;/td&gt;
 &lt;td&gt;Código numérico que acompanha o código de barras.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Obrigatório&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;unpayable_reason_code&lt;/td&gt;
 &lt;td&gt;Código que representa o motivo de estar impagável.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;unpayable_reason_description&lt;/td&gt;
-&lt;td&gt;Descrição do motivo de estar impagável.&lt;/td&gt;
-&lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;accepts_partial_payment&lt;/td&gt;
-&lt;td&gt;Indica se o boleto aceita pagamento parcial&lt;/td&gt;
-&lt;td&gt;&lt;em&gt;Boolean&lt;/em&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;number_of_partials&lt;/td&gt;
-&lt;td&gt;Indica quantas vezes o boleto pode ser pago, se o número for 99 significa que o número de vezes é ilimitado&lt;/td&gt;
-&lt;td&gt;&lt;em&gt;Integer&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;Retornado somente se o status do documento for &lt;code&gt;&amp;quot;unpayable&amp;quot;&lt;/code&gt;, caso contrário será &lt;code&gt;null&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;br&gt;
-&lt;h3 id=&#34;document_payment_type&#34;&gt;Document_payment_type&lt;/h3&gt;
 &lt;hr&gt;
-&lt;br&gt;
-&lt;br&gt;
+&lt;h6 id=&#34;document_payment_type&#34;&gt;document_payment_type&lt;/h6&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -456,7 +525,7 @@ content-type: application/json
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;CH Cheque.&lt;/td&gt;
+&lt;td&gt;CH Cheque&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2&lt;/td&gt;
@@ -592,140 +661,90 @@ content-type: application/json
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Docs: Simular o Pagamento de Um Documento</title>
-      <link>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/simular-o-pagamento-de-um-documento/</link>
-      <pubDate>Mon, 01 Apr 2019 20:21:16 +0000</pubDate>
-      
-      <guid>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/simular-o-pagamento-de-um-documento/</guid>
-      <description>
-        
-        
-        &lt;hr&gt;
-&lt;pre&gt;&lt;code&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/payments
-&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
-&lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h4&gt;
-&lt;hr&gt;
-&lt;br&gt;
-&lt;p&gt;&lt;strong&gt;barcode&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Código de barras do documento.&lt;/p&gt;
-&lt;hr&gt;
-&lt;br&gt;
-&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Identificador da conta pagadora&lt;/p&gt;
-&lt;br&gt;
-&lt;hr&gt;
-&lt;h4 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h4&gt;
-&lt;hr&gt;
-&lt;br&gt;
-&lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt;  &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Chave de idempotência&lt;/p&gt;
-&lt;br&gt;
-&lt;hr&gt;
-&lt;h5 id=&#34;results-params&#34;&gt;Results Params&lt;/h5&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Chave&lt;/th&gt;
-&lt;th&gt;Descrição&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;document_type&lt;/td&gt;
-&lt;td&gt;Tipo do documento, podendo ser um dentre os valores à seguir: &amp;lsquo;boleto&amp;rsquo; ou &amp;lsquo;concessionaria&amp;rsquo;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;payment_being_processed?&lt;/td&gt;
-&lt;td&gt;Indica se a Stone já recebeu uma solicitação de pagamento deste documento e ainda está processando a solicitação. Em caso de &amp;ldquo;true&amp;rdquo; não deve ser feito novo pagamento.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;br&gt;
-&lt;hr&gt;
 &lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
 &lt;pre&gt;&lt;code&gt;200 ok
 content-type: application/json
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Body&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;79d8449d-94f7-454d-9a37-6f053748058f&amp;#34;&lt;/span&gt;,
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;15000&lt;/span&gt;,
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;approval_expired_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;approved_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-20T17:58:59Z&amp;#34;&lt;/span&gt;,
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;approved_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user:893c0cfb-166f-4233-a97d-02c5943cebe0&amp;#34;&lt;/span&gt;,
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;barcode&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;19796863300000150000000025300979370888041628&amp;#34;&lt;/span&gt;,
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;barcode_details&amp;#34;&lt;/span&gt;: {
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;bank_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;197&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;bank_name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;STONE PAGAMENTOS S.A.&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;barcode&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;19796863300000150000000025300979370888041628&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;expiration_date&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-27&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;face_value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;15000&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;writable_line&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;19790000052530097937108880416287686330000015000&amp;#34;&lt;/span&gt;
-    },
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cancelled_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cancelled_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-20T17:58:59Z&amp;#34;&lt;/span&gt;,
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user:893c0cfb-166f-4233-a97d-02c5943cebe0&amp;#34;&lt;/span&gt;,
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;details&amp;#34;&lt;/span&gt;: {
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;payer_trade_name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;E&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;divergent_amount_auth_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;3&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;interest_value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updatable_value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;min_value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;8000&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;payer_cpf_cnpj&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;11725907020&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;payment_limit_date&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-27&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;writable_line&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;19790000052530097937108880416287686330000015000&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;total_discounted_value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;barcode&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;19796863300000150000000025300979370888041628&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;accepts_partial_payment&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;false&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;interest_date&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;payable&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;recipient_name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Nome do CPF 11725907020&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;payment_end_time&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;discounts&amp;#34;&lt;/span&gt;: [{
-            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;
-        }],
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;bank_name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;discount_value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fine_value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document_payment_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;total_added_value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;unpayable_reason_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;15000&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;unpayable_reason_description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;payer_legal_name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Nome do CPF 11725907020&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;payment_start_time&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;face_value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;15000&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;boleto&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;settlement_date&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fine_date&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;max_value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;15000&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;expiration_date&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2021-05-27&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;recipient_cpf_cnpj&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;11725907020&amp;#34;&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;accepts_partial_payment&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;true&lt;/span&gt;,
-        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;number_of_partials&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;2&lt;/span&gt;
-    },
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;failed_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;failure_reason_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;failure_reason_description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fee&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;,
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;finished_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;idempotency_key&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;payment_being_processed?&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;false&lt;/span&gt;,
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;refund_reason_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;refund_reason_description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;refunded_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;rejected_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;rejected_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;request_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;7d9abd369b0a19a3e26fc6b3e2f52f8c&amp;#34;&lt;/span&gt;,
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;scheduled_to&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;APPROVED&amp;#34;&lt;/span&gt;,
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;writable_line&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;19790000052530097937108880416287686330000015000&amp;#34;&lt;/span&gt;
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;87ec3cb5-884e-492f-ae46-4e2c92a2e359&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;5000000&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;approval_expired_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;approved_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2022-06-15T14:50:28Z&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;approved_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user:9d213bde-d468-41ea-a502-348ddf7fa573&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;barcode&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;19792912500050000000000075096336954691269269&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;barcode_details&amp;#34;&lt;/span&gt;: {
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;bank_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;197&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;bank_name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;STONE IP S.A.&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;barcode&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;19792912500050000000000075096336954691269269&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;expiration_date&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2022-10-01&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;face_value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;5000000&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;writable_line&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;19790000057509633695546912692699291250005000000&amp;#34;&lt;/span&gt;
+  },
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cancelled_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cancelled_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2022-06-15T14:50:28Z&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user:9d213bde-d468-41ea-a502-348ddf7fa573&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;details&amp;#34;&lt;/span&gt;: {
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;min_value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;max_value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;unpayable_reason_description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;unpayable_reason_details&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;barcode&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;19792912500050000000000075096336954691269269&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;expiration_date&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;total_added_value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;payment_limit_date&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;payment_start_time&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;bank_ispb&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;16501555&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;discounts&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;payer_legal_name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;recipient_name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;settlement_date&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;bank_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;197&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fine_date&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;interest_value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;number_of_partials&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;payment_end_time&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;accepts_partial_payment&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;payer_cpf_cnpj&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;unpayable_reason_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;face_value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document_payment_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;bank_name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;STONE IP S.A.&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;payer_trade_name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;interest_date&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;boleto&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;divergent_amount_auth_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fine_value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updatable_value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;recipient_cpf_cnpj&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;unpayable&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;discount_value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;total_discounted_value&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;writable_line&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;19790000057509633695546912692699291250005000000&amp;#34;&lt;/span&gt;
+  },
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;effective_payer&amp;#34;&lt;/span&gt;: {
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;289.851.350-40&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;,
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;legal_name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Caio Giovanni Ricardo Moraes&amp;#34;&lt;/span&gt;
+  },
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;failed_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;failure_reason_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;failure_reason_description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;fee&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;finished_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;idempotency_key&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;payment_being_processed?&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;false&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;refund_reason_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;refund_reason_description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;refunded_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;rejected_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;rejected_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;request_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;74bc3080-1f51-939d-8f7a-6fda572c8675&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;scheduled_to&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;APPROVED&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;writable_line&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;19790000057509633695546912692699291250005000000&amp;#34;&lt;/span&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>

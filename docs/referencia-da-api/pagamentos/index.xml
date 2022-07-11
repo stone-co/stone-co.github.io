@@ -42,10 +42,10 @@
 &lt;/div&gt;
 
 &lt;br&gt;
-&lt;h3 id=&#34;estados&#34;&gt;Estados&lt;/h3&gt;
+&lt;h3 id=&#34;status&#34;&gt;Status&lt;/h3&gt;
 &lt;hr&gt;
 &lt;br&gt;
-&lt;p&gt;Segue abaixo os estados possíveis de um &lt;strong&gt;pagamento&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;Segue abaixo os status possíveis de um &lt;strong&gt;pagamento&lt;/strong&gt;:&lt;/p&gt;
 &lt;br&gt;
 &lt;p&gt;&lt;img src=&#34;./estados_pagamento.png&#34; alt=&#34;Imagem 1&#34;&gt;&lt;/p&gt;
 &lt;br&gt;
@@ -267,7 +267,7 @@
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;status&lt;/td&gt;
-&lt;td&gt;Status atual do pagamento, podendo ser um dentre os status à seguir: CREATED, REJECTED, EXPIRED, APPROVED, SCHEDULED, FAILED, FINISHED, CANCELLED.&lt;/td&gt;
+&lt;td&gt;Status atual do pagamento, podendo ser um dentre os status à seguir: CREATED, MONEY_RESERVED, REJECTED, EXPIRED, APPROVED, SCHEDULED, FAILED, FINISHED, CANCELLED.&lt;/td&gt;
 &lt;td&gt;&lt;em&gt;String&lt;/em&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;

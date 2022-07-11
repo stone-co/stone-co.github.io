@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.ef520f7dab0be85c6963921e0b0a492e.json"
+  data-offline-search-index-json-src="/offline-search-index.33aee50684d16f5c466623c53dbd5b68.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.ef520f7dab0be85c6963921e0b0a492e.json"
+  data-offline-search-index-json-src="/offline-search-index.33aee50684d16f5c466623c53dbd5b68.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -986,31 +986,6 @@
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apisimulacoes-dry-runsimular-uma-transferencia-externa">
-      
-      
-      
-    </li>
-  </ul>
-</ul>
-
-        
-      
-      
-      
-        
-          
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/simulacoes-dry-run/objetos-simulacao-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Objetos da Simulação de Pagamento</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsreferencia-da-apisimulacoes-dry-runobjetos-simulacao-de-pagamento">
       
       
       
@@ -2658,6 +2633,31 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/pagamento/listar-pagamentos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Pix</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixpagamentolistar-pagamentos">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/docs/referencia-da-api/pix/pagamento/buscar-dados-qrcode/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Buscar dados do QRCode</a>
   </li>
   <ul>
@@ -2737,6 +2737,56 @@
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipixpagamentodetalhar-pix-enviado">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/devolucao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Devolução de transferência Pix</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixdevolucao">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/devolucao/criar-devolucao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar um devolução de pagamento Pix</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixdevolucaocriar-devolucao">
       
       
       
@@ -3527,127 +3577,528 @@
 		<h1>Simular o Pagamento de Um Documento</h1>
         </div>
 	
-	<hr>
-<pre><code>POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/payments
-</code></pre><hr>
+	<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">POST https://sandbox-api.openbank.stone.com.br/api/v1/dry_run/payments
+</code></pre></div><h4 id="headers"><strong>HEADERS</strong></h4>
+<hr>
+<p><strong>Authorization</strong> <code>string</code> <em>(obrigatório)</em></p>
+<p>Bearer token de autenticação</p>
+<p><strong>x-stone-idempotency-key</strong> <code>string</code> <em>(obrigatório)</em></p>
+<p>Chave de idempotência</p>
 <h4 id="body-params"><strong>BODY PARAMS</strong></h4>
 <hr>
-<br>
-<p><strong>barcode</strong>  <code>string</code></p>
+<p><strong>barcode</strong> <code>string</code> <em>(obrigatório)</em></p>
 <p>Código de barras do documento.</p>
-<hr>
-<br>
-<p><strong>account_id</strong>  <code>string</code></p>
+<p><strong>account_id</strong> <code>string</code> <em>(obrigatório)</em></p>
 <p>Identificador da conta pagadora</p>
-<br>
-<hr>
-<h4 id="headers"><strong>HEADERS</strong></h4>
-<hr>
-<br>
-<p><strong>x-stone-idempotency-key</strong>  <code>string</code></p>
-<p>Chave de idempotência</p>
-<br>
-<hr>
-<h5 id="results-params">Results Params</h5>
+<p><strong>scheduled_to</strong> <code>string</code></p>
+<p>Data de agendamento para o pagamento</p>
+<p><strong>amount</strong> <code>integer</code></p>
+<p>Valor do pagamento</p>
+<h5 id="result-params"><strong>RESULT PARAMS</strong></h5>
 <table>
 <thead>
 <tr>
 <th>Chave</th>
 <th>Descrição</th>
+<th>Tipo</th>
+<th>Regra de Negócio</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>document_type</td>
-<td>Tipo do documento, podendo ser um dentre os valores à seguir: &lsquo;boleto&rsquo; ou &lsquo;concessionaria&rsquo;</td>
+<td>account_id</td>
+<td>Identificador da conta pagadora</td>
+<td><em>String</em></td>
+<td>Obrigatório</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>Valor do pagamento</td>
+<td><em>Integer</em></td>
+<td>Obrigatório</td>
+</tr>
+<tr>
+<td>barcode</td>
+<td>Código de barras do pagamento</td>
+<td><em>String</em></td>
+<td>Obrigatório</td>
+</tr>
+<tr>
+<td>barcode_details</td>
+<td>Informações extraídas do código de barras</td>
+<td><em>Object</em></td>
+<td><a href="#barcodedetails">Detalhes do objeto</a></td>
+</tr>
+<tr>
+<td>details</td>
+<td>Informações acerca do status do pagamento de acordo com a sua fonte emissora</td>
+<td><em>Object</em></td>
+<td><a href="#details">Detalhes do objeto</a></td>
 </tr>
 <tr>
 <td>payment_being_processed?</td>
-<td>Indica se a Stone já recebeu uma solicitação de pagamento deste documento e ainda está processando a solicitação. Em caso de &ldquo;true&rdquo; não deve ser feito novo pagamento.</td>
+<td>Indica se a Stone já recebeu uma solicitação de pagamento deste documento e ainda está processando a solicitação. Em caso de “true” não deve ser feito novo pagamento.</td>
+<td><em>Boolean</em></td>
+<td>Obrigatório</td>
 </tr>
 </tbody>
 </table>
-<br>
+<h6 id="barcodedetails">BarcodeDetails</h6>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Descrição</th>
+<th>Tipo</th>
+<th>Regra de negócio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bank_code</td>
+<td>Código numérico da instituição que emitiu o documento</td>
+<td><em>String</em></td>
+<td>Obrigatório para boletos bancários, opcional para pagamentos de concessionária</td>
+</tr>
+<tr>
+<td>bank_name</td>
+<td>Nome da instituição que emitiu o documento</td>
+<td><em>String</em></td>
+<td>Obrigatório para boletos bancários, opcional para pagamentos de concessionária</td>
+</tr>
+<tr>
+<td>barcode</td>
+<td>Código de barras do documento</td>
+<td><em>String</em></td>
+<td>Obrigatório</td>
+</tr>
+<tr>
+<td>expiration_date</td>
+<td>Data de vencimento do documento</td>
+<td><em>String</em></td>
+<td>Opcional</td>
+</tr>
+<tr>
+<td>face_value</td>
+<td>Valor com o qual o documento foi criado e que consta no código de barras</td>
+<td><em>Integer</em></td>
+<td>Obrigatório</td>
+</tr>
+<tr>
+<td>writable_line</td>
+<td>Código numérico que acompanha o código de barras</td>
+<td><em>String</em></td>
+<td>Obrigatório</td>
+</tr>
+</tbody>
+</table>
+<h6 id="details">Details</h6>
+<table>
+<thead>
+<tr>
+<th>Chave</th>
+<th>Descrição</th>
+<th>Tipo</th>
+<th>Regra de Negócio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bank_name</td>
+<td>Nome da instituição que emitiu o documento.</td>
+<td><em>String</em></td>
+<td>Opcional</td>
+</tr>
+<tr>
+<td>barcode</td>
+<td>Código de barras.</td>
+<td><em>String</em></td>
+<td>Obrigatório</td>
+</tr>
+<tr>
+<td>discount_value</td>
+<td>Valor do desconto que está sendo aplicado ao boleto.</td>
+<td><em>Integer</em></td>
+<td><code>null</code> caso não haja disconto sendo aplicado</td>
+</tr>
+<tr>
+<td>document_payment_type</td>
+<td>Informa o código referente a título.</td>
+<td><em>Integer</em></td>
+<td><a href="#document_payment_type">Possíveis valores</a></td>
+</tr>
+<tr>
+<td>document_type</td>
+<td>Informa o tipo de documento.</td>
+<td><em>String</em></td>
+<td><code>&quot;boleto&quot;</code> ou <code>&quot;concessionaria&quot;</code></td>
+</tr>
+<tr>
+<td>expiration_date</td>
+<td>Data de vencimento</td>
+<td><em>String</em></td>
+<td>Opcional</td>
+</tr>
+<tr>
+<td>face_value</td>
+<td>Valor com o qual o documento foi criado e que consta do código de barras.</td>
+<td><em>Integer</em></td>
+<td>Opcional</td>
+</tr>
+<tr>
+<td>fine_value</td>
+<td>Valor da multa que está sendo aplicada ao boleto.</td>
+<td><em>Integer</em></td>
+<td><code>null</code> caso nenhuma multa esteja sendo aplicada</td>
+</tr>
+<tr>
+<td>interest_value</td>
+<td>Valor dos juros que estão sendo aplicados ao boleto.</td>
+<td><em>Integer</em></td>
+<td><code>null</code> caso não hajam juros sendo aplicados</td>
+</tr>
+<tr>
+<td>max_value</td>
+<td>Valor máximo que será aceito no pagamento deste documento.</td>
+<td><em>Integer</em></td>
+<td>Opcional</td>
+</tr>
+<tr>
+<td>min_value</td>
+<td>Valor mínimo que será aceito no pagamento deste documento.</td>
+<td><em>Integer</em></td>
+<td>Opcional</td>
+</tr>
+<tr>
+<td>payer_cpf_cnpj</td>
+<td>Número do documento do pagador sem pontos.</td>
+<td><em>String</em></td>
+<td>Opcional</td>
+</tr>
+<tr>
+<td>payer_legal_name</td>
+<td>É o nome que identifica o pagador para fins legais, administrativos e outros fins oficiais.</td>
+<td><em>String</em></td>
+<td>Opcional</td>
+</tr>
+<tr>
+<td>payer_trade_name</td>
+<td>Nome fantasia do pagador.</td>
+<td><em>String</em></td>
+<td>Opcional</td>
+</tr>
+<tr>
+<td>payment_limit_date</td>
+<td>Data limite para pagamento do documento.</td>
+<td><em>String</em></td>
+<td>Opcional. Formato ISO8601 <code>YYYY-MM-DD</code>.</td>
+</tr>
+<tr>
+<td>payment_start_time</td>
+<td>Horário a partir do qual o pagamento é possível em um dia útil.</td>
+<td><em>String</em></td>
+<td>Respeita o <code>payment_limit_date</code>. Formato <code>hh:mm:ss</code>.</td>
+</tr>
+<tr>
+<td>payment_end_time</td>
+<td>Horário até o qual o pagamento é possível em um dia útil.</td>
+<td><em>String</em></td>
+<td>Respeita o <code>payment_limit_date</code>. Formato <code>hh:mm:ss</code>.</td>
+</tr>
+<tr>
+<td>recipient_cpf_cnpj</td>
+<td>Número do documento do beneficiário sem pontos.</td>
+<td><em>String</em></td>
+<td>Opcional</td>
+</tr>
+<tr>
+<td>recipient_name</td>
+<td>Nome do beneficiário.</td>
+<td><em>String</em></td>
+<td>Opcional</td>
+</tr>
+<tr>
+<td>settlement_date</td>
+<td>Data em que o dinheiro do pagamento do boleto é depositado na conta do beneficiário.</td>
+<td><em>String</em></td>
+<td>Formato ISO8601 <code>YYYY-MM-DDThh:mm:ssZ</code>. Caso o boleto ainda não tenha sido pago o valor será <code>null</code>.</td>
+</tr>
+<tr>
+<td>status</td>
+<td>Status atual do documento na sua instituição emissora.</td>
+<td><em>String</em></td>
+<td><code>&quot;payable&quot;</code> para documentos que podem ser pagos, <code>&quot;paid&quot;</code> para documentos já pagos e que não aceitam mais pagamentos, e <code>&quot;unpayable&quot;</code> para documentos que não podem ser pagos.</td>
+</tr>
+<tr>
+<td>total_added_value</td>
+<td>Total que foi adicionado ao valor original do documento decorrente de juros e multas.</td>
+<td><em>Integer</em></td>
+<td>Opcional. Caso seja boleto bancário, o valor será <code>null</code>.</td>
+</tr>
+<tr>
+<td>total_discounted_value</td>
+<td>Total que foi abatido do valor originial do documento decorrente de descontos.</td>
+<td><em>Integer</em></td>
+<td>Opcional. Caso seja boleto bancário, o valor será <code>null</code>.</td>
+</tr>
+<tr>
+<td>updatable_value</td>
+<td>Indica se é permitido alterar o valor do documento.</td>
+<td><em>Boolean</em></td>
+<td>Opcional. Caso seja boleto bancário, o valor será <code>null</code>.</td>
+</tr>
+<tr>
+<td>value</td>
+<td>Valor atualizado já com descontos, multas e juros que se aplicam.</td>
+<td><em>Integer</em></td>
+<td>Opcional</td>
+</tr>
+<tr>
+<td>writable_line</td>
+<td>Código numérico que acompanha o código de barras.</td>
+<td><em>String</em></td>
+<td>Obrigatório</td>
+</tr>
+<tr>
+<td>unpayable_reason_code</td>
+<td>Código que representa o motivo de estar impagável.</td>
+<td><em>String</em></td>
+<td>Retornado somente se o status do documento for <code>&quot;unpayable&quot;</code>, caso contrário será <code>null</code></td>
+</tr>
+</tbody>
+</table>
 <hr>
+<h6 id="document_payment_type">document_payment_type</h6>
+<table>
+<thead>
+<tr>
+<th>Domínio</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>CH Cheque</td>
+</tr>
+<tr>
+<td>2</td>
+<td>DM Duplicata Mercantil.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>DMI Duplicata Mercantil Indicação.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>DS Duplicata de Serviço.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>DSI Duplicata de Serviço Indicação.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>DR Duplicata Rural.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>LC Letra de Câmbio.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>NCC Nota de Crédito Comercial.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>NCE Nota de Crédito Exportação.</td>
+</tr>
+<tr>
+<td>10</td>
+<td>NCI Nota de Crédito Industrial.</td>
+</tr>
+<tr>
+<td>11</td>
+<td>NCR Nota de Crédito Rural.</td>
+</tr>
+<tr>
+<td>12</td>
+<td>NP Nota Promissória.</td>
+</tr>
+<tr>
+<td>13</td>
+<td>NPR Nota Promissória Rural.</td>
+</tr>
+<tr>
+<td>14</td>
+<td>TM Triplicata Mercantil.</td>
+</tr>
+<tr>
+<td>15</td>
+<td>TS Triplicata de Serviço.</td>
+</tr>
+<tr>
+<td>16</td>
+<td>NS Nota de Seguro.</td>
+</tr>
+<tr>
+<td>17</td>
+<td>RC Recibo.</td>
+</tr>
+<tr>
+<td>18</td>
+<td>FAT Bloqueio.</td>
+</tr>
+<tr>
+<td>19</td>
+<td>ND Nota de Débito.</td>
+</tr>
+<tr>
+<td>20</td>
+<td>AP Apólice de Seguro.</td>
+</tr>
+<tr>
+<td>21</td>
+<td>ME Mensalidade Escolar.</td>
+</tr>
+<tr>
+<td>22</td>
+<td>PC Parcela de Consórcio.</td>
+</tr>
+<tr>
+<td>23</td>
+<td>NF Nota Fiscal.</td>
+</tr>
+<tr>
+<td>24</td>
+<td>DD Documento de Dívida.</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Cédula de Produto Rural.</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Warrant.</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Dívida Ativa de Estado.</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Dívida Ativa do Município.</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Dívida Ativa da União.</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Encargos Condominiais.</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Cartão de Crédito.</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Boleto Proposta.</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Boleto de Depósito e Aporte.</td>
+</tr>
+<tr>
+<td>99</td>
+<td>Outros.</td>
+</tr>
+</tbody>
+</table>
 <h5 id="response"><strong>Response</strong></h5>
 <pre><code>200 ok
 content-type: application/json
 </code></pre><p>Body</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-    <span style="color:#ff79c6">&#34;account_id&#34;</span>: <span style="color:#f1fa8c">&#34;79d8449d-94f7-454d-9a37-6f053748058f&#34;</span>,
-    <span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">15000</span>,
-    <span style="color:#ff79c6">&#34;approval_expired_at&#34;</span>: <span style="color:#ff79c6">null</span>,
-    <span style="color:#ff79c6">&#34;approved_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-05-20T17:58:59Z&#34;</span>,
-    <span style="color:#ff79c6">&#34;approved_by&#34;</span>: <span style="color:#f1fa8c">&#34;user:893c0cfb-166f-4233-a97d-02c5943cebe0&#34;</span>,
-    <span style="color:#ff79c6">&#34;barcode&#34;</span>: <span style="color:#f1fa8c">&#34;19796863300000150000000025300979370888041628&#34;</span>,
-    <span style="color:#ff79c6">&#34;barcode_details&#34;</span>: {
-        <span style="color:#ff79c6">&#34;bank_code&#34;</span>: <span style="color:#f1fa8c">&#34;197&#34;</span>,
-        <span style="color:#ff79c6">&#34;bank_name&#34;</span>: <span style="color:#f1fa8c">&#34;STONE PAGAMENTOS S.A.&#34;</span>,
-        <span style="color:#ff79c6">&#34;barcode&#34;</span>: <span style="color:#f1fa8c">&#34;19796863300000150000000025300979370888041628&#34;</span>,
-        <span style="color:#ff79c6">&#34;expiration_date&#34;</span>: <span style="color:#f1fa8c">&#34;2021-05-27&#34;</span>,
-        <span style="color:#ff79c6">&#34;face_value&#34;</span>: <span style="color:#bd93f9">15000</span>,
-        <span style="color:#ff79c6">&#34;writable_line&#34;</span>: <span style="color:#f1fa8c">&#34;19790000052530097937108880416287686330000015000&#34;</span>
-    },
-    <span style="color:#ff79c6">&#34;cancelled_at&#34;</span>: <span style="color:#ff79c6">null</span>,
-    <span style="color:#ff79c6">&#34;cancelled_by&#34;</span>: <span style="color:#ff79c6">null</span>,
-    <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2021-05-20T17:58:59Z&#34;</span>,
-    <span style="color:#ff79c6">&#34;created_by&#34;</span>: <span style="color:#f1fa8c">&#34;user:893c0cfb-166f-4233-a97d-02c5943cebe0&#34;</span>,
-    <span style="color:#ff79c6">&#34;details&#34;</span>: {
-        <span style="color:#ff79c6">&#34;payer_trade_name&#34;</span>: <span style="color:#f1fa8c">&#34;E&#34;</span>,
-        <span style="color:#ff79c6">&#34;divergent_amount_auth_type&#34;</span>: <span style="color:#bd93f9">3</span>,
-        <span style="color:#ff79c6">&#34;interest_value&#34;</span>: <span style="color:#bd93f9">0</span>,
-        <span style="color:#ff79c6">&#34;updatable_value&#34;</span>: <span style="color:#ff79c6">null</span>,
-        <span style="color:#ff79c6">&#34;min_value&#34;</span>: <span style="color:#bd93f9">8000</span>,
-        <span style="color:#ff79c6">&#34;payer_cpf_cnpj&#34;</span>: <span style="color:#f1fa8c">&#34;11725907020&#34;</span>,
-        <span style="color:#ff79c6">&#34;payment_limit_date&#34;</span>: <span style="color:#f1fa8c">&#34;2021-05-27&#34;</span>,
-        <span style="color:#ff79c6">&#34;writable_line&#34;</span>: <span style="color:#f1fa8c">&#34;19790000052530097937108880416287686330000015000&#34;</span>,
-        <span style="color:#ff79c6">&#34;total_discounted_value&#34;</span>: <span style="color:#ff79c6">null</span>,
-        <span style="color:#ff79c6">&#34;barcode&#34;</span>: <span style="color:#f1fa8c">&#34;19796863300000150000000025300979370888041628&#34;</span>,
-        <span style="color:#ff79c6">&#34;accepts_partial_payment&#34;</span>: <span style="color:#ff79c6">false</span>,
-        <span style="color:#ff79c6">&#34;interest_date&#34;</span>: <span style="color:#ff79c6">null</span>,
-        <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;payable&#34;</span>,
-        <span style="color:#ff79c6">&#34;recipient_name&#34;</span>: <span style="color:#f1fa8c">&#34;Nome do CPF 11725907020&#34;</span>,
-        <span style="color:#ff79c6">&#34;payment_end_time&#34;</span>: <span style="color:#ff79c6">null</span>,
-        <span style="color:#ff79c6">&#34;discounts&#34;</span>: [{
-            <span style="color:#ff79c6">&#34;date&#34;</span>: <span style="color:#ff79c6">null</span>
-        }],
-        <span style="color:#ff79c6">&#34;bank_name&#34;</span>: <span style="color:#ff79c6">null</span>,
-        <span style="color:#ff79c6">&#34;discount_value&#34;</span>: <span style="color:#bd93f9">0</span>,
-        <span style="color:#ff79c6">&#34;fine_value&#34;</span>: <span style="color:#bd93f9">0</span>,
-        <span style="color:#ff79c6">&#34;document_payment_type&#34;</span>: <span style="color:#f1fa8c">&#34;33&#34;</span>,
-        <span style="color:#ff79c6">&#34;total_added_value&#34;</span>: <span style="color:#ff79c6">null</span>,
-        <span style="color:#ff79c6">&#34;unpayable_reason_code&#34;</span>: <span style="color:#ff79c6">null</span>,
-        <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#bd93f9">15000</span>,
-        <span style="color:#ff79c6">&#34;unpayable_reason_description&#34;</span>: <span style="color:#ff79c6">null</span>,
-        <span style="color:#ff79c6">&#34;payer_legal_name&#34;</span>: <span style="color:#f1fa8c">&#34;Nome do CPF 11725907020&#34;</span>,
-        <span style="color:#ff79c6">&#34;payment_start_time&#34;</span>: <span style="color:#ff79c6">null</span>,
-        <span style="color:#ff79c6">&#34;face_value&#34;</span>: <span style="color:#bd93f9">15000</span>,
-        <span style="color:#ff79c6">&#34;document_type&#34;</span>: <span style="color:#f1fa8c">&#34;boleto&#34;</span>,
-        <span style="color:#ff79c6">&#34;settlement_date&#34;</span>: <span style="color:#ff79c6">null</span>,
-        <span style="color:#ff79c6">&#34;fine_date&#34;</span>: <span style="color:#ff79c6">null</span>,
-        <span style="color:#ff79c6">&#34;max_value&#34;</span>: <span style="color:#bd93f9">15000</span>,
-        <span style="color:#ff79c6">&#34;expiration_date&#34;</span>: <span style="color:#f1fa8c">&#34;2021-05-27&#34;</span>,
-        <span style="color:#ff79c6">&#34;recipient_cpf_cnpj&#34;</span>: <span style="color:#f1fa8c">&#34;11725907020&#34;</span>,
-        <span style="color:#ff79c6">&#34;accepts_partial_payment&#34;</span>: <span style="color:#ff79c6">true</span>,
-        <span style="color:#ff79c6">&#34;number_of_partials&#34;</span>: <span style="color:#bd93f9">2</span>
-    },
-    <span style="color:#ff79c6">&#34;failed_at&#34;</span>: <span style="color:#ff79c6">null</span>,
-    <span style="color:#ff79c6">&#34;failure_reason_code&#34;</span>: <span style="color:#ff79c6">null</span>,
-    <span style="color:#ff79c6">&#34;failure_reason_description&#34;</span>: <span style="color:#ff79c6">null</span>,
-    <span style="color:#ff79c6">&#34;fee&#34;</span>: <span style="color:#bd93f9">0</span>,
-    <span style="color:#ff79c6">&#34;finished_at&#34;</span>: <span style="color:#ff79c6">null</span>,
-    <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#ff79c6">null</span>,
-    <span style="color:#ff79c6">&#34;idempotency_key&#34;</span>: <span style="color:#ff79c6">null</span>,
-    <span style="color:#ff79c6">&#34;payment_being_processed?&#34;</span>: <span style="color:#ff79c6">false</span>,
-    <span style="color:#ff79c6">&#34;refund_reason_code&#34;</span>: <span style="color:#ff79c6">null</span>,
-    <span style="color:#ff79c6">&#34;refund_reason_description&#34;</span>: <span style="color:#ff79c6">null</span>,
-    <span style="color:#ff79c6">&#34;refunded_at&#34;</span>: <span style="color:#ff79c6">null</span>,
-    <span style="color:#ff79c6">&#34;rejected_at&#34;</span>: <span style="color:#ff79c6">null</span>,
-    <span style="color:#ff79c6">&#34;rejected_by&#34;</span>: <span style="color:#ff79c6">null</span>,
-    <span style="color:#ff79c6">&#34;request_id&#34;</span>: <span style="color:#f1fa8c">&#34;7d9abd369b0a19a3e26fc6b3e2f52f8c&#34;</span>,
-    <span style="color:#ff79c6">&#34;scheduled_to&#34;</span>: <span style="color:#ff79c6">null</span>,
-    <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;APPROVED&#34;</span>,
-    <span style="color:#ff79c6">&#34;writable_line&#34;</span>: <span style="color:#f1fa8c">&#34;19790000052530097937108880416287686330000015000&#34;</span>
+  <span style="color:#ff79c6">&#34;account_id&#34;</span>: <span style="color:#f1fa8c">&#34;87ec3cb5-884e-492f-ae46-4e2c92a2e359&#34;</span>,
+  <span style="color:#ff79c6">&#34;amount&#34;</span>: <span style="color:#bd93f9">5000000</span>,
+  <span style="color:#ff79c6">&#34;approval_expired_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;approved_at&#34;</span>: <span style="color:#f1fa8c">&#34;2022-06-15T14:50:28Z&#34;</span>,
+  <span style="color:#ff79c6">&#34;approved_by&#34;</span>: <span style="color:#f1fa8c">&#34;user:9d213bde-d468-41ea-a502-348ddf7fa573&#34;</span>,
+  <span style="color:#ff79c6">&#34;barcode&#34;</span>: <span style="color:#f1fa8c">&#34;19792912500050000000000075096336954691269269&#34;</span>,
+  <span style="color:#ff79c6">&#34;barcode_details&#34;</span>: {
+    <span style="color:#ff79c6">&#34;bank_code&#34;</span>: <span style="color:#f1fa8c">&#34;197&#34;</span>,
+    <span style="color:#ff79c6">&#34;bank_name&#34;</span>: <span style="color:#f1fa8c">&#34;STONE IP S.A.&#34;</span>,
+    <span style="color:#ff79c6">&#34;barcode&#34;</span>: <span style="color:#f1fa8c">&#34;19792912500050000000000075096336954691269269&#34;</span>,
+    <span style="color:#ff79c6">&#34;expiration_date&#34;</span>: <span style="color:#f1fa8c">&#34;2022-10-01&#34;</span>,
+    <span style="color:#ff79c6">&#34;face_value&#34;</span>: <span style="color:#bd93f9">5000000</span>,
+    <span style="color:#ff79c6">&#34;writable_line&#34;</span>: <span style="color:#f1fa8c">&#34;19790000057509633695546912692699291250005000000&#34;</span>
+  },
+  <span style="color:#ff79c6">&#34;cancelled_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;cancelled_by&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;created_at&#34;</span>: <span style="color:#f1fa8c">&#34;2022-06-15T14:50:28Z&#34;</span>,
+  <span style="color:#ff79c6">&#34;created_by&#34;</span>: <span style="color:#f1fa8c">&#34;user:9d213bde-d468-41ea-a502-348ddf7fa573&#34;</span>,
+  <span style="color:#ff79c6">&#34;details&#34;</span>: {
+    <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;min_value&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;max_value&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;unpayable_reason_description&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;unpayable_reason_details&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;barcode&#34;</span>: <span style="color:#f1fa8c">&#34;19792912500050000000000075096336954691269269&#34;</span>,
+    <span style="color:#ff79c6">&#34;expiration_date&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;total_added_value&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;payment_limit_date&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;payment_start_time&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;bank_ispb&#34;</span>: <span style="color:#f1fa8c">&#34;16501555&#34;</span>,
+    <span style="color:#ff79c6">&#34;discounts&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;payer_legal_name&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;recipient_name&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;settlement_date&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;bank_code&#34;</span>: <span style="color:#f1fa8c">&#34;197&#34;</span>,
+    <span style="color:#ff79c6">&#34;fine_date&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;interest_value&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;number_of_partials&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;payment_end_time&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;accepts_partial_payment&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;payer_cpf_cnpj&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;unpayable_reason_code&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;face_value&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;document_payment_type&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;bank_name&#34;</span>: <span style="color:#f1fa8c">&#34;STONE IP S.A.&#34;</span>,
+    <span style="color:#ff79c6">&#34;payer_trade_name&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;interest_date&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;document_type&#34;</span>: <span style="color:#f1fa8c">&#34;boleto&#34;</span>,
+    <span style="color:#ff79c6">&#34;divergent_amount_auth_type&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;fine_value&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;updatable_value&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;recipient_cpf_cnpj&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;unpayable&#34;</span>,
+    <span style="color:#ff79c6">&#34;discount_value&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;total_discounted_value&#34;</span>: <span style="color:#ff79c6">null</span>,
+    <span style="color:#ff79c6">&#34;writable_line&#34;</span>: <span style="color:#f1fa8c">&#34;19790000057509633695546912692699291250005000000&#34;</span>
+  },
+  <span style="color:#ff79c6">&#34;effective_payer&#34;</span>: {
+    <span style="color:#ff79c6">&#34;document&#34;</span>: <span style="color:#f1fa8c">&#34;289.851.350-40&#34;</span>,
+    <span style="color:#ff79c6">&#34;document_type&#34;</span>: <span style="color:#f1fa8c">&#34;cpf&#34;</span>,
+    <span style="color:#ff79c6">&#34;legal_name&#34;</span>: <span style="color:#f1fa8c">&#34;Caio Giovanni Ricardo Moraes&#34;</span>
+  },
+  <span style="color:#ff79c6">&#34;failed_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;failure_reason_code&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;failure_reason_description&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;fee&#34;</span>: <span style="color:#bd93f9">0</span>,
+  <span style="color:#ff79c6">&#34;finished_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;idempotency_key&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;payment_being_processed?&#34;</span>: <span style="color:#ff79c6">false</span>,
+  <span style="color:#ff79c6">&#34;refund_reason_code&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;refund_reason_description&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;refunded_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;rejected_at&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;rejected_by&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;request_id&#34;</span>: <span style="color:#f1fa8c">&#34;74bc3080-1f51-939d-8f7a-6fda572c8675&#34;</span>,
+  <span style="color:#ff79c6">&#34;scheduled_to&#34;</span>: <span style="color:#ff79c6">null</span>,
+  <span style="color:#ff79c6">&#34;status&#34;</span>: <span style="color:#f1fa8c">&#34;APPROVED&#34;</span>,
+  <span style="color:#ff79c6">&#34;writable_line&#34;</span>: <span style="color:#f1fa8c">&#34;19790000057509633695546912692699291250005000000&#34;</span>
 }
 </code></pre></div>
         <div class="section-index">
@@ -3657,6 +4108,10 @@ content-type: application/json
     
     
     <hr class="panel-line">
+        
+            
+        
+            
         
             
         

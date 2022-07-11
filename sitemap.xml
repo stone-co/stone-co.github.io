@@ -38,6 +38,11 @@
   </url>
   
   <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/pagamento/listar-pagamentos/</loc>
+    <lastmod>2021-06-25T14:28:33-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/consultar-pix-por-qrcode/</loc>
     <lastmod>2021-06-16T15:17:00-03:00</lastmod>
   </url>
@@ -103,6 +108,16 @@
   
   <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/transferencias/o-que-e-uma-transferencia/</loc>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/devolucao/criar-devolucao/</loc>
+    <lastmod>2022-06-29T10:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/devolucao/</loc>
+    <lastmod>2022-06-29T10:00:00-03:00</lastmod>
   </url>
   
   <url>
@@ -251,11 +266,6 @@
   <url>
     <loc>https://stone-co.github.io/docs/referencia-da-api/emissao-de-boletos/regras-de-negocio/</loc>
     <lastmod>2021-10-14T09:48:32+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/simulacoes-dry-run/objetos-simulacao-de-pagamento/</loc>
-    <lastmod>2021-08-26T12:35:24+00:00</lastmod>
   </url>
   
   <url>
@@ -640,7 +650,7 @@
   
   <url>
     <loc>https://stone-co.github.io/</loc>
-    <lastmod>2022-03-25T18:21:13-03:00</lastmod>
+    <lastmod>2022-06-29T10:00:00-03:00</lastmod>
   </url>
   
   <url>

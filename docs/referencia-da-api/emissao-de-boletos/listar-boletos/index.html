@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.ef520f7dab0be85c6963921e0b0a492e.json"
+  data-offline-search-index-json-src="/offline-search-index.33aee50684d16f5c466623c53dbd5b68.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.ef520f7dab0be85c6963921e0b0a492e.json"
+  data-offline-search-index-json-src="/offline-search-index.33aee50684d16f5c466623c53dbd5b68.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -986,31 +986,6 @@
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apisimulacoes-dry-runsimular-uma-transferencia-externa">
-      
-      
-      
-    </li>
-  </ul>
-</ul>
-
-        
-      
-      
-      
-        
-          
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/simulacoes-dry-run/objetos-simulacao-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Objetos da Simulação de Pagamento</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsreferencia-da-apisimulacoes-dry-runobjetos-simulacao-de-pagamento">
       
       
       
@@ -2658,6 +2633,31 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/pagamento/listar-pagamentos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Pix</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixpagamentolistar-pagamentos">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/docs/referencia-da-api/pix/pagamento/buscar-dados-qrcode/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Buscar dados do QRCode</a>
   </li>
   <ul>
@@ -2737,6 +2737,56 @@
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipixpagamentodetalhar-pix-enviado">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/devolucao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Devolução de transferência Pix</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixdevolucao">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/devolucao/criar-devolucao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar um devolução de pagamento Pix</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixdevolucaocriar-devolucao">
       
       
       
@@ -3550,8 +3600,12 @@
 <br> Limite de itens retornados.</p>
 <hr>
 <br>
+<p><strong>invoice_type</strong> <code>string</code>
+<br> Valores permitidos: deposit, proposal ou bill_of_exchange.</p>
+<hr>
+<br>
 <p><strong>status</strong> <code>string</code>
-<br> Valores Permitidos: CREATED, SETTLED, REGISTERED, EXPIRED, PENDING.</p>
+<br> Valores Permitidos: CREATED, SETTLED, REGISTERED, CANCELLED, EXPIRED, PENDING.</p>
 <hr>
 <br>
 <p><strong>amount</strong> <code>integer</code>
@@ -3568,46 +3622,47 @@ Formato &ldquo;YYYY-MM-DD&rdquo;.</p>
 <hr>
 <br>
 <p><strong>settled_date</strong> <code>string</code>
-<br></p>
+<br> Data de liquidação do boleto.</p>
 <hr>
 <br>
 <p><strong>amount_lt</strong> <code>integer</code>
-<br></p>
+<br> Valor menor que</p>
 <hr>
 <br>
 <p><strong>amount_gt</strong> <code>integer</code>
-<br></p>
+<br> Valor maior que</p>
 <hr>
 <br>
 <p><strong>start_limit_date</strong> <code>string</code>
-<br></p>
+<br> Listar boletos com data limite a partir dessa data</p>
 <hr>
 <br>
 <p><strong>end_limit_date</strong> <code>string</code>
-<br></p>
+<br> Listar boletos com data limite até essa data</p>
 <hr>
 <br>
 <p><strong>start_expiration_date</strong> <code>string</code>
-<br></p>
+<br> Listar boletos com data de vencimento a partir dessa data</p>
 <hr>
 <br>
 <p><strong>end_expiration_date</strong> <code>string</code>
-<br></p>
+<br> Listar boletos com data de vencimento até essa data</p>
 <hr>
 <br>
 <p><strong>start_issuance_date</strong> <code>string</code>
-<br></p>
+<br> Listar boletos com data de emissão a partir dessa data</p>
 <hr>
 <br>
 <p><strong>end_issuance_date</strong> <code>string</code>
-<br></p>
+<br> Listar boletos com data de emissão até essa data</p>
 <hr>
 <br>
 <p><strong>start_settled_date</strong> <code>string</code>
-<br></p>
+<br> Listar boletos com data de liquidação a partir dessa data</p>
 <hr>
 <br>
-<p><strong>end_settled_date</strong> <code>string</code></p>
+<p><strong>end_settled_date</strong> <code>string</code>
+<br> Listar boletos com data de liquidação até essa data</p>
 <hr>
 <br>
 <p><strong>barcode</strong><code>string</code>
@@ -3759,6 +3814,10 @@ content-type: application/json
     
     
     <hr class="panel-line">
+        
+            
+        
+            
         
             
         

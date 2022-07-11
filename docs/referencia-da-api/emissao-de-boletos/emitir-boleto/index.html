@@ -99,7 +99,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.ef520f7dab0be85c6963921e0b0a492e.json"
+  data-offline-search-index-json-src="/offline-search-index.33aee50684d16f5c466623c53dbd5b68.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -131,7 +131,7 @@
   aria-label="Procurar…"
   autocomplete="off"
   
-  data-offline-search-index-json-src="/offline-search-index.ef520f7dab0be85c6963921e0b0a492e.json"
+  data-offline-search-index-json-src="/offline-search-index.33aee50684d16f5c466623c53dbd5b68.json"
   data-offline-search-base-href="/"
   data-offline-search-max-results="10"
 >
@@ -986,31 +986,6 @@
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apisimulacoes-dry-runsimular-uma-transferencia-externa">
-      
-      
-      
-    </li>
-  </ul>
-</ul>
-
-        
-      
-      
-      
-        
-          
-
-
-
-
-
-
-<ul class="td-sidebar-nav__section pr-md-3">
-  <li class="td-sidebar-nav__section-title">
-    <a  href="/docs/referencia-da-api/simulacoes-dry-run/objetos-simulacao-de-pagamento/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Objetos da Simulação de Pagamento</a>
-  </li>
-  <ul>
-    <li class="collapse " id="docsreferencia-da-apisimulacoes-dry-runobjetos-simulacao-de-pagamento">
       
       
       
@@ -2658,6 +2633,31 @@
 
 <ul class="td-sidebar-nav__section pr-md-3">
   <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/pagamento/listar-pagamentos/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Listar Pix</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixpagamentolistar-pagamentos">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
     <a  href="/docs/referencia-da-api/pix/pagamento/buscar-dados-qrcode/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Buscar dados do QRCode</a>
   </li>
   <ul>
@@ -2737,6 +2737,56 @@
   </li>
   <ul>
     <li class="collapse " id="docsreferencia-da-apipixpagamentodetalhar-pix-enviado">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+    </li>
+  </ul>
+</ul>
+
+        
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/devolucao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Devolução de transferência Pix</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixdevolucao">
+      
+      
+      
+      
+        
+          
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/referencia-da-api/pix/devolucao/criar-devolucao/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Criar um devolução de pagamento Pix</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docsreferencia-da-apipixdevolucaocriar-devolucao">
       
       
       
@@ -3590,6 +3640,32 @@
 <br>
 <br>     <strong>trade_name</strong> <code>string</code> <em>(obrigatório)</em>
 <br>     Nome fantasia do pagador. Obrigatório no caso de pagador PJ.</p>
+<p><br>     <strong>address</strong> <code>object</code> <em>(opcional)</em></p>
+<p><br>         <strong>city</strong> <code>string</code> <em>(obrigatório)</em>
+<br>         Cidade do endereço do pagador do boleto.
+<br>
+<br>         <strong>country</strong> <code>string</code> <em>(obrigatório)</em>
+<br>         País do endereço do pagador do boleto.
+<br>
+<br>         <strong>extra</strong> <code>string</code>
+<br>         Complemento do endereço do pagador do boleto.
+<br>
+<br>         <strong>neighborhood</strong> <code>string</code> <em>(obrigatório)</em>
+<br>         Bairro do endereço do pagador do boleto.
+<br>
+<br>         <strong>postal_code</strong> <code>string</code> <em>(obrigatório)</em>
+<br>         CEP do endereço do pagador do boleto.
+<br>
+<br>         <strong>state</strong> <code>string</code> <em>(obrigatório)</em>
+<br>         UF do endereço do pagador do boleto.
+<br>
+<br>         <strong>street</strong> <code>string</code> <em>(obrigatório)</em>
+<br>         Logradouro do endereço do pagador do boleto.
+<br>
+<br>         <strong>street_number</strong> <code>string</code>
+<br>         Número do logradouro do endereço do pagador do boleto.
+<br></p>
+<br>
 <hr>
 <br>
 <p><strong>discounts</strong> <code>array_of_objects</code>
@@ -3631,25 +3707,25 @@
 <p><strong>address</strong> <code>object</code>
 <br></p>
 <p><br>     <strong>city</strong> <code>string</code> <em>(obrigatório)</em>
-<br>     Cidade do beneficiário do boleto.
+<br>     Cidade do endereço do beneficiário do boleto.
 <br>
 <br>     <strong>country</strong> <code>string</code> <em>(obrigatório)</em>
-<br>     País do beneficiário do boleto.
+<br>     País do endereço do beneficiário do boleto.
 <br>
 <br>     <strong>extra</strong> <code>string</code>
 <br>     Complemento do endereço do beneficiário do boleto.
 <br>
 <br>     <strong>neighborhood</strong> <code>string</code> <em>(obrigatório)</em>
-<br>     Bairro do beneficiário do boleto.
+<br>     Bairro do endereço do beneficiário do boleto.
 <br>
 <br>     <strong>postal_code</strong> <code>string</code> <em>(obrigatório)</em>
-<br>     CEP do beneficiário do boleto.
+<br>     CEP do endereço do beneficiário do boleto.
 <br>
 <br>     <strong>state</strong> <code>string</code> <em>(obrigatório)</em>
-<br>     UF do beneficiário do boleto.
+<br>     UF do endereço do beneficiário do boleto.
 <br>
 <br>     <strong>street</strong> <code>string</code> <em>(obrigatório)</em>
-<br>     Logradouro do beneficiário do boleto.
+<br>     Logradouro do endereço do beneficiário do boleto.
 <br>
 <br>     <strong>street_number</strong> <code>string</code>
 <br>     Número do logradouro do beneficiário do boleto.
@@ -3863,6 +3939,10 @@ content-type: application/json
     
     
     <hr class="panel-line">
+        
+            
+        
+            
         
             
         

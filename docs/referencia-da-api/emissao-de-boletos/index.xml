@@ -93,7 +93,7 @@ Importante ressaltar que pode haver restrição de habilitação de um determina
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;EXPIRED&lt;/td&gt;
-&lt;td&gt;Passou a data limite de pagamento do boleto.&lt;/td&gt;
+&lt;td&gt;Passou a data de vencimento do pagamento do boleto.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;CANCELLATION_REQUESTED&lt;/td&gt;
@@ -773,6 +773,32 @@ Importante ressaltar que pode haver restrição de habilitação de um determina
 &lt;br&gt;
 &lt;br&gt;     &lt;strong&gt;trade_name&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
 &lt;br&gt;     Nome fantasia do pagador. Obrigatório no caso de pagador PJ.&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;     &lt;strong&gt;address&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt; &lt;em&gt;(opcional)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;         &lt;strong&gt;city&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
+&lt;br&gt;         Cidade do endereço do pagador do boleto.
+&lt;br&gt;
+&lt;br&gt;         &lt;strong&gt;country&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
+&lt;br&gt;         País do endereço do pagador do boleto.
+&lt;br&gt;
+&lt;br&gt;         &lt;strong&gt;extra&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;         Complemento do endereço do pagador do boleto.
+&lt;br&gt;
+&lt;br&gt;         &lt;strong&gt;neighborhood&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
+&lt;br&gt;         Bairro do endereço do pagador do boleto.
+&lt;br&gt;
+&lt;br&gt;         &lt;strong&gt;postal_code&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
+&lt;br&gt;         CEP do endereço do pagador do boleto.
+&lt;br&gt;
+&lt;br&gt;         &lt;strong&gt;state&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
+&lt;br&gt;         UF do endereço do pagador do boleto.
+&lt;br&gt;
+&lt;br&gt;         &lt;strong&gt;street&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
+&lt;br&gt;         Logradouro do endereço do pagador do boleto.
+&lt;br&gt;
+&lt;br&gt;         &lt;strong&gt;street_number&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;         Número do logradouro do endereço do pagador do boleto.
+&lt;br&gt;&lt;/p&gt;
+&lt;br&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;&lt;strong&gt;discounts&lt;/strong&gt; &lt;code&gt;array_of_objects&lt;/code&gt;
@@ -814,25 +840,25 @@ Importante ressaltar que pode haver restrição de habilitação de um determina
 &lt;p&gt;&lt;strong&gt;address&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
 &lt;br&gt;&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;     &lt;strong&gt;city&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
-&lt;br&gt;     Cidade do beneficiário do boleto.
+&lt;br&gt;     Cidade do endereço do beneficiário do boleto.
 &lt;br&gt;
 &lt;br&gt;     &lt;strong&gt;country&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
-&lt;br&gt;     País do beneficiário do boleto.
+&lt;br&gt;     País do endereço do beneficiário do boleto.
 &lt;br&gt;
 &lt;br&gt;     &lt;strong&gt;extra&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
 &lt;br&gt;     Complemento do endereço do beneficiário do boleto.
 &lt;br&gt;
 &lt;br&gt;     &lt;strong&gt;neighborhood&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
-&lt;br&gt;     Bairro do beneficiário do boleto.
+&lt;br&gt;     Bairro do endereço do beneficiário do boleto.
 &lt;br&gt;
 &lt;br&gt;     &lt;strong&gt;postal_code&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
-&lt;br&gt;     CEP do beneficiário do boleto.
+&lt;br&gt;     CEP do endereço do beneficiário do boleto.
 &lt;br&gt;
 &lt;br&gt;     &lt;strong&gt;state&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
-&lt;br&gt;     UF do beneficiário do boleto.
+&lt;br&gt;     UF do endereço do beneficiário do boleto.
 &lt;br&gt;
 &lt;br&gt;     &lt;strong&gt;street&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
-&lt;br&gt;     Logradouro do beneficiário do boleto.
+&lt;br&gt;     Logradouro do endereço do beneficiário do boleto.
 &lt;br&gt;
 &lt;br&gt;     &lt;strong&gt;street_number&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
 &lt;br&gt;     Número do logradouro do beneficiário do boleto.
@@ -1074,8 +1100,12 @@ content-type: application/json
 &lt;br&gt; Limite de itens retornados.&lt;/p&gt;
 &lt;hr&gt;
 &lt;br&gt;
+&lt;p&gt;&lt;strong&gt;invoice_type&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Valores permitidos: deposit, proposal ou bill_of_exchange.&lt;/p&gt;
+&lt;hr&gt;
+&lt;br&gt;
 &lt;p&gt;&lt;strong&gt;status&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
-&lt;br&gt; Valores Permitidos: CREATED, SETTLED, REGISTERED, EXPIRED, PENDING.&lt;/p&gt;
+&lt;br&gt; Valores Permitidos: CREATED, SETTLED, REGISTERED, CANCELLED, EXPIRED, PENDING.&lt;/p&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;&lt;strong&gt;amount&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;
@@ -1092,46 +1122,47 @@ Formato &amp;ldquo;YYYY-MM-DD&amp;rdquo;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;&lt;strong&gt;settled_date&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
-&lt;br&gt;&lt;/p&gt;
+&lt;br&gt; Data de liquidação do boleto.&lt;/p&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;&lt;strong&gt;amount_lt&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;
-&lt;br&gt;&lt;/p&gt;
+&lt;br&gt; Valor menor que&lt;/p&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;&lt;strong&gt;amount_gt&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;
-&lt;br&gt;&lt;/p&gt;
+&lt;br&gt; Valor maior que&lt;/p&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;&lt;strong&gt;start_limit_date&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
-&lt;br&gt;&lt;/p&gt;
+&lt;br&gt; Listar boletos com data limite a partir dessa data&lt;/p&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;&lt;strong&gt;end_limit_date&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
-&lt;br&gt;&lt;/p&gt;
+&lt;br&gt; Listar boletos com data limite até essa data&lt;/p&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;&lt;strong&gt;start_expiration_date&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
-&lt;br&gt;&lt;/p&gt;
+&lt;br&gt; Listar boletos com data de vencimento a partir dessa data&lt;/p&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;&lt;strong&gt;end_expiration_date&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
-&lt;br&gt;&lt;/p&gt;
+&lt;br&gt; Listar boletos com data de vencimento até essa data&lt;/p&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;&lt;strong&gt;start_issuance_date&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
-&lt;br&gt;&lt;/p&gt;
+&lt;br&gt; Listar boletos com data de emissão a partir dessa data&lt;/p&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;&lt;strong&gt;end_issuance_date&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
-&lt;br&gt;&lt;/p&gt;
+&lt;br&gt; Listar boletos com data de emissão até essa data&lt;/p&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;&lt;strong&gt;start_settled_date&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
-&lt;br&gt;&lt;/p&gt;
+&lt;br&gt; Listar boletos com data de liquidação a partir dessa data&lt;/p&gt;
 &lt;hr&gt;
 &lt;br&gt;
-&lt;p&gt;&lt;strong&gt;end_settled_date&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;end_settled_date&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Listar boletos com data de liquidação até essa data&lt;/p&gt;
 &lt;hr&gt;
 &lt;br&gt;
 &lt;p&gt;&lt;strong&gt;barcode&lt;/strong&gt;&lt;code&gt;string&lt;/code&gt;
