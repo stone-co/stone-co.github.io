@@ -1,0 +1,18 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stone OpenBank – Consultando um pagamento realizado</title>
+    <link>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/pagamento/consultar-pagamento/</link>
+    <description>Recent content in Consultando um pagamento realizado on Stone OpenBank</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 25 Jun 2021 14:28:33 -0300</lastBuildDate>
+    
+	  <atom:link href="https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/pagamento/consultar-pagamento/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

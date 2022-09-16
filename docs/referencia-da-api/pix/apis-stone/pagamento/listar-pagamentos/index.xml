@@ -1,0 +1,18 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stone OpenBank – Listar Pix</title>
+    <link>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/pagamento/listar-pagamentos/</link>
+    <description>Recent content in Listar Pix on Stone OpenBank</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 25 Jun 2021 14:28:33 -0300</lastBuildDate>
+    
+	  <atom:link href="https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/pagamento/listar-pagamentos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

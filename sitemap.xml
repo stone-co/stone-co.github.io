@@ -18,7 +18,7 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/chaves-pix/listar-chaves-pix/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/chaves-pix/listar-chaves-pix/</loc>
     <lastmod>2021-07-15T14:00:00-03:00</lastmod>
   </url>
   
@@ -33,27 +33,27 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/pagamento/consultar-pagamento/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/pagamento/consultar-pagamento/</loc>
     <lastmod>2021-06-25T14:28:33-03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/pagamento/listar-pagamentos/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/pagamento/listar-pagamentos/</loc>
     <lastmod>2021-06-25T14:28:33-03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/consultar-pix-por-qrcode/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/recebimento/consultar-pix-por-qrcode/</loc>
     <lastmod>2021-06-16T15:17:00-03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/pagamento/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/pagamento/</loc>
     <lastmod>2021-06-16T12:03:51-03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/pagamento/buscar-dados-qrcode/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/pagamento/buscar-dados-qrcode/</loc>
     <lastmod>2021-04-01T18:00:00-03:00</lastmod>
   </url>
   
@@ -111,27 +111,37 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/devolucao/criar-devolucao/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-padrao/</loc>
+    <lastmod>2022-08-17T00:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/</loc>
+    <lastmod>2022-08-17T00:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/devolucao/criar-devolucao/</loc>
     <lastmod>2022-06-29T10:00:00-03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/devolucao/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/devolucao/</loc>
     <lastmod>2022-06-29T10:00:00-03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/chaves-pix/atualizar-uma-chave-pix/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/chaves-pix/atualizar-uma-chave-pix/</loc>
     <lastmod>2021-10-14T09:26:00-03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/chaves-pix/criar-uma-chave-pix/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/chaves-pix/criar-uma-chave-pix/</loc>
     <lastmod>2021-10-14T09:26:00-03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/recebimento/</loc>
     <lastmod>2021-07-13T20:03:00-03:00</lastmod>
   </url>
   
@@ -146,7 +156,7 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/pagamento/criar-pagamento-pendente/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/pagamento/criar-pagamento-pendente/</loc>
     <lastmod>2021-06-25T14:28:33-03:00</lastmod>
   </url>
   
@@ -209,27 +219,27 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/relato-infracao/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/relato-infracao/</loc>
     <lastmod>2022-02-11T14:00:00-03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/pagamento/confirmar-pagamento-pendente/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/pagamento/confirmar-pagamento-pendente/</loc>
     <lastmod>2021-09-20T15:45:21-03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/criar-qrcode-estatico/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/recebimento/criar-qrcode-estatico/</loc>
     <lastmod>2021-09-19T09:04:30-03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/chaves-pix/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/chaves-pix/</loc>
     <lastmod>2021-07-15T14:00:00-03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/chaves-pix/excluir-uma-chave-pix/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/chaves-pix/excluir-uma-chave-pix/</loc>
     <lastmod>2021-07-15T14:00:00-03:00</lastmod>
   </url>
   
@@ -303,7 +313,7 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/atualizar-qrcode-estatico/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/recebimento/atualizar-qrcode-estatico/</loc>
     <lastmod>2021-09-19T09:05:30-03:00</lastmod>
   </url>
   
@@ -328,7 +338,7 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/chaves-pix/detalhar-uma-chave-pix/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/chaves-pix/detalhar-uma-chave-pix/</loc>
     <lastmod>2020-09-21T18:00:00-03:00</lastmod>
   </url>
   
@@ -372,12 +382,12 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/pagamento/detalhar-pix-enviado/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/pagamento/detalhar-pix-enviado/</loc>
     <lastmod>2021-08-26T10:19:00-03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/detalhar-qrcode-estatico/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/recebimento/detalhar-qrcode-estatico/</loc>
     <lastmod>2021-08-04T15:19:30-03:00</lastmod>
   </url>
   
@@ -427,7 +437,7 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/criar-qrcode-dinamico/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/recebimento/criar-qrcode-dinamico/</loc>
     <lastmod>2021-09-19T08:55:30-03:00</lastmod>
   </url>
   
@@ -482,7 +492,7 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/criar-qrcode-dinamico-com-vencimento/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/recebimento/criar-qrcode-dinamico-com-vencimento/</loc>
     <lastmod>2021-09-19T09:02:00-03:00</lastmod>
   </url>
   
@@ -521,17 +531,97 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/cancelar-qrcode-dinamico/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-padrao/lotecobv/consultar-lote-cobranca-vencimento/</loc>
+    <lastmod>2022-08-23T20:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-padrao/cobv/criar-cobranca-com-vencimento/</loc>
+    <lastmod>2022-08-23T20:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-padrao/lotecobv/criar-lote-cobranca-vencimento/</loc>
+    <lastmod>2022-08-23T20:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-padrao/lotecobv/listar-lote-cobranca-vencimento/</loc>
+    <lastmod>2022-08-23T20:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-padrao/lotecobv/revisar-lote-cobranca-vencimento/</loc>
+    <lastmod>2022-08-23T20:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-padrao/cob/criar-cobranca/</loc>
+    <lastmod>2022-08-23T15:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-padrao/cob/revisar-cobranca-imediata/</loc>
+    <lastmod>2022-08-23T15:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-padrao/loc/criar-location/</loc>
+    <lastmod>2022-08-23T15:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-padrao/loc/desvincular-location/</loc>
+    <lastmod>2021-09-19T09:08:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-padrao/cob/detalhes-cobranca-imediata/</loc>
+    <lastmod>2022-08-23T15:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-padrao/cob/listar-cobranca-imediata/</loc>
+    <lastmod>2022-08-23T15:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-padrao/loc/recuperar-location/</loc>
+    <lastmod>2022-08-23T15:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-padrao/cobv/detalhes-cobranca-com-vencimento/</loc>
+    <lastmod>2022-08-23T00:08:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-padrao/cobv/listar-cobranca-com-vencimento/</loc>
+    <lastmod>2022-07-23T15:17:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-padrao/cobv/revisar-cobranca-com-vencimento/</loc>
+    <lastmod>2022-07-23T15:17:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/recebimento/cancelar-qrcode-dinamico/</loc>
     <lastmod>2022-02-18T14:08:00-03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/cancelar-qrcode-dinamico-com-vencimento/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/recebimento/cancelar-qrcode-dinamico-com-vencimento/</loc>
     <lastmod>2022-02-18T14:08:00-03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/listar-cobranca-com-validade/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-padrao/cob/criar-cobranca-imediata/</loc>
+    <lastmod>2021-09-19T09:08:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-padrao/loc/listar-location/</loc>
     <lastmod>2021-09-19T09:08:00-03:00</lastmod>
   </url>
   
@@ -561,18 +651,33 @@
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/relato-infracao/fechar-relato-infracao/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-padrao/pix/criar-devolucao/</loc>
+    <lastmod>2022-08-17T00:00:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/relato-infracao/fechar-relato-infracao/</loc>
     <lastmod>2022-03-08T15:20:00-03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/relato-infracao/listar-relatos-infracoes/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/relato-infracao/listar-relatos-infracoes/</loc>
     <lastmod>2022-02-11T09:09:00-03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/recebimento/listar-recebimentos/</loc>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-padrao/pix/consultar-pix/</loc>
     <lastmod>2021-09-19T09:09:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-padrao/pix/consultar-devolucao/</loc>
+    <lastmod>2021-09-19T09:09:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stone-co.github.io/docs/referencia-da-api/pix/apis-padrao/pix/listar-recebimentos/</loc>
+    <lastmod>2022-08-17T00:00:00-03:00</lastmod>
   </url>
   
   <url>
@@ -650,7 +755,7 @@
   
   <url>
     <loc>https://stone-co.github.io/</loc>
-    <lastmod>2022-06-29T10:00:00-03:00</lastmod>
+    <lastmod>2022-08-17T00:00:00-03:00</lastmod>
   </url>
   
   <url>

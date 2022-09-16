@@ -1,0 +1,148 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stone OpenBank – Devolução de transferência Pix</title>
+    <link>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/devolucao/</link>
+    <description>Recent content in Devolução de transferência Pix on Stone OpenBank</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 29 Jun 2022 10:00:00 -0300</lastBuildDate>
+    
+	  <atom:link href="https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/devolucao/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Criar um devolução de pagamento Pix</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/devolucao/criar-devolucao/</link>
+      <pubDate>Wed, 29 Jun 2022 10:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/devolucao/criar-devolucao/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;br&gt;
+&lt;pre&gt;&lt;code&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/refunds_for_inbound_pix_payments
+&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;
+&lt;p&gt;Esse endpoint foi idealizado para criação de uma devolução de uma transferência Pix recebida.&lt;/p&gt;
+&lt;br&gt;
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;CONSIDERAÇÕES IMPORTANTES&lt;/strong&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;A data de transferência Pix recebida deve ser inferior ou igual a 90 dias para realizar a devolução.&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;O valor da devolução pode ser igual ou inferior ao valor da transferência original. Caso seja o valor seja inferior, esta será uma devolução parcial, então outras devoluções ainda poderão ser realizadas até que se atinja o valor total.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+
+&lt;br&gt;
+&lt;h4 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;authorization&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Bearer token de autenticação&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Chave de idempotência&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;Exemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;authorization&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI4d3NUd3BhYTRJWUZIYWV5ZFRubnRoRC1UaVlCaU9kanNmOGx6RUlMR1hVIn0.eyJqdGkiOiJiODQ0NDc4OS01ODE5LTQ4MTUtYjc1NC04MDU5NmMyYTg4MGYiLCJleHAiOjE2MTY2OTk5MjQsIm5iZiI6MCwiaWF0IjoxNjE2Njk5MDI0LCJpc3MiOiJodHRwczovL3NhbmRib3gtYWNjb3VudHMub3BlbmJhbmsuc3RvbmUuY29tLmJyL2F1dGgvcmVhbG1zL3N0b25lX2JhbmsiLCJzdWIiOiJhYzE5MGRmYy00YTBjLTQ5ODUtYmQwNi03NWE5Zjc3NjU0MTMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiIwNjVlY2IwOC0yNDM5LTQwYzAtOGUxMy0yYjQzYzIxNzQzZTMiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiIwMjhlMjY3ZS0zMjYwLTQzNDMtODQ2ZS1hOTRkNzlmZTFjYWEiLCJhY3IiOiIxIiwic2NvcGUiOiJwYXltZW50YWNjb3VudDpwYXltZW50bGlua3M6d3JpdGUgcGF5bWVudGFjY291bnQ6Y29udGFjdDp3cml0ZSBlbnRpdHk6d3JpdGUgcGF5bWVudGFjY291bnQ6cmVhZCBwYXltZW50YWNjb3VudDp0cmFuc2ZlcnM6aW50ZXJuYWwgcGF5bWVudGFjY291bnQ6ZmVlczpyZWFkIHBheW1lbnRhY2NvdW50Omluc3RhbnRwYXltZW50IHBheW1lbnRhY2NvdW50OnBheW1lbnRzIHN0b25lX3N1YmplY3RfaWQgcGF5bWVudGFjY291bnQ6Y29udGFjdDpyZWFkIHNpZ251cDpwYXltZW50YWNjb3VudCBwYXltZW50YWNjb3VudDpib2xldG9pc3N1YW5jZSBwYXltZW50YWNjb3VudDpwYXltZW50bGlua3M6cmVhZCBwYXltZW50YWNjb3VudDpwYXlyb2xsczpyZWFkIHBheW1lbnRhY2NvdW50OnBheXJvbGxzOndyaXRlIHBheW1lbnRhY2NvdW50OnRyYW5zZmVyczpleHRlcm5hbCBlbnRpdHk6cmVhZCIsImNsaWVudElkIjoiMDY1ZWNiMDgtMjQzOS00MGMwLThlMTMtMmI0M2MyMTc0M2UzIiwiY2xpZW50SG9zdCI6IjEwLjEwLjEuMTQ5Iiwic3RvbmVfc3ViamVjdF9pZCI6ImFwcGxpY2F0aW9uOjA2NWVjYjA4LTI0MzktNDBjMC04ZTEzLTJiNDNjMjE3NDNlMyIsImNsaWVudEFkZHJlc3MiOiIxMC4xMC4xLjE0OSJ9.PlAhWLgC2W10H9emucF4obcJhwR92EogMNRIWUej4z-P-p3UaStYlaYd5Bfx4hl7da4ly62K1LEBI7LOqCFkbHMlnJfglp3dFS2M3iHZ571BNSmCff3wUiFy6zoHxFaKEUPy0V8e6mCQwFuapdIvDocA4Z4xYh049dWEwbJ2uevV3V_Q-RL3me8vykNTWGiT-dmyWvFN-XAq889_F1ZQskHsLz-ZtlrFw3XjitnLvEJbg9iyxVA7AuwnexBIQS4gU9QwMXcJjij9JowYbLu4ANUITXU01Jf5hxMYq1oSobOL3-RuGWJLoPOXkJyAbOm5hS15QgSuwp_qOU8VAEa3Yg&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;x-stone-idempotency-key&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;24b53d84-a79d-11eb-bcbc-0242ac130002&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;reason&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Valores permitidos: &lt;code&gt;beneficiary_request&lt;/code&gt;, &lt;code&gt;fraud&lt;/code&gt;, &lt;code&gt;institution_error&lt;/code&gt; ou &lt;code&gt;specific_service_offered_by_creditor_agent&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;amount&lt;/strong&gt;* &lt;code&gt;integer&lt;/code&gt;
+&lt;br&gt;Valor da devolução a ser realizada em centavos
+&lt;br&gt;Valor mínimo: 0
+&lt;br&gt;Valor máximo: 1000000000000&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;inbound_pix_payment_id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Identificador da transferência recebida
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Body:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;beneficiary_request&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;39511&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;inbound_pix_payment_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;6f4d67a374004257974facecelea4810&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;h5 id=&#34;responses&#34;&gt;&lt;strong&gt;Responses&lt;/strong&gt;&lt;/h5&gt;
+&lt;pre&gt;&lt;code&gt;202 OK
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;d8963f15-20ca-48e9-b033-c12ef88bc0ea&amp;#34;&lt;/span&gt;,
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;amount&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;39511&lt;/span&gt;,
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2022-06-29T12:27:27Z&amp;#34;&lt;/span&gt;,
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user:6ead2edf-82f1-4e28-a5f3-f6456508fb02&amp;#34;&lt;/span&gt;,
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;failed_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;failure_reason_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;failure_reason_description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;aa44243f-c8e5-4719-9a6c-9e3d4080bc1d&amp;#34;&lt;/span&gt;,
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;money_reserved_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;beneficiary_request&amp;#34;&lt;/span&gt;,
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;request_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;d306c427-9eae-9425-bf09-5bdb151d217d&amp;#34;&lt;/span&gt;,
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;return_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;D1650155520220629122786649111556&amp;#34;&lt;/span&gt;,
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reversal_reason&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reversed_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;settled_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;source_ispb&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;16501555&amp;#34;&lt;/span&gt;,
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;PENDING&amp;#34;&lt;/span&gt;,
+	&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;target_ispb&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;16501555&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;400 Bad Request
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;403 Forbidden
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;404 Not Found
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:not_found&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;422 Unprocessable Entity
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:exceeded_avaiable_amount&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Acontece quando o valor passado excede o valor da transação original.&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:inbound_pix_payment_not_settled&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Erro na tentativa de criar devolução. O pagamento original não foi concluído ou aceito.&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:refund_period_exceeded&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;O período hábil para criação de uma devolução foi excedido.&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:target_institution_not_found&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Acontece quando a devolução é feita para uma Instituição Financeira inexistente ou que não faz mais parte do arranjo Pix.&lt;/p&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;409 Conflict
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:idempotency_conflict&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Conflito de idempotência. A chave de idempotência já existe para um body diferente.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

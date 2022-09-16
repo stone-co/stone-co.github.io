@@ -1,0 +1,18 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stone OpenBank – Detalhes Cobrança com Vencimento</title>
+    <link>https://stone-co.github.io/docs/referencia-da-api/pix/apis-padrao/cobv/detalhes-cobranca-com-vencimento/</link>
+    <description>Recent content in Detalhes Cobrança com Vencimento on Stone OpenBank</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 23 Aug 2022 00:17:00 -0300</lastBuildDate>
+    
+	  <atom:link href="https://stone-co.github.io/docs/referencia-da-api/pix/apis-padrao/cobv/detalhes-cobranca-com-vencimento/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

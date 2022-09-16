@@ -1,0 +1,163 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stone OpenBank – Relato de Infração (Beta)</title>
+    <link>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/relato-infracao/</link>
+    <description>Recent content in Relato de Infração (Beta) on Stone OpenBank</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 11 Feb 2022 14:00:00 -0300</lastBuildDate>
+    
+	  <atom:link href="https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/relato-infracao/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Fechar Relato de Infração</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/relato-infracao/fechar-relato-infracao/</link>
+      <pubDate>Tue, 08 Mar 2022 15:17:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/relato-infracao/fechar-relato-infracao/</guid>
+      <description>
+        
+        
+        &lt;br&gt;
+&lt;p&gt;Através do seguinte endpoint, será possível que um participante indireto feche um relato de infração. Para fechar um relato, este deve possuir os seguintes requisitos: ser um relato recebido (&lt;code&gt;direction: inbound&lt;/code&gt;) e estar pendente (&lt;code&gt;status: pending&lt;/code&gt;). O relato também deve ser fechado em um prazo de 7 dias.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;POST https://sandbox-api.openbank.stone.com.br/api/v1/pix/{{account_id}}/infractions_reports/{{id}}/actions/{{analysis_result}}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;
+&lt;h5 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;authorization&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Bearer token de autenticação.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;x-stone-account-id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Necessário para permissionamento.&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;path-params&#34;&gt;&lt;strong&gt;PATH PARAMS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Identificador da conta&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Identificador do relato&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;analysis_result&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Resultado da análise: aqui deverá ser preenchido com um dos valores &lt;code&gt;accepted&lt;/code&gt; ou &lt;code&gt;rejected&lt;/code&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;body-params&#34;&gt;&lt;strong&gt;BODY PARAMS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;analysis_details&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;code&gt;Opcional&lt;/code&gt; &lt;code&gt;Tamanho máximo de 2000 caracteres&lt;/code&gt;
+&lt;br&gt; Detalhes da análise&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;request-body&#34;&gt;&lt;strong&gt;Request body&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;analysis_details&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;detalhes da análise&amp;#34;&lt;/span&gt;
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;br&gt; &lt;br&gt;&lt;/p&gt;
+&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;204 OK
+&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;
+&lt;pre&gt;&lt;code&gt;400 Bad Request
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;: [{&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;error&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;is invalid&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;path&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;]}],
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:validation&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;pre&gt;&lt;code&gt;403 Forbidden
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:unauthorized&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Listar Relatos de Infrações recebidos</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/relato-infracao/listar-relatos-infracoes/</link>
+      <pubDate>Fri, 11 Feb 2022 15:17:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/relato-infracao/listar-relatos-infracoes/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Através desse endpoint será possível listar todos os Relatos de Infrações recebidos na conta.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/pix/{{account_id}}/infractions_reports
+&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;
+&lt;h5 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;authorization&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Bearer token de autenticação.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;x-stone-account-id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Necessário para permissionamento.&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;query-path&#34;&gt;&lt;strong&gt;QUERY PATH&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;account_id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Identificador da conta&lt;/p&gt;
+&lt;h5 id=&#34;query-params&#34;&gt;&lt;strong&gt;QUERY PARAMS&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;range&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Format: [Num, Num]
+&lt;br&gt;Ex: range=[0, 5]&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;sort&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Format: [field, &amp;ldquo;ASC&amp;rdquo;|&amp;ldquo;DESC&amp;rdquo;]
+&lt;br&gt;Possible fields: &amp;ldquo;created_at&amp;rdquo;, &amp;ldquo;expires_at&amp;rdquo;
+&lt;br&gt;Ex: sort=[&amp;ldquo;created_at&amp;rdquo;, &amp;ldquo;ASC&amp;rdquo;]&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;filter&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Format: {field: value} (Pode filtar por vários campos ao mesmo tempo)
+&lt;br&gt;Possible fields: &amp;ldquo;type&amp;rdquo;, &amp;ldquo;reported_by&amp;rdquo;, &amp;ldquo;status&amp;rdquo;, &amp;ldquo;analysis_result&amp;rdquo;, &amp;ldquo;end_to_end_id&amp;rdquo;, &amp;ldquo;refund_id&amp;rdquo;, &amp;ldquo;direction&amp;rdquo;
+&lt;br&gt;Ex: filter={&amp;ldquo;type&amp;rdquo;: &amp;ldquo;fraud&amp;rdquo;, &amp;ldquo;reported_by&amp;rdquo;: &amp;ldquo;debited_participant&amp;rdquo;}&lt;/p&gt;
+&lt;p&gt;Exemplo:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;https://sandbox-api.openbank.stone.com.br/api/v1/pix/477f8576-ca82-462b-be73-dc28cc6490c3
+/infractions_reports?range=[0, 5]&amp;amp;sort=[&amp;quot;created_at&amp;quot;, &amp;quot;ASC&amp;quot;]&amp;amp;filter={&amp;quot;type&amp;quot;: &amp;quot;fraud&amp;quot;, &amp;quot;reported_by&amp;quot;: &amp;quot;debited_participant&amp;quot;}
+&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;
+&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;200 OK
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;[
+    {
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;accepted_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;12aa3b3c-d44d-4885-be9a-eccb5d306660&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;analysis_details&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;analysis_result&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cancelled_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2022-02-10T23:59:11.984877Z&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;credited_participant&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;18727053&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;debited_participant&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;16501555&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;direction&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;inbound&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;end_to_end_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;E165015552022020920407aad1c7c239&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;expires_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2022-02-17T23:59:11.984877Z&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;8715a2ee-9a68-41d4-8a9f-a46f7a814f15&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;infraction_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;b182bbce-de10-4bc2-9d03-c11746642ab2&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;inserted_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2022-02-10T23:59:22.249074Z&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;refund_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;rejected_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;report_details&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Foi uma fraude&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reported_by&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;debited_participant&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;request_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ea9ad974-2b9f-49df-b37c-ce67d80d4c8a&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;pending&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;transaction_result&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;settled&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;transaction_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;spi&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;fraud&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2022-02-10T23:59:22.249074Z&amp;#34;&lt;/span&gt;
+    }
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;pre&gt;&lt;code&gt;400 Bad Request
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;reason&amp;#34;&lt;/span&gt;: [{&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;error&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;is invalid&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;path&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;]}],
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:validation&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;pre&gt;&lt;code&gt;403 Forbidden
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:unauthorized&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>
