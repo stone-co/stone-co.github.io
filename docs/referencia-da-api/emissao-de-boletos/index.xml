@@ -863,6 +863,17 @@ Importante ressaltar que pode haver restrição de habilitação de um determina
 &lt;br&gt;     &lt;strong&gt;street_number&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
 &lt;br&gt;     Número do logradouro do beneficiário do boleto.
 &lt;br&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;payment_invoice&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;     &lt;strong&gt;description&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(opcional)&lt;/em&gt;
+&lt;br&gt;     A cliente poderá adicionar informações relativas ao seu produto/serviço a fim de identificar o que foi vendido.
+&lt;br&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;br&gt;&lt;strong&gt;metadata&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt; &lt;em&gt;(opcional)&lt;/em&gt;
+&lt;br&gt;Preenchido com dados internos do parceiro.&lt;/p&gt;
+&lt;hr&gt;
 &lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;h4 id=&#34;headers&#34;&gt;&lt;strong&gt;HEADERS&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
@@ -951,8 +962,12 @@ content-type: application/json
    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;receiver&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;registered_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;settled_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;CREATED&amp;#34;&lt;/span&gt;,
-    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;writable_line&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;19790000056313907246482159290061784560000002100&amp;#34;&lt;/span&gt;
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;CREATED&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;writable_line&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;19790000056313907246482159290061784560000002100&amp;#34;&lt;/span&gt;,
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;payment_invoice&amp;#34;&lt;/span&gt;: {
+     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Descrição do pagamento.&amp;#34;&lt;/span&gt;
+   },
+   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;metadata&amp;#34;&lt;/span&gt;: {}
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;201&lt;/span&gt; Created
@@ -1015,7 +1030,11 @@ content-type: application/json
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;registered_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;settled_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;CREATED&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;writable_line&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;19790000056313907246482159290061784560000002100&amp;#34;&lt;/span&gt;
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;writable_line&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;19790000056313907246482159290061784560000002100&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;payment_invoice&amp;#34;&lt;/span&gt;: {
+     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Descrição do pagamento.&amp;#34;&lt;/span&gt;
+  },
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;metadata&amp;#34;&lt;/span&gt;: {}
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;400&lt;/span&gt; Bad Request
@@ -1065,6 +1084,7 @@ content-type: application/json
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:product_not_enabled&amp;#34;&lt;/span&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+
       </description>
     </item>
     
@@ -1288,7 +1308,11 @@ content-type: application/json
           &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;registered_at&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2020-03-10T15:03:34Z&amp;#34;&lt;/span&gt;,
           &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;settled_at&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
           &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;REGISTERED&amp;#34;&lt;/span&gt;,
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;writable_line&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;19790000052020031015703344761550581910000002000&amp;#34;&lt;/span&gt;
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;writable_line&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;19790000052020031015703344761550581910000002000&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;payment_invoice&amp;#34;&lt;/span&gt;: {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Descrição do pagamento.&amp;#34;&lt;/span&gt;
+          },
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;metadata&amp;#34;&lt;/span&gt;: {}
        }
     ]
 }
@@ -1385,7 +1409,11 @@ content-type: application/json
           &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;registered_at&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2020-03-10T15:03:34Z&amp;#34;&lt;/span&gt;,
           &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;settled_at&amp;#34;&lt;/span&gt;:NULL,
           &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;REGISTERED&amp;#34;&lt;/span&gt;,
-          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;writable_line&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;19790000052020031015703344761550581910000002000&amp;#34;&lt;/span&gt;
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;writable_line&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;19790000052020031015703344761550581910000002000&amp;#34;&lt;/span&gt;,
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;payment_invoice&amp;#34;&lt;/span&gt;: {
+            &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Descrição do pagamento.&amp;#34;&lt;/span&gt;
+          },
+          &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;metadata&amp;#34;&lt;/span&gt;: {}
  }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       </description>

@@ -208,8 +208,10 @@ jwe &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; generate_jwe(payloa
 &lt;br&gt;
 &lt;p&gt;Provê um conjunto de informações para acompanhar o pedido de cadastro da conta de pagamento.&lt;/p&gt;
 &lt;hr&gt;
-&lt;pre&gt;&lt;code&gt;GET https://sandbox-api.openbank.stone.com.br/api/v1/applications/:client_id/signups/:sign_up_request_id
-&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;
+&lt;blockquote&gt;
+&lt;p&gt;GET &lt;a href=&#34;https://sandbox-api.openbank.stone.com.br/api/v1/applications/:client_id/signups/:sign_up_request_id&#34;&gt;https://sandbox-api.openbank.stone.com.br/api/v1/applications/:client_id/signups/:sign_up_request_id&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;br&gt;
 &lt;h4 id=&#34;authorization&#34;&gt;&lt;strong&gt;Authorization&lt;/strong&gt;&lt;/h4&gt;
 &lt;hr&gt;
 
@@ -232,6 +234,8 @@ jwe &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; generate_jwe(payloa
 &lt;br&gt;
 &lt;h5 id=&#34;path-parameter&#34;&gt;&lt;strong&gt;PATH PARAMETER&lt;/strong&gt;&lt;/h5&gt;
 &lt;hr&gt;
+&lt;p&gt;ID do cliente é o id da sua aplicação para mais informações veja a documentação de &lt;a href=&#34;https://docs.openbank.stone.com.br/docs/guias/token-de-acesso/&#34;&gt;token de acesso&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;O sign up request é o id gerado apartir de um pedido feito via &lt;code&gt;/singups&lt;/code&gt; para mais informações veja &lt;a href=&#34;http://localhost:1313/docs/referencia-da-api/dados-da-conta/criar-nova-conta-de-pagamento/&#34;&gt;singup&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;client_id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;sign_up_request_id&lt;/strong&gt;* &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;br&gt;
@@ -239,6 +243,18 @@ jwe &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; generate_jwe(payloa
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;x-stone-subject-token&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;br&gt;
+&lt;h2 id=&#34;glossário&#34;&gt;Glossário&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Verificações Automáticas (automatic_checks_assessment): Fazemos verificações automáticas do cadastro de usuário como exemplos, verificar situação cadastral, idade legal, sociedade entre outros.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;KYC Know Your Costumer (user_input_assessment): Validadmos a identidade do usuário após envio de informações como selfie, foto do documato entre outras.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CHECKS:  Cada informação que pedimos dentro do KYC.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h5 id=&#34;responses&#34;&gt;&lt;strong&gt;Responses&lt;/strong&gt;&lt;/h5&gt;
 &lt;hr&gt;
 &lt;pre&gt;&lt;code&gt;200 ok 
@@ -247,22 +263,66 @@ jwe &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; generate_jwe(payloa
 &lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
 &lt;p&gt;&lt;strong&gt;A resposta contém os seguintes dados:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;id: identificador do pedido de sign up&lt;/li&gt;
-&lt;li&gt;owner_id: identificador do usuário ou organização dona da conta de pagamento&lt;/li&gt;
-&lt;li&gt;owner_type: tipo do dono da conta de pagamento (user ou organization)&lt;/li&gt;
-&lt;li&gt;user_id: id do usuário atrelado a conta de pagamento&lt;/li&gt;
+&lt;li&gt;id: identificador do pedido de sign up.&lt;/li&gt;
+&lt;li&gt;account_status: status da conta de pagamento.
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;created&lt;/strong&gt;: conta foi criada.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;closed&lt;/strong&gt;: conta foi encerrada.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;pending_analysis&lt;/strong&gt;: pendente de aprovação de KYC.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;empty&lt;/strong&gt;: Status legado de quando a conta não foi aberta automaticamente.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;owner_id: identificador do usuário ou organização dona da conta de pagamento.&lt;/li&gt;
+&lt;li&gt;owner_type: tipo do dono da conta de pagamento (user ou organization).&lt;/li&gt;
+&lt;li&gt;user_id: id do usuário atrelado a conta de pagamento.&lt;/li&gt;
 &lt;li&gt;organization_id: id da organização atrelada a conta de pagamento (pode ser nulo caso seja uma conta apenas de PF).&lt;/li&gt;
 &lt;li&gt;user_email_verified: indica se o usuário está com o e-mail verificado.&lt;/li&gt;
-&lt;li&gt;user_assessment_request_status: status do assessment request para criação do usuário.&lt;/li&gt;
-&lt;li&gt;organization_assessment_request_status: status do assessment request para criação da organização (pode ser nulo caso seja uma conta apenas de PF).&lt;/li&gt;
+&lt;li&gt;user_assessment_request_status: status resultante da combinação entre os status dos assessments gerados para o usuário nesse pedido.&lt;/li&gt;
+&lt;li&gt;user_input_assessment_status:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;answered&lt;/strong&gt;: quando o cliente respondeu KYC e está pendente de análise.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;approved&lt;/strong&gt;: KYC aprovado.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;canceled&lt;/strong&gt;: quando o KYC foi cancelado pela operação.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;partially_rejected&lt;/strong&gt;: Quando pelo menos um dos checks foi aprovado e pelo menos um foi rejeitado.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;rejected&lt;/strong&gt;:  quando o cadastro for rejeitado por completo.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;requested&lt;/strong&gt;: quando o KYC ainda não foi respondido.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;undone&lt;/strong&gt;: quando a análise do KYC foi desfeita.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;user_automatic_checks_status: status agrupado das validações automáticas.
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;approved&lt;/strong&gt;: aprovado em todas as validações automáticas.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;rejected&lt;/strong&gt;: rejeitado o pedido de abertura de conta.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;partially_rejected&lt;/strong&gt;: Quando foi rejeitado em uma ou mais validações automáticas.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;rerunned&lt;/strong&gt;: quando reprocessamos as validações.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;answered&lt;/strong&gt;: status intermediário enquanto as avaliações não foram finalizadas.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;canceled&lt;/strong&gt;: quando foi cancelado pela operação de analise de KYC.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;requested&lt;/strong&gt;: quando as validações não foram finalizadas ainda.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;organization_assessment_request_status: status resultante da combinação entre os status dos assessments gerados para a organização nesse pedido (pode ser nulo caso seja uma conta apenas de PF).&lt;/li&gt;
 &lt;li&gt;subject_id: id da aplicação que criou esse pedido de sign up.&lt;/li&gt;
-&lt;li&gt;status: em qual status está o pedido de sign up created, kyc_analysis(em análise de kyc), finished, failed&lt;/li&gt;
+&lt;li&gt;status: em qual status está o pedido de sign up:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;created&lt;/strong&gt; - pedido criado.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;kyc_analysis&lt;/strong&gt; - pedido em análise de kyc.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;finished&lt;/strong&gt; - todas as etapas do pedido finalizadas.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;failed&lt;/strong&gt; -  pedido falhou no momento da criação.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;error: apenas presente caso o status seja failed, contém informações do motivo de falha ao fazer o sign up.&lt;/li&gt;
 &lt;li&gt;metadata: metadados customizados passados ao realizar o cadastro.&lt;/li&gt;
 &lt;li&gt;request_metadata: metadados da requisição de cadastro. Ex: user-agent, ip.&lt;/li&gt;
 &lt;li&gt;resource_details: detalhes envolvendos esse cadastro. Ex: usuário verificou o e-mail, horário que o usuário verificou e-mail, assessment de usuário aprovado, conta de pagamento aberta/fechada/inexistente.&lt;/li&gt;
-&lt;li&gt;resource_type: tipo de recurso principal criado (usuário, organização, conta de pagamento).&lt;/li&gt;
-&lt;li&gt;user: alguns campos do usuário, atualmente só carregamos o id e o approval_status (limited|approved|partially_rejected|pending_analysis).&lt;/li&gt;
+&lt;li&gt;resource_type: tipo de recurso principal criado.
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;usuário&lt;/strong&gt;: criou uma entidade de usuário (srn:resource:user).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;organização&lt;/strong&gt;: criou uma entidade de Organização (srn:resource:organization).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;conta de pagamento PF&lt;/strong&gt;: cria uma entidade usuário com um pedido de conta de pagamento (srn:resource:paymentaccount).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;conta de pagamento PJ&lt;/strong&gt;: cria uma entidade usuário e organização com pedido de conta de pagamento (srn:resource:paymentaccount).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;user: alguns campos do usuário, atualmente só carregamos o id e o approval_status (limitedapprovedpartially_rejectedpending_analysis).&lt;/li&gt;
 &lt;li&gt;organization: alguns campos da organização, atualmente só carregamos o id e o approval_status.&lt;/li&gt;
 &lt;li&gt;inserted_at: timestamp da criação do pedido de conta de pagamento.&lt;/li&gt;
 &lt;li&gt;updated_at: timestamp da última atualização do pedido de conta de pagamento.&lt;/li&gt;
@@ -286,13 +346,31 @@ jwe &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; generate_jwe(payloa
 &lt;p&gt;&lt;strong&gt;owner_type&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
+&lt;p&gt;&lt;strong&gt;owner_document&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
 &lt;p&gt;&lt;strong&gt;user_id&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;user_assessment_request_id&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;organization_id&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
+&lt;p&gt;&lt;strong&gt;organization_assessment_request_id&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;request_id&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
 &lt;p&gt;&lt;strong&gt;subject_id&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;detailed_status&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;detailed_status_description&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;status&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
@@ -312,9 +390,9 @@ jwe &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; generate_jwe(payloa
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;update_at&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;
 &lt;p&gt;&lt;strong&gt;resource_details&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;account_status&lt;/strong&gt; &lt;code&gt;boolean&lt;/code&gt; or &lt;code&gt;string&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
@@ -377,6 +455,7 @@ jwe &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; generate_jwe(payloa
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;utm_term&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;
   },
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;metadata&amp;#34;&lt;/span&gt;: {},
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;owner_document&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;organization_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;3bf2ac6f-2219-4027-8516-d9457f7e6a96&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;owner_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;organization:3bf2ac6f-2219-4027-8516-d9457f7e6a96&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;owner_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;organization&amp;#34;&lt;/span&gt;,
@@ -406,15 +485,50 @@ jwe &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; generate_jwe(payloa
   },
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;resource_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:resource:paymentaccount&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;kyc_analysis&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;detailed_status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;status_111&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;detailed_status_description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Conta ainda não foi aberta pois falta o cliente responder informações de cadastro no app&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;subject_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user:790081f7-92ce-428f-8334-6443ecc3cbb2&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2020-08-11T12:39:56.568580&amp;#34;&lt;/span&gt;,
   &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;user_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;1f4b4f98-f2a2-4ae6-9d4d-2a8dbe5473e1&amp;#34;&lt;/span&gt;,
-  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;user&amp;#34;&lt;/span&gt;: {
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;user_assessment_request_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;daa74a8b-701d-405e-b8c4-9976286eeda9&amp;#34;&lt;/span&gt;
+  &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;user&amp;#34;&lt;/span&gt;: {
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;approval_status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;approved&amp;#34;&lt;/span&gt;,
     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2d2e6aba-ce11-49be-88c0-0641843cabdc&amp;#34;&lt;/span&gt;
   }
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;possiveis-detailed-status-description&#34;&gt;Possiveis detailed status description&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Conta não foi aberta para livre movimentação pois o cadastro do cliente foi rejeitado&lt;/li&gt;
+&lt;li&gt;Conta ainda não foi aberta pois está em análise pelo time da conta&lt;/li&gt;
+&lt;li&gt;Estado inconsistente&lt;/li&gt;
+&lt;li&gt;Conta ainda não foi liberada para livre movimentação pois falta o cliente responder informações de cadastro no app e confirmar e-mail&lt;/li&gt;
+&lt;li&gt;Conta não foi aberta pois o cadastro do cliente foi rejeitado&lt;/li&gt;
+&lt;li&gt;Conta ainda não foi liberada para livre movimentação pois falta o cliente verificar o e-mail&lt;/li&gt;
+&lt;li&gt;Conta ainda não foi liberada pois está em análise pelo time da conta&lt;/li&gt;
+&lt;li&gt;Conta encerrada pois o cadastro do cliente foi rejeitado.&lt;/li&gt;
+&lt;li&gt;Conta ainda não foi liberada para livre movimentação pois está pendente análise do time da Conta&lt;/li&gt;
+&lt;li&gt;Conta ainda não foi aberta pois falta o cliente verificar o e-mail&lt;/li&gt;
+&lt;li&gt;Conta não foi liberada para livre movimentação, entrar em contato com o time da Conta&lt;/li&gt;
+&lt;li&gt;Conta não foi liberada para livre movimentação pois o cadastro do cliente foi rejeitado&lt;/li&gt;
+&lt;li&gt;Conta ainda não foi liberada para livre movimentação pois falta o cliente responder informações adicionais de cadastro no app&lt;/li&gt;
+&lt;li&gt;Estado inconsistente&lt;/li&gt;
+&lt;li&gt;Conta ainda não foi liberada para livre movimentação pois falta o cliente responder informações adicionais de cadastro no app e confirmar e-mail&lt;/li&gt;
+&lt;li&gt;Conta aprovada para livre movimentação&lt;/li&gt;
+&lt;li&gt;Conta ainda não foi liberada para livre movimentação pois falta o cliente confirmar e-mail&lt;/li&gt;
+&lt;li&gt;Conta ainda não foi liberada para livre movimentação pois falta o cliente responder novamente informações no app&lt;/li&gt;
+&lt;li&gt;Conta encerrada pois o cadastro do cliente foi rejeitado&lt;/li&gt;
+&lt;li&gt;Conta ainda não foi aberta pois falta o cliente responder informações de cadastro no app e confirmar e-mail&lt;/li&gt;
+&lt;li&gt;Conta ainda não foi liberada para livre movimentação pois falta o cliente responder informações de cadastro no app&lt;/li&gt;
+&lt;li&gt;Conta ainda não foi aberta para livre movimentação pois falta o cliente verificar o e-mail&lt;/li&gt;
+&lt;li&gt;Conta pendente análise pois falta cliente confirmar e-mail&lt;/li&gt;
+&lt;li&gt;Conta ainda não foi aberta pois falta o cliente responder informações de cadastro no app&lt;/li&gt;
+&lt;li&gt;Conta em análise pelo time da conta&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;detailed_status é formado por status_número
+ex: &lt;code&gt;status_1&lt;/code&gt;, &lt;code&gt;status_111&lt;/code&gt; &amp;hellip;  &lt;code&gt;status_7559&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
       </description>
     </item>
     

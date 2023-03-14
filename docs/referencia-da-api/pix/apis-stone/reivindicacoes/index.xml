@@ -1,0 +1,435 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stone OpenBank – Reivindicação de Chaves Pix</title>
+    <link>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/reivindicacoes/</link>
+    <description>Recent content in Reivindicação de Chaves Pix on Stone OpenBank</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 21 Nov 2022 11:00:00 -0300</lastBuildDate>
+    
+	  <atom:link href="https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/reivindicacoes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Cancelar Reivindicação</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/reivindicacoes/cancelar-reivindicacao/</link>
+      <pubDate>Mon, 21 Nov 2022 11:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/reivindicacoes/cancelar-reivindicacao/</guid>
+      <description>
+        
+        
+        &lt;br&gt;
+&lt;p&gt;Esse endpoint tem como finalidade cancelar o processo de reivindicação.&lt;/p&gt;
+&lt;h5 id=&#34;request&#34;&gt;&lt;strong&gt;Request&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;POST /api/v1/pix/:account_id/entry_claims/cancel
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;headers&#34;&gt;&lt;strong&gt;Headers&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Chave de idempotência
+&lt;br&gt;&lt;/p&gt;
+&lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;Body params&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;claim_id&lt;/strong&gt; &lt;code&gt;String&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
+&lt;br&gt;Identificador da reivindicação.
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;reason&lt;/strong&gt; &lt;code&gt;String&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
+&lt;br&gt;Valores permitidos: &lt;code&gt;user_requested&lt;/code&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;direction&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Valores permitidos: &lt;code&gt;outbound&lt;/code&gt;, &lt;code&gt;inbound&lt;/code&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;participant_ispb&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
+&lt;br&gt;Identificador da instituição.
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Exemplo:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;claim_id&amp;quot;: &amp;quot;390d7eda-e948-4552-bcdf-886c62e5923b&amp;quot;,
+  &amp;quot;reason&amp;quot;: &amp;quot;user_requested&amp;quot;,
+  &amp;quot;direction&amp;quot;: &amp;quot;outbound&amp;quot;,
+  &amp;quot;participant_ispb&amp;quot;: &amp;quot;16501555&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;202 Accepted
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Pedido de cancelamento realizado com sucesso.
+&lt;br&gt;
+Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{  
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;pix_entry_claim&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;390d7eda-e948-4552-bcdf-886c62e5923b&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;claim_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ownership&amp;#34;&lt;/span&gt; | &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;portability&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt; 
+&lt;pre&gt;&lt;code&gt;401 Unauthenticated
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Usuário não está autenticado.
+&lt;br&gt;
+Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{  
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:unauthenticated&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt; 
+&lt;pre&gt;&lt;code&gt;403 Forbidden
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Usuário não autorizado a realizar a ação.
+&lt;br&gt;
+Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{  
+     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:unauthorized&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt; 
+&lt;pre&gt;&lt;code&gt;422 Unprocessable Entity
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Reivindicação á foi cancelada ou confirmada.
+&lt;br&gt;
+Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{  
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:already_cancelled&amp;#34;&lt;/span&gt; | &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:already_confirmed&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt; 
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Completar Reivindicação de Posse</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/reivindicacoes/completar-reivindicacao/</link>
+      <pubDate>Mon, 21 Nov 2022 11:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/reivindicacoes/completar-reivindicacao/</guid>
+      <description>
+        
+        
+        &lt;br&gt;
+&lt;p&gt;Esse endpoint tem como finalidade completar o processo de reivindicação de posse da chave Pix.&lt;/p&gt;
+&lt;h5 id=&#34;request&#34;&gt;&lt;strong&gt;Request&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;POST /api/v1/pix/:account_id/entry_claims/complete
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;headers&#34;&gt;&lt;strong&gt;Headers&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Chave de idempotência
+&lt;br&gt;&lt;/p&gt;
+&lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;Body params&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;claim_id&lt;/strong&gt; &lt;code&gt;String&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
+&lt;br&gt;Identificador da reivindicação.
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Exemplo:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;claim_id&amp;quot;: &amp;quot;390d7eda-e948-4552-bcdf-886c62e5923b&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;401 Accepted
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Processo de completar reivindicação realizado com sucesso.
+&lt;br&gt;
+Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{  
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;pix_entry_claim&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;390d7eda-e948-4552-bcdf-886c62e5923b&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;claim_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ownership&amp;#34;&lt;/span&gt; 
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt; 
+&lt;pre&gt;&lt;code&gt;401 Unauthenticated
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Usuário não está autenticado.
+&lt;br&gt;
+Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{  
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:unauthenticated&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt; 
+&lt;pre&gt;&lt;code&gt;403 Forbidden
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Usuário não autorizado a realizar a ação
+&lt;br&gt;
+Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{  
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:unauthorized&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt; 
+&lt;pre&gt;&lt;code&gt;422 Unprocessable Entity
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Reivindicação já foi completada
+&lt;br&gt;
+Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{  
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:already_completed&amp;#34;&lt;/span&gt; 
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt; 
+&lt;pre&gt;&lt;code&gt;422 Unprocessable Entity
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Reivindicação não pode receber ação (por ter sido cancelada ou não ter recebido a confirmação ainda)
+&lt;br&gt;
+Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:wrong_status&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt; 
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Criar Reivindicação</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/reivindicacoes/criar-reivindicacao/</link>
+      <pubDate>Mon, 21 Nov 2022 11:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/reivindicacoes/criar-reivindicacao/</guid>
+      <description>
+        
+        
+        &lt;br&gt;
+&lt;p&gt;Esse endpoint tem como finalidade criar o processo de reivindicação.&lt;/p&gt;
+&lt;h5 id=&#34;request&#34;&gt;&lt;strong&gt;Request&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;POST /api/v1/pix/:account_id/entry_claims
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;headers&#34;&gt;&lt;strong&gt;Headers&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;x-stone-idempotency-key&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Chave de idempotência
+&lt;br&gt;&lt;/p&gt;
+&lt;h4 id=&#34;body-params&#34;&gt;&lt;strong&gt;Body params&lt;/strong&gt;&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;pix_entry_id&lt;/strong&gt; &lt;code&gt;UUID&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
+&lt;br&gt;Identificador da chave Pix cuja criação resultou em falha.
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;participant_ispb&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt; &lt;em&gt;(obrigatório)&lt;/em&gt;
+&lt;br&gt;Identificador da instituição.
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;beneficiary_account&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
+&lt;br&gt;    &lt;strong&gt;account_code&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;    Número da conta
+&lt;br&gt;    &lt;strong&gt;branch_code&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;    Agência
+&lt;br&gt;    Format: ^\d{4}$
+&lt;br&gt;    &lt;strong&gt;account_type&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;    Tipo da conta.
+&lt;br&gt;    Valores permitidos: &lt;code&gt;CC&lt;/code&gt;, &lt;code&gt;CS&lt;/code&gt;, &lt;code&gt;PP&lt;/code&gt; ou &lt;code&gt;PG&lt;/code&gt;
+&lt;br&gt;    &lt;strong&gt;created_at&lt;/strong&gt; &lt;code&gt;datetime&lt;/code&gt;
+&lt;br&gt;    Data de criação da conta.
+&lt;br&gt;    Format: ISO8601 - &amp;ldquo;YYYY-MM-DDThh:mm:ssZ&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;beneficiary_entity&lt;/strong&gt; &lt;code&gt;object&lt;/code&gt;
+&lt;br&gt;    &lt;strong&gt;name&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;    Nome
+&lt;br&gt;    &lt;strong&gt;legal_name&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;    É o nome que identifica o pagador para fins legais, administrativos e outros fins oficiais
+&lt;br&gt;    &lt;strong&gt;document&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;    Número do documento (CPF/CNPJ)
+&lt;br&gt;    &lt;strong&gt;document_type&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;    Valores permitidos: &lt;code&gt;cpf&lt;/code&gt;, &lt;code&gt;cnpj&lt;/code&gt;
+&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Exemplo:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &amp;quot;pix_entry_id&amp;quot;: &amp;quot;390d7eda-e948-4552-bcdf-886c62e5923b&amp;quot;,
+  &amp;quot;participant_ispb&amp;quot;: &amp;quot;16501555&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;br&gt; 
+&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;202 Accepted
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Sucesso na criação da reivindicação de posse/portabilidade
+&lt;br&gt;
+Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{  
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;390d7eda-e948-4552-bcdf-886c62e5923b&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;claim_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ownership&amp;#34;&lt;/span&gt; | &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;portability&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt; 
+&lt;pre&gt;&lt;code&gt;401 Unauthenticated
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Usuário não autenticado
+&lt;br&gt;
+Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{  
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:unauthenticated&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt; 
+&lt;pre&gt;&lt;code&gt;422 Unprocessable Entity
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Chave não encotrada ou com status diferente de &lt;code&gt;failed&lt;/code&gt;
+&lt;br&gt;
+Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:entry_not_found&amp;#34;&lt;/span&gt; 
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;422 Unprocessable Entity
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Reivindicação não é possível
+&lt;br&gt;
+Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{  
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;claim_type_not_available&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt; 
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Detalhar de Reivindicação </title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/reivindicacoes/detalhar-uma-reivindicacao/</link>
+      <pubDate>Thu, 17 Sep 2020 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/reivindicacoes/detalhar-uma-reivindicacao/</guid>
+      <description>
+        
+        
+        &lt;br&gt;
+&lt;p&gt;Esse endpoint tem como finalidade detalhar o processo de reivindicação.&lt;/p&gt;
+&lt;h5 id=&#34;request&#34;&gt;&lt;strong&gt;Request&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;GET /api/v1/pix/:account_id/entry_claims/:id
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;200 OK
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Detalhes de reivindicação/portabilidade
+&lt;br&gt;
+Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;40346adc-74f3-4c4e-8275-73ba78993491&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;claim_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;portability&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;waiting_resolution&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;origin&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;external&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;origin_ispb&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;1234567890&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2020- 09-27T03:00:00Z&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2020-09-27T06:00:00Z&amp;#34;&lt;/span&gt;, 
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;expires_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2020-09-30T03:00:00Z&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;beneficiary_account&amp;#34;&lt;/span&gt;: {
+     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;0001&amp;#34;&lt;/span&gt;,
+     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;00016583&amp;#34;&lt;/span&gt;,
+     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;CC&amp;#34;&lt;/span&gt;,
+     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;opened_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;2019-11-18T03:00:00Z&amp;#34;&lt;/span&gt;
+  },
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;beneficiary_entity&amp;#34;&lt;/span&gt;: {
+     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;0001&amp;#34;&lt;/span&gt;,
+     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;cpf&amp;#34;&lt;/span&gt;,
+     &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;13152256685&amp;#34;&lt;/span&gt;
+  },
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;phone&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;+5510998765432&amp;#34;&lt;/span&gt;,
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;events&amp;#34;&lt;/span&gt;: [
+   {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;38963369-533c-42aa-a49e-b5369ff4bd52&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;20200-09-18T03:00:00Z&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;created&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;from_status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;to_status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;active&amp;#34;&lt;/span&gt;
+    },
+    {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;9bac50e2-c6ad-4193-8263-7170046a85a3&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;20200-09-22T03:00:00Z&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;portability_requested&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;from_status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;active&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;to_status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;portability_pending&amp;#34;&lt;/span&gt;
+    }
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;pre&gt;&lt;code&gt;401 Unauthenticated
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Usuário não autenticado
+&lt;br&gt;
+Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{  
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:unauthenticated&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt; 
+&lt;pre&gt;&lt;code&gt;403 Forbidden
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Usuário não autorizado a realizar a ação
+&lt;br&gt;
+Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{  
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:unauthorized&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt; 
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Listagem de Reivindicação</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/reivindicacoes/listar-reivindicacoes/</link>
+      <pubDate>Sat, 17 Sep 2022 18:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/reivindicacoes/listar-reivindicacoes/</guid>
+      <description>
+        
+        
+        &lt;br&gt;
+&lt;p&gt;Esse endpoint tem como finalidade listar todas as reivindicações do usuário.&lt;/p&gt;
+&lt;h5 id=&#34;request&#34;&gt;&lt;strong&gt;Request&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;GET /api/v1/pix/:account_id/entry_claims
+&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;query-params&#34;&gt;&lt;strong&gt;Query Params&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;&amp;quot;status&amp;quot;
+&amp;quot;key&amp;quot;
+&amp;quot;direction&amp;quot;
+&amp;quot;limit&amp;quot;
+&amp;quot;after&amp;quot;
+&amp;quot;before&amp;quot; 
+&lt;/code&gt;&lt;/pre&gt;&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;status&lt;/strong&gt; &lt;code&gt;array&lt;/code&gt; &lt;code&gt;string&lt;/code&gt;
+Valores permitidos: &lt;code&gt;open&lt;/code&gt;,  &lt;code&gt;waiting_resolution&lt;/code&gt;, &lt;code&gt;confirmed&lt;/code&gt;  , &lt;code&gt;cancelled&lt;/code&gt; ou &lt;code&gt;completed&lt;/code&gt;&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;key&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Chave Pix
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;direction&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt;Valores permitidos: &lt;code&gt;outbound&lt;/code&gt;, &lt;code&gt;inbound&lt;/code&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;before&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Cursor opaco da paginação.&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;after&lt;/strong&gt; &lt;code&gt;string&lt;/code&gt;
+&lt;br&gt; Cursor opaco da paginação.&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;limit&lt;/strong&gt; &lt;code&gt;integer&lt;/code&gt;
+&lt;br&gt; Limite de itens retornados.&lt;/p&gt;
+&lt;br&gt;
+&lt;h5 id=&#34;response&#34;&gt;&lt;strong&gt;Response&lt;/strong&gt;&lt;/h5&gt;
+&lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;200 OK
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;cursor&amp;#34;&lt;/span&gt;: {&lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;after&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;, &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;before&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ff79c6&#34;&gt;null&lt;/span&gt;, &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;limit&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#bd93f9&#34;&gt;25&lt;/span&gt;},
+  &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;data&amp;#34;&lt;/span&gt;: [
+   
+    {
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;uuid&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;claim_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ownership&amp;#34;&lt;/span&gt; | &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;portability&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_id&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;uuid&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;String&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;direction&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;outbound&amp;#34;&lt;/span&gt; | &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;inbound&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;donor_participant_ispb&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;String&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;claimer_participant_ispb&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;String&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Datetime&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Datetime&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;expires_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Datetime&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;completion_period_ends_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Datetime&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;resolution_period_ends_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Datetime&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;beneficiary_account&amp;#34;&lt;/span&gt;: {
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;branch_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;String&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_code&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;String&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;account_type&amp;#34;&lt;/span&gt;:&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;String&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;opened_at&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Datetime&amp;#34;&lt;/span&gt;
+      },
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;beneficiary_entity&amp;#34;&lt;/span&gt;: {
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;String&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;String&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;String&amp;#34;&lt;/span&gt;,
+      },
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key_type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;String&amp;#34;&lt;/span&gt;,
+      &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;String&amp;#34;&lt;/span&gt;
+    }
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt;
+&lt;pre&gt;&lt;code&gt;401 Unauthenticated
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Usuário não autenticado
+&lt;br&gt;
+Body&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{  
+    &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;srn:error:unauthenticated&amp;#34;&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;br&gt; 
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

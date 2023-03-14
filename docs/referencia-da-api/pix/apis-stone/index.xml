@@ -71,6 +71,71 @@
     </item>
     
     <item>
+      <title>Docs: Reivindicação de Chaves Pix</title>
+      <link>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/reivindicacoes/</link>
+      <pubDate>Mon, 21 Nov 2022 11:00:00 -0300</pubDate>
+      
+      <guid>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/reivindicacoes/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;o-que-é-uma-reivindicação-de-chave-pix&#34;&gt;O que é uma Reivindicação de Chave Pix&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;Cada Chave Pix pode ser cadastrada em uma única conta. Se um cliente deseja cadastrar uma chave em uma conta A, mas essa chave já está cadastrada em uma conta B, ele vai cair em um dos cenários abaixo:
+&lt;br&gt;&lt;br&gt;
+1- &lt;strong&gt;Fluxo de Portabilidade:&lt;/strong&gt; Conta A e conta B pertencem à mesma titular, mas estão em PSPs (Prestador do Serviço de Pagamento) diferentes. Ex.: cliente possui uma Conta Stone e uma conta no Banco XPTO (mesma titularidade) e deseja cadastrar na sua Conta Stone uma chave já cadastrada no Banco XPTO, ou vice e versa.
+&lt;br&gt;&lt;br&gt;
+2- &lt;strong&gt;Reivindicação de Posse:&lt;/strong&gt; Conta A e conta B pertencem a titulares diferentes. Aqui, temos dois tipos:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Conta A e Conta B estão no mesmo PSP&lt;/li&gt;
+&lt;li&gt;Conta A e Conta B estão em PSPs diferentes
+&lt;br&gt;&lt;br&gt;
+Em ambos os casos, falamos da figura do PSP que vai ceder a chave (PSP Doador, titular da conta B no nosso exemplo), e o PSP que quer receber e ficar com a chave (PSP Reivindicador, titular da conta A no nosso exemplo).
+&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;&lt;strong&gt;Atenção!&lt;/strong&gt;&lt;br&gt;Não é possível cadastrar a mesma chave em mais de uma instituição. &lt;br&gt;Se o cliente desejar transferir uma Chave Pix de uma instituição para outra, ela pode pedir a portabilidade dessa chave (com exceção da chave aleatória, que é intransferível) ou excluir a chave em uma instituição, e cadastrá-la na desejada.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;br&gt;&lt;/p&gt;
+&lt;h2 id=&#34;principais-regras-do-bacen&#34;&gt;Principais Regras do BACEN&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;br&gt;&lt;br&gt;
+Durante qualquer pedido de reivindicação, do momento em que o DICT coloca o status do pedido em “Aberto” até o momento em que o DICT (Diretório de Identificadores de Contas Transacionais) altera o status para “Completo”, a chave Pix não pode ser nem registrada, nem excluída. O pedido de reivindicação em si pode ser cancelado se:
+&lt;br&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;O usuário reivindicador (que começou o pedido) quiser cancelar;&lt;/li&gt;
+&lt;li&gt;Algum dos PSPs envolvidos perceber uma suspeita de fraude e quiser cancelar.
+&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Sobre portabilidade:&lt;/strong&gt; o usuário doador (titular da conta B no nosso exemplo, que já está com a chave) tem até 7 dias para cancelar ou confirmar um pedido de reivindicação do tipo portabilidade. Se ele não responder, o PSP Doador deve deve necessariamente cancelar o pedido.
+&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sobre reivindicação de posse:&lt;/strong&gt; O usuário doador (titular da conta B no nosso exemplo, que já está com a chave) tem até 7 dias dias para cancelar ou confirmar um pedido de reivindicação do tipo posse. Se ele não responder, o PSP Doador deve deve necessariamente confirmar o pedido.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Depois desses 7 dias a a Stone entra no &amp;ldquo;período de encerramento&amp;rdquo;, também de 7 dias, onde o usuário doador ainda pode validar a posse da chave e cancelar a reivindicação. Nesse caso, o PSP Doador deve cancelar o processo, por indício de fraude.&lt;/li&gt;
+&lt;li&gt;Se o usuário doador não validar a posse da chave até o final do &amp;ldquo;período de encerramento&amp;rdquo;, o PSP Reivindicador deve solicitar uma nova validação de posse do seu usuário (titular da conta A, que deseja posse a chave) e, depois dessa validação, completar o pedido no DICT.&lt;/li&gt;
+&lt;li&gt;Se o usuário reivindicador não fizer a validação de posse até o 30º dia após o início do processo de reivindicação, o PSP Reivindicador deve necessariamente cancelar a solicitação no DICT. Quando isso ocorre, a posse não ficará com nenhuma das duas instituições.
+&lt;br&gt;
+Nós consultamos com alta frequência o serviço de reivindicação do DICT para ver se existem mudanças nos status de pedidos de reivindicação do tipo portabilidade que nos envolvem (tanto como reivindicador quanto como doador), ou que envolvem algum participante indireto nosso.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;status-da-reivindicação&#34;&gt;Status da reivindicação&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;open&lt;/code&gt;: aberta pelo reivindicador, mas ainda não recebida pelo doador.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;waiting_resolution&lt;/code&gt;: reivindicação já foi recebida pelo doador e está aguardando a resolução. Os critérios confirmação ou cancelamento da reivindicação seguem normas específicas a depender do tipo (posse ou portabilidade).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;confirmed&lt;/code&gt;: doador confirmou a reivindicação. Isso implica a remoção da chave do DICT e da base interna do PSP doador. Está aguardando o reivindicador encerrar o processo.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cancelled&lt;/code&gt;: doador ou reivindicador cancelou a reivindicação, mantendo o vínculo inalterado (conforme estava antes da reivindicação) tanto no DICT quanto na base interna do PSP.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;completed&lt;/code&gt;: tanto o DICT quanto o reivindicador atualizaram suas bases com o novo vínculo.
+&lt;br&gt; &lt;br&gt; &lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Os endpoints relativos a reivindicação e portabilidade estão listados abaixo:&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
       <title>Docs: Relato de Infração (Beta)</title>
       <link>https://stone-co.github.io/docs/referencia-da-api/pix/apis-stone/relato-infracao/</link>
       <pubDate>Fri, 11 Feb 2022 14:00:00 -0300</pubDate>
